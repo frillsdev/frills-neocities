@@ -1,28 +1,26 @@
 ---
-layout: layouts/home.njk
 eleventyNavigation:
   key: Home
   order: 1
 numberOfLatestPostsToShow: 3
+rp: You stumble upon a hidden garden, hardly anyone has been here before. Moss has grown over the edges of the path you stand on and weeds are peeking up through the cracks. The sun is warm on your face though, so you decide to stay a while and take a look around.
 ---
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+{% extends 'page.njk'%}
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
+{%- block content -%}
+<section>
+	<header class="pb-1">
+		<h1>{{ metadata.title }} <span class="emoji" role="img" aria-label="Seedling">🌱</span></h1>
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/journal/">the archive</a>.</p>
-{% endif %}
+		{% if rp %}
+		<p class="italic lowercase">{{rp}}</p>
+		{% endif %}
+	</header>
+</section>
+{%- endblock -%}
 
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
+{%- block js -%}
+<script>
+console.log('asdad')
+</script>
+{%- endblock -%}
