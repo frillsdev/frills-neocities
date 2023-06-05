@@ -9,8 +9,11 @@
   /*--blue: #2fe3ff;*/
   /*--green: #3cff3c;*/
   
-  
-  --bg: #dbf0ca;
+  --bodybg: #dbf0ca;
+  --bg: #f5ffed;
+  --border: #043800;
+  --link: #064e00;
+  --linkhover: #e1047e;
   --text: #064e00;
   --lightcolor: #f5ffed;
   --midcolor: #edffde;
@@ -32,7 +35,7 @@ html {
 }
 
 body {
-  background-color: var(--bg);
+  background-color: var(--bodybg);
   color: var(--text);
   min-height: 100vh;
   text-transform: lowercase;
@@ -43,13 +46,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--text);
+  color: var(--link);
   transition: 0.3s ease color;
 }
 
 a:hover,
 a:focus {
-  color: var(--pink);
+  color: var(--linkhover);
 }
 
 *:focus-visible {
@@ -81,8 +84,8 @@ p {
 
 .main {
   flex: 2;
-  border: 1px solid var(--darkcolor);
-  background-color: var(--lightcolor);
+  border: 1px solid var(--border);
+  background-color: var(--bg);
   padding: 1rem 1.5rem;
   border-radius: 1rem;
 }
