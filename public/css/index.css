@@ -20,19 +20,19 @@
   --midcolor: #edffde;
   --darkcolor: #043800;
   --pink: #e1047e;
-}
-
-/* Base */
-
-html {
-  font-family: monospace;
-  font-size: 14px;
+  --font-size: 14px;
 }
 
 @media (min-width: 576px) {
-  html {
-    font-size: 16px;
+  :root {
+    --font-size: 16px;
   }
+}
+
+/* Base */
+html {
+  font-family: monospace;
+  font-size: var(--font-size);
 }
 
 body {
@@ -72,7 +72,7 @@ p {
 
 .container {
   width: 100%;
-  max-width: 700px;
+  max-width: 43.75rem;
 }
 
 .center {
