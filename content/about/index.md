@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: core/base.njk
 eleventyNavigation:
   key: About
   order: 3

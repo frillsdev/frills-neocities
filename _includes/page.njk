@@ -1,9 +1,11 @@
-{% extends "layouts/base.njk" %}
+{% extends "core/base.njk" %}
 
 {%- block main -%}
-<main>
-{%- block content -%}
-    {{ content | safe }}
-{%- endblock -%}
-</main>
+<div class="container center py-2">
+    <main class="main">
+    {%- block content -%}
+        {{ content | safe }}
+    {%- endblock -%}
+    </main>
+</div>
 {%- endblock -%}

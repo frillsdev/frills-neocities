@@ -1,6 +1,3 @@
-<!doctype html>
-<html lang="{{ metadata.language }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +16,6 @@
 		4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
 		#}
 
-    {#- Add an arbitrary string to the bundle #}
-    {%- css %}* { box-sizing: border-box; }{% endcss %}
-    {#- Add the contents of a file to the bundle #}
     {%- css %}{% include "public/css/index.css" %}{% endcss %}
     {#- Or add from node_modules #}
     {# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
@@ -33,13 +27,3 @@
     {#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
     {#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 </head>
-
-<body>
-    {%- block main -%}
-        {{- content -}}
-    {%- endblock -%}
-    {%- block scripts -%}
-    {%- endblock -%}
-</body>
-
-</html>
