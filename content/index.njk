@@ -3,24 +3,62 @@ eleventyNavigation:
   key: Home
   order: 1
 numberOfLatestPostsToShow: 3
+pageTitle: frills' internet garden
 rp: You stumble upon a hidden garden, hardly anyone has been here before. Moss has grown over the edges of the path you stand on and weeds are peeking up through the cracks. The sun is warm on your face though, so you decide to stay a while and take a look around.
 ---
 {% extends 'page.njk'%}
 
+{% from "_includes/_components/_callout.njk" import callout %}
+
 {%- block content -%}
 <section>
 	<header class="pb-1">
-		<h1>{{ metadata.title }} <span class="emoji" role="img" aria-label="Seedling">🌱</span></h1>
+		<h1>{{ pageTitle }} <span class="emoji" role="img" aria-label="Seedling">🌱</span></h1>
 
 		{% if rp %}
 		<p class="italic lowercase">{{rp}}</p>
 		{% endif %}
+
+		<ul class="inline pb-1">
+			<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span>gemini <span role="img" class="emoji" aria-label="Moon sign">🌛</span>scorpio</li>
+			<li><span class="emoji" aria-hidden="true">🌷</span>she/her</li>
+			<li><span class="emoji" role="img" aria-label="Flag of Wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span> wales</li>
+			<li><span class="emoji" role="img" aria-label="Clock">⏰</span><span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
+		</ul>
+
 	</header>
+
+	{{ callout(
+		element = 'article',
+		body = '
+		<div id="statuscafe">
+			<div id="statuscafe-username"><a href="https://status.cafe/users/fri11s" target="_blank">fri11s</a> 🌻</div>
+			<div id="statuscafe-content">no recent update :(</div>
+		</div>
+	') }}
+
+	{{ callout(
+		element = 'article',
+		header = '
+		<h2 class="inline">last played</h2>
+		<span class="emoji" role="img" aria-label="Musical note">🎵</span>
+		<span><span id="lfmTime">right now</span></span>
+		',
+		body = '
+		<span id="lfmSong" class="lowercase">no recently played song :(</span>
+		'
+	)}}
+
 </section>
 {%- endblock -%}
 
 {%- block js -%}
-<script>
-console.log('asdad')
-</script>
+<!--Status.cafe-->
+<script src="https://status.cafe/current-status.js?name=fri11s" defer></script>
+<!--Last.fm-->
+<script type="text/javascript">let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script>
+<!--Current time-->
+<script type="text/javascript">let time=document.querySelector("#localTime");const d=new Date().toLocaleTimeString("en-US",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"});e=d.replace(/\s/g,""),time.innerHTML=e;</script>
+<!--Carbon-->
+<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 {%- endblock -%}

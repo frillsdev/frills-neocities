@@ -15,6 +15,7 @@
   --link: #064e00;
   --linkhover: #e1047e;
   --text: #064e00;
+  --callout: #dbf0ca;
   --lightcolor: #f5ffed;
   --midcolor: #edffde;
   --darkcolor: #043800;
@@ -99,7 +100,7 @@ p {
 }
 
 .callout {
-  background-color: var(--bg);
+  background-color: var(--callout);
   padding: 0.5rem 1rem;
   margin: 0 0 0.5rem 0;
   border-radius: 6px;
