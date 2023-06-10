@@ -8,15 +8,9 @@ rp: You stumble upon a hidden garden, hardly anyone has been here before. Moss h
 ---
 {% extends 'page.njk'%}
 
-{% from "_includes/_components/components.njk" import callout, header %}
-
 {%- block content -%}
 <section>
-	{{ header(
-		title = title + ' <span class="emoji" role="img" aria-label="Seedling">🌱</span>',
-		description = rp,
-		modifiers = ''
-	) }}
+	{{ macro.header(title + ' <span class="emoji" role="img" aria-label="Seedling">🌱</span>', rp ) }}
 
 	<ul class="inline pb-1">
 		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span>gemini <span role="img" class="emoji" aria-label="Moon sign">🌛</span>scorpio</li>
@@ -25,7 +19,7 @@ rp: You stumble upon a hidden garden, hardly anyone has been here before. Moss h
 		<li><span class="emoji" role="img" aria-label="Clock">⏰</span><span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
 	</ul>
 
-	{{ callout(
+	{{ macro.callout(
 		element = 'article',
 		body = '
 		<div id="statuscafe">
@@ -34,7 +28,7 @@ rp: You stumble upon a hidden garden, hardly anyone has been here before. Moss h
 		</div>
 	') }}
 
-	{{ callout(
+	{{ macro.callout(
 		element = 'article',
 		header = '
 		<h2 class="inline">last played</h2>
