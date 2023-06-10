@@ -1,8 +1,0 @@
-{% macro callout(element = "div", modifiers = '', header = '', body = '')%}
-<{{element}} class="callout {{modifiers}}">
-    {% if header %}
-    <header>{{header|safe}}</header>
-    {% endif %}
-    {{body|safe}}
-</{{element}}>
-{% endmacro %}
