@@ -3,30 +3,27 @@ eleventyNavigation:
   key: Home
   order: 1
 numberOfLatestPostsToShow: 3
-pageTitle: frills' internet garden
+title: frills' internet garden
 rp: You stumble upon a hidden garden, hardly anyone has been here before. Moss has grown over the edges of the path you stand on and weeds are peeking up through the cracks. The sun is warm on your face though, so you decide to stay a while and take a look around.
 ---
 {% extends 'page.njk'%}
 
-{% from "_includes/_components/_callout.njk" import callout %}
+{% from "_includes/_components/components.njk" import callout, header %}
 
 {%- block content -%}
 <section>
-	<header class="pb-1">
-		<h1>{{ pageTitle }} <span class="emoji" role="img" aria-label="Seedling">🌱</span></h1>
+	{{ header(
+		title = title + ' <span class="emoji" role="img" aria-label="Seedling">🌱</span>',
+		description = rp,
+		modifiers = ''
+	) }}
 
-		{% if rp %}
-		<p class="italic lowercase">{{rp}}</p>
-		{% endif %}
-
-		<ul class="inline pb-1">
-			<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span>gemini <span role="img" class="emoji" aria-label="Moon sign">🌛</span>scorpio</li>
-			<li><span class="emoji" aria-hidden="true">🌷</span>she/her</li>
-			<li><span class="emoji" role="img" aria-label="Flag of Wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span> wales</li>
-			<li><span class="emoji" role="img" aria-label="Clock">⏰</span><span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
-		</ul>
-
-	</header>
+	<ul class="inline pb-1">
+		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span>gemini <span role="img" class="emoji" aria-label="Moon sign">🌛</span>scorpio</li>
+		<li><span class="emoji" aria-hidden="true">🌷</span>she/her</li>
+		<li><span class="emoji" role="img" aria-label="Flag of Wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span> wales</li>
+		<li><span class="emoji" role="img" aria-label="Clock">⏰</span><span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
+	</ul>
 
 	{{ callout(
 		element = 'article',

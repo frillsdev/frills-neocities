@@ -1,3 +1,12 @@
+{#- Header -#}
+{%- macro header(title = '', description = '', modifiers = '') -%}
+<header class="header {{modifiers}}">
+    <h1>{{- title | safe-}}</h1>
+    <p class="italic lowercase">{{- description | safe -}}</p>
+</header>
+{%- endmacro -%}
+{#- Header END -#}
+
 {#- Callout -#}
 {%- macro callout(element = "div", modifiers = '', header = '', body = '') -%}
 <{{element}} class="callout {{modifiers}}">
