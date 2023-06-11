@@ -2,7 +2,7 @@
 {%- macro header(title = '', description = '', modifiers = '') -%}
 <header class="header {{modifiers}}">
     <h1>{{- title | safe-}}</h1>
-    <p class="italic lowercase">{{- description | safe -}}</p>
+    <p class="italic">{{- description | safe -}}</p>
 </header>
 {%- endmacro -%}
 {#- Header END -#}

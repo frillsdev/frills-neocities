@@ -3,11 +3,7 @@
 {% import "_includes/_components/components.njk" as macro with context %}
 
 {%- block main -%}
-<div class="container center">
-    <main class="main">
     {%- block content -%}
         {{ content | safe }}
     {%- endblock -%}
-    </main>
-</div>
 {%- endblock -%}

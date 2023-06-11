@@ -40,7 +40,7 @@ body {
   background-color: var(--bodybg);
   color: var(--text);
   min-height: 100vh;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -79,7 +79,11 @@ a:focus {
 }
 
 ul, ol {
-  padding-left: 12px
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
 }
 
 p {
@@ -101,6 +105,12 @@ p {
   border: 1px solid var(--blue);
 }
 
+.header h1 {
+  font-family: 'Cherry Bomb One', sans-serif;
+  font-size: 3rem;
+  font-display: fallback;
+}
+
 .main {
   flex: 2;
   border: 1px solid var(--border);
@@ -110,10 +120,9 @@ p {
 }
 
 .footer {
-  padding: 1rem;
-  text-align: center;
+  text-align: left;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 50px;
 }
 
@@ -143,6 +152,7 @@ h6.inline {
 ul.inline, ol.inline {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   list-style-type: none;
   row-gap: 10px;
   column-gap: 15px;
@@ -205,11 +215,4 @@ ul.unstyled, ol.unstyled {
 #statuscafe #statuscafe-username a {
   font-weight: bold;
   text-decoration: none;
-}
-
-/* Homepage */
-.header.homepage h1 {
-  font-family: 'Cherry Bomb One', sans-serif;
-  font-size: 3rem;
-  font-display: fallback;
 }

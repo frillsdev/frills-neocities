@@ -1,11 +1,16 @@
 {% include "_includes/core/_template-start.njk" %}
 
 <body>
-    {% include "_includes/core/_nav.njk" %}
 
-    {%- block main -%}
-        {{- content -}}
-    {%- endblock -%}
+    <div class="container center py-1">
+        {% include "_includes/core/_nav.njk" %}
+        <main class="main">
+        {%- block main -%}
+            {{- content -}}
+        {%- endblock -%}
+        </div>
+        {% include "_includes/core/_footer.njk" %}
+    </div>
 
     {%- block js -%}
     {%- endblock -%}

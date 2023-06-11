@@ -1,5 +1,5 @@
 module.exports = {
-	title: "frills' internet garden",
+	title: "frills's internet garden",
 	url: "https://example.com/",
 	language: "en-GB",
 	description: "full of weeds and encroaching moss",
