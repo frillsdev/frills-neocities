@@ -4,7 +4,7 @@
 
 {%- css %}.postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }{% endcss %}
 
-<div class="container center py-2">
+<div class="container center">
     <main class="main">
 		<ol reversed class="postlist">
 		{% for post in postslist | reverse %}
