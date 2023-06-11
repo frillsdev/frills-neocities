@@ -10,13 +10,13 @@ rp: You stumble upon a hidden garden, hardly anyone has been here before. Moss h
 
 {%- block content -%}
 <section>
-	{{ macro.header(title + ' <span class="emoji" role="img" aria-label="Seedling">🌱</span>', rp ) }}
+	{{ macro.header(title + ' <span class="emoji" role="img" aria-label="Seedling">🌱</span>', rp, "homepage" ) }}
 
 	<ul class="inline pb-1">
-		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span>gemini <span role="img" class="emoji" aria-label="Moon sign">🌛</span>scorpio</li>
-		<li><span class="emoji" aria-hidden="true">🌷</span>she/her</li>
+		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> gemini <span role="img" class="emoji" aria-label="Moon sign">🌛</span> scorpio</li>
+		<li><span class="emoji" aria-hidden="true">🌷</span> she/her</li>
 		<li><span class="emoji" role="img" aria-label="Flag of Wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span> wales</li>
-		<li><span class="emoji" role="img" aria-label="Clock">⏰</span><span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
+		<li><span class="emoji" role="img" aria-label="Clock">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
 	</ul>
 
 	{{ macro.callout(

@@ -25,14 +25,15 @@
 
 @media (min-width: 576px) {
   :root {
-    --font-size: 16px;
+    --font-size: 20px;
   }
 }
 
 /* Base */
 html {
-  font-family: monospace;
+  font-family: sans-serif;
   font-size: var(--font-size);
+  line-height: 1.4;
 }
 
 body {
@@ -44,6 +45,23 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4, h5, h6 {
+  font-size: 1rem;
 }
 
 a {
@@ -187,4 +205,11 @@ ul.unstyled, ol.unstyled {
 #statuscafe #statuscafe-username a {
   font-weight: bold;
   text-decoration: none;
+}
+
+/* Homepage */
+.header.homepage h1 {
+  font-family: 'Cherry Bomb One', sans-serif;
+  font-size: 3rem;
+  font-display: fallback;
 }
