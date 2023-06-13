@@ -1,13 +1,13 @@
-{#- Header -#}
+{# Header #}
 {%- macro header(title = '', description = '', modifiers = '') -%}
 <header class="header {{modifiers}}">
     <h1>{{- title | safe-}}</h1>
     <p class="italic">{{- description | safe -}}</p>
 </header>
 {%- endmacro -%}
-{#- Header END -#}
+{# Header END #}
 
-{#- Callout -#}
+{# Callout #}
 {%- macro callout(element = "div", modifiers = '', header = '', body = '') -%}
 <{{element}} class="callout {{modifiers}}">
     {%- if header -%}
@@ -16,4 +16,15 @@
     {{- body|safe -}}
 </{{element}}>
 {%- endmacro -%}
-{#- Callout END -#}
+{# Callout END #}
+
+{# Details #}
+{%- macro details(summary = '', body = '')-%}
+<details>
+    <summary>{{- summary | safe-}}</summary>
+    <div class="pb-1">
+        {{- body | safe -}}
+    </div>
+</details>
+{%- endmacro -%}
+{# Details END #}
