@@ -10,8 +10,6 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
 
-const htmlmin = require("html-minifier");
-
 module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
@@ -80,13 +78,15 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+
+
 	// Customize Markdown library settings:
 	// eleventyConfig.amendLibrary("md", mdLib => {
 	// 	mdLib.use(markdownItAnchor, {
 	// 		permalink: markdownItAnchor.permalink.ariaHidden({
-	// 			placement: "before",
+	// 			placement: "after",
 	// 			class: "header-anchor",
-	// 			symbol: "link",
+	// 			symbol: "#",
 	// 			ariaHidden: false,
 	// 		}),
 	// 		level: [1,2,3,4],
@@ -101,20 +101,6 @@ module.exports = function(eleventyConfig) {
 	// https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
 
 	// eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
-
-	eleventyConfig.addTransform("htmlmin", function(content) {
-    // Prior to Eleventy 2.0: use this.outputPath instead
-    if( this.page.outputPath && this.page.outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
-
-    return content;
-  });
 
 	return {
 		// Control which files Eleventy will process
@@ -152,4 +138,6 @@ module.exports = function(eleventyConfig) {
 		// folder name and does **not** affect where things go in the output folder.
 		pathPrefix: "/",
 	};
+	
+	
 };

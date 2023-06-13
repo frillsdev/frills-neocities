@@ -4,7 +4,8 @@
 
 {% import "_includes/_components/components.njk" as macro with context %}
 
-{%- css %}.postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }{% endcss %}
+
+	{%- css %}.postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }{% endcss %}
 
 	{{ macro.header(title + emoji) }}
 

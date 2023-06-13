@@ -6,9 +6,9 @@
         {% include "_includes/core/_nav.njk" %}
         <main class="main">
         {%- block main -%}
-            {{- content -}}
+            {{- content | safe -}}
         {%- endblock -%}
-        </div>
+        </main>
         {% include "_includes/core/_footer.njk" %}
     </div>
 

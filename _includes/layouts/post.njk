@@ -1,66 +1,64 @@
 {% extends "core/base.njk" %}
 
-{% import "_includes/_components/components.njk" as macro with context %}
-
 {%- block main -%}
 
-{%- css %}
-	.links-nextprev {
-		padding-top: 2rem;
-		margin-top: 2rem;
-		border-top: 1px solid var(--callout);
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
-	.links-prev,
-	.links-next {
-		display:flex;
-		flex-direction: column;
-		text-align: center;
-	}
-	.links-prev::before,
-	.links-next::before {
-		content: '➪';
-		font-size: 4rem;
-	}
-	.links-prev::before {
-		transform: rotate(180deg);	
-		display: inline-block;
-	}
-{% endcss %}
+	{% import "_includes/_components/components.njk" as macro with context %}
 
-<article class="article">
-	{{ macro.header(
-		title = title,
-		description = description
-	) }}
-	<ul class="post-metadata unstyled">
-		<li>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-		{% if tags %}
-		<li>Tags:
-			{%- for tag in tags | filterTagList %}
-			{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-			{# <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %} #}
-			<span class="post-tag">{{ tag }}</span>{%- if not loop.last %}, {% endif %}
-			{%- endfor %}
-		</li>
-		{% endif %}
-	</ul>
-	{{ content | safe }}
-	
-</article>
+	{%- css %}
+		.links-nextprev {
+			padding-top: 2rem;
+			margin-top: 2rem;
+			border-top: 1px solid var(--callout);
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.links-prev,
+		.links-next {
+			display:flex;
+			flex-direction: column;
+			text-align: center;
+		}
+		.links-prev::before,
+		.links-next::before {
+			content: '➪';
+			font-size: 4rem;
+		}
+		.links-prev::before {
+			transform: rotate(180deg);	
+			display: inline-block;
+		}
+	{% endcss %}
 
-{%- if collections.posts %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-{%- set nextPost = collections.posts | getNextCollectionItem %}
-{%- if nextPost or previousPost %}
-<nav aria-label="Post">
-	<ul class="links-nextprev unstyled">
-		{%- if previousPost %}<li class="links-prev">
-		<span class="sronly">Previous:</span> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% else %}<li></li>{% endif %}
-		{%- if nextPost %}<li class="links-next"><span class="sronly">Next:</span> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% else %}<li></li>{% endif %}
-	</ul>
-</nav>
-{%- endif %}
-{%- endif %}
+	<article class="article">
+		{{ macro.header(title, description) }}
+
+		<ul class="post-metadata unstyled">
+			<li>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
+			{% if tags %}
+			<li>Tags:
+				{%- for tag in tags | filterTagList %}
+				{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+				{# <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %} #}
+				<span class="post-tag">{{ tag }}</span>{%- if not loop.last %}, {% endif %}
+				{%- endfor %}
+			</li>
+			{% endif %}
+		</ul>
+		{{ content | safe }}
+		
+	</article>
+
+	{%- if collections.posts %}
+	{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+	{%- set nextPost = collections.posts | getNextCollectionItem %}
+	{%- if nextPost or previousPost %}
+	<nav aria-label="Post">
+		<ul class="links-nextprev unstyled">
+			{%- if previousPost %}<li class="links-prev">
+			<span class="sronly">Previous:</span> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% else %}<li></li>{% endif %}
+			{%- if nextPost %}<li class="links-next"><span class="sronly">Next:</span> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% else %}<li></li>{% endif %}
+		</ul>
+	</nav>
+	{%- endif %}
+	{%- endif %}
 {%- endblock -%}

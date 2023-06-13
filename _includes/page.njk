@@ -1,8 +1,8 @@
 {% extends "core/base.njk" %}
 
-{% import "_includes/_components/components.njk" as macro with context %}
-
 {%- block main -%}
+    {% import "_includes/_components/components.njk" as macro with context %}
+
     {%- block content -%}
         {{ content | safe }}
     {%- endblock -%}
