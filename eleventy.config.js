@@ -12,10 +12,9 @@ const pluginImages = require("./eleventy.config.images.js");
 
 module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
-	// For example, `./public/css/` ends up in `_site/css/`
+	// For example, `./public/css/` ends up in `site/css/`
 	eleventyConfig.addPassthroughCopy({
 		"./public/": "/",
-		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
 	});
 
 	// Run Eleventy when these files change:
@@ -29,10 +28,10 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginImages);
 
 	// Official plugins
-	eleventyConfig.addPlugin(pluginRss);
-	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
-		preAttributes: { tabindex: 0 }
-	});
+	// eleventyConfig.addPlugin(pluginRss);
+	// eleventyConfig.addPlugin(pluginSyntaxHighlight, {
+		// preAttributes: { tabindex: 0 }
+	// });
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
@@ -123,7 +122,7 @@ module.exports = function(eleventyConfig) {
 			input: "content",          // default: "."
 			includes: "../_includes",  // default: "_includes"
 			data: "../_data",          // default: "_data"
-			output: "_site"
+			output: "site"
 		},
 
 		// -----------------------------------------------------------------
