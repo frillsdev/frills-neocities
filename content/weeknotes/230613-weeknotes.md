@@ -9,19 +9,22 @@ date: 2023-06-13
 
 <div class="pb-2">
     {{ macro.details(
-      summary = "Forest-bathing for research",
+      summary = "🌲 Forest-bathing for research",
       body = "I was lucky enough to be invited to join university fellows in research about forest-bathing and it's effects on people with a focus on leadership roles."
     ) }}
+
+    {{ macro.details(
+      summary = "🏠 Clearing some furniture from the garage",
+      body = "I <strong>will</strong> reclaim the garage from all the clutter!"
+    ) }}
+
+    {{ macro.details(
+      summary = "🐕 Dog sat for a poor old boy",
+      body = "Minded Murphy (mother-in-law's dog) after he had been in the vets for 2 days, he was so so so sleepy."
+    ) }}
+
+    {{ macro.details(
+      summary = "👨‍👧 Celebrated Father's day with my dad",
+      body = "Forever grateful for having him as my dad. We went to a carboot, ate nice food and had a paddle in the river!"
+    ) }}
 </div>
-<!-- 
-## Things I haven't been doing
-
-{{ macro.details(
-    summary = "Keeping the house tidy.",
-    body = "This has very much fallen by the wayside. I got into a bad mental health patch and it always reflects in my home, but now it's a little too overwhelming to sort."
-) }}
-
-{{ macro.details(
-    summary = "💬 toki pona.",
-    body = "I got all excited about it. and was enamoured by it's simplicity, but the practicality of it being used for anything or with anyone made me feel like I was wasting time when I could be learning a more relevant language to me, like Welsh."
-) }} -->
