@@ -29,6 +29,18 @@
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bodybg: #1f221d;
+    --bg: #161715;
+    --border: #000;
+    --link: #86d72f;
+    --linkhover: #ff6dc6;
+    --text: #dbf0ca;
+    --callout: #0b0c0a;
+  }
+}
+
 /* Base */
 html {
   font-family: sans-serif;
