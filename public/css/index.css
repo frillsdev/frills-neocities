@@ -8,18 +8,18 @@
   /*--yellow: #ffd700;*/
   /*--blue: #2fe3ff;*/
   /*--green: #3cff3c;*/
-  
+
   --bodybg: hsl(93, 56%, 87%);
-  --bg:  	hsl(93, 100%, 96%);
-  --border:  	hsl(116, 100%, 11%);
-  --link:  	hsl(115, 100%, 15%);
+  --bg: hsl(93, 100%, 96%);
+  --border: hsl(116, 100%, 11%);
+  --link: hsl(115, 100%, 15%);
   --linkhover: hsl(327, 97%, 45%);
-  --text:  	hsl(115, 100%, 15%);
+  --text: hsl(115, 100%, 15%);
   --callout: hsl(93, 56%, 87%);
-  --lightcolor:  	hsl(93, 100%, 96%);
+  --lightcolor: hsl(93, 100%, 96%);
   --midcolor: #edffde;
   --darkcolor: hsl(93, 100%, 94%);
-  --pink:  	hsl(327, 97%, 45%);
+  --pink: hsl(327, 97%, 45%);
   --font-size: 14px;
 }
 
@@ -33,10 +33,10 @@
   :root {
     --bodybg: hsl(96, 8%, 12%);
     --bg: #161715;
-    --border:  	hsl(90, 5%, 9%);
+    --border: hsl(90, 5%, 9%);
     --link: hsl(89, 68%, 51%);
     --linkhover: hsl(323, 100%, 71%);
-    --text:  	hsl(93, 56%, 87%);
+    --text: hsl(93, 56%, 87%);
     --callout: hsl(90, 9%, 4%);
   }
 }
@@ -55,7 +55,12 @@ body {
   /* text-transform: lowercase; */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 1rem 0;
   line-height: 1.2;
 }
@@ -72,7 +77,9 @@ h3 {
   font-size: 1.2rem;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font-size: 1rem;
 }
 
@@ -90,7 +97,8 @@ a:focus {
   outline: 3px solid orangered;
 }
 
-ul, ol {
+ul,
+ol {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
@@ -110,7 +118,7 @@ p {
 }
 
 .center {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .header {
@@ -161,7 +169,8 @@ h6.inline {
   display: inline;
 }
 
-ul.inline, ol.inline {
+ul.inline,
+ol.inline {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -172,32 +181,36 @@ ul.inline, ol.inline {
   margin: 0;
 }
 
-ul.unstyled, ol.unstyled {
+ul.unstyled,
+ol.unstyled {
   list-style-type: none;
   padding-left: 0;
 }
 
 .pb-1 {
-  padding-bottom: 1rem!important;
+  padding-bottom: 1rem !important;
 }
 
 .pt-1 {
-  padding-top: 1rem!important;
+  padding-top: 1rem !important;
 }
+
 .py-1 {
-  padding-top: 1rem!important;
-  padding-bottom: 1rem!important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
+
 .pb-2 {
-  padding-bottom: 2rem!important;
+  padding-bottom: 2rem !important;
 }
 
 .pt-2 {
-  padding-top: 2rem!important;
+  padding-top: 2rem !important;
 }
+
 .py-2 {
-  padding-top: 2rem!important;
-  padding-bottom: 2rem!important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
 }
 
 .sronly {
