@@ -5,13 +5,13 @@
 {% import "_includes/_components/components.njk" as macro with context %}
 
 
-	{%- css %}.postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }{% endcss %}
+	{%- css "preload" %}.postlist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }} }{% endcss %}
 
 	{{ macro.header(title + emoji) }}
 
 	<ol reversed class="unstyled">
 	{% for post in postslist | reverse %}
-		<li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+		<li class="postlist-item{% if post.url == url %} --active{% endif %}">
 			<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title | safe }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
 			<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">Posted {{ post.date | readableDate("d LLL yyyy") }}</time>
 		</li>

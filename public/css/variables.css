@@ -1,0 +1,40 @@
+:root {
+  /*--purple: #10002E;*/
+  /*--purple-shade1: #190047;*/
+  /*--purple-shade2: #623ba9;*/
+  /*--purple-shade3: #9575d0;*/
+  /*--off-white: #F0E8FF;*/
+  /*--pink: #fe24a9;*/
+  /*--yellow: #ffd700;*/
+  /*--blue: #2fe3ff;*/
+  /*--green: #3cff3c;*/
+
+  --bodybg: hsl(93, 56%, 87%);
+  --bg: hsl(93, 100%, 96%);
+  --border: hsl(116, 100%, 11%);
+  --link: hsl(115, 100%, 15%);
+  --linkhover: hsl(327, 97%, 45%);
+  --text: hsl(115, 100%, 15%);
+  --callout: hsl(93, 56%, 87%);
+  --lightcolor: hsl(93, 100%, 96%);
+  --midcolor:  	hsl(93, 100%, 94%);
+  --darkcolor: hsl(93, 100%, 94%);
+  --pink: hsl(327, 97%, 45%);
+  --font-size: 14px;
+}
+@media (min-width: 576px) {
+  :root {
+    --font-size: 20px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bodybg: hsl(96, 8%, 12%);
+    --bg:	hsl(90, 5%, 9%);
+    --border: hsl(0, 0%, 0%);
+    --link: hsl(89, 68%, 51%);
+    --linkhover: hsl(323, 100%, 71%);
+    --text: hsl(93, 56%, 87%);
+    --callout: hsl(90, 9%, 4%);
+  }
+}
