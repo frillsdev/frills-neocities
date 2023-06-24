@@ -4,11 +4,11 @@
 
 	{% import "_includes/_components/components.njk" as macro with context %}
 
-	{%- css %}
+	{%- css "defer" %}
 		.links-nextprev {
 			padding-top: 2rem;
 			margin-top: 2rem;
-			border-top: 1px solid var(--callout);
+			border-top: 1px solid var(--pink);
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 		}
