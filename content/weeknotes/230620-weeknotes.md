@@ -22,7 +22,7 @@ date: 2023-06-20
     ) }}
     {{ macro.details(
       summary = "📚 Want to start reading again.",
-      body = "Still remember the absolute joy of reading [The Priory of the Orange Tree](https://www.goodreads.com/en/book/show/40275288) and everything gets compared to that. I have been chatting to friends about the [Wheel of Time TV series](https://www.amazon.co.uk/Wheel-Time-Season-1/dp/B09F59DZ2Z), and the books are supposed to be excellent, all 14 of them."
+      body = "Still remember the absolute joy of reading <a href='https://www.goodreads.com/en/book/show/40275288' target='_blank'>The Priory of the Orange Tree</a> and everything gets compared to that. I have been chatting to friends about the <a href='https://www.amazon.co.uk/Wheel-Time-Season-1/dp/B09F59DZ2Z' target='_blank'>Wheel of Time TV series</a>, and the books are supposed to be excellent, all 14 of them."
     ) }}
 
 </div>
