@@ -24,19 +24,30 @@ rp: You stumble upon a hidden garden, hardly anyone has been here before. Moss h
 		body = '
 		<div id="statuscafe">
 			<div id="statuscafe-username"><a href="https://status.cafe/users/fri11s" target="_blank">fri11s</a> 🌻</div>
-			<div id="statuscafe-content">no recent update :(</div>
+			<div id="statuscafe-content">No recent update :(</div>
 		</div>
 	') }}
 
 	{{ macro.callout(
 		element = 'article',
 		header = '
-		<h2 class="inline">last played</h2>
+		<h2 class="inline">Last played</h2>
 		<span class="emoji" role="img" aria-label="Musical note">🎵</span>
 		<span><span id="lfmTime">right now</span></span>
 		',
 		body = '
-		<span id="lfmSong" class="lowercase">no recently played song :(</span>
+		<span id="lfmSong" class="lowercase">No recently played song :(</span>
+		'
+	)}}
+
+	{{ macro.callout(
+		element = 'article',
+		header = '
+		<h2 class="inline">Currently reading</h2>
+		<span class="emoji" role="img" aria-label="Stack of books">📚</span>
+		',
+		body = '
+		The Eye of the World - Robert Jordan
 		'
 	)}}
 
