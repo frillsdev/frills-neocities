@@ -3,7 +3,6 @@ title: Weeknotes for June 2023
 date: 2023-06
 ---
 {% import "_includes/_components/components.njk" as macro with context %}
-
 ## Week 1 June of 2023
 
 First week of weeknotes, and it includes my birthday! Happy gemini season.

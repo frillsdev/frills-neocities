@@ -2,5 +2,5 @@ module.exports = {
 	tags: [
 		"weeknotes"
 	],
-	"layout": "layouts/post.njk"
+	"layout": "layouts/weeknotes.njk"
 };

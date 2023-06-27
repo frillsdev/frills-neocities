@@ -11,7 +11,7 @@ tags:
 
 Shiny. Not that remarkable. Gets slimy when it's wet.
 
-There is no antidote. Symptoms start fairly quickly, with being sick, diarrhoea and stomach pain - that can last for day! Then you make a full recovery, then die from kidney and liver failure. Brutal. The poison, alpha-amanitin, kills liver cells and goes through the kidney to get recirculated to cause even more damage.
+There is no antidote. Symptoms start fairly quickly, with being sick, diarrhoea and stomach pain - that can last for days! Then you make a full recovery, then die from kidney and liver failure. Brutal. The poison, alpha-amanitin, kills liver cells and goes through the kidney to get recirculated to cause even more damage.
 
 ## Destroying angel
 
