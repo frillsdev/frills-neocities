@@ -1,0 +1,68 @@
+---
+eleventyNavigation:
+  {# key: About #}
+  {# order: 4 #}
+title: About the Webmaster
+rp: There is a rustling noise from behind a bush and you go to investigate. Amidst the leaves, a pair of mischievous brown eyes meet yours. Slowly, a woman emerges from the undergrowth, adorned with tangled brown and blonde hair and grubby gardening attire. You get a waft of earth and soap as she extends her hand in greeting.
+---
+{% extends 'page.njk'%}
+
+{%- block content -%}
+<section>
+	{{ macro.header(title + ' <span class="emoji" role="img" aria-label="Seedling">🌷</span>', rp ) }}
+
+	
+
+</section>
+
+<section>
+	{# TODO: make this accessible #}
+	<h2>My Character Sheet</h2>
+	<h3>Alignment:</h3>
+	<p>Lawful Good ----- XXXXXXXXXXXXXXXXXXX (19)</p>
+	<p>Neutral Good ---- XXXXXXXXXXXXXXXXXXXXXXX (23)</p>
+	<p>Chaotic Good ---- XXXXXXXXXXXXXXX (15)</p>
+	<p>Lawful Neutral -- XXXXXXXXXXXXXXXXX (17)</p>
+	<p>True Neutral ---- XXXXXXXXXXXXXXXXXXXXX (21)</p>
+	<p>Chaotic Neutral - XXXXXXXXXXXXX (13)</p>
+	<p>Lawful Evil ----- XXXXXXXXXXX (11)</p>
+	<p>Chaotic Evil ---- XXXXXXX (7)</p>
+
+	<h3>Law & Chaos:</h3>
+	<p>Law ----- XXXXXXXX (8)</p>
+	<p>Neutral - XXXXXXXXXXXX (12)</p>
+	<p>Chaos --- XXXX (4)</p>
+
+	<h3>Good & Evil:</h3>
+	<p>Good ---- XXXXXXXXXXX (11)</p>
+	<p>Neutral - XXXXXXXXX (9)</p>
+	<p>Evil ---- XXX (3)</p>
+
+	<h3>Race:</h3>
+	<p>Human ---- XXXXXXXXXXXXX (13)</p>
+	<p>Dwarf ---- XXXXXXXXXXXX (12)</p>
+	<p>Elf ------ XXXXXXXX (8)</p>
+	<p>Gnome ---- XXXXXX (6)</p>
+	<p>Halfling - XXXX (4)</p>
+	<p>Half-Elf - XXXXXXXXXXXX (12)</p>
+	<p>Half-Orc - XXXXXX (6)</p>
+
+	<h3>Class:</h3>
+	<p>Barbarian - XXXXXXXX (8)</p>
+	<p>Bard ------ XXXXXX (6)</p>
+	<p>Cleric ---- XXXXXXXXXX (10)</p>
+	<p>Druid ----- XXXXXXXXXXXXXXXXXX (18)</p>
+	<p>Fighter --- XXXXXXXX (8)</p>
+	<p>Monk ------ XXXX (4)</p>
+	<p>Paladin --- XXXXXXXXXXXXXXXX (16)</p>
+	<p>Ranger ---- XXXXXXXXXXXXXX (14)</p>
+	<p>Rogue ----- XXXXXXXXXX (10)</p>
+	<p>Sorcerer -- XXXXXXXXXXXXXXXX (16)</p>
+	<p>Warlock --- XXXXXXXX (8)</p>
+	<p>Wizard ---- XXXXXXXXXXXXXX (14)</p>
+</section>
+{%- endblock -%}
+
+{%- block js -%}
+
+{%- endblock -%}
