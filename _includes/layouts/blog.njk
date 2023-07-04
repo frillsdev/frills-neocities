@@ -5,28 +5,7 @@
     {% import "_includes/_components/components.njk" as macro with context %}
 
     {%- css "defer" %}
-        .links-nextprev {
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid var(--pink);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        .links-prev,
-        .links-next {
-            display:flex;
-            flex-direction: column;
-            text-align: center;
-        }
-        .links-prev::before,
-        .links-next::before {
-            content: '➪';
-            font-size: 4rem;
-        }
-        .links-prev::before {
-            transform: rotate(180deg);
-            display: inline-block;
-        }
+
     {% endcss %}
 
     <article class="article">

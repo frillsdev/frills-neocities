@@ -151,15 +151,18 @@ ol.unstyled {
 .flip-y {
   transform: scaleX(-1);
 }
+
 .d-ib {
   display: inline-block;
 }
+
+/* Webrings */
 
 .webring__prev,
 .webring__next,
 .webring-prev,
 .webring-next {
-  font-size: 0!important;
+  font-size: 0 !important;
   width: 30px;
   display: inline-block;
   text-align: center;
@@ -169,16 +172,52 @@ ol.unstyled {
 .webring__next::before,
 .webring-prev a::before,
 .webring-next a::before {
-    content: '➪';
-    font-size: 1rem;
-    display: inline-block;
+  content: '➪';
+  font-size: 1rem;
+  display: inline-block;
 }
 
 .webring__prev::before,
 .webring-prev a::before {
-    transform: scaleX(-1);
-    display: inline-block;
+  transform: scaleX(-1);
+  display: inline-block;
 }
+
+/* Post pagination */
+
+.links-nextprev {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--pink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.links-prev,
+.links-next {
+  padding-top: 5rem;
+  position: relative;
+}
+
+.links-prev a::before,
+.links-next a::before {
+  content: '➪';
+  font-size: 4rem;
+  line-height: 1;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.links-prev a::before {
+  transform: scaleX(-1);
+}
+
 
 /* Third Party */
 
