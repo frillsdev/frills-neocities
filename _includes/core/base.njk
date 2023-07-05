@@ -1,7 +1,8 @@
 {% include "_includes/core/_template-start.njk" %}
 
 <body>
-
+    {#- <label for="hslRange">Change background colour</label>
+    <input type="range" id="hslRange" min="0" max="360" step="1" /> #}
     <div class="container center py-1">
         {% include "_includes/core/_nav.njk" %}
         <main class="main">
@@ -12,6 +13,7 @@
         {% include "_includes/core/_footer.njk" %}
     </div>
 
+    <script>!function(){if(document.getElementById("hslRange")){document.body.innerHTML+='<style id="hslVariable"></style>';let e=document.getElementById("hslRange"),n=document.getElementById("hslVariable"),t=e.value,l=parseInt(t)+230;n.innerHTML=`:root{--hue: ${t}; --contrast: ${l}; }`,e.addEventListener("change",a=>{l=parseInt(t=e.value)+230,n.innerHTML=`:root{--hue: ${t}; --contrast: ${l}; }`})}}();</script>
     {%- block js -%}
     {%- endblock -%}
 </body>
