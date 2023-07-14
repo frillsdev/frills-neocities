@@ -94,7 +94,19 @@ And just like that, June is over.
 
 <div class="pb-2">
     {{ macro.details(
+      summary = "🕺 Fiancé is away for work",
+      body = "So I've been doing a tonne of washing."
+    ) }}
+    {{ macro.details(
       summary = "💞 Date night with the bestie",
       body = "It's been ages!"
+    ) }}
+    {{ macro.details(
+      summary = "👨‍👩‍👧 Mum and dad popped over for the evening",
+      body = "I live 1.5h away from them in the car, so having them pop over for the evening is special. It was lovely to have their company, they took the dog for a walk before I finished work and we ate good food and chatted. They also brought me some poppy seeds!"
+    ) }}
+    {{ macro.details(
+      summary = "🎨 Finished that half-painted wall in the utility room",
+      body = "I started painting the wall before we put up our clothes airers, because I didn't want to take them down againt to paint behind them. Fast-forward a year and it's still half painted. I just so happened to have the energy and motivation to finally finish that wall.. and maybe start another!?"
     ) }}
 </div>
