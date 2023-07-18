@@ -1,0 +1,26 @@
+{% extends "core/base.njk" %}
+
+{%- block main -%}
+
+{% import "_includes/_components/components.njk" as macro with context %}
+
+
+	{%- css "preload" %}.bloglist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}; } .bloglist-item.draft{opacity: 0.5;}{% endcss %}
+
+	{{ macro.header(title + emoji) }}
+
+	<ol reversed class="unstyled">
+	{% for post in postslist | reverse %}
+		<li class="bloglist-item{% if post.data.draft %} draft{% endif %}">
+			<a href="{{ post.url }}" class="bloglist-link">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
+			<time class="bloglist-date" datetime="{{ post.date | htmlDateString }}">Posted {{ post.date | readableDate("d LLL yyyy") }}</time>
+		</li>
+	{% endfor %}
+	</ol>
+{%- endblock -%}
+
+{%- block js -%}
+<script>
+
+</script>
+{%- endblock -%}

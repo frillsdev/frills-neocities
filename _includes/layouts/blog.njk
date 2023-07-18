@@ -5,24 +5,30 @@
     {% import "_includes/_components/components.njk" as macro with context %}
 
     {%- css "defer" %}
-
+        .post-tag {background-color: var(--link); color: var(--bg); padding: 2px 8px; border-radius: 4px; font-size: 90%;}
     {% endcss %}
 
     <article class="article">
         {{ macro.header(title, description) }}
 
         <ul class="post-metadata unstyled">
+            {% if tags.includes("weeknotes") %}
+            {% else %}
             <li>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
+            {% endif %}
             {% if tags %}
-            <li>Tags:
+            <li>
                 {%- for tag in tags | filterTagList %}
-                {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-                {# <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %} #}
-                <span class="post-tag">{{ tag }}</span>{%- if not loop.last %}, {% endif %}
+                <span class="post-tag">#{{ tag }}</span>{%- if not loop.last %} {% endif %}
                 {%- endfor %}
             </li>
             {% endif %}
         </ul>
+
+        {% if tags.includes("weeknotes") %}
+        <button id="toggleDetail" class="button mb-1" aria-pressed="false">Expand accordions</button>
+        {% endif %}
+
         {{ content | safe }}
 
     </article>
@@ -41,3 +47,13 @@
     {%- endif %}
     {%- endif %}
 {%- endblock -%}
+
+{% block js %}
+    {% if tags.includes("weeknotes") %}
+    <script>
+        const t = document.getElementById('toggleDetail')
+        const o = "Expand accordions"
+        const c = "Collapse accordions"
+        if(t){t.addEventListener("click",function(){document.body.querySelectorAll("details").forEach(e=>{e.hasAttribute("open")?(t.innerHTML=o,t.setAttribute("aria-pressed",!1),e.removeAttribute("open")):(t.innerHTML=c,t.setAttribute("aria-pressed",!0),e.setAttribute("open",!0))})});}</script>
+    {% endif %}
+{% endblock %}
