@@ -14,7 +14,7 @@ title: Button wall
 			margin: 0;
 		}
 		.buttonwall__item {
-			width: 88px;
+			width: 80px;
 			height: 31px;
 			background: white;
 			display: flex;
@@ -25,10 +25,13 @@ title: Button wall
 			overflow: hidden;
 			word-break: break-word;
 			text-decoration: none;
+			font-weight: 700;
+			padding: 0 4px;
 		}
-		.buttonwall__item:hover,.buttonwall__item:focus,.buttonwall__item:active {
+		.buttonwall__item:hover,
+		.buttonwall__item:focus,
+		.buttonwall__item:active {
 			transform: scale(2);
-			text-decoration: underline;
 		}
     {% endcss %}
 
@@ -38,13 +41,24 @@ title: Button wall
 	{{ macro.header(title + ' <span class="emoji" role="img" aria-label="Seedling">🌱</span>' ) }}
 
 	<ul class="buttonwall">
-		<li><a href="#" class="buttonwall__item --spots" style="font-size: 10px; background-color: pink; color: white;">frills</a></li>
-		<li><a href="https://lostletters.neocities.org/" class="buttonwall__item --stars" style="font-size: 12px; background-color: #34072d; color: #ffc6ec;">lostletters</a></li>
-		<li><a href="https://thogreer.neocities.org/" class="buttonwall__item --spots" style="font-size: 14px; background-color: #000000; color: #0335a8;">throgreer</a></li>
-		<li><a href="#" class="buttonwall__item --spots" style="font-size: 10px; background-color: hotpink; color: black;">suppecalifragilisticexpialidocious</a></li>
-		<li><a href="#" class="buttonwall__item --spots" style="font-size: 10px; background-color: hotpink; color: black;">frills</a></li>
-		<li><a href="#" class="buttonwall__item --spots" style="font-size: 10px; background-color: hotpink; color: black;">frills</a></li>
-		<li><a href="#" class="buttonwall__item --spots" style="font-size: 10px; background-color: hotpink; color: black;">frills</a></li>
+		<li>
+			<a target="_blank" href="https://lostletters.neocities.org/" class="buttonwall__item --stars" style="font-size: 12px; background-color: #34072d; color: #ffc6ec;">lostletters</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://thogreer.neocities.org/" class="buttonwall__item --spots" style="font-size: 14px; background-color: #000000; color: #0335a8;">throgreer</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://jessicajournals.com/" class="buttonwall__item --spots" style="font-size: 10px; background-color: #1e1e2e; color: #A5E3A1; background-image: linear-gradient(to left, #181825, #1e1e2e)">jessica journals</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://10kph.neocities.org/" class="buttonwall__item --spots" style="font-size: 14px; background-color: #1c1e26; color: #e95678;">10kph</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://maria.town/" class="buttonwall__item --spots" style="font-size: 13px; background-color: #1f2d39; color: #96d1a0;">maria</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://daintye.co/" class="buttonwall__item --spots" style="font-size: 13px; background-color: white; color: #ff9dc9;">daintyeco</a>
+		</li>
 	</ul>
 
 </section>
