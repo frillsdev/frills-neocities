@@ -1,5 +1,7 @@
 ---
 title: Button wall
+emoji: ' <span class="emoji" role="img" aria-label="Seedling">🌱</span>'
+description: My take on the classic 88x31 button wall. No images, just colourful little rectangles. I would like to open this up to people choosing and submitting their own colour combinations, but for now these are all selected and chosen by me. If you feature here and want to get your colours updated, <a href="/about/">message me</a> on any of my channels.
 ---
 {% extends 'page.njk'%}
 
@@ -11,7 +13,21 @@ title: Button wall
 			gap: 1px;
 			list-style-type: none;
 			padding: 0;
-			margin: 0;
+			margin: 0 0 2rem 0;
+		}
+
+		.buttonwall.--highcontrast .buttonwall__item {
+			background: white!important;
+			color: #4d0024!important;
+			box-shadow: inset 0 0 0 1px #4d0024!important;
+			text-decoration: underline!important;
+		}
+		@media (prefers-color-scheme: dark) {
+			.buttonwall.--highcontrast .buttonwall__item {
+				background: #4d0024!important;
+				color: white!important;
+				box-shadow: inset 0 0 0 1px white!important;
+			}
 		}
 		.buttonwall__item {
 			width: 80px;
@@ -24,9 +40,11 @@ title: Button wall
 			transition: 0.4s ease transform;
 			overflow: hidden;
 			word-break: break-word;
+			padding: 0 4px;
 			text-decoration: none;
 			font-weight: 700;
-			padding: 0 4px;
+			font-size: 12px;
+			line-height: 1.1;
 		}
 		.buttonwall__item:hover,
 		.buttonwall__item:focus,
@@ -38,14 +56,17 @@ title: Button wall
 
 {%- block content -%}
 <section>
-	{{ macro.header(title + ' <span class="emoji" role="img" aria-label="Seedling">🌱</span>' ) }}
+	{{ macro.header(title + emoji, description ) }}
 
+	<button id="toggleHighContrast" class="button mb-1" aria-pressed="false">Enable high contrast</button>
+
+	<h2>Neocities</h2>
 	<ul class="buttonwall">
 		<li>
-			<a target="_blank" href="https://lostletters.neocities.org/" class="buttonwall__item --stars" style="font-size: 12px; background-color: #34072d; color: #ffc6ec;">lostletters</a>
+			<a target="_blank" href="https://lostletters.neocities.org/" class="buttonwall__item" style="font-size: 12px; background-color: #34072d; color: #ffc6ec;">lostletters</a>
 		</li>
 		<li>
-			<a target="_blank" href="https://thogreer.neocities.org/" class="buttonwall__item --spots" style="font-size: 14px; background-color: #000000; color: #0335a8;">throgreer</a>
+			<a target="_blank" href="https://thogreer.neocities.org/" class="buttonwall__item --spots" style="font-size: 14px; background-color: #0334a7; color: #fff;">thogreer</a>
 		</li>
 		<li>
 			<a target="_blank" href="https://jessicajournals.com/" class="buttonwall__item --spots" style="font-size: 10px; background-color: #1e1e2e; color: #A5E3A1; background-image: linear-gradient(to left, #181825, #1e1e2e)">jessica journals</a>
@@ -61,9 +82,60 @@ title: Button wall
 		</li>
 	</ul>
 
+	<h2>Friends</h2>
+	<ul class="buttonwall">
+		<li>
+			<a target="_blank" href="https://gothhoblin.me/" class="buttonwall__item" style="font-size: 12px; background-color: #083820; color: #fff;">goth hoblin</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://teafuellednonsense.wordpress.com/" class="buttonwall__item" style="font-size: 12px; background-color: #fff; color: #00aadc;">Justin Blogs Again!</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://justnik.me/" class="buttonwall__item" style="font-size: 12px; background-color: #2d3748; color: #fff;">justnik</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://owain.codes/" class="buttonwall__item" style="font-size: 12px; background-color: #222831; color: #b6ff00;">owain.codes</a>
+		</li>
+	</ul>
+
+	<h2>Artists</h2>
+
+	<ul class="buttonwall">
+		<li>
+			<a target="_blank" href="https://www.furrylittlepeach.com/" class="buttonwall__item" style="font-size: 12px; background-color: #f0490a; color: #fff;">furry little peach </a>
+		</li>
+		<li>
+			<a target="_blank" href="https://cheyennebarton.com/" class="buttonwall__item --spots" style="font-size: 14px; background-color: #ffc929; color: #fa4723;">cheyenne barton</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://girlscape.co.uk/" class="buttonwall__item --spots" style="font-size: 13px; background-color: #ff91bb; color: #fff;">girlscape</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://leighellexson.com/" class="buttonwall__item --spots" style="font-size: 12px; background-color: #9bc18a; color: #fdfbf7;">Leigh Ellexson</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://uncomfyco.com/" class="buttonwall__item --spots" style="font-size: 13px; background-color: #603814; color: #fff;">uncomfyco</a>
+		</li>
+	</ul>
+
+	<small>Buttonwall v1 25th July 2023</small>
+
 </section>
 {%- endblock -%}
 
-{%- block js -%}
+{% block js %}
+    <script>
+        const t = document.getElementById('toggleHighContrast')
+        const w = document.querySelectorAll('.buttonwall')
+        const o = "Enable high contrast"
+        const c = "Disable high contrast"
 
-{%- endblock -%}
+		if (t) {
+			t.addEventListener("click", function () {
+				w.forEach((b) => {
+					b.classList.contains("--highcontrast") ? ((t.innerHTML = o), t.setAttribute("aria-pressed", !1), b.classList.remove("--highcontrast")) : ((t.innerHTML = c), t.setAttribute("aria-pressed", !0), b.classList.add("--highcontrast"));
+				});
+			});
+		}
+	</script>
+{% endblock %}
