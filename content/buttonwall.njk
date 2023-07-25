@@ -129,13 +129,6 @@ description: My take on the classic 88x31 button wall. No images, just colourful
         const w = document.querySelectorAll('.buttonwall')
         const o = "Enable high contrast"
         const c = "Disable high contrast"
-
-		if (t) {
-			t.addEventListener("click", function () {
-				w.forEach((b) => {
-					b.classList.contains("--highcontrast") ? ((t.innerHTML = o), t.setAttribute("aria-pressed", !1), b.classList.remove("--highcontrast")) : ((t.innerHTML = c), t.setAttribute("aria-pressed", !0), b.classList.add("--highcontrast"));
-				});
-			});
-		}
+		if (t) {t.addEventListener("click",(function(){w.forEach((s=>{s.classList.contains("--highcontrast")?(t.innerHTML=o,t.setAttribute("aria-pressed",!1),s.classList.remove("--highcontrast")):(t.innerHTML=c,t.setAttribute("aria-pressed",!0),s.classList.add("--highcontrast"))}))}));}
 	</script>
 {% endblock %}
