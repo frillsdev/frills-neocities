@@ -51,7 +51,14 @@ eleventyNavigation:
 		.buttonwall__item:hover,
 		.buttonwall__item:focus,
 		.buttonwall__item:active {
-			transform: scale(2);
+			transform: scale(1.1);
+		}
+		@media (min-width: 767px) {
+			.buttonwall__item:hover,
+			.buttonwall__item:focus,
+			.buttonwall__item:active {
+				transform: scale(2);
+			}
 		}
     {% endcss %}
 
@@ -80,6 +87,9 @@ eleventyNavigation:
 		</li>
 		<li>
 			<a target="_blank" href="https://daintye.co/" class="buttonwall__item --spots" style="font-size: 13px; background-color: white; color: #ff9dc9;">daintyeco</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://hillhouse.neocities.org" class="buttonwall__item --spots" style="font-size: 13px; background-color: #ffccdd; color: #ab6c84;">hillhouse</a>
 		</li>
 		{# Friends #}
 		<li>
