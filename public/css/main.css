@@ -141,6 +141,7 @@ ol.unstyled {
 .emoji {
   font-size: 110%;
   line-height: 90%;
+  font-family: Apple Color Emoji, "Segoe UI Emoji", "Noto Color Emoji";
 }
 
 .lowercase {
