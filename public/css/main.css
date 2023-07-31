@@ -30,7 +30,7 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 15px;
+  row-gap: 15px;
 }
 
 form {width: 100%}
