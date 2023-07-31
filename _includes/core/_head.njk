@@ -15,12 +15,8 @@
     {#- CSS bundles via `eleventy-plugin-bundle` https://github.com/11ty/eleventy-plugin-bundle -#}
     {%- css "preload" %}{% include "public/css/variables.css" %}{% endcss %}
     {%- css "preload" %}{% include "public/css/preload.css" %}{% endcss %}
-    {%- css "defer" %}{% include "public/css/main.css" %}{% endcss %}
     <style>
         {% getBundle "css", "preload" %}
     </style>
-    <link rel="stylesheet" href="{% getBundleFileUrl "css", "defer" %}">
-    {# <noscript>
-      <link rel="stylesheet" href="{% getBundleFileUrl "css", "noscript" %}">
-    </noscript> #}
+    <link href="/css/main.css" rel="stylesheet">
 </head>

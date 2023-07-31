@@ -4,9 +4,6 @@
 
 {% import "_includes/_components/components.njk" as macro with context %}
 
-
-	{%- css "preload" %}.bloglist { counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}; } .bloglist-item.draft{opacity: 0.5;}{% endcss %}
-
 	{{ macro.header(title + emoji) }}
 
 	<ol reversed class="unstyled">

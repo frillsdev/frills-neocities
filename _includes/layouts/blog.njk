@@ -4,10 +4,6 @@
 
     {% import "_includes/_components/components.njk" as macro with context %}
 
-    {%- css "defer" %}
-        .post-tag {background-color: var(--link); color: var(--bg); padding: 2px 8px; border-radius: 4px; font-size: 90%;}
-    {% endcss %}
-
     <article class="article">
         {{ macro.header(title, description) }}
 
@@ -33,19 +29,6 @@
 
     </article>
 
-    {%- if collections.posts %}
-    {%- set previousPost = collections.posts | getPreviousCollectionItem %}
-    {%- set nextPost = collections.posts | getNextCollectionItem %}
-    {%- if nextPost or previousPost %}
-    <nav aria-label="Post">
-        <ul class="links-nextprev unstyled">
-            {%- if previousPost %}<li class="links-prev">
-            <span class="sronly">Previous:</span> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% else %}<li></li>{% endif %}
-            {%- if nextPost %}<li class="links-next"><span class="sronly">Next:</span> <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% else %}<li></li>{% endif %}
-        </ul>
-    </nav>
-    {%- endif %}
-    {%- endif %}
 {%- endblock -%}
 
 {% block js %}

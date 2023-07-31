@@ -2,13 +2,13 @@
 
 <body>
     {#- <label for="hslRange">Change background colour</label>
-    <input type="range" id="hslRange" min="0" max="360" step="1" /> -#}
+    <input type="range" id="hslRange" min="0" max="360" step="1" />#}
     <div class="container center py-1">
         {% include "_includes/core/_nav.njk" %}
         <main class="main">
         {%- block main -%}
             {{- content | safe -}}
-        {%- endblock -%}
+        {%- endblock %}
         </main>
         {% include "_includes/core/_footer.njk" %}
     </div>
