@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Cherry Bomb';
+  src: url(../fonts/CherryBombOne-Regular.ttf);
+}
+
 /* Structural */
 .container {
   width: 100%;
@@ -13,7 +18,7 @@
 }
 
 .header h1 {
-  font-family: 'Cherry Bomb One', sans-serif;
+  font-family: 'Cherry Bomb', sans-serif;
   font-size: 3rem;
   font-display: fallback;
   font-weight: 400;
