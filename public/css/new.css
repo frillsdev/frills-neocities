@@ -1,19 +1,19 @@
 :root {
-    --bodybg: LavenderBlush;
-    --bg: hsl(332, 100%, 95%);
-    --border: hsl(332, 100%, 11%);
-    --link: hsl(332, 100%, 15%);
-    --linkhover: DeepPink;
-    --text: Black;
-    --callout: hsl(332, 56%, 87%);
-    --pink: DeepPink;
-    --font-size: 14px;
+  --bodybg: #0a0a0a;
+  --bg: black;
+  --border: hsl(332, 100%, 11%);
+  --link: DeepPink;
+  --linkhover: springgreen;
+  --text: LavenderBlush;
+  --callout: hsl(332, 56%, 87%);
+  --pink: DeepPink;
+  --font-size: 14px;
 }
 
 @media (min-width: 576px) {
-    :root {
-        --font-size: 20px;
-    }
+  :root {
+    --font-size: 20px;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -40,9 +40,13 @@ html {
 }
 
 body {
-  background-color: var(--bodybg);
   color: var(--text);
-  min-height: 100vh
+  min-height: 100vh;
+  background:
+  radial-gradient(circle at 100% 50%, transparent 20%, var(--bg) 21%, var(--bg) 34%, transparent 35%, transparent),
+  radial-gradient(circle at 0% 50%, transparent 20%, var(--bg) 21%, var(--bg) 34%, transparent 35%, transparent) 0 -50px;
+  background-color: var(--bodybg);
+  background-size:75px 100px;
 }
 
 h1,
@@ -75,7 +79,7 @@ h6 {
 
 a {
   color: var(--link);
-  transition: 0.3s ease color
+  /* transition: 0.3s ease color */
 }
 
 a:hover,
@@ -110,9 +114,73 @@ p {
   width: 1px;
 }
 
+.page {
+  background-color: var(--bg);
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 0 56px;
+}
+
+.page-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 60px 0 0 0;
+}
+
 .page-title {
   font-family: 'Cherry Bomb';
-  font-size: 8vw;
+  font-size: 3rem;
   line-height: 1;
-  text-align: center;
+}
+
+@keyframes cl {
+  0% {fill: hsl(0, 70%, 70%)}
+  20% {fill: hsl(51, 70%, 70%)}
+  40% {fill: hsl(102, 70%, 70%)}
+  60% {fill: hsl(153, 70%, 70%)}
+  80% {fill: hsl(204, 70%, 70%)}
+  100% {fill: hsl(255, 70%, 70%)}
+}
+
+.frills {
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+}
+
+.frills-tx {
+  fill: hsl(330, 70%, 70%)
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .frills-tx {
+    animation: cl 10s 0s infinite forwards alternate
+  }
+}
+
+.page-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  right: 0;
+  column-gap: 46px;
+  row-gap: 26px;
+}
+
+.page-nav ul li a {
+  text-decoration: none;
+  color: var(--link);
+  white-space: nowrap;
+}
+
+.page-nav ul li a:hover,
+.page-nav ul li a:focus,
+.page-nav ul li a:active {
+  color: var(--linkhover);
+  text-decoration: underline wavy 2px;
 }
