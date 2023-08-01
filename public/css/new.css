@@ -1,13 +1,13 @@
 :root {
-  --bodybg: #0a0a0a;
+  --bodybg: #050505;
   --bg: black;
-  --border: hsl(332, 100%, 11%);
+  --border: gold;
   --link: DeepPink;
   --linkhover: springgreen;
   --text: LavenderBlush;
   --callout: hsl(332, 56%, 87%);
   --pink: DeepPink;
-  --font-size: 14px;
+  --font-size: 16px;
 }
 
 @media (min-width: 576px) {
@@ -40,14 +40,15 @@ html {
 }
 
 body {
+  font-family: 'Tahoma', sans-serif;
   color: var(--text);
-  margin: 0 14px;
   padding: 0;
+  margin: 0;
   background:
-  radial-gradient(circle at 100% 50%, transparent 20%, var(--bg) 21%, var(--bg) 34%, transparent 35%, transparent),
-  radial-gradient(circle at 0% 50%, transparent 20%, var(--bg) 21%, var(--bg) 34%, transparent 35%, transparent) 0 -50px;
-  background-color: var(--bodybg);
-  background-size:75px 100px;
+    radial-gradient(circle at 100% 50%, transparent 20%, var(--bodybg) 21%, var(--bodybg) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 50%, transparent 20%, var(--bodybg) 21%, var(--bodybg) 34%, transparent 35%, transparent) 0 -100px;
+  background-color: var(--bg);
+  background-size: 150px 200px;
 }
 
 h1,
@@ -83,6 +84,18 @@ a {
   /* transition: 0.3s ease color */
 }
 
+img {
+  image-rendering: pixelated;
+}
+
+img.rounded {
+  border-radius: 1rem;
+}
+
+img.round {
+  border-radius: 50%;
+}
+
 a:hover,
 a:focus {
   color: var(--linkhover)
@@ -96,9 +109,14 @@ ul,
 ol {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
   padding-bottom: 1rem;
-  padding-left: 1rem
+  row-gap: 8px;
+}
+
+ul.unstyled,
+ol.unstyled {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 p {
@@ -120,34 +138,77 @@ p {
   max-width: 1600px;
   margin: 0 auto;
   min-height: 100vh;
-  padding: 0 56px;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 0 56px;
+  }
 }
 
 .page-header {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  padding: 60px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 60px 0 0 0;
+  }
 }
 
 .page-title {
-  font-family: 'Cherry Bomb';
-  font-size: 3rem;
-  line-height: 1;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    margin-bottom: 0;
+    justify-content: flex-start;
+  }
 }
 
 @keyframes cl {
-  0% {fill: hsl(0, 70%, 70%)}
-  20% {fill: hsl(51, 70%, 70%)}
-  40% {fill: hsl(102, 70%, 70%)}
-  60% {fill: hsl(153, 70%, 70%)}
-  80% {fill: hsl(204, 70%, 70%)}
-  100% {fill: hsl(255, 70%, 70%)}
+  0% {
+    fill: hsl(0, 70%, 70%)
+  }
+
+  20% {
+    fill: hsl(51, 70%, 70%)
+  }
+
+  40% {
+    fill: hsl(102, 70%, 70%)
+  }
+
+  60% {
+    fill: hsl(153, 70%, 70%)
+  }
+
+  80% {
+    fill: hsl(204, 70%, 70%)
+  }
+
+  100% {
+    fill: hsl(255, 70%, 70%)
+  }
 }
 
 .frills {
-  width: 100%;
-  max-width: 200px;
-  height: 100%;
+  max-height: 60px;
+}
+
+@media (min-width: 768px) {
+  .frills {
+    max-width: 200px;
+    max-height: none;
+  }
 }
 
 .frills-tx {
@@ -168,13 +229,21 @@ p {
   justify-content: center;
   list-style-type: none;
   padding: 0;
-  right: 0;
-  column-gap: 46px;
-  row-gap: 26px;
+  margin: 0 auto;
+  column-gap: 0.7rem;
+  row-gap: 0.7rem;
+  max-width: 30rem;
+}
+
+@media (min-width: 768px) {
+  .page-nav ul {
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+  }
 }
 
 .page-nav ul li a {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--link);
   white-space: nowrap;
 }
@@ -184,4 +253,21 @@ p {
 .page-nav ul li a:active {
   color: var(--linkhover);
   text-decoration: underline wavy 2px;
+}
+
+.page-main {
+  padding: 60px 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.section {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  padding: 1rem;
+}
+
+.bio-pic {
+  border-bottom: 5px solid var(--border);
+  max-width: 200px;
 }
