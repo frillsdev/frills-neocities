@@ -41,7 +41,8 @@ html {
 
 body {
   color: var(--text);
-  min-height: 100vh;
+  margin: 0 14px;
+  padding: 0;
   background:
   radial-gradient(circle at 100% 50%, transparent 20%, var(--bg) 21%, var(--bg) 34%, transparent 35%, transparent),
   radial-gradient(circle at 0% 50%, transparent 20%, var(--bg) 21%, var(--bg) 34%, transparent 35%, transparent) 0 -50px;
