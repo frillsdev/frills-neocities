@@ -295,6 +295,12 @@ p {
   gap: 26px;
 }
 
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .section {
   /* border-radius: 1rem;
   border: 1px solid var(--border);
