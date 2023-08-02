@@ -28,11 +28,6 @@
     }
 } */
 
-@font-face {
-  font-family: 'Cherry Bomb';
-  src: url(../fonts/CherryBombOne-Regular.ttf);
-}
-
 html {
   font-family: sans-serif;
   font-size: var(--font-size);
@@ -80,9 +75,24 @@ h6 {
 }
 
 a {
+  text-decoration: underline;
   color: var(--link);
-  /* transition: 0.3s ease color */
 }
+a.hidden {
+  text-decoration: inherit;
+  color: inherit;
+}
+a:hover,
+a:focus,
+a:active
+a.hidden:hover,
+a.hidden:focus,
+a.hidden:active {
+  color: var(--linkhover);
+  text-decoration: underline wavy 2px;
+}
+
+
 
 img {
   image-rendering: pixelated;
@@ -102,7 +112,8 @@ a:focus {
 }
 
 *:focus-visible {
-  outline: 3px solid orangered
+  outline: 3px solid orangered;
+  outline-offset: 3px;
 }
 
 ul,
@@ -121,6 +132,10 @@ ol.unstyled {
 
 p {
   margin: 0 0 1rem
+}
+
+input {
+  accent-color: violet;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -155,8 +170,6 @@ p {
 
 @media (min-width: 768px) {
   .page-header {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
     padding: 60px 0 0 0;
   }
 }
@@ -259,10 +272,10 @@ p {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   column-gap: 0.7rem;
   row-gap: 0.7rem;
   max-width: 30rem;
@@ -276,23 +289,21 @@ p {
 }
 
 .page-nav ul li a {
-  text-decoration: underline;
-  color: var(--link);
   white-space: nowrap;
 }
 
-.page-nav ul li a:hover,
-.page-nav ul li a:focus,
-.page-nav ul li a:active {
-  color: var(--linkhover);
-  text-decoration: underline wavy 2px;
+.grid {
+  display: grid;
+  grid-template-columns: 240px 2fr 1fr;
+  gap: 26px;
 }
 
 .page-main {
   padding: 60px 0 0 0;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 26px;
+}
+
+.page-footer {
+  padding: 60px 0;
 }
 
 .settings {
@@ -311,4 +322,36 @@ p {
   border-bottom: 5px solid var(--border);
   max-width: 200px;
   margin-bottom: 1rem;
+}
+
+/* Webrings */
+.webrings {
+  display: flex;
+  flex-direction: row;
+  row-gap: 15px;
+}
+
+.webring__prev,
+.webring__next,
+.webring-prev,
+.webring-next {
+  font-size: 0 !important;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+.webring__prev::before,
+.webring__next::before,
+.webring-prev a::before,
+.webring-next a::before {
+  content: '➪';
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.webring__prev::before,
+.webring-prev a::before {
+  transform: scaleX(-1);
+  display: inline-block;
 }
