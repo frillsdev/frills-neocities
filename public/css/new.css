@@ -1,5 +1,5 @@
 :root {
-  --bodybg: #050505;
+  --bodybg: darkgray;
   --bg: black;
   --border: gold;
   --link: DeepPink;
@@ -39,6 +39,7 @@ body {
   color: var(--text);
   padding: 0;
   margin: 0;
+  background-color: #202020;
   background:
     radial-gradient(circle at 100% 50%, transparent 20%, var(--bodybg) 21%, var(--bodybg) 34%, transparent 35%, transparent),
     radial-gradient(circle at 0% 50%, transparent 20%, var(--bodybg) 21%, var(--bodybg) 34%, transparent 35%, transparent) 0 -100px;
@@ -154,6 +155,13 @@ input {
   margin: 0 auto;
   min-height: 100vh;
   padding: 0;
+  /* --mask:
+    radial-gradient(33.82px at 46.40px 50%,#000 99%,#0000 101%) 0 calc(50% - 58px)/51% 116px repeat-y,
+    radial-gradient(33.82px at -17.4px 50%,#0000 99%,#000 101%) 29px 50%/calc(51% - 29px) 116px repeat-y,
+		radial-gradient(33.82px at calc(100% - 46.40px) 50%,#000 99%,#0000 101%) 100% calc(50% - 58px)/51% 116px repeat-y,
+    radial-gradient(33.82px at calc(100% + 17.40px) 50%,#0000 99%,#000 101%) calc(100% - 29px) 50%/calc(51% - 29px) 116px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask); */
 }
 
 @media (min-width: 768px) {
