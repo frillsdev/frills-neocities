@@ -47,14 +47,16 @@
         </header>
         <main class="page-main grid">
             <div class="section-side">
-                <img class="bio-pic" src="/images/pic.png" alt="Black and white avatar illustration: a smiling woman with shoulder length dark hair, large eyes and sparkles surrounding her">
-                <ul class="unstyled">
-                    <li><span class="emoji" aria-hidden="true">🌷</span> she/her</li>
-                    <li> <span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
-                    <li><span class="emoji" role="img" aria-label="Clock">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
-                    <li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini</li>
-                    <li><span role="img" class="emoji" aria-label="Moon sign">🌚</span> Scorpio</li>
-                </ul>
+                <div class="bio">
+                    <img class="bio-pic" src="/images/pic.png" alt="Black and white avatar illustration: a smiling woman with shoulder length dark hair, large eyes and sparkles surrounding her">
+                    <ul class="unstyled">
+                        <li><span class="emoji" aria-hidden="true">🌷</span> she/her</li>
+                        <li> <span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
+                        <li><span class="emoji" role="img" aria-label="Clock">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
+                        <li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini</li>
+                        <li><span role="img" class="emoji" aria-label="Moon sign">🌚</span> Scorpio</li>
+                    </ul>
+                </div>
             </div>
             <section class="section">
                 <h1>Example of a page title</h1>
@@ -86,7 +88,7 @@
         </footer>
     </div>
 
-            <!--Status.cafe-->
+        <!--Status.cafe-->
         <script defer>
         fetch("https://status.cafe/users/fri11s/status.json").then(t=>t.json()).then(t=>{if(!t.content.length){document.getElementById("statuscafe-content").innerHTML="No status yet.";return}document.getElementById("statuscafe-username").innerHTML='<a href="https://status.cafe/users/fri11s" target="_blank">Latest status</a> '+t.face+" "+t.timeAgo,document.getElementById("statuscafe-content").innerHTML=t.content});
         </script>

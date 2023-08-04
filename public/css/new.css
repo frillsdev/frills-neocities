@@ -79,24 +79,19 @@ a {
   text-decoration: underline;
   color: var(--link);
 }
+
 a.hidden {
   text-decoration: inherit;
   color: inherit;
 }
+
 a:hover,
 a:focus,
-a:active
-a.hidden:hover,
+a:active a.hidden:hover,
 a.hidden:focus,
 a.hidden:active {
   color: var(--linkhover);
   text-decoration: underline wavy 2px;
-}
-
-
-
-img {
-  image-rendering: pixelated;
 }
 
 img.rounded {
@@ -154,7 +149,7 @@ input {
   max-width: 1600px;
   margin: 0 auto;
   min-height: 100vh;
-  padding: 0;
+  padding: 0 14px;
   /* --mask:
     radial-gradient(33.82px at 46.40px 50%,#000 99%,#0000 101%) 0 calc(50% - 58px)/51% 116px repeat-y,
     radial-gradient(33.82px at -17.4px 50%,#0000 99%,#000 101%) 29px 50%/calc(51% - 29px) 116px repeat-y,
@@ -220,10 +215,12 @@ input {
     fill: hsl(255, 70%, 70%)
   }
 }
+
 @keyframes blink {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -231,12 +228,14 @@ input {
 
 .frills {
   max-height: 60px;
+  transform: translateX(30px)
 }
 
 @media (min-width: 768px) {
   .frills {
     max-width: 200px;
     max-height: none;
+    transform: none;
   }
 }
 
@@ -261,14 +260,17 @@ input {
   .frills-x {
     opacity: 0;
   }
+
   .frills-x:nth-child(3) {
     animation-delay: 0s;
     animation-duration: 2.3666666s;
   }
+
   .frills-x:nth-child(2) {
     animation-delay: 0.3s;
     animation-duration: 2.71111s;
   }
+
   .frills-x:nth-child(1) {
     animation-delay: 0.1s;
     animation-duration: 1.866666s;
@@ -280,10 +282,10 @@ input {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   column-gap: 0.7rem;
   row-gap: 0.7rem;
   max-width: 30rem;
@@ -293,6 +295,8 @@ input {
   .page-nav ul {
     column-gap: 2rem;
     row-gap: 1.5rem;
+    justify-content: flex-start;
+    margin: 0;
   }
 }
 
@@ -302,8 +306,14 @@ input {
 
 .grid {
   display: grid;
-  grid-template-columns: 240px 2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 26px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 240px 2fr 1fr;
+  }
 }
 
 .page-main {
@@ -326,8 +336,15 @@ input {
   padding: 1rem; */
 }
 
+.bio {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 26px;
+}
+
 .bio-pic {
   border-bottom: 5px solid var(--border);
+  width: 90%;
   max-width: 200px;
   margin-bottom: 1rem;
 }
