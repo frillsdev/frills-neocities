@@ -8,7 +8,7 @@
 {%- block main -%}
 	<ol reversed class="stars">
 	{% for post in postslist | reverse %}
-		<li class="{% if post.data.draft %} draft{% endif %}">
+		<li {% if post.data.draft %}class="draft"{% endif %}>
 			<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
 			<time datetime="{{ post.date | htmlDateString }}"> {{ post.date | readableDate("d LLL yyyy") }}</time>
 		</li>

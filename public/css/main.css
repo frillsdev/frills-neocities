@@ -254,10 +254,6 @@ ol.unstyled {
   border-collapse: collapse;
 }
 
-.bloglist-item.draft {
-  opacity: 0.5;
-}
-
 .post-tag {
   background-color: var(--link);
   color: var(--bg);

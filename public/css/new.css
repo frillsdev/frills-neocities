@@ -174,13 +174,6 @@ input {
   margin: 0 auto;
   min-height: 100vh;
   padding: 0 14px;
-  /* --mask:
-    radial-gradient(33.82px at 46.40px 50%,#000 99%,#0000 101%) 0 calc(50% - 58px)/51% 116px repeat-y,
-    radial-gradient(33.82px at -17.4px 50%,#0000 99%,#000 101%) 29px 50%/calc(51% - 29px) 116px repeat-y,
-		radial-gradient(33.82px at calc(100% - 46.40px) 50%,#000 99%,#0000 101%) 100% calc(50% - 58px)/51% 116px repeat-y,
-    radial-gradient(33.82px at calc(100% + 17.40px) 50%,#0000 99%,#000 101%) calc(100% - 29px) 50%/calc(51% - 29px) 116px repeat-y;
-  -webkit-mask: var(--mask);
-          mask: var(--mask); */
 }
 
 @media (min-width: 768px) {
@@ -214,29 +207,35 @@ input {
   }
 }
 
-@keyframes cl {
+@keyframes colour {
   0% {
-    fill: hsl(0, 70%, 70%)
+    fill: hsl(0, 70%, 70%);
+    stroke: hsl(0, 70%, 70%)
   }
 
   20% {
-    fill: hsl(51, 70%, 70%)
+    fill: hsl(51, 70%, 70%);
+    stroke: hsl(51, 70%, 70%)
   }
 
   40% {
-    fill: hsl(102, 70%, 70%)
+    fill: hsl(102, 70%, 70%);
+    stroke: hsl(102, 70%, 70%)
   }
 
   60% {
-    fill: hsl(153, 70%, 70%)
+    fill: hsl(153, 70%, 70%);
+    stroke: hsl(153, 70%, 70%)
   }
 
   80% {
-    fill: hsl(204, 70%, 70%)
+    fill: hsl(204, 70%, 70%);
+    stroke: hsl(204, 70%, 70%)
   }
 
   100% {
-    fill: hsl(255, 70%, 70%)
+    fill: hsl(255, 70%, 70%);
+    stroke: hsl(255, 70%, 70%)
   }
 }
 
@@ -250,53 +249,63 @@ input {
   }
 }
 
-.frills {
+.logo {
   max-height: 60px;
   transform: translateX(30px)
 }
 
+.logo:hover .logo-tx {
+  fill: transparent!important;
+}
+
 @media (min-width: 768px) {
-  .frills {
+  .logo {
     max-width: 200px;
     max-height: none;
     transform: none;
   }
 }
 
-.frills-tx {
-  fill: hsl(330, 70%, 70%)
+.logo-tx {
+  fill: hsl(330, 70%, 70%);
+    stroke-width: 0;
+  stroke: hsl(330, 70%, 70%)
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .frills-tx {
-    animation: cl 10s 0s infinite forwards alternate
+  .logo-tx {
+    animation: colour 10s 0s infinite forwards alternate;
   }
 
-  .frills:hover .frills-x,
-  .frills:focus .frills-x,
-  .frills:active .frills-x {
+  .logo:hover .logo-tx {
+    stroke-width:1px;
+
+  }
+  .logo:hover .logo-x,
+  .logo:focus .logo-x,
+  .logo:active .logo-x {
     animation-name: blink;
     animation-fill-mode: normal;
     animation-iteration-count: infinite;
     animation-direction: backwards;
   }
 
-  .frills-x {
+  .logo-x {
     opacity: 0;
   }
 
-  .frills-x:nth-child(3) {
+  .logo-x:nth-child(3) {
     animation-delay: 0s;
     animation-duration: 2.3666666s;
   }
 
-  .frills-x:nth-child(2) {
+  .logo-x:nth-child(2) {
     animation-delay: 0.3s;
-    animation-duration: 2.61111s;
+    animation-duration: 2.71111s;
   }
 
-  .frills-x:nth-child(1) {
-    animation-delay: 0.15s;
+  .logo-x:nth-child(1) {
+    animation-delay: 0.1s;
     animation-duration: 1.866666s;
   }
 }
@@ -354,12 +363,6 @@ input {
   align-items: flex-end;
 }
 
-.section {
-  /* border-radius: 1rem;
-  border: 1px solid var(--border);
-  padding: 1rem; */
-}
-
 .bio {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -411,4 +414,13 @@ input {
 .webring-prev a::before {
   transform: scaleX(-1);
   display: inline-block;
+}
+
+/* Blog */
+.draft a,
+.draft time {
+  opacity: 0.5;
+}
+li.draft::before {
+  content: '✏️  '!important
 }
