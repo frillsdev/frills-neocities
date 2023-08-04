@@ -1,5 +1,5 @@
 :root {
-  --bodybg: darkgray;
+  --bodybg: #202020;
   --bg: black;
   --border: gold;
   --link: DeepPink;
@@ -118,6 +118,7 @@ ol {
   flex-direction: column;
   padding-bottom: 1rem;
   row-gap: 8px;
+  margin: 0 0 1rem 0;
 }
 
 ul.unstyled,
@@ -128,6 +129,10 @@ ol.unstyled {
 
 p {
   margin: 0 0 1rem
+}
+
+.italic {
+ font-style: oblique 10deg;
 }
 
 input {
@@ -268,11 +273,11 @@ input {
 
   .frills-x:nth-child(2) {
     animation-delay: 0.3s;
-    animation-duration: 2.71111s;
+    animation-duration: 2.61111s;
   }
 
   .frills-x:nth-child(1) {
-    animation-delay: 0.1s;
+    animation-delay: 0.15s;
     animation-duration: 1.866666s;
   }
 }
@@ -341,12 +346,20 @@ input {
   grid-template-columns: 200px 1fr;
   gap: 26px;
 }
+@media (min-width: 768px) {
+  .bio {
+    grid-template-columns: 1fr;
+  }
+}
 
 .bio-pic {
-  border-bottom: 5px solid var(--border);
-  width: 90%;
   max-width: 200px;
   margin-bottom: 1rem;
+  --mask:
+    radial-gradient(7.00px at 50% calc(100% - 9.60px),#000 99%,#0000 101%) calc(50% - 12px) 0/24px 100%,
+    radial-gradient(7.00px at 50% calc(100% + 3.60px),#0000 99%,#000 101%) 50% calc(100% - 6px)/24px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }
 
 /* Webrings */

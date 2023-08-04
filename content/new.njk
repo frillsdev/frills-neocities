@@ -59,8 +59,11 @@
                 </div>
             </div>
             <section class="section">
-                <h1>Example of a page title</h1>
-                <p>
+                <h1 class="visually-hidden">Welcome to Frill's internet realm</h1>
+                <p>Greetings, internet adventurer! Step into my humble digital emporium, where a delightful array of web knick-knacks, whimsical whirligigs, and a trove of half-baked thoughts and musings await you. I am Frills, the proud webmaster of this curious domain in this wonderful wifi world.</p>
+                <p>Before you delve into the curios and oddities, take a moment to relish the warmth of this cozy cup of hot cocoa, a comforting companion to keep those adventurous fingertips toasty as you wander through my internet sanctuary.</p>
+                <p class="italic">Cozy cup of hot cocoa was added to your inventory</p>
+                <p class="italic">You hang your affects on a hook shaped like a lightning bolt and accept the cup of cocoa. The air smells fresh and zingy, like lime, and you hear something bubbling away in a far away room. You take a look around.</p>
             </section>
         </main>
         <footer class="page-footer grid">
@@ -90,12 +93,15 @@
 
         <!--Status.cafe-->
         <script defer>
-        fetch("https://status.cafe/users/fri11s/status.json").then(t=>t.json()).then(t=>{if(!t.content.length){document.getElementById("statuscafe-content").innerHTML="No status yet.";return}document.getElementById("statuscafe-username").innerHTML='<a href="https://status.cafe/users/fri11s" target="_blank">Latest status</a> '+t.face+" "+t.timeAgo,document.getElementById("statuscafe-content").innerHTML=t.content});
+        {# fetch("https://status.cafe/users/fri11s/status.json").then(t=>t.json()).then(t=>{if(!t.content.length){document.getElementById("statuscafe-content").innerHTML="No status yet.";return}document.getElementById("statuscafe-username").innerHTML='<a href="https://status.cafe/users/fri11s" target="_blank">Latest status</a> '+t.face+" "+t.timeAgo,document.getElementById("statuscafe-content").innerHTML=t.content}); #}
         </script>
         <!--Last.fm-->
-        <script type="text/javascript">let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script>
+        {# <script type="text/javascript">let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script> #}
         <!--Current time-->
         <script type="text/javascript">let time=document.querySelector("#localTime");const d=new Date().toLocaleTimeString("en-US",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"});e=d.replace(/\s/g,""),time.innerHTML=e;</script>
         {# <!--Carbon--> #}
         {# <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script> #}
+        <script>
+
+        </script>
 </body>
