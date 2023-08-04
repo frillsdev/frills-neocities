@@ -127,6 +127,25 @@ ol.unstyled {
   padding-left: 0;
 }
 
+ul.stars,
+ol.stars {
+  list-style-type: none;
+}
+ul.stars li,
+ol.stars li {
+  position: relative;
+}
+ul.stars li::before,
+ol.stars li::before {
+  content: '⭐';
+  font-size: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: -1rem;
+}
+
+
 p {
   margin: 0 0 1rem
 }

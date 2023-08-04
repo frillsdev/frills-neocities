@@ -1,23 +1,29 @@
 ---
-eleventyNavigation:
-  key: Home
-  order: 1
-numberOfLatestPostsToShow: 3
 title: Frills's internet garden
+emoji: red
 rp: You stumble upon a hidden garden, hardly anyone has been here before. Moss has grown over the edges of the path you stand on and weeds are peeking up through the cracks. The sun is warm on your face though, so you decide to stay a while and take a look around.
 ---
 {% extends 'page.njk'%}
 
+{%- block left -%}
+<div class="bio">
+	<img class="bio-pic" src="/images/pic.png" alt="Black and white avatar illustration: a smiling woman with shoulder length dark hair, large eyes and sparkles surrounding her">
+	<ul class="unstyled">
+		<li><span class="emoji" aria-hidden="true">🌷</span> she/her</li>
+		<li> <span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
+		<li><span class="emoji" role="img" aria-label="Clock">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
+		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini</li>
+		<li><span role="img" class="emoji" aria-label="Moon sign">🌚</span> Scorpio</li>
+	</ul>
+</div>
+{%- endblock -%}
 {%- block content -%}
 <section>
-	{{ macro.header(title + ' <span class="emoji" role="img" aria-label="Seedling">🌱</span>', rp ) }}
-
-	<ul class="inline pb-1">
-		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini <span role="img" class="emoji" aria-label="Moon sign">🌛</span> Scorpio</li>
-		<li><span class="emoji" aria-hidden="true">🌷</span> she/her</li>
-		<li><span class="emoji" role="img" aria-label="Flag of Wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span> Wales</li>
-		<li><span class="emoji" role="img" aria-label="Clock">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
-	</ul>
+	<h1 class="visually-hidden">Welcome to Frill's internet realm</h1>
+	<p>Greetings, internet adventurer! Step into my humble digital emporium, where a delightful array of web knick-knacks, whimsical whirligigs, and a trove of half-baked thoughts and musings await you. I am Frills, the proud webmaster of this curious domain in this wonderful wifi world.</p>
+	<p>Before you delve into the curios and oddities, take a moment to relish the warmth of this cozy cup of hot cocoa, a comforting companion to keep those adventurous fingertips toasty as you wander through my internet sanctuary.</p>
+	<p class="italic">Cozy cup of hot cocoa was added to your inventory</p>
+	<p class="italic">You hang your affects on a hook shaped like a lightning bolt and accept the cup of cocoa. The air smells fresh and zingy, like lime, and you hear something bubbling away in a far away room. You take a look around.</p>
 
 	{{ macro.callout(
 		element = 'article',

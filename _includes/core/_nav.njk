@@ -1,8 +1,31 @@
-{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-    <nav aria-label="Top level">
-        <ul class="inline">
+<header class="page-header grid">
+    <a href="/" class="page-title">
+        <span class="visually-hidden">Frills</span>
+        {% include "_includes/core/_logo.njk" %}
+
+    </a>
+    <nav aria-label="Top level" class="page-nav">
+        <ul>
+            {# <li>💁‍♀️ <a href="/about">About</a>
+                <li>📝 <a href="/blog">Blog</a>
+                <li>🔗 <a href="/links">Links</a>
+                <li>🌿 <a href="/ethos">Ethos</a>
+                <li>👽 <a href="/experiments">Experiments</a>
+                <li>✨ <a href="/credits">Credits</a>
+                <li>🦄 <a href="#">Other</a> #}
             {%- for entry in collections.all | eleventyNavigation %}
-            <li class="nav-item"><a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a></li>
+            <li>{{ entry.emoji }} <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a></li>
             {%- endfor %}
         </ul>
     </nav>
+    <div class="settings">
+        {# <label>
+        Light mode
+        <input type="checkbox">
+    </label>
+    <label>
+        Reduce animation
+        <input type="checkbox">
+    </label> #}
+    </div>
+</header>

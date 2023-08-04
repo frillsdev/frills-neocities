@@ -1,16 +1,16 @@
 {% extends "core/base.njk" %}
 
-{%- block main -%}
-
+{%- block left -%}
 {% import "_includes/_components/components.njk" as macro with context %}
-
 	{{ macro.header(title + emoji) }}
+{%- endblock -%}
 
-	<ol reversed class="unstyled">
+{%- block main -%}
+	<ol reversed class="stars">
 	{% for post in postslist | reverse %}
-		<li class="bloglist-item{% if post.data.draft %} draft{% endif %}">
-			<a href="{{ post.url }}" class="bloglist-link">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
-			<time class="bloglist-date" datetime="{{ post.date | htmlDateString }}">Posted {{ post.date | readableDate("d LLL yyyy") }}</time>
+		<li class="{% if post.data.draft %} draft{% endif %}">
+			<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
+			<time datetime="{{ post.date | htmlDateString }}"> {{ post.date | readableDate("d LLL yyyy") }}</time>
 		</li>
 	{% endfor %}
 	</ol>
