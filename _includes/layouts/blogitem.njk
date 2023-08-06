@@ -1,13 +1,25 @@
 {% extends "core/base.njk" %}
 
-{%- block main -%}
+{%- block left -%}
+{%- endblock -%}
 
+{%- block main -%}
     {% import "_includes/_components/components.njk" as macro with context %}
 
     <article class="article">
         {{ macro.header(title, description) }}
 
-        <ul class="post-metadata unstyled">
+        {%- block mainContent -%}
+            {{ content | safe }}
+        {%- endblock -%}
+
+    </article>
+
+{%- endblock -%}
+
+{%- block right -%}
+    {%- block rightContent -%}
+        <ul class="unstyled">
             {% if tags.includes("weeknotes") %}
             {% else %}
             <li>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
@@ -15,7 +27,7 @@
             {% if tags %}
             <li>
                 {%- for tag in tags | filterTagList %}
-                <span class="post-tag">#{{ tag }}</span>{%- if not loop.last %} {% endif %}
+                <span class="tag">#{{ tag }}</span>{%- if not loop.last %} {% endif %}
                 {%- endfor %}
             </li>
             {% endif %}
@@ -23,15 +35,14 @@
 
         {% if tags.includes("weeknotes") %}
         <button id="toggleDetail" class="button mb-1" aria-pressed="false">Expand accordions</button>
-        {% endif %}
-
-        {{ content | safe }}
-
-    </article>
-
+    {% endif %}
+{%- endblock -%}
 {%- endblock -%}
 
-{% block js %}
+{%- block bottom -%}
+{%- endblock %}
+
+{% block scriptsContent %}
     {% if tags.includes("weeknotes") %}
     <script>
         const t = document.getElementById('toggleDetail')

@@ -7,11 +7,14 @@ eleventyNavigation:
   emoji: ✨
   order: 5
 ---
-{% extends 'page.njk'%}
+{% extends 'layouts/page.njk'%}
 
-{%- block content -%}
+{%- block leftContent -%}
+	{{ macro.header(title ) }}
+{% endblock %}
+
+{%- block mainContent -%}
 <section>
-	{{ macro.header(title + emoji ) }}
 
 	<ul class="stars">
 		<li>Latest status is powered by <a href="https://status.cafe" target="_blank">status.cafe</a></li>
@@ -30,6 +33,6 @@ eleventyNavigation:
 
 {%- endblock -%}
 
-{%- block js -%}
+{%- block scriptsContent -%}
 
 {%- endblock -%}

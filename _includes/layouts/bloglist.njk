@@ -2,11 +2,11 @@
 
 {%- block left -%}
 {% import "_includes/_components/components.njk" as macro with context %}
-	{{ macro.header(title + emoji) }}
+	{{ macro.header(title) }}
 {%- endblock -%}
 
 {%- block main -%}
-	<ol reversed class="stars">
+	<ol reversed class="bloglist stars">
 	{% for post in postslist | reverse %}
 		<li {% if post.data.draft %}class="draft"{% endif %}>
 			<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
@@ -16,7 +16,7 @@
 	</ol>
 {%- endblock -%}
 
-{%- block js -%}
+{%- block scriptsContent -%}
 <script>
 
 </script>
