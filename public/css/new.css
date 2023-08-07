@@ -244,6 +244,15 @@ p {
   margin: 0 0 1rem
 }
 
+em {
+  font-style: normal;
+}
+
+em::before,
+em::after {
+  content: '✨';
+}
+
 .italic {
   font-style: italic;
 }
@@ -270,8 +279,21 @@ button[aria-pressed="true"] {
   box-shadow: 0 0 0 0 DarkGoldenRod;
 }
 
+textarea, input, select {
+  margin: 0 0 1rem 0;
+}
+
+textarea {
+  border: 1px solid orangered;
+  border-radius: 4px;
+  color: white;
+  background-color: var(--bodybg);
+  padding: 4px 14px;
+  min-height: 5rem;
+}
+
 input {
-  accent-color: violet;
+  accent-color: orangered;
 }
 
 label {
