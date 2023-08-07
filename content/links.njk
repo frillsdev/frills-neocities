@@ -10,11 +10,11 @@ eleventyNavigation:
 {% extends 'layouts/page.njk'%}
 
 {%- block leftContent -%}
-	{{ macro.header(title, description ) }}
 {%- endblock -%}
 
 {%- block mainContent -%}
 <section>
+	{{ macro.header(title, description ) }}
     {% include "_includes/_components/buttonwall.njk" %}
 </section>
 {%- endblock -%}
