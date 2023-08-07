@@ -24,7 +24,3 @@ You need buy in. Not money buy in, like mind buy in. It feels weird to go round 
 - [Go for a stupid little walk for your stupid mental health](https://www.youtube.com/shorts/YLveBiwn3RY).
 - Look up, notice what isn't directly in your eyeline.
 - Touch grass. Honestly, just touch it.
-
-{% block right %}
-hi
-{% endblock %}

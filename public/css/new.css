@@ -1,5 +1,5 @@
 :root {
-  --bodybg: #262626;
+  --bodybg: #0b0b0b;
   --bg: black;
   --border: gold;
   --link: DeepPink;
@@ -12,7 +12,7 @@
 
 @media (min-width: 576px) {
   :root {
-    --font-size: 19 px;
+    --font-size: 20px;
   }
 }
 
@@ -30,21 +30,21 @@
 
 @font-face {
   font-family: 'AtkinsonHyperlegible';
-  src: url('../fonts/atkinson-hyperlegible/regular.woff2');
+  src: url('../fonts/atkinson-hyperlegible/regular.woff2') format("woff2");
   font-display: optional;
 }
 
 @font-face {
   font-family: 'AtkinsonHyperlegible';
   font-style: italic;
-  src: url('../fonts/atkinson-hyperlegible/regular-italic.woff2');
+  src: url('../fonts/atkinson-hyperlegible/regular-italic.woff2') format("woff2");
   font-display: optional;
 }
 
 @font-face {
   font-family: 'AtkinsonHyperlegible';
   font-weight: bold;
-  src: url('../fonts/atkinson-hyperlegible/bold.woff2');
+  src: url('../fonts/atkinson-hyperlegible/bold.woff2') format("woff2");
   font-display: optional;
 }
 
@@ -52,7 +52,7 @@
   font-family: 'AtkinsonHyperlegible';
   font-style: oblique;
   font-weight: bold;
-  src: url('../fonts/atkinson-hyperlegible/bold-italic.woff2');
+  src: url('../fonts/atkinson-hyperlegible/bold-italic.woff2') format("woff2");
   font-display: optional;
 }
 
@@ -66,12 +66,22 @@ body {
   color: var(--text);
   padding: 0;
   margin: 0;
-  background-color: #202020;
   background:
-    radial-gradient(circle at 100% 50%, transparent 20%, var(--bodybg) 21%, var(--bodybg) 34%, transparent 35%, transparent),
-    radial-gradient(circle at 0% 50%, transparent 20%, var(--bodybg) 21%, var(--bodybg) 34%, transparent 35%, transparent) 0 -100px;
+  linear-gradient(324deg, var(--bg) 4%,   transparent 4%) -70px 43px,
+  linear-gradient( 36deg, var(--bg) 4%,   transparent 4%) 30px 43px,
+  linear-gradient( 72deg, var(--bodybg) 8.5%, transparent 8.5%) 30px 43px,
+  linear-gradient(288deg, var(--bodybg) 8.5%, transparent 8.5%) -70px 43px,
+  linear-gradient(216deg, var(--bodybg) 7.5%, transparent 7.5%) -70px 23px,
+  linear-gradient(144deg, var(--bodybg) 7.5%, transparent 7.5%) 30px 23px,
+  linear-gradient(324deg, var(--bg) 4%,   transparent 4%) -20px 93px,
+  linear-gradient( 36deg, var(--bg) 4%,   transparent 4%) 80px 93px,
+  linear-gradient( 72deg, var(--bodybg) 8.5%, transparent 8.5%) 80px 93px,
+  linear-gradient(288deg, var(--bodybg) 8.5%, transparent 8.5%) -20px 93px,
+  linear-gradient(216deg, var(--bodybg) 7.5%, transparent 7.5%) -20px 73px,
+  linear-gradient(144deg, var(--bodybg) 7.5%, transparent 7.5%) 80px 73px;
   background-color: var(--bg);
-  background-size: 150px 200px;
+  background-size: 100px 100px;
+  /* background-size: 150px 200px; */
 }
 
 h1,
@@ -80,7 +90,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
   line-height: 1.2
 }
 
@@ -120,6 +130,14 @@ a.hidden:active {
   color: var(--linkhover);
   text-decoration: underline wavy 2px;
 }
+a:hover,
+a:focus {
+  color: var(--linkhover)
+}
+*:focus-visible {
+  outline: 3px solid orangered;
+  outline-offset: 3px;
+}
 
 img.rounded {
   border-radius: 1rem;
@@ -129,15 +147,6 @@ img.round {
   border-radius: 50%;
 }
 
-a:hover,
-a:focus {
-  color: var(--linkhover)
-}
-
-*:focus-visible {
-  outline: 3px solid orangered;
-  outline-offset: 3px;
-}
 
 ul,
 ol {
@@ -172,6 +181,10 @@ ol.stars li::before {
   transform: translateY(-50%);
   position: absolute;
   left: -1rem;
+}
+
+details summary {
+  cursor: pointer;
 }
 
 .pb-1 {
@@ -224,6 +237,10 @@ ol.stars li::before {
 .my-2 {
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
+}
+
+.reading-width {
+  max-width: 36rem;
 }
 
 p {
@@ -488,7 +505,12 @@ label {
 }
 
 .page__main {
-  padding: 60px 0 0 0;
+  padding: 30px 0 0 0;
+}
+@media (min-width: 768px) {
+  .page__main {
+    padding: 60px 0 0 0;
+  }
 }
 
 .page__footer {
@@ -531,7 +553,7 @@ label {
   flex-wrap: wrap;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .content__main {
     flex-wrap: nowrap;
   }
@@ -539,16 +561,16 @@ label {
 
 @media (min-width: 768px) {
   .content__inner {
-    max-width: 650px;
+    flex: 1 1 auto;
   }
 }
 
 .content__extra {
-  min-width: 240px;
-  max-width: 650px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .content__extra {
+    flex: 1 0 auto;
+    width: 300px;
     font-size: 80%;
   }
 }

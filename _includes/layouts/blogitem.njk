@@ -9,10 +9,11 @@
     <article class="article">
         {{ macro.header(title, description) }}
 
-        {%- block mainContent -%}
-            {{ content | safe }}
-        {%- endblock -%}
-
+        <div class="reading-width">
+            {%- block mainContent -%}
+                {{ content | safe }}
+            {%- endblock -%}
+        </div>
     </article>
 
 {%- endblock -%}
