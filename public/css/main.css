@@ -731,9 +731,15 @@ label {
   display: inline-block;
 }
 
-
 .webring__prev::before,
 .webring-prev a::before {
   transform: scaleX(-1);
   display: inline-block;
+}
+
+.webring--neossg table {
+  border-spacing: 0;
+}
+.webring--neossg table td, .webring--neossg table th{
+  padding: 0;
 }
