@@ -1,36 +1,34 @@
 ---
-title: About the Webmaster
+title: About
 description: There is a rustling noise from behind a bush and you go to investigate. Amidst the leaves, a pair of mischievous brown eyes meet yours. Slowly, a woman emerges from the undergrowth, adorned with tangled brown and blonde hair and grubby gardening attire. You get a waft of earth and soap as she extends her hand in greeting.
 eleventyNavigation:
   key: About
+  emoji: 💁‍♀️
   order: 2
 ---
-{% extends 'page.njk'%}
+{% extends 'layouts/page.njk'%}
 
-{%- block content -%}
+{%- block leftContent -%}
+{%- endblock -%}
+
+
+{%- block mainContent -%}
 <section>
-	{{ macro.header(title + ' <span class="emoji" role="img" aria-label="Seedling">🌷</span>' ) }}
+	{{ macro.header(title) }}
 
-	<p><span class="emoji" role="img" aria-label="Wave">👋</span> Hey! I'm a 30ish y/o frontend dev based in Wales, UK. My pronouns are she/her.</p>
+	<div class="reading-width">
+		<p><span class="emoji" role="img" aria-label="Wave">👋</span> Hey! I'm a 30ish y/o frontend dev based in Wales, UK. My pronouns are she/her.</p>
 
-	<h2>Some things about me</h2>
-	<ul>
-		<li><span class="emoji" role="img" aria-label="Dog">🐶</span> I have a dog, she is a champagne (pale yellow) labrador called Orla. She is a nervous babe, but insanely loving and happy when home with her faves, sniffing undergrowth or running through long grass.</li>
-		<li><span class="emoji" role="img" aria-label="House">🏠</span> I am incredibly lucky to be a homeowner, and have my own garden where I grow vegetables and (mostly inherited) roses.</li>
-		<li><span class="emoji" role="img" aria-label="Game controller">🎮</span> I love playing cozy, wholesome games on my Steam Deck, like Stardew Valley, It Takes Two, Garden Galaxy. I quit a decade long addiction to first-person-shooter games like <a href="https://overwatch.blizzard.com/en-gb/career/Frills-2772/" target="_blank">Overwatch</a> (Mercy main) and Valorant (Killjoy main) in December 2022.</li>
-		<li><span class="emoji" role="img" aria-label="Face with hearts">🥰</span> My all-time favourite game is <a href="https://store.steampowered.com/app/600990/The_Gardens_Between/" target="_blank">The Gardens Between</a>.</li>
-		<li><span class="emoji" role="img" aria-label="Carrot">🥕</span> I'm vegetarian and have been since July 2020 (a long term dream enabled by lockdown).</li>
-		<li><span class="emoji" role="img" aria-label="Silly face">🤪</span> I love using emojis.</li>
-	</ul>
-
-	<h2>Some places on the internet that I go</h2>
-	<ul>
-		<li><span class="emoji" role="img" aria-label="Bird">🐦</span> Twitter: <a href="https://twitter.com/fri11s">@fri11s@twitter.com</a></li>
-		<li><span class="emoji" role="img" aria-label="Cat">😺</span> Neocities: <a href="https://neocities.org/site/fri11s">@fri11s@neocities.org</a></li>
-		<li><span class="emoji" role="img" aria-label="Elephant">🐘</span> Fediverse: <a href="https://cutie.city/@frills">@frills@cutie.city</a></li>
-	</ul>
-
-
+		<h2>Some things about me</h2>
+		<ul>
+			<li><span class="emoji" role="img" aria-label="Dog">🐶</span> I have a dog, she is a champagne (pale yellow) labrador called Orla. She is a nervous babe, but insanely loving and happy when home with her faves, sniffing undergrowth or running through long grass.</li>
+			<li><span class="emoji" role="img" aria-label="House">🏠</span> I am incredibly lucky to be a homeowner, and have my own garden where I grow vegetables and (mostly inherited) roses.</li>
+			<li><span class="emoji" role="img" aria-label="Game controller">🎮</span> I love playing cozy, wholesome games on my Steam Deck, like Stardew Valley, It Takes Two, Garden Galaxy. I quit a decade long addiction to first-person-shooter games like <a href="https://overwatch.blizzard.com/en-gb/career/Frills-2772/" target="_blank">Overwatch</a> (Mercy main) and Valorant (Killjoy main) in December 2022.</li>
+			<li><span class="emoji" role="img" aria-label="Face with hearts">🥰</span> My all-time favourite game is <a href="https://store.steampowered.com/app/600990/The_Gardens_Between/" target="_blank">The Gardens Between</a>.</li>
+			<li><span class="emoji" role="img" aria-label="Carrot">🥕</span> I'm vegetarian and have been since July 2020 (a long term dream enabled by lockdown).</li>
+			<li><span class="emoji" role="img" aria-label="Silly face">🤪</span> I love using emojis.</li>
+		</ul>
+	</div>
 </section>
 
 {# TODO: make this accessible
@@ -84,9 +82,9 @@ eleventyNavigation:
 <section>
 	<h2>To do on this website</h2>
 	<ol>
-		<li>Credits page</li>
+		<li><span class="emoji" role="img" aria-label="Check mark">✅</span> Credits page</li>
 		<li>Manifesto page</li>
-		<li><span class="emoji" role="img" aria-label="Check mark">✅</span> 88x31 <a href="/buttonwall/">button wall</a> (how does this interact with manifesto?)</li>
+		<li><span class="emoji" role="img" aria-label="Check mark">✅</span> 88x31 <a href="/links/">button wall</a>.</li>
 		<li>Site map (that I nuked because I thought it was killing the pipeline)</li>
 		<li>Orla shrine</li>
 		<li>Cool things I've done page
@@ -101,6 +99,58 @@ eleventyNavigation:
 
 {%- endblock -%}
 
-{%- block js -%}
+{%- block rightContent -%}
+	<h2 class="visually-hidden">What I'm up to</h2>
+	{{ macro.callout(
+		element = 'article',
+		modifiers = 'callout--small callout--info statusCafe',
+		header = '
+			<span id="statusCafe-emoji"></span>
+			<h2>Latest status</h2>
+			<time id="statusCafe-time"></time>',
+		body = '
+			<div id="statusCafe-status">No recent update :(</div>
+	') }}
 
+	{{ macro.callout(
+		element = 'article',
+		modifiers = 'callout--small callout--info',
+		header = '
+		<span class="emoji" role="img" aria-label="Musical note">🎵</span>
+		<h2>Last played</h2>
+		<span><span id="lfmTime">right now</span></span>
+		',
+		body = '
+		<span id="lfmSong">No recently played song :(</span>
+		'
+	)}}
+
+	{{ macro.callout(
+		element = 'article',
+		modifiers = 'callout--small callout--info',
+		header = '
+		<span class="emoji" role="img" aria-label="Stack of books">📚</span>
+		<h2>Currently reading</h2>
+		',
+		body = '
+		The Eye of the World - Robert Jordan
+		'
+	)}}
+
+	<h2>Elsewhere</h2>
+	<ul class="unstyled">
+		<li><span class="emoji" role="img" aria-label="Bird">🐦</span> <a href="https://twitter.com/fri11s">@fri11s@twitter.com</a></li>
+		<li><span class="emoji" role="img" aria-label="Cat">😺</span> <a href="https://neocities.org/site/fri11s">@fri11s@neocities.org</a></li>
+		<li><span class="emoji" role="img" aria-label="Elephant">🐘</span> <a href="https://cutie.city/@frills">@frills@cutie.city</a></li>
+	</ul>
+{%- endblock -%}
+
+
+{%- block scriptsContent -%}
+<!--Status.cafe-->
+<script defer>
+fetch("https://status.cafe/users/fri11s/status.json").then(t=>t.json()).then(t=>{if(!t.content.length){document.getElementById("statusCafe-status").innerHTML="No status yet.";return}document.getElementById("statusCafe-emoji").innerHTML=t.face,document.getElementById("statusCafe-time").innerHTML=t.timeAgo,document.getElementById("statusCafe-status").innerHTML=t.content});
+</script>
+<!--Last.fm-->
+<script type="text/javascript">let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script>
 {%- endblock -%}

@@ -1,0 +1,28 @@
+---
+title: Links
+emoji: ' <span class="emoji" role="img" role="presentation">🔗</span>'
+description: 
+eleventyNavigation:
+  key: Links
+  emoji: 🔗
+  order: 4
+---
+{% extends 'layouts/page.njk'%}
+
+{%- block leftContent -%}
+{%- endblock -%}
+
+{%- block mainContent -%}
+<section>
+	{{ macro.header(title, description ) }}
+    {% include "_includes/_components/buttonwall.njk" %}
+</section>
+{%- endblock -%}
+
+{%- block rightContent -%}
+    {% include "_includes/_components/button.njk" %}
+{%- endblock -%}
+
+{% block scriptsContent %}
+
+{% endblock %}

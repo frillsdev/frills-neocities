@@ -1,5 +1,5 @@
 ---
-title: Accessibility on Neocities
+title: Accessibility master post
 date: 2023-07-31
 tags:
   - links
@@ -29,7 +29,7 @@ A living master post for accessibility resources:
 * [web.dev, Learn Accessibility](https://web.dev/learn/accessibility)
 
 ## Fonts
-* [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible)
+* [Atkinson Hyperlegible](https://brailleinstitute.org/freefont)
 
 ## Accessibility tools
 * [Super visual colour contrast checker](colourcontrast.cc)
@@ -38,4 +38,4 @@ A living master post for accessibility resources:
 ## Articles
 * [Web Accessibility: For people or profit?](https://sleepydev.neocities.org/posts/Web%20accessibility-%20for%20people%20or%20profit%3F) - Written by Sleepy Dev
 * [5 ways to make your neocities site more accessible](https://sleepydev.neocities.org/posts/5%20Ways%20to%20make%20your%20Neocities%20site%20more%20accessible) - Written by Sleepy Dev
-* [An inaccessible web is not a free web](https://www.tumblr.com/foxpunk/700063063948312576/hey-you-yeah-you-with-the-cool-neocities) * Written and curated by Foxpunk on Tumblr
+* [An inaccessible web is not a free web](https://www.tumblr.com/foxpunk/700063063948312576/hey-you-yeah-you-with-the-cool-neocities) - Written and curated by Foxpunk on Tumblr

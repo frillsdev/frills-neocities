@@ -1,66 +1,58 @@
 ---
-eleventyNavigation:
-  key: Home
-  order: 1
-numberOfLatestPostsToShow: 3
-title: Frills's internet garden
-rp: You stumble upon a hidden garden, hardly anyone has been here before. Moss has grown over the edges of the path you stand on and weeds are peeking up through the cracks. The sun is warm on your face though, so you decide to stay a while and take a look around.
 ---
-{% extends 'page.njk'%}
+{% extends 'layouts/page.njk'%}
 
-{%- block content -%}
-<section>
-	{{ macro.header(title + ' <span class="emoji" role="img" aria-label="Seedling">🌱</span>', rp ) }}
-
-	<ul class="inline pb-1">
-		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini <span role="img" class="emoji" aria-label="Moon sign">🌛</span> Scorpio</li>
+{%- block leftContent -%}
+<div class="bio">
+	<img class="bio-pic" src="/images/pic.png" alt="Black and white avatar illustration: a smiling woman with shoulder length dark hair, large eyes and sparkles surrounding her">
+	<ul class="unstyled">
 		<li><span class="emoji" aria-hidden="true">🌷</span> she/her</li>
-		<li><span class="emoji" role="img" aria-label="Flag of Wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span> Wales</li>
+		<li> <span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
 		<li><span class="emoji" role="img" aria-label="Clock">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
+		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini</li>
+		<li><span role="img" class="emoji" aria-label="Moon sign">🌚</span> Scorpio</li>
 	</ul>
-
-	{{ macro.callout(
-		element = 'article',
-		body = '
-		<div id="statuscafe">
-			<div id="statuscafe-username"><a href="https://status.cafe/users/fri11s" target="_blank">Last status</a> 🌻</div>
-			<div id="statuscafe-content">No recent update :(</div>
-		</div>
-	') }}
-
-	{{ macro.callout(
-		element = 'article',
-		header = '
-		<h2 class="inline">Last played</h2>
-		<span class="emoji" role="img" aria-label="Musical note">🎵</span>
-		<span><span id="lfmTime">right now</span></span>
-		',
-		body = '
-		<span id="lfmSong">No recently played song :(</span>
-		'
-	)}}
-
-	{{ macro.callout(
-		element = 'article',
-		header = '
-		<h2 class="inline">Currently reading</h2>
-		<span class="emoji" role="img" aria-label="Stack of books">📚</span>
-		',
-		body = '
-		The Eye of the World - Robert Jordan
-		'
-	)}}
-
+</div>
+{%- endblock -%}
+{%- block mainContent -%}
+<section>
+	<div class="reading-width">
+		<h1 class="visually-hidden">Welcome to Frill's internet realm</h1>
+		<p>Greetings, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you. I am Frills, the proud webmaster of this curious domain in this wonderous wifi world.</p>
+		<p>Do keep in mind that my collection is a work in progress, and I'm constantly adding new trinkets and reorganising shelves; sometimes you may find broken things... But fear not! I've already fixed the black hole I found yesterday.</p>
+		<p>Anyway, before you delve into the curios and oddities, enjoy this cozy cup of hot cocoa; a comforting beverage to keep those adventurous fingertips toasty as you wander through my internet sanctuary.</p>
+		<p class="italic">Cozy cup of hot cocoa was added to your inventory</p>
+	</div>
 </section>
 {%- endblock -%}
 
-{%- block js -%}
-<!--Status.cafe-->
-<script defer>
-fetch("https://status.cafe/users/fri11s/status.json").then(t=>t.json()).then(t=>{if(!t.content.length){document.getElementById("statuscafe-content").innerHTML="No status yet.";return}document.getElementById("statuscafe-username").innerHTML='<a href="https://status.cafe/users/fri11s" target="_blank">Latest status</a> '+t.face+" "+t.timeAgo,document.getElementById("statuscafe-content").innerHTML=t.content});
-</script>
-<!--Last.fm-->
-<script type="text/javascript">let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script>
+{%- block rightContent -%}
+{%- endblock -%}
+{% block bottomContent %}
+<div class="grid grid--main">
+	<div></div>
+	<aside class="webrings pt-1">
+		<div class="webring--retronaut">
+			<a href="https://webring.dinhe.net/prev/https://fri11s.neocities.org/" class="webring__prev">Previous site</a>
+			<a href="https://webring.dinhe.net/" target="_blank">retronaut</a>
+			<a href="https://webring.dinhe.net/next/https://fri11s.neocities.org/" class="webring__next">Next site</a>
+		</div>
+		<div class="webring--hotline">
+			<a href="https://hotlinewebring.club/fri11s/next" class="webring__prev">Previous site</a>
+			<a href="https://hotlinewebring.club/" target="_blank">hotline</a>
+			<a href="https://hotlinewebring.club/fri11s/previous" class="webring__next">Next site</a>
+		</div>
+		<div class="webring--neossg">
+			<div id="neossg">
+				<script type="text/javascript" src="https://neossg.neocities.org/onionring-variables.js"></script>
+				<script type="text/javascript" src="https://neossg.neocities.org/onionring-widget.js"></script>
+			</div>
+		</div>
+	</aside>
+</div>
+{% endblock %}
+
+{%- block scriptsContent -%}
 <!--Current time-->
 <script type="text/javascript">let time=document.querySelector("#localTime");const d=new Date().toLocaleTimeString("en-US",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"});e=d.replace(/\s/g,""),time.innerHTML=e;</script>
 {# <!--Carbon--> #}
