@@ -382,67 +382,66 @@ label {
 
 @keyframes colour {
   0% {
+    fill: hsl(255, 70%, 70%);
+    stroke: hsl(255, 70%, 70%)
+  }
+  20% {
     fill: hsl(330, 70%, 70%);
     stroke: hsl(330, 70%, 70%)
   }
 
-  20% {
+  40% {
     fill: hsl(51, 70%, 70%);
     stroke: hsl(51, 70%, 70%)
   }
 
-  40% {
+  60% {
     fill: hsl(102, 70%, 70%);
     stroke: hsl(102, 70%, 70%)
   }
 
-  60% {
+  80% {
     fill: hsl(153, 70%, 70%);
     stroke: hsl(153, 70%, 70%)
   }
 
-  80% {
+  100% {
     fill: hsl(204, 70%, 70%);
     stroke: hsl(204, 70%, 70%)
-  }
-
-  100% {
-    fill: hsl(255, 70%, 70%);
-    stroke: hsl(255, 70%, 70%)
   }
 }
 
 @media (prefers-color-scheme: light) {
   @keyframes colour {
     0% {
+      fill: hsl(255, 70%, 70%);
+      stroke: hsl(255, 70%, 70%)
+    }
+    20% {
       fill: hsl(330, 100%, 40%);
       stroke: hsl(330, 100%, 40%)
     }
 
-    20% {
-      fill: hsl(40, 100%, 50%);
-      stroke: hsl(40, 100%, 50%)
-    }
-
     40% {
-      fill: hsl(102, 100%, 40%);
-      stroke: hsl(102, 100%, 40%)
+      fill: hsl(10, 100%, 50%);
+      stroke: hsl(10, 100%, 50%)
     }
 
     60% {
+      fill: hsl(51, 100%, 50%);
+      stroke: hsl(51, 100%, 50%)
+    }
+
+    80% {
       fill: hsl(153, 100%, 40%);
       stroke: hsl(153, 100%, 40%)
     }
 
-    80% {
+    100% {
       fill: hsl(204, 100%, 50%);
       stroke: hsl(204, 100%, 50%)
     }
 
-    100% {
-      fill: hsl(255, 70%, 70%);
-      stroke: hsl(255, 70%, 70%)
-    }
   }
 
 }
@@ -461,7 +460,7 @@ label {
 
 .logo {
   max-height: 60px;
-  transform: translateX(30px)
+  transform: translateX(15px)
 }
 
 .logo:hover .logo-tx {
@@ -484,7 +483,7 @@ label {
 
 @media (prefers-reduced-motion: no-preference) {
   .logo-tx {
-    animation: colour 10s 0s infinite forwards alternate;
+    animation: colour 10s 0s linear infinite forwards alternate;
   }
 
   .logo:hover .logo-tx {
@@ -523,14 +522,14 @@ label {
   list-style-type: none;
   padding: 0;
   margin: 0 auto;
-  column-gap: 0.7rem;
+  column-gap: 1rem;
   row-gap: 0.7rem;
   max-width: 30rem;
 }
 
 @media (min-width: 768px) {
   .page__nav ul {
-    column-gap: 2rem;
+    column-gap: 1.5rem;
     row-gap: 1.5rem;
     justify-content: flex-start;
     margin: 0;
@@ -581,11 +580,16 @@ label {
 
 .bio {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 150px 1fr;
   gap: 26px;
   align-items: center;
 }
 
+@media (min-width: 480px) {
+  .bio {
+    grid-template-columns: 200px 1fr;
+  }
+}
 @media (min-width: 768px) {
   .bio {
     grid-template-columns: 1fr;
@@ -593,7 +597,7 @@ label {
 }
 
 .bio-pic {
-  max-width: 200px;
+  max-width: 150px;
   margin-bottom: 1rem;
   --mask:
     radial-gradient(7.00px at 50% calc(100% - 9.60px), #000 99%, #0000 101%) calc(50% - 12px) 0/24px 100%,
@@ -601,6 +605,12 @@ label {
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
+@media (min-width: 480px) {
+  .bio-pic {
+    max-width: 200px;
+  }
+}
+
 
 /* Main content area */
 .content__main {
@@ -695,6 +705,10 @@ label {
   display: flex;
   flex-direction: row;
   row-gap: 15px;
+}
+
+.webrings > * {
+  display: flex;
 }
 
 .webring__prev,
