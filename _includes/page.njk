@@ -1,9 +1,0 @@
-{% extends "core/base.njk" %}
-
-{%- block main -%}
-    {% import "_includes/_components/components.njk" as macro with context %}
-
-    {%- block content -%}
-        {{ content | safe }}
-    {%- endblock -%}
-{%- endblock -%}

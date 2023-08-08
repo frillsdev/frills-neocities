@@ -1,7 +1,6 @@
 :root {
     --hue: 332;
     --contrast: 92;
-
     --bodybg: hsl(var(--hue), 50%, 85%);
     --bg: hsl(var(--hue), 100%, 95%);
     --border: hsl(var(--hue), 100%, 11%);

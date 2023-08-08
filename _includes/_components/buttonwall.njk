@@ -1,0 +1,94 @@
+<section>
+	<div class="reading-width">
+		<p>My take on the classic 88x31 button wall. No whizzy pics or blinkie gifs here, just colourful little boxes.</p>
+	</div>
+
+	<button id="toggleHighContrast" class="button mb-1" aria-pressed="false">Enable high contrast</button>
+	<ul class="buttonwall">
+		{# Friends #}
+		<li>
+			<a target="_blank" href="https://gothhoblin.me" class="buttonwall__item" style="font-size: 12px; background-color: #083820; color: #fff;">goth hoblin</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://www.thenotsomiserable.co.uk" class="buttonwall__item" style="font-size: 12px; background-color: #5f0979; color: #fff;">the not so miserable</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://teafuellednonsense.wordpress.com" class="buttonwall__item" style="font-size: 12px; background-color: #fff; color: #00aadc;">Justin Blogs Again!</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://justnik.me/" class="buttonwall__item" style="font-size: 12px; background-color: #2d3748; color: #fff;">justnik</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://www.owain.codes/" class="buttonwall__item" style="font-size: 12px; background-color: #222831; color: #b6ff00;">owain.codes</a>
+		</li>
+		{# Others (mostly neocities and mastodon) #}
+		<li>
+			<a target="_blank" href="https://lostletters.neocities.org" class="buttonwall__item" style="font-size: 12px; background-color: #34072d; color: #ffc6ec;">lostletters</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://thogreer.neocities.org" class="buttonwall__item" style="font-size: 14px; background-color: #0334a7; color: #fff;">thogreer</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://jessicajournals.com" class="buttonwall__item" style="font-size: 10px; background-color: #1e1e2e; color: #A5E3A1; background-image: linear-gradient(to left, #181825, #1e1e2e)">jessica journals</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://sleepydev.neocities.org" class="buttonwall__item" style="font-size: 13px; background-color: #f9f9f9; color: blueviolet;">sleepydev</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://10kph.neocities.org" class="buttonwall__item" style="font-size: 14px; background-color: #1c1e26; color: #e95678;">10kph</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://maria.town" class="buttonwall__item" style="font-size: 13px; background-color: #1f2d39; color: #96d1a0;">maria</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://daintye.co" class="buttonwall__item" style="font-size: 13px; background-color: white; color: #ff9dc9;">daintyeco</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://hillhouse.neocities.org" class="buttonwall__item" style="font-size: 13px; background-color: #ffccdd; color: #ab6c84;">hillhouse</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://jasm1nii.neocities.org" class="buttonwall__item" style="font-size: 12px; background-color: #E6E6FA; color: #9370DB;">jasmine's journal</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://pinkvampyr.neocities.org" class="buttonwall__item" style="font-size: 12px; background-color: #1C1C1C; color: #FF8FCB;">pinkvampyr</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://sunosin.neocities.org" class="buttonwall__item" style="font-size: 12px; background-color: #ffd6d6; color: #188bc4;">lipu pi jan sunosin</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://punkwasp.neocities.org" class="buttonwall__item" style="font-size: 13px; background-color: #454315; color: #ffd700;">punkwasp</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://sneekrealm.neocities.org" class="buttonwall__item" style="font-size: 13px; background-color: #f0e5d2; color: #035F31;">realm of sneek</a>
+		</li>
+		{# Artists #}
+		<li>
+			<a target="_blank" href="https://www.furrylittlepeach.com" class="buttonwall__item" style="font-size: 12px; background-color: #f0490a; color: #fff;">furry little peach </a>
+		</li>
+		<li>
+			<a target="_blank" href="https://cheyennebarton.com" class="buttonwall__item" style="font-size: 14px; background-color: #ffc929; color: #fa4723;">cheyenne barton</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://girlscape.co.uk" class="buttonwall__item" style="font-size: 13px; background-color: #ff91bb; color: #fff;">girlscape</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://leighellexson.com" class="buttonwall__item" style="font-size: 12px; background-color: #9bc18a; color: #fdfbf7;">Leigh Ellexson</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://uncomfyco.com" class="buttonwall__item" style="font-size: 13px; background-color: #603814; color: #fff;">uncomfyco</a>
+		</li>
+		<li>
+			<a target="_blank" href="https://www.pansy-shop.com" class="buttonwall__item" style="font-size: 16px; background-color: #ffe3e2; color: #220967;">pansy</a>
+		</li>
+	</ul>
+</section>
+
+{% block scriptsContent %}
+    <script>
+        const t = document.getElementById('toggleHighContrast')
+        const w = document.querySelectorAll('.buttonwall')
+        const o = "Enable high contrast"
+        const c = "Disable high contrast"
+		if (t) {t.addEventListener("click",(function(){w.forEach((s=>{s.classList.contains("--highcontrast")?(t.innerHTML=o,t.setAttribute("aria-pressed",!1),s.classList.remove("--highcontrast")):(t.innerHTML=c,t.setAttribute("aria-pressed",!0),s.classList.add("--highcontrast"))}))}));}
+	</script>
+{% endblock %}

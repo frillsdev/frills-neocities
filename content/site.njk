@@ -1,0 +1,39 @@
+---
+title: About the site
+description: Sources and inpiration for assets and tools used on this site.
+---
+{% extends 'layouts/page.njk'%}
+
+{%- block leftContent -%}
+{% endblock %}
+
+{%- block mainContent -%}
+<section>
+	{{ macro.header(title, description) }}
+	<div class="reading-width">
+		<h2>Technical information</h2>
+			<ul class="stars">
+				<li>Built using <a href="https://www.11ty.dev/" target="_blank">eleventy</a> static site generator</li>
+				<li>Source code is on <a href="https://github.com/CupOfTegan/frills-neocities" target="_blank">Github</a></li>
+				<li>Hosted on <a href="https://neocities.org" target="_blank">Neocities</a> using the <a href="https://deploy-to-neocities.neocities.org/" target="_blank">deploy to Neocities guide</a></li>
+				<li>Coded in <a href="https://code.visualstudio.com/download" target="_blank">VSCode</a></li>
+				<li>Tested in <a href="https://www.mozilla.org/en-GB/firefox/new/" target="_blank">Firefox</a> on Windows 11 and Mac OS Catalina</li>
+			</ul>
+		<h2>Credits</h2>
+		<ul class="stars">
+			<li>Latest status is powered by <a href="https://status.cafe" target="_blank">status.cafe</a></li>
+			<li><a href="https://github.com/biancarosa/lastfm-last-played" target="_blank">Last.fm last played script</a> by <a href="https://biancarosa.com.br/" target="_blank">Bianca Rosa</a></li>
+			<li><a href="https://projects.verou.me/css3patterns/" target="_blank">Squiggly background gradient</a> by Lea Verou</li>
+			<li>Avatar by <a href="https://alexboucher.carbonmade.com/">flowerveil</a>, commisioned many moons ago</li>
+			<li><a href="https://doodad.dev/dither-me-this/" target="_blank">Image dithering tool</a> by doodad</li>
+			<li>Logo font is <a href="https://github.com/satsuyako/CherryBomb" target="_blank">Cherry Bomb</a></li>
+			<li>Body font is <a href="https://brailleinstitute.org/freefont" target="_blank">Atkinson atkinson-hyperlegible</a></li>
+		</ul>
+	</div>
+</section>
+
+{%- endblock -%}
+
+{%- block scriptsContent -%}
+
+{%- endblock -%}

@@ -1,8 +1,8 @@
 module.exports = {
-	title: "frills's internet garden",
-	url: "https://example.com/",
+	title: "Frills's internet emporium",
+	url: "https://fri11s.neocities.org",
 	language: "en-GB",
-	description: "full of weeds and encroaching moss",
+	description: "",
 	author: {
 		name: "frills",
 		email: "",

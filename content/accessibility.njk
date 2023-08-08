@@ -1,0 +1,47 @@
+---
+title: Accessibility
+---
+{% extends 'layouts/page.njk'%}
+
+{%- block leftContent -%}
+{%- endblock -%}
+
+
+{%- block mainContent -%}
+<section>
+	{{ macro.header(title) }}
+	<div class="reading-width">
+		<p>Making this website accessible to all is my <em>top priority</em>. I aim to meet a minimum of Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. If you have come across something you find inaccessible, please get in touch.</p>
+		<p>You should be able to:</p>
+		<ul>
+			<li>use your browser defaults for settings, sizes and styling</li>
+			<li>zoom in (or out) without breaking your experience</li>
+			<li>navigate the site with just your keyboard</li>
+			<li>listen to the site using a screen reader</li>
+		</ul>
+
+		<h2>Website to do</h2>
+		<ul>
+			<li>Add toggle for light/dark mode (browser preference override)</li>
+			<li>Add toggle for reducing animations (system preference override)</li>
+			<li>Test with screen reader</li>
+		</ul>
+
+	</div>
+</section>
+
+{%- endblock -%}
+
+{%- block rightContent -%}
+	
+{%- endblock -%}
+
+
+{%- block scriptsContent -%}
+<!--Status.cafe-->
+<script defer>
+fetch("https://status.cafe/users/fri11s/status.json").then(t=>t.json()).then(t=>{if(!t.content.length){document.getElementById("statusCafe-status").innerHTML="No status yet.";return}document.getElementById("statusCafe-emoji").innerHTML=t.face,document.getElementById("statusCafe-time").innerHTML=t.timeAgo,document.getElementById("statusCafe-status").innerHTML=t.content});
+</script>
+<!--Last.fm-->
+<script type="text/javascript">let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script>
+{%- endblock -%}
