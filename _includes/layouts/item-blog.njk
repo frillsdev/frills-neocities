@@ -1,8 +1,5 @@
 {% extends "core/base.njk" %}
 
-{%- block left -%}
-{%- endblock -%}
-
 {%- block main -%}
     {% import "_includes/_components/components.njk" as macro with context %}
 
@@ -15,7 +12,6 @@
             {%- endblock -%}
         </div>
     </article>
-
 {%- endblock -%}
 
 {%- block right -%}
@@ -39,9 +35,6 @@
     {% endif %}
 {%- endblock -%}
 {%- endblock -%}
-
-{%- block bottom -%}
-{%- endblock %}
 
 {% block scriptsContent %}
     {% if tags.includes("weeknotes") %}

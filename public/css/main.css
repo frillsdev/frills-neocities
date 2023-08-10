@@ -646,12 +646,12 @@ label {
 }
 
 /* Blog */
-.bloglist .draft a,
-.bloglist .draft time {
+.listing .draft a,
+.listing .draft time {
   opacity: 0.5;
 }
 
-.bloglist li.draft::before {
+.listing li.draft::before {
   content: '✏️  ' !important
 }
 

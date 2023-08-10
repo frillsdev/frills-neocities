@@ -7,7 +7,6 @@
         <main class="page__main grid grid--main">
             <div class="content__sidebar">
             {%- block left -%}
-                {{- content | safe -}}
             {%- endblock %}
             </div>
             <section class="content__main">
@@ -18,13 +17,11 @@
                 </div>
                 <div class="content__extra">
                     {%- block right -%}
-                        {{- content | safe -}}
                     {%- endblock %}
                 </div>
             </section>
         </main>
         {%- block bottom -%}
-            {{- content | safe -}}
         {%- endblock %}
         {% include "_includes/core/_footer.njk" %}
     </div>
