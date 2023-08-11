@@ -3,17 +3,16 @@ title: Manifesto
 emoji: ' <span class="emoji" role="img" aria-label="Label"></span>'
 draft: true
 ---
-{% extends 'layouts/page.njk'%}
+{% extends 'structure/templates/page.njk'%}
 
 {%- block left -%}
 {%- endblock -%}
-{%- block content -%}
-	{{ macro.header(title + emoji ) }}
+{%- block main -%}
 <section>
 </section>
 
 {%- endblock -%}
 
-{%- block scriptsContent -%}
+{%- block scripts -%}
 
 {%- endblock -%}

@@ -1,0 +1,168 @@
+---
+title: CSS Skull
+description: Pure CSS skull, he's kinda cute. I made this in 2018, and is definitely due for a rebuild/refactor
+date: 2023-08
+tags:
+- css art
+---
+
+{% block head %}
+  <style>
+    .cssskull {
+        align-items: center;
+        background-color: black;
+        display: flex;
+        height: 100vh;
+        min-height: 550px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .skull {
+        position: relative;
+        width: 350px;
+        height: 500px;
+    }
+
+    .shadow {
+        top: 0;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.15);
+        z-index: 99;
+    }
+
+    .frontal-bone {
+        display: block;
+        background: ivory;
+        width: 100%;
+        height: 70%;
+        border-radius: 50% 50% 25% 25%;
+    }
+
+    .eye-socket {
+        position: absolute;
+        top: 30%;
+        width: 25%;
+        height: 30%;
+        z-index: 2;
+    }
+
+    .eye-socket:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: black;
+    }
+
+    .eye-socket.left {
+        transform: translateX(-25%);
+        left: 25%;
+    }
+
+    .eye-socket.left:before {
+        border-radius: 53% 47% 32% 41% / 45% 58% 21% 40%;
+    }
+
+    .eye-socket.right {
+        right: 25%;
+        transform: translateX(25%);
+    }
+
+    .eye-socket.right:before {
+        border-radius: 47% 53% 41% 32% / 58% 45% 40% 21%;
+    }
+
+    .maxilla {
+        display: flex;
+        justify-content: center;
+        background: ivory;
+        width: 50%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        height: 10vh;
+    }
+
+    .maxilla .nasal-cavity {
+        position: relative;
+        margin-top: -10px;
+    }
+
+    .maxilla .nasal-cavity::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: black;
+        left: 50%;
+        top: -4px;
+        border-radius: 0 0 20px 0;
+        transform: rotate(45deg) translateX(-50%);
+        transform-origin: 0;
+    }
+
+    .maxilla .nasal-cavity .nostril {
+        display: inline-block;
+        background: black;
+        width: 20px;
+        height: 40px;
+        border-radius: 100%;
+    }
+
+    .maxilla .nasal-cavity .nostril.left {
+        transform: rotate(25deg);
+    }
+
+    .maxilla .nasal-cavity .nostril.right {
+        transform: rotate(-25deg);
+    }
+
+    .jaw {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        margin-top: -2vh;
+        background-color: black;
+    }
+
+    .jaw .tooth {
+        background: ivory;
+        height: 4vh;
+        width: 25%;
+        border-radius: 0 0 4vh 4vh;
+    }
+  </style>
+{% endblock %}
+
+{% block main %}
+<div class="cssskull">
+  <div class="skull">
+    <div class="frontal-bone">
+    </div>
+    <div class="eye-socket left">
+    </div>
+    <div class="eye-socket right">
+    </div>
+    <div class="maxilla">
+      <div class="nasal-cavity">
+        <div class="nostril left"></div>
+        <div class="nostril right"></div>
+      </div>
+    </div>
+    <div class="jaw">
+      <div class="tooth"></div>
+      <div class="tooth"></div>
+      <div class="tooth"></div>
+      <div class="tooth"></div>
+    </div>
+    <div class="shadow"></div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "structure/templates/page-full.njk" %}
+
+{% block main %}
+    {{ content | safe }}
+{% endblock %}
+
+{% if bottom %}
+<div class="grid grid--offset pt-2">
+    {% block bottom %}
+    {% endblock %}
+</div>
+{% endif %}
+
+{% block scripts %}
+{% endblock %}

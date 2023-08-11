@@ -1,0 +1,73 @@
+---
+title: Changing background colour with range input
+description: Use the range input to change the colour of the background
+date: 2023-08
+tags:
+- javascript
+- css variables
+---
+
+{% block head %}
+<style>
+  :root {
+    --hue: 255;
+    --hsl: hsl(var(--hue), 100%, 70%);
+  }
+
+  .changebgcolour {
+    background-color: var(--hsl);
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inputwrap {
+    background: white;
+    border: 1px solid lightgrey;
+    box-shadow: 0 5px 30px 0 hsl(var(--hue), 100%, 40%);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  label {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: black;
+  }
+
+  input {
+    accent-color: var(--hsl);
+  }
+</style>
+{% endblock %}
+
+{% block main %}
+<div class="changebgcolour">
+  <div class="inputwrap">
+    <label for="hslRange">Change background colour</label>
+    <input type="range" id="hslRange" min="0" max="360" step="1" />
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.innerHTML += `<style id="hslVariable"></style>`
+    const range = document.getElementById("hslRange")
+    const style = document.getElementById("hslVariable")
+    let hue = range.value
+    style.innerHTML = `:root{--hue: ${hue};`
+    range.addEventListener("input", (event) => {
+      hue = range.value
+      style.innerHTML = `:root{--hue: ${hue};`
+    })
+  });
+</script>
+{% endblock %}

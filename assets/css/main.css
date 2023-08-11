@@ -1,137 +1,7 @@
-:root {
-  --bodybg: #0b0b0b;
-  --bg: black;
-  --border: gold;
-  --link: DeepPink;
-  --linkhover: springgreen;
-  --text: LavenderBlush;
-  --callout: hsl(332, 56%, 87%);
-  --pink: DeepPink;
-  --font-size: 16px;
-}
-
-@media (min-width: 576px) {
-  :root {
-    --font-size: 20px;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bodybg: LavenderBlush;
-    --bg: Snow;
-    --link: Blue;
-    --linkhover: Crimson;
-    --text: black;
-  }
-}
-
-@font-face {
-  font-family: 'AtkinsonHyperlegible';
-  src: url('../fonts/atkinson-hyperlegible/regular.woff2') format("woff2");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: 'AtkinsonHyperlegible';
-  font-style: italic;
-  src: url('../fonts/atkinson-hyperlegible/regular-italic.woff2') format("woff2");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: 'AtkinsonHyperlegible';
-  font-weight: bold;
-  src: url('../fonts/atkinson-hyperlegible/bold.woff2') format("woff2");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: 'AtkinsonHyperlegible';
-  font-style: oblique;
-  font-weight: bold;
-  src: url('../fonts/atkinson-hyperlegible/bold-italic.woff2') format("woff2");
-  font-display: optional;
-}
-
-html {
-  font-size: var(--font-size);
-  line-height: 1.4
-}
-
-body {
-  font-family: 'AtkinsonHyperlegible', 'Tahoma', sans-serif;
-  color: var(--text);
-  padding: 0;
-  margin: 0;
-  background:
-    radial-gradient(circle at top left, transparent 9%, var(--bodybg) 10%, var(--bodybg) 15%, transparent 16%), radial-gradient(circle at bottom left, transparent 9%, var(--bodybg) 10%, var(--bodybg) 15%, transparent 16%),
-    radial-gradient(circle at top right, transparent 9%, var(--bodybg) 10%, var(--bodybg) 15%, transparent 16%),
-    radial-gradient(circle at bottom right, transparent 9%, var(--bodybg) 10%, var(--bodybg) 15%, transparent 16%),
-    radial-gradient(circle, transparent 25%, var(--bg) 26%), linear-gradient(45deg, transparent 46%, var(--bodybg) 47%, var(--bodybg) 52%, transparent 53%),
-    linear-gradient(135deg, transparent 46%, var(--bodybg) 47%, var(--bodybg) 52%, transparent 53%);
-  background-size: 8em 8em;
-  background-color: var(--bg);
-}
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 1rem 0 0 0;
-  margin: 0 0 0.5rem 0;
-  line-height: 1.2
-}
-
-h1 {
-  font-size: 2rem
-}
-
-h2 {
-  font-size: 1.5rem
-}
-
-h3 {
-  font-size: 1.2rem
-}
-
-h4,
-h5,
-h6 {
-  font-size: 1rem
-}
-
-a {
-  text-decoration: underline;
-  color: var(--link);
-}
-
-a.hidden {
-  text-decoration: inherit;
-  color: inherit;
-}
-
-a:hover,
-a:focus,
-a:active a.hidden:hover,
-a.hidden:focus,
-a.hidden:active {
-  color: var(--linkhover);
-  text-decoration: underline wavy 2px;
-}
-
-a:hover,
-a:focus {
-  color: var(--linkhover)
-}
-
-*:focus-visible {
-  outline: 3px solid orangered;
-  outline-offset: 3px;
-}
+@import url('_variables.css');
+@import url('_font.css');
+@import url('_global.css');
+@import url('_typography.css');
 
 img.rounded {
   border-radius: 1rem;
@@ -140,7 +10,6 @@ img.rounded {
 img.round {
   border-radius: 50%;
 }
-
 
 ul,
 ol {
@@ -235,6 +104,10 @@ details summary {
 
 .reading-width {
   max-width: 36rem;
+}
+
+.full-width {
+  width: 100%;
 }
 
 p {
@@ -561,6 +434,13 @@ label {
   }
 }
 
+@media (min-width: 768px) {
+  .grid--offset {
+    grid-template-columns: 1fr;
+    margin-left: 266px;
+  }
+}
+
 .page__main {
   padding: 30px 0 0 0;
 }
@@ -646,12 +526,12 @@ label {
 }
 
 /* Blog */
-.bloglist .draft a,
-.bloglist .draft time {
+.listing .draft a,
+.listing .draft time {
   opacity: 0.5;
 }
 
-.bloglist li.draft::before {
+.listing li.draft::before {
   content: '✏️  ' !important
 }
 

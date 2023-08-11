@@ -1,23 +1,23 @@
 ---
+title: Welcome to Frill's internet realm
 ---
-{% extends 'layouts/page.njk'%}
+{% extends 'structure/templates/home.njk'%}
 
-{%- block leftContent -%}
+{%- block left -%}
 <div class="bio">
 	<img class="bio-pic" src="/images/pic.png" alt="Black and white avatar illustration: a smiling woman with shoulder length dark hair, large eyes and sparkles surrounding her">
 	<ul class="unstyled">
-		<li><span class="emoji" aria-hidden="true">🌷</span> she/her</li>
-		<li> <span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
-		<li><span class="emoji" role="img" aria-label="Clock">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
+		<li><span class="emoji" role="img" aria-label="Pronouns">🌷</span> she/her</li>
+		<li><span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
+		<li><span class="emoji" role="img" aria-label="Local time">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (utc+1)</li>
 		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini</li>
 		<li><span role="img" class="emoji" aria-label="Moon sign">🌚</span> Scorpio</li>
 	</ul>
 </div>
 {%- endblock -%}
-{%- block mainContent -%}
+{%- block main -%}
 <section>
 	<div class="reading-width">
-		<h1 class="visually-hidden">Welcome to Frill's internet realm</h1>
 		<p>Greetings, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you. I am Frills, the proud webmaster of this curious domain in this wonderous wifi world.</p>
 		<p>Do keep in mind that my collection is a work in progress, and I'm constantly adding new trinkets and reorganising shelves; sometimes you may find broken things... But fear not! I've already fixed the black hole I found yesterday.</p>
 		<p>Anyway, before you delve into the curios and oddities, enjoy this cozy cup of hot cocoa; a comforting beverage to keep those adventurous fingertips toasty as you wander through my internet sanctuary.</p>
@@ -26,7 +26,7 @@
 </section>
 {%- endblock -%}
 
-{%- block rightContent -%}
+{%- block right -%}
 {%- endblock -%}
 {% block bottomContent %}
 <div class="grid grid--main">
@@ -52,7 +52,7 @@
 </div>
 {% endblock %}
 
-{%- block scriptsContent -%}
+{%- block scripts -%}
 <!--Current time-->
 <script type="text/javascript">let time=document.querySelector("#localTime");const d=new Date().toLocaleTimeString("en-US",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"});e=d.replace(/\s/g,""),time.innerHTML=e;</script>
 {# <!--Carbon--> #}

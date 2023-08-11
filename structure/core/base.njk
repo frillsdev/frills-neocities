@@ -1,0 +1,19 @@
+{% include "structure/core/_template-start.njk" %}
+
+<body>
+    <script>0</script>
+    <div class="page">
+        {% include "structure/global/header.njk" %}
+        {%- block content -%}
+                {{- content | safe -}}
+        {%- endblock -%}
+        {% include "structure/global/footer.njk" %}
+    </div>
+
+    <script src="/js/consoleClub.js"></script>
+    {%- block scripts -%}
+        {{- content | safe -}}
+    {%- endblock -%}
+</body>
+
+{% include "structure/core/_template-end.njk" %}
