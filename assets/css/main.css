@@ -434,6 +434,13 @@ label {
   }
 }
 
+@media (min-width: 768px) {
+  .grid--offset {
+    grid-template-columns: 1fr;
+    margin-left: 266px;
+  }
+}
+
 .page__main {
   padding: 30px 0 0 0;
 }

@@ -1,0 +1,481 @@
+---
+title: CSS Tarot card
+description: Pure CSS Tarot card 'Three of Swords' depicting a heart pierced by three swords, surrounded by clouds and rain. Using and extending CodePen's challenge palette 'Perfect Purple'. The card flips on hover!
+date: 2023-08
+tags:
+- css art
+---
+
+{% block head %}
+  <style>
+    .csstarot {
+      background: #e2a9e5;
+      background: radial-gradient(ellipse at center, #e2a9e5 0%, #d582d9 100%);
+      align-items: center;
+      display: flex;
+      height: 100vh;
+      min-height: 600px;
+      justify-content: center;
+      padding-right: 40px;
+      padding-bottom: 40px;
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    .tarot-card {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 10px;
+      height: 100%;
+      position: absolute;
+      transition: transform 1s cubic-bezier(0.5, 0.59, 0.44, 1.11);
+      width: 100%;
+    }
+
+    .tarot-card-wrap {
+      width: 300px;
+      height: 500px;
+      position: relative;
+      perspective: 1200px;
+    }
+
+    .tarot-card-wrap:hover .tarot-card.front,
+    .tarot-card-wrap:focus .tarot-card.front,
+    .tarot-card-wrap:active .tarot-card.front {
+      transform: rotateY(180deg);
+    }
+
+    .tarot-card-wrap:hover .tarot-card.front~.back,
+    .tarot-card-wrap:focus .tarot-card.front~.back,
+    .tarot-card-wrap:active .tarot-card.front~.back {
+      transform: rotateY(0deg);
+    }
+
+    .tarot-card.front {
+      background: #632c65;
+      background: repeating-linear-gradient(-45deg, #632c65, #632c65 10px, #602a61 10px, #602a61 20px);
+      border: 20px solid #fff;
+      transform-origin: center;
+    }
+
+    .tarot-card.back {
+      background: #4b384c;
+      background: radial-gradient(ellipse at center, #684e69 0%, #4b384c 100%);
+      border: 20px solid rgba(255, 255, 255, .9);
+      transform: rotateY(-180deg);
+      z-index: 1;
+    }
+
+    .roman-numerals {
+      width: 30px;
+      margin: 0 auto;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .roman-numerals span {
+      height: 25px;
+      width: 2px;
+      background-color: #fff;
+      position: relative;
+    }
+
+    .roman-numerals span::before,
+    .roman-numerals span::after {
+      content: '';
+      width: calc(100% + 10px);
+      height: 2px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translatex(-50%);
+      background: #fff;
+    }
+
+    .roman-numerals span::after {
+      top: auto;
+      bottom: 0;
+    }
+
+    .clouds {
+      height: 200px;
+      overflow: visible;
+      position: relative;
+      width: 300px;
+    }
+
+    .clouds span {
+      background: #863b89;
+      border-radius: 100%;
+    }
+
+    .clouds span:nth-of-type(1) {
+      bottom: 0;
+      height: 100px;
+      left: 3px;
+      position: absolute;
+      width: 100px;
+    }
+
+    .clouds span:nth-of-type(2) {
+      bottom: 0;
+      height: 200px;
+      left: 20%;
+      position: absolute;
+      width: 200px;
+    }
+
+    .clouds span:nth-of-type(3) {
+      bottom: 0;
+      height: 120px;
+      position: absolute;
+      right: 3px;
+      width: 120px;
+    }
+
+    .stabbed-heart {
+      top: 70%;
+      transform: translatey(-30%);
+    }
+
+    .heart {
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 200px;
+    }
+
+    .heart span {
+      background: #ff5495;
+      border-radius: 100%;
+      height: 100px;
+      width: 100px;
+    }
+
+    .bottom-of-my-heart {
+      background: none;
+      border: 90px solid transparent;
+      border-radius: 0;
+      border-top-color: #ff5495;
+      left: 50%;
+      margin-top: 80px;
+      position: absolute;
+      transform: translatex(-50%);
+      width: 0;
+      z-index: 99999;
+    }
+
+    .bottom-of-my-heart .wound {
+      width: 50px;
+      height: 40px;
+      position: absolute;
+      background: #ff5495;
+      top: -99px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 100px 100px 0 0;
+      border-top: 2px solid #c92f6a;
+    }
+
+    .bottom-of-my-heart .wound::before {
+      content: '';
+      width: 33px;
+      height: 18px;
+      background: #ff5495;
+      position: absolute;
+      top: -6px;
+      left: -25px;
+      border-radius: 100px 100px 0 0;
+      transform: rotate(-35deg);
+      border-top: 2px solid #bd2660;
+    }
+
+    .bottom-of-my-heart .wound::after {
+      content: '';
+      width: 33px;
+      height: 24px;
+      background: #ff5495;
+      position: absolute;
+      top: -10px;
+      right: -35px;
+      border-radius: 100px 100px 0 0;
+      transform: rotate(23deg);
+      border-top: 2px solid #bd2660;
+    }
+
+    .swords {
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+      width: 200px;
+    }
+
+    .swords .one,
+    .swords .two,
+    .swords .three {
+      display: inline-block;
+      transform-origin: left;
+      width: 55px;
+    }
+
+    .swords .one .hilt,
+    .swords .two .hilt,
+    .swords .three .hilt {
+      background: #ffd85b;
+      height: 60px;
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+      width: 20px;
+    }
+
+    .swords .one .hilt::after,
+    .swords .two .hilt::after,
+    .swords .three .hilt::after {
+      background: #ffd85b;
+      border: 2px solid #ffcc28;
+      border-radius: 20px;
+      content: '';
+      height: 10px;
+      left: 50%;
+      position: absolute;
+      top: 0;
+      transform: translatex(-50%);
+      width: 50px;
+    }
+
+    .swords .one .guard,
+    .swords .two .guard,
+    .swords .three .guard {
+      background: #ffd85b;
+      bottom: 0;
+      height: 20px;
+      left: 50%;
+      position: absolute;
+      transform: translatex(-50%);
+      width: 60px;
+    }
+
+    .swords .one .guard::before,
+    .swords .two .guard::before,
+    .swords .three .guard::before {
+      background: #ffd85b;
+      border: 2px solid #ffcc28;
+      border-radius: 100%;
+      content: '';
+      height: 26px;
+      left: -7px;
+      position: absolute;
+      top: 50%;
+      transform: translatey(-50%);
+      width: 15px;
+    }
+
+    .swords .one .guard::after,
+    .swords .two .guard::after,
+    .swords .three .guard::after {
+      background: #ffd85b;
+      border: 2px solid #ffcc28;
+      border-radius: 100%;
+      content: '';
+      height: 26px;
+      position: absolute;
+      right: -7px;
+      top: 50%;
+      transform: translatey(-50%);
+      width: 15px;
+    }
+
+    .swords .one .blade,
+    .swords .two .blade,
+    .swords .three .blade {
+      background: #e8ecf2;
+      border-left: 1px solid rgba(99, 44, 101, .2);
+      border-right: 1px solid rgba(99, 44, 101, .2);
+      height: 200px;
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+      width: 20px;
+    }
+
+    .swords .one .blade::after,
+    .swords .two .blade::after,
+    .swords .three .blade::after {
+      background: #c7d1e0;
+      content: '';
+      height: 190px;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, 10px);
+      width: 1px;
+    }
+
+    .swords .one .blade span,
+    .swords .two .blade span,
+    .swords .three .blade span {
+      border: 11px solid transparent;
+      border-top: 20px solid #e8ecf2;
+      bottom: -30px;
+      left: -1px;
+      position: absolute;
+    }
+
+    .swords .one {
+      transform: rotate(30deg) translate(70px, -80px);
+    }
+
+    .swords .two {
+      transform: rotate(0deg) translate(14px, -50px);
+    }
+
+    .swords .three {
+      transform: rotate(-30deg) translate(-50px, -30px);
+    }
+
+    .blood {
+      background: #ff2175;
+      border-radius: 100%;
+      height: 20px;
+      left: 50%;
+      position: absolute;
+      transform: translatex(-50%);
+      width: 20px;
+    }
+
+    .blood::before {
+      background: #ff2175;
+      border-radius: 100%;
+      content: '';
+      height: 5px;
+      left: 50%;
+      position: absolute;
+      top: -25px;
+      transform: translatex(-50%);
+      width: 5px;
+    }
+
+    .blood::after {
+      border: 10px solid transparent;
+      border-bottom: 20px solid #ff2175;
+      content: '';
+      position: absolute;
+      top: -22px;
+    }
+
+    .insignia {
+      height: 200px;
+      left: 50%;
+      position: relative;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .insignia .wands {
+      background: #ffcc28;
+      height: 200px;
+      left: 50%;
+      position: absolute;
+      transform: rotate(45deg) translateX(-50%);
+      transform-origin: left;
+      width: 5px;
+    }
+
+    .insignia .swords {
+      background: #ffcc28;
+      height: 200px;
+      left: 50%;
+      position: absolute;
+      transform: rotate(-45deg) translateX(-50%);
+      transform-origin: left;
+      width: 5px;
+    }
+
+    .insignia .swords::after {
+      background: #ffcc28;
+      bottom: 25%;
+      content: '';
+      height: 5px;
+      left: 50%;
+      position: absolute;
+      transform: translatex(-50%);
+      width: 30px;
+    }
+
+    .insignia .pentacles {
+      border: 5px solid #ffcc28;
+      border-radius: 100%;
+      bottom: -20px;
+      height: 40px;
+      left: 50%;
+      position: absolute;
+      transform: translatex(-50%);
+      width: 40px;
+    }
+
+    .insignia .cups {
+      border: 5px solid #ffcc28;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      border-top: 0;
+      height: 40px;
+      left: 50%;
+      position: absolute;
+      top: -20px;
+      transform: translatex(-50%);
+      width: 40px;
+    }
+  </style>
+{% endblock %}
+
+{% block main %}
+<div class="csstarot">
+  <div class="tarot-card-wrap">
+    <div class="tarot-card front">
+      <div class="three-of-swords">
+        <div class="roman-numerals"><span></span><span></span><span></span></div>
+        <div class="clouds"><span></span><span></span><span></span><span></span></div>
+        <div class="rain"></div>
+        <div class="stabbed-heart">
+          <div class="heart"><span></span><span></span></div>
+          <div class="bottom-of-my-heart">
+            <div class="wound"></div>
+          </div>
+          <div class="swords">
+            <div class="one">
+              <div class="hilt">
+                <div class="guard"></div>
+              </div>
+              <div class="blade"><span></span></div>
+            </div>
+            <div class="two">
+              <div class="hilt">
+                <div class="guard"></div>
+              </div>
+              <div class="blade"><span></span></div>
+            </div>
+            <div class="three">
+              <div class="hilt">
+                <div class="guard"></div>
+              </div>
+              <div class="blade"><span></span></div>
+            </div>
+          </div>
+          <div class="blood"></div>
+        </div>
+      </div>
+    </div>
+    <div class="tarot-card back">
+      <div class="insignia">
+        <div class="wands"></div>
+        <div class="cups"></div>
+        <div class="swords"></div>
+        <div class="pentacles"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
