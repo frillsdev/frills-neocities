@@ -46,6 +46,12 @@ ol.stars li::before {
   left: -1rem;
 }
 
+ul.inline, ol.inline {
+  flex-direction: row;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+}
+
 details summary {
   cursor: pointer;
 }
