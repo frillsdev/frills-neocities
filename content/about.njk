@@ -14,8 +14,6 @@ eleventyNavigation:
 
 {%- block main -%}
 <section>
-	{# {{ macro.header(title) }} #}
-
 	<div class="reading-width">
 		<p><span class="emoji" role="img" aria-label="Wave">👋</span> Hey! I'm a 30ish y/o frontend dev based in Wales, UK. My pronouns are she/her.</p>
 
@@ -82,8 +80,10 @@ eleventyNavigation:
 {%- endblock -%}
 
 {%- block right -%}
+    {% import "structure/components/components.njk" as macro with context %}
+
 	<h2 class="visually-hidden">What I'm up to</h2>
-	{# {{ macro.callout(
+	{{ macro.callout(
 		element = 'article',
 		modifiers = 'callout--small callout--info statusCafe',
 		header = '
@@ -117,7 +117,7 @@ eleventyNavigation:
 		body = '
 		The Eye of the World - Robert Jordan
 		'
-	)}} #}
+	)}}
 
 	<h2>Elsewhere</h2>
 	<ul class="unstyled">
