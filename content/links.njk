@@ -7,22 +7,21 @@ eleventyNavigation:
   emoji: 🔗
   order: 4
 ---
-{% extends 'layouts/page.njk'%}
+{% extends 'structure/templates/page.njk'%}
 
-{%- block leftContent -%}
+{%- block left -%}
 {%- endblock -%}
 
-{%- block mainContent -%}
+{%- block main -%}
 <section>
-	{{ macro.header(title, description ) }}
-    {% include "_includes/_components/buttonwall.njk" %}
+    {% include "structure/components/buttonwall.njk" %}
 </section>
 {%- endblock -%}
 
-{%- block rightContent -%}
-    {% include "_includes/_components/button.njk" %}
+{%- block right -%}
+    {% include "structure/components/button.njk" %}
 {%- endblock -%}
 
-{% block scriptsContent %}
+{% block scripts %}
 
 {% endblock %}

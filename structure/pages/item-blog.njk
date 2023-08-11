@@ -1,0 +1,40 @@
+{% extends "structure/templates/page.njk" %}
+
+{%- block main -%}
+    {% import "structure/components/components.njk" as macro with context %}
+    <article class="full-width">
+        <div class="reading-width">
+            {{ content | safe }}
+        </div>
+    </article>
+{%- endblock -%}
+
+{%- block right -%}
+    <ul class="unstyled">
+        {% if tags.includes("weeknotes") %}
+        {% else %}
+        <li>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
+        {% endif %}
+        {% if tags %}
+        <li>
+            {%- for tag in tags | filterTagList %}
+            <span class="tag">#{{ tag }}</span>{%- if not loop.last %} {% endif %}
+            {%- endfor %}
+        </li>
+        {% endif %}
+    </ul>
+
+    {% if tags.includes("weeknotes") %}
+        <button id="toggleDetail" class="button mb-1" aria-pressed="false">Expand accordions</button>
+    {% endif %}
+{%- endblock -%}
+
+{% block scripts %}
+    {% if tags.includes("weeknotes") %}
+    <script>
+        const t = document.getElementById('toggleDetail')
+        const o = "Expand accordions"
+        const c = "Collapse accordions"
+        if(t){t.addEventListener("click",function(){document.body.querySelectorAll("details").forEach(e=>{e.hasAttribute("open")?(t.innerHTML=o,t.setAttribute("aria-pressed",!1),e.removeAttribute("open")):(t.innerHTML=c,t.setAttribute("aria-pressed",!0),e.setAttribute("open",!0))})});}</script>
+    {% endif %}
+{% endblock %}

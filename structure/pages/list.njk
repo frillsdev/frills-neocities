@@ -1,14 +1,14 @@
-{% extends "core/base.njk" %}
+{% extends "structure/templates/page.njk" %}
 
-{%- block main -%}
-	{% import "_includes/_components/components.njk" as macro with context %}
-	{{ macro.header(title) }}
+{% block main %}
 	<ol reversed class="listing stars">
 	{% for post in postslist | reverse %}
+		
 		<li {% if post.data.draft %}class="draft"{% endif %}>
 			<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
+			
 			<time datetime="{{ post.date | htmlDateString }}"> {{ post.date | readableDate("d LLL yyyy") }}</time>
 		</li>
 	{% endfor %}
 	</ol>
-{%- endblock -%}
+{% endblock %}

@@ -1,14 +1,13 @@
 ---
 title: About the site
 ---
-{% extends 'layouts/page.njk'%}
+{% extends 'structure/templates/page.njk'%}
 
-{%- block leftContent -%}
+{%- block left -%}
 {% endblock %}
 
-{%- block mainContent -%}
+{%- block main -%}
 <section>
-	{{ macro.header(title, description) }}
 	<div class="reading-width">
 		<h2>Technical information</h2>
 		<ul class="stars">
@@ -55,6 +54,6 @@ title: About the site
 
 {%- endblock -%}
 
-{%- block scriptsContent -%}
+{%- block scripts -%}
 
 {%- endblock -%}

@@ -6,15 +6,15 @@ eleventyNavigation:
   emoji: 💁‍♀️
   order: 2
 ---
-{% extends 'layouts/page.njk'%}
+{% extends 'structure/templates/page.njk'%}
 
-{%- block leftContent -%}
+{%- block left -%}
 {%- endblock -%}
 
 
-{%- block mainContent -%}
+{%- block main -%}
 <section>
-	{{ macro.header(title) }}
+	{# {{ macro.header(title) }} #}
 
 	<div class="reading-width">
 		<p><span class="emoji" role="img" aria-label="Wave">👋</span> Hey! I'm a 30ish y/o frontend dev based in Wales, UK. My pronouns are she/her.</p>
@@ -81,9 +81,9 @@ eleventyNavigation:
 
 {%- endblock -%}
 
-{%- block rightContent -%}
+{%- block right -%}
 	<h2 class="visually-hidden">What I'm up to</h2>
-	{{ macro.callout(
+	{# {{ macro.callout(
 		element = 'article',
 		modifiers = 'callout--small callout--info statusCafe',
 		header = '
@@ -117,7 +117,7 @@ eleventyNavigation:
 		body = '
 		The Eye of the World - Robert Jordan
 		'
-	)}}
+	)}} #}
 
 	<h2>Elsewhere</h2>
 	<ul class="unstyled">
@@ -128,7 +128,7 @@ eleventyNavigation:
 {%- endblock -%}
 
 
-{%- block scriptsContent -%}
+{%- block scripts -%}
 <!--Status.cafe-->
 <script defer>
 fetch("https://status.cafe/users/fri11s/status.json").then(t=>t.json()).then(t=>{if(!t.content.length){document.getElementById("statusCafe-status").innerHTML="No status yet.";return}document.getElementById("statusCafe-emoji").innerHTML=t.face,document.getElementById("statusCafe-time").innerHTML=t.timeAgo,document.getElementById("statusCafe-status").innerHTML=t.content});

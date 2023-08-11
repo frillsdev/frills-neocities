@@ -2,5 +2,5 @@ module.exports = {
 	tags: [
 		"posts"
 	],
-	"layout": "layouts/item-blog.njk"
+	"layout": "pages/item-blog.njk"
 };
