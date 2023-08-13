@@ -1,7 +1,8 @@
 :root {
   --bodybg: #0b0b0b;
   --bg: black;
-  --border: gold;
+  --accent: gold;
+  --interactive: orangered;
   --link: DeepPink;
   --linkhover: springgreen;
   --text: LavenderBlush;
@@ -20,8 +21,10 @@
   :root {
     --bodybg: LavenderBlush;
     --bg: Snow;
+    --interactive: #e1007a;
+    --accent: #d73a00;
     --link: Blue;
-    --linkhover: Crimson;
+    --linkhover: #e1007a;
     --text: black;
   }
 }

@@ -122,12 +122,15 @@ p {
 
 em {
   font-style: normal;
+  color: var(--accent);
 }
 
-em::before,
+/* em::before,
 em::after {
   content: '✨';
-}
+  content: '✨' / '';
+  speak: never;
+} */
 
 .italic {
   font-style: italic;
@@ -137,7 +140,7 @@ button {
   will-change: transform;
   padding: 6px 12px;
   border-radius: 4px;
-  background-color: gold;
+  background-color: var(--accent);
   color: black;
   border: 0;
   box-shadow: 4px 4px 0 0 DarkGoldenRod;
@@ -189,11 +192,17 @@ label {
   width: 1px;
 }
 
+.visually-hidden.skiptomain {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
 .callout {
   padding: 20px;
   background-color: var(--bodybg);
   margin: 0 0 1rem 0;
-  border-left: 5px solid gold;
+  border-left: 5px solid var(--accent);
   font-size: 90%;
   border-radius: 4px;
 }
@@ -203,7 +212,7 @@ label {
 }
 
 .callout--warning {
-  border-color: gold;
+  border-color: var(--accent);
   background: papayawhip;
   color: black;
 }
@@ -328,7 +337,7 @@ label {
 
 @keyframes blink {
   0% {
-    fill: gold;
+    fill: var(--accent);
   }
 
   30% {
@@ -420,6 +429,17 @@ label {
 
 .page__nav ul li a {
   white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+.page__nav ul li .notification {
+  vertical-align: super;
+  background-color: var(--accent);
+  border-radius: 10px;
+  font-size: 10px;
+  color: var(--bg);
+  padding: 1px 4px;
+  margin-left: 4px;
 }
 
 .grid {
