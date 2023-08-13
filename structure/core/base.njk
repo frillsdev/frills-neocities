@@ -1,6 +1,7 @@
 {% include "structure/core/_template-start.njk" %}
 
 <body>
+    <a href="#main" id="top" class="visually-hidden skiptomain">Skip to main content</a>
     <script>0</script>
     <div class="page">
         {% include "structure/global/header.njk" %}
@@ -10,7 +11,7 @@
         {% include "structure/global/footer.njk" %}
     </div>
 
-    <script src="/js/consoleClub.js"></script>
+    <script src="/js/main.js"></script>
     {%- block scripts -%}
         {{- content | safe -}}
     {%- endblock -%}
