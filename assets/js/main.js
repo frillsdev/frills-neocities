@@ -23,6 +23,6 @@ function consoleClub() {
 }
 
 window.addEventListener('load', function () {
-    notification(3, 'New!');
+    // notification(3, 'New!');
     consoleClub();
 }, true);
