@@ -26,18 +26,18 @@ function consoleClub() {
 function colorScheme() {
     const body = document.body;
     const colorSchemeToggle = document.getElementById('colorSchemeButton');
-    let colorScheme = localStorage.getItem('color-scheme');
+    let colorScheme = sessionStorage.getItem('color-scheme');
 
     const colorSchemeDark = () => {
         body.setAttribute('data-color-scheme', 'dark');
         colorSchemeToggle.setAttribute('aria-pressed', false);
-        localStorage.setItem('color-scheme', 'dark');
+        sessionStorage.setItem('color-scheme', 'dark');
     };
 
     const colorSchemeLight = () => {
         body.setAttribute('data-color-scheme', 'light');
         colorSchemeToggle.setAttribute('aria-pressed', true);
-        localStorage.setItem('color-scheme', 'light');
+        sessionStorage.setItem('color-scheme', 'light');
     };
 
     if (colorScheme === 'dark') {
@@ -47,7 +47,7 @@ function colorScheme() {
     }
 
     colorSchemeToggle.addEventListener('click', (e) => {
-        colorScheme = localStorage.getItem('color-scheme');
+        colorScheme = sessionStorage.getItem('color-scheme');
         if (colorScheme === 'dark') {
             colorSchemeLight();
         } else {
