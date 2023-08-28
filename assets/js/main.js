@@ -22,7 +22,42 @@ function consoleClub() {
     console.log('%c'+consoleClubDescription, 'color: white; background: black;font-size: 18px;');
 }
 
+// Dark mode
+function colorScheme() {
+    const body = document.body;
+    const colorSchemeToggle = document.getElementById('colorSchemeButton');
+    let colorScheme = localStorage.getItem('color-scheme');
+
+    const colorSchemeDark = () => {
+        body.setAttribute('data-color-scheme', 'dark');
+        colorSchemeToggle.setAttribute('aria-pressed', false);
+        localStorage.setItem('color-scheme', 'dark');
+    };
+
+    const colorSchemeLight = () => {
+        body.setAttribute('data-color-scheme', 'light');
+        colorSchemeToggle.setAttribute('aria-pressed', true);
+        localStorage.setItem('color-scheme', 'light');
+    };
+
+    if (colorScheme === 'dark') {
+        colorSchemeDark();
+    } else {
+        colorSchemeLight();
+    }
+
+    colorSchemeToggle.addEventListener('click', (e) => {
+        colorScheme = localStorage.getItem('color-scheme');
+        if (colorScheme === 'dark') {
+            colorSchemeLight();
+        } else {
+            colorSchemeDark();
+        }
+    });
+}
+
 window.addEventListener('load', function () {
     // notification(3, 'New!');
     consoleClub();
+    colorScheme();
 }, true);

@@ -1,12 +1,12 @@
 :root {
   --bodybg: #0b0b0b;
-  --bg: black;
-  --accent: gold;
-  --interactive: orangered;
+  --bg: Black;
+  --accent: Gold;
+  --interactive: OrangeRed;
   --link: DeepPink;
-  --linkhover: springgreen;
+  --linkaccent: HotPink;
+  --linkhover: SpringGreen;
   --text: LavenderBlush;
-  --callout: hsl(332, 56%, 87%);
   --pink: DeepPink;
   --font-size: 16px;
 }
@@ -17,6 +17,18 @@
   }
 }
 
+body[data-color-scheme='dark'] {
+  --bodybg: #0b0b0b;
+  --bg: Black;
+  --accent: Gold;
+  --interactive: OrangeRed;
+  --link: DeepPink;
+  --linkaccent: HotPink;
+  --linkhover: SpringGreen;
+  --text: LavenderBlush;
+  --pink: DeepPink;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --bodybg: LavenderBlush;
@@ -24,7 +36,19 @@
     --interactive: #e1007a;
     --accent: #d73a00;
     --link: Blue;
+    --linkaccent: LightSteelBlue;
     --linkhover: #e1007a;
-    --text: black;
+    --text: Black;
   }
+}
+
+body[data-color-scheme='light'] {
+  --bodybg: LavenderBlush;
+  --bg: Snow;
+  --interactive: #e1007a;
+  --accent: #d73a00;
+  --link: Blue;
+  --linkaccent: LightSteelBlue;
+  --linkhover: #e1007a;
+  --text: Black;
 }

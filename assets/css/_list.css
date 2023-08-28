@@ -1,0 +1,42 @@
+
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  row-gap: 8px;
+  margin: 0 0 1rem 0;
+}
+
+ul.unstyled,
+ol.unstyled {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.stars,
+ol.stars {
+  list-style-type: none;
+}
+
+ul.stars li,
+ol.stars li {
+  position: relative;
+}
+
+ul.stars li::before,
+ol.stars li::before {
+  content: '⭐';
+  font-size: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: -1rem;
+}
+
+ul.inline,
+ol.inline {
+  flex-direction: row;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+}

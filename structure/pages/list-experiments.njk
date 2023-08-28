@@ -1,6 +1,9 @@
 {% extends "structure/templates/page.njk" %}
 
 {% block main %}
+	{% if description %}
+		<p>{{description}}</p>
+	{% endif %}
 	<ol reversed class="listing stars">
 	{% for post in postslist | reverse %}
 		
