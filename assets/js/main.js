@@ -42,7 +42,7 @@ function colorScheme() {
 
     if (colorScheme === 'dark') {
         colorSchemeDark();
-    } else {
+    } else if (colorScheme === 'light') {
         colorSchemeLight();
     }
 
