@@ -47,10 +47,10 @@ function colorScheme() {
     }
 
     colorSchemeToggle.addEventListener('click', (e) => {
-        colorScheme = sessionStorage.getItem('color-scheme');
-        if (colorScheme === 'dark') {
+        if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) || (colorScheme === 'dark')) {
             colorSchemeLight();
-        } else {
+        }
+        else if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) || (colorScheme === 'light')) {
             colorSchemeDark();
         }
     });
