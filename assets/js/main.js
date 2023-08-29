@@ -28,30 +28,43 @@ function colorScheme() {
     const colorSchemeToggle = document.getElementById('colorSchemeButton');
     let colorScheme = sessionStorage.getItem('color-scheme');
 
-    const colorSchemeDark = () => {
-        body.setAttribute('data-color-scheme', 'dark');
+    const pressButton = () => {
+        colorSchemeToggle.setAttribute('aria-pressed', true);
+    }
+    const unpressButton = () => {
         colorSchemeToggle.setAttribute('aria-pressed', false);
+    }
+    const storeSchemeDark = () => {
         sessionStorage.setItem('color-scheme', 'dark');
     };
-
-    const colorSchemeLight = () => {
-        body.setAttribute('data-color-scheme', 'light');
-        colorSchemeToggle.setAttribute('aria-pressed', true);
+    const overrideSchemeDark = () => {
+        body.setAttribute('data-color-scheme', 'dark');
+    };
+    const storeSchemeLight = () => {
         sessionStorage.setItem('color-scheme', 'light');
+    };
+    const overrideSchemeLight = () => {
+        body.setAttribute('data-color-scheme', 'light');
     };
 
     if (colorScheme === 'dark') {
-        colorSchemeDark();
+        pressButton();
+        storeSchemeDark();
     } else if (colorScheme === 'light') {
-        colorSchemeLight();
+        unpressButton();
+        storeSchemeLight();
     }
 
     colorSchemeToggle.addEventListener('click', (e) => {
-        if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) || (colorScheme === 'dark')) {
-            colorSchemeLight();
-        }
-        else if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) || (colorScheme === 'light')) {
-            colorSchemeDark();
+        colorScheme = sessionStorage.getItem('color-scheme');
+        if (colorScheme === 'dark') {
+            pressButton();
+            storeSchemeLight();
+            overrideSchemeLight();
+        } else if (colorScheme === 'light') {
+            unpressButton();
+            storeSchemeDark();
+            overrideSchemeDark();
         }
     });
 }
