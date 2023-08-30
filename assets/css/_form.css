@@ -2,6 +2,11 @@ textarea,
 input,
 select {
     margin: 0 0 1rem 0;
+    display: block;
+    color: var(--text);
+    letter-spacing: 0.9;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 textarea {
@@ -11,6 +16,8 @@ textarea {
     background-color: var(--bodybg);
     padding: 4px 14px;
     min-height: 5rem;
+    font-size: 0.5rem;
+    white-space: normal;
 }
 
 input {
@@ -20,4 +27,5 @@ input {
 label {
     display: block;
     font-weight: bold;
+    font-size: 0.8rem;
 }
