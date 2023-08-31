@@ -9,7 +9,7 @@
   margin: 0 0 2rem
 }
 
-.buttonwall.--highcontrast .buttonwall__item {
+.buttonwall.--highcontrast .buttonwall__item a {
   background: var(--bg) !important;
   color: var(--text) !important;
   box-shadow: inset 0 0 0 1px var(--text) !important;
