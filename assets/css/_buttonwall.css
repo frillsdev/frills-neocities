@@ -20,7 +20,7 @@
     display: block;
 }
 
-.buttonwall__item {
+.buttonwall__item a {
   width: 80px;
   height: 31px;
   background: #fff;
@@ -38,9 +38,9 @@
   line-height: 1.1
 }
 
-.buttonwall__item:active,
-.buttonwall__item:focus,
-.buttonwall__item:hover {
+.buttonwall__item a:active,
+.buttonwall__item a:focus,
+.buttonwall__item a:hover {
   text-decoration: none;
   z-index: 1;
 }
