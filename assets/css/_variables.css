@@ -9,6 +9,7 @@
   --text: LavenderBlush;
   --pink: DeepPink;
   --font-size: 16px;
+  --font-family: 'Atkinson Hyperlegible', 'Tahoma', sans-serif;
 }
 
 @media (min-width: 576px) {
