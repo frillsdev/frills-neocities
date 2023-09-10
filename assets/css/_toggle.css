@@ -1,66 +1,34 @@
 
 .toggle {
-  width: 50px;
-  height: 24px;
-  border-radius: 20px;
-  padding: 2px;
-  box-shadow: none;
-  background: transparent;
-  border: 2px solid var(--text);
+  width: 44px;
+  height: 44px;
   font-size: 0;
-  transform: none;
+  padding: 0!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.toggle:active,
-.toggle:hover {
-  transform: none;
-  background: transparent;
-}
-
-.toggle::before {
+.toggle--colorscheme::before {
   content: '';
-  left: auto;
-  right: calc(100% - 16px);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  box-shadow: inset -4px -4px 0 0 var(--text);
-  height: 10px;
-  width: 10px;
-  padding: 1px;
-  border-radius: 18px;
-  border-color: transparent;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.8rem;
+  border: 2px solid var(--text);
+  display: block;
+  transition: 0.3s ease all;
+  background-image: linear-gradient(to right, transparent 50%, var(--text) 50%);
 }
 
-.toggle::after {
-  content: '';
-  height: 14px;
-  width: 14px;
-  background-color: var(--link);
-  /* border: 2px solid var(--link); */
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 18px;
-  right: 3px;
-  left: auto;
-  position: absolute;
-  transition: 0.3s ease left;
+.toggle--colorscheme[aria-pressed="true"]::before {
+  background-image: linear-gradient(to right, var(--text) 50%, transparent 50%);
 }
 
-.toggle[aria-pressed='true'] {
-  transform: none;
-  border-color: var(--text);
+.toggle--spooky {
+  display: none;
 }
 
-.toggle[aria-pressed='true']::before {
-  box-shadow: inset -16px -16px 0 0 var(--text);
-  border: 2px dotted var(--text);
-  right: 2px;
-  height: 12px;
-  width: 12px;
-}
-
-.toggle[aria-pressed='true']::after {
-  left: 3px;
-  right: auto;
+.toggle--spooky::before {
+  content: '🎃';
+  font-size: 1rem;
 }

@@ -6,7 +6,7 @@
   --accent: Gold;
   --interactive: OrangeRed;
   --link: DeepPink;
-  --linkaccent: HotPink;
+  --linkaccent: Maroon;
   --linkhover: SpringGreen;
   --text: LavenderBlush;
   --pink: DeepPink;
@@ -31,7 +31,7 @@ html[data-scheme='dark'] {
   --accent: Gold;
   --interactive: OrangeRed;
   --link: DeepPink;
-  --linkaccent: HotPink;
+  --linkaccent: Maroon;
   --linkhover: SpringGreen;
   --text: LavenderBlush;
   --pink: DeepPink;

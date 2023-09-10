@@ -5,7 +5,7 @@
             <li>✨ <a href="/credits">Credits</a>
             <li>🦄 <a href="#">Other</a> #}
         {%- for entry in collections.all | eleventyNavigation %}
-        <li>{{ entry.emoji }} <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a></li>
+        <li>{{ entry.emoji|safe }} <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a></li>
         {%- endfor %}
     </ul>
 </nav>

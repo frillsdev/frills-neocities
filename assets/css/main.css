@@ -183,8 +183,9 @@ em {
 
 .settings {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 15px;
   position: absolute;
   top: 20px;
   right: 20px;

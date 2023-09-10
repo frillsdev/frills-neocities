@@ -85,3 +85,9 @@
   top: 0.5rem;
   left: 0.5rem;
 }
+
+.emoji {
+  font-size: 1.1rem;
+  line-height: 1;
+  font-variant-emoji: emoji;
+}
