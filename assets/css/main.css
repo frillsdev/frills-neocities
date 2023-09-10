@@ -185,6 +185,16 @@ em {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+@media (min-width: 768px) {
+  .settings {
+    position: relative;
+    top: inherit;
+    right: inherit;
+  }
 }
 
 .bio {
