@@ -1,67 +1,32 @@
-:root {
-    --logo-x: Gold;
-}
-
-
 @keyframes colour {
     0% {
-        fill: hsl(255, 70%, 70%);
-        stroke: hsl(255, 70%, 70%)
+        fill: var(--logo-anim-1);
+        stroke: var(--logo-anim-1);
     }
 
     10% {
-        fill: hsl(330, 70%, 70%);
-        stroke: hsl(330, 70%, 70%)
+        fill: var(--logo-anim-2);
+        stroke: var(--logo-anim-2);
     }
 
     50% {
-        fill: hsl(10, 100%, 60%);
-        stroke: hsl(10, 100%, 60%)
+        fill: var(--logo-anim-3);
+        stroke: var(--logo-anim-3);
     }
 
     60% {
-        fill: hsl(51, 100%, 60%);
-        stroke: hsl(51, 100%, 60%)
+        fill: var(--logo-anim-4);
+        stroke: var(--logo-anim-4);
     }
 
     80% {
-        fill: hsl(153, 70%, 70%);
-        stroke: hsl(153, 70%, 70%)
+        fill: var(--logo-anim-5);
+        stroke: var(--logo-anim-5);
     }
 
     100% {
-        fill: hsl(204, 70%, 70%);
-        stroke: hsl(204, 70%, 70%)
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    @keyframes colour {
-        0% {
-            fill: hsl(255, 70%, 70%);
-            stroke: hsl(255, 70%, 70%)
-        }
-
-        10% {
-            fill: hsl(330, 100%, 40%);
-            stroke: hsl(330, 100%, 40%)
-        }
-
-        50% {
-            fill: hsl(10, 100%, 50%);
-            stroke: hsl(10, 100%, 50%)
-        }
-
-        80% {
-            fill: hsl(153, 100%, 40%);
-            stroke: hsl(153, 100%, 40%)
-        }
-
-        100% {
-            fill: hsl(204, 100%, 50%);
-            stroke: hsl(204, 100%, 50%)
-        }
-
+        fill: var(--logo-anim-6);
+        stroke: var(--logo-anim-6);
     }
 }
 
