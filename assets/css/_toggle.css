@@ -6,10 +6,9 @@
   padding: 2px;
   box-shadow: none;
   background: transparent;
-  border: 2px solid white;
+  border: 2px solid var(--text);
   font-size: 0;
   transform: none;
-  display: none;
 }
 
 .toggle:active,
@@ -21,48 +20,47 @@
 .toggle::before {
   content: '';
   left: auto;
-  right: calc(100% - 20px);
+  right: calc(100% - 16px);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  box-shadow: inset -6px -6px 0 0 white;
+  box-shadow: inset -4px -4px 0 0 var(--text);
   height: 10px;
   width: 10px;
   padding: 1px;
   border-radius: 18px;
-  border: 2px dotted white;
+  border-color: transparent;
 }
 
 .toggle::after {
   content: '';
   height: 14px;
   width: 14px;
-  background-color: white;
-  border-color: black;
+  background-color: var(--link);
+  /* border: 2px solid var(--link); */
   top: 50%;
   transform: translateY(-50%);
   border-radius: 18px;
-  right: auto;
-  left: 2px;
+  right: 3px;
+  left: auto;
   position: absolute;
   transition: 0.3s ease left;
 }
 
 .toggle[aria-pressed='true'] {
   transform: none;
-  border-color: white;
+  border-color: var(--text);
 }
 
 .toggle[aria-pressed='true']::before {
-  box-shadow: inset -16px -16px 0 0 white;
+  box-shadow: inset -16px -16px 0 0 var(--text);
+  border: 2px dotted var(--text);
   right: 2px;
   height: 12px;
   width: 12px;
 }
 
 .toggle[aria-pressed='true']::after {
-  left: 2px;
+  left: 3px;
   right: auto;
-  background-color: black;
-  border: 2px solid white;
 }

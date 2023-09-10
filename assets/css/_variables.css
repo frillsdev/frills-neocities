@@ -18,7 +18,7 @@
   }
 }
 
-body[data-color-scheme='dark'] {
+html[data-scheme='dark'] {
   --bodybg: #0b0b0b;
   --bg: Black;
   --accent: Gold;
@@ -43,7 +43,7 @@ body[data-color-scheme='dark'] {
   }
 }
 
-body[data-color-scheme='light'] {
+html[data-scheme='light'] {
   --bodybg: LavenderBlush;
   --bg: Snow;
   --interactive: #e1007a;
