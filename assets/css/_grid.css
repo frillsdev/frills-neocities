@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 240px 2fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid--header {
+    grid-template-columns: 240px 1fr 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid--main {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid--offset {
+    grid-template-columns: 1fr;
+    margin-left: 266px;
+  }
+}

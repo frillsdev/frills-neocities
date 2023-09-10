@@ -50,3 +50,12 @@ a:hover,
 a:focus {
   color: var(--linkhover)
 }
+
+p {
+  margin: 0 0 1rem
+}
+
+em {
+  font-style: normal;
+  color: var(--accent);
+}

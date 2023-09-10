@@ -1,0 +1,42 @@
+
+.page {
+  background-color: var(--bg);
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 0 14px;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 0 56px;
+  }
+}
+
+/* Header */
+.page__header {
+  padding: 1.5rem 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .page__header {
+    padding: 3rem 0 0 0;
+  }
+}
+
+/* Main */
+.page__main {
+  padding: 30px 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .page__main {
+    min-height: 70vh;
+    padding: 60px 0 0 0;
+  }
+}
+
+/* Footer */
+.page__footer {
+  padding: 60px 0;
+}
