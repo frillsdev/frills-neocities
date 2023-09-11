@@ -1,0 +1,39 @@
+
+.page__nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 0;
+  column-gap: 1rem;
+  row-gap: 0.7rem;
+  max-width: 30rem;
+}
+
+@media (min-width: 768px) {
+  .page__nav ul {
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    justify-content: flex-start;
+    margin: 0;
+  }
+}
+
+.page__nav ul li a {
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.page__nav ul li .notification {
+  vertical-align: super;
+  background-color: var(--accent);
+  border-radius: 10px;
+  font-size: 10px;
+  color: var(--bg);
+  padding: 1px 4px;
+  margin-left: 4px;
+}

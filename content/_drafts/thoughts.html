@@ -15,12 +15,23 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<style>
+		blockquote {
+			border-left: 3px solid var(--accent);
+			margin-left: 0;
+			padding-left: 1.5rem;
+			margin-bottom: 1rem;
+		}
+		blockquote p:last-child {
+			margin-bottom: 0;
+		}
+	</style>
 </head>
 
 <body>
 	<div class="page">
 		<header class="page__header grid">
-			<a href="https://fri11s.neocities.org/" class="page__title">
+			<a href="https://fri11s.neocities.org/" class="page__logo">
 				<span class="visually-hidden">Frills</span>
 				<svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 25" width="200" height="66" aria-hidden="true" preserveAspectRatio="xMinYMin">
 					<path class="logo-tx" d="M15.8 15c.5.3.7.8.7 1.6 0 1-.4 1.7-1.2 2-1 .4-2.2.5-3.4.5H7.7v1.8c0 2.1-.8 3.2-2.5 3.2-1.4 0-2.5-.8-3.3-2.4-.8-1.5-1.2-4-1.2-7.4a10 10 0 0 1 9.7-10.6c2.8-.2 6.8 1 6.8 4.3s-3.2 3.4-5.7 3.4c-1.7 0-4.1.7-4.1 2.7h3.7c1.5 0 3.4 0 4.7.9Zm6 9.1c-1.2 0-2-.7-2.5-2.2a21 21 0 0 1-.4-9c.3-1.6 1.1-2.8 2.7-2.8 1 0 2 .4 2.2 1.4a4 4 0 0 1 1.7-.8c1.4-.4 2.8-.4 4.1.2 1.4.6 2.8 2.3 2.1 3.9-.4.9-1.2 1.4-2.2 1.4-1.7 0-2.8-1-4.2.5-1.2 1.2-.8 3.3-.9 4.8 0 1.5-1 2.6-2.6 2.6Zm14-14.1c-2 0-3.3-1.8-3.3-3.6a3.4 3.4 0 1 1 6.8 0c0 1.9-1.6 3.6-3.5 3.6Zm0 14.1c-1.6 0-2.3-1.2-2.4-2.7-.3-2.5-.3-5 0-7.4.2-1.4 1-2.5 2.5-2.5s2.3 1.3 2.5 2.7c.3 2.5.3 5 0 7.4-.3 1.5-.9 2.5-2.6 2.5Zm8.4 0c-2.3 0-3-2.4-3.2-4.3a58 58 0 0 1 0-11.6c.2-2 .8-4.5 3.2-4.5 2.4 0 3.2 3.8 3.3 4.5.3 3.8.2 7.7-.2 11.5-.1 1.8-.9 4.4-3.1 4.4Zm8.3 0c-2.3 0-3-2.4-3.2-4.3a58 58 0 0 1 0-11.6c.2-2 1-4.5 3.3-4.5 2.4 0 3 2.5 3.2 4.5.3 3.8.3 7.7-.1 11.5-.1 1.9-1 4.4-3.2 4.4Zm10 0c-1.8 0-5.6-.5-5.6-3 0-.6.2-1 .6-1.4.4-.3 1-.5 1.5-.5 1 0 1.5.8 2.3.9.6 0 .9-.7.3-1l-2.1-.9c-1.4-.8-2.7-1.8-2.6-3.5 0-1.7 1.6-3 3.1-3.7 2-.8 4.3-.7 6.4-.1 1.3.4 2.9 1.5 2.9 3 0 1.6-1.9 2.3-3.2 1.5-.4-.2-1.3-.5-1.5 0-.1.5.2.8.6.9 1.1.4 2 .9 2.7 1.4a3 3 0 0 1 1 2.4c0 1.2-.5 2.2-1.7 3-1.2.7-2.7 1-4.7 1Z"></path>
@@ -34,20 +45,10 @@
 			</a>
 			<nav aria-label="Top level" class="page__nav">
 				<ul>
-
-					<li>💁🏻‍♀️ <a href="https://fri11s.neocities.org/about/">About</a></li>
-					<li>💭 <a href="https://frills.thoughts.page/">Thoughts</a></li>
-					<li>📝 <a href="https://fri11s.neocities.org/blog/">Blog</a></li>
-					<li>🔗 <a href="https://fri11s.neocities.org/links/">Links</a></li>
-					<li>🧪 <a href="https://fri11s.neocities.org/experiments/">Experiments</a></li>
+					<li>🔙 <a href="https://fri11s.neocities.org/">Back to site</a></li>
+					{% if webring %}<li>💕 <a href="https://thoughts.page/webring">Thoughts Webring</a></li>{% endif %}
 				</ul>
 			</nav>
-			<div class="settings">
-				<button id="colorSchemeButton" class="toggle toggle--colorscheme">
-					Toggle dark theme
-				</button>
-
-			</div>
 		</header>
 		<main class="page__main grid grid--main" id="main">
 			<div class="content__sidebar">
@@ -56,7 +57,7 @@
 					<ul class="unstyled">
 						<li><span class="emoji" role="img" aria-label="Pronouns">🌷</span> she/her</li>
 						<li><span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
-						<li><span class="emoji" role="img" aria-label="Local time">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">05:20PM</span> (utc+1)</li>
+						<li><span class="emoji" role="img" aria-label="Local time">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">BST</span> (utc+1)</li>
 						<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini</li>
 						<li><span role="img" class="emoji" aria-label="Moon sign">🌚</span> Scorpio</li>
 						<li><span role="img" class="emoji" aria-label="Status">🟢</span> Probably Online</li>
@@ -67,23 +68,29 @@
 			<section class="content__main">
 				<div class="content__inner">
 					<h1 class="visually-hidden">Home</h1>
-					<section>
-						<div class="reading-width">
-							<div class="thoughts">
-								{% for thought in thoughts %}
-								<div class='thought' id="{{ thought.time | date(format='%s', timezone=thought.timezone) }}">
-									<h3><a href="#{{ thought.time | date(format='%s', timezone=thought.timezone) }}">{{ thought.time | date(format='%b %d, %Y - %-I:%M%p', timezone=thought.timezone) }}</a></h3>
+					<section class="thoughts">
+						<div class="reading-width headings-small">
+							{% for thought in thoughts %}
+							<article class="thought" id="{{ thought.time | date(format='%s', timezone=thought.timezone) }}">
+								<h3 class="thought-heading">{{ thought.time | date(format='%e %B %Y - %-I:%M%p', timezone=thought.timezone) }}</h3>
+								<div class="thought-content">
 									{{ thought.rendered_text }}
 								</div>
-								{% endfor %}
+							</article>
+							{% endfor %}
 
-							</div>
 						</div>
 					</section>
 				</div>
-				<div class="content__extra">
-				</div>
+				<aside class="content__extra">
+					<ul class="unstyled">
+						<li>✏️ <a href="https://thoughts.page/post">Post</a></li>
+						<li>🔥 <a href="https://thoughts.page/deletethoughts">Delete</a></li>
+						<li>🛠 <a href="https://thoughts.page/settings">Settings</a></li>
+					</ul>
+				</aside>
 			</section>
+
 		</main>
 		<footer class="page__footer grid">
 			<div></div>
@@ -91,12 +98,20 @@
 				<ul>
 					<li>💭 Hosted on <a href="https://thoughts.page">thoughts.page</a>
 					</li>
-					{% if webring %}<li>💕 <a href="https://thoughts.page/webring">Thoughts Webring</a></li>{% endif %}
 					<li>⬆️ <a href="#top">Back to top</a></li>
 				</ul>
 			</nav>
 		</footer>
 	</div>
+	<script type="text/javascript">
+		let time = document.querySelector("#localTime");
+		const d = new Date().toLocaleTimeString("en-US", {
+			timeZone: "Europe/London",
+			hour: "2-digit",
+			minute: "2-digit"
+		});
+		e = d.replace(/\s/g, ""), time.innerHTML = e;
+	</script>
 </body>
 
 </html>

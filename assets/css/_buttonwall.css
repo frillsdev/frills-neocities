@@ -16,6 +16,24 @@
   text-decoration: underline !important
 }
 
+.buttonwall__image,
+.buttonwall__item {
+  width: 88px;
+  height: 31px;
+}
+
+.buttonwall__image a,
+.buttonwall__item a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform .4s ease;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+}
+
 .buttonwall__image img {
     display: block;
 }
@@ -24,11 +42,6 @@
   width: 80px;
   height: 31px;
   background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: transform .4s;
   overflow: hidden;
   word-break: break-word;
   padding: 0 4px;
@@ -40,7 +53,11 @@
 
 .buttonwall__item a:active,
 .buttonwall__item a:focus,
-.buttonwall__item a:hover {
+.buttonwall__item a:hover,
+.buttonwall__image a:active,
+.buttonwall__image a:focus,
+.buttonwall__image a:hover {
+  transform: translate(2px, 2px);
   text-decoration: none;
   z-index: 1;
 }

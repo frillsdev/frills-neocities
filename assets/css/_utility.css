@@ -52,6 +52,15 @@
 
 .reading-width {
   max-width: 36rem;
+  width: 100%;
+}
+
+.headings-small h1,
+.headings-small h2,
+.headings-small h3,
+.headings-small h4,
+.headings-small h5 {
+  font-size: 1rem;
 }
 
 .full-width {
@@ -76,4 +85,18 @@
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
+}
+
+.emoji {
+  font-size: 1.1rem;
+  line-height: 1;
+  font-variant-emoji: emoji;
+}
+
+img.rounded {
+  border-radius: 1rem;
+}
+
+img.round {
+  border-radius: 50%;
 }

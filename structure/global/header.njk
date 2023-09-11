@@ -1,21 +1,15 @@
-<header class="page__header grid">
-    <a href="/" class="page__title">
+<header class="page__header grid grid--header">
+    <a href="/" class="page__logo">
         <span class="visually-hidden">Frills</span>
         {% include "structure/components/logo.njk" %}
-
     </a>
     {% include "structure/global/nav.njk" %}
     <div class="settings">
-        <button id="colorSchemeButton" class="toggle toggle--colorscheme">
+        <button id="spookyButton" class="button ghost toggle toggle--spooky">
+            Toggle spooky theme
+        </button>
+        <button id="colorSchemeButton" class="button ghost toggle toggle--colorscheme">
             Toggle dark theme
         </button>
-        {# <label>
-        Light mode
-        <input type="checkbox">
-    </label>
-    <label>
-        Reduce animation
-        <input type="checkbox">
-    </label> #}
     </div>
 </header>
