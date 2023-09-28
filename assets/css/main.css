@@ -15,11 +15,18 @@
 
 .callout {
   padding: 20px;
-  background-color: var(--bodybg);
   margin: 0 0 1rem 0;
-  border-left: 5px solid var(--accent);
+  border: 2px solid var(--accent);
   font-size: 90%;
-  border-radius: 4px;
+  box-shadow: 4px 4px 0 0 rgba(255,255,255,0.2);
+}
+
+.callout header {
+  padding-bottom: 5px;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
 }
 
 .callout--small {
@@ -28,14 +35,12 @@
 
 .callout--warning {
   border-color: var(--accent);
-  background: papayawhip;
-  color: black;
+  color: var(--text);
 }
 
 .callout--info {
   border-color: deepskyblue;
-  background: lavender;
-  color: black;
+  color: var(--text);
 }
 
 .callout h2 {
