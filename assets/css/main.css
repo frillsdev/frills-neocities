@@ -12,37 +12,7 @@
 @import url('_toggle.css');
 @import url('_list.css');
 @import url('_buttonwall.css');
-
-.callout {
-  padding: 20px;
-  background-color: var(--bodybg);
-  margin: 0 0 1rem 0;
-  border-left: 5px solid var(--accent);
-  font-size: 90%;
-  border-radius: 4px;
-}
-
-.callout--small {
-  padding: 10px 14px;
-}
-
-.callout--warning {
-  border-color: var(--accent);
-  background: papayawhip;
-  color: black;
-}
-
-.callout--info {
-  border-color: deepskyblue;
-  background: lavender;
-  color: black;
-}
-
-.callout h2 {
-  font-size: inherit;
-  margin: 0;
-  display: inline;
-}
+@import url('_callout.css');
 
 .settings {
   display: flex;

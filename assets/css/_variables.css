@@ -1,6 +1,18 @@
+/* Global variables */
 :root {
   --font-family: 'Atkinson Hyperlegible', 'Tahoma', sans-serif;
   --font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --font-size: 20px;
+  }
+}
+
+/* Colours */
+/* Dark mode */
+:root {
   --bodybg: #0b0b0b;
   --bg: Black;
   --accent: Gold;
@@ -18,13 +30,6 @@
   --logo-anim-5: hsl(153, 70%, 70%);
   --logo-anim-6: hsl(204, 70%, 70%);
 }
-
-@media (min-width: 576px) {
-  :root {
-    --font-size: 20px;
-  }
-}
-
 html[data-scheme='dark'] {
   --bodybg: #0b0b0b;
   --bg: Black;
@@ -43,6 +48,7 @@ html[data-scheme='dark'] {
   --logo-anim-6: hsl(204, 70%, 70%);
 }
 
+/* Light mode */
 @media (prefers-color-scheme: light) {
   :root {
     --bodybg: LavenderBlush;
@@ -62,7 +68,6 @@ html[data-scheme='dark'] {
 
   }
 }
-
 html[data-scheme='light'] {
   --bodybg: LavenderBlush;
   --bg: Snow;
