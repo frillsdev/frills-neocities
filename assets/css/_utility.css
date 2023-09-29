@@ -93,6 +93,13 @@
   font-variant-emoji: emoji;
 }
 
+img.mw-100 {
+  max-width: 100%;
+}
+img.mw-90 {
+  max-width: 90%;
+}
+
 img.rounded {
   border-radius: 1rem;
 }
