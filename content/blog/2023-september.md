@@ -32,3 +32,16 @@ Here is the hold music that was playing on the vet hospital phone when we called
 ## 👀 Perspective shift
 This whole ordeal, whilst leaving me with some intense anxiety and always-on alertness to anything she does that could possibly be a symptom of deterioriation, has made me more present and made me want to celebrate more and take her for more adventures. I want to spend less time working, more time with her and people I love. Life is fragile, make the most of it now.
 
+## 🍽 Sunday roast!!
+Part celebration, part making the most of life, part really wanted a yorkshire pudding!
+
+## 👨‍👩‍👧 Mum and dad popped over in the evening
+Not usually a common occurance as they live over and hour and a half away, but they came over for the evening to see Orla (and us). We made them dinner and I gave them a little card with Orla's pawprint on it and a few photos I got printed of them with her as a thank you for looking after us the week before.
+
+## 🐶 Dogsat Effie
+Looked after Effie for the day. Orla loved it, but Effie got bored of Orla trying to play very quickly
+
+## 🦠 COVID is going through the family
+We missed visiting family last weekend as we were on Orla Watch, but during that weekend and this week, two of our family have been admitted to hospital with COVID. They say bad things come in threes, but I feel like we've gone beyond that count this month!
+
+Looking forward to October, and hoping it brings far more health and happiness to everyone. This has been a monster of a month that I would like to not repeat.

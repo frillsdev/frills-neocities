@@ -46,3 +46,8 @@ html[data-scheme='light'][data-spooky='true'] {
 [data-spooky='true'] .toggle--spooky::before {
   animation: none;
 }
+
+[data-spooky="true"] ul.stars li::before,
+[data-spooky="true"] ol.stars li::before {
+  content: '👻';
+}
