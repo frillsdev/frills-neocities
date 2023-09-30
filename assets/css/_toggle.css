@@ -24,10 +24,6 @@
   background-image: linear-gradient(to right, var(--text) 50%, transparent 50%);
 }
 
-.toggle--spooky {
-  display: none;
-}
-
 .toggle--spooky::before {
   content: '🎃';
   font-size: 1rem;

@@ -13,6 +13,8 @@
 @import url('_list.css');
 @import url('_buttonwall.css');
 @import url('_callout.css');
+@import url('_animation.css');
+@import url('_spooky.css');
 
 .settings {
   display: flex;
