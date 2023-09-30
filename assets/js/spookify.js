@@ -1,40 +1,49 @@
-function changeEmoji() {
+function storeEmoji() {
     const emojis = Array.from(document.getElementsByClassName('emoji'))
-    const newEmojiSet = ['🎃', '👻', '💀', '😱', '🧟', '🧙', '🐺', '🧛', '🕷️', '🕸️', '🦉', '🦇', '🌕', '🍫', '🍬', '🍭', '⚰️', '🥀', '🩸']
     emojis.map((emoji) => {
-        const randomIndex = Math.floor(Math.random() * newEmojiSet.length);
-        emoji.dataset.emoji = emoji.innerText; 
-        emoji.innerText = newEmojiSet[randomIndex]
+        emoji.dataset.emoji = emoji.innerText;
     })
 }
-function unchangeEmoji() {
+
+function restoreEmoji() {
     const emojis = Array.from(document.getElementsByClassName('emoji'))
     emojis.map((emoji) => {
         emoji.innerText = emoji.dataset.emoji
     })
 }
 
+function changeEmoji() {
+    const emojis = Array.from(document.getElementsByClassName('emoji'))
+    const newEmojiSet = ['🎃', '👻', '💀', '😱', '🧟', '🧙', '🐺', '🧛', '🕷️', '🕸️', '🦉', '🦇', '🌕', '🍫', '🍬', '🍭', '⚰️', '🥀', '🩸']
+    emojis.map((emoji) => {
+        const randomIndex = Math.floor(Math.random() * newEmojiSet.length);
+        emoji.innerText = newEmojiSet[randomIndex]
+    })
+}
+
 function spookyScheme() {
     const spookyButton = document.getElementById('spookyButton');
-    let spookify = localStorage.getItem('spookify') ?? 'false';
-    function setSpookyScheme(spookyScheme) {
+    let spookify = localStorage.getItem('spookify');
+
+    function setSpookyScheme() {
         document.documentElement.dataset.spooky = spookify;
-        if (spookify) {
+        if (spookify === 'true') {
             spookyButton.setAttribute('aria-pressed', true);
             changeEmoji();
         } else {
             spookyButton.setAttribute('aria-pressed', false);
-            unchangeEmoji();
+            restoreEmoji();
         }
     }
-    setSpookyScheme(spookyScheme);
+    setSpookyScheme();
+
     spookyButton.addEventListener('click', () => {
-        if (spookify == false) {
-            spookify = true;
+        if (spookify === 'false') {
+            spookify = 'true';
         } else {
-            spookify = false;
+            spookify = 'false';
         }
         localStorage.setItem('spookify', spookify);
-        setSpookyScheme(spookyScheme);
+        setSpookyScheme();
     });
 }

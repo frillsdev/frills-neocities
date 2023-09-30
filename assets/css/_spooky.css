@@ -33,3 +33,16 @@ html[data-scheme='light'][data-spooky='true'] {
     --logo-anim-5: Green;
     --logo-anim-6: Green;
 }
+
+
+.toggle--spooky {
+  animation-name: shake;
+  animation-duration: 15s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+[data-spooky='true'] .toggle--spooky {
+  animation: none;
+}
