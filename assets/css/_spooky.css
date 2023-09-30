@@ -35,7 +35,7 @@ html[data-scheme='light'][data-spooky='true'] {
 }
 
 
-.toggle--spooky {
+.toggle--spooky::before {
   animation-name: shake;
   animation-duration: 15s;
   animation-delay: 5s;
@@ -43,6 +43,6 @@ html[data-scheme='light'][data-spooky='true'] {
   animation-timing-function: ease-in-out;
 }
 
-[data-spooky='true'] .toggle--spooky {
+[data-spooky='true'] .toggle--spooky::before {
   animation: none;
 }
