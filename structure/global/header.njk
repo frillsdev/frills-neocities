@@ -1,5 +1,15 @@
-<header class="page__header grid">
-    <a href="/" class="page__title">
+{% import "structure/components/components.njk" as macro with context %}
+<noscript><div class="pt-2">
+{{ macro.callout(
+		element = 'article',
+		modifiers = 'callout--small callout--warning mb-0',
+		header = '<h2>🛠️ Your JavaScipt is disabled</h2>',
+		body = '
+			<p>Good for you, but you have nothing to worry about here. While JavaScript is used to track your visit, I am not collecting any personal data and it is just for me to see what pages are of interest to people so I can work on those more. JavaScript is also used to make a few non-essential visual features work, like the dark/light mode toggle. You can still view the majority of site with JavaScript disabled though, so.. as you were 😊</p>
+	') }}</div></noscript>
+
+<header class="page__header grid grid--header">
+    <a href="/" class="page__logo">
         <span class="visually-hidden">Frills</span>
         {% include "structure/components/logo.njk" %}
     </a>

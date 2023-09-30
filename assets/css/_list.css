@@ -1,11 +1,17 @@
-
 ul,
 ol {
   display: flex;
   flex-direction: column;
-  padding-left: 16px;
   row-gap: 8px;
   margin: 0 0 1rem 0;
+}
+
+ul {
+  padding-left: 16px;
+}
+
+ol {
+  padding-left: 22px;
 }
 
 ul.unstyled,

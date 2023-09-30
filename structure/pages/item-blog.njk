@@ -1,5 +1,13 @@
 {% extends "structure/templates/page-3col.njk" %}
 
+{%- block left -%}
+    {% if pics %}
+    {%- for pic in pics %}
+    <img src="{{ pic.src }}" alt="{{ pic.alt }}" class="mw-90">
+    {%- endfor %}
+    {% endif %}
+{%- endblock -%}
+
 {%- block main -%}
     {% import "structure/components/components.njk" as macro with context %}
 
@@ -17,11 +25,20 @@
         <li>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
         {% endif %}
         {% if tags %}
-        <li>
+        <li class="mb-1">
             {%- for tag in tags | filterTagList %}
             <span class="tag">#{{ tag }}</span>{%- if not loop.last %} {% endif %}
             {%- endfor %}
         </li>
+        {% endif %}
+        {% if recipe.time %}
+        <li>⏰ Recipe time: {{recipe.time}}</li>
+        {% endif %}
+        {% if recipe.cooking %}
+        <li>🔥 Cooking time:  {{recipe.cooking}}</li>
+        {% endif %}
+        {% if recipe.tools %}
+        <li>🥣 Tools: {{recipe.tools}}</li>
         {% endif %}
     </ul>
 {%- endblock -%}

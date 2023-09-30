@@ -1,3 +1,14 @@
+.page__logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 768px) {
+  .page__logo {
+    justify-content: flex-start;
+  }
+}
+
 @keyframes colour {
     0% {
         fill: var(--logo-anim-1);
@@ -46,7 +57,6 @@
 
 .logo {
     max-height: 60px;
-    transform: translateX(15px)
 }
 
 .logo:hover .logo-tx {

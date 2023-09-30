@@ -36,6 +36,8 @@
 
 .buttonwall__image img {
     display: block;
+    width: 88px;
+    height: 31px;
 }
 
 .buttonwall__item a {

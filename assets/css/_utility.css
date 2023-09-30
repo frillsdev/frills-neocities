@@ -52,6 +52,7 @@
 
 .reading-width {
   max-width: 36rem;
+  width: 100%;
 }
 
 .headings-small h1,
@@ -90,4 +91,19 @@
   font-size: 1.1rem;
   line-height: 1;
   font-variant-emoji: emoji;
+}
+
+img.mw-100 {
+  max-width: 100%;
+}
+img.mw-90 {
+  max-width: 90%;
+}
+
+img.rounded {
+  border-radius: 1rem;
+}
+
+img.round {
+  border-radius: 50%;
 }
