@@ -11,6 +11,7 @@
 @import url('_logo.css');
 @import url('_toggle.css');
 @import url('_list.css');
+@import url('_articles.css');
 @import url('_buttonwall.css');
 @import url('_callout.css');
 @import url('_animation.css');
@@ -85,6 +86,7 @@
 @media (min-width: 768px) {
   .content__inner {
     flex: 1 1 auto;
+    width: 100%;
   }
 }
 

@@ -1,0 +1,15 @@
+---
+title: Changelog
+eleventyExcludeFromCollections: true
+---
+{% extends "structure/pages/list-changelog.njk" %}
+{% set postslist = collections.changelog %}
+
+{%- block right -%}
+<h2 class="visually-hidden">RSS feed</h2>
+<ul class="unstyled">
+  <li>
+    <a href="/changelog.xml" class="rss">RSS feed</a>
+  </li>
+</ul>
+ {%- endblock %}
