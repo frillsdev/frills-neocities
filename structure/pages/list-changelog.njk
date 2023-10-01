@@ -1,0 +1,13 @@
+{% extends "structure/templates/page-3col.njk" %}
+
+{% block main %}
+	<div class="headings-small pt-1">
+	{% for post in postslist | reverse %}
+		
+		<article class="article{% if post.data.draft %} draft"{% endif %}">
+			<h2> {{ post.date | readableDate("d LLL yyyy") }}</h2>
+			{{ post.content | safe}}
+		</article>
+	{% endfor %}
+	</div>
+{% endblock %}
