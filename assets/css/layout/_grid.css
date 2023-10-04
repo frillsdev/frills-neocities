@@ -28,3 +28,31 @@
     margin-left: 266px;
   }
 }
+
+/* Main content area */
+.content__main {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+  .content__main {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .content__inner {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content__extra {
+    flex: 1 0 auto;
+    width: 300px;
+    font-size: 80%;
+  }
+}
