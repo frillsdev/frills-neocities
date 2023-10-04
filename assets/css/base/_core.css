@@ -22,3 +22,8 @@ body {
   outline: 3px solid orangered;
   outline-offset: 3px;
 }
+
+*::selection {
+  color: var(--bg);
+  background-color: var(--accent);
+}

@@ -1,0 +1,35 @@
+.dashboard {
+  column-width: 250px;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.dashboard--item {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+}
+
+.dashboard--item.--spotify {
+  background-color: #cd379e;
+  background-image: linear-gradient(to bottom, #cd379e, #b8318e);
+}
+
+.dashboard--item.--piclog {
+  image-rendering: crisp-edges;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.dashboard--item.--colours ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+.dashboard--item.--colours li {
+  aspect-ratio: 1;
+}

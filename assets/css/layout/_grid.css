@@ -42,11 +42,10 @@
   }
 }
 
-@media (min-width: 768px) {
-  .content__inner {
-    flex: 1 1 auto;
-    width: 100%;
-  }
+.content__inner {
+  flex: 1 1 auto;
+  width: 100%;
+  font-size: 90%;
 }
 
 @media (min-width: 1200px) {

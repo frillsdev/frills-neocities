@@ -80,45 +80,6 @@ eleventyNavigation:
 {%- endblock -%}
 
 {%- block right -%}
-    {% import "structure/components/components.njk" as macro with context %}
-
-	<h2 class="visually-hidden">What I'm up to</h2>
-	{{ macro.callout(
-		element = 'article',
-		modifiers = 'callout--small callout--info statusCafe',
-		header = '
-			<span id="statusCafe-emoji"></span>
-			<h2>Latest status</h2>
-			<time id="statusCafe-time"></time>',
-		body = '
-			<div id="statusCafe-status">No recent update :(</div>
-	') }}
-
-	{{ macro.callout(
-		element = 'article',
-		modifiers = 'callout--small callout--info',
-		header = '
-		<span class="emoji" role="img" aria-label="Musical note">🎵</span>
-		<h2>Last played</h2>
-		<span><span id="lfmTime">right now</span></span>
-		',
-		body = '
-		<span id="lfmSong">No recently played song :(</span>
-		'
-	)}}
-
-	{{ macro.callout(
-		element = 'article',
-		modifiers = 'callout--small callout--info',
-		header = '
-		<span class="emoji" role="img" aria-label="Stack of books">📚</span>
-		<h2>Currently reading</h2>
-		',
-		body = '
-		The Eye of the World - Robert Jordan
-		'
-	)}}
-
 	<h2>Social</h2>
 	<ul class="unstyled">
 		<li><span class="emoji" role="img" aria-label="Coffee">☕️</span> <a href="https://status.cafe/users/fri11s">@fri11s@status.cafe</a></li>
@@ -129,10 +90,5 @@ eleventyNavigation:
 
 
 {%- block scripts -%}
-<!--Status.cafe-->
-<script defer>
-fetch("https://status.cafe/users/fri11s/status.json").then(t=>t.json()).then(t=>{if(!t.content.length){document.getElementById("statusCafe-status").innerHTML="No status yet.";return}document.getElementById("statusCafe-emoji").innerHTML=t.face,document.getElementById("statusCafe-time").innerHTML=t.timeAgo,document.getElementById("statusCafe-status").innerHTML=t.content});
-</script>
-<!--Last.fm-->
-<script type="text/javascript">let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script>
+
 {%- endblock -%}
