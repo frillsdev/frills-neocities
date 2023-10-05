@@ -1,0 +1,8 @@
+.listing .draft a,
+.listing .draft time {
+  opacity: 0.5;
+}
+
+.listing li.draft::before {
+  content: '✏️  ' !important
+}
