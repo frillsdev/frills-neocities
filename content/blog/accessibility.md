@@ -10,13 +10,14 @@ tags:
 A living master post for accessibility resources:
 
 ## Current guidelines
-* [Web Content Accessibility Guidelines 2.1 (WCAG)](https://www.w3.org/TR/WCAG21)
-* [WCAG 2.2](https://www.w3.org/TR/WCAG22) - set to be published before the end of 2023
+* [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22) - Published October 2023
+* [Quick overview of "What's New In WCAG 2.2" explainer posts](https://marcus.io/blog/overview-of-wcag22-posts) - Marcus Herrmann
 
 ## People
-* [Sara Soueidan](https://www.sarasoueidan.com) (my hero)
-* [Adrian Roselli](https://adrianroselli.com)
-* [A11y with Lindsey](https://www.a11ywithlindsey.com)
+* [Sara Soueidan](https://www.sarasoueidan.com) (my hero) - Inclusive design specialist, engineer and trainer.
+* [Adrian Roselli](https://adrianroselli.com) - Member of the various accessibility working groups,
+* [A11y with Lindsey](https://www.a11ywithlindsey.com) - Self taught web developer on a journey to becoming an anti-ableist.
+* [Eevis](https://eevis.codes/) - Accessibility Specialist (CPWA - Certified Professional in Web Accessibility) and software developer.
 
 ## Sites
 * [100 days of a11y](https://100daysofa11y.com)
@@ -29,7 +30,7 @@ A living master post for accessibility resources:
 * [web.dev, Learn Accessibility](https://web.dev/learn/accessibility)
 
 ## Fonts
-* [Atkinson Hyperlegible](https://brailleinstitute.org/freefont)
+* [Atkinson Hyperlegible](https://brailleinstitute.org/freefont) - developed by The Braille institute.
 
 ## Accessibility tools
 * [Super visual colour contrast checker](https://colourcontrast.cc)
