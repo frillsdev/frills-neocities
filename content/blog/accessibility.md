@@ -15,7 +15,7 @@ A living master post for accessibility resources:
 
 ## People
 * [Sara Soueidan](https://www.sarasoueidan.com) (my hero) - Inclusive design specialist, engineer and trainer.
-* [Adrian Roselli](https://adrianroselli.com) - Member of the various accessibility working groups,
+* [Adrian Roselli](https://adrianroselli.com) - Member of the various accessibility working groups.
 * [A11y with Lindsey](https://www.a11ywithlindsey.com) - Self taught web developer on a journey to becoming an anti-ableist.
 * [Eevis](https://eevis.codes/) - Accessibility Specialist (CPWA - Certified Professional in Web Accessibility) and software developer.
 
