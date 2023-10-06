@@ -1,3 +1,6 @@
 #wcb.wcb-d #wcb_2 {
   color: var(--text)!important;
 }
+#wcb_p {
+  display: flex;
+}

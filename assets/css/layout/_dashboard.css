@@ -3,12 +3,21 @@
   gap: 1rem;
   width: 100%;
   font-size: 90%;
+  max-width: 1000px;
+  height: 100%;
 }
 
 .dashboard__item {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   break-inside: avoid;
+}
+
+.dashboard__item.--center {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .dashboard__item.--spotify {
@@ -31,6 +40,7 @@
   padding: 0;
   margin: 0;
 }
+
 .dashboard__item.--colours li {
   aspect-ratio: 1;
 }
