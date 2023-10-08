@@ -45,6 +45,7 @@ ol.inline {
   flex-direction: row;
   column-gap: 1rem;
   flex-wrap: wrap;
+  padding-left: 0;
 }
 
 a.rss::before {

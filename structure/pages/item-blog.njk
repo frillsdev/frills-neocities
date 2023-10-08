@@ -12,6 +12,13 @@
     {% import "structure/components/components.njk" as macro with context %}
 
     <article class="full-width">
+        <header class="mb-2">
+            <h1>{{title}}</h1>
+            {% if tags.includes("weeknotes") %}
+            {% else %}
+            <small>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></small>
+        </header>
+        {% endif %}
         <div class="reading-width{% if tags.includes("weeknotes") %} headings-small{% endif %}">
             {{ content | safe }}
         </div>
@@ -19,12 +26,8 @@
 {%- endblock -%}
 
 {%- block right -%}
-    <button class="tinylytics_kudos noscriptHide"></button>
+    <button class="tinylytics_kudos"></button>
     <ul class="unstyled">
-        {% if tags.includes("weeknotes") %}
-        {% else %}
-        <li>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-        {% endif %}
         {% if tags %}
         <li class="mb-1">
             {%- for tag in tags | filterTagList %}
