@@ -1,23 +1,28 @@
 textarea,
 input,
 select {
-    margin: 0 0 1rem 0;
     display: block;
     color: var(--text);
-    letter-spacing: 0.9;
+    background-color: var(--bodybg);
+    border: 1px solid orangered;
+    border-radius: 4px;
     font-size: 0.9rem;
-    white-space: nowrap;
+    padding: 8px 14px;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 textarea {
-    border: 1px solid orangered;
-    border-radius: 4px;
-    color: var(--text);
-    background-color: var(--bodybg);
-    padding: 4px 14px;
     min-height: 5rem;
+    font-family: var(--font-family);
+}
+
+textarea.--code {
+    font-family: monospace;
+    white-space: wrap;
     font-size: 0.5rem;
-    white-space: normal;
+    padding: 8px 10px;
 }
 
 input {
@@ -28,4 +33,5 @@ label {
     display: block;
     font-weight: bold;
     font-size: 0.8rem;
+    margin: 0 0 0.25rem 0;
 }

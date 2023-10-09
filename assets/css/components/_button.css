@@ -1,5 +1,7 @@
 
-button {
+button,
+.button,
+input[type="submit"] {
   will-change: transform;
   padding: 6px 12px;
   border-radius: 4px;
@@ -11,16 +13,20 @@ button {
   transition: 0.3s ease transform, 0.3s ease background-color, 0.3s ease box-shadow;
 }
 
+.button:hover,
 button:hover {
   background-color: #eec900;
 }
 
+.button:active,
+.button[aria-pressed="true"],
 button:active,
 button[aria-pressed="true"] {
   transform: translate(4px, 4px);
   box-shadow: 0 0 0 0 DarkGoldenRod;
 }
 
+.button.ghost,
 button.ghost {
   will-change: transform;
   padding: 6px 12px;
@@ -33,10 +39,13 @@ button.ghost {
   transition: 0.3s ease transform, 0.3s ease background-color, 0.3s ease box-shadow;
 }
 
+.button.ghost:hover,
 button.ghost:hover {
   background-color: transparent;
 }
 
+.button.ghost:active,
+.button.ghost[aria-pressed="true"],
 button.ghost:active,
 button.ghost[aria-pressed="true"] {
   transform: translate(4px, 4px);

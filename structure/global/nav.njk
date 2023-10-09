@@ -1,4 +1,4 @@
-<nav aria-label="Top level" class="page__nav">
+<nav aria-label="Top level" class="page__nav page__nav--top">
     <ul>
         {%- for entry in collections.all | eleventyNavigation %}
         <li>{{ entry.emoji|safe }} <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a></li>
