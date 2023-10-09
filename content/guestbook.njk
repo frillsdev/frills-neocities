@@ -1,0 +1,33 @@
+---
+title: Guestbook
+description: 
+eleventyNavigation:
+  key: Guestbook
+  emoji: <span class="emoji" aria-hidden="true">👋</span>
+  order: 5
+---
+{% extends 'structure/templates/page-3col.njk'%}
+{% import "structure/components/components.njk" as macro with context %}
+  
+{%- block left -%}
+{%- endblock -%}
+
+{%- block main -%}
+<h1>{{title}}</h1>
+<section class="reading-width">
+  <noscript>
+      {{ macro.callout(
+        element = 'div',
+        modifiers = 'callout--small',
+        body = 'Guestbook requires JavaScript to work') }}
+  </noscript>
+  <div id="c_widget"></div>
+</section>
+{%- endblock -%}
+
+{%- block right -%}
+{%- endblock -%}
+
+{% block scripts %}
+<script src="/js/guestbook.js" defer></script>
+{% endblock %}
