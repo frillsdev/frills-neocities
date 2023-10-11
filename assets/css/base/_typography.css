@@ -54,7 +54,8 @@ a.hidden {
 
 a:hover,
 a:focus,
-a:active a.hidden:hover,
+a:active,
+a.hidden:hover,
 a.hidden:focus,
 a.hidden:active {
   color: var(--linkhover);

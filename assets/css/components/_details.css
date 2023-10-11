@@ -1,0 +1,13 @@
+details {}
+
+summary {
+  text-decoration: underline;
+  color: var(--link);
+}
+
+summary:hover,
+summary:focus,
+summary:active {
+  color: var(--linkhover);
+  text-decoration: underline wavy 2px;
+}
