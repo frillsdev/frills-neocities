@@ -34,11 +34,11 @@ h6 {
   font-size: 1rem
 }
 
-.headings-small h1,
-.headings-small h2,
-.headings-small h3,
-.headings-small h4,
-.headings-small h5 {
+.h-sm h1,
+.h-sm h2,
+.h-sm h3,
+.h-sm h4,
+.h-sm h5 {
   font-size: 1rem;
 }
 
@@ -54,7 +54,8 @@ a.hidden {
 
 a:hover,
 a:focus,
-a:active a.hidden:hover,
+a:active,
+a.hidden:hover,
 a.hidden:focus,
 a.hidden:active {
   color: var(--linkhover);

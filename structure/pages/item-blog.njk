@@ -19,7 +19,7 @@
             <small>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></small>
         </header>
         {% endif %}
-        <div class="reading-width{% if tags.includes("weeknotes") %} headings-small{% endif %}">
+        <div class="reading-width{% if tags.includes("weeknotes") %} h-sm{% endif %}">
             {{ content | safe }}
         </div>
     </article>

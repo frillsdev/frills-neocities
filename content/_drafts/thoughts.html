@@ -70,7 +70,7 @@
 				<div class="content__inner">
 					<h1 class="visually-hidden">Home</h1>
 					<section class="thoughts">
-						<div class="reading-width headings-small">
+						<div class="reading-width h-sm">
 							{% for thought in thoughts %}
 							<article class="thought" id="{{ thought.time | date(format='%s', timezone=thought.timezone) }}">
 								<h3 class="thought-heading">{{ thought.time | date(format='%e %B %Y - %-I:%M%p', timezone=thought.timezone) }}</h3>

@@ -19,6 +19,7 @@
 @import url('./layout/_dashboard.css');
 
 @import url('./components/_articles.css');
+@import url('./components/_details.css');
 @import url('./components/_button.css');
 @import url('./components/_buttonwall.css');
 @import url('./components/_callout.css');

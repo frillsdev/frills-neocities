@@ -1,0 +1,67 @@
+.guestbook__fields {
+    display: flex;
+    gap: 15px;
+}
+
+.guestbook__fields .c-inputWrapper {
+    width: 50%;
+}
+
+/* Main */
+#c_widget {
+    box-sizing: border-box;
+}
+
+/* Input section */
+#c_container {margin-top: 3rem;}
+
+.c-inputWrapper {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#c_submitButton {display: block; width: auto}
+
+/* Comment section */
+.c-comment {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--separator);
+}
+.c-reply {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--bodybg);
+}
+.c-reply :last-child {margin-bottom: 0;}
+.c-reply:last-child {margin-bottom: 0;}
+
+.c-name {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    padding: 0;
+}
+.c-timestamp {
+    float: right;
+    opacity: 60%;
+}
+.c-text {
+    color: var(--text);
+    font-size: 90%;
+    margin-bottom: 0;
+}
+
+/* Pagination */
+#c_pagination {text-align: center;}
+.c-replyButton {margin-top: 1rem;}
+.c-expandButton {
+    float: right;
+    margin-top: 1rem;
+}
+.c-paginationButton {
+    margin-right: 4px;
+    margin-left: 4px;
+}

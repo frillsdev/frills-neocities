@@ -26,6 +26,20 @@ button[aria-pressed="true"] {
   box-shadow: 0 0 0 0 DarkGoldenRod;
 }
 
+.button.secondary,
+button.secondary {
+  color: var(--bg);
+  background-color: var(--link);
+  box-shadow: 4px 4px 0 0 var(--linkaccent);
+}
+
+.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--linkhover);
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 0 DarkGoldenRod;
+}
+
 .button.ghost,
 button.ghost {
   will-change: transform;
@@ -43,7 +57,8 @@ button.ghost {
 button.ghost:hover {
   background-color: transparent;
 }
-
+.button.ghost:hover,
+button.ghost:hover,
 .button.ghost:active,
 .button.ghost[aria-pressed="true"],
 button.ghost:active,
