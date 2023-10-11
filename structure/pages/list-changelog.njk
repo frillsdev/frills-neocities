@@ -2,7 +2,7 @@
 
 {% block main %}
 	<h1>{{title}}</h1>
-	<div class="h-sm pt-1">
+	<div class="reading-width h-sm pt-1">
 	{% for post in postslist | reverse %}
 		
 		<article class="article{% if post.data.draft %} draft"{% endif %}">
