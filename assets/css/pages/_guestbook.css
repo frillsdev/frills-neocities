@@ -15,9 +15,6 @@
 /* Input section */
 #c_container {margin-top: 3rem;}
 
-#c_widgetTitle {
-}
-
 .c-inputWrapper {
     display: block;
     margin-top: 5px;
@@ -30,7 +27,7 @@
 .c-comment {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 2px solid var(--separator);
 }
 .c-reply {
     margin-top: 1rem;
@@ -55,6 +52,7 @@
 .c-text {
     color: var(--text);
     font-size: 90%;
+    margin-bottom: 0;
 }
 
 /* Pagination */

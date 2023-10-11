@@ -8,13 +8,13 @@ eleventyNavigation:
 ---
 {% extends 'structure/templates/page-3col.njk'%}
 {% import "structure/components/components.njk" as macro with context %}
-  
+
 {%- block left -%}
 {%- endblock -%}
 
 {%- block main -%}
 <h1>{{title}}</h1>
-<section class="reading-width">
+<section class="reading-width h-sm">
   <noscript>
       {{ macro.callout(
         element = 'div',
