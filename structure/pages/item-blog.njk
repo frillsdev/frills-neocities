@@ -1,4 +1,5 @@
 {% extends "structure/templates/page-3col.njk" %}
+{% import "structure/components/components.njk" as macro with context %}
 
 {%- block left -%}
     {% if pics %}
@@ -9,16 +10,18 @@
 {%- endblock -%}
 
 {%- block main -%}
-    {% import "structure/components/components.njk" as macro with context %}
-
     <article class="full-width">
         <header class="mb-2">
-            <h1>{{title}}</h1>
-            {% if tags.includes("weeknotes") %}
+            {% if tags.includes("changelog") %}
+            <h1>{{ page.date | readableDate }}</h1>
             {% else %}
+            <h1>{{title}}</h1>
+            {% endif %}
+
+            {% if tags.includes("posts") %}
             <small>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></small>
+            {% endif %}
         </header>
-        {% endif %}
         <div class="reading-width{% if tags.includes("weeknotes") %} h-sm{% endif %}">
             {{ content | safe }}
         </div>
