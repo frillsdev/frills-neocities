@@ -61,7 +61,7 @@ const s_closedCommentsText = 'Comments are closed!';
 const s_websiteText = 'Website'; // The links to websites left by users on their comments
 const s_replyButtonText = 'Reply'; // The button for replying to someone
 const s_replyingText = 'Replying to'; // The text that displays while the user is typing a reply
-const s_expandRepliesText = 'Show Replies';
+const s_expandRepliesText = 'Show replies';
 const s_leftButtonText = 'Previous';
 const s_rightButtonText = 'Next';
 
@@ -276,7 +276,7 @@ function displayComments(comments) {
         button.innerHTML = s_replyButtonText;
         button.value = comment.id;
         button.setAttribute('onclick', `openReply(this.value)`);
-        button.className = 'c-replyButton';
+        button.className = 'c-replyButton secondary';
         comment.appendChild(button);
 
         // Choose whether to display or not based on page number
@@ -471,7 +471,7 @@ const link = document.createElement('a');
 link.href = '#c_inputDiv';
 function openReply(id) {
     if (c_replyingText.style.display == 'none') {
-        c_replyingText.innerHTML = s_replyingText + ` ${id.split('|--|')[0]}...`;
+        c_replyingText.innerHTML = `✏️ `+ s_replyingText + ` ${id.split('|--|')[0]}`;
         c_replyInput.value = id;
         c_replyingText.style.display = 'block';
     } else {

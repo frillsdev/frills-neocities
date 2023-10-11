@@ -4,7 +4,7 @@ html[data-scheme='dark'][data-spooky='true'] {
   --accent: Gold;
   --interactive: OrangeRed;
   --link: OrangeRed;
-  --linkaccent: Orange;
+  --linkaccent: #731f00;
   --linkhover: LawnGreen;
   --text: LavenderBlush;
   --pink: DeepPink;
