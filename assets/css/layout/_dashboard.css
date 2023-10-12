@@ -13,6 +13,30 @@
   break-inside: avoid;
 }
 
+.dashboard__item.--box {
+  border: 2px solid var(--accent);
+}
+
+.dashboard__item.--box header {
+  border-bottom: 2px solid var(--accent);
+}
+.dashboard__item.--box header h2 {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 0;
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.dashboard__item.--box div {
+  padding: 1rem;
+}
+.dashboard__item.--box div :last-child {
+  margin-bottom: 0;
+}
+
+
+
 .dashboard__item.--center {
   text-align: center;
   justify-content: center;
