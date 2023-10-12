@@ -3,7 +3,7 @@
   "permalink": "experiments.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
-    "title": "Frills' experiments",
+    "title": "Frills - Experiments",
     "subtitle": "Fun experiments by Frills",
     "language": "en",
     "url": "https://fri11s.neocities.org/experiments",
@@ -27,6 +27,7 @@
     <item>
       <title>{{ post.data.title }}</title>
       <link>{{ absolutePostUrl }}</link>
+      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
