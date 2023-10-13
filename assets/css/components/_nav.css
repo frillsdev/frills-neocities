@@ -41,6 +41,8 @@
   border-radius: 10px;
   font-size: 10px;
   color: var(--bg);
-  padding: 1px 4px;
+  padding: 2px 5px;
   margin-left: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
 }

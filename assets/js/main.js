@@ -109,7 +109,7 @@ function spookyScheme() {
 }
 
 window.addEventListener('load', function () {
-    // notification(3, 'New!');
+    notification(5, 'New!');
     consoleClub();
     colorScheme();
     storeEmoji();
