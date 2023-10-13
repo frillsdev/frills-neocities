@@ -3,7 +3,7 @@
   "permalink": "changelog.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
-    "title": "Frills' changelog",
+    "title": "Frills - Changelog",
     "subtitle": "Changelog and updates from Frills",
     "language": "en",
     "url": "https://fri11s.neocities.org/changelog",
@@ -26,7 +26,7 @@
     {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
     <item>
       <title>{{ post.date | readableDate("d LLL yyyy") }}</title>
-      <link>https://fri11s.neocities.org/changelog</link>
+      <link>{{ absolutePostUrl }}</link>
       <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
