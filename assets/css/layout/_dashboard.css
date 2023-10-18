@@ -14,18 +14,17 @@
 }
 
 .dashboard__item.--box {
-  border: 2px solid var(--accent);
+  border: 2px solid slateblue;
 }
 
 .dashboard__item.--box header {
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid slateblue;
 }
 .dashboard__item.--box header h2 {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   margin-bottom: 0;
-  background-color: var(--accent);
-  color: var(--bg);
+  background-color: slateblue;
 }
 
 .dashboard__item.--box div {
