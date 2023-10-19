@@ -34,7 +34,7 @@ const s_dstStart = ['March', 'Sunday', 2, 2]; // Example shown is the second Sun
 const s_dstEnd = ['November', 'Sunday', 1, 2]; // Example shown is the first Sunday of November at 2:00 am
 
 // Misc - Other random settings
-const s_commentsPerPage = 4; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
+const s_commentsPerPage = 999; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
 const s_maxLength = 500; // The max character length of a comment
 const s_maxLengthName = 16; // The max character length of a name
 const s_commentsOpen = true; // Change to false if you'd like to close your comment section site-wide (Turn it off on Google Forms too!)
@@ -43,10 +43,10 @@ const s_longTimestamp = false; // True for a date + time, false for just the dat
 const s_includeUrlParameters = false; // Makes new comment sections on pages with URL parameters when set to true (If you don't know what this does, leave it disabled)
 
 // Word filter - Censor profanity, etc
-const s_wordFilterOn = false; // True for on, false for off
+const s_wordFilterOn = true; // True for on, false for off
 const s_filterReplacement = '****'; // Change what filtered words are censored with (**** is the default)
 const s_filteredWords = [ // Add words to filter by putting them in quotes and separating with commas (ie. 'heck', 'dang')
-    'heck', 'dang'
+    'heck', 'dang', 'spindogs'
 ]
 
 // Text - Change what messages/text appear on the form and in the comments section (Mostly self explanatory)
