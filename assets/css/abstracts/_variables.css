@@ -24,6 +24,7 @@
   --linkhover: SpringGreen;
   --text: LavenderBlush;
   --pink: DeepPink;
+  --dashboard-outline: SlateBlue;
   --logo-x: Gold;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 70%, 70%);
@@ -44,6 +45,7 @@ html[data-scheme='dark'] {
   --linkhover: SpringGreen;
   --text: LavenderBlush;
   --pink: DeepPink;
+  --dashboard-outline: SlateBlue;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 70%, 70%);
   --logo-anim-3: hsl(10, 100%, 60%);
@@ -65,6 +67,7 @@ html[data-scheme='dark'] {
     --linkaccent: LightSteelBlue;
     --linkhover: #e1007a;
     --text: Black;
+    --dashboard-outline: Plum;
     --logo-anim-1: hsl(255, 70%, 70%);
     --logo-anim-2: hsl(330, 100%, 40%);
     --logo-anim-3: hsl(10, 100%, 50%);
@@ -85,6 +88,7 @@ html[data-scheme='light'] {
   --linkaccent: LightSteelBlue;
   --linkhover: #e1007a;
   --text: Black;
+  --dashboard-outline: Plum;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 100%, 40%);
   --logo-anim-3: hsl(10, 100%, 50%);

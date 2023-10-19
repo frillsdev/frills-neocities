@@ -8,6 +8,7 @@ html[data-scheme='dark'][data-spooky='true'] {
   --linkhover: LawnGreen;
   --text: LavenderBlush;
   --pink: DeepPink;
+  --dashboard-outline: Indigo;
   --logo-anim-1: OrangeRed;
   --logo-anim-2: OrangeRed;
   --logo-anim-3: OrangeRed;
@@ -26,6 +27,7 @@ html[data-scheme='light'][data-spooky='true'] {
     --linkhover: Green;
     --text: Black;
     --pink: DeepPink;
+    --dashboard-outline: LawnGreen;
     --logo-anim-1: BlueViolet;
     --logo-anim-2: BlueViolet;
     --logo-anim-3: OrangeRed;
