@@ -14,17 +14,17 @@
 }
 
 .dashboard__item.--box {
-  border: 2px solid slateblue;
+  border: 2px solid var(--dashboard-outline);
 }
 
 .dashboard__item.--box header {
-  border-bottom: 2px solid slateblue;
+  border-bottom: 2px solid var(--dashboard-outline);
 }
 .dashboard__item.--box header h2 {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   margin-bottom: 0;
-  background-color: slateblue;
+  background-color: var(--dashboard-outline);
 }
 
 .dashboard__item.--box div {
