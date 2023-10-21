@@ -99,3 +99,8 @@ img.rounded {
 img.round {
   border-radius: 50%;
 }
+
+img.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
