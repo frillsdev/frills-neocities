@@ -3,20 +3,7 @@
 {% block main %}
 	<h1>{{title}}</h1>
 
-	<a href="#postlist" class="visually-hidden">Skip past tags</a>
-
-	<ul class="unstyled inline">
-		{% for tag in collections.tagList %}
-			{% set tagUrl %}/tags/{{ tag.tagName | slugify }}/{% endset %}
-			{% if  (tag.tagName != "posts") 
-				and (tag.tagName != "changelog")
-				and (tag.tagName != "experiments") %}
-			<li><a href="{{ tagUrl }}" class="tag">{{ tag.tagName }}<sup>{{tag.tagCount}}</sup></a></li>
-			{% endif %}
-		{% endfor %}
-	</ul>
-
-	<ol reversed class="listing stars" id="postlist">
+	<ol reversed class="listing stars">
 	{% for post in postslist | reverse %}
 		
 		<li {% if post.data.draft %}class="draft"{% endif %}>
