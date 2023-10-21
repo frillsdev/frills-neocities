@@ -2,23 +2,36 @@
 .webrings {
   display: flex;
   flex-direction: row;
+  /* column-gap: 10px; */
   row-gap: 15px;
+  font-size: 80%;
 }
 
 .webrings>* {
   display: flex;
+  align-items: center;
 }
 
 .webring__prev,
 .webring__next,
 .webring-prev,
-.webring-next {
+.webring-next,
+.webring__random {
   font-size: 0 !important;
   width: 30px;
   display: inline-block;
   text-align: center;
   transform: translateX(000.1px);
   transition: 0.3s ease transform;
+}
+
+.webring__random::before {
+  content: '🔀';
+}
+
+.webring__random:hover,
+.webring__random:focus {
+  transform: rotate(180deg);
 }
 
 .webring__prev:hover,
@@ -39,9 +52,7 @@
 .webring__next::before,
 .webring-prev a::before,
 .webring-next a::before {
-  content: '➪';
-  font-size: 1rem;
-  display: inline-block;
+  content: '➡️';
 }
 
 .webring__prev::before,
@@ -50,11 +61,11 @@
   display: inline-block;
 }
 
-.webring--neossg table {
-  border-spacing: 0;
-}
-
-.webring--neossg table td,
-.webring--neossg table th {
-  padding: 0;
+.webring__prev::before,
+.webring__next::before,
+.webring-prev a::before,
+.webring-next a::before,
+.webring__random::before {
+  font-size: 0.6rem;
+  display: inline-block;
 }
