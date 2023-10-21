@@ -19,6 +19,16 @@
   color: var(--text);
 }
 
+@media (min-width: 768px) {
+  .callout--right {
+    float: right;
+    width: 40%;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 80%;
+  }
+}
+
 .callout header {
   padding-bottom: 5px;
 }
