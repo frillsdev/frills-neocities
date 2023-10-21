@@ -6,7 +6,7 @@ tags:
   - dev
 ---
 
-Like many young kids in the early 00s, I learnt to code using Myspace. Neopets (and even more so Geocities) was a thing before my internet access time, and when I did go on it I was playing all the arcade games not coding. On Myspace there was a hack where you could overwrite the normal Myspace page by forcing the html element to close, simply just a </html> tag, and from there you could completely design and build anything on a clean page, much like you have today on Neocities. Here, I learnt the basics of HTML and CSS, tinkering for hours. I would get home from school before anyone else, I'd plug in the modem to my dad's laptop and tinker away until I heard him coming home.
+Like many young kids in the early 00s, I learnt to code using Myspace. Neopets (and even more so Geocities) was a thing before my internet access time, and when I did go on it I was playing all the arcade games not coding. On Myspace there was a hack where you could overwrite the normal Myspace page by forcing the html element to close, simply just a `</html>` tag, and from there you could completely design and build anything on a clean page, much like you have today on Neocities. Here, I learnt the basics of HTML and CSS, tinkering for hours. I would get home from school before anyone else, I'd plug in the modem to my dad's laptop and tinker away until I heard him coming home.
 
 <aside class="callout callout--info callout--right">
 My parents once gifted me a laptop-shaped makeup set and said that was the closest I was getting to a computer 🤣</aside>
