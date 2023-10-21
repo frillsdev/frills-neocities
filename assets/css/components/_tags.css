@@ -1,7 +1,10 @@
 .tag {
-  background-color: deepskyblue;
-  color: black;
-  padding: 2px 8px;
-  border-radius: 4px;
+  color: white;
   font-size: 90%;
+  text-decoration: none;
+}
+
+.tag sup {
+  color: var(--accent);
+  padding: 0 0.2rem;
 }
