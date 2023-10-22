@@ -34,3 +34,7 @@ One day, I hope to work in the public sector again, or for a not-for-profit, as 
 I started this Neocities website in April 2023, after a colleague showed me <a href="https://localghost.dev/">Localghost's website</a>, which is also hosted on Neocities. Since joining, I have found so much energy in this community, amateurs and seasoned developers alike. Even after a day of burning the candle at both ends, logging into Neocities and seeing everyone's fervour for web development, at whatever point along their journey they are at, has been a source of joy and motivation to me. Going back to the basics of HTML and CSS (no preprocessing) has taught me things I didn't know I was missing.
 
 This is my developer story, and it is not over. It is something that will constantly evolve, chapters will always end and new ones will always begin. This industry never stops moving and you have to keep up. I have been in the industry for 8 years, plus my 3 years at university, and there is so much I still don't know yet.
+
+## Other people's stories
+- [How I became a software developer - The Honey Pot](https://thehoneypot.neocities.org/blog/2023-10-22_career_start/)
+- [One Year on Neocities - Lost Letters](https://lostletters.neocities.org/2023/10/18/one-year-neocities)
