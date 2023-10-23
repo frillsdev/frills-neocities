@@ -26,19 +26,19 @@ const s_moderatedId = '123456789'; // The Moderated field ID
 ```html
 <input name="entry.${s_moderatedId}" id="entry.${s_moderatedId}" type="hidden" readonly value="false">
 ```
-7. Next, find `name.className = 'c-name';` and below this add the following:
+7. Next, find `name.className = 'c-name';` and below this line add the following:
 ```js
 if(data.Moderated == false) {
     name.innerText = 'Guest'; // Change 'Guest' to whatever you want
 }
 ```
-8. Next, find `site.className = 'c-site';` and below this add the following:
+8. Next, find `site.className = 'c-site';` and below this line add the following:
 ```js
 if(data.Moderated == false) {
     site.innerText = '';
 }
 ```
-9. Next, find `text.className = 'c-text';` and below this add the following:
+9. Next, find `text.className = 'c-text';` and below this line add the following:
 ```js
 if(data.Moderated == false) {
     text.innerText = 'This comment is awaiting moderation'; // Change this value to whatever you want
