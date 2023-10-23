@@ -11,7 +11,11 @@ audio {
   display: block;
   max-width: 100%;
   border: 2px solid var(--link);
+  background-color: var(--link);
   border-radius: 4px;
+}
+
+audio::-webkit-media-controls-panel {
   background-color: var(--link);
 }
 
