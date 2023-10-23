@@ -7,6 +7,10 @@ iframe {
   width: 100%;
 }
 
+code, pre {
+  max-width: 100%
+}
+
 audio {
   display: block;
   max-width: 100%;
