@@ -1,3 +1,7 @@
+.listing time {
+  display: inline-block;
+}
+
 .listing .draft a,
 .listing .draft time {
   opacity: 0.5;
