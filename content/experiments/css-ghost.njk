@@ -1,0 +1,148 @@
+---
+title: CSS Ghost
+description: Pure CSS ghost
+date: 2023-10-31
+draft: true
+---
+
+{% block head %}
+  <style>
+    .cssghost {
+        align-items: center;
+        background-color: black;
+        display: flex;
+        height: 100vh;
+        min-height: 550px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .cssghost .ghost {
+        width: 275px;
+        height: 400px;
+        position: relative;
+        z-index: 1;
+        animation: hover 3s ease-in-out forwards alternate infinite;
+    }
+
+    .cssghost .ghost::before {
+        content: '';
+        background: white;
+        border-radius: 150px 150px 30px 30px;
+       --mask: 
+        linear-gradient(to top,#0000 30px,#000 0),
+        radial-gradient(30px,#000 98%,#0000) bottom/55.50px 60px;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .cssghost .ghost .smile {
+        width: 40px;
+        height: 20px;
+        border-radius: 15px 15px 100px 100px;
+        background: black;
+        background-image: radial-gradient(circle, deeppink 20%, rgba(0,0,0,1) 22%);
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center 20px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 150px;
+        overflow: hidden;
+    }
+
+    .cssghost .ghost .arms::before,
+    .cssghost .ghost .arms::after {
+        content: '';
+        width: 100px;
+        height: 60px;
+        background: white;
+        position:absolute;
+        top: 200px;
+    }
+
+    .cssghost .ghost .arms::before {
+        left: -60px;
+        border-radius: 60px 0 0 100px;
+        transform: rotate(25deg);
+        animation: armleft 3s ease-in-out forwards alternate infinite;
+        transform-origin: center right;
+    }
+    
+    .cssghost .ghost .arms::after {
+        transform: rotate(-25deg);
+        left: auto;
+        right: -60px;
+        z-index: -1;
+        border-radius: 0 60px 100px 0;
+        transform: rotate(-25deg);
+        animation: armright 3s ease-in-out forwards alternate infinite;
+        transform-origin: center left;
+    }
+
+    .cssghost .ghost .eyes::before,
+    .cssghost .ghost .eyes::after {
+        content: '';
+        height: 60px;
+        width: 60px;
+        background-color: black;
+        background-image: radial-gradient(circle, rgba(255,255,255,1) 20%, rgba(0,0,0,1) 22%);
+        background-position: -10px -10px;
+        border-radius: 60px;
+        position: absolute;
+        top: 100px;
+    }
+    .cssghost .ghost .eyes::before {
+        left: 50px;
+    }
+
+    .cssghost .ghost .eyes::after {
+        right: 50px;
+    }
+
+    @keyframes hover {
+        0% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(10px);
+        }
+    }
+
+    @keyframes armleft {
+        0% {
+            transform: rotate(25deg);
+        }
+        100% {
+            transform: rotate(15deg);
+        }
+    }
+    @keyframes armright {
+        0% {
+            transform: rotate(-25deg);
+        }
+        100% {
+            transform: rotate(-15deg);
+        }
+    }
+
+  </style>
+{% endblock %}
+
+{% block main %}
+<div class="cssghost">
+  <div class="ghost">
+    <div class="eyes"></div>
+    <div class="smile"></div>
+    <div class="arms"></div>
+  </div>
+</div>
+{% endblock %}
