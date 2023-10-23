@@ -4,7 +4,7 @@
   flex-direction: row;
   /* column-gap: 10px; */
   row-gap: 15px;
-  font-size: 80%;
+  font-size: 90%;
 }
 
 .webrings>* {
@@ -27,11 +27,12 @@
 
 .webring__random::before {
   content: '🔀';
+  transition: 0.3s ease transform;
 }
 
-.webring__random:hover,
-.webring__random:focus {
-  transform: rotate(180deg);
+.webring__random:hover::before,
+.webring__random:focus::before {
+  transform: scaleX(-1);
 }
 
 .webring__prev:hover,
@@ -66,6 +67,6 @@
 .webring-prev a::before,
 .webring-next a::before,
 .webring__random::before {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   display: inline-block;
 }
