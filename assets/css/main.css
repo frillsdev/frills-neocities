@@ -28,6 +28,7 @@
 @import url('./components/_toggle.css');
 @import url('./components/_tags.css');
 @import url('./components/_webrings.css');
+@import url('./components/_code.css');
 
 @import url('./pages/_homepage.css');
 @import url('./pages/_bloglist.css');
