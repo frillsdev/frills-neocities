@@ -1,5 +1,5 @@
 .tag {
-  color: white;
+  color: var(--text);
   font-size: 90%;
   text-decoration: none;
 }
