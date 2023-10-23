@@ -19,11 +19,9 @@ button:hover {
 }
 
 .button:hover,
-.button:focus,
 .button:active,
 .button[aria-pressed="true"],
 button:hover,
-button:focus,
 button:active,
 button[aria-pressed="true"] {
   transform: translate(4px, 4px);
