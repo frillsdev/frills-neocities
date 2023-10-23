@@ -24,6 +24,7 @@ const s_websiteId = '48167512'; // The Website field ID
 const s_textId = '577984567'; // The Text field ID
 const s_pageId = '859857012'; // The Page field ID
 const s_replyId = '283862517'; // The Reply field ID
+const s_moderatedId = '199308743'; // The moderated field ID
 const s_sheetId = '14PU6cDRsb3EkAeYtm8-vFu0MZn7mT_01JEMuMmwzCes'; // The Google Sheet
 
 // The values below are necessary for accurate timestamps, I've filled it in with EST as an example
@@ -36,7 +37,7 @@ const s_dstEnd = ['November', 'Sunday', 1, 2]; // Example shown is the first Sun
 // Misc - Other random settings
 const s_commentsPerPage = 999; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
 const s_maxLength = 500; // The max character length of a comment
-const s_maxLengthName = 16; // The max character length of a name
+const s_maxLengthName = 99; // The max character length of a name
 const s_commentsOpen = true; // Change to false if you'd like to close your comment section site-wide (Turn it off on Google Forms too!)
 const s_collapsedReplies = true; // True for collapsed replies with a button, false for replies to display automatically
 const s_longTimestamp = false; // True for a date + time, false for just the date
@@ -105,6 +106,8 @@ const v_formHtml = `
             <label class="c-label c-textLabel" for="entry.${s_textId}">${s_textFieldLabel}</label>
             <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required></textarea>
         </div>
+        <input name="entry.${s_moderatedId}" id="entry.${s_moderatedId}" type="hidden" readonly value="false">
+
     </div>
 
     <input id="c_submitButton" class="button" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
@@ -366,6 +369,9 @@ function createComment(data) {
     if (s_wordFilterOn) {filteredName = filteredName.replace(v_filteredWords, s_filterReplacement)}
     name.innerText = filteredName;
     name.className = 'c-name';
+    if(data.Moderated == false) {
+        name.innerText = 'Guest';
+    }
     comment.appendChild(name);
 
     // Timestamp
@@ -380,6 +386,10 @@ function createComment(data) {
         site.innerText = data.Website;
         site.href = data.Website;
         site.className = 'c-site';
+        if(data.Moderated == false) {
+            site.innerText = '';
+            site.href = '#';
+        }
         comment.appendChild(site);
     }
 
@@ -389,6 +399,9 @@ function createComment(data) {
     if (s_wordFilterOn) {filteredText = filteredText.replace(v_filteredWords, s_filterReplacement)}
     text.innerText = filteredText;
     text.className = 'c-text';
+    if(data.Moderated == false) {
+        text.innerText = 'This comment is awaiting moderation';
+    }
     comment.appendChild(text);
     
     return comment;
