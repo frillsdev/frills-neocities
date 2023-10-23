@@ -25,3 +25,7 @@ figure img {
   object-fit: cover;
   display: block;
 }
+
+video {
+  max-width: 100%;
+}
