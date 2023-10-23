@@ -22,9 +22,9 @@ const s_formId = '1FAIpQLSfTnsuPhdTT7pwAg3VSSaNBGB7IfVft_r8jUTYWyYme_MXWGA'; // 
 const s_nameId = '1961084177'; // The Name field ID
 const s_websiteId = '48167512'; // The Website field ID
 const s_textId = '577984567'; // The Text field ID
+const s_moderatedId = '199308743'; // The moderated field ID
 const s_pageId = '859857012'; // The Page field ID
 const s_replyId = '283862517'; // The Reply field ID
-const s_moderatedId = '199308743'; // The moderated field ID
 const s_sheetId = '14PU6cDRsb3EkAeYtm8-vFu0MZn7mT_01JEMuMmwzCes'; // The Google Sheet
 
 // The values below are necessary for accurate timestamps, I've filled it in with EST as an example
