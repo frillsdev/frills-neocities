@@ -34,8 +34,7 @@ ul.stars li::before,
 ol.stars li::before {
   content: '⭐';
   font-size: 60%;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 5px;
   position: absolute;
   left: -1rem;
 }
