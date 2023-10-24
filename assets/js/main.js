@@ -108,10 +108,25 @@ function spookyScheme() {
     });
 }
 
+function sparkles() {
+    const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+    var pause = false;
+    if (!!isReduced) {
+        pause = true;
+    }
+    cursorTrail({
+        paused: pause,
+        pattern: 'confetti2',
+        animationType: 'down',
+        theme: 'light'
+    });
+}
+
 window.addEventListener('load', function () {
     notification(5, 'New!');
     consoleClub();
     colorScheme();
     storeEmoji();
     spookyScheme();
+    sparkles();
 }, true);
