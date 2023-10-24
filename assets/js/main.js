@@ -123,7 +123,7 @@ function sparkles() {
 }
 
 window.addEventListener('load', function () {
-    notification(5, 'New!');
+    notification(4, 'New!');
     consoleClub();
     colorScheme();
     storeEmoji();
