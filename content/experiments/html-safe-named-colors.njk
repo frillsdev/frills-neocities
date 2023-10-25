@@ -25,9 +25,47 @@ draft: true
     border: 3px solid var(--text);
     padding: 0.6rem 1rem;
   }
+  .namedcolours__item.--black {
+  color: black;
+  }
+  .namedcolours__item.--black .blob__white,
+  .namedcolours__item.--black .blob__black {
+  border-color: black;
+  }
+ .namedcolours__item.--white .blob__white,
+  .namedcolours__item.--white .blob__black {
+  border-color: white;
+  }
+
   .namedcolours__none {
     display: none;
   }
+
+  .namedcolours__cc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .namedcolours__cc div{
+    display: flex;
+    align-items:center;
+    gap: 10px;
+  }
+
+  .blob {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: 3px solid;
+    display: block;
+    font-size: 0!important;
+  }
+  .blob__white {
+    background-color: white;
+  }
+  .blob__black {
+    background-color: black;
+  }
+
 </style>
 
 {% block main %}
@@ -52,203 +90,790 @@ draft: true
     <li class="namedcolours__none" id="namedColourNone">
       <p>No colours for the selected filter</p>
     </li>
-    <li class="namedcolours__item white neutral" style="background-color: AliceBlue;">
-      <p>AliceBlue</p>
-      <p>#F0F8FF</p>
-      <p>rgb(240, 248, 255)</p>
+    <li class="namedcolours__item --black white neutral" style="background-color: AliceBlue;">
+      <dl>
+        <dt>Name</dt>
+        <dd>AliceBlue</dd>
+        <dt>Hex value</dt>
+        <dd>#F0F8FF</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(240, 248, 255)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>19.58</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>1.07</dd>
+          </div>
+        </div>
+      </dl>
     </li>
-    <li class="namedcolours__item neutral white" style="background-color: AntiqueWhite;">
-      <p>AntiqueWhite</p>
-      <p>#FAEBD7</p>
-      <p>rgb(250, 235, 215)</p>
+    <li class="namedcolours__item --black neutral white" style="background-color: AntiqueWhite;">
+      <dl>
+        <dt>Name</dt>
+        <dd>AntiqueWhite</dd>
+        <dt>Hex value</dt>
+        <dd>#FAEBD7</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(250, 235, 215)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>17.93</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>1.17</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item blue bright" style="background-color: Aqua;">
-      <p>Aqua</p>
-      <p>#00FFFF</p>
-      <p>rgb(0, 255, 255)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Aqua</dd>
+        <dt>Hex value</dt>
+        <dd>#00FFFF</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(0, 255, 255)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>16.75</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>1.25</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item green bright" style="background-color: Aquamarine;">
-      <p>Aquamarine</p>
-      <p>#7FFFD4</p>
-      <p>rgb(127, 255, 212)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Aquamarine</dd>
+        <dt>Hex value</dt>
+        <dd>#7FFFD4</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(127, 255, 212)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>17.16</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>1.22</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item neutral white" style="background-color: Azure;">
-      <p>Azure</p>
-      <p>#F0FFFF</p>
-      <p>rgb(240, 255, 255)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Azure</dd>
+        <dt>Hex value</dt>
+        <dd>#F0FFFF</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(240, 255, 255)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>20.45</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>1.03</dd>
+          </div>
+        </div>
+      </dl>
+    </li>
     </li>
     <li class="namedcolours__item yellow white neutral" style="background-color: Beige;">
-      <p>Beige</p>
-      <p>#F5F5DC</p>
-      <p>rgb(245, 245, 220)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Beige</dd>
+        <dt>Hex value</dt>
+        <dd>#F5F5DC</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(245, 245, 220)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>18.98</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>1.11</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item yellow neutral" style="background-color: Bisque;">
-      <p>Bisque</p>
-      <p>#ffe4c4</p>
-      <p>rgb(255, 228, 196)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Bisque</dd>
+        <dt>Hex value</dt>
+        <dd>#ffe4c4</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(255, 228, 196)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>17.15</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>1.22</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item dark neutral black" style="background-color: Black;">
-      <p>Black</p>
-      <p>#000000</p>
-      <p>rgb(0, 0, 0)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Black</dd>
+        <dt>Hex value</dt>
+        <dd>#000000</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(0, 0, 0)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>21</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>1</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item neutral yellow" style="background-color: BlanchedAlmond;">
-      <p>BlanchedAlmond</p>
-      <p>#FFEBCD</p>
-      <p>rgb(255, 235, 205)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>BlanchedAlmond</dd>
+        <dt>Hex value</dt>
+        <dd>#FFEBCD</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(255, 235, 205)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>18.02</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>1.17</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item blue bright" style="background-color: Blue;">
-      <p>Blue</p>
-      <p>#0000FF</p>
-      <p>rgb(0, 0, 255)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Blue</dd>
+        <dt>Hex value</dt>
+        <dd>#0000FF</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(0, 0, 255)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item purple bright" style="background-color: BlueViolet;">
-      <p>BlueViolet</p>
-      <p>#8A2BE2</p>
-      <p>rgb(138, 43, 226 )</p>
+      {# not done #}
+      <dl>
+        <dt>Name</dt>
+        <dd>BlueViolet</dd>
+        <dt>Hex value</dt>
+        <dd>#8A2BE2</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(138, 43, 226)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item brown red" style="background-color: Brown;">
-      <p>Brown</p>
-      <p>#A52A2A</p>
-      <p>rgb(165, 42, 42)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Brown</dd>
+        <dt>Hex value</dt>
+        <dd>#A52A2A</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(165, 42, 42)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item brown yellow" style="background-color: BurlyWood;">
-      <p>BurlyWood</p>
-      <p>#DEB887</p>
-      <p>rgb(222, 184, 135)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>BurlyWood</dd>
+        <dt>Hex value</dt>
+        <dd>#DEB887</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(222, 184, 135)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item blue green" style="background-color: CadetBlue;">
-      <p>CadetBlue</p>
-      <p>#5F9EA0</p>
-      <p>rgb(95, 158, 160)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>CadetBlue</dd>
+        <dt>Hex value</dt>
+        <dd>#5F9EA0</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(95, 158, 160)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item green bright" style="background-color: Chartreuse;">
-      <p>Chartreuse</p>
-      <p>#7FFF00</p>
-      <p>rgb(127, 255, 0)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Chartreuse</dd>
+        <dt>Hex value</dt>
+        <dd>#7FFF00</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(127, 255, 0)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item brown orange" style="background-color: Chocolate;">
-      <p>Chocolate</p>
-      <p>#D2691E</p>
-      <p>rgb(210, 105, 30)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Chocolate</dd>
+        <dt>Hex value</dt>
+        <dd>#D2691E</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(210, 105, 30)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item orange" style="background-color: Coral;">
-      <p>Coral</p>
-      <p>#FF7F50</p>
-      <p>rgb(255, 127, 80)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Coral</dd>
+        <dt>Hex value</dt>
+        <dd>#FF7F50</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(255, 127, 80)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item blue" style="background-color: CornflowerBlue;">
-      <p>CornflowerBlue</p>
-      <p>#6495ED</p>
-      <p>rgb(100, 149, 237)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>CornflowerBlue</dd>
+        <dt>Hex value</dt>
+        <dd>#6495ED</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(100, 149, 237)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item blue bright" style="background-color: Cyan;">
-      <p>Cyan</p>
-      <p>#00FFFF</p>
-      <p>rgb(0,255,255)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>Cyan</dd>
+        <dt>Hex value</dt>
+        <dd>#00FFFF</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(0,255,255)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item blue dark" style="background-color: DarkBlue;">
-      <p>DarkBlue</p>
-      <p>#00008B</p>
-      <p>rgb(0,0,139)</p>
+
+
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkBlue</dd>
+        <dt>Hex value</dt>
+        <dd>#00008B</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(0,0,139)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item blue green" style="background-color: DarkCyan;">
-      <p>DarkCyan</p>
-      <p>#008B8B</p>
-      <p>rgb(	0,139,139)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkCyan</dd>
+        <dt>Hex value</dt>
+        <dd>#008B8B</dd>
+        <dt>RGB value</dt>
+        <dd>rgb( 0,139,139)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item yellow brown" style="background-color: DarkGoldenRod;">
-      <p>DarkGoldenRod</p>
-      <p>#B8860B</p>
-      <p>rgb(184,134,11)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkGoldenRod</dd>
+        <dt>Hex value</dt>
+        <dd>#B8860B</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(184,134,11)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item neutral" style="background-color: DarkGray;">
-      <p>DarkGray</p>
-      <p>#A9A9A9</p>
-      <p>rgb(169,169,169)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkGray</dd>
+        <dt>Hex value</dt>
+        <dd>#A9A9A9</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(169,169,169)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item neutral" style="background-color: DarkGrey;">
-      <p>DarkGrey</p>
-      <p>#A9A9A9</p>
-      <p>rgb(169,169,169)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkGrey</dd>
+        <dt>Hex value</dt>
+        <dd>#A9A9A9</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(169,169,169)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item green dark" style="background-color: DarkGreen;">
-      <p>DarkGreen</p>
-      <p>#006400</p>
-      <p>rgb(0,100,0)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkGreen</dd>
+        <dt>Hex value</dt>
+        <dd>#006400</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(0,100,0)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item green" style="background-color: DarkKhaki;">
-      <p>DarkKhaki</p>
-      <p>#BDB76B</p>
-      <p>rgb(189,183,107)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkKhaki</dd>
+        <dt>Hex value</dt>
+        <dd>#BDB76B</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(189,183,107)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item purple" style="background-color: DarkMagenta;">
-      <p>DarkMagenta</p>
-      <p>#8B008B</p>
-      <p>rgb(139,0,139)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkMagenta</dd>
+        <dt>Hex value</dt>
+        <dd>#8B008B</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(139,0,139)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item green" style="background-color: DarkOliveGreen;">
-      <p>DarkOliveGreen</p>
-      <p>#556B2F</p>
-      <p>rgb(85,107,47)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkOliveGreen</dd>
+        <dt>Hex value</dt>
+        <dd>#556B2F</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(85,107,47)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item orange bright" style="background-color: DarkOrange;">
-      <p>DarkOrange</p>
-      <p>#FF8C00</p>
-      <p>rgb(255,140,0)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkOrange</dd>
+        <dt>Hex value</dt>
+        <dd>#FF8C00</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(255,140,0)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item purple" style="background-color: DarkOrchid;">
-      <p>DarkOrchid</p>
-      <p>#9932CC</p>
-      <p>rgb(153,50,204)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkOrchid</dd>
+        <dt>Hex value</dt>
+        <dd>#9932CC</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(153,50,204)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item red dark" style="background-color: DarkRed;">
-      <p>DarkRed</p>
-      <p>#8B0000</p>
-      <p>rgb(139,0,0)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkRed</dd>
+        <dt>Hex value</dt>
+        <dd>#8B0000</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(139,0,0)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item orange pink" style="background-color: DarkSalmon;">
-      <p>DarkSalmon</p>
-      <p>#E9967A</p>
-      <p>rgb(233,150,122)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkSalmon</dd>
+        <dt>Hex value</dt>
+        <dd>#E9967A</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(233,150,122)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item green" style="background-color: DarkSeaGreen;">
-      <p>DarkSeaGreen</p>
-      <p>#8FBC8F</p>
-      <p>rgb(143,188,143)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkSeaGreen</dd>
+        <dt>Hex value</dt>
+        <dd>#8FBC8F</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(143,188,143)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item blue purple" style="background-color: DarkSlateBlue;">
-      <p>DarkSlateBlue</p>
-      <p>#483D8B</p>
-      <p>rgb(72,61,139)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkSlateBlue</dd>
+        <dt>Hex value</dt>
+        <dd>#483D8B</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(72,61,139)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item green" style="background-color: DarkSlateGray;">
-      <p>DarkSlateGray</p>
-      <p>#2F4F4F</p>
-      <p>rgb(47,79,79)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkSlateGray</dd>
+        <dt>Hex value</dt>
+        <dd>#2F4F4F</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(47,79,79)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item blue" style="background-color: DarkTurquoise;">
-      <p>DarkTurquoise</p>
-      <p>#00CED1</p>
-      <p>rgb(0,206,209)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkTurquoise</dd>
+        <dt>Hex value</dt>
+        <dd>#00CED1</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(0,206,209)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item purple" style="background-color: DarkViolet;">
-      <p>DarkViolet</p>
-      <p>#9400D3</p>
-      <p>rgb(	148,0,211)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DarkViolet</dd>
+        <dt>Hex value</dt>
+        <dd>#9400D3</dd>
+        <dt>RGB value</dt>
+        <dd>rgb( 148,0,211)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item pink bright" style="background-color: DeepPink;">
-      <p>DeepPink</p>
-      <p>#FF1493</p>
-      <p>rgb(255,20,147)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DeepPink</dd>
+        <dt>Hex value</dt>
+        <dd>#FF1493</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(255,20,147)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
     <li class="namedcolours__item blue bright" style="background-color: DeepSkyBlue;">
-      <p>DeepSkyBlue</p>
-      <p>#00BFFF</p>
-      <p>rgb(0,191,255)</p>
+      <dl>
+        <dt>Name</dt>
+        <dd>DeepSkyBlue</dd>
+        <dt>Hex value</dt>
+        <dd>#00BFFF</dd>
+        <dt>RGB value</dt>
+        <dd>rgb(0,191,255)</dd>
+        <div class="namedcolours__cc">
+          <div>
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>2.44</dd>
+          </div>
+          <div>
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>8.59</dd>
+          </div>
+        </div>
+      </dl>
     </li>
-
-
   </ul>
 
 </section>
