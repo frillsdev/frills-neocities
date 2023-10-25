@@ -1,0 +1,30 @@
+
+.toggle {
+  width: 44px;
+  height: 44px;
+  font-size: 0;
+  padding: 0!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle--colorscheme::before {
+  content: '';
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.8rem;
+  border: 2px solid var(--text);
+  display: block;
+  transition: 0.3s ease all;
+  background-image: linear-gradient(to right, transparent 50%, var(--text) 50%);
+}
+
+.toggle--colorscheme[aria-pressed="true"]::before {
+  background-image: linear-gradient(to right, var(--text) 50%, transparent 50%);
+}
+
+.toggle--spooky::before {
+  content: '🎃';
+  font-size: 1rem;
+}

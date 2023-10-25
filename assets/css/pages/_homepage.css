@@ -1,0 +1,51 @@
+.settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 15px;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+@media (min-width: 992px) {
+  .settings {
+    position: relative;
+    top: inherit;
+    right: inherit;
+  }
+}
+
+.bio {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 26px;
+  align-items: center;
+}
+
+@media (min-width: 480px) {
+  .bio {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .bio {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bio-pic {
+  max-width: 150px;
+  margin-bottom: 1rem;
+  --mask:
+    radial-gradient(7.00px at 50% calc(100% - 9.60px), #000 99%, #0000 101%) calc(50% - 12px) 0/24px 100%,
+    radial-gradient(7.00px at 50% calc(100% + 3.60px), #0000 99%, #000 101%) 50% calc(100% - 6px)/24px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+@media (min-width: 480px) {
+  .bio-pic {
+    max-width: 200px;
+  }
+}

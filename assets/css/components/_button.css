@@ -1,0 +1,70 @@
+
+button,
+.button,
+input[type="submit"] {
+  will-change: transform;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: gold;
+  color: black;
+  border: 0;
+  box-shadow: 4px 4px 0 0 DarkGoldenRod;
+  cursor: pointer;
+  transition: 0.3s ease transform, 0.3s ease background-color, 0.3s ease box-shadow;
+}
+
+.button:hover,
+button:hover {
+  background-color: #eec900;
+}
+
+.button:hover,
+.button:active,
+.button[aria-pressed="true"],
+button:hover,
+button:active,
+button[aria-pressed="true"] {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 0 DarkGoldenRod;
+}
+
+.button.secondary,
+button.secondary {
+  color: var(--bg);
+  background-color: var(--link);
+  box-shadow: 4px 4px 0 0 var(--linkaccent);
+}
+
+.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--linkhover);
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 0 DarkGoldenRod;
+}
+
+.button.ghost,
+button.ghost {
+  will-change: transform;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text);
+  border: 0;
+  box-shadow: inset 0 0 0 2px var(--link), 4px 4px 0 0 var(--linkaccent);
+  cursor: pointer;
+  transition: 0.3s ease transform, 0.3s ease background-color, 0.3s ease box-shadow;
+}
+
+.button.ghost:hover,
+button.ghost:hover {
+  background-color: transparent;
+}
+.button.ghost:hover,
+button.ghost:hover,
+.button.ghost:active,
+.button.ghost[aria-pressed="true"],
+button.ghost:active,
+button.ghost[aria-pressed="true"] {
+  transform: translate(4px, 4px);
+  box-shadow: inset 0 0 0 2px var(--link), 0 0 0 0 var(--linkaccent);
+}

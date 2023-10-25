@@ -1,0 +1,141 @@
+:root {
+  --code-1: var(--link);
+  --code-2: var(--linkhover);
+  --code-3: var(--accent);
+  --code-4: var(--link);
+  --code-5: var(--text);
+}
+
+ul + code,
+ul + pre,
+ol + code,
+ol + pre {
+  margin-top: -0.5rem;
+}
+
+code,
+pre {
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 0.9rem;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre{
+	background: var(--bodybg);
+	color: var(--subtext);
+	padding: .2em .8em;
+	overflow: auto;
+  margin: 0 0 1rem 0;
+}
+
+code{
+	background: var(--bodybg);
+	color: var(--subtext);
+  padding: 0.2rem 0.4rem;
+  margin: 0 0 1rem 0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .2em;
+	border-radius: .3em;
+	box-shadow: none;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: var(--code-5);
+  opacity: 0.7;
+}
+
+.token.punctuation {
+	color: var(--code-3);
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+	color: var(--code-5);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin {
+	color: var(--code-2);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.token.variable,
+.token.inserted {
+	color: var(--code-3);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: var(--code-4);
+}
+
+.token.regex,
+.token.important {
+	color: var(--code-5);
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.deleted {
+	color: var(--code-1);
+}
+
+/* Plugin styles: Diff Highlight
+pre.diff-highlight.diff-highlight > code .token.deleted:not(.prefix),
+pre > code.diff-highlight.diff-highlight .token.deleted:not(.prefix) {
+	background-color: rgba(255, 0, 0, .3);
+	display: inline;
+}
+
+pre.diff-highlight.diff-highlight > code .token.inserted:not(.prefix),
+pre > code.diff-highlight.diff-highlight .token.inserted:not(.prefix) {
+	background-color: rgba(0, 255, 128, .3);
+	display: inline;
+} */

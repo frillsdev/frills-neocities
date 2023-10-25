@@ -1,6 +1,8 @@
 {% extends "structure/templates/page-3col.njk" %}
 
 {% block main %}
+	<h1>{{title}}</h1>
+
 	<ol reversed class="listing stars">
 	{% for post in postslist | reverse %}
 		

@@ -1,0 +1,106 @@
+.pb-1 {
+  padding-bottom: 1rem !important;
+}
+
+.pt-1 {
+  padding-top: 1rem !important;
+}
+
+.py-1 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.pb-2 {
+  padding-bottom: 2rem !important;
+}
+
+.pt-2 {
+  padding-top: 2rem !important;
+}
+
+.py-2 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+.mb-1 {
+  margin-bottom: 1rem !important;
+}
+
+.mt-1 {
+  margin-top: 1rem !important;
+}
+
+.my-1 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+
+.mt-2 {
+  margin-top: 2rem !important;
+}
+
+.my-2 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.reading-width {
+  max-width: 660px;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visually-hidden.skiptomain {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.emoji {
+  font-size: 1.1rem;
+  line-height: 1;
+  font-variant-emoji: emoji;
+}
+
+img.mw-100 {
+  max-width: 100%;
+}
+img.mw-90 {
+  max-width: 90%;
+}
+
+img.rounded {
+  border-radius: 1rem;
+}
+
+img.round {
+  border-radius: 50%;
+}
+
+img.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

@@ -1,0 +1,39 @@
+details summary {
+  cursor: pointer;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+}
+
+code, pre {
+  max-width: 100%
+}
+
+audio {
+  display: block;
+  max-width: 100%;
+  border: 2px solid var(--link);
+  background-color: var(--link);
+  border-radius: 4px;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: var(--link);
+}
+
+figure {
+  position: relative;
+  margin: 0;
+}
+figure img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+video {
+  max-width: 100%;
+}

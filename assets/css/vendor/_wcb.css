@@ -1,0 +1,16 @@
+#wcb.carbonbadge.wcb-d {
+  --b1: var(--bg);
+  --b2: var(--accent);
+}
+
+#wcb.wcb-d #wcb_2 {
+  color: var(--text)!important;
+}
+
+#wcb #wcb_2, #wcb #wcb_a, #wcb #wcb_g, #wcb_p {
+  display: flex;
+}
+
+#wcb #wcb_g {
+  color: black;
+}

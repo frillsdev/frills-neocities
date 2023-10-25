@@ -7,8 +7,13 @@ title: About the site
 {% endblock %}
 
 {%- block main -%}
+<h1>{{title}}</h1>
 <section>
 	<div class="reading-width">
+		<h2>Site links</h2>
+		<ul class="stars">
+			<li><a href="/changelog">Changelog</a>
+		</ul>
 		<h2>Technical information</h2>
 		<ul class="stars">
 			<li>Built using <a href="https://www.11ty.dev/" target="_blank">eleventy</a> static site generator</li>
@@ -27,33 +32,21 @@ title: About the site
 			<li>Logo font is <a href="https://github.com/satsuyako/CherryBomb" target="_blank">Cherry Bomb</a></li>
 			<li>Body font is <a href="https://brailleinstitute.org/freefont" target="_blank">Atkinson Hyperlegible</a></li>
 			<li>Web analytics by <a href="https://www.goatcounter.com/" target="_blank">Goat Counter</a></li>
+			<li><a href="https://virtualobserver.moe/ayano/comment-widget" target="_blank">Guestbook widget</a> by virtualobserver</li>
 		</ul>
-		<h2>To do</h2>
-
-		<ol>
-			<li><span class="emoji" role="img" aria-label="Check mark">✅</span> Credits page (this page!)</li>
-			<li>Manifesto page</li>
-			<li><span class="emoji" role="img" aria-label="Check mark">✅</span> 88x31 <a href="/links/">button wall</a>.</li>
-			<li>Site map (that I nuked because I thought it was killing the pipeline)</li>
-			<li>Orla shrine</li>
-			<li>Cool things I've done page
-				<ul>
-					<li>Scribble Light on Subtle Patterns</li>
-					<li><span class="emoji" role="img" aria-label="Check mark">✅</span> CSS Tarot card (3 of swords)</li>
-					<li><span class="emoji" role="img" aria-label="Check mark">✅</span> CSS Skull</li>
-					<li><span class="emoji" role="img" aria-label="Check mark">✅</span> Background colour range</li>
-					<li>Clients I have developed for. not that this is a work site. just somewhere to rememeber them all</li>
-				</ul>
-			</li>
-			<li>Frills art</li>
-			<li>Accessibility resources - glossary?</li>
-			<li>Free accessible neocities template</li>
-		</ol>
-
 	</div>
 </section>
 
 {%- endblock -%}
+
+{%- block right -%}
+	<h2 class="visually-hidden">RSS feeds</h2>
+	<ul class="unstyled">
+		<a href="/rss.xml" class="rss">Blog RSS feed</a>
+		<a href="/experiments.xml" class="rss">Experiments RSS feed</a>
+		<a href="/changelog.xml" class="rss">Changelog RSS feed</a>
+	</ul>
+{% endblock %}
 
 {%- block scripts -%}
 

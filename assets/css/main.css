@@ -1,331 +1,36 @@
-@import url('_variables.css');
-@import url('_font.css');
-@import url('_global.css');
-@import url('_typography.css');
-@import url('_utility.css');
-@import url('_button.css');
-@import url('_form.css');
-@import url('_logo.css');
-@import url('_toggle.css');
-@import url('_list.css');
-@import url('_buttonwall.css');
+@import url('./vendor/_reset.css');
+@import url('./vendor/_wcb.css');
 
-img.rounded {
-  border-radius: 1rem;
-}
+@import url('./abstracts/_variables.css');
+@import url('./abstracts/_utility.css');
+@import url('./abstracts/_animation.css');
 
-img.round {
-  border-radius: 50%;
-}
+@import url('./themes/_spooky.css');
 
+@import url('./base/_font.css');
+@import url('./base/_form.css');
+@import url('./base/_img.css');
+@import url('./base/_core.css');
+@import url('./base/_list.css');
+@import url('./base/_page.css');
+@import url('./base/_typography.css');
 
-details summary {
-  cursor: pointer;
-}
+@import url('./layout/_grid.css');
+@import url('./layout/_dashboard.css');
 
-p {
-  margin: 0 0 1rem
-}
+@import url('./components/_articles.css');
+@import url('./components/_details.css');
+@import url('./components/_button.css');
+@import url('./components/_buttonwall.css');
+@import url('./components/_callout.css');
+@import url('./components/_logo.css');
+@import url('./components/_nav.css');
+@import url('./components/_toggle.css');
+@import url('./components/_tags.css');
+@import url('./components/_webrings.css');
+@import url('./components/_code.css');
 
-em {
-  font-style: normal;
-  color: var(--accent);
-}
+@import url('./pages/_homepage.css');
+@import url('./pages/_bloglist.css');
 
-.callout {
-  padding: 20px;
-  background-color: var(--bodybg);
-  margin: 0 0 1rem 0;
-  border-left: 5px solid var(--accent);
-  font-size: 90%;
-  border-radius: 4px;
-}
-
-.callout--small {
-  padding: 10px 14px;
-}
-
-.callout--warning {
-  border-color: var(--accent);
-  background: papayawhip;
-  color: black;
-}
-
-.callout--info {
-  border-color: deepskyblue;
-  background: lavender;
-  color: black;
-}
-
-.callout h2 {
-  font-size: inherit;
-  margin: 0;
-  display: inline;
-}
-
-.page {
-  background-color: var(--bg);
-  max-width: 1600px;
-  margin: 0 auto;
-  min-height: 100vh;
-  padding: 0 14px;
-}
-
-@media (min-width: 768px) {
-  .page {
-    padding: 0 56px;
-  }
-}
-
-.page__header {
-  display: flex;
-  flex-direction: column;
-  padding: 30px 0 0 0;
-}
-
-@media (min-width: 768px) {
-  .page__header {
-    padding: 60px 0 0 0;
-  }
-}
-
-.page__title {
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-@media (min-width: 768px) {
-  .page__title {
-    margin-bottom: 0;
-    justify-content: flex-start;
-  }
-}
-
-.page__nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0 auto;
-  column-gap: 1rem;
-  row-gap: 0.7rem;
-  max-width: 30rem;
-}
-
-@media (min-width: 768px) {
-  .page__nav ul {
-    column-gap: 1.5rem;
-    row-gap: 1.5rem;
-    justify-content: flex-start;
-    margin: 0;
-  }
-}
-
-.page__nav ul li a {
-  white-space: nowrap;
-  position: relative;
-  z-index: 1;
-}
-
-.page__nav ul li .notification {
-  vertical-align: super;
-  background-color: var(--accent);
-  border-radius: 10px;
-  font-size: 10px;
-  color: var(--bg);
-  padding: 1px 4px;
-  margin-left: 4px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 26px;
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: 240px 2fr 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .grid--main {
-    grid-template-columns: 240px 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .grid--offset {
-    grid-template-columns: 1fr;
-    margin-left: 266px;
-  }
-}
-
-.page__main {
-  padding: 30px 0 0 0;
-}
-
-@media (min-width: 768px) {
-  .page__main {
-    min-height: 70vh;
-    padding: 60px 0 0 0;
-  }
-}
-
-.page__footer {
-  padding: 60px 0;
-}
-
-.settings {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.bio {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 26px;
-  align-items: center;
-}
-
-@media (min-width: 480px) {
-  .bio {
-    grid-template-columns: 200px 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .bio {
-    grid-template-columns: 1fr;
-  }
-}
-
-.bio-pic {
-  max-width: 150px;
-  margin-bottom: 1rem;
-  --mask:
-    radial-gradient(7.00px at 50% calc(100% - 9.60px), #000 99%, #0000 101%) calc(50% - 12px) 0/24px 100%,
-    radial-gradient(7.00px at 50% calc(100% + 3.60px), #0000 99%, #000 101%) 50% calc(100% - 6px)/24px 100% repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-}
-
-@media (min-width: 480px) {
-  .bio-pic {
-    max-width: 200px;
-  }
-}
-
-
-/* Main content area */
-.content__main {
-  display: flex;
-  gap: 26px;
-  flex-wrap: wrap;
-}
-
-@media (min-width: 1200px) {
-  .content__main {
-    flex-wrap: nowrap;
-  }
-}
-
-@media (min-width: 768px) {
-  .content__inner {
-    flex: 1 1 auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .content__extra {
-    flex: 1 0 auto;
-    width: 300px;
-    font-size: 80%;
-  }
-}
-
-/* Blog */
-.listing .draft a,
-.listing .draft time {
-  opacity: 0.5;
-}
-
-.listing li.draft::before {
-  content: '✏️  ' !important
-}
-
-.tag {
-  background-color: deepskyblue;
-  color: var(--bg);
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 90%;
-}
-
-
-/* Webrings */
-.webrings {
-  display: flex;
-  flex-direction: row;
-  row-gap: 15px;
-}
-
-.webrings>* {
-  display: flex;
-}
-
-.webring__prev,
-.webring__next,
-.webring-prev,
-.webring-next {
-  font-size: 0 !important;
-  width: 30px;
-  display: inline-block;
-  text-align: center;
-  transform: translateX(000.1px);
-  transition: 0.3s ease transform;
-}
-
-.webring__prev:hover,
-.webring__prev:focus,
-.webring-prev:hover,
-.webring-prev:focus {
-  transform: translateX(-2px)
-}
-
-.webring__next:hover,
-.webring__next:focus,
-.webring-next:hover,
-.webring-next:focus {
-  transform: translateX(2px)
-}
-
-.webring__prev::before,
-.webring__next::before,
-.webring-prev a::before,
-.webring-next a::before {
-  content: '➪';
-  font-size: 1rem;
-  display: inline-block;
-}
-
-.webring__prev::before,
-.webring-prev a::before {
-  transform: scaleX(-1);
-  display: inline-block;
-}
-
-.webring--neossg table {
-  border-spacing: 0;
-}
-
-.webring--neossg table td,
-.webring--neossg table th {
-  padding: 0;
-}
+@import url('./themes/_spooky.css');

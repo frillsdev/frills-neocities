@@ -1,0 +1,17 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: "#{{ tag | slugify}}"
+permalink: /tags/{{ tag | slugify }}/
+---
+{% extends "structure/pages/list-blog.njk" %}
+{% set postslist = collections[ tag ] %}

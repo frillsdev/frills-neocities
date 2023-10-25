@@ -1,6 +1,6 @@
 module.exports = {
 	title: "Frills's internet emporium",
-	url: "https://fri11s.neocities.org",
+	url: "https://frills.dev",
 	language: "en-GB",
 	description: "",
 	author: {

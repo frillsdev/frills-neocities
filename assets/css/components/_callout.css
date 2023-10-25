@@ -1,0 +1,45 @@
+.callout {
+  border: 2px solid var(--accent);
+  padding: 20px;
+  margin: 0 0 1rem 0;
+  font-size: 90%;
+}
+
+.callout--small {
+  padding: 10px 14px;
+}
+
+.callout--warning {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.callout--info {
+  border-color: deepskyblue;
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .callout--right {
+    float: right;
+    width: 40%;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 80%;
+  }
+}
+
+.callout header {
+  padding-bottom: 5px;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout h2 {
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}

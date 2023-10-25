@@ -4,6 +4,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation"); //need
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy"); //need
+const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
 
@@ -19,6 +20,9 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
+	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
+		preAttributes: { tabindex: 0 }
+	});
 
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -57,6 +61,28 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+	});
+
+	eleventyConfig.addCollection("tagList", collection => {
+		const tagsObject = {}
+		collection.getAll().forEach(item => {
+		if (!item.data.tags) return;
+		item.data.tags
+			.filter(tag => !['post', 'all'].includes(tag))
+			.forEach(tag => {
+			if(typeof tagsObject[tag] === 'undefined') {
+				tagsObject[tag] = 1
+			} else {
+				tagsObject[tag] += 1
+			}
+			});
+		});
+
+		const tagList = []
+		Object.keys(tagsObject).forEach(tag => {
+		tagList.push({ tagName: tag, tagCount: tagsObject[tag] })
+		})
+	return tagList.sort((a, b) => b.tagCount - a.tagCount)
 	});
 
 	return {
