@@ -1,11 +1,34 @@
 ---
 title: HTML Safe named colors
-description: Full, sortable list of all HTML safe named colors
+description: Full list of all HTML safe named colors
 date: 2023-08
 tags:
 - css art
 draft: true
 ---
+
+<style>
+  .namedcolours__header {
+    padding-bottom: 3rem;
+  }
+  .namedcolours {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  .namedcolours__item {
+    border-radius: 10px;
+    animation: fadeIn 0.3s forwards;
+    border: 3px solid var(--text);
+    padding: 0.6rem 1rem;
+  }
+  .namedcolours__none {
+    display: none;
+  }
+</style>
 
 {% block main %}
 <ul>
@@ -13,209 +36,243 @@ draft: true
   <li><a href="https://www.w3schools.com/tags/ref_colornames.asp">https://www.w3schools.com/tags/ref_colornames.asp</a></li>
 </ul>
 
-<ul>
-  <li>
-    <p>AliceBlue</p>
-    <p>#F0F8FF</p>
-    <p>rgb(240, 248, 255)</p>
-  </li>
-  <li>
-    <p>AntiqueWhite</p>
-    <p>#FAEBD7</p>
-    <p>rgb(250, 235, 215)</p>
-  </li>
-  <li>
-    <p>Aqua</p>
-    <p>#00FFFF</p>
-    <p>rgb(0, 255, 255)</p>
-  </li>
-  <li>
-    <p>Aquamarine</p>
-    <p>#7FFFD4</p>
-    <p>rgb(127, 255, 212)</p>
-  </li>
-  <li>
-    <p>Azure</p>
-    <p>#F0FFFF</p>
-    <p>rgb(240, 255, 255)</p>
-  </li>
-  <li>
-    <p>Beige</p>
-    <p>#F5F5DC</p>
-    <p>rgb(245, 245, 220)</p>
-  </li>
-  <li>
-    <p>Bisque</p>
-    <p>#FFE4C4</p>
-    <p>rgb(245, 245, 220)</p>
-  </li>
-  <li>
-    <p>Black</p>
-    <p>#000000</p>
-    <p>rgb(0, 0, 0)</p>
-  </li>
-  <li>
-    <p>BlanchedAlmond</p>
-    <p>#FFEBCD</p>
-    <p>rgb(255, 235, 205)</p>
-  </li>
-  <li>
-    <p>Blue</p>
-    <p>#0000FF</p>
-    <p>rgb(0, 0, 255)</p>
-  </li>
-  <li>
-    <p>BlueViolet</p>
-    <p>#8A2BE2</p>
-    <p>rgb(138, 43, 226 )</p>
-  </li>
-  <li>
-    <p>Brown</p>
-    <p>#A52A2A</p>
-    <p>rgb(165, 42, 42)</p>
-  </li>
-  <li>
-    <p>BurlyWood</p>
-    <p>#DEB887</p>
-    <p>rgb(222, 184, 135)</p>
-  </li>
-  <li>
-    <p>CadetBlue</p>
-    <p>#5F9EA0</p>
-    <p>rgb(95, 158, 160)</p>
-  </li>
-  <li>
-    <p>Chartreuse</p>
-    <p>#7FFF00</p>
-    <p>rgb(127, 255, 0)</p>
-  </li>
-  <li>
-    <p>Chocolate</p>
-    <p>#D2691E</p>
-    <p>rgb(210, 105, 30)</p>
-  </li>
-  <li>
-    <p>Coral</p>
-    <p>#FF7F50</p>
-    <p>rgb(255, 127, 80)</p>
-  </li>
-  <li>
-    <p>CornflowerBlue</p>
-    <p>#6495ED</p>
-    <p>rgb(100, 149, 237)</p>
-  </li>
-  <li>
-    <p>Cyan</p>
-    <p>#00FFFF</p>
-    <p>rgb(0,255,255)</p>
-  </li>
-  <li>
-    <p>DarkBlue</p>
-    <p>#00008B</p>
-    <p>rgb(0,0,139)</p>
-  </li>
-  <li>
-    <p>DarkCyan</p>
-    <p>#008B8B</p>
-    <p>rgb(	0,139,139)</p>
-  </li>
-  <li>
-    <p>DarkGoldenRod</p>
-    <p>#B8860B</p>
-    <p>rgb(184,134,11)</p>
-  </li>
-  <li>
-    <p>DarkGray</p>
-    <p>#A9A9A9</p>
-    <p>rgb(169,169,169)</p>
-  </li>
-  <li>
-    <p>DarkGrey</p>
-    <p>#A9A9A9</p>
-    <p>rgb(169,169,169)</p>
-  </li>
-  <li>
-    <p>DarkGreen</p>
-    <p>#006400</p>
-    <p>rgb(0,100,0)</p>
-  </li>
-  <li>
-    <p>DarkKhaki</p>
-    <p>#BDB76B</p>
-    <p>rgb(189,183,107)</p>
-  </li>
-  <li>
-    <p>DarkMagenta</p>
-    <p>#8B008B</p>
-    <p>rgb(139,0,139)</p>
-  </li>
-  <li>
-    <p>DarkOliveGreen</p>
-    <p>#556B2F</p>
-    <p>rgb(85,107,47)</p>
-  </li>
-  <li>
-    <p>DarkOrange</p>
-    <p>#FF8C00</p>
-    <p>rgb(255,140,0)</p>
-  </li>
-  <li>
-    <p>DarkOrchid</p>
-    <p>#9932CC</p>
-    <p>rgb(153,50,204)</p>
-  </li>
-  <li>
-    <p>DarkRed</p>
-    <p>#8B0000</p>
-    <p>rgb(139,0,0)</p>
-  </li>
-  <li>
-    <p>DarkSalmon</p>
-    <p>#E9967A</p>
-    <p>rgb(233,150,122)</p>
-  </li>
-  <li>
-    <p>DarkSeaGreen</p>
-    <p>#8FBC8F</p>
-    <p>rgb(143,188,143)</p>
-  </li>
-  <li>
-    <p>DarkSlateBlue</p>
-    <p>#483D8B</p>
-    <p>rgb(72,61,139)</p>
-  </li>
-  <li>
-    <p>DarkSlateGray</p>
-    <p>#2F4F4F</p>
-    <p>rgb(47,79,79)</p>
-  </li>
-  <li>
-    <p>DarkSlateGrey</p>
-    <p>#2F4F4F</p>
-    <p>rgb(47,79,79)</p>
-  </li>
-  <li>
-    <p>DarkTurquoise</p>
-    <p>#00CED1</p>
-    <p>rgb(0,206,209)</p>
-  </li>
-  <li>
-    <p>DarkViolet</p>
-    <p>#9400D3</p>
-    <p>rgb(	148,0,211)</p>
-  </li>
-  <li>
-    <p>DeepPink</p>
-    <p>#FF1493</p>
-    <p>rgb(255,20,147)</p>
-  </li>
-  <li>
-    <p>DeepSkyBlue</p>
-    <p>#00BFFF</p>
-    <p>rgb(0,191,255)</p>
-  </li>
+<section>
+  <header class="namedcolours__header">
+    <button id="namedColourReset">Reset</button>
+    <button class="namedColourButton" data-colour="neutral">Neutral</button>
+    <button class="namedColourButton" data-colour="red">Red</button>
+    <button class="namedColourButton" data-colour="pink">Pink</button>
+    <button class="namedColourButton" data-colour="blue">Blue</button>
+    <button class="namedColourButton" data-colour="green">Green</button>
+    <button class="namedColourButton" data-colour="yellow">Yellow</button>
+    <button class="namedColourButton" data-colour="orange">Orange</button>
+  </header>
+
+  <ul class="namedcolours">
+    <li class="namedcolours__none" id="namedColourNone">
+      <p>No colours for the selected filter</p>
+    </li>
+    <li class="namedcolours__item white neutral" style="background-color: AliceBlue;">
+      <p>AliceBlue</p>
+      <p>#F0F8FF</p>
+      <p>rgb(240, 248, 255)</p>
+    </li>
+    <li class="namedcolours__item neutral white" style="background-color: AntiqueWhite;">
+      <p>AntiqueWhite</p>
+      <p>#FAEBD7</p>
+      <p>rgb(250, 235, 215)</p>
+    </li>
+    <li class="namedcolours__item blue bright" style="background-color: Aqua;">
+      <p>Aqua</p>
+      <p>#00FFFF</p>
+      <p>rgb(0, 255, 255)</p>
+    </li>
+    <li class="namedcolours__item green bright" style="background-color: Aquamarine;">
+      <p>Aquamarine</p>
+      <p>#7FFFD4</p>
+      <p>rgb(127, 255, 212)</p>
+    </li>
+    <li class="namedcolours__item neutral white" style="background-color: Azure;">
+      <p>Azure</p>
+      <p>#F0FFFF</p>
+      <p>rgb(240, 255, 255)</p>
+    </li>
+    <li class="namedcolours__item yellow white neutral" style="background-color: Beige;">
+      <p>Beige</p>
+      <p>#F5F5DC</p>
+      <p>rgb(245, 245, 220)</p>
+    </li>
+    <li class="namedcolours__item yellow neutral" style="background-color: Bisque;">
+      <p>Bisque</p>
+      <p>#ffe4c4</p>
+      <p>rgb(255, 228, 196)</p>
+    </li>
+    <li class="namedcolours__item dark neutral black" style="background-color: Black;">
+      <p>Black</p>
+      <p>#000000</p>
+      <p>rgb(0, 0, 0)</p>
+    </li>
+    <li class="namedcolours__item neutral yellow" style="background-color: BlanchedAlmond;">
+      <p>BlanchedAlmond</p>
+      <p>#FFEBCD</p>
+      <p>rgb(255, 235, 205)</p>
+    </li>
+    <li class="namedcolours__item blue bright" style="background-color: Blue;">
+      <p>Blue</p>
+      <p>#0000FF</p>
+      <p>rgb(0, 0, 255)</p>
+    </li>
+    <li class="namedcolours__item purple bright" style="background-color: BlueViolet;">
+      <p>BlueViolet</p>
+      <p>#8A2BE2</p>
+      <p>rgb(138, 43, 226 )</p>
+    </li>
+    <li class="namedcolours__item brown red" style="background-color: Brown;">
+      <p>Brown</p>
+      <p>#A52A2A</p>
+      <p>rgb(165, 42, 42)</p>
+    </li>
+    <li class="namedcolours__item brown yellow" style="background-color: BurlyWood;">
+      <p>BurlyWood</p>
+      <p>#DEB887</p>
+      <p>rgb(222, 184, 135)</p>
+    </li>
+    <li class="namedcolours__item blue green" style="background-color: CadetBlue;">
+      <p>CadetBlue</p>
+      <p>#5F9EA0</p>
+      <p>rgb(95, 158, 160)</p>
+    </li>
+    <li class="namedcolours__item green bright" style="background-color: Chartreuse;">
+      <p>Chartreuse</p>
+      <p>#7FFF00</p>
+      <p>rgb(127, 255, 0)</p>
+    </li>
+    <li class="namedcolours__item brown orange" style="background-color: Chocolate;">
+      <p>Chocolate</p>
+      <p>#D2691E</p>
+      <p>rgb(210, 105, 30)</p>
+    </li>
+    <li class="namedcolours__item orange" style="background-color: Coral;">
+      <p>Coral</p>
+      <p>#FF7F50</p>
+      <p>rgb(255, 127, 80)</p>
+    </li>
+    <li class="namedcolours__item blue" style="background-color: CornflowerBlue;">
+      <p>CornflowerBlue</p>
+      <p>#6495ED</p>
+      <p>rgb(100, 149, 237)</p>
+    </li>
+    <li class="namedcolours__item blue bright" style="background-color: Cyan;">
+      <p>Cyan</p>
+      <p>#00FFFF</p>
+      <p>rgb(0,255,255)</p>
+    </li>
+    <li class="namedcolours__item blue dark" style="background-color: DarkBlue;">
+      <p>DarkBlue</p>
+      <p>#00008B</p>
+      <p>rgb(0,0,139)</p>
+    </li>
+    <li class="namedcolours__item blue green" style="background-color: DarkCyan;">
+      <p>DarkCyan</p>
+      <p>#008B8B</p>
+      <p>rgb(	0,139,139)</p>
+    </li>
+    <li class="namedcolours__item yellow brown" style="background-color: DarkGoldenRod;">
+      <p>DarkGoldenRod</p>
+      <p>#B8860B</p>
+      <p>rgb(184,134,11)</p>
+    </li>
+    <li class="namedcolours__item neutral" style="background-color: DarkGray;">
+      <p>DarkGray</p>
+      <p>#A9A9A9</p>
+      <p>rgb(169,169,169)</p>
+    </li>
+    <li class="namedcolours__item neutral" style="background-color: DarkGrey;">
+      <p>DarkGrey</p>
+      <p>#A9A9A9</p>
+      <p>rgb(169,169,169)</p>
+    </li>
+    <li class="namedcolours__item green dark" style="background-color: DarkGreen;">
+      <p>DarkGreen</p>
+      <p>#006400</p>
+      <p>rgb(0,100,0)</p>
+    </li>
+    <li class="namedcolours__item green" style="background-color: DarkKhaki;">
+      <p>DarkKhaki</p>
+      <p>#BDB76B</p>
+      <p>rgb(189,183,107)</p>
+    </li>
+    <li class="namedcolours__item purple" style="background-color: DarkMagenta;">
+      <p>DarkMagenta</p>
+      <p>#8B008B</p>
+      <p>rgb(139,0,139)</p>
+    </li>
+    <li class="namedcolours__item green" style="background-color: DarkOliveGreen;">
+      <p>DarkOliveGreen</p>
+      <p>#556B2F</p>
+      <p>rgb(85,107,47)</p>
+    </li>
+    <li class="namedcolours__item orange bright" style="background-color: DarkOrange;">
+      <p>DarkOrange</p>
+      <p>#FF8C00</p>
+      <p>rgb(255,140,0)</p>
+    </li>
+    <li class="namedcolours__item purple" style="background-color: DarkOrchid;">
+      <p>DarkOrchid</p>
+      <p>#9932CC</p>
+      <p>rgb(153,50,204)</p>
+    </li>
+    <li class="namedcolours__item red dark" style="background-color: DarkRed;">
+      <p>DarkRed</p>
+      <p>#8B0000</p>
+      <p>rgb(139,0,0)</p>
+    </li>
+    <li class="namedcolours__item orange pink" style="background-color: DarkSalmon;">
+      <p>DarkSalmon</p>
+      <p>#E9967A</p>
+      <p>rgb(233,150,122)</p>
+    </li>
+    <li class="namedcolours__item green" style="background-color: DarkSeaGreen;">
+      <p>DarkSeaGreen</p>
+      <p>#8FBC8F</p>
+      <p>rgb(143,188,143)</p>
+    </li>
+    <li class="namedcolours__item blue purple" style="background-color: DarkSlateBlue;">
+      <p>DarkSlateBlue</p>
+      <p>#483D8B</p>
+      <p>rgb(72,61,139)</p>
+    </li>
+    <li class="namedcolours__item green" style="background-color: DarkSlateGray;">
+      <p>DarkSlateGray</p>
+      <p>#2F4F4F</p>
+      <p>rgb(47,79,79)</p>
+    </li>
+    <li class="namedcolours__item blue" style="background-color: DarkTurquoise;">
+      <p>DarkTurquoise</p>
+      <p>#00CED1</p>
+      <p>rgb(0,206,209)</p>
+    </li>
+    <li class="namedcolours__item purple" style="background-color: DarkViolet;">
+      <p>DarkViolet</p>
+      <p>#9400D3</p>
+      <p>rgb(	148,0,211)</p>
+    </li>
+    <li class="namedcolours__item pink bright" style="background-color: DeepPink;">
+      <p>DeepPink</p>
+      <p>#FF1493</p>
+      <p>rgb(255,20,147)</p>
+    </li>
+    <li class="namedcolours__item blue bright" style="background-color: DeepSkyBlue;">
+      <p>DeepSkyBlue</p>
+      <p>#00BFFF</p>
+      <p>rgb(0,191,255)</p>
+    </li>
 
 
-</ul>
+  </ul>
 
+</section>
+{% endblock %}
+
+{% block scripts %}
+
+<script defer>
+  const colours = document.querySelectorAll('.namedcolours__item');
+  document.getElementById('namedColourReset').addEventListener('click', function (e) {
+    colours.forEach(function (colour) {colour.style.display = 'block';})
+  })
+  document.querySelectorAll('.namedColourButton').forEach(function (button) {
+    button.addEventListener('click', function (e) {
+      let selectedColour = button.dataset.colour
+      let selectedColourItems = document.querySelectorAll(`.namedcolours__item.${selectedColour}`)
+      const noItems = document.getElementById(`namedColourNone`);
+      colours.forEach(function (colour) {colour.style.display = 'none'})
+      if (selectedColourItems.length > 0) {
+        noItems.style.removeProperty('display');
+        selectedColourItems.forEach(function (colour) {colour.style.display = 'block'})
+      } else { noItems.style.display = 'block' }
+    })
+  });
+
+</script>
 {% endblock %}
