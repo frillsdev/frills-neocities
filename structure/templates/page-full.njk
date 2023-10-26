@@ -7,7 +7,7 @@
             <h1>{{title}}</h1>
             {% if description %}
                 <div class="reading-width mb-2">
-                    {{description}}
+                    {{description | safe}}
                 </div>
             {% endif %}
             {% block main %}

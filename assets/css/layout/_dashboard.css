@@ -14,21 +14,21 @@
 }
 
 .dashboard__item.--box {
-  border: 2px solid var(--dashboard-outline);
+  box-shadow: inset 0 0 0 4px var(--dashboard-bg), 4px 4px 0 0 var(--dashboard-outline);
 }
 
 .dashboard__item.--box header {
-  border-bottom: 2px solid var(--dashboard-outline);
+  border-bottom: 2px solid var(--dashboard-bg);
 }
 
 .dashboard__item.--box header h2 {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   margin-bottom: 0;
-  background-color: var(--dashboard-outline);
+  background-color: var(--dashboard-bg);
 }
 
-.dashboard__item.--box div {
+.dashboard__item.--box>div {
   padding: 1rem;
 }
 
@@ -52,9 +52,6 @@
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  background: radial-gradient(circle at top left, transparent 25%, rgba(255, 255, 255, 0.1) 25.5%, rgba(255, 255, 255, 0.15) 36%, transparent 37%, transparent 100%),
-  radial-gradient(circle at bottom right, transparent 34%, rgba(255, 255, 255, 0.1) 34.5%, rgba(255, 255, 255, 0.1) 45.5%, transparent 46%, transparent 100%);
-  background-size: 2em 2em;
   background-color: var(--accent);
   position: relative;
   border-radius: 4px;
@@ -100,4 +97,18 @@
 
 .dashboard__item.--colours li {
   aspect-ratio: 1;
+}
+
+.dashboard__item.--latestposts .description {
+  font-size: 15px;
+  margin-bottom: 0rem;
+  background: var(--bodybg);
+  padding: 0.5rem;
+  margin-top: 3px
+}
+.dashboard__item.--latestposts .description>ul,
+.dashboard__item.--latestposts .description>ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

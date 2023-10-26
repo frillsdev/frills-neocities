@@ -25,7 +25,8 @@
   --text: LavenderBlush;
   --subtext: PeachPuff;
   --pink: DeepPink;
-  --dashboard-outline: SlateBlue;
+  --dashboard-bg: SlateBlue;
+  --dashboard-outline: #3e318e;
   --logo-x: Gold;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 70%, 70%);
@@ -47,7 +48,8 @@ html[data-scheme='dark'] {
   --text: LavenderBlush;
   --subtext: PeachPuff;
   --pink: DeepPink;
-  --dashboard-outline: SlateBlue;
+  --dashboard-bg: SlateBlue;
+  --dashboard-outline: #3e318e;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 70%, 70%);
   --logo-anim-3: hsl(10, 100%, 60%);
@@ -70,7 +72,8 @@ html[data-scheme='dark'] {
     --linkhover: #e1007a;
     --text: Black;
     --subtext: Indigo;
-    --dashboard-outline: Plum;
+    --dashboard-bg: LemonChiffon;
+    --dashboard-outline: Yellow;
     --logo-anim-1: hsl(255, 70%, 70%);
     --logo-anim-2: hsl(330, 100%, 40%);
     --logo-anim-3: hsl(10, 100%, 50%);
@@ -92,7 +95,8 @@ html[data-scheme='light'] {
   --linkhover: #e1007a;
   --text: Black;
   --subtext: Indigo;
-  --dashboard-outline: Plum;
+  --dashboard-bg: Gold;
+  --dashboard-outline: Goldenrod;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 100%, 40%);
   --logo-anim-3: hsl(10, 100%, 50%);

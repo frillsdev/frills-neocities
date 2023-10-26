@@ -14,6 +14,7 @@
 @import url('./base/_list.css');
 @import url('./base/_page.css');
 @import url('./base/_typography.css');
+@import url('./base/_backgrounds.css');
 
 @import url('./layout/_grid.css');
 @import url('./layout/_dashboard.css');

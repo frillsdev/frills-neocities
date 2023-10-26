@@ -20,6 +20,18 @@ title: Home
 {%- endblock -%}
 {%- block main -%}
 <div class="dashboard">
+	<article class="dashboard__item --gallery">
+		<h2 class="visually-hidden">Gallery</h2>
+		<figure>
+			<img src="/images/piclog/piclog2.jpg" alt="Me standing on a wooden jetty looking out at the lake with my labrador, Orla. A lens flare from the sun in the top left." loading="lazy">
+		</figure>
+		<figure>
+			<img src="/images/piclog/piclog0.jpg" alt="White woman with brown hair wearing an orange hat looks away from the camera to the left." loading="lazy">
+		</figure>
+		<figure>
+			<img src="/images/piclog/piclog1.jpg" alt="The sun rises through the clouds over the sea with people walking out of the sea." loading="lazy">
+		</figure>
+	</article>
 	<article class="dashboard__item">
 		<h2 class="visually-hidden">Intro</h2>
 		<p>Greetings, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you. I am Frills, the proud webmaster of this curious domain in this wonderous wifi world.</p>
@@ -43,19 +55,7 @@ title: Home
 	<article class="dashboard__item">
 		<p>Do keep in mind that my collection is a work in progress, and I'm constantly adding new trinkets and reorganising shelves; sometimes you may find broken things... But fear not! I've already fixed the black hole I found yesterday.</p>
 	</article>
-	<article class="dashboard__item --gallery">
-		<h2 class="visually-hidden">Gallery</h2>
-		<figure>
-			<img src="/images/piclog/piclog2.jpg" alt="Me standing on a wooden jetty looking out at the lake with my labrador, Orla. A lens flare from the sun in the top left." loading="lazy">
-		</figure>
-		<figure>
-			<img src="/images/piclog/piclog0.jpg" alt="White woman with brown hair wearing an orange hat looks away from the camera to the left." loading="lazy">
-		</figure>
-		<figure>
-			<img src="/images/piclog/piclog1.jpg" alt="The sun rises through the clouds over the sea with people walking out of the sea." loading="lazy">
-		</figure>
-	</article>
-	<article class="dashboard__item --neocities">
+	<article class="dashboard__item --neocities --bgwiggly">
 		<img src="/images/neocities.svg" alt="Neocities cat holding a paintbrush and spanner">
 		<div>
 			<a href="https://neocities.org/site/fri11s">Neocities profile</a>
@@ -66,17 +66,13 @@ title: Home
 		<h2 class="visually-hidden">Spotify playlist</h2>
 		<iframe title="Frills' On Repeat playlist on Spotify" src="https://open.spotify.com/embed/playlist/37i9dQZF1EpuSqLqrl1FPT?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 	</article>
-	<article class="dashboard__item --center noscriptHide">
-		<h2 class="visually-hidden">Website carbon</h2>
-		<div id="wcb" class="carbonbadge wcb-d"></div>
-	</article>
 	<div class="dashboard__item">
 		{{ macro.callout(
 			element = 'article',
 			modifiers = 'callout--small callout--info statusCafe noscriptHide',
 			header = '
 				<span id="statusCafe-emoji"></span>
-				<h2>Latest status</h2>
+				<h2><a href="https://status.cafe/users/fri11s" class="hidden">Latest status</a></h2>
 				<time id="statusCafe-time"></time>',
 			body = '
 				<div id="statusCafe-status">No recent update :(</div>
@@ -97,6 +93,14 @@ title: Home
 		)}}
 	</div>
 	<div class="dashboard__item">
+		<h2 class="visually-hidden">Shrines</h2>
+		<a href="/shrine/orla" class="gallery" aria-label="Orla (my dog) shrine">
+			<img src="/images/shrine/orla/orla1.jpg" alt="" loading="lazy">
+			<img src="/images/shrine/orla/orla14.jpg" alt="" loading="lazy">
+			<img src="/images/shrine/orla/orla15.jpg" alt="" loading="lazy">
+		</a>
+	</div>
+	{# <div class="dashboard__item">
 		{{ macro.callout(
 			element = 'article',
 			modifiers = 'callout--small callout--info',
@@ -108,15 +112,29 @@ title: Home
 			The Eye of the World - Robert Jordan
 			'
 		)}}
-	</div>
-	<div class="dashboard__item">
-		<h2 class="visually-hidden">Shrines</h2>
-		<a href="/shrine/orla" class="gallery" aria-label="Orla (my dog) shrine">
-			<img src="/images/shrine/orla/orla1.jpg" alt="" loading="lazy">
-			<img src="/images/shrine/orla/orla14.jpg" alt="" loading="lazy">
-			<img src="/images/shrine/orla/orla15.jpg" alt="" loading="lazy">
-		</a>
-	</div>
+	</div> #}
+	<article class="dashboard__item --center noscriptHide">
+		<h2 class="visually-hidden">Website carbon</h2>
+		<div id="wcb" class="carbonbadge wcb-d"></div>
+	</article>
+	<article class="dashboard__item --box --latestposts">
+		<header>
+			<h2 class="--bgwiggly">Latest posts</h2>
+		</header>
+		{%- set latestBlog = collections.posts | reverse | first -%}
+		{%- set latestExperiment = collections.experiments | reverse | first -%}
+		{%- set latestChangelog = collections.changelog | reverse | first -%}
+		<div class="h-sm">
+			<h3>📝 Blog</h2>
+				<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
+				<h3>🧪 Experiment</h3>
+				<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
+				<h3>🛠 Changelog</h3>
+				<div class="description">
+					{{latestChangelog.content|safe}}
+				</div>
+		</div>
+	</article>
 </div>
 {%- endblock -%}
 
