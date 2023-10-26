@@ -11,6 +11,7 @@ draft: true
   .namedcolours__header {
     padding-bottom: 3rem;
   }
+
   .namedcolours {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -19,22 +20,30 @@ draft: true
     padding: 0;
     margin: 0;
   }
+
   .namedcolours__item {
     border-radius: 10px;
     animation: fadeIn 0.3s forwards;
     border: 3px solid var(--text);
     padding: 0.6rem 1rem;
   }
+
   .namedcolours__item.--black {
-  color: black;
+    color: black;
   }
+
+  .namedcolours__item.--white {
+    color: white;
+  }
+
   .namedcolours__item.--black .blob__white,
   .namedcolours__item.--black .blob__black {
-  border-color: black;
+    border-color: black;
   }
- .namedcolours__item.--white .blob__white,
+
+  .namedcolours__item.--white .blob__white,
   .namedcolours__item.--white .blob__black {
-  border-color: white;
+    border-color: white;
   }
 
   .namedcolours__none {
@@ -45,9 +54,10 @@ draft: true
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .namedcolours__cc div{
+
+  .namedcolours__cc div {
     display: flex;
-    align-items:center;
+    align-items: center;
     gap: 10px;
   }
 
@@ -57,13 +67,25 @@ draft: true
     border-radius: 30px;
     border: 3px solid;
     display: block;
-    font-size: 0!important;
+    font-size: 0 !important;
   }
+
   .blob__white {
     background-color: white;
   }
+
   .blob__black {
     background-color: black;
+  }
+
+
+  dl dd {
+    font-weight: 500;
+    width: 50%;
+  }
+  dl dd {
+    margin: 0;
+    width: 50%;
   }
 
 </style>
@@ -84,13 +106,17 @@ draft: true
     <button class="namedColourButton" data-colour="green">Green</button>
     <button class="namedColourButton" data-colour="yellow">Yellow</button>
     <button class="namedColourButton" data-colour="orange">Orange</button>
+    <button class="namedColourButton" data-colour="purple">Purple</button>
+    <button class="namedColourButton" data-colour="bright">Bright</button>
+    <button class="namedColourButton" data-colour="dark">Dark</button>
+    <button class="namedColourButton" data-colour="light">Light</button>
   </header>
 
   <ul class="namedcolours">
     <li class="namedcolours__none" id="namedColourNone">
       <p>No colours for the selected filter</p>
     </li>
-    <li class="namedcolours__item --black white neutral" style="background-color: AliceBlue;">
+    <li class="namedcolours__item --black light" style="background-color: AliceBlue;">
       <dl>
         <dt>Name</dt>
         <dd>AliceBlue</dd>
@@ -110,7 +136,7 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black neutral white" style="background-color: AntiqueWhite;">
+    <li class="namedcolours__item --black light" style="background-color: AntiqueWhite;">
       <dl>
         <dt>Name</dt>
         <dd>AntiqueWhite</dd>
@@ -130,7 +156,7 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item blue bright" style="background-color: Aqua;">
+    <li class="namedcolours__item --black blue bright" style="background-color: Aqua;">
       <dl>
         <dt>Name</dt>
         <dd>Aqua</dd>
@@ -150,7 +176,7 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item green bright" style="background-color: Aquamarine;">
+    <li class="namedcolours__item --black  green bright" style="background-color: Aquamarine;">
       <dl>
         <dt>Name</dt>
         <dd>Aquamarine</dd>
@@ -170,7 +196,7 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item neutral white" style="background-color: Azure;">
+    <li class="namedcolours__item --black  white" style="background-color: Azure;">
       <dl>
         <dt>Name</dt>
         <dd>Azure</dd>
@@ -191,7 +217,7 @@ draft: true
       </dl>
     </li>
     </li>
-    <li class="namedcolours__item yellow white neutral" style="background-color: Beige;">
+    <li class="namedcolours__item --black  yellow light" style="background-color: Beige;">
       <dl>
         <dt>Name</dt>
         <dd>Beige</dd>
@@ -211,7 +237,7 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item yellow neutral" style="background-color: Bisque;">
+    <li class="namedcolours__item --black  yellow" style="background-color: Bisque;">
       <dl>
         <dt>Name</dt>
         <dd>Bisque</dd>
@@ -231,7 +257,7 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item dark neutral black" style="background-color: Black;">
+    <li class="namedcolours__item --white dark neutral black" style="background-color: Black;">
       <dl>
         <dt>Name</dt>
         <dd>Black</dd>
@@ -251,7 +277,7 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item neutral yellow" style="background-color: BlanchedAlmond;">
+    <li class="namedcolours__item --black  yellow" style="background-color: BlanchedAlmond;">
       <dl>
         <dt>Name</dt>
         <dd>BlanchedAlmond</dd>
@@ -271,7 +297,7 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item blue bright" style="background-color: Blue;">
+    <li class="namedcolours__item --white blue bright" style="background-color: Blue;">
       <dl>
         <dt>Name</dt>
         <dd>Blue</dd>
@@ -291,8 +317,7 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item purple bright" style="background-color: BlueViolet;">
-      {# not done #}
+    <li class="namedcolours__item --white purple bright" style="background-color: BlueViolet;">
       <dl>
         <dt>Name</dt>
         <dd>BlueViolet</dd>
@@ -303,7 +328,7 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>3.52</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
@@ -312,7 +337,7 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item brown red" style="background-color: Brown;">
+    <li class="namedcolours__item --white brown red" style="background-color: Brown;">
       <dl>
         <dt>Name</dt>
         <dd>Brown</dd>
@@ -323,16 +348,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>2.96</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>7.08</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item brown yellow" style="background-color: BurlyWood;">
+    <li class="namedcolours__item --black brown yellow" style="background-color: BurlyWood;">
       <dl>
         <dt>Name</dt>
         <dd>BurlyWood</dd>
@@ -343,16 +368,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>11.31</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>1.86</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item blue green" style="background-color: CadetBlue;">
+    <li class="namedcolours__item --black blue green" style="background-color: CadetBlue;">
       <dl>
         <dt>Name</dt>
         <dd>CadetBlue</dd>
@@ -363,16 +388,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>6.88</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>3.05</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item green bright" style="background-color: Chartreuse;">
+    <li class="namedcolours__item --black green bright" style="background-color: Chartreuse;">
       <dl>
         <dt>Name</dt>
         <dd>Chartreuse</dd>
@@ -383,16 +408,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>16.21</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>1.30</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item brown orange" style="background-color: Chocolate;">
+    <li class="namedcolours__item --black brown orange" style="background-color: Chocolate;">
       <dl>
         <dt>Name</dt>
         <dd>Chocolate</dd>
@@ -403,16 +428,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>5.78</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>3.63</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item orange" style="background-color: Coral;">
+    <li class="namedcolours__item --black orange" style="background-color: Coral;">
       <dl>
         <dt>Name</dt>
         <dd>Coral</dd>
@@ -423,16 +448,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>8.40</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>2.50</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item blue" style="background-color: CornflowerBlue;">
+    <li class="namedcolours__item --black blue" style="background-color: CornflowerBlue;">
       <dl>
         <dt>Name</dt>
         <dd>CornflowerBlue</dd>
@@ -443,16 +468,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>7.06</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>2.97</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item blue bright" style="background-color: Cyan;">
+    <li class="namedcolours__item --black blue bright" style="background-color: Cyan;">
       <dl>
         <dt>Name</dt>
         <dd>Cyan</dd>
@@ -463,18 +488,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>16.75</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>1.25</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item blue dark" style="background-color: DarkBlue;">
-
-
+    <li class="namedcolours__item --white blue dark" style="background-color: DarkBlue;">
       <dl>
         <dt>Name</dt>
         <dd>DarkBlue</dd>
@@ -485,16 +508,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>1.37</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>15.30</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item blue green" style="background-color: DarkCyan;">
+    <li class="namedcolours__item --black blue green" style="background-color: DarkCyan;">
       <dl>
         <dt>Name</dt>
         <dd>DarkCyan</dd>
@@ -505,16 +528,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>5.07</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>4.15</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item yellow brown" style="background-color: DarkGoldenRod;">
+    <li class="namedcolours__item --black yellow brown" style="background-color: DarkGoldenRod;">
       <dl>
         <dt>Name</dt>
         <dd>DarkGoldenRod</dd>
@@ -525,16 +548,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>6.45</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>3.25</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item neutral" style="background-color: DarkGray;">
+    <li class="namedcolours__item --black neutral light" style="background-color: DarkGray;">
       <dl>
         <dt>Name</dt>
         <dd>DarkGray</dd>
@@ -545,16 +568,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>8.94</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>2.35</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item neutral" style="background-color: DarkGrey;">
+    <li class="namedcolours__item --black neutral light" style="background-color: DarkGrey;">
       <dl>
         <dt>Name</dt>
         <dd>DarkGrey</dd>
@@ -565,16 +588,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>8.94</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>2.35</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item green dark" style="background-color: DarkGreen;">
+    <li class="namedcolours__item --white green dark" style="background-color: DarkGreen;">
       <dl>
         <dt>Name</dt>
         <dd>DarkGreen</dd>
@@ -585,16 +608,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>2.82</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>7.44</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item green" style="background-color: DarkKhaki;">
+    <li class="namedcolours__item --black green" style="background-color: DarkKhaki;">
       <dl>
         <dt>Name</dt>
         <dd>DarkKhaki</dd>
@@ -605,16 +628,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>10.15</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>2.07</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item purple" style="background-color: DarkMagenta;">
+    <li class="namedcolours__item --white purple" style="background-color: DarkMagenta;">
       <dl>
         <dt>Name</dt>
         <dd>DarkMagenta</dd>
@@ -625,16 +648,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>2.47</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>8.50</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item green" style="background-color: DarkOliveGreen;">
+    <li class="namedcolours__item --white green" style="background-color: DarkOliveGreen;">
       <dl>
         <dt>Name</dt>
         <dd>DarkOliveGreen</dd>
@@ -645,16 +668,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>3.53</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>5.95</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item orange bright" style="background-color: DarkOrange;">
+    <li class="namedcolours__item --black orange bright" style="background-color: DarkOrange;">
       <dl>
         <dt>Name</dt>
         <dd>DarkOrange</dd>
@@ -665,16 +688,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>9.00</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>2.33</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item purple" style="background-color: DarkOrchid;">
+    <li class="namedcolours__item --white purple" style="background-color: DarkOrchid;">
       <dl>
         <dt>Name</dt>
         <dd>DarkOrchid</dd>
@@ -685,16 +708,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>3.68</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>5.70</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item red dark" style="background-color: DarkRed;">
+    <li class="namedcolours__item --white red dark" style="background-color: DarkRed;">
       <dl>
         <dt>Name</dt>
         <dd>DarkRed</dd>
@@ -705,16 +728,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>2.10</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>10.01</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item orange pink" style="background-color: DarkSalmon;">
+    <li class="namedcolours__item --black orange pink" style="background-color: DarkSalmon;">
       <dl>
         <dt>Name</dt>
         <dd>DarkSalmon</dd>
@@ -725,16 +748,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>9.11</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>2.31</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item green" style="background-color: DarkSeaGreen;">
+    <li class="namedcolours__item --black green" style="background-color: DarkSeaGreen;">
       <dl>
         <dt>Name</dt>
         <dd>DarkSeaGreen</dd>
@@ -745,16 +768,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>9.76</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>2.15</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item blue purple" style="background-color: DarkSlateBlue;">
+    <li class="namedcolours__item --white blue purple" style="background-color: DarkSlateBlue;">
       <dl>
         <dt>Name</dt>
         <dd>DarkSlateBlue</dd>
@@ -765,16 +788,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>2.32</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>9.07</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item green" style="background-color: DarkSlateGray;">
+    <li class="namedcolours__item --white green" style="background-color: DarkSlateGray;">
       <dl>
         <dt>Name</dt>
         <dd>DarkSlateGray</dd>
@@ -785,16 +808,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>2.35</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>8.93</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item blue" style="background-color: DarkTurquoise;">
+    <li class="namedcolours__item --black blue" style="background-color: DarkTurquoise;">
       <dl>
         <dt>Name</dt>
         <dd>DarkTurquoise</dd>
@@ -805,16 +828,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>10.75</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>1.95</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item purple" style="background-color: DarkViolet;">
+    <li class="namedcolours__item --white purple" style="background-color: DarkViolet;">
       <dl>
         <dt>Name</dt>
         <dd>DarkViolet</dd>
@@ -825,16 +848,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>3.20</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>6.56</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item pink bright" style="background-color: DeepPink;">
+    <li class="namedcolours__item --black pink bright" style="background-color: DeepPink;">
       <dl>
         <dt>Name</dt>
         <dd>DeepPink</dd>
@@ -845,16 +868,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>5.77</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>3.64</dd>
           </div>
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item blue bright" style="background-color: DeepSkyBlue;">
+    <li class="namedcolours__item --black blue bright" style="background-color: DeepSkyBlue;">
       <dl>
         <dt>Name</dt>
         <dd>DeepSkyBlue</dd>
@@ -865,17 +888,16 @@ draft: true
         <div class="namedcolours__cc">
           <div>
             <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
+            <dd>9.90</dd>
           </div>
           <div>
             <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
+            <dd>2.12</dd>
           </div>
         </div>
       </dl>
     </li>
   </ul>
-
 </section>
 {% endblock %}
 
