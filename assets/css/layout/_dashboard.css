@@ -20,6 +20,7 @@
 .dashboard__item.--box header {
   border-bottom: 2px solid var(--dashboard-outline);
 }
+
 .dashboard__item.--box header h2 {
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -30,11 +31,10 @@
 .dashboard__item.--box div {
   padding: 1rem;
 }
+
 .dashboard__item.--box div :last-child {
   margin-bottom: 0;
 }
-
-
 
 .dashboard__item.--center {
   text-align: center;
@@ -45,6 +45,40 @@
 .dashboard__item.--spotify {
   background-color: #cd379e;
   background-image: linear-gradient(to bottom, #cd379e, #b8318e);
+}
+
+.dashboard__item.--neocities {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background: radial-gradient(circle at top left, transparent 25%, rgba(255, 255, 255, 0.1) 25.5%, rgba(255, 255, 255, 0.15) 36%, transparent 37%, transparent 100%),
+  radial-gradient(circle at bottom right, transparent 34%, rgba(255, 255, 255, 0.1) 34.5%, rgba(255, 255, 255, 0.1) 45.5%, transparent 46%, transparent 100%);
+  background-size: 2em 2em;
+  background-color: var(--accent);
+  position: relative;
+  border-radius: 4px;
+}
+.dashboard__item.--neocities p.small {
+  margin: 0;
+  font-size: 60%;
+  color: var(--bg);
+}
+.dashboard__item.--neocities img {
+  max-height: 50px;
+  padding: 0.3rem;
+}
+.dashboard__item.--neocities a {
+  color: var(--bg);
+  font-size: 110%;
+}
+.dashboard__item.--neocities a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .dashboard__item.--gallery,
