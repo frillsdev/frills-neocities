@@ -13,8 +13,8 @@ draft: true
   }
 
   .namedcolours {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: block;
+    column-width: 300px;
     list-style: none;
     gap: 30px;
     padding: 0;
@@ -26,6 +26,8 @@ draft: true
     animation: fadeIn 0.3s forwards;
     border: 3px solid var(--text);
     padding: 0.6rem 1rem;
+    margin: 0 0 30px 0;
+    break-inside: avoid;
   }
 
   .namedcolours__item.--black {
@@ -53,6 +55,7 @@ draft: true
   .namedcolours__cc {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    place-items: center;
   }
 
   .namedcolours__cc div {
@@ -79,13 +82,17 @@ draft: true
   }
 
 
-  dl dd {
+  dl {
     font-weight: 500;
-    width: 50%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
+
+  dl dt,
   dl dd {
     margin: 0;
-    width: 50%;
   }
 
 </style>
@@ -125,14 +132,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(240, 248, 255)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>19.58</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.07</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>19.58</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.07</dd>
         </div>
       </dl>
     </li>
@@ -145,14 +150,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(250, 235, 215)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>17.93</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.17</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>17.93</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.17</dd>
         </div>
       </dl>
     </li>
@@ -165,14 +168,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(0, 255, 255)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>16.75</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.25</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>16.75</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.25</dd>
         </div>
       </dl>
     </li>
@@ -185,14 +186,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(127, 255, 212)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>17.16</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.22</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>17.16</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.22</dd>
         </div>
       </dl>
     </li>
@@ -205,14 +204,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(240, 255, 255)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>20.45</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.03</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>20.45</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.03</dd>
         </div>
       </dl>
     </li>
@@ -226,14 +223,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(245, 245, 220)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>18.98</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.11</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>18.98</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.11</dd>
         </div>
       </dl>
     </li>
@@ -246,14 +241,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(255, 228, 196)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>17.15</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.22</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>17.15</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.22</dd>
         </div>
       </dl>
     </li>
@@ -266,14 +259,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(0, 0, 0)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>21</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>21</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1</dd>
         </div>
       </dl>
     </li>
@@ -286,14 +277,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(255, 235, 205)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>18.02</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.17</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>18.02</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.17</dd>
         </div>
       </dl>
     </li>
@@ -306,14 +295,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(0, 0, 255)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.44</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>2.44</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>8.59</dd>
         </div>
       </dl>
     </li>
@@ -326,14 +313,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(138, 43, 226)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>3.52</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.59</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>3.52</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>8.59</dd>
         </div>
       </dl>
     </li>
@@ -346,14 +331,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(165, 42, 42)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.96</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>7.08</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>2.96</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>7.08</dd>
         </div>
       </dl>
     </li>
@@ -366,14 +349,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(222, 184, 135)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>11.31</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.86</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>11.31</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.86</dd>
         </div>
       </dl>
     </li>
@@ -386,14 +367,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(95, 158, 160)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>6.88</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>3.05</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>6.88</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>3.05</dd>
         </div>
       </dl>
     </li>
@@ -406,14 +385,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(127, 255, 0)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>16.21</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.30</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>16.21</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.30</dd>
         </div>
       </dl>
     </li>
@@ -426,14 +403,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(210, 105, 30)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>5.78</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>3.63</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>5.78</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>3.63</dd>
         </div>
       </dl>
     </li>
@@ -446,14 +421,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(255, 127, 80)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>8.40</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>2.50</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>8.40</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>2.50</dd>
         </div>
       </dl>
     </li>
@@ -466,14 +439,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(100, 149, 237)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>7.06</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>2.97</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>7.06</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>2.97</dd>
         </div>
       </dl>
     </li>
@@ -486,14 +457,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(0,255,255)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>16.75</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.25</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>16.75</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.25</dd>
         </div>
       </dl>
     </li>
@@ -506,14 +475,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(0,0,139)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>1.37</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>15.30</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>1.37</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>15.30</dd>
         </div>
       </dl>
     </li>
@@ -526,14 +493,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb( 0,139,139)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>5.07</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>4.15</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>5.07</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>4.15</dd>
         </div>
       </dl>
     </li>
@@ -546,14 +511,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(184,134,11)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>6.45</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>3.25</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>6.45</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>3.25</dd>
         </div>
       </dl>
     </li>
@@ -566,14 +529,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(169,169,169)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>8.94</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>2.35</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>8.94</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>2.35</dd>
         </div>
       </dl>
     </li>
@@ -586,14 +547,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(169,169,169)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>8.94</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>2.35</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>8.94</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>2.35</dd>
         </div>
       </dl>
     </li>
@@ -606,14 +565,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(0,100,0)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.82</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>7.44</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>2.82</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>7.44</dd>
         </div>
       </dl>
     </li>
@@ -626,14 +583,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(189,183,107)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>10.15</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>2.07</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>10.15</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>2.07</dd>
         </div>
       </dl>
     </li>
@@ -646,14 +601,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(139,0,139)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.47</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.50</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>2.47</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>8.50</dd>
         </div>
       </dl>
     </li>
@@ -666,14 +619,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(85,107,47)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>3.53</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>5.95</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>3.53</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>5.95</dd>
         </div>
       </dl>
     </li>
@@ -686,14 +637,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(255,140,0)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>9.00</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>2.33</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>9.00</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>2.33</dd>
         </div>
       </dl>
     </li>
@@ -706,14 +655,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(153,50,204)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>3.68</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>5.70</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>3.68</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>5.70</dd>
         </div>
       </dl>
     </li>
@@ -726,14 +673,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(139,0,0)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.10</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>10.01</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>2.10</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>10.01</dd>
         </div>
       </dl>
     </li>
@@ -746,14 +691,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(233,150,122)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>9.11</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>2.31</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>9.11</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>2.31</dd>
         </div>
       </dl>
     </li>
@@ -766,14 +709,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(143,188,143)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>9.76</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>2.15</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>9.76</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>2.15</dd>
         </div>
       </dl>
     </li>
@@ -786,14 +727,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(72,61,139)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.32</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>9.07</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>2.32</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>9.07</dd>
         </div>
       </dl>
     </li>
@@ -806,14 +745,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(47,79,79)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>2.35</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>8.93</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>2.35</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>8.93</dd>
         </div>
       </dl>
     </li>
@@ -826,14 +763,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(0,206,209)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>10.75</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>1.95</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>10.75</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>1.95</dd>
         </div>
       </dl>
     </li>
@@ -846,14 +781,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb( 148,0,211)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>3.20</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>6.56</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>3.20</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>6.56</dd>
         </div>
       </dl>
     </li>
@@ -866,14 +799,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(255,20,147)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>5.77</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>3.64</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>5.77</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>3.64</dd>
         </div>
       </dl>
     </li>
@@ -886,14 +817,12 @@ draft: true
         <dt>RGB value</dt>
         <dd>rgb(0,191,255)</dd>
         <div class="namedcolours__cc">
-          <div>
-            <dt class="blob blob__black">Colour contrast on black</dt>
-            <dd>9.90</dd>
-          </div>
-          <div>
-            <dt class="blob blob__white">Colour contrast on white</dt>
-            <dd>2.12</dd>
-          </div>
+          <dt class="blob blob__black">Colour contrast on black</dt>
+          <dd>9.90</dd>
+        </div>
+        <div class="namedcolours__cc">
+          <dt class="blob blob__white">Colour contrast on white</dt>
+          <dd>2.12</dd>
         </div>
       </dl>
     </li>
