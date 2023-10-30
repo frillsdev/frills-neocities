@@ -1,0 +1,628 @@
+/*
+ * Name: Frillsify
+ * Author: Frills
+ * Website: https://frills.dev  
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;1,400;1,700&family=Cherry+Bomb+One&display=swap');
+
+@keyframes colour {
+    0% {
+        color: deeppink;
+    }
+
+    10% {
+        color: orangered;
+    }
+
+    50% {
+        color: gold;
+    }
+
+    60% {
+        color: limegreen;
+    }
+
+    80% {
+        color: deepskyblue;
+    }
+
+    100% {
+        color: fuchsia;
+    }
+}
+
+@keyframes colour-stroke {
+    0% {
+        -webkit-text-stroke: 2px deeppink;
+    }
+
+    10% {
+        -webkit-text-stroke: 2px orangered;
+    }
+
+    50% {
+        -webkit-text-stroke: 2px gold;
+    }
+
+    60% {
+        -webkit-text-stroke: 2px limegreen;
+    }
+
+    80% {
+        -webkit-text-stroke: 2px deepskyblue;
+    }
+
+    100% {
+        -webkit-text-stroke: 3px fuchsia;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+    background-color: black;
+    color: gainsboro;
+    font-family: 'Atkisonson Hyperlegible', Arial, Helvetica, sans-serif;
+}
+
+*:focus-visible {
+    outline: 2px solid plum;
+    outline-offset: 3px;
+}
+
+a {
+    color: deeppink;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: springgreen;
+    text-decoration-thickness: 2px;
+    text-decoration-style: wavy;
+}
+
+.tp_title {
+    transform: translateY(4px);
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#themeButton {
+    transform: translateY(2px);
+    display: inline-block;
+}
+
+.header {
+    padding: 10px;
+    width: 12%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    will-change: transform;
+    padding: 6px 12px;
+    border-radius: 0;
+    background-color: gold;
+    color: black;
+    border: 0;
+    box-shadow: 4px 4px 0 0 DarkGoldenRod;
+    cursor: pointer;
+    transition: 0.3s ease transform, 0.3s ease background-color, 0.3s ease box-shadow;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ffe34a;
+    text-decoration: underline;
+}
+
+.topnav a.selected,
+.topnav a:focus,
+.topnav a:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 0 DarkGoldenRod;
+}
+
+.topnav a.selected {
+    background-color: orangered;
+}
+
+.panel {
+    height: 0px;
+    overflow: hidden;
+}
+
+.panel.visible {
+    background-color: black;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+    padding: 0 15px 15px 15px;
+}
+
+.column {
+    float: left;
+}
+
+.sidebar {
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.sidebar li {
+    display: block;
+}
+
+.main {
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p {
+    margin: 0;
+}
+
+.footer {
+    background-color: #282828;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-size: 90%;
+    width: 100%;
+}
+
+.footer p:first-of-type {
+    margin: 0;
+}
+
+@media (min-width: 950px) {
+    .footer {
+        padding-left: 335px;
+    }
+}
+
+.footer a {
+    color: springgreen
+}
+
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+    color: deeppink;
+}
+
+.footer-text {
+    width: 100%;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+.column.sidebar {
+    margin-top: 35px;
+    width: 300px;
+    background: repeating-linear-gradient(45deg, #282828 0, #282828 10%, transparent 0, transparent 50%);
+    background-size: 3em 3em;
+    background-color: #000000;
+    opacity: 1
+}
+
+.column.sidebar a {
+    color: orangered;
+}
+
+.column.sidebar a:hover,
+.column.sidebar a:focus,
+.column.sidebar a:active {
+    color: springgreen;
+}
+
+.column.main {
+    width: calc(100% - 300px);
+    padding: 35px 0 35px 35px;
+}
+
+.column.main>h2:first-of-type {
+    color: white;
+}
+
+.column.main>h2:first-of-type::before,
+.column.main>h2:first-of-type::after {
+    content: '✨';
+    margin: 0 3px;
+}
+
+.header {
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+.header h1 {
+    font-family: 'Cherry Bomb One', Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.header h1 a {
+    text-decoration: none;
+    animation: colour 10s infinite forwards;
+}
+
+.header h1 a:hover,
+.header h1 a:active,
+.header h1 a:focus {
+    color: transparent;
+    -webkit-text-fill: transparent;
+    animation: colour-stroke 10s linear infinite forwards alternate;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.rev {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.obem {
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2
+}
+
+*+h1,
+*+h2,
+*+h3,
+*+h4,
+*+h5,
+*+h6 {
+    padding: 1rem 0 0 0;
+}
+
+h1 {
+    font-size: 2rem
+}
+
+h2 {
+    font-size: 1.5rem
+}
+
+h3 {
+    font-size: 1.2rem
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1rem
+}
+
+p {
+    margin: 0 0 1rem
+}
+
+em {
+    font-style: normal;
+    color: gold;
+}
+
+ol, ul {
+    padding-left: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li,
+ol li {
+    position: relative;
+    margin: 0 0 0.5rem 0;
+}
+
+ul li:last-of-type,
+ol li:last-of-type {
+    margin: 0;
+}
+
+ul li::before {
+    content: '⭐';
+    font-size: 60%;
+    top: 5px;
+    position: absolute;
+    left: -1.5rem;
+}
+
+ol ul li::before,
+ul ul li::before {
+    content: '🌟';
+}
+
+ol {
+    list-style-type: none;
+    position: relative;
+    counter-reset: item;
+}
+
+ol>li {
+    counter-increment: item;
+}
+
+ol>li::before {
+    content: counters(item, ".") ". ";
+    top: 0;
+    position: absolute;
+    left: -1.5rem;
+}
+
+ol ol,
+ul ol {
+    padding-left: 3rem;
+}
+
+ol>li:nth-child(5n+1)::before {
+    color: deeppink
+}
+ol>li:nth-child(5n+2)::before {
+    color: orangered
+}
+ol>li:nth-child(5n+3)::before {
+    color: gold
+}
+ol>li:nth-child(5n+4)::before {
+    color: limegreen
+}
+ol>li:nth-child(5n+5)::before {
+    color: deepskyblue
+}
+
+ol ol li::before,
+ul ol li::before {
+    color: white!important;
+    left: -3rem;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0 0 0.5rem 0;
+}
+
+blockquote {
+    border-left: 3px solid gold;
+    margin-left: 0;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+
+pre {
+    background: #282828;
+    color: peachpuff;
+    padding: .2em .8em;
+    overflow: auto;
+    margin: 0 0 1rem 0;
+}
+
+code {
+    background: #282828;
+    color: peachpuff;
+    padding: 0.2rem 0.4rem;
+    margin: 0 0 1rem 0;
+}
+
+details {}
+
+summary {
+    text-decoration: underline;
+    color: deeppink;
+    cursor: pointer;
+}
+
+summary:hover,
+summary:focus,
+summary:active {
+    color: springgreen;
+    text-decoration: underline wavy 2px;
+}
+
+
+table caption {
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+table {
+    border-spacing: unset;
+}
+
+table,
+table th,
+table td {
+    border: 1px solid gainsboro
+}
+
+table th,
+table td {
+    padding: 0.5rem;
+}
+
+figure {
+    margin: 0 0 1rem 0;
+}
+
+label {
+    display: block;
+}
+
+fieldset {
+    margin: 0 0 1rem 0;
+}
+
+.form {
+    margin: 0 0 1rem 0;
+}
+
+input,
+textarea,
+select {
+    padding: 5px 10px;
+    border: 2px solid deeppink;
+    color: black;
+    border-radius: 0;
+    accent-color: deeppink;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+input[type="file"] {
+    color: white;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    padding: 5px 10px;
+    border: 2px solid springgreen;
+    background: springgreen;
+    color: black;
+    border-radius: 0;
+    accent-color: springgreen;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+@media screen and (max-width: 699px) {
+    body {
+        font-size: 16px;
+    }
+
+    .column.sidebar,
+    .column.main {
+        width: 100%;
+    }
+
+    .header,
+    .topnav {
+        width: 100%;
+    }
+
+    .header h1 {
+        float: left;
+        font-size: 3rem;
+    }
+
+    .header button {
+        float: right;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 950px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    .column.sidebar,
+    .column.main {
+        width: 100%;
+    }
+
+    .header,
+    .topnav {
+        width: 100%;
+    }
+
+    .column.main {
+        width: 75%;
+    }
+
+    .header h1 {
+        float: left;
+        font-size: 3rem;
+    }
+
+    .header button {
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .column.main {
+        width: calc(80% - 300px);
+    }
+}
