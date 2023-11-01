@@ -32,7 +32,7 @@ It's been 4 years at my current place of work. A good time to take stock and see
 Which also gives me access to a custom domain and all file types!
 
 ## 🌲 Walk in the woods
-On a free (original plans fell through) weekend, we took the car out to a local woodland I hadn't been before. It was gorgeous, quiet, and earthy. The trees we're quite as old and the canopy was not as thick, but it reminded me of the forests in Vancouver from our trip in April 2023.
+On a free (original plans fell through) weekend, we took the car out to a local woodland I hadn't been before. It was gorgeous, quiet, and earthy. The trees weren't quite as old and the canopy was not as thick, but it reminded me of the forests in Vancouver from our trip in April 2023.
 
 ## 👯 Rescheduled sister visit
 My sister originally cancelled a visit earlier in the month because she was poorly. We haven't had a sisterly catch up (just me and her) in probably about a year, it was long long overdue. We had a lot of heavy, deep and meaningfuls. It was so good to catch up and want to do it more.
