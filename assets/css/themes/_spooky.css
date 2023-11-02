@@ -38,8 +38,9 @@ html[data-scheme='light'][data-spooky='true'] {
     --logo-anim-6: Green;
 }
 
-
 .toggle--spooky::before {
+  content: '🎃';
+  font-size: 1rem;
   animation-name: shake;
   animation-duration: 15s;
   animation-delay: 5s;

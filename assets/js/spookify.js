@@ -1,3 +1,7 @@
+    // storeEmoji();
+    // spookyScheme();
+
+// Spookify
 function storeEmoji() {
     const emojis = Array.from(document.getElementsByClassName('emoji'))
     emojis.map((emoji) => {
@@ -18,6 +22,7 @@ function changeEmoji() {
     emojis.map((emoji) => {
         const randomIndex = Math.floor(Math.random() * newEmojiSet.length);
         emoji.innerText = newEmojiSet[randomIndex]
+        emoji.setAttribute('aria-hidden', true)
     })
 }
 
