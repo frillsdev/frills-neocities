@@ -11,7 +11,7 @@ tags:
 
 Increasingly, over the last 5 years, when the seasons begin to change from Summer to Autumn (or Fall for you 'muricans), I notice a distinct change in my overall mood. The nights draw in, the temperature drops and rain is incessant. I feel like someone has taken my battery out, I'm low energy and begin to lose interest in things that previously gave me joy, and I struggle to climb out of bed to go to work. This collection of symptoms is termed Seasonal Affective Disorder, also known as winter depression.
 
-It's not a surprise that I am susceptible to these issues, I have a family history of depression and my mum has always suffered badly from SAD. Having a day job makes it harder to get outside into the limited sun we are blessed with during these months and the change in clocks seems to hit like a hammer - suddenly the nights are already beginning as I log off my computer.
+It's not a surprise that I am susceptible to these issues, I have a family history of depression and my mum has always suffered badly from SAD. Having a day job makes it harder to get outside into the limited sun we are blessed with during these months and the <a href="https://en.wikipedia.org/wiki/British_Summer_Time">change in clocks</a> seems to hit like a hammer - suddenly the nights are already beginning as I log off my computer.
 
 
 ## Low-effort coping mechanisms
