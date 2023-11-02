@@ -42,3 +42,6 @@ You can get vitamin D from food as well, so make sure you're eating right.
 ### Wear soft, warm and non-constricting clothes
 
 As a cold-blooded human, when the sun goes in, I get cold. All I want to do is cosy up in a blanket all day on the sofa, but a girl got a job to do. So instead, I wear my blanket! Blanket jumpers are the best thing ever, please get one. I also have a hot water bottle belt (or 'wrap around hot water bottle'), intended for period pain relief, but I want to be warm all the time!
+
+
+I hope some of these low-effort coping mechanisms can help you too, if you suffer the same or worse, or just want to stay warm, cosy and healthy in these sunless seasons. If you have any more tips to share on dealing with the seasons changing and seasonal mood changes, please share them. If you're having a rough time and just want to speak to someone, my email is always open <a href="mailto:fri11s@proton.me">fri11s@proton.me</a>.
