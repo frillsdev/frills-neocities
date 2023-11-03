@@ -2,17 +2,30 @@
   0% {
     transform: rotate(8deg);
   }
+
   1% {
     transform: rotate(-8deg);
   }
+
   2% {
     transform: rotate(8deg);
   }
+
   3% {
     transform: rotate(-8deg);
   }
+
   4% {
     transform: rotate(0deg)
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
