@@ -1,15 +1,47 @@
 ---
 title: HTML named colors
-description: Full list of all HTML named colors
-date: 2023-08
+description: Filterable HTML named colours with colour contrast values and copy functionality
+date: 2023-11-03
 tags:
-- css art
-draft: true
+- dev
 ---
 
 <style>
   .namedcolours__header {
     padding-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 13px;
+  }
+
+  #namedColourReset,
+  .namedColourButton {
+    color: var(--text);
+    background-color: var(--bodybg);
+    box-shadow: 4px 4px 0 0 var(--bodybg);
+    border: 3px solid var(--text);
+  }
+  .namedColourButton:hover,
+  .namedColourButton:focus,
+  .namedColourButton:active {
+    background-color: transparent;
+    box-shadow: 0 0 0 0 var(--bodybg);
+  }
+  .namedColourButton:focus,
+  .namedColourButton:active {
+    text-decoration: underline;
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 0 var(--bodybg);
+  }
+
+  .namedColourButton span {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin-right: 8px;
+    background-color: black;
+    display: inline-block;
   }
 
   .namedcolours {
@@ -86,7 +118,7 @@ draft: true
     font-weight: 500;
     width: 100%;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 36% 64%;
     gap: 10px;
   }
 
@@ -95,30 +127,72 @@ draft: true
     margin: 0;
   }
 
+  dl dd {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between
+  }
+
 </style>
 
 {% block main %}
-<ul>
-  <li><a href="https://stackoverflow.com/a/8561913">https://stackoverflow.com/a/8561913</a></li>
-  <li><a href="https://www.w3schools.com/tags/ref_colornames.asp">https://www.w3schools.com/tags/ref_colornames.asp</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/X11_color_names">https://en.wikipedia.org/wiki/X11_color_names</a></li>
-  <li><a href="https://chenhuijing.com/blog/where-did-css-named-colours-come-from">https://chenhuijing.com/blog/where-did-css-named-colours-come-from</a></li>
-</ul>
+<div class="reading-width">
+  <ul class="stars">
+    <li><a href="https://stackoverflow.com/a/8561913">Are there any cons to using color names in place of color codes in CSS? - Stack Overflow</a></li>
+    <li><a href="https://www.w3schools.com/tags/ref_colornames.asp">HTML Color Names - w3 Schools</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/X11_color_names">X11 color names - Wikipedia</a></li>
+    <li><a href="https://chenhuijing.com/blog/where-did-css-named-colours-come-from">Where did CSS named colours come from? - Chen Hui Jing</a></li>
+  </ul>
+</div>
 
 <section>
   <header class="namedcolours__header">
     <button id="namedColourReset">Reset</button>
-    <button class="namedColourButton" data-colour="neutral">Neutral</button>
-    <button class="namedColourButton" data-colour="red">Red</button>
-    <button class="namedColourButton" data-colour="pink">Pink</button>
-    <button class="namedColourButton" data-colour="blue">Blue</button>
-    <button class="namedColourButton" data-colour="green">Green</button>
-    <button class="namedColourButton" data-colour="yellow">Yellow</button>
-    <button class="namedColourButton" data-colour="orange">Orange</button>
-    <button class="namedColourButton" data-colour="purple">Purple</button>
-    <button class="namedColourButton" data-colour="bright">Bright</button>
-    <button class="namedColourButton" data-colour="dark">Dark</button>
-    <button class="namedColourButton" data-colour="light">Light</button>
+    <button class="namedColourButton" data-colour="red">
+      <span style="background-color: red"></span>
+      Red
+    </button>
+    <button class="namedColourButton" data-colour="orange">
+      <span style="background-color: orange"></span>
+      Orange
+    </button>
+    <button class="namedColourButton" data-colour="yellow">
+      <span style="background-color: yellow"></span>
+      Yellow
+    </button>
+    <button class="namedColourButton" data-colour="green">
+      <span style="background-color: green"></span>
+      Green
+    </button>
+    <button class="namedColourButton" data-colour="blue">
+      <span style="background-color: blue"></span>
+      Blue
+    </button>
+    <button class="namedColourButton" data-colour="purple">
+      <span style="background-color: purple"></span>
+      Purple
+    </button>
+    <button class="namedColourButton" data-colour="pink">
+      <span style="background-color: HotPink"></span>
+      Pink
+    </button>
+    <button class="namedColourButton" data-colour="bright">
+      <span style="background-color: deeppink"></span>
+      Bright
+    </button>
+    <button class="namedColourButton" data-colour="dark">
+      <span style="background-color: darkgreen"></span>
+      Dark
+    </button>
+    <button class="namedColourButton" data-colour="light">
+      <span style="background-color: aliceblue"></span>
+      Light
+    </button>
+    <button class="namedColourButton" data-colour="neutral">
+      <span style="background-color: darkgrey"></span>
+      Neutral
+    </button>
   </header>
 
   <ul class="namedcolours">
@@ -130,9 +204,9 @@ draft: true
         <dt>Name</dt>
         <dd>AliceBlue</dd>
         <dt>Hex value</dt>
-        <dd>#F0F8FF</dd>
+        <dd>#F0F8FF <button type="button" class="copyButton" data-copy="#F0F8FF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(240, 248, 255)</dd>
+        <dd>rgb(240, 248, 255) <button type="button" class="copyButton" data-copy="rgb(240, 248, 255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>19.58</dd>
@@ -148,9 +222,9 @@ draft: true
         <dt>Name</dt>
         <dd>AntiqueWhite</dd>
         <dt>Hex value</dt>
-        <dd>#FAEBD7</dd>
+        <dd>#FAEBD7 <button type="button" class="copyButton" data-copy="#FAEBD7">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(250, 235, 215)</dd>
+        <dd>rgb(250, 235, 215) <button type="button" class="copyButton" data-copy="rgb(250, 235, 215)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>17.93</dd>
@@ -166,9 +240,9 @@ draft: true
         <dt>Name</dt>
         <dd>Aqua</dd>
         <dt>Hex value</dt>
-        <dd>#00FFFF</dd>
+        <dd>#00FFFF <button type="button" class="copyButton" data-copy="#00FFFF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0, 255, 255)</dd>
+        <dd>rgb(0, 255, 255) <button type="button" class="copyButton" data-copy="rgb(0, 255, 255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>16.75</dd>
@@ -179,14 +253,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black  green bright" style="background-color: Aquamarine;">
+    <li class="namedcolours__item --black  green blue" style="background-color: Aquamarine;">
       <dl>
         <dt>Name</dt>
         <dd>Aquamarine</dd>
         <dt>Hex value</dt>
-        <dd>#7FFFD4</dd>
+        <dd>#7FFFD4 <button type="button" class="copyButton" data-copy="#7FFFD4">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(127, 255, 212)</dd>
+        <dd>rgb(127, 255, 212) <button type="button" class="copyButton" data-copy="rgb(127, 255, 212)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>17.16</dd>
@@ -202,9 +276,9 @@ draft: true
         <dt>Name</dt>
         <dd>Azure</dd>
         <dt>Hex value</dt>
-        <dd>#F0FFFF</dd>
+        <dd>#F0FFFF <button type="button" class="copyButton" data-copy="#F0FFFF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(240, 255, 255)</dd>
+        <dd>rgb(240, 255, 255) <button type="button" class="copyButton" data-copy="rgb(240, 255, 255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>20.45</dd>
@@ -221,9 +295,9 @@ draft: true
         <dt>Name</dt>
         <dd>Beige</dd>
         <dt>Hex value</dt>
-        <dd>#F5F5DC</dd>
+        <dd>#F5F5DC <button type="button" class="copyButton" data-copy="#F5F5DC">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(245, 245, 220)</dd>
+        <dd>rgb(245, 245, 220) <button type="button" class="copyButton" data-copy="rgb(245, 245, 220)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>18.98</dd>
@@ -239,9 +313,9 @@ draft: true
         <dt>Name</dt>
         <dd>Bisque</dd>
         <dt>Hex value</dt>
-        <dd>#ffe4c4</dd>
+        <dd>#FFE4C4 <button type="button" class="copyButton" data-copy="#ffe4c4">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255, 228, 196)</dd>
+        <dd>rgb(255, 228, 196) <button type="button" class="copyButton" data-copy="rgb(255, 228, 196)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>17.15</dd>
@@ -257,9 +331,9 @@ draft: true
         <dt>Name</dt>
         <dd>Black</dd>
         <dt>Hex value</dt>
-        <dd>#000000</dd>
+        <dd>#000000 <button type="button" class="copyButton" data-copy="#000000">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0, 0, 0)</dd>
+        <dd>rgb(0, 0, 0) <button type="button" class="copyButton" data-copy="rgb(0, 0, 0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>21</dd>
@@ -275,9 +349,9 @@ draft: true
         <dt>Name</dt>
         <dd>BlanchedAlmond</dd>
         <dt>Hex value</dt>
-        <dd>#FFEBCD</dd>
+        <dd>#FFEBCD <button type="button" class="copyButton" data-copy="#FFEBCD">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255, 235, 205)</dd>
+        <dd>rgb(255, 235, 205) <button type="button" class="copyButton" data-copy="rgb(255, 235, 205)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>18.02</dd>
@@ -293,9 +367,9 @@ draft: true
         <dt>Name</dt>
         <dd>Blue</dd>
         <dt>Hex value</dt>
-        <dd>#0000FF</dd>
+        <dd>#0000FF <button type="button" class="copyButton" data-copy="#0000FF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0, 0, 255)</dd>
+        <dd>rgb(0, 0, 255)  <button type="button" class="copyButton" data-copy="rgb(0, 0, 255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>2.44</dd>
@@ -311,9 +385,9 @@ draft: true
         <dt>Name</dt>
         <dd>BlueViolet</dd>
         <dt>Hex value</dt>
-        <dd>#8A2BE2</dd>
+        <dd>#8A2BE2 <button type="button" class="copyButton" data-copy="#8A2BE2">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(138, 43, 226)</dd>
+        <dd>rgb(138, 43, 226) <button type="button" class="copyButton" data-copy="rgb(138, 43, 226)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>3.52</dd>
@@ -329,9 +403,9 @@ draft: true
         <dt>Name</dt>
         <dd>Brown</dd>
         <dt>Hex value</dt>
-        <dd>#A52A2A</dd>
+        <dd>#A52A2A <button type="button" class="copyButton" data-copy="#A52A2A">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(165, 42, 42)</dd>
+        <dd>rgb(165, 42, 42 <button type="button" class="copyButton" data-copy="rgb(165, 42, 42)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>2.96</dd>
@@ -347,9 +421,9 @@ draft: true
         <dt>Name</dt>
         <dd>BurlyWood</dd>
         <dt>Hex value</dt>
-        <dd>#DEB887</dd>
+        <dd>#DEB887 <button type="button" class="copyButton" data-copy="#DEB887">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(222, 184, 135)</dd>
+        <dd>rgb(222, 184, 135) <button type="button" class="copyButton" data-copy="rgb(222, 184, 135)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>11.31</dd>
@@ -365,9 +439,9 @@ draft: true
         <dt>Name</dt>
         <dd>CadetBlue</dd>
         <dt>Hex value</dt>
-        <dd>#5F9EA0</dd>
+        <dd>#5F9EA0 <button type="button" class="copyButton" data-copy="#5F9EA0">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(95, 158, 160)</dd>
+        <dd>rgb(95, 158, 160) <button type="button" class="copyButton" data-copy="rgb(95, 158, 160)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>6.88</dd>
@@ -383,9 +457,9 @@ draft: true
         <dt>Name</dt>
         <dd>Chartreuse</dd>
         <dt>Hex value</dt>
-        <dd>#7FFF00</dd>
+        <dd>#7FFF00 <button type="button" class="copyButton" data-copy="#7FFF00">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(127, 255, 0)</dd>
+        <dd>rgb(127, 255, 0) <button type="button" class="copyButton" data-copy="rgb(127, 255, 0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>16.21</dd>
@@ -401,9 +475,9 @@ draft: true
         <dt>Name</dt>
         <dd>Chocolate</dd>
         <dt>Hex value</dt>
-        <dd>#D2691E</dd>
+        <dd>#D2691E <button type="button" class="copyButton" data-copy="#D2691E">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(210, 105, 30)</dd>
+        <dd>rgb(210, 105, 30) <button type="button" class="copyButton" data-copy="rgb(210, 105, 30)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.78</dd>
@@ -419,9 +493,9 @@ draft: true
         <dt>Name</dt>
         <dd>Coral</dd>
         <dt>Hex value</dt>
-        <dd>#FF7F50</dd>
+        <dd>#FF7F50 <button type="button" class="copyButton" data-copy="#FF7F50">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255, 127, 80)</dd>
+        <dd>rgb(255, 127, 80) <button type="button" class="copyButton" data-copy="rgb(255, 127, 80)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>8.40</dd>
@@ -437,9 +511,9 @@ draft: true
         <dt>Name</dt>
         <dd>CornflowerBlue</dd>
         <dt>Hex value</dt>
-        <dd>#6495ED</dd>
+        <dd>#6495ED <button type="button" class="copyButton" data-copy="#6495ED">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(100, 149, 237)</dd>
+        <dd>rgb(100, 149, 237) <button type="button" class="copyButton" data-copy="rgb(100, 149, 237)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>7.06</dd>
@@ -455,9 +529,9 @@ draft: true
         <dt>Name</dt>
         <dd>Cyan</dd>
         <dt>Hex value</dt>
-        <dd>#00FFFF</dd>
+        <dd>#00FFFF <button type="button" class="copyButton" data-copy="#00FFFF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,255,255)</dd>
+        <dd>rgb(0,255,255) <button type="button" class="copyButton" data-copy="rgb(0,255,255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>16.75</dd>
@@ -473,9 +547,9 @@ draft: true
         <dt>Name</dt>
         <dd>DarkBlue</dd>
         <dt>Hex value</dt>
-        <dd>#00008B</dd>
+        <dd>#00008B <button type="button" class="copyButton" data-copy="#00008B">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,0,139)</dd>
+        <dd>rgb(0,0,139) <button type="button" class="copyButton" data-copy="rgb(0,0,139)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>1.37</dd>
@@ -486,14 +560,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue green" style="background-color: DarkCyan;">
+    <li class="namedcolours__item --black blue dark" style="background-color: DarkCyan;">
       <dl>
         <dt>Name</dt>
         <dd>DarkCyan</dd>
         <dt>Hex value</dt>
-        <dd>#008B8B</dd>
+        <dd>#008B8B <button type="button" class="copyButton" data-copy="#008B8B">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb( 0,139,139)</dd>
+        <dd>rgb( 0,139,139) <button type="button" class="copyButton" data-copy="rgb( 0,139,139)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.07</dd>
@@ -504,14 +578,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black yellow brown" style="background-color: DarkGoldenRod;">
+    <li class="namedcolours__item --black yellow brown dark" style="background-color: DarkGoldenRod;">
       <dl>
         <dt>Name</dt>
         <dd>DarkGoldenRod</dd>
         <dt>Hex value</dt>
-        <dd>#B8860B</dd>
+        <dd>#B8860B <button type="button" class="copyButton" data-copy="#B8860B">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(184,134,11)</dd>
+        <dd>rgb(184,134,11) <button type="button" class="copyButton" data-copy="rgb(184,134,11)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>6.45</dd>
@@ -522,14 +596,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black neutral light" style="background-color: DarkGray;">
+    <li class="namedcolours__item --black neutral light dark" style="background-color: DarkGray;">
       <dl>
         <dt>Name</dt>
         <dd>DarkGray</dd>
         <dt>Hex value</dt>
-        <dd>#A9A9A9</dd>
+        <dd>#A9A9A9 <button type="button" class="copyButton" data-copy="#A9A9A9">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(169,169,169)</dd>
+        <dd>rgb(169,169,169) <button type="button" class="copyButton" data-copy="rgb(169,169,169)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>8.94</dd>
@@ -540,14 +614,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black neutral light" style="background-color: DarkGrey;">
+    <li class="namedcolours__item --black neutral light dark" style="background-color: DarkGrey;">
       <dl>
         <dt>Name</dt>
         <dd>DarkGrey</dd>
         <dt>Hex value</dt>
-        <dd>#A9A9A9</dd>
+        <dd>#A9A9A9 <button type="button" class="copyButton" data-copy="#A9A9A9">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(169,169,169)</dd>
+        <dd>rgb(169,169,169) <button type="button" class="copyButton" data-copy="rgb(169,169,169)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>8.94</dd>
@@ -563,9 +637,9 @@ draft: true
         <dt>Name</dt>
         <dd>DarkGreen</dd>
         <dt>Hex value</dt>
-        <dd>#006400</dd>
+        <dd>#006400 <button type="button" class="copyButton" data-copy="#006400">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,100,0)</dd>
+        <dd>rgb(0,100,0) <button type="button" class="copyButton" data-copy="rgb(0,100,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>2.82</dd>
@@ -581,9 +655,9 @@ draft: true
         <dt>Name</dt>
         <dd>DarkKhaki</dd>
         <dt>Hex value</dt>
-        <dd>#BDB76B</dd>
+        <dd>#BDB76B <button type="button" class="copyButton" data-copy="#BDB76B">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(189,183,107)</dd>
+        <dd>rgb(189,183,107) <button type="button" class="copyButton" data-copy="rgb(189,183,107)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>10.15</dd>
@@ -594,14 +668,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white purple" style="background-color: DarkMagenta;">
+    <li class="namedcolours__item --white purple dark" style="background-color: DarkMagenta;">
       <dl>
         <dt>Name</dt>
         <dd>DarkMagenta</dd>
         <dt>Hex value</dt>
-        <dd>#8B008B</dd>
+        <dd>#8B008B <button type="button" class="copyButton" data-copy="#8B008B">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(139,0,139)</dd>
+        <dd>rgb(139,0,139) <button type="button" class="copyButton" data-copy="rgb(139,0,139)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>2.47</dd>
@@ -612,14 +686,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white green" style="background-color: DarkOliveGreen;">
+    <li class="namedcolours__item --white green dark" style="background-color: DarkOliveGreen;">
       <dl>
         <dt>Name</dt>
         <dd>DarkOliveGreen</dd>
         <dt>Hex value</dt>
-        <dd>#556B2F</dd>
+        <dd>#556B2F <button type="button" class="copyButton" data-copy="#556B2F">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(85,107,47)</dd>
+        <dd>rgb(85,107,47) <button type="button" class="copyButton" data-copy="rgb(85,107,47)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>3.53</dd>
@@ -630,14 +704,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black orange bright" style="background-color: DarkOrange;">
+    <li class="namedcolours__item --black orange" style="background-color: DarkOrange;">
       <dl>
         <dt>Name</dt>
         <dd>DarkOrange</dd>
         <dt>Hex value</dt>
-        <dd>#FF8C00</dd>
+        <dd>#FF8C00 <button type="button" class="copyButton" data-copy="#FF8C00">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,140,0)</dd>
+        <dd>rgb(255,140,0) <button type="button" class="copyButton" data-copy="rgb(255,140,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>9.00</dd>
@@ -653,9 +727,9 @@ draft: true
         <dt>Name</dt>
         <dd>DarkOrchid</dd>
         <dt>Hex value</dt>
-        <dd>#9932CC</dd>
+        <dd>#9932CC <button type="button" class="copyButton" data-copy="#9932CC">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(153,50,204)</dd>
+        <dd>rgb(153,50,204) <button type="button" class="copyButton" data-copy="rgb(153,50,204)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>3.68</dd>
@@ -671,9 +745,9 @@ draft: true
         <dt>Name</dt>
         <dd>DarkRed</dd>
         <dt>Hex value</dt>
-        <dd>#8B0000</dd>
+        <dd>#8B0000 <button type="button" class="copyButton" data-copy="#8B0000">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(139,0,0)</dd>
+        <dd>rgb(139,0,0) <button type="button" class="copyButton" data-copy="rgb(139,0,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>2.10</dd>
@@ -689,9 +763,9 @@ draft: true
         <dt>Name</dt>
         <dd>DarkSalmon</dd>
         <dt>Hex value</dt>
-        <dd>#E9967A</dd>
+        <dd>#E9967A <button type="button" class="copyButton" data-copy="#E9967A">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(233,150,122)</dd>
+        <dd>rgb(233,150,122) <button type="button" class="copyButton" data-copy="rgb(233,150,122)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>9.11</dd>
@@ -707,9 +781,9 @@ draft: true
         <dt>Name</dt>
         <dd>DarkSeaGreen</dd>
         <dt>Hex value</dt>
-        <dd>#8FBC8F</dd>
+        <dd>#8FBC8F <button type="button" class="copyButton" data-copy="#8FBC8F">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(143,188,143)</dd>
+        <dd>rgb(143,188,143) <button type="button" class="copyButton" data-copy="rgb(143,188,143)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>9.76</dd>
@@ -720,14 +794,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue purple" style="background-color: DarkSlateBlue;">
+    <li class="namedcolours__item --white blue dark" style="background-color: DarkSlateBlue;">
       <dl>
         <dt>Name</dt>
         <dd>DarkSlateBlue</dd>
         <dt>Hex value</dt>
-        <dd>#483D8B</dd>
+        <dd>#483D8B <button type="button" class="copyButton" data-copy="#483D8B">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(72,61,139)</dd>
+        <dd>rgb(72,61,139) <button type="button" class="copyButton" data-copy="rgb(72,61,139)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>2.32</dd>
@@ -738,14 +812,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white green" style="background-color: DarkSlateGray;">
+    <li class="namedcolours__item --white green dark" style="background-color: DarkSlateGray;">
       <dl>
         <dt>Name</dt>
         <dd>DarkSlateGray</dd>
         <dt>Hex value</dt>
-        <dd>#2F4F4F</dd>
+        <dd>#2F4F4F <button type="button" class="copyButton" data-copy="#2F4F4F">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(47,79,79)</dd>
+        <dd>rgb(47,79,79) <button type="button" class="copyButton" data-copy="rgb(47,79,79)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>2.35</dd>
@@ -756,14 +830,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue" style="background-color: DarkTurquoise;">
+    <li class="namedcolours__item --black blue``" style="background-color: DarkTurquoise;">
       <dl>
         <dt>Name</dt>
         <dd>DarkTurquoise</dd>
         <dt>Hex value</dt>
-        <dd>#00CED1</dd>
+        <dd>#00CED1 <button type="button" class="copyButton" data-copy="#00CED1">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,206,209)</dd>
+        <dd>rgb(0,206,209) <button type="button" class="copyButton" data-copy="rgb(0,206,209)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>10.75</dd>
@@ -774,14 +848,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white purple" style="background-color: DarkViolet;">
+    <li class="namedcolours__item --white purple dark" style="background-color: DarkViolet;">
       <dl>
         <dt>Name</dt>
         <dd>DarkViolet</dd>
         <dt>Hex value</dt>
-        <dd>#9400D3</dd>
+        <dd>#9400D3 <button type="button" class="copyButton" data-copy="#9400D3">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb( 148,0,211)</dd>
+        <dd>rgb( 148,0,211) <button type="button" class="copyButton" data-copy="rgb( 148,0,211)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>3.20</dd>
@@ -797,9 +871,9 @@ draft: true
         <dt>Name</dt>
         <dd>DeepPink</dd>
         <dt>Hex value</dt>
-        <dd>#FF1493</dd>
+        <dd>#FF1493 <button type="button" class="copyButton" data-copy="#FF1493">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,20,147)</dd>
+        <dd>rgb(255,20,147) <button type="button" class="copyButton" data-copy="rgb(255,20,147)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.77</dd>
@@ -815,9 +889,9 @@ draft: true
         <dt>Name</dt>
         <dd>DeepSkyBlue</dd>
         <dt>Hex value</dt>
-        <dd>#00BFFF</dd>
+        <dd>#00BFFF <button type="button" class="copyButton" data-copy="#00BFFF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,191,255)</dd>
+        <dd>rgb(0,191,255) <button type="button" class="copyButton" data-copy="rgb(0,191,255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>9.90</dd>
@@ -834,9 +908,9 @@ draft: true
         <dt>Name</dt>
         <dd>DimGray</dd>
         <dt>Hex value</dt>
-        <dd>#696969</dd>
+        <dd>#696969 <button type="button" class="copyButton" data-copy="#696969">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(105,105, 105)</dd>
+        <dd>rgb(105,105, 105) <button type="button" class="copyButton" data-copy="rgb(105,105, 105)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>3.83</dd>
@@ -847,14 +921,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: DodgerBlue;">
+    <li class="namedcolours__item --black blue" style="background-color: DodgerBlue;">
       <dl>
         <dt>Name</dt>
         <dd>DodgerBlue</dd>
         <dt>Hex value</dt>
-        <dd>#1E90FF</dd>
+        <dd>#1E90FF <button type="button" class="copyButton" data-copy="#1E90FF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(30,144,255)</dd>
+        <dd>rgb(30,144,255) <button type="button" class="copyButton" data-copy="rgb(30,144,255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>6.49</dd>
@@ -865,14 +939,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: FireBrick;">
+    <li class="namedcolours__item --white red brown" style="background-color: FireBrick;">
       <dl>
         <dt>Name</dt>
         <dd>FireBrick</dd>
         <dt>Hex value</dt>
-        <dd>#B22222</dd>
+        <dd>#B22222 <button type="button" class="copyButton" data-copy="#B22222">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(178,34,34)</dd>
+        <dd>rgb(178,34,34) <button type="button" class="copyButton" data-copy="rgb(178,34,34)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>3.14</dd>
@@ -883,14 +957,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: FloralWhite;">
+    <li class="namedcolours__item --black light neutral white" style="background-color: FloralWhite;">
       <dl>
         <dt>Name</dt>
         <dd>FloralWhite</dd>
         <dt>Hex value</dt>
-        <dd>#FFFAF0</dd>
+        <dd>#FFFAF0 <button type="button" class="copyButton" data-copy="#FFFAF0">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,250,240)</dd>
+        <dd>rgb(255,250,240) <button type="button" class="copyButton" data-copy="rgb(255,250,240)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>20.18</dd>
@@ -901,14 +975,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: ForestGreen;">
+    <li class="namedcolours__item --black green dark" style="background-color: ForestGreen;">
       <dl>
         <dt>Name</dt>
         <dd>ForestGreen</dd>
         <dt>Hex value</dt>
-        <dd>#228B22</dd>
+        <dd>#228B22 <button type="button" class="copyButton" data-copy="#228B22">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(34,139,34)</dd>
+        <dd>rgb(34,139,34) <button type="button" class="copyButton" data-copy="rgb(34,139,34)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>4.78</dd>
@@ -919,14 +993,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Fuchsia;">
+    <li class="namedcolours__item --black pink purple bright" style="background-color: Fuchsia;">
       <dl>
         <dt>Name</dt>
         <dd>Fuchsia</dd>
         <dt>Hex value</dt>
-        <dd>#FF00FF</dd>
+        <dd>#FF00FF <button type="button" class="copyButton" data-copy="#FF00FF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,0,255)</dd>
+        <dd>rgb(255,0,255) <button type="button" class="copyButton" data-copy="rgb(255,0,255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>6.70</dd>
@@ -937,14 +1011,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Gainsboro;">
+    <li class="namedcolours__item --black neutral light" style="background-color: Gainsboro;">
       <dl>
         <dt>Name</dt>
         <dd>Gainsboro</dd>
         <dt>Hex value</dt>
-        <dd>#DCDCDC</dd>
+        <dd>#DCDCDC <button type="button" class="copyButton" data-copy="#DCDCDC">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(220,220,220)</dd>
+        <dd>rgb(220,220,220) <button type="button" class="copyButton" data-copy="rgb(220,220,220)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>15.31</dd>
@@ -955,14 +1029,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: GhostWhite;">
+    <li class="namedcolours__item --black white neutral light" style="background-color: GhostWhite;">
       <dl>
         <dt>Name</dt>
         <dd>GhostWhite</dd>
         <dt>Hex value</dt>
-        <dd>#F8F8FF</dd>
+        <dd>#F8F8FF <button type="button" class="copyButton" data-copy="#F8F8FF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(248,248,255)</dd>
+        <dd>rgb(248,248,255) <button type="button" class="copyButton" data-copy="rgb(248,248,255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>19.86</dd>
@@ -973,14 +1047,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Gold;">
+    <li class="namedcolours__item --black yellow bright" style="background-color: Gold;">
       <dl>
         <dt>Name</dt>
         <dd>Gold</dd>
         <dt>Hex value</dt>
-        <dd>#FFD700</dd>
+        <dd>#FFD700 <button type="button" class="copyButton" data-copy="#FFD700">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,215,0)</dd>
+        <dd>rgb(255,215,0) <button type="button" class="copyButton" data-copy="rgb(255,215,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>14.97</dd>
@@ -991,14 +1065,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: GoldenRod;">
+    <li class="namedcolours__item --black yellow" style="background-color: GoldenRod;">
       <dl>
         <dt>Name</dt>
         <dd>GoldenRod</dd>
         <dt>Hex value</dt>
-        <dd>#DAA520</dd>
+        <dd>#DAA520 <button type="button" class="copyButton" data-copy="#DAA520">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(218,165,32)</dd>
+        <dd>rgb(218,165,32) <button type="button" class="copyButton" data-copy="rgb(218,165,32)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>9.38</dd>
@@ -1009,14 +1083,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Gray;">
+    <li class="namedcolours__item --black neutral" style="background-color: Gray;">
       <dl>
         <dt>Name</dt>
         <dd>Gray</dd>
         <dt>Hex value</dt>
-        <dd>#808080</dd>
+        <dd>#808080 <button type="button" class="copyButton" data-copy="#808080">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(128,128,128)</dd>
+        <dd>rgb(128,128,128) <button type="button" class="copyButton" data-copy="rgb(128,128,128)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.32</dd>
@@ -1027,14 +1101,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: Green;">
+    <li class="namedcolours__item --white green" style="background-color: Green;">
       <dl>
         <dt>Name</dt>
         <dd>Green</dd>
         <dt>Hex value</dt>
-        <dd>#008000</dd>
+        <dd>#008000 <button type="button" class="copyButton" data-copy="#008000">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,128,0)</dd>
+        <dd>rgb(0,128,0) <button type="button" class="copyButton" data-copy="rgb(0,128,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>4.09</dd>
@@ -1045,14 +1119,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: GreenYellow;">
+    <li class="namedcolours__item --black green" style="background-color: GreenYellow;">
       <dl>
         <dt>Name</dt>
         <dd>GreenYellow</dd>
         <dt>Hex value</dt>
-        <dd>#ADFF2F</dd>
+        <dd>#ADFF2F <button type="button" class="copyButton" data-copy="#ADFF2F">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(173,255,47)</dd>
+        <dd>rgb(173,255,47) <button type="button" class="copyButton" data-copy="rgb(173,255,47)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>17.12</dd>
@@ -1063,14 +1137,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: HoneyDew;">
+    <li class="namedcolours__item --black white light" style="background-color: HoneyDew;">
       <dl>
         <dt>Name</dt>
         <dd>HoneyDew</dd>
         <dt>Hex value</dt>
-        <dd>#F0FFF0</dd>
+        <dd>#F0FFF0 <button type="button" class="copyButton" data-copy="#F0FFF0">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(240,255,240)</dd>
+        <dd>rgb(240,255,240) <button type="button" class="copyButton" data-copy="rgb(240,255,240)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>20.27</dd>
@@ -1081,14 +1155,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: HotPink;">
+    <li class="namedcolours__item --black pink" style="background-color: HotPink;">
       <dl>
         <dt>Name</dt>
         <dd>HotPink</dd>
         <dt>Hex value</dt>
-        <dd>#FF69B4</dd>
+        <dd>#FF69B4 <button type="button" class="copyButton" data-copy="#FF69B4">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,105,180)</dd>
+        <dd>rgb(255,105,180) <button type="button" class="copyButton" data-copy="rgb(255,105,180)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>7.93</dd>
@@ -1099,14 +1173,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: IndianRed;">
+    <li class="namedcolours__item --black red" style="background-color: IndianRed;">
       <dl>
         <dt>Name</dt>
         <dd>IndianRed</dd>
         <dt>Hex value</dt>
-        <dd>#CD5C5C</dd>
+        <dd>#CD5C5C <button type="button" class="copyButton" data-copy="#CD5C5C">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(205,92,92)</dd>
+        <dd>rgb(205,92,92) <button type="button" class="copyButton" data-copy="rgb(205,92,92)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.28</dd>
@@ -1117,14 +1191,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: Indigo;">
+    <li class="namedcolours__item --white purple dark" style="background-color: Indigo;">
       <dl>
         <dt>Name</dt>
         <dd>Indigo</dd>
         <dt>Hex value</dt>
-        <dd>#4B0082</dd>
+        <dd>#4B0082 <button type="button" class="copyButton" data-copy="#4B0082">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(75,0,130)</dd>
+        <dd>rgb(75,0,130) <button type="button" class="copyButton" data-copy="rgb(75,0,130)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>1.62</dd>
@@ -1135,14 +1209,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Ivory;">
+    <li class="namedcolours__item --black white light" style="background-color: Ivory;">
       <dl>
         <dt>Name</dt>
         <dd>Ivory</dd>
         <dt>Hex value</dt>
-        <dd>#FFFFF0</dd>
+        <dd>#FFFFF0 <button type="button" class="copyButton" data-copy="#FFFFF0">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,255,240)</dd>
+        <dd>rgb(255,255,240) <button type="button" class="copyButton" data-copy="rgb(255,255,240)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>20.81</dd>
@@ -1153,14 +1227,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Khaki;">
+    <li class="namedcolours__item --black green light" style="background-color: Khaki;">
       <dl>
         <dt>Name</dt>
         <dd>Khaki</dd>
         <dt>Hex value</dt>
-        <dd>#F0E68C</dd>
+        <dd>#F0E68C <button type="button" class="copyButton" data-copy="#F0E68C">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(240,230,140)</dd>
+        <dd>rgb(240,230,140) <button type="button" class="copyButton" data-copy="rgb(240,230,140)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>16.40</dd>
@@ -1171,14 +1245,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Lavender;">
+    <li class="namedcolours__item --black blue light" style="background-color: Lavender;">
       <dl>
         <dt>Name</dt>
         <dd>Lavender</dd>
         <dt>Hex value</dt>
-        <dd>#E6E6FA</dd>
+        <dd>#E6E6FA <button type="button" class="copyButton" data-copy="#E6E6FA">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(230,230,250)</dd>
+        <dd>rgb(230,230,250) <button type="button" class="copyButton" data-copy="rgb(230,230,250)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>17.06</dd>
@@ -1189,14 +1263,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LavenderBlush;">
+    <li class="namedcolours__item --black red white light" style="background-color: LavenderBlush;">
       <dl>
         <dt>Name</dt>
         <dd>LavenderBlush</dd>
         <dt>Hex value</dt>
-        <dd>#FFF0F5</dd>
+        <dd>#FFF0F5 <button type="button" class="copyButton" data-copy="#FFF0F5">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,240,245)</dd>
+        <dd>rgb(255,240,245) <button type="button" class="copyButton" data-copy="rgb(255,240,245)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>19.03</dd>
@@ -1207,14 +1281,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LawnGreen;">
+    <li class="namedcolours__item --black green" style="background-color: LawnGreen;">
       <dl>
         <dt>Name</dt>
         <dd>LawnGreen</dd>
         <dt>Hex value</dt>
-        <dd>#7CFC00</dd>
+        <dd>#7CFC00 <button type="button" class="copyButton" data-copy="#7CFC00">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(124,252,0)</dd>
+        <dd>rgb(124,252,0) <button type="button" class="copyButton" data-copy="rgb(124,252,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>15.78</dd>
@@ -1225,14 +1299,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LemonChiffon;">
+    <li class="namedcolours__item --black yellow white" style="background-color: LemonChiffon;">
       <dl>
         <dt>Name</dt>
         <dd>LemonChiffon</dd>
         <dt>Hex value</dt>
-        <dd>#FFFACD</dd>
+        <dd>#FFFACD <button type="button" class="copyButton" data-copy="#FFFACD">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,250,205)</dd>
+        <dd>rgb(255,250,205) <button type="button" class="copyButton" data-copy="rgb(255,250,205)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>19.81</dd>
@@ -1243,14 +1317,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightBlue;">
+    <li class="namedcolours__item --black blue light" style="background-color: LightBlue;">
       <dl>
         <dt>Name</dt>
         <dd>LightBlue</dd>
         <dt>Hex value</dt>
-        <dd>#ADD8E6</dd>
+        <dd>#ADD8E6 <button type="button" class="copyButton" data-copy="#ADD8E6">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(173,216,230)</dd>
+        <dd>rgb(173,216,230) <button type="button" class="copyButton" data-copy="rgb(173,216,230)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>13.74</dd>
@@ -1261,14 +1335,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightCoral;">
+    <li class="namedcolours__item --black red pink" style="background-color: LightCoral;">
       <dl>
         <dt>Name</dt>
         <dd>LightCoral</dd>
         <dt>Hex value</dt>
-        <dd>#F08080</dd>
+        <dd>#F08080 <button type="button" class="copyButton" data-copy="#F08080">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(240,128,128)</dd>
+        <dd>rgb(240,128,128) <button type="button" class="copyButton" data-copy="rgb(240,128,128)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>8.10</dd>
@@ -1279,14 +1353,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightCyan;">
+    <li class="namedcolours__item --black blue white light" style="background-color: LightCyan;">
       <dl>
         <dt>Name</dt>
         <dd>LightCyan</dd>
         <dt>Hex value</dt>
-        <dd>#E0FFFF</dd>
+        <dd>#E0FFFF <button type="button" class="copyButton" data-copy="#E0FFFF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(224,255,255)</dd>
+        <dd>rgb(224,255,255) <button type="button" class="copyButton" data-copy="rgb(224,255,255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>19.92</dd>
@@ -1297,14 +1371,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightGoldenRodYellow;">
+    <li class="namedcolours__item --black yellow light" style="background-color: LightGoldenRodYellow;">
       <dl>
         <dt>Name</dt>
         <dd>LightGoldenRodYellow</dd>
         <dt>Hex value</dt>
-        <dd>#FAFAD2</dd>
+        <dd>#FAFAD2 <button type="button" class="copyButton" data-copy="#FAFAD2">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(250,250,210)</dd>
+        <dd>rgb(250,250,210) <button type="button" class="copyButton" data-copy="rgb(250,250,210)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>19.67</dd>
@@ -1315,14 +1389,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightGray;">
+    <li class="namedcolours__item --black neutral light" style="background-color: LightGray;">
       <dl>
         <dt>Name</dt>
         <dd>LightGray</dd>
         <dt>Hex value</dt>
-        <dd>#D3D3D3</dd>
+        <dd>#D3D3D3 <button type="button" class="copyButton" data-copy="#D3D3D3">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(211,211,211)</dd>
+        <dd>rgb(211,211,211) <button type="button" class="copyButton" data-copy="rgb(211,211,211)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>14.03</dd>
@@ -1333,14 +1407,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightGreen;">
+    <li class="namedcolours__item --black green" style="background-color: LightGreen;">
       <dl>
         <dt>Name</dt>
         <dd>LightGreen</dd>
         <dt>Hex value</dt>
-        <dd>#90EE90</dd>
+        <dd>#90EE90 <button type="button" class="copyButton" data-copy="#90EE90">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(144,238,144)</dd>
+        <dd>rgb(144,238,144) <button type="button" class="copyButton" data-copy="rgb(144,238,144)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>14.82</dd>
@@ -1351,14 +1425,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightPink;">
+    <li class="namedcolours__item --black pink light" style="background-color: LightPink;">
       <dl>
         <dt>Name</dt>
         <dd>LightPink</dd>
         <dt>Hex value</dt>
-        <dd>#FFB6C1</dd>
+        <dd>#FFB6C1 <button type="button" class="copyButton" data-copy="#FFB6C1">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,182,193)</dd>
+        <dd>rgb(255,182,193) <button type="button" class="copyButton" data-copy="rgb(255,182,193)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>12.71</dd>
@@ -1369,14 +1443,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightSalmon;">
+    <li class="namedcolours__item --black pink orange" style="background-color: LightSalmon;">
       <dl>
         <dt>Name</dt>
         <dd>LightSalmon</dd>
         <dt>Hex value</dt>
-        <dd>#FFA07A</dd>
+        <dd>#FFA07A <button type="button" class="copyButton" data-copy="#FFA07A">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,160,122)</dd>
+        <dd>rgb(255,160,122) <button type="button" class="copyButton" data-copy="rgb(255,160,122)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>10.56</dd>
@@ -1387,14 +1461,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightSeaGreen;">
+    <li class="namedcolours__item --black green blue" style="background-color: LightSeaGreen;">
       <dl>
         <dt>Name</dt>
         <dd>LightSeaGreen</dd>
-        <dt>Hex value</dt>
+        <dt>Hex value <button type="button" class="copyButton" data-copy="#20B2AA">Copy hex value</button></dt>
         <dd>#20B2AA</dd>
         <dt>RGB value</dt>
-        <dd>rgb(32,178,170 </dd>
+        <dd>rgb(32,178,170 <button type="button" class="copyButton" data-copy="dd>rgb(32,178,170)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>8.01</dd>
@@ -1405,14 +1479,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightSkyBlue;">
+    <li class="namedcolours__item --black blue light" style="background-color: LightSkyBlue;">
       <dl>
         <dt>Name</dt>
         <dd>LightSkyBlue</dd>
         <dt>Hex value</dt>
-        <dd>#87CEFA</dd>
+        <dd>#87CEFA <button type="button" class="copyButton" data-copy="#87CEFA">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(135,206,250)</dd>
+        <dd>rgb(135,206,250) <button type="button" class="copyButton" data-copy="rgb(135,206,250)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>12.24</dd>
@@ -1423,14 +1497,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightSlateGray;">
+    <li class="namedcolours__item --black neutral" style="background-color: LightSlateGray;">
       <dl>
         <dt>Name</dt>
         <dd>LightSlateGray</dd>
         <dt>Hex value</dt>
-        <dd>#778899</dd>
+        <dd>#778899 <button type="button" class="copyButton" data-copy="#778899">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(119,136,153)</dd>
+        <dd>rgb(119,136,153) <button type="button" class="copyButton" data-copy="rgb(119,136,153)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.77</dd>
@@ -1441,14 +1515,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightSteelBlue;">
+    <li class="namedcolours__item --black blue light" style="background-color: LightSteelBlue;">
       <dl>
         <dt>Name</dt>
         <dd>LightSteelBlue</dd>
         <dt>Hex value</dt>
-        <dd>#B0C4DE</dd>
+        <dd>#B0C4DE <button type="button" class="copyButton" data-copy="#B0C4DE">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(176,196,222)</dd>
+        <dd>rgb(176,196,222) <button type="button" class="copyButton" data-copy="rgb(176,196,222)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>11.80</dd>
@@ -1459,14 +1533,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LightYellow;">
+    <li class="namedcolours__item --black yellow light" style="background-color: LightYellow;">
       <dl>
         <dt>Name</dt>
         <dd>LightYellow</dd>
         <dt>Hex value</dt>
-        <dd>#FFFFE0</dd>
+        <dd>#FFFFE0 <button type="button" class="copyButton" data-copy="#FFFFE0">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,255,224)</dd>
+        <dd>rgb(255,255,224) <button type="button" class="copyButton" data-copy="rgb(255,255,224)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>20.63</dd>
@@ -1477,14 +1551,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Lime;">
+    <li class="namedcolours__item --black green bright" style="background-color: Lime;">
       <dl>
         <dt>Name</dt>
         <dd>Lime</dd>
         <dt>Hex value</dt>
-        <dd>#00FF00</dd>
+        <dd>#00FF00 <button type="button" class="copyButton" data-copy="#00FF00">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,255,0)</dd>
+        <dd>rgb(0,255,0) <button type="button" class="copyButton" data-copy="rgb(0,255,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>15.30</dd>
@@ -1495,14 +1569,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: LimeGreen;">
+    <li class="namedcolours__item --black green" style="background-color: LimeGreen;">
       <dl>
         <dt>Name</dt>
         <dd>LimeGreen</dd>
         <dt>Hex value</dt>
-        <dd>#32CD32</dd>
+        <dd>#32CD32 <button type="button" class="copyButton" data-copy="#32CD32">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(50,205,50)</dd>
+        <dd>rgb(50,205,50) <button type="button" class="copyButton" data-copy="rgb(50,205,50)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>9.91</dd>
@@ -1513,14 +1587,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Linen;">
+    <li class="namedcolours__item --black white light" style="background-color: Linen;">
       <dl>
         <dt>Name</dt>
         <dd>Linen</dd>
         <dt>Hex value</dt>
-        <dd>#FAF0E6</dd>
+        <dd>#FAF0E6 <button type="button" class="copyButton" data-copy="#FAF0E6">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(250,240,230)</dd>
+        <dd>rgb(250,240,230) <button type="button" class="copyButton" data-copy="rgb(250,240,230)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>18.67</dd>
@@ -1531,14 +1605,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Magenta;">
+    <li class="namedcolours__item --black pink purple bright" style="background-color: Magenta;">
       <dl>
         <dt>Name</dt>
         <dd>Magenta</dd>
         <dt>Hex value</dt>
-        <dd>#FF00FF</dd>
+        <dd>#FF00FF <button type="button" class="copyButton" data-copy="#FF00FF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,0,255)</dd>
+        <dd>rgb(255,0,255) <button type="button" class="copyButton" data-copy="rgb(255,0,255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>6.70</dd>
@@ -1549,14 +1623,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: Maroon;">
+    <li class="namedcolours__item --white brown red dark" style="background-color: Maroon;">
       <dl>
         <dt>Name</dt>
         <dd>Maroon</dd>
         <dt>Hex value</dt>
-        <dd>#800000</dd>
+        <dd>#800000 <button type="button" class="copyButton" data-copy="#800000">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(128,0,0)</dd>
+        <dd>rgb(128,0,0) <button type="button" class="copyButton" data-copy="rgb(128,0,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>1.92</dd>
@@ -1567,14 +1641,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: MediumAquaMarine;">
+    <li class="namedcolours__item --black blue green" style="background-color: MediumAquaMarine;">
       <dl>
         <dt>Name</dt>
         <dd>MediumAquaMarine</dd>
         <dt>Hex value</dt>
-        <dd>#66CDAA</dd>
+        <dd>#66CDAA <button type="button" class="copyButton" data-copy="#66CDAA">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(102,205,170)</dd>
+        <dd>rgb(102,205,170) <button type="button" class="copyButton" data-copy="rgb(102,205,170)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>10.88</dd>
@@ -1585,14 +1659,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: MediumBlue;">
+    <li class="namedcolours__item --white blue" style="background-color: MediumBlue;">
       <dl>
         <dt>Name</dt>
         <dd>MediumBlue</dd>
         <dt>Hex value</dt>
-        <dd>#0000CD</dd>
+        <dd>#0000CD <button type="button" class="copyButton" data-copy="#0000CD">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,0,205)</dd>
+        <dd>rgb(0,0,205) <button type="button" class="copyButton" data-copy="rgb(0,0,205)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>1.88</dd>
@@ -1603,14 +1677,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: MediumPurple;">
+    <li class="namedcolours__item --black purple" style="background-color: MediumPurple;">
       <dl>
         <dt>Name</dt>
         <dd>MediumPurple</dd>
         <dt>Hex value</dt>
-        <dd>#9370DB</dd>
+        <dd>#9370DB <button type="button" class="copyButton" data-copy="#9370DB">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(147,112,219)</dd>
+        <dd>rgb(147,112,219) <button type="button" class="copyButton" data-copy="rgb(147,112,219)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.58</dd>
@@ -1621,14 +1695,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: MediumSeaGreen;">
+    <li class="namedcolours__item --black green" style="background-color: MediumSeaGreen;">
       <dl>
         <dt>Name</dt>
         <dd>MediumSeaGreen</dd>
         <dt>Hex value</dt>
-        <dd>#3CB371</dd>
+        <dd>#3CB371 <button type="button" class="copyButton" data-copy="#3CB371">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(60,179,113)</dd>
+        <dd>rgb(60,179,113) <button type="button" class="copyButton" data-copy="rgb(60,179,113)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>7.88</dd>
@@ -1639,14 +1713,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: MediumSlateBlue;">
+    <li class="namedcolours__item --black blue" style="background-color: MediumSlateBlue;">
       <dl>
         <dt>Name</dt>
         <dd>MediumSlateBlue</dd>
         <dt>Hex value</dt>
-        <dd>#7B68EE</dd>
+        <dd>#7B68EE <button type="button" class="copyButton" data-copy="#7B68EE">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(123,104,238)</dd>
+        <dd>rgb(123,104,238) <button type="button" class="copyButton" data-copy="rgb(123,104,238)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.06</dd>
@@ -1657,14 +1731,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: MediumSpringGreen;">
+    <li class="namedcolours__item --black green" style="background-color: MediumSpringGreen;">
       <dl>
         <dt>Name</dt>
         <dd>MediumSpringGreen</dd>
         <dt>Hex value</dt>
-        <dd>#00FA9A</dd>
+        <dd>#00FA9A <button type="button" class="copyButton" data-copy="#00FA9A">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,250,154)</dd>
+        <dd>rgb(0,250,154) <button type="button" class="copyButton" data-copy="rgb(0,250,154)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>15.14</dd>
@@ -1675,14 +1749,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: MediumTurquoise;">
+    <li class="namedcolours__item --black blue" style="background-color: MediumTurquoise;">
       <dl>
         <dt>Name</dt>
         <dd>MediumTurquoise</dd>
         <dt>Hex value</dt>
-        <dd>#48D1CC</dd>
+        <dd>#48D1CC <button type="button" class="copyButton" data-copy="#48D1CC">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(72,209,204)</dd>
+        <dd>rgb(72,209,204) <button type="button" class="copyButton" data-copy="rgb(72,209,204)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>11.27</dd>
@@ -1693,14 +1767,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: MediumVioletRed;">
+    <li class="namedcolours__item --white pink red" style="background-color: MediumVioletRed;">
       <dl>
         <dt>Name</dt>
         <dd>MediumVioletRed</dd>
         <dt>Hex value</dt>
-        <dd>#C71585</dd>
+        <dd>#C71585 <button type="button" class="copyButton" data-copy="#C71585">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(199,21,133)</dd>
+        <dd>rgb(199,21,133) <button type="button" class="copyButton" data-copy="rgb(199,21,133)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>3.87</dd>
@@ -1711,14 +1785,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: MidnightBlue;">
+    <li class="namedcolours__item --white blue dark" style="background-color: MidnightBlue;">
       <dl>
         <dt>Name</dt>
         <dd>MidnightBlue</dd>
         <dt>Hex value</dt>
-        <dd>#191970</dd>
+        <dd>#191970 <button type="button" class="copyButton" data-copy="#191970">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(25,25,112)</dd>
+        <dd>rgb(25,25,112) <button type="button" class="copyButton" data-copy="rgb(25,25,112)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>1.41</dd>
@@ -1729,14 +1803,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: MintCream;">
+    <li class="namedcolours__item --black white light" style="background-color: MintCream;">
       <dl>
         <dt>Name</dt>
         <dd>MintCream</dd>
         <dt>Hex value</dt>
-        <dd>#F5FFFA</dd>
+        <dd>#F5FFFA <button type="button" class="copyButton" data-copy="#F5FFFA">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(245,255,250)</dd>
+        <dd>rgb(245,255,250) <button type="button" class="copyButton" data-copy="rgb(245,255,250)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>20.57</dd>
@@ -1747,14 +1821,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: MistyRose;">
+    <li class="namedcolours__item --black white light" style="background-color: MistyRose;">
       <dl>
         <dt>Name</dt>
         <dd>MistyRose</dd>
         <dt>Hex value</dt>
-        <dd>#FFE4E1</dd>
+        <dd>#FFE4E1 <button type="button" class="copyButton" data-copy="#FFE4E1">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,228,225)</dd>
+        <dd>rgb(255,228,225) <button type="button" class="copyButton" data-copy="rgb(255,228,225)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>17.44</dd>
@@ -1765,14 +1839,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Moccasin;">
+    <li class="namedcolours__item --black light yellow" style="background-color: Moccasin;">
       <dl>
         <dt>Name</dt>
         <dd>Moccasin</dd>
         <dt>Hex value</dt>
-        <dd>#FFE4B5</dd>
+        <dd>#FFE4B5 <button type="button" class="copyButton" data-copy="#FFE4B5">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,228,181)</dd>
+        <dd>rgb(255,228,181) <button type="button" class="copyButton" data-copy="rgb(255,228,181)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>17.02</dd>
@@ -1783,14 +1857,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: NavajoWhite;">
+    <li class="namedcolours__item --black light yellow" style="background-color: NavajoWhite;">
       <dl>
         <dt>Name</dt>
         <dd>NavajoWhite</dd>
         <dt>Hex value</dt>
-        <dd>#FFDEAD</dd>
+        <dd>#FFDEAD <button type="button" class="copyButton" data-copy="#FFDEAD">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,222,173)</dd>
+        <dd>rgb(255,222,173) <button type="button" class="copyButton" data-copy="rgb(255,222,173)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>16.30</dd>
@@ -1801,14 +1875,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: Navy;">
+    <li class="namedcolours__item --white blue dark" style="background-color: Navy;">
       <dl>
         <dt>Name</dt>
         <dd>Navy</dd>
         <dt>Hex value</dt>
-        <dd>#000080</dd>
+        <dd>#000080 <button type="button" class="copyButton" data-copy="#000080">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,0,128)</dd>
+        <dd>rgb(0,0,128) <button type="button" class="copyButton" data-copy="rgb(0,0,128)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>1.31</dd>
@@ -1819,14 +1893,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: OldLace;">
+    <li class="namedcolours__item --black light" style="background-color: OldLace;">
       <dl>
         <dt>Name</dt>
         <dd>OldLace</dd>
         <dt>Hex value</dt>
-        <dd>#FDF5E6</dd>
+        <dd>#FDF5E6 <button type="button" class="copyButton" data-copy="#FDF5E6">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(253,245,230)</dd>
+        <dd>rgb(253,245,230) <button type="button" class="copyButton" data-copy="rgb(253,245,230)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>19.38</dd>
@@ -1837,14 +1911,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Olive;">
+    <li class="namedcolours__item --black green brown" style="background-color: Olive;">
       <dl>
         <dt>Name</dt>
         <dd>Olive</dd>
         <dt>Hex value</dt>
-        <dd>#808000</dd>
+        <dd>#808000 <button type="button" class="copyButton" data-copy="#808000">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(128,128,0)</dd>
+        <dd>rgb(128,128,0) <button type="button" class="copyButton" data-copy="rgb(128,128,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.01</dd>
@@ -1855,14 +1929,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: OliveDrab;">
+    <li class="namedcolours__item --black green" style="background-color: OliveDrab;">
       <dl>
         <dt>Name</dt>
         <dd>OliveDrab</dd>
         <dt>Hex value</dt>
-        <dd>#6B8E23</dd>
+        <dd>#6B8E23 <button type="button" class="copyButton" data-copy="#6B8E23">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(107,142,35)</dd>
+        <dd>rgb(107,142,35) <button type="button" class="copyButton" data-copy="rgb(107,142,35)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.52</dd>
@@ -1873,14 +1947,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Orange;">
+    <li class="namedcolours__item --black orange bright" style="background-color: Orange;">
       <dl>
         <dt>Name</dt>
         <dd>Orange</dd>
         <dt>Hex value</dt>
-        <dd>#FFA500</dd>
+        <dd>#FFA500 <button type="button" class="copyButton" data-copy="#FFA500">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,165,0)</dd>
+        <dd>rgb(255,165,0) <button type="button" class="copyButton" data-copy="rgb(255,165,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>10.63</dd>
@@ -1891,14 +1965,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: OrangeRed;">
+    <li class="namedcolours__item --black orange red bright" style="background-color: OrangeRed;">
       <dl>
         <dt>Name</dt>
         <dd>OrangeRed</dd>
         <dt>Hex value</dt>
-        <dd>#FF4500</dd>
+        <dd>#FF4500 <button type="button" class="copyButton" data-copy="#FF4500">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,69,0)</dd>
+        <dd>rgb(255,69,0) <button type="button" class="copyButton" data-copy="rgb(255,69,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>6.10</dd>
@@ -1909,14 +1983,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Orchid;">
+    <li class="namedcolours__item --black purple pink" style="background-color: Orchid;">
       <dl>
         <dt>Name</dt>
         <dd>Orchid</dd>
         <dt>Hex value</dt>
-        <dd>#DA70D6</dd>
+        <dd>#DA70D6 <button type="button" class="copyButton" data-copy="#DA70D6">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(218,112,214)</dd>
+        <dd>rgb(218,112,214) <button type="button" class="copyButton" data-copy="rgb(218,112,214)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>7.27</dd>
@@ -1927,14 +2001,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: PaleGoldenRod;">
+    <li class="namedcolours__item --black yellow light" style="background-color: PaleGoldenRod;">
       <dl>
         <dt>Name</dt>
         <dd>PaleGoldenRod</dd>
         <dt>Hex value</dt>
-        <dd>#EEE8AA</dd>
+        <dd>#EEE8AA <button type="button" class="copyButton" data-copy="#EEE8AA">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(238,232,170)</dd>
+        <dd>rgb(238,232,170) <button type="button" class="copyButton" data-copy="rgb(238,232,170)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>16.76</dd>
@@ -1945,14 +2019,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: PaleGreen;">
+    <li class="namedcolours__item --black green" style="background-color: PaleGreen;">
       <dl>
         <dt>Name</dt>
         <dd>PaleGreen</dd>
         <dt>Hex value</dt>
-        <dd>#98FB98</dd>
+        <dd>#98FB98 <button type="button" class="copyButton" data-copy="#98FB98">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(152,251,152)</dd>
+        <dd>rgb(152,251,152) <button type="button" class="copyButton" data-copy="rgb(152,251,152)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>16.59</dd>
@@ -1963,14 +2037,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: PaleTurquoise;">
+    <li class="namedcolours__item --black blue light" style="background-color: PaleTurquoise;">
       <dl>
         <dt>Name</dt>
         <dd>PaleTurquoise</dd>
         <dt>Hex value</dt>
-        <dd>#AFEEEE</dd>
+        <dd>#AFEEEE <button type="button" class="copyButton" data-copy="#AFEEEE">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(175,238,238)</dd>
+        <dd>rgb(175,238,238) <button type="button" class="copyButton" data-copy="rgb(175,238,238)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>16.29</dd>
@@ -1981,14 +2055,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: PaleVioletRed;">
+    <li class="namedcolours__item --black pink red" style="background-color: PaleVioletRed;">
       <dl>
         <dt>Name</dt>
         <dd>PaleVioletRed</dd>
         <dt>Hex value</dt>
-        <dd>#DB7093</dd>
+        <dd>#DB7093 <button type="button" class="copyButton" data-copy="#DB7093">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(219,112,147)</dd>
+        <dd>rgb(219,112,147) <button type="button" class="copyButton" data-copy="rgb(219,112,147)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>6.75</dd>
@@ -1999,14 +2073,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: PapayaWhip;">
+    <li class="namedcolours__item --black yellow white light" style="background-color: PapayaWhip;">
       <dl>
         <dt>Name</dt>
         <dd>PapayaWhip</dd>
         <dt>Hex value</dt>
-        <dd>#FFEFD5</dd>
+        <dd>#FFEFD5 <button type="button" class="copyButton" data-copy="#FFEFD5">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,239,213)</dd>
+        <dd>rgb(255,239,213) <button type="button" class="copyButton" data-copy="rgb(255,239,213)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>18.56</dd>
@@ -2017,14 +2091,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: PeachPuff;">
+    <li class="namedcolours__item --black orange light" style="background-color: PeachPuff;">
       <dl>
         <dt>Name</dt>
         <dd>PeachPuff</dd>
         <dt>Hex value</dt>
-        <dd>#FFDAB9</dd>
+        <dd>#FFDAB9 <button type="button" class="copyButton" data-copy="#FFDAB9">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,218,185)</dd>
+        <dd>rgb(255,218,185) <button type="button" class="copyButton" data-copy="rgb(255,218,185)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>15.98</dd>
@@ -2035,14 +2109,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Peru;">
+    <li class="namedcolours__item --black orange" style="background-color: Peru;">
       <dl>
         <dt>Name</dt>
         <dd>Peru</dd>
         <dt>Hex value</dt>
-        <dd>#CD853F</dd>
+        <dd>#CD853F <button type="button" class="copyButton" data-copy="#CD853F">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(205,133,63)</dd>
+        <dd>rgb(205,133,63) <button type="button" class="copyButton" data-copy="rgb(205,133,63)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>7.02</dd>
@@ -2053,14 +2127,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Pink;">
+    <li class="namedcolours__item --black pink light" style="background-color: Pink;">
       <dl>
         <dt>Name</dt>
         <dd>Pink</dd>
         <dt>Hex value</dt>
-        <dd>#FFC0CB</dd>
+        <dd>#FFC0CB <button type="button" class="copyButton" data-copy="#FFC0CB">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,192,203)</dd>
+        <dd>rgb(255,192,203) <button type="button" class="copyButton" data-copy="rgb(255,192,203)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>13.65</dd>
@@ -2071,14 +2145,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Plum;">
+    <li class="namedcolours__item --black purple light" style="background-color: Plum;">
       <dl>
         <dt>Name</dt>
         <dd>Plum</dd>
         <dt>Hex value</dt>
-        <dd>#DDA0DD</dd>
+        <dd>#DDA0DD <button type="button" class="copyButton" data-copy="#DDA0DD">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(221,160,221)</dd>
+        <dd>rgb(221,160,221) <button type="button" class="copyButton" data-copy="rgb(221,160,221)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>10.15</dd>
@@ -2089,14 +2163,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: PaleTurquoise;">
+    <li class="namedcolours__item --black blue light" style="background-color: PaleTurquoise;">
       <dl>
         <dt>Name</dt>
         <dd>PaleTurquoise</dd>
         <dt>Hex value</dt>
-        <dd>#AFEEEE</dd>
+        <dd>#AFEEEE <button type="button" class="copyButton" data-copy="#AFEEEE">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(175,238,238)</dd>
+        <dd>rgb(175,238,238) <button type="button" class="copyButton" data-copy="rgb(175,238,238)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>16.29</dd>
@@ -2107,14 +2181,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: PowderBlue;">
+    <li class="namedcolours__item --black blue light" style="background-color: PowderBlue;">
       <dl>
         <dt>Name</dt>
         <dd>PowderBlue</dd>
         <dt>Hex value</dt>
-        <dd>#B0E0E6</dd>
+        <dd>#B0E0E6 <button type="button" class="copyButton" data-copy="#B0E0E6">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(176,224,230)</dd>
+        <dd>rgb(176,224,230) <button type="button" class="copyButton" data-copy="rgb(176,224,230)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>14.65</dd>
@@ -2125,14 +2199,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Purple;">
+    <li class="namedcolours__item --black purple dark" style="background-color: Purple;">
       <dl>
         <dt>Name</dt>
         <dd>Purple</dd>
         <dt>Hex value</dt>
-        <dd>#800080</dd>
+        <dd>#800080 <button type="button" class="copyButton" data-copy="#800080">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(128,0,128)</dd>
+        <dd>rgb(128,0,128) <button type="button" class="copyButton" data-copy="rgb(128,0,128)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>2.23</dd>
@@ -2143,14 +2217,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Red;">
+    <li class="namedcolours__item --black red bright" style="background-color: Red;">
       <dl>
         <dt>Name</dt>
         <dd>Red</dd>
         <dt>Hex value</dt>
-        <dd>#FF0000</dd>
+        <dd>#FF0000 <button type="button" class="copyButton" data-copy="#FF0000">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,0,0)</dd>
+        <dd>rgb(255,0,0) <button type="button" class="copyButton" data-copy="rgb(255,0,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.25</dd>
@@ -2161,14 +2235,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: RosyBrown;">
+    <li class="namedcolours__item --black pink brown" style="background-color: RosyBrown;">
       <dl>
         <dt>Name</dt>
         <dd>RosyBrown</dd>
         <dt>Hex value</dt>
-        <dd>#BC8F8F</dd>
+        <dd>#BC8F8F <button type="button" class="copyButton" data-copy="#BC8F8F">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(188,143,143)</dd>
+        <dd>rgb(188,143,143) <button type="button" class="copyButton" data-copy="rgb(188,143,143)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>7.46</dd>
@@ -2179,14 +2253,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: RoyalBlue;">
+    <li class="namedcolours__item --white blue" style="background-color: RoyalBlue;">
       <dl>
         <dt>Name</dt>
         <dd>RoyalBlue</dd>
         <dt>Hex value</dt>
-        <dd>#4169E1</dd>
+        <dd>#4169E1 <button type="button" class="copyButton" data-copy="#4169E1">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(65,105,225)</dd>
+        <dd>rgb(65,105,225) <button type="button" class="copyButton" data-copy="rgb(65,105,225)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>4.33</dd>
@@ -2197,14 +2271,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: SaddleBrown;">
+    <li class="namedcolours__item --white orange" style="background-color: SaddleBrown;">
       <dl>
         <dt>Name</dt>
         <dd>SaddleBrown</dd>
         <dt>Hex value</dt>
-        <dd>#8B4513</dd>
+        <dd>#8B4513 <button type="button" class="copyButton" data-copy="#8B4513">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(139,69,19)</dd>
+        <dd>rgb(139,69,19) <button type="button" class="copyButton" data-copy="rgb(139,69,19)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>2.96</dd>
@@ -2215,14 +2289,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Salmon;">
+    <li class="namedcolours__item --black orange pink" style="background-color: Salmon;">
       <dl>
         <dt>Name</dt>
         <dd>Salmon</dd>
         <dt>Hex value</dt>
-        <dd>#FA8072</dd>
+        <dd>#FA8072 <button type="button" class="copyButton" data-copy="#FA8072">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(250,128,114)</dd>
+        <dd>rgb(250,128,114) <button type="button" class="copyButton" data-copy="rgb(250,128,114)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>8.40</dd>
@@ -2233,14 +2307,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: SandyBrown;">
+    <li class="namedcolours__item --black brown orange yellow" style="background-color: SandyBrown;">
       <dl>
         <dt>Name</dt>
         <dd>SandyBrown</dd>
         <dt>Hex value</dt>
-        <dd>#F4A460</dd>
+        <dd>#F4A460 <button type="button" class="copyButton" data-copy="#F4A460">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(244,164,96)</dd>
+        <dd>rgb(244,164,96) <button type="button" class="copyButton" data-copy="rgb(244,164,96)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>10.33</dd>
@@ -2251,14 +2325,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: SeaGreen;">
+    <li class="namedcolours__item --black green dark" style="background-color: SeaGreen;">
       <dl>
         <dt>Name</dt>
         <dd>SeaGreen</dd>
         <dt>Hex value</dt>
-        <dd>#2E8B57</dd>
+        <dd>#2E8B57 <button type="button" class="copyButton" data-copy="#2E8B57">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(46,139,87)</dd>
+        <dd>rgb(46,139,87) <button type="button" class="copyButton" data-copy="rgb(46,139,87)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>4.95</dd>
@@ -2269,14 +2343,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: SeaShell;">
+    <li class="namedcolours__item --black white light" style="background-color: SeaShell;">
       <dl>
         <dt>Name</dt>
         <dd>SeaShell</dd>
         <dt>Hex value</dt>
-        <dd>#FFF5EE</dd>
+        <dd>#FFF5EE <button type="button" class="copyButton" data-copy="#FFF5EE">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,245,238)</dd>
+        <dd>rgb(255,245,238) <button type="button" class="copyButton" data-copy="rgb(255,245,238)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>19.55</dd>
@@ -2287,14 +2361,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: Sienna;">
+    <li class="namedcolours__item --white brown orange" style="background-color: Sienna;">
       <dl>
         <dt>Name</dt>
         <dd>Sienna</dd>
         <dt>Hex value</dt>
-        <dd>#A0522D</dd>
+        <dd>#A0522D <button type="button" class="copyButton" data-copy="#A0522D">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(160,82,45)</dd>
+        <dd>rgb(160,82,45) <button type="button" class="copyButton" data-copy="rgb(160,82,45)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>3.74</dd>
@@ -2305,14 +2379,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Silver;">
+    <li class="namedcolours__item --black neutral" style="background-color: Silver;">
       <dl>
         <dt>Name</dt>
         <dd>Silver</dd>
         <dt>Hex value</dt>
-        <dd>#C0C0C0</dd>
+        <dd>#C0C0C0 <button type="button" class="copyButton" data-copy="#C0C0C0">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(192,192,192)</dd>
+        <dd>rgb(192,192,192) <button type="button" class="copyButton" data-copy="rgb(192,192,192)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>11.54</dd>
@@ -2323,14 +2397,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: SkyBlue;">
+    <li class="namedcolours__item --black blue light" style="background-color: SkyBlue;">
       <dl>
         <dt>Name</dt>
         <dd>SkyBlue</dd>
         <dt>Hex value</dt>
-        <dd>#87CEEB</dd>
+        <dd>#87CEEB <button type="button" class="copyButton" data-copy="#87CEEB">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(135,206,235)</dd>
+        <dd>rgb(135,206,235) <button type="button" class="copyButton" data-copy="rgb(135,206,235)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>12.06</dd>
@@ -2341,14 +2415,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: SlateBlue;">
+    <li class="namedcolours__item --white blue" style="background-color: SlateBlue;">
       <dl>
         <dt>Name</dt>
         <dd>SlateBlue</dd>
         <dt>Hex value</dt>
-        <dd>#6A5ACD</dd>
+        <dd>#6A5ACD <button type="button" class="copyButton" data-copy="#6A5ACD">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(106,90,205)</dd>
+        <dd>rgb(106,90,205) <button type="button" class="copyButton" data-copy="rgb(106,90,205)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>3.96</dd>
@@ -2359,14 +2433,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: SlateGray;">
+    <li class="namedcolours__item --black neutral" style="background-color: SlateGray;">
       <dl>
         <dt>Name</dt>
         <dd>SlateGray</dd>
         <dt>Hex value</dt>
-        <dd>#708090</dd>
+        <dd>#708090 <button type="button" class="copyButton" data-copy="#708090">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(112,128,144)</dd>
+        <dd>rgb(112,128,144) <button type="button" class="copyButton" data-copy="rgb(112,128,144)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.18</dd>
@@ -2377,14 +2451,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Snow;">
+    <li class="namedcolours__item --black white light" style="background-color: Snow;">
       <dl>
         <dt>Name</dt>
         <dd>Snow</dd>
         <dt>Hex value</dt>
-        <dd>#FFFAFA</dd>
+        <dd>#FFFAFA <button type="button" class="copyButton" data-copy="#FFFAFA">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,250,250)</dd>
+        <dd>rgb(255,250,250) <button type="button" class="copyButton" data-copy="rgb(255,250,250)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>20.31</dd>
@@ -2395,14 +2469,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: SpringGreen;">
+    <li class="namedcolours__item --black green bright" style="background-color: SpringGreen;">
       <dl>
         <dt>Name</dt>
         <dd>SpringGreen</dd>
         <dt>Hex value</dt>
-        <dd>#00FF7F</dd>
+        <dd>#00FF7F <button type="button" class="copyButton" data-copy="#00FF7F">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,255,127)</dd>
+        <dd>rgb(0,255,127) <button type="button" class="copyButton" data-copy="rgb(0,255,127)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>15.61</dd>
@@ -2413,14 +2487,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: SteelBlue;">
+    <li class="namedcolours__item --black blue" style="background-color: SteelBlue;">
       <dl>
         <dt>Name</dt>
         <dd>SteelBlue</dd>
         <dt>Hex value</dt>
-        <dd>#4682B4</dd>
+        <dd>#4682B4 <button type="button" class="copyButton" data-copy="#4682B4">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(70,130,180)</dd>
+        <dd>rgb(70,130,180) <button type="button" class="copyButton" data-copy="rgb(70,130,180)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>5.11</dd>
@@ -2431,14 +2505,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Tan;">
+    <li class="namedcolours__item --black yellow light" style="background-color: Tan;">
       <dl>
         <dt>Name</dt>
         <dd>Tan</dd>
         <dt>Hex value</dt>
-        <dd>#D2B48C</dd>
+        <dd>#D2B48C <button type="button" class="copyButton" data-copy="#D2B48C">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(210,180,140)</dd>
+        <dd>rgb(210,180,140) <button type="button" class="copyButton" data-copy="rgb(210,180,140)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>10.65</dd>
@@ -2449,14 +2523,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --white blue bright" style="background-color: Teal;">
+    <li class="namedcolours__item --white green" style="background-color: Teal;">
       <dl>
         <dt>Name</dt>
         <dd>Teal</dd>
         <dt>Hex value</dt>
-        <dd>#008080</dd>
+        <dd>#008080 <button type="button" class="copyButton" data-copy="#008080">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(0,128,128)</dd>
+        <dd>rgb(0,128,128) <button type="button" class="copyButton" data-copy="rgb(0,128,128)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>4.40</dd>
@@ -2467,14 +2541,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Thistle;">
+    <li class="namedcolours__item --black pink light" style="background-color: Thistle;">
       <dl>
         <dt>Name</dt>
         <dd>Thistle</dd>
         <dt>Hex value</dt>
-        <dd>#D8BFD8</dd>
+        <dd>#D8BFD8 <button type="button" class="copyButton" data-copy="#D8BFD8">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(216,191,216)</dd>
+        <dd>rgb(216,191,216) <button type="button" class="copyButton" data-copy="rgb(216,191,216)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>12.36</dd>
@@ -2485,14 +2559,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Tomato;">
+    <li class="namedcolours__item --black orange red" style="background-color: Tomato;">
       <dl>
         <dt>Name</dt>
         <dd>Tomato</dd>
         <dt>Hex value</dt>
-        <dd>#FF6347</dd>
+        <dd>#FF6347 <button type="button" class="copyButton" data-copy="#FF6347">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,99,71)</dd>
+        <dd>rgb(255,99,71) <button type="button" class="copyButton" data-copy="rgb(255,99,71)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>7.13</dd>
@@ -2508,9 +2582,9 @@ draft: true
         <dt>Name</dt>
         <dd>Turquoise</dd>
         <dt>Hex value</dt>
-        <dd>#40E0D0</dd>
+        <dd>#40E0D0 <button type="button" class="copyButton" data-copy="#40E0D0">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(64,224,208)</dd>
+        <dd>rgb(64,224,208) <button type="button" class="copyButton" data-copy="rgb(64,224,208)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>12.79</dd>
@@ -2521,14 +2595,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Violet;">
+    <li class="namedcolours__item --black purple bright" style="background-color: Violet;">
       <dl>
         <dt>Name</dt>
         <dd>Violet</dd>
         <dt>Hex value</dt>
-        <dd>#EE82EE</dd>
+        <dd>#EE82EE <button type="button" class="copyButton" data-copy="#EE82EE">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(238,130,238)</dd>
+        <dd>rgb(238,130,238) <button type="button" class="copyButton" data-copy="rgb(238,130,238)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>9.06</dd>
@@ -2539,14 +2613,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Wheat;">
+    <li class="namedcolours__item --black white light yellow" style="background-color: Wheat;">
       <dl>
         <dt>Name</dt>
         <dd>Wheat</dd>
         <dt>Hex value</dt>
-        <dd>#F5DEB3</dd>
+        <dd>#F5DEB3 <button type="button" class="copyButton" data-copy="#F5DEB3">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(245,222,179)</dd>
+        <dd>rgb(245,222,179) <button type="button" class="copyButton" data-copy="rgb(245,222,179)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>15.98</dd>
@@ -2557,14 +2631,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: White;">
+    <li class="namedcolours__item --black white light neutral" style="background-color: White;">
       <dl>
         <dt>Name</dt>
         <dd>White</dd>
         <dt>Hex value</dt>
-        <dd>#FFFFFF</dd>
+        <dd>#FFFFFF <button type="button" class="copyButton" data-copy="#FFFFFF">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,255,255)</dd>
+        <dd>rgb(255,255,255) <button type="button" class="copyButton" data-copy="rgb(255,255,255)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>21.00</dd>
@@ -2575,14 +2649,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: WhiteSmoke;">
+    <li class="namedcolours__item --black white light neutral" style="background-color: WhiteSmoke;">
       <dl>
         <dt>Name</dt>
         <dd>WhiteSmoke</dd>
         <dt>Hex value</dt>
-        <dd>#F5F5F5</dd>
+        <dd>#F5F5F5 <button type="button" class="copyButton" data-copy="#F5F5F5">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(245,245,245)</dd>
+        <dd>rgb(245,245,245) <button type="button" class="copyButton" data-copy="rgb(245,245,245)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>19.26</dd>
@@ -2593,14 +2667,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: Yellow;">
+    <li class="namedcolours__item --black yellow bright" style="background-color: Yellow;">
       <dl>
         <dt>Name</dt>
         <dd>Yellow</dd>
         <dt>Hex value</dt>
-        <dd>#FFFF00</dd>
+        <dd>#FFFF00 <button type="button" class="copyButton" data-copy="#FFFF00">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(255,255,0)</dd>
+        <dd>rgb(255,255,0) <button type="button" class="copyButton" data-copy="rgb(255,255,0)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>19.56</dd>
@@ -2611,14 +2685,14 @@ draft: true
         </div>
       </dl>
     </li>
-    <li class="namedcolours__item --black blue bright" style="background-color: YellowGreen;">
+    <li class="namedcolours__item --black green bright" style="background-color: YellowGreen;">
       <dl>
         <dt>Name</dt>
         <dd>YellowGreen</dd>
         <dt>Hex value</dt>
-        <dd>#9ACD32</dd>
+        <dd>#9ACD32 <button type="button" class="copyButton" data-copy="#9ACD32">Copy hex value</button></dd>
         <dt>RGB value</dt>
-        <dd>rgb(154,205,50)</dd>
+        <dd>rgb(154,205,50) <button type="button" class="copyButton" data-copy="rgb(154,205,50)">Copy rgb value</button></dd>
         <div class="namedcolours__cc">
           <dt class="blob blob__black">Colour contrast on black</dt>
           <dd>11.15</dd>
@@ -2640,18 +2714,28 @@ draft: true
   document.getElementById('namedColourReset').addEventListener('click', function (e) {
     colours.forEach(function (colour) {colour.style.display = 'block';})
   })
-  document.querySelectorAll('.namedColourButton').forEach(function (button) {
+  const buttons = document.querySelectorAll('.namedColourButton')
+  buttons.forEach(function (button) {
     button.addEventListener('click', function (e) {
       let selectedColour = button.dataset.colour
       let selectedColourItems = document.querySelectorAll(`.namedcolours__item.${selectedColour}`)
       const noItems = document.getElementById(`namedColourNone`);
       colours.forEach(function (colour) {colour.style.display = 'none'})
       if (selectedColourItems.length > 0) {
-        noItems.style.removeProperty('display');
+        noItems.style.removeProperty('display')
         selectedColourItems.forEach(function (colour) {colour.style.display = 'block'})
       } else { noItems.style.display = 'block' }
     })
-  });
+  })
+
+  document.querySelectorAll('.copyButton').forEach(function (cb) {
+    cb.addEventListener('click', function (e) {
+      let el = e.target
+      let ct = el.dataset.copy
+      navigator.clipboard.writeText(ct)
+      el.innerHTML = "Copied"
+    })
+  })
 
 </script>
 {% endblock %}

@@ -68,3 +68,27 @@ button.ghost[aria-pressed="true"] {
   transform: translate(4px, 4px);
   box-shadow: inset 0 0 0 2px var(--link), 0 0 0 0 var(--linkaccent);
 }
+
+.copyButton {
+  font-size: 0;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center;
+  background-image: url('data:image/svg+xml,<svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.5H10V16H0V3.5ZM2 5.5V14H8V5.5H2Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0.5H13V13H9.5V11H11V2.5H5V4H3V0.5Z" fill="black"/></svg>');
+  background-color: rgba(255,255,255,0.75);
+  box-shadow: inset 0 0 0 2px white, 4px 4px 0 0 rgba(255,255,255,0.3)
+}
+
+.copyButton:hover,
+.copyButton:active {
+  background-color: white;
+  transform: translate(4px, 4px);
+  box-shadow: inset 0 0 0 2px white, 0 0 0 0 rgba(255,255,255,0.3)
+}
+
+.copyButton:active {
+  background-image: url('data:image/svg+xml,<svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.7072 5.70718L4.50008 12.9143L0.792969 9.20718L2.20718 7.79297L4.50008 10.0859L10.293 4.29297L11.7072 5.70718Z" fill="black"/></svg>');
+}
