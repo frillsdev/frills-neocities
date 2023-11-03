@@ -72,13 +72,16 @@
     box-sizing: border-box;
 }
 
-body {
+html {
     font-size: 20px;
     line-height: 1.5;
-    margin: 0;
     background-color: black;
     color: gainsboro;
     font-family: 'Atkisonson Hyperlegible', Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
 }
 
 *:focus-visible {
@@ -110,6 +113,7 @@ a:active {
 }
 
 .header {
+    height: auto;
     padding: 10px;
     width: 12%;
     white-space: nowrap;
@@ -175,13 +179,21 @@ a:active {
     padding: 10px;
 }
 
+.sidebar h3 {
+    font-size: 1rem;
+}
+
 .sidebar ul {
-    list-style-type: none;
+    padding-left: 1.5rem;
     margin: 0;
 }
 
 .sidebar li {
     display: block;
+}
+
+.sidebar li::before {
+    top: 10px;
 }
 
 .main {
@@ -191,6 +203,7 @@ a:active {
 .row {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .row:after {
@@ -204,22 +217,17 @@ p {
 }
 
 .footer {
-    background-color: #282828;
+    text-align: left;
+    border-top: 3px solid #282828;
+    background-color: #000;
     padding: 15px;
     margin-bottom: 15px;
     margin-top: 30px;
     font-size: 90%;
-    width: 100%;
 }
 
 .footer p:first-of-type {
     margin: 0;
-}
-
-@media (min-width: 950px) {
-    .footer {
-        padding-left: 335px;
-    }
 }
 
 .footer a {
@@ -239,6 +247,11 @@ p {
 
 
 .container {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: auto;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 22px;
@@ -246,7 +259,7 @@ p {
 
 .column.sidebar {
     margin-top: 35px;
-    width: 300px;
+    width: 321px;
     background: repeating-linear-gradient(45deg, #282828 0, #282828 10%, transparent 0, transparent 50%);
     background-size: 3em 3em;
     background-color: #000000;
@@ -264,8 +277,8 @@ p {
 }
 
 .column.main {
-    width: calc(100% - 300px);
-    padding: 35px 0 35px 35px;
+    width: calc(100% - 321px);
+    padding: 0;
 }
 
 .column.main>h2:first-of-type {
@@ -280,7 +293,7 @@ p {
 
 .header {
     width: 100%;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 }
 
 .header h1 {
@@ -371,7 +384,8 @@ em {
     color: gold;
 }
 
-ol, ul {
+ol,
+ul {
     padding-left: 1.5rem;
 }
 
@@ -417,7 +431,7 @@ ol>li::before {
     content: counters(item, ".") ". ";
     top: 0;
     position: absolute;
-    left: -1.5rem;
+    right: calc(100% + 0.5rem);
 }
 
 ol ol,
@@ -428,22 +442,26 @@ ul ol {
 ol>li:nth-child(5n+1)::before {
     color: deeppink
 }
+
 ol>li:nth-child(5n+2)::before {
     color: orangered
 }
+
 ol>li:nth-child(5n+3)::before {
     color: gold
 }
+
 ol>li:nth-child(5n+4)::before {
     color: limegreen
 }
+
 ol>li:nth-child(5n+5)::before {
     color: deepskyblue
 }
 
 ol ol li::before,
 ul ol li::before {
-    color: white!important;
+    color: white !important;
     left: -3rem;
 }
 
@@ -581,19 +599,35 @@ input[type="submit"] {
         width: 100%;
     }
 
+    .header {
+        padding-bottom: 1rem;
+    }
+
     .header h1 {
         float: left;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .header button {
         float: right;
     }
+
+    .topnav {
+        flex-direction: row;
+    }
+
+    .topnav a {
+        padding: 3px 12px;
+    }
+
+    .column.main>h2:first-of-type::before {
+        content: none;
+    }
 }
 
 @media screen and (min-width: 700px) and (max-width: 950px) {
 
-    body {
+    html {
         font-size: 20px;
     }
 
@@ -602,27 +636,65 @@ input[type="submit"] {
         width: 100%;
     }
 
+    .column.main {
+        padding: 35px 0 35px 35px;
+    }
+
     .header,
     .topnav {
         width: 100%;
     }
 
-    .column.main {
-        width: 75%;
+    .topnav {
+        flex-direction: row;
+    }
+
+    .header {
+        padding-bottom: 1rem;
     }
 
     .header h1 {
         float: left;
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .header button {
         float: right;
     }
+
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 950px) {
     .column.main {
-        width: calc(80% - 300px);
+        width: calc(90% - 321px);
+        max-width: 700px;
+        padding: 35px 0 35px 35px;
+    }
+
+    .header h1 {
+        top: auto;
+        max-height: none;
+    }
+
+    .topnav {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+
+    .topnav a {
+        top: auto;
+        border-radius: 20px;
+        margin: auto;
+        font-size: 1rem;
+    }
+
+    .column.main {
+        overflow-y: visible;
+        overflow-x: visible;
+        max-height: none;
+    }
+
+    .footer {
+        padding-left: 335px;
     }
 }
