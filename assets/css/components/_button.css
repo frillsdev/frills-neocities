@@ -73,6 +73,7 @@ button.ghost[aria-pressed="true"] {
   font-size: 0;
   width: 25px;
   height: 25px;
+  flex: 0 0 25px;
   padding: 0;
   background-repeat: no-repeat;
   background-size: 10px;

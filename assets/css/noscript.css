@@ -1,4 +1,4 @@
 .noscriptHide,
 .settings {
-    display: none;
+    display: none!important;
 }
