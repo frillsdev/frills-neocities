@@ -153,6 +153,7 @@ tags:
 
 {% block main %}
 <div class="reading-width">
+  <p>All modern browsers support 140 colour names, you can use these in HTML and CSS instead of HEX, RGB and HSL values.</p>
   <ul class="stars">
     <li><a href="https://stackoverflow.com/a/8561913">Are there any cons to using color names in place of color codes in CSS? - Stack Overflow</a></li>
     <li><a href="https://www.w3schools.com/tags/ref_colornames.asp">HTML Color Names - w3 Schools</a></li>
@@ -210,7 +211,7 @@ tags:
     </button>
   </header>
 
-  <ul class="namedcolours">
+  <ol class="namedcolours">
     <li class="namedcolours__none" id="namedColourNone">
       <p>No colours for the selected filter</p>
     </li>
@@ -571,6 +572,26 @@ tags:
           <div class="namedcolours__cc">
             <dt class="blob blob__white">Colour contrast on white</dt>
             <dd>2.97</dd>
+          </div>
+        </div>
+      </dl>
+    </li>
+    <li class="namedcolours__item --black yellow light" style="background-color: Cornsilk;">
+      <dl>
+        <dt>Name</dt>
+        <dd>Cornsilk</dd>
+        <dt>Hex value</dt>
+        <dd>#FFF8DC <button type="button" class="copyButton" data-copy="#FFF8DC">Copy hex value</button></dd>
+        <dt>RGB value</dt>
+        <dd>rgb(255,248,220) <button type="button" class="copyButton" data-copy="rgb(255,248,220)">Copy rgb value</button></dd>
+        <div class="namedcolours__cc-wrap">
+          <div class="namedcolours__cc">
+            <dt class="blob blob__black">Colour contrast on black</dt>
+            <dd>19.71</dd>
+          </div>
+          <div class="namedcolours__cc">
+            <dt class="blob blob__white">Colour contrast on white</dt>
+            <dd>1.07</dd>
           </div>
         </div>
       </dl>
@@ -2995,7 +3016,7 @@ tags:
         </div>
       </dl>
     </li>
-  </ul>
+  </ol>
 </section>
 {% endblock %}
 
