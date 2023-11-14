@@ -1,10 +1,10 @@
 ---
 title: Commonplacing
-description: 
 date: 2023-06-20
 draft: true
 tags:
   - wellbeing
+rss: false
 ---
 
 > Commonplacing, florilegia, anthologies, miscellanies, zettelkasten are such a fascinating tradition<br>

@@ -1,8 +1,9 @@
 ---
-title: How to deal with the changes of seasons
+title: How to deal with the change of seasons
 date: 2023-11-02
 tags:
   - wellbeing
+rss: true
 ---
 
 <aside class="callout callout--info">

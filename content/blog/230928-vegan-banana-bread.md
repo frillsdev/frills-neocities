@@ -9,6 +9,7 @@ recipe:
   time: 60 minutes
   cooking: 45 minutes
   tools: Mixing bowl, wooden spoon, bread tin, foil.
+rss: true
 ---
 
 A delicious vegan recipe that an old friend imparted with me before we moved away, handwritten inside a greetings card with a penguin on it.

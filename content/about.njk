@@ -1,11 +1,12 @@
 ---
 title: About
+rss: false
 eleventyNavigation:
   key: About
   emoji: <span class="emoji" aria-hidden="true">💁🏻‍♀️</span>
   order: 1
 ---
-{% extends 'structure/templates/page-3col.njk'%}
+{% extends 'structure/templates/page-2col.njk'%}
 {% import "structure/components/components.njk" as macro with context %}
 
 {%- block left -%}
@@ -61,7 +62,7 @@ eleventyNavigation:
 	</article>
 	<article class="dashboard__item --box">
 		<header>
-			<h2 class="--bgwiggly">🗣 Languages</h2>
+			<h2 class="--bgdots">🗣 Languages</h2>
 		</header>
 		<div>
 			<ul>
@@ -113,7 +114,7 @@ eleventyNavigation:
 	</article>
 	<article class="dashboard__item --box">
 		<header>
-			<h2 class="--bgwiggly">🧠 Interests</h2>
+			<h2 class="--bggrid">🧠 Interests</h2>
 		</header>
 		<div>
 			<ul>

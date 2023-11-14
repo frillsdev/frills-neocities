@@ -3,6 +3,7 @@ title: Deadly Mushrooms
 date: 2023-06-27
 tags:
   - interests
+rss: true
 ---
 
 ## Deathcap

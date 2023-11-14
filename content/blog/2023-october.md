@@ -3,6 +3,7 @@ title: Weeknotes for October 2023
 date: 2023-10-31
 tags:
   - weeknotes
+rss: true
 ---
 
 <aside class="callout callout--info">This will be the last in the series. I'm not getting the value from them that I thought I would. I may do them more sporadically in the future to cover specific events or things worth talking about 😊</aside>

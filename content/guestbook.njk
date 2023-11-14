@@ -1,10 +1,11 @@
 ---
 title: Guestbook
-description: 
+rss: false
 eleventyNavigation:
   key: Guestbook
   emoji: <span class="emoji" aria-hidden="true">👋</span>
   order: 5
+scripts: '<script src="/js/guestbook.js" defer></script>'
 ---
 {% extends 'structure/templates/page-3col.njk'%}
 {% import "structure/components/components.njk" as macro with context %}
@@ -42,7 +43,3 @@ eleventyNavigation:
 
 {%- block right -%}
 {%- endblock -%}
-
-{% block scripts %}
-<script src="/js/guestbook.js" defer></script>
-{% endblock %}
