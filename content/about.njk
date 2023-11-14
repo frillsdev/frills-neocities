@@ -5,41 +5,29 @@ eleventyNavigation:
   emoji: <span class="emoji" aria-hidden="true">💁🏻‍♀️</span>
   order: 1
 ---
-{% extends 'structure/templates/page-full.njk'%}
+{% extends 'structure/templates/page-3col.njk'%}
 {% import "structure/components/components.njk" as macro with context %}
 
 {%- block left -%}
+<div class="bio">
+	<h2 class="visually-hidden">Bio</h2>
+	<img class="bio-pic" src="/images/gpoy.jpg" alt="">
+	<ul class="unstyled">
+		<li><span class="emoji" role="img" aria-label="Pronouns">🌷</span> she/her</li>
+		<li><span class="emoji" role="img" aria-label="Age">🎂</span> Millenial</li>
+		<li><span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
+		<li><span class="emoji" role="img" aria-label="Relationship">💍</span> Engaged</li>
+		<li><span class="emoji" role="img" aria-label="Profession">👩🏻‍💻</span> Frontend Developer</li>
+		<li><span role="img" class="emoji" aria-hidden="true">🐶</span> <a href="/shrine/orla">Dog mum</a></li>
+	</ul>
+</div>
 {%- endblock -%}
 
-
 {%- block main -%}
-<section>
-	<div class="reading-width">
-		<p><span class="emoji" role="img" aria-label="Wave">👋</span>
-			Hey! I'm the webmaster around here, you can call me Frills.</p>
-
-	</div>
-</section>
-
 <div class="dashboard">
 	<article class="dashboard__item --box">
 		<header>
-			<h2>🙍🏻‍♀️ Profile</h2>
-		</header>
-		<div>
-			<ul>
-				<li>she/her</li>
-				<li>Millenial</li>
-				<li>Engaged</li>
-				<li>Wales, UK</li>
-				<li>Frontend developer</li>
-				<li><a href="/shrine/orla/">Dog mum</a></li>
-			</ul>
-		</div>
-	</article>
-	<article class="dashboard__item --box">
-		<header>
-			<h2>👯‍♀️ Social</h2>
+			<h2 class="--bgwiggly">👯‍♀️ Social</h2>
 		</header>
 		<div>
 			<ul class="unstyled">
@@ -51,20 +39,20 @@ eleventyNavigation:
 	</article>
 	<article class="dashboard__item --box">
 		<header>
-			<h2>✨ Personality</h2>
+			<h2 class="--bgwiggly">✨ Personality</h2>
 		</header>
 		<div>
 			<ul>
-				<li>Gemini sun</li>
-				<li>Gemini rising</li>
-				<li>Scorpio moon</li>
+				<li>Sun sign: Gemini</li>
+				<li>Rising sign: Gemini</li>
+				<li>Moon sign: Scorpio</li>
 				<li>INFP</li>
 			</ul>
 		</div>
 	</article>
 	<article class="dashboard__item --box">
 		<header>
-			<h2>💖 Pseudonym</h2>
+			<h2 class="--bgdots">💖 Pseudonym</h2>
 		</header>
 		<div>
 			<p>Where's the name from? Well, once upon a time, I made a gnome mage on the Azune EU server on World of Warcraft. Her name was Frills. We travelled Azeroth together for years, then she lay dormant until her name was resurrected as my online presence.</p>
@@ -73,7 +61,7 @@ eleventyNavigation:
 	</article>
 	<article class="dashboard__item --box">
 		<header>
-			<h2>🗣 Languages</h2>
+			<h2 class="--bgwiggly">🗣 Languages</h2>
 		</header>
 		<div>
 			<ul>
@@ -84,7 +72,7 @@ eleventyNavigation:
 	</article>
 	<article class="dashboard__item --box">
 		<header>
-			<h2>🍝 Food</h2>
+			<h2 class="--bggrid">🍝 Food</h2>
 		</header>
 		<div>
 			<ul>
@@ -98,7 +86,7 @@ eleventyNavigation:
 	</article>
 	<article class="dashboard__item --box">
 		<header>
-			<h2>📚 Books</h2>
+			<h2 class="--bgwiggly">📚 Books</h2>
 		</header>
 		<div>
 			<ul>
@@ -112,7 +100,7 @@ eleventyNavigation:
 	</article>
 	<article class="dashboard__item --box">
 		<header>
-			<h2>🎮 Games</h2>
+			<h2 class="--bgwiggly">🎮 Games</h2>
 		</header>
 		<div>
 			<ul>
@@ -125,7 +113,7 @@ eleventyNavigation:
 	</article>
 	<article class="dashboard__item --box">
 		<header>
-			<h2>🧠 Interests</h2>
+			<h2 class="--bgwiggly">🧠 Interests</h2>
 		</header>
 		<div>
 			<ul>
@@ -139,7 +127,7 @@ eleventyNavigation:
 	</article>
 	{# <article class="dashboard__item --box">
 		<header>
-			<h2>💬 Quote</h2>
+			<h2 class="--bgwiggly">💬 Quote</h2>
 		</header>
 		<div>
 			<blockquote>
@@ -199,12 +187,6 @@ eleventyNavigation:
 </section> #}
 
 {%- endblock -%}
-
-{%- block right -%}
-<h2>Social</h2>
-
-{%- endblock -%}
-
 
 {%- block scripts -%}
 

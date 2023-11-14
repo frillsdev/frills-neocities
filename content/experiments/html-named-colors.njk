@@ -4,10 +4,7 @@ description: Filterable HTML named colours with colour contrast values and copy 
 date: 2023-11-03
 tags:
 - dev
----
-{% import "structure/components/components.njk" as macro with context %}
-
-<style>
+style: '
   .namedcolours__header {
     padding-bottom: 3rem;
     display: flex;
@@ -96,14 +93,17 @@ tags:
   .namedcolours__cc {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
     align-items: center;
-    justify-items: flex-start;
   }
 
   .namedcolours__cc div {
     display: flex;
     align-items: center;
     gap: 10px;
+  }
+  .namedcolours__cc dd {
+    width: 100%;
   }
 
   .blob {
@@ -123,7 +123,6 @@ tags:
     background-color: black;
   }
 
-
   dl {
     width: 100%;
     display: grid;
@@ -136,7 +135,6 @@ tags:
     margin: 0;
   }
 
-
   dl dt {
     font-weight: 700;
     font-size: 85%;
@@ -148,12 +146,12 @@ tags:
     align-items: center;
     justify-content: space-between;
     font-weight: 400;
-  }
-
-</style>
+  }'
+---
+{% import "structure/components/components.njk" as macro with context %}
 
 {% block main %}
-<div class="">
+<div class="reading-width">
   <p>All modern browsers support 140 colour names, you can use these in HTML and CSS instead of HEX, RGB and HSL values.</p>
   <ul class="stars">
     <li><a href="https://stackoverflow.com/a/8561913">Are there any cons to using color names in place of color codes in CSS? - Stack Overflow</a></li>

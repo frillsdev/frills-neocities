@@ -71,7 +71,7 @@ function sparkles() {
 }
 
 window.addEventListener('load', function () {
-    notification(4, 'New!');
+    // notification(4, 'New!');
     consoleClub();
     colorScheme();
     sparkles();

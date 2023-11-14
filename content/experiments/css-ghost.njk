@@ -2,12 +2,9 @@
 title: CSS Ghost
 description: "Pure CSS ghost created for the <a href='https://32bit.mysteryslug.com/events/halloween-2023/''>32bit.cafe Halloween 2023 challenge</a>."
 date: 2023-10-25
----
-
-{% block head %}
-  <style>
+style: '
     * {
-        cursor: url('https://cdn.custom-cursor.com/db/10498/32/cute-ghost-cursor.png') , auto !important
+        cursor: url("https://cdn.custom-cursor.com/db/10498/32/cute-ghost-cursor.png") , auto !important
     }
     .cssghost {
         align-items: center;
@@ -31,7 +28,7 @@ date: 2023-10-25
     }
 
     .cssghost .ghost::before {
-        content: '';
+        content: "";
         background: white;
         border-radius: 150px 150px 30px 30px;
        --mask: 
@@ -62,7 +59,7 @@ date: 2023-10-25
         positiont: relative;
     }
     .cssghost .ghost .smile::before {
-        content: '';
+        content: "";
         width: 100%;
         aspect-ratio: 1;
         background-color: deeppink;
@@ -75,7 +72,7 @@ date: 2023-10-25
 
     .cssghost .ghost .arms::before,
     .cssghost .ghost .arms::after {
-        content: '';
+        content: "";
         width: 100px;
         height: 60px;
         background: white;
@@ -104,7 +101,7 @@ date: 2023-10-25
 
     .cssghost .ghost .eyes::before,
     .cssghost .ghost .eyes::after {
-        content: '';
+        content: "";
         height: 60px;
         width: 60px;
         background-color: black;
@@ -166,10 +163,8 @@ date: 2023-10-25
         100% {
             transform: rotate(-15deg);
         }
-    }
-
-  </style>
-{% endblock %}
+    }'
+---
 
 {% block main %}
 <div class="reading-width h-sm">
