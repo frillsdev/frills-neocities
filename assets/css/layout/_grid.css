@@ -71,6 +71,12 @@
     flex: 0 0 200px;
   }
 }
+@media (min-width: 1280px) {
+  .content__extra {
+    width: 200px;
+    flex: 0 0 300px;
+  }
+}
 
 .content__extra:empty {
   width: 0;
