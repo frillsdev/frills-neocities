@@ -135,13 +135,24 @@ scripts: '
 		{%- set latestChangelog = collections.changelog | reverse | first -%}
 		<div class="h-sm">
 			<h3>📝 Blog</h2>
-				<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
-				<h3>🧪 Experiment</h3>
-				<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
-				<h3>🛠️ Changelog</h3>
-				<div class="description">
-					{{latestChangelog.content|safe}}
-				</div>
+			<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
+			<h3>🧪 Experiment</h3>
+			<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
+			<h3>🛠️ Changelog</h3>
+			<div class="description">
+				{{latestChangelog.content|safe}}
+			</div>
+		<div>
+	</article>
+	<article class="dashboard__item --box">
+		<div>
+			<h2 class="visually-hidden">RSS feeds</h2>
+			<ul class="unstyled inline small">
+				<li><a href="/rss.xml" class="rss">Blog<span class="visually-hidden"> RSS feed</span></a></li>
+				<li><a href="/experiments.xml" class="rss">Experiments<span class="visually-hidden"> RSS feed</span></a></li>
+				<li><a href="/changelog.xml" class="rss">Changelog<span class="visually-hidden"> RSS feed</span></a></li>
+				<li><a href="/all.xml" class="rss">All<span class="visually-hidden"> RSS feed</span></a></li>
+			</ul>
 		</div>
 	</article>
 	<div class="dashboard__item">

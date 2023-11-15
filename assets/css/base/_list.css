@@ -47,6 +47,11 @@ ol.inline {
   padding-left: 0;
 }
 
+ul.small,
+ol.small {
+  font-size: 80%;
+}
+
 a.rss::before {
   content: '';
   width: 16px;
