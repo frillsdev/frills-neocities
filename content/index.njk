@@ -2,19 +2,14 @@
 title: Home
 rss: false
 scripts: '
-	{# Current time #}
 	<script type="text/javascript">
 	let time=document.querySelector("#localTime");const d=new Date().toLocaleTimeString("en-US",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"});e=d.replace(/\s/g,""),time.innerHTML=e;
 	</script>
-	{# Carbon #}
 	<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-	{# Status.cafe #}
 	<script defer>
 	fetch("https://status.cafe/users/fri11s/status.json").then(t=>t.json()).then(t=>{if(!t.content.length){document.getElementById("statusCafe-status").innerHTML="No status yet.";return}document.getElementById("statusCafe-emoji").innerHTML=t.face,document.getElementById("statusCafe-time").innerHTML=t.timeAgo,document.getElementById("statusCafe-status").innerHTML=t.content});
 	</script>
-	{# Last.fm #}
 	<script type="text/javascript">let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script>
-	{# Sparkles #}
 	<script src="/js/sparkles.js" defer></script>
 '
 ---
@@ -140,13 +135,24 @@ scripts: '
 		{%- set latestChangelog = collections.changelog | reverse | first -%}
 		<div class="h-sm">
 			<h3>📝 Blog</h2>
-				<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
-				<h3>🧪 Experiment</h3>
-				<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
-				<h3>🛠️ Changelog</h3>
-				<div class="description">
-					{{latestChangelog.content|safe}}
-				</div>
+			<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
+			<h3>🧪 Experiment</h3>
+			<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
+			<h3>🛠️ Changelog</h3>
+			<div class="description">
+				{{latestChangelog.content|safe}}
+			</div>
+		<div>
+	</article>
+	<article class="dashboard__item --box">
+		<div>
+			<h2 class="visually-hidden">RSS feeds</h2>
+			<ul class="unstyled inline small">
+				<li><a href="/rss.xml" class="rss">Blog<span class="visually-hidden"> RSS feed</span></a></li>
+				<li><a href="/experiments.xml" class="rss">Experiments<span class="visually-hidden"> RSS feed</span></a></li>
+				<li><a href="/changelog.xml" class="rss">Changelog<span class="visually-hidden"> RSS feed</span></a></li>
+				<li><a href="/all.xml" class="rss">All<span class="visually-hidden"> RSS feed</span></a></li>
+			</ul>
 		</div>
 	</article>
 	<div class="dashboard__item">

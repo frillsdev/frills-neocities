@@ -2,7 +2,7 @@
 .webrings {
   display: flex;
   flex-direction: row;
-  /* column-gap: 10px; */
+  column-gap: 10px;
   row-gap: 15px;
   font-size: 90%;
   flex-wrap: wrap;
@@ -11,6 +11,11 @@
 .webrings>* {
   display: flex;
   align-items: center;
+}
+
+[class*="webring--"] {
+  background-color: var(--bodybg);
+  padding: 4px;
 }
 
 .webring__prev,

@@ -1,4 +1,4 @@
-// Add notification bunotife to nav items
+// Add notification bubble to nav items
 function notification(navItem, hiddenText) {
     const notifTarget = document.getElementsByClassName('page__nav')[0].getElementsByTagName('UL')[0].children.item(navItem)
     const notif = document.createElement('span')
