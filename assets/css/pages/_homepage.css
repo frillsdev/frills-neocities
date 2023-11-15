@@ -4,8 +4,8 @@
   justify-content: flex-end;
   gap: 15px;
   position: absolute;
-  top: 2rem;
-  right: 1rem;
+  top: 36px;
+  right: 36px;
   padding-right: 4px;
 }
 @media (min-width: 992px) {
