@@ -1,11 +1,11 @@
 module.exports = {
-	title: "Frills's internet emporium",
+	title: "Frills",
 	url: "https://frills.dev",
 	language: "en-GB",
 	description: "",
 	author: {
 		name: "frills",
-		email: "",
-		url: ""
+		email: "fri11s@proton.me",
+		url: "https://frills.dev"
 	}
 }

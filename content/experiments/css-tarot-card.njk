@@ -2,10 +2,8 @@
 title: CSS Tarot card
 description: Pure CSS Tarot card 'Three of Swords' depicting a heart pierced by three swords, surrounded by clouds and rain. Using and extending CodePen's challenge palette 'Perfect Purple'. The card flips on hover!
 date: 2023-10-01
----
-
-{% block head %}
-  <style>
+rss: true
+style: '
     .csstarot {
       background: #e2a9e5;
       background: radial-gradient(ellipse at center, #e2a9e5 0%, #d582d9 100%);
@@ -425,9 +423,8 @@ date: 2023-10-01
       top: -20px;
       transform: translatex(-50%);
       width: 40px;
-    }
-  </style>
-{% endblock %}
+    }'
+---
 
 {% block main %}
 <ul class="unstyled inline">

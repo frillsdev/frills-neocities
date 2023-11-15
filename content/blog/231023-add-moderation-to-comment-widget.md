@@ -3,6 +3,7 @@ title: Adding moderation to Virtual Observer's comment widget
 date: 2023-10-23
 tags:
   - dev
+rss: true
 ---
 
 A friend highlighted to me that [my guestbook](/guestbook) didn't have any moderation, I get emails every time someone submits a comment, but depending on my access to a device, a potentially harmful comment could be left exposed to others until I am able to delete it.

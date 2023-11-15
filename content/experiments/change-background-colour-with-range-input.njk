@@ -2,10 +2,8 @@
 title: Changing background colour with range input
 description: Use the range input to change the colour of the background
 date: 2023-08-01
----
-
-{% block head %}
-<style>
+rss: true
+style: '
   :root {
     --hue: 255;
     --hsl: hsl(var(--hue), 100%, 70%);
@@ -41,7 +39,11 @@ date: 2023-08-01
   input {
     accent-color: var(--hsl);
   }
-</style>
+'
+---
+
+{% block css %}
+
 {% endblock %}
 
 {% block main %}

@@ -6,12 +6,15 @@
   position: absolute;
   top: 2rem;
   right: 1rem;
+  padding-right: 4px;
 }
 @media (min-width: 992px) {
   .settings {
     position: relative;
     top: inherit;
     right: inherit;
+    width: auto;
+    flex: 1 1 auto;
   }
 }
 

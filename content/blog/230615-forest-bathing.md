@@ -4,6 +4,7 @@ description:
 date: 2023-06-15
 tags:
   - wellbeing
+rss: true
 ---
 
 I want to reflect on a recent research group that I was invited to join - to summarise, the idea (or research) is to have people in leadership or up-and-coming leaders to partake in forest-bathing, known in Japan as <span lang="ja">Shinrin-Yoku</span>, to improve wellbeing and their ability to lead.

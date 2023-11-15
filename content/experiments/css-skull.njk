@@ -2,10 +2,8 @@
 title: CSS Skull
 description: Pure CSS skull, he's kinda cute. I made this in 2018, and is definitely due for a rebuild/refactor
 date: 2023-09-01
----
-
-{% block head %}
-  <style>
+rss: true
+style: '
     .cssskull {
         align-items: center;
         background-color: black;
@@ -135,9 +133,8 @@ date: 2023-09-01
         height: 4vh;
         width: 25%;
         border-radius: 0 0 4vh 4vh;
-    }
-  </style>
-{% endblock %}
+    }'
+---
 
 {% block main %}
 <div class="cssskull">

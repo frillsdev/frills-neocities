@@ -5,6 +5,7 @@ tags:
   - links
   - dev
   - accessibility
+rss: true
 ---
 
 A living master post for accessibility resources:

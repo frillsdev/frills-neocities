@@ -3,6 +3,7 @@ title: Weeknotes for September 2023
 date: 2023-09
 tags:
   - weeknotes
+rss: true
 ---
 ## 🧗🏻‍♀️ Went bouldering for the first time
 Easier and harder than I thought it would be! My hands were sore afterwards, but that dopamine hit when you got to the top of one of the (admittedy totally beginner, VB) routes felt goooood.

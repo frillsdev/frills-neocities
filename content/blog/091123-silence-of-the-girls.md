@@ -3,6 +3,7 @@ title: The Silence Of The Girls
 date: 2023-11-09
 tags:
   - books
+rss: true
 ---
 
 Finished my first book of 2023. I know, it's actually November. This year has not been the one for reading books. I have tried starting a few, but none seemed to stick.

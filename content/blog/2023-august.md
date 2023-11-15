@@ -3,6 +3,7 @@ title: Weeknotes for August 2023
 date: 2023-08
 tags:
   - weeknotes
+rss: true
 ---
 ## 🎉 Work's birthday party
 Ate pizza and doughnuts and pranced around taking selfies together
