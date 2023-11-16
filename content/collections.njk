@@ -5,9 +5,30 @@ eleventyNavigation:
   key: Collections
   emoji: <span class="emoji" aria-hidden="true">🧩</span>
   order: 4
+style: '
+.collection {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+}
+.collection__item {
+border: 1px solid var(--text);
+border-radius: 16px;
+overflow: hidden;
+}
+
+.collection__item-image img{
+display: block;
+}
+'
 ---
 {% extends "structure/pages/list-collections.njk" %}
 
 {% block main %}
-<p>To be added</p>
+<section class="collection">
+<article class="collection__item">
+  <div class="collection__item-image">
+    <img src="https://placehold.co/600x400/000000/ffffff.png" alt="Great alt text" loading="lazy" data-object-fit="cover">
+  </div>
+</article>
+</section>
 {% endblock %}

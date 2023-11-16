@@ -19,7 +19,18 @@ scripts: '
 {%- block left -%}
 <div class="bio">
 	<h2 class="visually-hidden">Bio</h2>
-	<img class="bio-pic" src="/images/pic.png" alt="Black and white avatar illustration: a smiling woman with shoulder length dark hair, large eyes and sparkles surrounding her">
+	<div class="avatar">
+		<div class="avatar__script swapAvatar" width="200" height="200"></div>
+		<noscript>
+			<img class="avatar__noscript" src="/images/pic.png" alt="Black and white avatar illustration: a smiling woman with shoulder length dark hair, large eyes and sparkles surrounding her" width="200" height="200">
+		</noscript>
+		<div class="avatar__extra">
+			<button id="refreshAvatar" class="button hidden">
+				🔃 Refresh avatar
+			</button>
+			<span>🖼️ <a href="/gpoy" class="hidden">More pictures</a></span>
+		</div>
+	</div>
 	<ul class="unstyled">
 		<li><span class="emoji" role="img" aria-label="Pronouns">🌷</span> she/her</li>
 		<li><span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
@@ -156,7 +167,7 @@ scripts: '
 		</div>
 	</article>
 	<div class="dashboard__item">
-		<a href="https://pastelhello.com/joined"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPAgMAAAAOp6AcAAAACVBMVEXfOHf///8cGx0Yk1ajAAAAZUlEQVQY06WPsQ2AMAwEv3BS21K8jy2FPgVhLhqWyJS4oSFpEFeeTpYfYwGuPnHgxET+Iqmk5I3IFQUqzSwkO1cBUWU4TMg4pFnIKJuiY4uS3qULR/ncTNU1ZBHaLf/8c719LLgB7XE6FjMry00AAAAASUVORK5CYII=" alt="Code like a girl"></a>
+		<a href="https://www.codelikeagirl.com/"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPAgMAAAAOp6AcAAAACVBMVEXfOHf///8cGx0Yk1ajAAAAZUlEQVQY06WPsQ2AMAwEv3BS21K8jy2FPgVhLhqWyJS4oSFpEFeeTpYfYwGuPnHgxET+Iqmk5I3IFQUqzSwkO1cBUWU4TMg4pFnIKJuiY4uS3qULR/ncTNU1ZBHaLf/8c719LLgB7XE6FjMry00AAAAASUVORK5CYII=" alt="Code like a girl"></a>
 		{# <img src=" data:image/gif;base64,R0lGODlhUAAPAMQAAABnLPDQ0oW2mrgRHmM3JAAAZsRSW+Dg4GWYe4goIdqFi////60xNS5PJ2ZmZr1vc6e/sejAwx9XKdmDifLc3qkaH7VfY+axtdNsdLsdKUtCJcQxPPrz9N+lqXUwIwphKyH5BAQUAP8ALAAAAABQAA8AAAXwoCOOZGmeaKqu7Li8cCzPdG3feC4uR+8HvmAwRywaZbvDKzAxZCgLjgITuUR5x6y2llxcOobNIEIRD8YUDHbL3nY7lPLTcB5MIhi1sh0rwPwvBYALg4SCf4dIDlhUEQMZF2YbEWFQe3yBhJqbgIWeNjsQAhYPFnWnGwYMAgIQmH+anYKdfYmGNDsIAB8JFacDvgMeHwAACK+ZfrScfTSFL7nFHx4VFR4eAwQSDQkNxcfIsbCcibOBtjHRABISww0SCd3txMbh9jPqCR4aABoEBB/aeZDw7Z5BaIsQKFzIsOHCgwZ3QJxYpIXFixgzmggBADs=" alt="Wales">
 		<img src=" data:image/gif;base64,R0lGODlhUAAPAPcAAAAAAAAAIQAAMQAAQgAASgAAUgAAWgAAYwAAawAAcwAAewAAhDExY0I5IUJCjEoAAEo5IVparWNjY2taMXN7rdatY9a9jP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ywAAAAAUAAPAAAI/gAlCBxIsKDBgwgTKlzIcCCAhxAjSpwIMYCAARgJECjA0YDHAyAPIBiZoKSCkwtOKihZciSCkAc8euRYQKNGjAIp6txpEeMAjTRlwnTJUmXKkywTuIQp0wBNmwRwSnhI4aGFClizarVAsWfGjR0/hiRqEqXKpEtDNn1qUyrFCRUiVpjA8+LXoGJBkk1g9CzLtCDXcoTqlmJciId1ev0JtoDQC5BHQoZ88sLRCyUxI7jw8gLICzLZ3hyQ07DciFUjLgYa1oBnvZuLKqAMObNSyAdeg545uC3pqaYR7wSwurFMz5E316684MJs25uVfw7de3TpiYkBZJ9YHK/rz5JljFuuDJ1z7um8a/q+DsABgAjaT9f1ydrxR9ySJzMnn0Czed3UqWcdcNg18BAEh6UmUXetDUVSWQoctdJfIzEVIGG/SXSVVhxyxZ1djHnnIAKyRehXSxWqdeF6BA43EQMPVARifUKN9SBfZiFF4Usqpochey7Od1eDNpIIoYRopRjYigM25OSTUEZJUEAAADs=" alt="Gemini"> #}
 	</div>
