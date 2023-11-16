@@ -81,47 +81,52 @@ const randomiser = (array, currentNumber) => {
 
 function avatarSwapper() {
     const avatars = [
-        {   src: "/images/picrew/PotatoLord’s_Persona_Creator.png",
+        {   src: "/images/avatars/PotatoLords_Persona_Creator.png",
             alt: "Cute af pic",
             credit: "PotatoLord’s_Persona_Creator",
             crediturl: "https://picrew.me/en/image_maker/1473879"
         },
-        {   src: "/images/picrew/makowka_character_maker_II.png",
+        {   src: "/images/avatars/makowka_character_maker_II.png",
             alt: "Cute af pic",
             credit: "makowka",
             crediturl: "https://picrew.me/en/image_maker/644129"
         },
-        {   src: "/images/picrew/crows_character_creator_.png",
+        {   src: "/images/avatars/crows_character_creator_.png",
             alt: "Cute af pic",
             credit: "crowwithapen",
             crediturl: "https://picrew.me/en/image_maker/1243146"
         },
-        {   src: "/images/picrew/Ultimate_friends_face_maker.png",
+        {   src: "/images/avatars/Ultimate_friends_face_maker.png",
             alt: "Cute af pic",
             credit: "makowka_character_maker_II",
             crediturl: "https://picrew.me/en/image_maker/1342558"
         },
-        {   src: "/images/picrew/OC_Creator-transparent.png",
+        {   src: "/images/avatars/nosk.png",
+            alt: "Cute af pic",
+            credit: "nosk",
+            crediturl: "https://picrew.me/en/image_maker/49528"
+        },
+        {   src: "/images/avatars/OC_Creator-transparent.png",
             alt: "Cute af pic",
             credit: "MaeEllen",
             crediturl: "https://picrew.me/en/image_maker/2141620"
         },
-        {   src: "/images/picrew/flowerveil.png",
+        {   src: "/images/avatars/flowerveil.png",
             alt: "Cute af pic",
             credit: "flowerveil",
             crediturl: "http://asdad.com"
         },
-        {   src: "/images/picrew/miaw-sq.jpg",
+        {   src: "/images/avatars/miaw.jpg",
             alt: "Cute af pic",
             credit: "Mia Wilkes",
             crediturl: "http://mia-wilkes.squarespace.com/"
         },
-        {   src: "/images/picrew/stardew.png",
+        {   src: "/images/avatars/stardew.png",
             alt: "Cute af pic",
             credit: "Jazzybee",
             crediturl: "https://jazzybee.itch.io/sdvcharactercreator"
         },
-        // {   src: "/images/picrew/TOON_ME_⟪_B_⟫.png",
+        // {   src: "/images/avatars/TOON_ME_⟪_B_⟫.png",
         //     alt: "Cute af pic",
         //     credit: "TOON_ME_⟪_B_⟫",
         //     crediturl: "http://asdad.com"

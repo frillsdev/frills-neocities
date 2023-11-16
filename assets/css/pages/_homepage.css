@@ -50,7 +50,7 @@
 
 .avatar__extra {
   background-color: var(--bodybg);
-  padding: 25px 10px 15px 10px;
+  padding: 30px 10px 15px 10px;
   border-radius: 0 0 20px 20px;
   --mask:
     radial-gradient(15.37px at 50% 21.60px, #000 99%, #0000 101%) 50% 0/48px 100%,
@@ -75,8 +75,6 @@
   border-radius: 100px 100px 0 0;
   overflow: hidden;
 }
-
-
 
 .avatar__script img {
   background-color: var(--bodybg);
