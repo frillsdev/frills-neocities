@@ -48,6 +48,10 @@
   }
 }
 
+.avatar.__noradius img {
+  border-radius: 0;
+}
+
 .avatar__extra {
   background-color: var(--bodybg);
   padding: 30px 10px 15px 10px;
