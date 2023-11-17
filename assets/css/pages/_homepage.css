@@ -66,6 +66,7 @@
   grid-template-columns: 1fr 1fr;
   place-items: center;
   white-space: nowrap;
+  margin-top: -10px;
 }
 
 .avatar img {
