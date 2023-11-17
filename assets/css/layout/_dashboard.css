@@ -7,6 +7,10 @@
   /* height: 100%; */
 }
 
+.dashboard.w-100 {
+  max-width: 100%;
+}
+
 .dashboard__item {
   width: 100%;
   margin-bottom: 1rem;
@@ -15,6 +19,7 @@
 
 .dashboard__item.--box {
   box-shadow: inset 0 0 0 4px var(--dashboard-bg), 4px 4px 0 0 var(--dashboard-outline);
+  padding: 4px;
 }
 
 .dashboard__item.--box header {
