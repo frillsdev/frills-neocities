@@ -123,7 +123,7 @@ function avatarSwapper() {
 }
 
 window.addEventListener('load', function () {
-    // notification(4, 'New!');
+    notification(3, 'New!');
     consoleClub();
     colorScheme();
     sparkles();
