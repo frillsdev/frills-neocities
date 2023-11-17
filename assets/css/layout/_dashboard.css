@@ -7,6 +7,10 @@
   /* height: 100%; */
 }
 
+.dashboard.w-100 {
+  max-width: 100%;
+}
+
 .dashboard__item {
   width: 100%;
   margin-bottom: 1rem;

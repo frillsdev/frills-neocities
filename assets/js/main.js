@@ -72,65 +72,40 @@ function sparkles() {
 
 
 const randomiser = (array, currentNumber) => {
-    let newNumber = Math.floor(Math.random() * array.length);
-    if (newNumber === currentNumber) {
-        newNumber = Math.floor(Math.random() * array.length)
-    }
-    return newNumber
+    let randomNumber = Math.floor(Math.random() * array.length);
+    if (randomNumber === currentNumber) { randomNumber = Math.floor(Math.random()* array.length) }
+    return randomNumber
 }
 
 function avatarSwapper() {
     const avatars = [
-        {   src: "/images/avatars/PotatoLords_Persona_Creator.png",
-            alt: "Cute af pic",
-            credit: "PotatoLord’s_Persona_Creator",
-            crediturl: "https://picrew.me/en/image_maker/1473879"
+        {   src: "/images/collections/avatars/PotatoLords_Persona_Creator.png",
+            alt: "Avatar of a white woman with brown hair, eyes closed, tongue sticking out. Wearing an orange jumper with a sun on it.",
         },
-        {   src: "/images/avatars/makowka_character_maker_II.png",
-            alt: "Cute af pic",
-            credit: "makowka",
-            crediturl: "https://picrew.me/en/image_maker/644129"
+        {   src: "/images/collections/avatars/makowka_character_maker_II.png",
+            alt: "Avatar or a woman with brown hair, styled in spacebuns and blonde streaks where men would have sideburns. Wearing blue dungarees with a red jumper with strawberries on it. ",
         },
-        {   src: "/images/avatars/crows_character_creator_.png",
-            alt: "Cute af pic",
-            credit: "crowwithapen",
-            crediturl: "https://picrew.me/en/image_maker/1243146"
+        {   src: "/images/collections/avatars/crows_character_creator_.png",
+            alt: "Avatar of a white woman with messy brown hair, and blonde streaks where men would have sideburns. Surprised expression with eyes wide and mouth open. Wearing an orange jumper with a rainbow LGBTQIA+ badge.",
         },
-        {   src: "/images/avatars/Ultimate_friends_face_maker.png",
-            alt: "Cute af pic",
-            credit: "makowka_character_maker_II",
-            crediturl: "https://picrew.me/en/image_maker/1342558"
+        {   src: "/images/collections/avatars/Ultimate_friends_face_maker.png",
+            alt: "Avatar of a white woman with brown hair and blonde streaks where men would have sideburns. Surly expression with slighly drooped eyes and straight lips. Wearing blue dungarees with a green jumper.",
         },
-        {   src: "/images/avatars/nosk.png",
-            alt: "Cute af pic",
-            credit: "nosk",
-            crediturl: "https://picrew.me/en/image_maker/49528"
+        {   src: "/images/collections/avatars/nosk.png",
+            alt: "Avatar of a white woman with brown hair, happy expression and chunky eyebrows. Muted blueish colour palette, wearing blue dungarees and a grey top. The background is blue spotted with white polka dots",
         },
-        {   src: "/images/avatars/OC_Creator-transparent.png",
-            alt: "Cute af pic",
-            credit: "MaeEllen",
-            crediturl: "https://picrew.me/en/image_maker/2141620"
+        {   src: "/images/collections/avatars/OC_Creator-transparent.png",
+            alt: "Avatar or a woman with brown hair, styled in spacebuns and blonde streaks where men would have sideburns. Wearing metal armour.",
         },
-        {   src: "/images/avatars/flowerveil.png",
-            alt: "Cute af pic",
-            credit: "flowerveil",
-            crediturl: "http://asdad.com"
+        {   src: "/images/collections/avatars/flowerveil.png",
+            alt: "Avatar or a woman with brown ombre hair, excessively big eyelashes and sparkly eyes. Sparkles surround her.",
         },
-        {   src: "/images/avatars/miaw.jpg",
-            alt: "Cute af pic",
-            credit: "Mia Wilkes",
-            crediturl: "http://mia-wilkes.squarespace.com/"
+        {   src: "/images/collections/avatars/miaw.jpg",
+            alt: "Avatar of a white woman with brown hair and pink cheeks. Wearing yellow dungarees and a grey stripey top. She is framed by a branch of leaves starting from the bottom branching up to the left and right.",
         },
-        {   src: "/images/avatars/stardew.png",
-            alt: "Cute af pic",
-            credit: "Jazzybee",
-            crediturl: "https://jazzybee.itch.io/sdvcharactercreator"
+        {   src: "/images/collections/avatars/stardew.png",
+            alt: "Avatar of a white woman with brown hair tucked behind her left ear. Wearing pink dungarees and a pink top. In the style of Stardew Valley.",
         },
-        // {   src: "/images/avatars/TOON_ME_⟪_B_⟫.png",
-        //     alt: "Cute af pic",
-        //     credit: "TOON_ME_⟪_B_⟫",
-        //     crediturl: "http://asdad.com"
-        // },
     ]
     let diceRoll = randomiser(avatars)
     const avatarContainer = document.getElementsByClassName('swapAvatar')[0]
