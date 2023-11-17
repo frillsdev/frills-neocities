@@ -5,9 +5,54 @@ eleventyNavigation:
   key: Collections
   emoji: <span class="emoji" aria-hidden="true">🧩</span>
   order: 4
+style: '
+.dashboard__item {
+  position: relative;
+}
+
+.dashboard__item header a {
+  position: static;
+}
+
+.dashboard__item header a:hover,
+.dashboard__item header a:focus,
+.dashboard__item header a:active {
+  color: var(--text)
+}
+
+.dashboard__item header a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+'
 ---
 {% extends "structure/pages/list-collections.njk" %}
 
 {% block main %}
-<p>To be added</p>
+<section class="dashboard">
+  <article class="dashboard__item --box"">
+    <figure class="dashboard__item-image">
+      <img src="/images/collections/stickers/cover.png" alt="Great alt text" loading="lazy" role="presentation">
+    </figure>
+    <header>
+        <h2 class="--bgwiggly">
+          <a href="/collections/sticker-album" class="hidden">Sticker album</a>
+        </h2>
+      </header>
+  </article>
+  <article class="dashboard__item --box"">
+    <figure class="dashboard__item-image">
+      <img src="/images/collections/avatars/cover.png" alt="Great alt text" loading="lazy" role="presentation">
+    </figure>
+    <header>
+        <h2 class="--bgwiggly">
+          <a href="/collections/avatars" class="hidden">Avatars</a>
+        </h2>
+      </header>
+  </article>
+</section>
 {% endblock %}

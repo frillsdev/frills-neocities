@@ -33,7 +33,3 @@
 
 @import url('./pages/_homepage.css');
 @import url('./pages/_bloglist.css');
-
-.collections {
-    display: none;
-}
