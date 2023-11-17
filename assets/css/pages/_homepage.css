@@ -40,6 +40,7 @@
 
 .avatar {
   max-width: 150px;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 480px) {
@@ -54,8 +55,8 @@
 
 .avatar__extra {
   background-color: var(--bodybg);
-  padding: 30px 10px 15px 10px;
-  border-radius: 0 0 20px 20px;
+  padding: 30px 6px 12px 6px;
+  border-radius: 0 0 10px 10px;
   --mask:
     radial-gradient(15.37px at 50% 21.60px, #000 99%, #0000 101%) 50% 0/48px 100%,
     radial-gradient(15.37px at 50% -9.6px, #0000 99%, #000 101%) calc(50% - 24px) 12px/48px 100% repeat-x;
@@ -67,6 +68,13 @@
   place-items: center;
   white-space: nowrap;
   margin-top: -10px;
+}
+
+@media (min-width: 768px) {
+  .avatar__extra {
+    border-radius: 0 0 20px 20px;
+    padding: 30px 10px 15px 10px;
+  }
 }
 
 .avatar img {
@@ -81,6 +89,10 @@
   overflow: hidden;
 }
 
+.avatar__script {
+  width: 100%;
+  aspect-ratio: 1;
+}
 .avatar__script img {
   background-color: var(--bodybg);
   width: 100%;
