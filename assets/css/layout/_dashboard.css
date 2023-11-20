@@ -24,6 +24,7 @@
 
 .dashboard__item.--box header {
   border-bottom: 2px solid var(--dashboard-bg);
+  margin: -4px -4px 0 -4px
 }
 
 .dashboard__item.--box header h2 {
@@ -69,6 +70,7 @@
 .dashboard__item.--neocities img {
   max-height: 50px;
   padding: 0.3rem;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));
 }
 .dashboard__item.--neocities a {
   color: var(--bg);
