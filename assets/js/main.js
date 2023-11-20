@@ -66,7 +66,8 @@ function sparkles(pattern = "confetti1") {
         paused: pause,
         pattern: pattern,
         animationType: 'down',
-        theme: 'light'
+        theme: 'light',
+        step: 8
     });
 }
 
