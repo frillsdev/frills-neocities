@@ -17,11 +17,14 @@
   break-inside: avoid;
 }
 
-.dashboard__item-image {}
+.dashboard__item-image {
+  background-color: var(--dashboard-bg);
+}
 
 .dashboard__item-image.--square {
   aspect-ratio: 1;
   width: 100%;
+  object-fit: cover;
 }
 
 .dashboard__item.--box {
