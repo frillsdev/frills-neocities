@@ -6,10 +6,10 @@ eleventyNavigation:
   emoji: <span class="emoji" aria-hidden="true">🔗</span>
   order: 3
 scripts: '<script>
-  const t = document.getElementById("toggleHighContrast")
-  const w = document.querySelectorAll(".buttonwall")
-  const o = "Enable high contrast"
-  const c = "Disable high contrast"
+  const t = document.getElementById("toggleHighContrast");
+  const w = document.querySelectorAll(".buttonwall");
+  const o = "Enable high contrast";
+  const c = "Disable high contrast";
   if (t) {t.addEventListener("click", (function () {w.forEach((s => {s.classList.contains("--highcontrast") ? (t.innerHTML = o, t.setAttribute("aria-pressed", !1), s.classList.remove("--highcontrast")) : (t.innerHTML = c, t.setAttribute("aria-pressed", !0), s.classList.add("--highcontrast"))}))}));}
 </script>'
 ---
