@@ -24,6 +24,10 @@
   padding-bottom: 2rem !important;
 }
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
 .mb-1 {
   margin-bottom: 1rem !important;
 }
@@ -88,6 +92,7 @@
 img.mw-100 {
   max-width: 100%;
 }
+
 img.mw-90 {
   max-width: 90%;
 }
