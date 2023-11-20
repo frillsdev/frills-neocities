@@ -94,7 +94,6 @@
   aspect-ratio: 1;
 }
 .avatar__script img {
-  background-color: var(--bodybg);
   width: 100%;
   height: 100%;
   display: block;
