@@ -40,6 +40,20 @@ style: '
     accent-color: var(--hsl);
   }
 '
+scripts: '
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.innerHTML += `<style id="hslVariable"></style>`
+    const range = document.getElementById("hslRange")
+    const style = document.getElementById("hslVariable")
+    let hue = range.value
+    style.innerHTML = `:root{--hue: ${hue};`
+    range.addEventListener("input", (event) => {
+      hue = range.value
+      style.innerHTML = `:root{--hue: ${hue};`
+    })
+  });
+</script>'
 ---
 
 {% block css %}
@@ -56,20 +70,4 @@ style: '
     <input type="range" id="hslRange" min="0" max="360" step="1" />
   </div>
 </div>
-{% endblock %}
-
-{% block scripts %}
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.body.innerHTML += `<style id="hslVariable"></style>`
-    const range = document.getElementById("hslRange")
-    const style = document.getElementById("hslVariable")
-    let hue = range.value
-    style.innerHTML = `:root{--hue: ${hue};`
-    range.addEventListener("input", (event) => {
-      hue = range.value
-      style.innerHTML = `:root{--hue: ${hue};`
-    })
-  });
-</script>
 {% endblock %}

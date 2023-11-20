@@ -148,6 +148,36 @@ style: '
     justify-content: space-between;
     font-weight: 400;
   }'
+scripts: '
+<script defer>
+  const colours = document.querySelectorAll(".namedcolours__item");
+  document.getElementById("namedColourReset").addEventListener("click",function (e) {
+    colours.forEach(function (colour) {colour.style.display = "block";})
+  })
+  const buttons = document.querySelectorAll(".namedColourButton")
+  buttons.forEach(function (button) {
+    button.addEventListener("click",function (e) {
+      let selectedColour = button.dataset.colour
+      let selectedColourItems = document.querySelectorAll(`.namedcolours__item.${selectedColour}`)
+      const noItems = document.getElementById(`namedColourNone`);
+      colours.forEach(function (colour) {colour.style.display = "none"})
+      if (selectedColourItems.length > 0) {
+        noItems.style.removeProperty("display")
+        selectedColourItems.forEach(function (colour) {colour.style.display = "block"})
+      } else { noItems.style.display = "block" }
+    })
+  })
+
+  document.querySelectorAll(".copyButton").forEach(function (cb) {
+    cb.addEventListener("click",function (e) {
+      let el = e.target
+      let ct = el.dataset.copy
+      navigator.clipboard.writeText(ct)
+      el.innerHTML = "Copied"
+    })
+  })
+
+</script>'
 ---
 {% import "structure/components/components.njk" as macro with context %}
 
@@ -3024,37 +3054,4 @@ style: '
     </li>
   </ol>
 </section>
-{% endblock %}
-
-{% block scripts %}
-
-<script defer>
-  const colours = document.querySelectorAll('.namedcolours__item');
-  document.getElementById('namedColourReset').addEventListener('click',function (e) {
-    colours.forEach(function (colour) {colour.style.display = 'block';})
-  })
-  const buttons = document.querySelectorAll('.namedColourButton')
-  buttons.forEach(function (button) {
-    button.addEventListener('click',function (e) {
-      let selectedColour = button.dataset.colour
-      let selectedColourItems = document.querySelectorAll(`.namedcolours__item.${selectedColour}`)
-      const noItems = document.getElementById(`namedColourNone`);
-      colours.forEach(function (colour) {colour.style.display = 'none'})
-      if (selectedColourItems.length > 0) {
-        noItems.style.removeProperty('display')
-        selectedColourItems.forEach(function (colour) {colour.style.display = 'block'})
-      } else { noItems.style.display = 'block' }
-    })
-  })
-
-  document.querySelectorAll('.copyButton').forEach(function (cb) {
-    cb.addEventListener('click',function (e) {
-      let el = e.target
-      let ct = el.dataset.copy
-      navigator.clipboard.writeText(ct)
-      el.innerHTML = "Copied"
-    })
-  })
-
-</script>
 {% endblock %}
