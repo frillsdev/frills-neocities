@@ -45,7 +45,7 @@ function colorScheme() {
         }
     }
     setColorScheme(colorScheme);
-    colorSchemeButton.addEventListener('click', () => {
+        colorSchemeButton.addEventListener('click', () => {
         if (colorScheme == 'light') {
             colorScheme = 'dark';
         } else {

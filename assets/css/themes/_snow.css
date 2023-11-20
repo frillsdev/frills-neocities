@@ -1,0 +1,53 @@
+html[data-scheme='dark'][data-snow='true'] {
+  --bodybg: #0d0e20;
+  --bg: Black;
+  --accent: Gold;
+  --interactive: OrangeRed;
+  --link: OrangeRed;
+  --linkaccent: #731f00;
+  --linkhover: LawnGreen;
+  --text: LavenderBlush;
+  --pink: DeepPink;
+  --dashboard-bg: Indigo;
+  --dashboard-outline: #2e004f;
+  --logo-anim-1: LightSteelBlue;
+  --logo-anim-2: PowderBlue;
+  --logo-anim-3: DeepSkyBlue;
+  --logo-anim-4: Aqua;
+  --logo-anim-5: Aquamarine;
+  --logo-anim-6: Turquoise;
+}
+
+html[data-scheme='light'][data-snow='true'] {
+    --bodybg: Lavender;
+    --bg: Snow;
+    --interactive: #e1007a;
+    --accent: #d73a00;
+    --link: Navy;
+    --linkaccent: MidnightBlue;
+    --linkhover: Blue;
+    --text: Black;
+    --pink: DeepPink;
+    --dashboard-bg: PaleGreen;
+    --dashboard-outline: LimeGreen;
+    --logo-anim-1: MediumBlue;
+    --logo-anim-2: RoyalBlue;
+    --logo-anim-3: MidnightBlue;
+    --logo-anim-4: CornflowerBlue;
+    --logo-anim-5: DodgerBlue;
+    --logo-anim-6: PaleTurquoise;
+}
+
+.toggle--snow {
+  display: none;
+}
+
+.toggle--snow::before {
+  content: '☃️';
+  font-size: 1rem;
+}
+
+[data-snow="true"] ul.stars li::before,
+[data-snow="true"] ol.stars li::before {
+  content: '❄️';
+}

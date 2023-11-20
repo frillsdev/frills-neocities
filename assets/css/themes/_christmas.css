@@ -1,0 +1,53 @@
+html[data-scheme='dark'][data-christmas='true'] {
+  --bodybg: #1e1e1e;
+  --bg: Black;
+  --accent: Gold;
+  --interactive: OrangeRed;
+  --link: OrangeRed;
+  --linkaccent: #731f00;
+  --linkhover: LawnGreen;
+  --text: LavenderBlush;
+  --pink: DeepPink;
+  --dashboard-bg: Indigo;
+  --dashboard-outline: #2e004f;
+  --logo-anim-1: OrangeRed;
+  --logo-anim-2: OrangeRed;
+  --logo-anim-3: OrangeRed;
+  --logo-anim-4: LawnGreen;
+  --logo-anim-5: LawnGreen;
+  --logo-anim-6: LawnGreen;
+}
+
+html[data-scheme='light'][data-christmas='true'] {
+    --bodybg: LavenderBlush;
+    --bg: Snow;
+    --interactive: #e1007a;
+    --accent: #d73a00;
+    --link: BlueViolet;
+    --linkaccent: Thistle;
+    --linkhover: Green;
+    --text: Black;
+    --pink: DeepPink;
+    --dashboard-bg: PaleGreen;
+    --dashboard-outline: LimeGreen;
+    --logo-anim-1: BlueViolet;
+    --logo-anim-2: BlueViolet;
+    --logo-anim-3: OrangeRed;
+    --logo-anim-4: OrangeRed;
+    --logo-anim-5: Green;
+    --logo-anim-6: Green;
+}
+
+.toggle--christmas {
+  display: none;
+}
+
+.toggle--christmas::before {
+  content: '🎅';
+  font-size: 1rem;
+}
+
+[data-christmas="true"] ul.stars li::before,
+[data-christmas="true"] ol.stars li::before {
+  content: '🎁';
+}

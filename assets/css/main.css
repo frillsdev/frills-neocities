@@ -33,3 +33,6 @@
 
 @import url('./pages/_homepage.css');
 @import url('./pages/_bloglist.css');
+
+@import url('./themes/_snow.css');
+@import url('./themes/_christmas.css');

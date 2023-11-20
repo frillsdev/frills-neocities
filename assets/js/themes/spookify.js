@@ -40,7 +40,9 @@ function spookyScheme() {
             restoreEmoji();
         }
     }
-    setSpookyScheme();
+    if (spookify != null) {
+        setSpookyScheme();
+    }
 
     spookyButton.addEventListener('click', () => {
         if (spookify === 'false') {
