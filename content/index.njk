@@ -6,7 +6,7 @@ scripts: '
 	let time=document.querySelector("#localTime");const d=new Date().toLocaleTimeString("en-US",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"});e=d.replace(/\s/g,""),time.innerHTML=e;
 	</script>
 	<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-	<script defer>
+	<script>
 	fetch("https://status.cafe/users/fri11s/status.json").then(t=>t.json()).then(t=>{if(!t.content.length){document.getElementById("statusCafe-status").innerHTML="No status yet.";return}document.getElementById("statusCafe-emoji").innerHTML=t.face,document.getElementById("statusCafe-time").innerHTML=t.timeAgo,document.getElementById("statusCafe-status").innerHTML=t.content});
 	</script>
 	<script>let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script>
@@ -71,7 +71,7 @@ scripts: '
 		}
 		avatarSwapper()
 	</script>
-	<script defer>
+	<script>
 		sparkles("confetti1")
 	</script>
 
@@ -84,7 +84,7 @@ scripts: '
 <div class="bio">
 	<h2 class="visually-hidden">Bio</h2>
 	<div class="avatar">
-		<div class="avatar__script swapAvatar" width="200" height="200">
+		<div class="avatar__script swapAvatar">
 			<noscript>
 				<img class="avatar__noscript" src="/images/pic.png" alt="Black and white avatar illustration: a smiling woman with shoulder length dark hair, large eyes and sparkles surrounding her" width="200" height="200">
 			</noscript>
@@ -210,7 +210,7 @@ scripts: '
 		{%- set latestExperiment = collections.experiments | reverse | first -%}
 		{%- set latestChangelog = collections.changelog | reverse | first -%}
 		<div class="h-sm">
-			<h3>📝 Blog</h2>
+			<h3>📝 Blog</h3>
 			<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
 			<h3>🧪 Experiment</h3>
 			<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
@@ -218,7 +218,7 @@ scripts: '
 			<div class="description">
 				{{latestChangelog.content|safe}}
 			</div>
-		<div>
+		</div>
 	</article>
 	<article class="dashboard__item --box">
 		<div>
@@ -263,11 +263,10 @@ scripts: '
 			</div>
 		</div>
 		<div class="webring--ladiesofthelink">
-				<a href="https://webri.ng/webring/ladiesofthelinks/previous?via=https%3A%2F%2Ffrills.dev" class="webring__prev">Previous Ladies of the Links site</a>
-				<a href="https://ladiesofthe.link/">Ladies of the Links</a>
-				<a href="https://webri.ng/webring/ladiesofthelinks/random?via=https%3A%2F%2Ffrills.dev" class="webring__random">Random Ladies of the Links site</a>
-				<a href="https://webri.ng/webring/ladiesofthelinks/next?via=https%3A%2F%2Ffrills.dev" class="webring__next">Next Ladies of the Links site</a>
-			</table>
+			<a href="https://webri.ng/webring/ladiesofthelinks/previous?via=https%3A%2F%2Ffrills.dev" class="webring__prev">Previous Ladies of the Links site</a>
+			<a href="https://ladiesofthe.link/">Ladies of the Links</a>
+			<a href="https://webri.ng/webring/ladiesofthelinks/random?via=https%3A%2F%2Ffrills.dev" class="webring__random">Random Ladies of the Links site</a>
+			<a href="https://webri.ng/webring/ladiesofthelinks/next?via=https%3A%2F%2Ffrills.dev" class="webring__next">Next Ladies of the Links site</a>
 		</div>
 		<div class="webring--genlissa">
 			<a href="https://webri.ng/webring/genlissa/previous?via=http://frills.dev" class="webring__prev">Previous Site</a>
