@@ -102,6 +102,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
 }
+.dashboard__item.--gallery img {
+  height: auto;
+}
 
 .dashboard__item.--colours ul {
   list-style-type: none;
