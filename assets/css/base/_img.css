@@ -10,11 +10,13 @@ img {
 }
 
 html[data-scheme='light'] .invert--lightmode {
-  filter: invert(1) brightness(100%) grayscale(1);
+  filter: invert(1) brightness(1) contrast(120%);
+  mix-blend-mode: multiply;
 }
 
 @media (prefers-color-scheme: light) {
   .invert--lightmode {
-  filter: invert(1) brightness(100%) grayscale(1);
+    filter: invert(1) brightness(1) contrast(120%);
+    mix-blend-mode: multiply;
   }
 }
