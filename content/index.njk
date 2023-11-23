@@ -102,7 +102,7 @@ scripts: '
 		<li class="noscriptHide"><span class="emoji" role="img" aria-label="Local time">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (gmt)</li>
 		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini</li>
 		<li><span role="img" class="emoji" aria-label="Moon sign">🌚</span> Scorpio</li>
-		<li><img src="/images/myspace-online.gif" alt="Online now" class="onlinenow"> Online now!</li>
+		<li><img src="/images/myspace-online.gif" alt="Status (jk)" class="onlinenow"> Online now!</li>
 	</ul>
 </div>
 {%- endblock -%}
@@ -180,14 +180,6 @@ scripts: '
 		)}}
 	</div>
 	<div class="dashboard__item">
-		<h2 class="visually-hidden">Shrines</h2>
-		<a href="/shrine/orla" class="gallery" aria-label="Orla (my dog) shrine">
-			<img src="/images/shrine/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy">
-			<img src="/images/shrine/orla/orla14.jpg" width="100" height="100" alt="" loading="lazy">
-			<img src="/images/shrine/orla/orla15.jpg" width="100" height="100" alt="" loading="lazy">
-		</a>
-	</div>
-	{# <div class="dashboard__item">
 		{{ macro.callout(
 			element = 'article',
 			modifiers = 'callout--small callout--info',
@@ -196,14 +188,25 @@ scripts: '
 			<h2>Currently reading</h2>
 			',
 			body = '
-			The Eye of the World - Robert Jordan
+			<a href="https://www.goodreads.com/book/show/13519397-throne-of-glass" class="hidden">Throne of Glass - Sarah J Maas</a>
 			'
 		)}}
-	</div> #}
+	</div>
+	<div class="dashboard__item">
+		<h2 class="visually-hidden">Shrines</h2>
+		<a href="/shrine/orla" class="gallery" aria-label="Orla (my dog) shrine">
+			<img src="/images/shrine/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy">
+			<img src="/images/shrine/orla/orla14.jpg" width="100" height="100" alt="" loading="lazy">
+			<img src="/images/shrine/orla/orla15.jpg" width="100" height="100" alt="" loading="lazy">
+		</a>
+	</div>
 	<article class="dashboard__item --center noscriptHide">
 		<h2 class="visually-hidden">Website carbon</h2>
 		<div id="wcb" class="carbonbadge wcb-d"></div>
 	</article>
+	<div class="dashboard__item">
+		<img src="/images/art/floating-in-dreams.jpg" class="invert--lightmode" alt="Black and white line drawing of a cartoon girl floating in dreams, stars prick the space behind her. Wearing a nighty and socks, her arms are held up weightlessly. Her hair is a mane, splayed out like an open flower.">
+	</div>
 	<article class="dashboard__item --box --latestposts">
 		<header>
 			<h2 class="--bgwiggly">Latest posts</h2>
