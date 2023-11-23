@@ -103,6 +103,10 @@
   gap: 0.5rem;
 }
 
+.gallery img {
+  height: auto;
+}
+
 .dashboard__item.--colours ul {
   list-style-type: none;
   display: grid;

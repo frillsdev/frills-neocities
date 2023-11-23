@@ -7,7 +7,6 @@ html[data-scheme='dark'][data-snow='true'] {
   --linkaccent: #731f00;
   --linkhover: LawnGreen;
   --text: LavenderBlush;
-  --pink: DeepPink;
   --dashboard-bg: Indigo;
   --dashboard-outline: #2e004f;
   --logo-anim-1: LightSteelBlue;
@@ -27,7 +26,6 @@ html[data-scheme='light'][data-snow='true'] {
     --linkaccent: MidnightBlue;
     --linkhover: Blue;
     --text: Black;
-    --pink: DeepPink;
     --dashboard-bg: PaleGreen;
     --dashboard-outline: LimeGreen;
     --logo-anim-1: MediumBlue;
