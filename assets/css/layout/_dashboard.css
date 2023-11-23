@@ -102,7 +102,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
 }
-.dashboard__item.--gallery img {
+.gallery img {
   height: auto;
 }
 
