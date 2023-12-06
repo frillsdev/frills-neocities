@@ -3,8 +3,8 @@ input,
 select {
     display: block;
     color: var(--text);
-    background-color: var(--bodybg);
-    border: 1px solid orangered;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
     border-radius: 4px;
     font-size: 0.9rem;
     padding: 8px 14px;
@@ -26,7 +26,7 @@ textarea.--code {
 }
 
 input {
-    accent-color: orangered;
+    accent-color: var(--input-border);
 }
 
 label {
