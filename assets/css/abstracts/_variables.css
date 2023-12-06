@@ -24,9 +24,9 @@
   --linkhover: SpringGreen;
   --text: LavenderBlush;
   --subtext: PeachPuff;
-  --pink: DeepPink;
   --dashboard-bg: SlateBlue;
   --dashboard-outline: #3e318e;
+  --callout-info: DeepSkyBlue;
   --logo-x: Gold;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 70%, 70%);
@@ -47,9 +47,9 @@ html[data-scheme='dark'] {
   --linkhover: SpringGreen;
   --text: LavenderBlush;
   --subtext: PeachPuff;
-  --pink: DeepPink;
   --dashboard-bg: SlateBlue;
   --dashboard-outline: #3e318e;
+  --callout-info: DeepSkyBlue;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 70%, 70%);
   --logo-anim-3: hsl(10, 100%, 60%);

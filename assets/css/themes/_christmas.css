@@ -1,45 +1,46 @@
 html[data-scheme='dark'][data-christmas='true'] {
   --bodybg: #1e1e1e;
   --bg: Black;
-  --accent: Gold;
-  --interactive: OrangeRed;
-  --link: OrangeRed;
+  --accent: #ff6262;
+  --interactive: Red;
+  --link: #ff6262;
   --linkaccent: #731f00;
-  --linkhover: LawnGreen;
+  --linkhover: #6db847;
   --text: LavenderBlush;
-  --pink: DeepPink;
-  --dashboard-bg: Indigo;
-  --dashboard-outline: #2e004f;
-  --logo-anim-1: OrangeRed;
-  --logo-anim-2: OrangeRed;
-  --logo-anim-3: OrangeRed;
-  --logo-anim-4: LawnGreen;
-  --logo-anim-5: LawnGreen;
-  --logo-anim-6: LawnGreen;
+  --dashboard-bg: #c91c1c;
+  --dashboard-outline: #701010;
+  --callout-info: limegreen;
+  --logo-anim-1: snow;
+  --logo-anim-2: snow;
+  --logo-anim-3: #da3535;
+  --logo-anim-4: #da3535;
+  --logo-anim-5: #6db847;
+  --logo-anim-6: #6db847;
 }
 
 html[data-scheme='light'][data-christmas='true'] {
-    --bodybg: LavenderBlush;
+    --bodybg: Lavender;
     --bg: Snow;
-    --interactive: #e1007a;
-    --accent: #d73a00;
-    --link: BlueViolet;
-    --linkaccent: Thistle;
+    --subtext: Darkred;
+    --interactive: #4b7f31;
+    --accent: #2e4e1e;
+    --link: #cd0000;
+    --linkaccent: #d56666;
     --linkhover: Green;
     --text: Black;
-    --pink: DeepPink;
-    --dashboard-bg: PaleGreen;
-    --dashboard-outline: LimeGreen;
-    --logo-anim-1: BlueViolet;
-    --logo-anim-2: BlueViolet;
-    --logo-anim-3: OrangeRed;
-    --logo-anim-4: OrangeRed;
+    --dashboard-bg: #8acf8a;
+    --dashboard-outline: #cae9ca;
+    --callout-info: red;
+    --logo-anim-1: Darkgreen;
+    --logo-anim-2: Darkgreen;
+    --logo-anim-3: DarkRed;
+    --logo-anim-4: DarkRed;
     --logo-anim-5: Green;
     --logo-anim-6: Green;
 }
 
 .toggle--christmas {
-  display: none;
+  /* display: none; */
 }
 
 .toggle--christmas::before {

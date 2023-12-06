@@ -15,7 +15,7 @@
 }
 
 .callout--info {
-  border-color: deepskyblue;
+  border-color: var(--callout-info);
   color: var(--text);
 }
 

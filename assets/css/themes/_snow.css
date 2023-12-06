@@ -1,41 +1,41 @@
 html[data-scheme='dark'][data-snow='true'] {
-  --bodybg: #0d0e20;
-  --bg: Black;
-  --accent: Gold;
-  --interactive: OrangeRed;
-  --link: OrangeRed;
-  --linkaccent: #731f00;
-  --linkhover: LawnGreen;
-  --text: LavenderBlush;
-  --pink: DeepPink;
-  --dashboard-bg: Indigo;
-  --dashboard-outline: #2e004f;
-  --logo-anim-1: LightSteelBlue;
-  --logo-anim-2: PowderBlue;
-  --logo-anim-3: DeepSkyBlue;
-  --logo-anim-4: Aqua;
-  --logo-anim-5: Aquamarine;
-  --logo-anim-6: Turquoise;
+    --bodybg: #0a0a2c;
+    --bg: #0f0f42;
+    --interactive: #148bff;
+    --accent: #148bff;
+    --link: #7afffe;
+    --linkaccent: #59bebd;
+    --linkhover: #80dcff;
+    --text: Snow;
+    --dashboard-bg: #3d3dd4;
+    --dashboard-outline: #2828b4;
+    --logo-x: Dodgerblue;
+    --logo-anim-1: #b1ade6;
+    --logo-anim-2: #adb7e6;
+    --logo-anim-3: #adc1e6;
+    --logo-anim-4: #adcde6;
+    --logo-anim-5: #addde6;
+    --logo-anim-6: #ade6da;
 }
 
 html[data-scheme='light'][data-snow='true'] {
     --bodybg: Lavender;
     --bg: Snow;
-    --interactive: #e1007a;
-    --accent: #d73a00;
-    --link: Navy;
-    --linkaccent: MidnightBlue;
-    --linkhover: Blue;
+    --interactive: #0072e1;
+    --accent: #0072e1;
+    --link: #0064c5;
+    --linkaccent: #7dbfff;
+    --linkhover: #6c41c6;
     --text: Black;
-    --pink: DeepPink;
-    --dashboard-bg: PaleGreen;
-    --dashboard-outline: LimeGreen;
-    --logo-anim-1: MediumBlue;
-    --logo-anim-2: RoyalBlue;
-    --logo-anim-3: MidnightBlue;
-    --logo-anim-4: CornflowerBlue;
-    --logo-anim-5: DodgerBlue;
-    --logo-anim-6: PaleTurquoise;
+    --dashboard-bg: #7bbeff;
+    --dashboard-outline: #5aadff;
+    --logo-x: Dodgerblue;
+    --logo-anim-1: #4538ff;
+    --logo-anim-2: #384fff;
+    --logo-anim-3: #385cff;
+    --logo-anim-4: #388aff;
+    --logo-anim-5: #38a9ff;
+    --logo-anim-6: #38caff;
 }
 
 .toggle--snow {
