@@ -71,10 +71,6 @@ scripts: '
 		}
 		avatarSwapper()
 	</script>
-	<script>
-		sparkles("confetti1")
-	</script>
-
 '
 ---
 {% extends 'structure/templates/home.njk'%}
@@ -130,10 +126,13 @@ scripts: '
 		<div class="dashboard__item --colours">
 			<ul aria-hidden="true">
 				<li style="background-color: var(--text)"></li>
+				<li style="background-color: var(--subtext)"></li>
 				<li style="background-color: var(--accent)"></li>
 				<li style="background-color: var(--interactive)"></li>
 				<li style="background-color: var(--link)"></li>
 				<li style="background-color: var(--linkhover)"></li>
+				<li style="background-color: var(--dashboard-bg)"></li>
+				<li style="background-color: var(--callout-info)"></li>
 				<li style="background-color: var(--logo-anim-1)"></li>
 				<li style="background-color: var(--logo-anim-2)"></li>
 				<li style="background-color: var(--logo-anim-3)"></li>
@@ -189,7 +188,7 @@ scripts: '
 			<h2>Currently reading</h2>
 			',
 			body = '
-			<a href="https://www.goodreads.com/book/show/76705490-crown-of-midnight">Crown of Midnight - Sarah J Maas</a>
+			<a href="https://www.goodreads.com/book/show/76705490-crown-of-midnight" class="hidden">Crown of Midnight - Sarah J Maas</a>
 			'
 		)}}
 	</div>

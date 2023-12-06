@@ -15,18 +15,20 @@
 :root {
   --bodybg: #1e1e1e;
   --bg: Black;
-  --bodyrgb: 0,0,0;
+  --bodyrgb: 0, 0, 0;
   --accent: Gold;
   --separator: PaleGreen;
   --interactive: OrangeRed;
+  --input-bg: #1e1e1e;
+  --input-border: DeepSkyBlue;
   --link: DeepPink;
   --linkaccent: #620035;
   --linkhover: SpringGreen;
   --text: LavenderBlush;
   --subtext: PeachPuff;
-  --pink: DeepPink;
   --dashboard-bg: SlateBlue;
   --dashboard-outline: #3e318e;
+  --callout-info: DeepSkyBlue;
   --logo-x: Gold;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 70%, 70%);
@@ -35,21 +37,24 @@
   --logo-anim-5: hsl(153, 70%, 70%);
   --logo-anim-6: hsl(204, 70%, 70%);
 }
+
 html[data-scheme='dark'] {
   --bodybg: #1e1e1e;
   --bg: Black;
-  --bodyrgb: 0,0,0;
+  --bodyrgb: 0, 0, 0;
   --accent: Gold;
   --separator: PaleGreen;
   --interactive: OrangeRed;
+  --input-bg: #1e1e1e;
+  --input-border: DeepSkyBlue;
   --link: DeepPink;
   --linkaccent: #620035;
   --linkhover: SpringGreen;
   --text: LavenderBlush;
   --subtext: PeachPuff;
-  --pink: DeepPink;
   --dashboard-bg: SlateBlue;
   --dashboard-outline: #3e318e;
+  --callout-info: DeepSkyBlue;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 70%, 70%);
   --logo-anim-3: hsl(10, 100%, 60%);
@@ -63,8 +68,10 @@ html[data-scheme='dark'] {
   :root {
     --bodybg: LavenderBlush;
     --bg: Snow;
-    --bodyrgb: 255,250,250;
+    --bodyrgb: 255, 250, 250;
     --interactive: #e1007a;
+    --input-bg: Lavender;
+    --input-border: DeepSkyBlue;
     --separator: DeepPink;
     --accent: #d73a00;
     --link: Blue;
@@ -83,11 +90,14 @@ html[data-scheme='dark'] {
 
   }
 }
+
 html[data-scheme='light'] {
   --bodybg: LavenderBlush;
   --bg: Snow;
-  --bodyrgb: 255,250,250;
+  --bodyrgb: 255, 250, 250;
   --interactive: #e1007a;
+  --input-bg: Lavender;
+  --input-border: DodgerBlue;
   --separator: DeepPink;
   --accent: #d73a00;
   --link: Blue;

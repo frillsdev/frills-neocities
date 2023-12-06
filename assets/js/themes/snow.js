@@ -18,7 +18,7 @@ function snowScheme() {
 
     snowButton.addEventListener('click', () => {
         if (snowify == 'null') {
-            snowify = 'false';
+            snowify = 'true';
         }
         if (snowify === 'false') {
             snowify = 'true';
