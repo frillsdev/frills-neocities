@@ -12,9 +12,4 @@ I made a little bookmarklet for this to be done in the browser, all it does is a
 
 To install the bookmarklet, drag and drop the button below into your bookmarks toolbar.
 
-<a class="button secondary d-ib" href="javascript:(function()%7Bdocument.querySelectorAll('*').forEach((function(x)%7Bx.setAttribute(%22contenteditable%22%2Ctrue)%3B%7D))%7D)()%3B">Edit everything!</a>
-
-
-## Notes
-- Clicking the button won't work, you need to install it to use it 😊
-- Might not work in Safari yet
+<a href="javascript:(function()%7Bdocument.querySelectorAll(%22body%20*%22).forEach(function%20(x)%20%7B%0A%20%20if%20(x.getAttribute(%22contenteditable%22)%20%3D%3D%20%22true%22)%20%7B%0A%20%20%20%20x.setAttribute(%22contenteditable%22%2C%20false)%3B%0A%20%20%7D%20else%20%7B%0A%20%20%20%20x.setAttribute(%22contenteditable%22%2C%20true)%3B%0A%20%20%7D%0A%7D)%3B%7D)()%3B" class="button">Edit everything!</a>
