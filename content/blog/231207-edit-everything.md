@@ -10,6 +10,11 @@ In the dev world, you gotta test lots of stuff. One of those things is content a
 
 I made a little bookmarklet for this to be done in the browser, all it does is added the `contenteditable` attribute to literally every element on the page and you can change the text to whatever you want.
 
-To install the bookmarklet, drag and drop the button below into your bookmarks toolbar.
+To install the bookmarklet, drag and drop the button below into your bookmarks toolbar, or right click and 
 
 <a class="button secondary d-ib" href="javascript:(function()%7Bdocument.querySelectorAll('*').forEach((function(x)%7Bx.setAttribute(%22contenteditable%22%2Ctrue)%3B%7D))%7D)()%3B">Edit everything!</a>
+
+
+## Notes
+- Clicking the button won't work, you need to install it to use it 😊
+- Might not work in Safari yet
