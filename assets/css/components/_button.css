@@ -12,6 +12,7 @@ input[type="submit"] {
   box-shadow: 4px 4px 0 0 DarkGoldenRod;
   cursor: pointer;
   transition: 0.3s ease transform, 0.3s ease background-color, 0.3s ease box-shadow;
+  display: inline-block;
 }
 
 .button:hover,
