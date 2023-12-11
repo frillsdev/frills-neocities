@@ -36,9 +36,9 @@ html[data-scheme='light'][data-christmas='true'] {
   --dashboard-bg: #8acf8a;
   --dashboard-outline: #cae9ca;
   --callout-info: red;
-  --logo-anim-1: Darkgreen;
+  --logo-anim-1: Green;
   --logo-anim-2: Darkgreen;
-  --logo-anim-3: DarkRed;
+  --logo-anim-3: Red;
   --logo-anim-4: DarkRed;
   --logo-anim-5: Green;
   --logo-anim-6: Green;
@@ -62,7 +62,18 @@ html[data-scheme='light'][data-christmas='true'] {
   background: linear-gradient(45deg, var(--bg) 25%, transparent 25%), linear-gradient(315deg, var(--bg) 25%, transparent 25%), linear-gradient(45deg, transparent 24%, var(--bodybg) 25%, var(--bodybg) 45%, transparent 45%), linear-gradient(315deg, transparent 24%, var(--bodybg) 25%, var(--bodybg) 45%, transparent 45%);
   background-size: 3em 3em;
   background-color: var(--bg);
-  opacity: 1
+  opacity: 1;
+  padding-top: 10px;
+}
+
+[data-christmas="true"] body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: repeating-linear-gradient(-40deg, var(--logo-anim-1) 0, var(--logo-anim-1) 20px, var(--logo-anim-3) 20px, var(--logo-anim-3) 40px);
 }
 
 [data-christmas="true"] .about .emoji {
