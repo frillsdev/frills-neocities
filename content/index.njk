@@ -186,39 +186,41 @@ scripts: '
 			<img src="/images/art/floating-in-dreams.jpg" class="invert--lightmode" alt="Black and white line drawing of a cartoon girl floating in dreams, stars prick the space behind her. Wearing a nighty and socks, her arms are held up weightlessly. Her hair is a mane, splayed out like an open flower.">
 		</div> #}
 	</div>
-	<article class="dashboard__item --card --latestposts">
-		<header>
-			<h2 class="--bgwiggly">Latest posts</h2>
-		</header>
-		{%- set latestBlog = collections.posts | reverse | first -%}
-		{%- set latestExperiment = collections.experiments | reverse | first -%}
-		{%- set latestChangelog = collections.changelog | reverse | first -%}
-		<div class="h-sm">
-			<h3>📝 Blog</h3>
-			<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
-			<h3>🧪 Experiment</h3>
-			<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
-			<h3>🛠️ Changelog</h3>
-			<div class="description">
-				{{latestChangelog.content|safe}}
+	<div class="av-br">
+		<article class="dashboard__item --card --latestposts">
+			<header>
+				<h2 class="--bgwiggly">Latest posts</h2>
+			</header>
+			{%- set latestBlog = collections.posts | reverse | first -%}
+			{%- set latestExperiment = collections.experiments | reverse | first -%}
+			{%- set latestChangelog = collections.changelog | reverse | first -%}
+			<div class="h-sm">
+				<h3>📝 Blog</h3>
+				<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
+				<h3>🧪 Experiment</h3>
+				<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
+				<h3>🛠️ Changelog</h3>
+				<div class="description">
+					{{latestChangelog.content|safe}}
+				</div>
 			</div>
+		</article>
+		<article class="dashboard__item --card">
+			<div>
+				<h2 class="visually-hidden">RSS feeds</h2>
+				<ul class="unstyled inline small">
+					<li><a href="/rss.xml" class="rss">Blog<span class="visually-hidden"> RSS feed</span></a></li>
+					<li><a href="/experiments.xml" class="rss">Experiments<span class="visually-hidden"> RSS feed</span></a></li>
+					<li><a href="/changelog.xml" class="rss">Changelog<span class="visually-hidden"> RSS feed</span></a></li>
+					<li><a href="/all.xml" class="rss">All<span class="visually-hidden"> RSS feed</span></a></li>
+				</ul>
+			</div>
+		</article>
+		<div class="dashboard__item">
+			<a href="https://www.codelikeagirl.com/"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPAgMAAAAOp6AcAAAACVBMVEXfOHf///8cGx0Yk1ajAAAAZUlEQVQY06WPsQ2AMAwEv3BS21K8jy2FPgVhLhqWyJS4oSFpEFeeTpYfYwGuPnHgxET+Iqmk5I3IFQUqzSwkO1cBUWU4TMg4pFnIKJuiY4uS3qULR/ncTNU1ZBHaLf/8c719LLgB7XE6FjMry00AAAAASUVORK5CYII=" alt="Code like a girl" width="80" height="15"></a>
+			{# <img src=" data:image/gif;base64,R0lGODlhUAAPAMQAAABnLPDQ0oW2mrgRHmM3JAAAZsRSW+Dg4GWYe4goIdqFi////60xNS5PJ2ZmZr1vc6e/sejAwx9XKdmDifLc3qkaH7VfY+axtdNsdLsdKUtCJcQxPPrz9N+lqXUwIwphKyH5BAQUAP8ALAAAAABQAA8AAAXwoCOOZGmeaKqu7Li8cCzPdG3feC4uR+8HvmAwRywaZbvDKzAxZCgLjgITuUR5x6y2llxcOobNIEIRD8YUDHbL3nY7lPLTcB5MIhi1sh0rwPwvBYALg4SCf4dIDlhUEQMZF2YbEWFQe3yBhJqbgIWeNjsQAhYPFnWnGwYMAgIQmH+anYKdfYmGNDsIAB8JFacDvgMeHwAACK+ZfrScfTSFL7nFHx4VFR4eAwQSDQkNxcfIsbCcibOBtjHRABISww0SCd3txMbh9jPqCR4aABoEBB/aeZDw7Z5BaIsQKFzIsOHCgwZ3QJxYpIXFixgzmggBADs=" alt="Wales">
+			<img src=" data:image/gif;base64,R0lGODlhUAAPAPcAAAAAAAAAIQAAMQAAQgAASgAAUgAAWgAAYwAAawAAcwAAewAAhDExY0I5IUJCjEoAAEo5IVparWNjY2taMXN7rdatY9a9jP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ywAAAAAUAAPAAAI/gAlCBxIsKDBgwgTKlzIcCCAhxAjSpwIMYCAARgJECjA0YDHAyAPIBiZoKSCkwtOKihZciSCkAc8euRYQKNGjAIp6txpEeMAjTRlwnTJUmXKkywTuIQp0wBNmwRwSnhI4aGFClizarVAsWfGjR0/hiRqEqXKpEtDNn1qUyrFCRUiVpjA8+LXoGJBkk1g9CzLtCDXcoTqlmJciId1ev0JtoDQC5BHQoZ88sLRCyUxI7jw8gLICzLZ3hyQ07DciFUjLgYa1oBnvZuLKqAMObNSyAdeg545uC3pqaYR7wSwurFMz5E316684MJs25uVfw7de3TpiYkBZJ9YHK/rz5JljFuuDJ1z7um8a/q+DsABgAjaT9f1ydrxR9ySJzMnn0Czed3UqWcdcNg18BAEh6UmUXetDUVSWQoctdJfIzEVIGG/SXSVVhxyxZ1djHnnIAKyRehXSxWqdeF6BA43EQMPVARifUKN9SBfZiFF4Usqpochey7Od1eDNpIIoYRopRjYigM25OSTUEZJUEAAADs=" alt="Gemini"> #}
 		</div>
-	</article>
-	<article class="dashboard__item --card">
-		<div>
-			<h2 class="visually-hidden">RSS feeds</h2>
-			<ul class="unstyled inline small">
-				<li><a href="/rss.xml" class="rss">Blog<span class="visually-hidden"> RSS feed</span></a></li>
-				<li><a href="/experiments.xml" class="rss">Experiments<span class="visually-hidden"> RSS feed</span></a></li>
-				<li><a href="/changelog.xml" class="rss">Changelog<span class="visually-hidden"> RSS feed</span></a></li>
-				<li><a href="/all.xml" class="rss">All<span class="visually-hidden"> RSS feed</span></a></li>
-			</ul>
-		</div>
-	</article>
-	<div class="dashboard__item">
-		<a href="https://www.codelikeagirl.com/"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPAgMAAAAOp6AcAAAACVBMVEXfOHf///8cGx0Yk1ajAAAAZUlEQVQY06WPsQ2AMAwEv3BS21K8jy2FPgVhLhqWyJS4oSFpEFeeTpYfYwGuPnHgxET+Iqmk5I3IFQUqzSwkO1cBUWU4TMg4pFnIKJuiY4uS3qULR/ncTNU1ZBHaLf/8c719LLgB7XE6FjMry00AAAAASUVORK5CYII=" alt="Code like a girl" width="80" height="15"></a>
-		{# <img src=" data:image/gif;base64,R0lGODlhUAAPAMQAAABnLPDQ0oW2mrgRHmM3JAAAZsRSW+Dg4GWYe4goIdqFi////60xNS5PJ2ZmZr1vc6e/sejAwx9XKdmDifLc3qkaH7VfY+axtdNsdLsdKUtCJcQxPPrz9N+lqXUwIwphKyH5BAQUAP8ALAAAAABQAA8AAAXwoCOOZGmeaKqu7Li8cCzPdG3feC4uR+8HvmAwRywaZbvDKzAxZCgLjgITuUR5x6y2llxcOobNIEIRD8YUDHbL3nY7lPLTcB5MIhi1sh0rwPwvBYALg4SCf4dIDlhUEQMZF2YbEWFQe3yBhJqbgIWeNjsQAhYPFnWnGwYMAgIQmH+anYKdfYmGNDsIAB8JFacDvgMeHwAACK+ZfrScfTSFL7nFHx4VFR4eAwQSDQkNxcfIsbCcibOBtjHRABISww0SCd3txMbh9jPqCR4aABoEBB/aeZDw7Z5BaIsQKFzIsOHCgwZ3QJxYpIXFixgzmggBADs=" alt="Wales">
-		<img src=" data:image/gif;base64,R0lGODlhUAAPAPcAAAAAAAAAIQAAMQAAQgAASgAAUgAAWgAAYwAAawAAcwAAewAAhDExY0I5IUJCjEoAAEo5IVparWNjY2taMXN7rdatY9a9jP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////ywAAAAAUAAPAAAI/gAlCBxIsKDBgwgTKlzIcCCAhxAjSpwIMYCAARgJECjA0YDHAyAPIBiZoKSCkwtOKihZciSCkAc8euRYQKNGjAIp6txpEeMAjTRlwnTJUmXKkywTuIQp0wBNmwRwSnhI4aGFClizarVAsWfGjR0/hiRqEqXKpEtDNn1qUyrFCRUiVpjA8+LXoGJBkk1g9CzLtCDXcoTqlmJciId1ev0JtoDQC5BHQoZ88sLRCyUxI7jw8gLICzLZ3hyQ07DciFUjLgYa1oBnvZuLKqAMObNSyAdeg545uC3pqaYR7wSwurFMz5E316684MJs25uVfw7de3TpiYkBZJ9YHK/rz5JljFuuDJ1z7um8a/q+DsABgAjaT9f1ydrxR9ySJzMnn0Czed3UqWcdcNg18BAEh6UmUXetDUVSWQoctdJfIzEVIGG/SXSVVhxyxZ1djHnnIAKyRehXSxWqdeF6BA43EQMPVARifUKN9SBfZiFF4Usqpochey7Od1eDNpIIoYRopRjYigM25OSTUEZJUEAAADs=" alt="Gemini"> #}
 	</div>
 </div>
 {%- endblock -%}
