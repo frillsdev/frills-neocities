@@ -15,7 +15,7 @@ I've already learnt a bunch of things that I wasn't aware of, like if you add `l
   <figcaption>A meme made by my colleague</figcaption>
 </figure>
 
-To resolve this, I am styling the `::marker` psuedo element instead of overriding the `list-style` property on `<ul>` and `<ol>` elements. There is a limited set of CSS properties you can apply to markers, which you can read more about on the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::marker">MDN web docs</a>.
+To resolve this, I am styling the `::marker` pseudo element instead of overriding the `list-style` property on `<ul>` and `<ol>` elements. There is a limited set of CSS properties you can apply to markers, which you can read more about on the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::marker">MDN web docs</a>.
 
 Here is an example of a list that you can inspect to see how I have done it:
 
