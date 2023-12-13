@@ -11,11 +11,11 @@
 
 {%- block main -%}
     <article class="full-width">
-        <header class="mb-2">
+        <header class="mb-2 reading-width">
             {% if tags.includes("changelog") %}
             <h1>{{ page.date | readableDate }}</h1>
             {% else %}
-            <h1>{{title}}</h1>
+            <h1>{{title|safe}}</h1>
             {% endif %}
 
             {% if tags.includes("posts") %}
