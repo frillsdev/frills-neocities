@@ -128,7 +128,16 @@
 }
 .dashboard__item.--latestposts .description>ul,
 .dashboard__item.--latestposts .description>ol {
-  list-style: none;
   padding: 0;
   margin: 0;
+}
+.dashboard__item.--latestposts .description>ul li::marker,
+.dashboard__item.--latestposts .description>ol li::marker {
+  content: '';
+}
+.dashboard__item.--latestposts .description code,
+.dashboard__item.--latestposts .description pre {
+  font-size: inherit;
+  background-color: var(--bg);
+  padding: 0.1rem 0.2rem 0.2rem 0.2rem;
 }
