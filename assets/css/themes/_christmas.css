@@ -53,8 +53,8 @@ html[data-scheme='light'][data-christmas='true'] {
   font-size: 1rem;
 }
 
-[data-christmas="true"] ul.stars li::before,
-[data-christmas="true"] ol.stars li::before {
+[data-christmas="true"] ul.stars li::marker,
+[data-christmas="true"] ol.stars li::marker {
   content: '🎁';
 }
 

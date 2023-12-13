@@ -54,8 +54,16 @@
   margin-bottom: 2rem !important;
 }
 
+.av-br {
+  break-inside: avoid-column;
+}
+
 .d-ib {
   display: inline-block;
+}
+
+.ar-16-9 {
+  aspect-ratio: calc(16 / 9);
 }
 
 .reading-width {

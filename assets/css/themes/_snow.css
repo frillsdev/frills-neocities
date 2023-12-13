@@ -47,7 +47,7 @@ html[data-scheme='light'][data-snow='true'] {
   font-size: 1rem;
 }
 
-[data-snow="true"] ul.stars li::before,
-[data-snow="true"] ol.stars li::before {
+[data-snow="true"] ul.stars li::marker,
+[data-snow="true"] ol.stars li::marker {
   content: '❄️';
 }

@@ -52,7 +52,7 @@ html[data-scheme='light'][data-spooky='true'] {
   animation: none;
 }
 
-[data-spooky="true"] ul.stars li::before,
-[data-spooky="true"] ol.stars li::before {
+[data-spooky="true"] ul.stars li::marker,
+[data-spooky="true"] ol.stars li::marker {
   content: '👻';
 }

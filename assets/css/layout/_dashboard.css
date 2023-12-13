@@ -27,28 +27,28 @@
   object-fit: cover;
 }
 
-.dashboard__item.--box {
+.dashboard__item.--card {
   box-shadow: inset 0 0 0 4px var(--dashboard-bg), 4px 4px 0 0 var(--dashboard-outline);
   padding: 4px;
 }
 
-.dashboard__item.--box header {
+.dashboard__item.--card header {
   border-bottom: 2px solid var(--dashboard-bg);
   margin: -4px -4px 0 -4px
 }
 
-.dashboard__item.--box header h2 {
+.dashboard__item.--card header h2 {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   margin-bottom: 0;
   background-color: var(--dashboard-bg);
 }
 
-.dashboard__item.--box>div {
+.dashboard__item.--card>div {
   padding: 1rem;
 }
 
-.dashboard__item.--box div :last-child {
+.dashboard__item.--card div :last-child {
   margin-bottom: 0;
 }
 
