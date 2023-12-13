@@ -47,7 +47,7 @@
 
 @media (min-width: 768px) {
   .content__main {
-    min-height: 70vh;
+    min-height: 60vh;
     flex-wrap: nowrap;
   }
 }

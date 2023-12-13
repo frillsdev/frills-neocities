@@ -58,3 +58,20 @@ a.rss::before {
   background-size: contain;
   margin-right: 0.5rem;
 }
+
+ul.colourpalette {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+ul.colourpalette li::marker {
+  content: '';
+}
+
+ul.colourpalette li {
+  aspect-ratio: 1;
+  width: 2rem;
+}

@@ -117,96 +117,75 @@ scripts: '
 			<img src="/images/piclog/piclog1.jpg" alt="The sun rises through the clouds over the sea with people walking out of the sea." loading="lazy" width="100" height="100">
 		</figure>
 	</article>
-	<section class="av-br">
+	<div class="dashboard__item av-br">
+		<h2 class="visually-hidden">Intro</h2>
+		<p>Greetings, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you.</p>
+		<p>I am Frills, the proud webmistress of this website in this wondrous wifi world, learn more <a href="/about">about me</a> or <a href="/site">about this website</a>.</p>
+		<p>Here you will find my latest <a href="/blog">thoughts</a> and <a href="/experiments">experiments</a>, <a href="/links">portals to other websites</a>, and <a href="/guestbook">messages</a> left by other wanderers.</p>
+	</div>
+	<div class="av-br">
+		<article class="dashboard__item --neocities --bgwiggly">
+			<img src="/images/neocities.svg" alt="Neocities cat holding a paintbrush and spanner">
+			<div>
+				<a href="https://neocities.org/site/fri11s">Neocities profile</a>
+				<p class="small">Follow me for updates!</p>
+			</div>
+		</article>
 		<div class="dashboard__item">
-			<h2 class="visually-hidden">Intro</h2>
-			<p>Greetings, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you.</p>
-			<p>I am Frills, the proud webmistress of this website in this wondrous wifi world, learn more <a href="/about">about me</a> or <a href="/site">about this website</a>.</p>
-		</div>
-		<div class="dashboard__item --colours">
-			<ul aria-hidden="true">
-				<li style="background-color: var(--text)"></li>
-				<li style="background-color: var(--subtext)"></li>
-				<li style="background-color: var(--accent)"></li>
-				<li style="background-color: var(--interactive)"></li>
-				<li style="background-color: var(--link)"></li>
-				<li style="background-color: var(--linkhover)"></li>
-				<li style="background-color: var(--dashboard-bg)"></li>
-				<li style="background-color: var(--callout-info)"></li>
-				<li style="background-color: var(--logo-anim-1)"></li>
-				<li style="background-color: var(--logo-anim-2)"></li>
-				<li style="background-color: var(--logo-anim-3)"></li>
-				<li style="background-color: var(--logo-anim-4)"></li>
-				<li style="background-color: var(--logo-anim-5)"></li>
-				<li style="background-color: var(--logo-anim-6)"></li>
-				<li style="background-color: var(--bodybg)"></li>
-			</ul>
+			{{ macro.callout(
+				element = 'article',
+				modifiers = 'callout--small callout--info statusCafe noscriptHide',
+				header = '
+					<span id="statusCafe-emoji"></span>
+					<h2><a href="https://status.cafe/users/fri11s" class="hidden">Latest status</a></h2>
+					<time id="statusCafe-time"></time>',
+				body = '
+					<div id="statusCafe-status">No recent update :(</div>
+			') }}
 		</div>
 		<div class="dashboard__item">
-			<p>Here you will find my latest <a href="/blog">thoughts</a> and <a href="/experiments">experiments</a>, <a href="/links">portals to other websites</a>, and <a href="/guestbook">messages</a> left by other wanderers.</p>
+			{{ macro.callout(
+				element = 'article',
+				modifiers = 'callout--small callout--info noscriptHide',
+				header = '
+				<span class="emoji" role="img" aria-label="Musical note">🎵</span>
+				<h2>Last played</h2>
+				<span><span id="lfmTime">right now</span></span>
+				',
+				body = '
+				<span id="lfmSong">No recently played song :(</span>
+				'
+			)}}
 		</div>
-	</section>
-	<article class="dashboard__item --neocities --bgwiggly">
-		<img src="/images/neocities.svg" alt="Neocities cat holding a paintbrush and spanner">
-		<div>
-			<a href="https://neocities.org/site/fri11s">Neocities profile</a>
-			<p class="small">Follow me for updates!</p>
+		<div class="dashboard__item">
+			{{ macro.callout(
+				element = 'article',
+				modifiers = 'callout--small callout--info',
+				header = '
+				<span class="emoji" role="img" aria-label="Books">📚</span>
+				<h2>Currently reading</h2>
+				',
+				body = '
+				<a href="https://www.goodreads.com/book/show/76706470-heir-of-fire" class="hidden">Heir of Fire - Sarah J Maas</a>
+				'
+			)}}
 		</div>
-	</article>
-	<div class="dashboard__item">
-		{{ macro.callout(
-			element = 'article',
-			modifiers = 'callout--small callout--info statusCafe noscriptHide',
-			header = '
-				<span id="statusCafe-emoji"></span>
-				<h2><a href="https://status.cafe/users/fri11s" class="hidden">Latest status</a></h2>
-				<time id="statusCafe-time"></time>',
-			body = '
-				<div id="statusCafe-status">No recent update :(</div>
-		') }}
+		<div class="dashboard__item">
+			<h2 class="visually-hidden">Shrines</h2>
+			<a href="/shrine/orla" class="gallery" aria-label="Orla (my dog) shrine">
+				<img src="/images/shrine/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy">
+				<img src="/images/shrine/orla/orla14.jpg" width="100" height="100" alt="" loading="lazy">
+				<img src="/images/shrine/orla/orla15.jpg" width="100" height="100" alt="" loading="lazy">
+			</a>
+		</div>
+		<article class="dashboard__item --center noscriptHide">
+			<h2 class="visually-hidden">Website carbon</h2>
+			<div id="wcb" class="carbonbadge wcb-d"></div>
+		</article>
+		{# <div class="dashboard__item">
+			<img src="/images/art/floating-in-dreams.jpg" class="invert--lightmode" alt="Black and white line drawing of a cartoon girl floating in dreams, stars prick the space behind her. Wearing a nighty and socks, her arms are held up weightlessly. Her hair is a mane, splayed out like an open flower.">
+		</div> #}
 	</div>
-	<div class="dashboard__item">
-		{{ macro.callout(
-			element = 'article',
-			modifiers = 'callout--small callout--info noscriptHide',
-			header = '
-			<span class="emoji" role="img" aria-label="Musical note">🎵</span>
-			<h2>Last played</h2>
-			<span><span id="lfmTime">right now</span></span>
-			',
-			body = '
-			<span id="lfmSong">No recently played song :(</span>
-			'
-		)}}
-	</div>
-	<div class="dashboard__item">
-		{{ macro.callout(
-			element = 'article',
-			modifiers = 'callout--small callout--info',
-			header = '
-			<span class="emoji" role="img" aria-label="Books">📚</span>
-			<h2>Currently reading</h2>
-			',
-			body = '
-			<a href="https://www.goodreads.com/book/show/76706470-heir-of-fire" class="hidden">Heir of Fire - Sarah J Maas</a>
-			'
-		)}}
-	</div>
-	<div class="dashboard__item">
-		<h2 class="visually-hidden">Shrines</h2>
-		<a href="/shrine/orla" class="gallery" aria-label="Orla (my dog) shrine">
-			<img src="/images/shrine/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy">
-			<img src="/images/shrine/orla/orla14.jpg" width="100" height="100" alt="" loading="lazy">
-			<img src="/images/shrine/orla/orla15.jpg" width="100" height="100" alt="" loading="lazy">
-		</a>
-	</div>
-	<article class="dashboard__item --center noscriptHide">
-		<h2 class="visually-hidden">Website carbon</h2>
-		<div id="wcb" class="carbonbadge wcb-d"></div>
-	</article>
-	{# <div class="dashboard__item">
-		<img src="/images/art/floating-in-dreams.jpg" class="invert--lightmode" alt="Black and white line drawing of a cartoon girl floating in dreams, stars prick the space behind her. Wearing a nighty and socks, her arms are held up weightlessly. Her hair is a mane, splayed out like an open flower.">
-	</div> #}
 	<article class="dashboard__item --card --latestposts">
 		<header>
 			<h2 class="--bgwiggly">Latest posts</h2>
@@ -248,6 +227,25 @@ scripts: '
 {%- endblock -%}
 
 {% block bottom %}
+<div class="grid grid--offset">
+	<ul aria-hidden="true" class="colourpalette">
+		<li style="background-color: var(--text)"></li>
+		<li style="background-color: var(--subtext)"></li>
+		<li style="background-color: var(--accent)"></li>
+		<li style="background-color: var(--interactive)"></li>
+		<li style="background-color: var(--link)"></li>
+		<li style="background-color: var(--linkhover)"></li>
+		<li style="background-color: var(--dashboard-bg)"></li>
+		<li style="background-color: var(--callout-info)"></li>
+		<li style="background-color: var(--logo-anim-1)"></li>
+		<li style="background-color: var(--logo-anim-2)"></li>
+		<li style="background-color: var(--logo-anim-3)"></li>
+		<li style="background-color: var(--logo-anim-4)"></li>
+		<li style="background-color: var(--logo-anim-5)"></li>
+		<li style="background-color: var(--logo-anim-6)"></li>
+		<li style="background-color: var(--bodybg)"></li>
+	</ul>
+</div>
 <div class="grid grid--offset">
 	<aside class="webrings pt-2">
 		<h2 class="visually-hidden">Webrings</h2>

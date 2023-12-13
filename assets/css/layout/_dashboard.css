@@ -1,9 +1,9 @@
 .dashboard {
-  column-width: 250px;
+  column-width: 350px;
   gap: 1rem;
   width: 100%;
   font-size: 90%;
-  max-width: 950px;
+  /* max-width: 950px; */
   /* height: 100%; */
 }
 
@@ -58,11 +58,6 @@
   display: flex;
 }
 
-.dashboard__item.--spotify {
-  background-color: #cd379e;
-  background-image: linear-gradient(to bottom, #cd379e, #b8318e);
-}
-
 .dashboard__item.--neocities {
   display: flex;
   align-items: center;
@@ -104,19 +99,7 @@
 }
 .gallery img {
   height: auto;
-}
-
-.dashboard__item.--colours ul {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 0;
-}
-
-.dashboard__item.--colours li {
-  aspect-ratio: 1;
+  width: 100%;
 }
 
 .dashboard__item.--latestposts .description {
