@@ -2,6 +2,7 @@
 title: Home
 rss: false
 scripts: '
+	<link rel="me" href="https://indieweb.social/@frills">
 	<script>
 	let time=document.querySelector("#localTime");const d=new Date().toLocaleTimeString("en-US",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"});e=d.replace(/\s/g,""),time.innerHTML=e;
 	</script>
@@ -65,17 +66,17 @@ scripts: '
 	</div>
 	<div class="dashboard__item">
 		{{ macro.callout(
-				element = 'article',
-				modifiers = 'callout--small',
-				header = '<h2>Community holidays event</h2>',
-				body = '
-					<a href="https://32bit.cafe/holidays2023/" class="d-b mb-1"><img src="/images/32bit-cafe-holidays.png" alt="32 bit cafe holidays"></a>
-					<ul class="unstyled mb-0">
-						<li>👯 Hosted by <a href="https://32bit.cafe/holidays2023/">32 bit cafe</a>.</li>
-						<li>💡 Snowflakes, gingerbread art, Afternoon Tea, charm bracelets, holiday shrines, Secret Santa!</li>
-						<li>🗓️ 10 December 2023 - 10 January 2024</li>
-					</ul>
-			') }}
+			element = 'aside',
+			modifiers = 'callout--inf',
+			header = '<h2 class="visually-hidden">Community holidays event</h2>',
+			body = '
+				<a href="https://32bit.cafe/holidays2023/" class="d-b mb-1"><img src="/images/32bit-cafe-holidays.png" alt="32 bit cafe holidays"></a>
+				<ul class="unstyled mb-0">
+					<li>👯 Hosted by <a href="https://32bit.cafe/holidays2023/">32 bit cafe</a>.</li>
+					<li>💡 Snowflakes, gingerbread art, Afternoon Tea, charm bracelets, holiday shrines, Secret Santa!</li>
+					<li>🗓️ 10 December 2023 - 10 January 2024</li>
+				</ul>
+		') }}
 	</div>
 	<div class="av-br">
 		<article class="dashboard__item --neocities --bgwiggly">
