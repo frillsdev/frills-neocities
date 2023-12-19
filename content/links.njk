@@ -280,7 +280,12 @@ scripts: '<script>
     "bg": "#252525",
     "color": "#de6b09",
     "type": "link"
-}
+  }, {
+    "name": "Leviathren",
+    "href": "https://leviathren.neocities.org",
+    "src": "leviathren.png",
+    "type": "button"
+  }
 ] %}
 {% set friends = [
   {
@@ -467,7 +472,7 @@ scripts: '<script>
 
 <section class="reading-width">
   <ul class="buttonwall">
-    {% for link in links | attribute="name") %}
+    {% for link in links | sort(attribute="name") %}
     {% if link.type == "button" %}
     <li class="buttonwall__image">
       <a href="{{link.href}}">
@@ -486,7 +491,7 @@ scripts: '<script>
 
   <h2>Friends</h2>
   <ul class="buttonwall">
-    {% for friend in friends | attribute="name") %}
+    {% for friend in friends | sort(attribute="name") %}
     <li class="buttonwall__item">
       <a href="{{friend.href}}" style="font-size: {{friend.size}};  background-color: {{friend.bg}}; color: {{friend.color}};">
         {{friend.name}}
@@ -497,7 +502,7 @@ scripts: '<script>
 
   <h2>Creatives</h2>
   <ul class="buttonwall">
-    {% for creative in creatives | attribute="name") %}
+    {% for creative in creatives | sort(attribute="name") %}
     <li class="buttonwall__item">
       <a href="{{creative.href}}" style="font-size: {{creative.size}};  background-color: {{creative.bg}}; color: {{creative.color}};">
         {{creative.name}}
@@ -508,7 +513,7 @@ scripts: '<script>
 
   <h2>Tools & fun things</h2>
   <ul class="buttonwall">
-    {% for tool in tools | attribute="name") %}
+    {% for tool in tools | sort(attribute="name") %}
     {% if tool.type == "button" %}
     <li class="buttonwall__image">
       <a href="{{tool.href}}">
@@ -527,7 +532,7 @@ scripts: '<script>
 
   <h2>Bookmarks & link lists</h2>
   <ul class="buttonwall">
-    {% for bookmark in bookmarks | attribute="name") %}
+    {% for bookmark in bookmarks | sort(attribute="name") %}
     {% if bookmark.type == "button" %}
     <li class="buttonwall__image">
       <a href="{{bookmark.href}}">
