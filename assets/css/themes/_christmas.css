@@ -2,6 +2,7 @@ html[data-scheme='dark'][data-christmas='true'] {
   --bodybg: #0e250e;
   --bg: #091500;
   --accent: #ff6262;
+  --accentcontrast: Black;
   --interactive: Red;
   --input-bg: #0e250e;
   --input-border: Green;
@@ -21,21 +22,22 @@ html[data-scheme='dark'][data-christmas='true'] {
 }
 
 html[data-scheme='light'][data-christmas='true'] {
-  --bodybg: #e1f1df;
-  --bg: Snow;
+  --bodybg: Snow;
+  --bg: #e1f1df;
   --subtext: Darkred;
   --interactive: #4b7f31;
   --input-bg: #e1f1df;
   --input-border: Green;
   --separator: Green;
   --accent: #2e4e1e;
+  --accentcontrast: White;
   --link: #cd0000;
-  --linkaccent: #d56666;
+  --linkaccent: #ff8484;
   --linkhover: Green;
   --text: Black;
   --dashboard-bg: #8acf8a;
   --dashboard-outline: #cae9ca;
-  --callout-info: red;
+  --callout-info: #2e4e1e;
   --logo-anim-1: Green;
   --logo-anim-2: Darkgreen;
   --logo-anim-3: Red;
