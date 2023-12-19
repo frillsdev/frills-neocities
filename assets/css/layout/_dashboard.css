@@ -28,6 +28,10 @@
   background-color: var(--dashboard-bg);
 }
 
+.dashboard__item-image img {
+  border-radius: 0.7rem;
+}
+
 .dashboard__item-image.--square {
   aspect-ratio: 1;
   width: 100%;
@@ -45,8 +49,16 @@
 
 .dashboard__item.--card header {
   border-bottom: 2px solid var(--dashboard-bg);
-  margin: -4px -4px 0 -4px
 }
+
+.dashboard__item.--card header:first-child {
+  margin: -4px -4px 0 -4px;
+}
+
+.dashboard__item.--card header:last-child {
+  margin: 0 -4px -4px -4px;
+}
+
 
 .dashboard__item.--card header h2 {
   padding: 0.5rem 1rem;
