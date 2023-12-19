@@ -21,6 +21,32 @@ html[data-scheme='dark'][data-christmas='true'] {
   --logo-anim-6: #6db847;
 }
 
+@media (prefers-color-scheme: dark) {
+  html[data-christmas='true'] {
+    --bodybg: #0e250e;
+    --bg: #091500;
+    --accent: #ff6262;
+    --accentcontrast: Black;
+    --interactive: Red;
+    --input-bg: #0e250e;
+    --input-border: Green;
+    --link: #ff6262;
+    --linkaccent: #731f00;
+    --linkhover: limegreen;
+    --text: LavenderBlush;
+    --dashboard-bg: #c91c1c;
+    --dashboard-outline: #701010;
+    --callout-info: limegreen;
+    --logo-anim-1: snow;
+    --logo-anim-2: snow;
+    --logo-anim-3: #da3535;
+    --logo-anim-4: #da3535;
+    --logo-anim-5: #6db847;
+    --logo-anim-6: #6db847;
+  }
+}
+
+
 html[data-scheme='light'][data-christmas='true'] {
   --bodybg: Snow;
   --bg: #e1f1df;
@@ -44,6 +70,33 @@ html[data-scheme='light'][data-christmas='true'] {
   --logo-anim-4: DarkRed;
   --logo-anim-5: Green;
   --logo-anim-6: Green;
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-christmas='true'] {
+    --bodybg: Snow;
+    --bg: #e1f1df;
+    --subtext: Darkred;
+    --interactive: #4b7f31;
+    --input-bg: #e1f1df;
+    --input-border: Green;
+    --separator: Green;
+    --accent: #2e4e1e;
+    --accentcontrast: White;
+    --link: #cd0000;
+    --linkaccent: #ff8484;
+    --linkhover: Green;
+    --text: Black;
+    --dashboard-bg: #8acf8a;
+    --dashboard-outline: #cae9ca;
+    --callout-info: #2e4e1e;
+    --logo-anim-1: Green;
+    --logo-anim-2: Darkgreen;
+    --logo-anim-3: Red;
+    --logo-anim-4: DarkRed;
+    --logo-anim-5: Green;
+    --logo-anim-6: Green;
+  }
 }
 
 .toggle--christmas {
