@@ -58,6 +58,13 @@
   break-inside: avoid-column;
 }
 
+.fl-r {
+  float: right;
+}
+
+.d-b {
+  display: block;
+}
 .d-ib {
   display: inline-block;
 }
