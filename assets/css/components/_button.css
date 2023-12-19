@@ -51,7 +51,7 @@ button.ghost {
   will-change: transform;
   padding: 6px 12px;
   border-radius: 4px;
-  background-color: transparent;
+  background-color: var(--bodybg);
   color: var(--text);
   border: 0;
   box-shadow: inset 0 0 0 2px var(--link), 4px 4px 0 0 var(--linkaccent);
@@ -61,7 +61,7 @@ button.ghost {
 
 .button.ghost:hover,
 button.ghost:hover {
-  background-color: transparent;
+  background-color: var(--bodybg);
 }
 .button.ghost:hover,
 button.ghost:hover,

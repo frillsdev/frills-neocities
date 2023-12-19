@@ -24,6 +24,6 @@ body {
 }
 
 *::selection {
-  color: var(--bg);
+  color: var(--accentcontrast);
   background-color: var(--accent);
 }
