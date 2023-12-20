@@ -2,7 +2,7 @@
   column-width: 250px;
   gap: 1rem;
   width: 100%;
-  font-size: 90%;
+  font-size: 85%;
   margin-bottom: 2rem;
   /* max-width: 950px; */
   /* height: 100%; */
@@ -28,6 +28,10 @@
   background-color: var(--dashboard-bg);
 }
 
+.dashboard__item-image img {
+  border-radius: 0.7rem;
+}
+
 .dashboard__item-image.--square {
   aspect-ratio: 1;
   width: 100%;
@@ -37,12 +41,24 @@
 .dashboard__item.--card {
   box-shadow: inset 0 0 0 4px var(--dashboard-bg), 4px 4px 0 0 var(--dashboard-outline);
   padding: 4px;
+  background-color: var(--bodybg);
+  max-width: calc(100% - 8px);
+  border-radius: 0.75rem;
+  overflow: hidden;
 }
 
 .dashboard__item.--card header {
   border-bottom: 2px solid var(--dashboard-bg);
-  margin: -4px -4px 0 -4px
 }
+
+.dashboard__item.--card header:first-child {
+  margin: -4px -4px 0 -4px;
+}
+
+.dashboard__item.--card header:last-child {
+  margin: 0 -4px -4px -4px;
+}
+
 
 .dashboard__item.--card header h2 {
   padding: 0.5rem 1rem;
@@ -72,13 +88,13 @@
   gap: 10px;
   background-color: var(--accent);
   position: relative;
-  border-radius: 4px;
+  border-radius: 0.75rem;
 }
 
 .dashboard__item.--neocities p.small {
   margin: 0;
   font-size: 60%;
-  color: var(--bg);
+  color: var(--accentcontrast);
 }
 
 .dashboard__item.--neocities img {
@@ -88,7 +104,7 @@
 }
 
 .dashboard__item.--neocities a {
-  color: var(--bg);
+  color: var(--accentcontrast);
   font-size: 110%;
 }
 
@@ -109,15 +125,17 @@
   gap: 0.5rem;
 }
 
+.dashboard__item.--gallery img,
 .gallery img {
   height: auto;
   width: 100%;
+  border-radius: 0.75rem;
 }
 
 .dashboard__item.--latestposts .description {
-  font-size: 15px;
+  font-size: 85%;
   margin-bottom: 0rem;
-  background: var(--bodybg);
+  background: var(--bg);
   padding: 0.5rem;
   margin-top: 3px
 }
@@ -136,6 +154,5 @@
 .dashboard__item.--latestposts .description code,
 .dashboard__item.--latestposts .description pre {
   font-size: inherit;
-  background-color: var(--bg);
   padding: 0.1rem 0.2rem 0.2rem 0.2rem;
 }

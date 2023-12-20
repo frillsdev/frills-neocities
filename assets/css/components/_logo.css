@@ -60,8 +60,9 @@
     max-height: 60px;
 }
 
-.logo:hover .logo-tx {
-    fill: transparent !important;
+a:hover .logo .logo-tx,
+a:focus .logo .logo-tx {
+    fill: var(--bodybg) !important;
 }
 
 @media (min-width: 768px) {
@@ -83,7 +84,8 @@
         animation: colour 10s 0s linear infinite forwards alternate;
     }
 
-    .logo:hover .logo-tx {
+    a:hover .logo .logo-tx,
+    a:focus .logo .logo-tx {
         stroke-width: 1px;
 
     }

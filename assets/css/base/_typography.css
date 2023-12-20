@@ -73,5 +73,5 @@ p {
 
 em {
   font-style: normal;
-  color: var(--accent);
+  color: var(--highlight);
 }
