@@ -24,6 +24,7 @@
   background-image: linear-gradient(to right, var(--text) 50%, transparent 50%);
 }
 
+.toggle--snow,
 .toggle--christmas,
 .toggle--spooky {
   display: none;
