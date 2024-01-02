@@ -16,7 +16,9 @@
   --bodybg: #1e1e1e;
   --bg: Black;
   --bodyrgb: 0, 0, 0;
-  --accent: Gold;
+  --highlight: Gold;
+  --accent: #FF5790;
+  --accentcontrast: Black;
   --separator: PaleGreen;
   --interactive: OrangeRed;
   --input-bg: #1e1e1e;
@@ -30,7 +32,7 @@
   --dashboard-outline: Goldenrod;
   --dashboard-text: Black;
   --callout-info: DeepSkyBlue;
-  --logo-x: White;
+  --logo-x: Gold;
   --logo-anim-1: hsl(255, 70%, 70%);
   --logo-anim-2: hsl(330, 70%, 70%);
   --logo-anim-3: hsl(10, 100%, 60%);
