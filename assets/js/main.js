@@ -76,5 +76,5 @@ window.addEventListener('load', function () {
     // notification(3, 'New!');
     consoleClub();
     colorScheme();
-    sparkles('colorXmas')
+    sparkles()
 }, true);

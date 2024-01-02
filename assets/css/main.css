@@ -5,7 +5,7 @@
 @import url('./abstracts/_utility.css');
 @import url('./abstracts/_animation.css');
 
-@import url('./themes/_spooky.css');
+
 
 @import url('./base/_font.css');
 @import url('./base/_form.css');
@@ -35,5 +35,5 @@
 @import url('./pages/_homepage.css');
 @import url('./pages/_bloglist.css');
 
-@import url('./themes/_snow.css');
-@import url('./themes/_christmas.css');
+/* @import url('./themes/_spooky.css'); */
+/* @import url('./themes/_christmas.css'); */

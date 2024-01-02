@@ -65,6 +65,7 @@
   font-size: 1rem;
   margin-bottom: 0;
   background-color: var(--dashboard-bg);
+  color: var(--dashboard-text);
 }
 
 .dashboard__item.--card>div {
