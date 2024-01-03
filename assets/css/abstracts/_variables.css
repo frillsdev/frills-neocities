@@ -80,7 +80,7 @@ html[data-scheme='dark'] {
     --input-bg: Lavender;
     --input-border: DodgerBlue;
     --separator: DeepPink;
-    --highlight: OrangeRed;
+    --highlight: #c00048;
     --accent: #FF5790;
     --accentcontrast: Black;
     --link: Purple;
@@ -110,7 +110,7 @@ html[data-scheme='light'] {
   --input-bg: Lavender;
   --input-border: DodgerBlue;
   --separator: DeepPink;
-  --highlight: OrangeRed;
+  --highlight: #c00048;
   --accent: #FF5790;
   --accentcontrast: Black;
   --link: Purple;
