@@ -85,7 +85,7 @@ html[data-scheme='dark'] {
     --accentcontrast: Black;
     --link: Purple;
     --linkaccent: Plum;
-    --linkhover: #e1007a;
+    --linkhover: #007038;
     --linkvisited: BlueViolet;
     --text: Black;
     --subtext: DarkRed;
@@ -115,7 +115,7 @@ html[data-scheme='light'] {
   --accentcontrast: Black;
   --link: Purple;
   --linkaccent: Plum;
-  --linkhover: #e1007a;
+  --linkhover: #007038;
   --linkvisited: BlueViolet;
   --text: Black;
   --subtext: DarkRed;
