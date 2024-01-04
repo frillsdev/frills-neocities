@@ -51,7 +51,7 @@ function avatarSwapper() {
 		},
 		{
 			src: "/images/collections/avatars/Cutie_Creator_20.png",
-			alt: "Avatar of a white woman with brown hair, styled in spacebuns with a yellow flower. She is winking, with her mouth open, you can see 2 vampire fangs! Wearing a mustard jumper with an egg and a rainbow LGBTIA+ badge pinned.",
+			alt: "Avatar of a white woman with brown hair, styled in spacebuns with a yellow flower. She is winking, with her mouth open, you can see 2 vampire fangs! Wearing a mustard jumper with an egg and a rainbow LGBTQIA+ badge pinned.",
 		},
 		{
 			src: "/images/collections/avatars/scrimsart.png",
