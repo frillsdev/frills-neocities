@@ -1,0 +1,46 @@
+---
+title: Now
+rss: true
+date: 2023-01-08
+---
+{% extends 'structure/templates/page-2col.njk'%}
+
+{% block main %}
+<article class="reading-width">
+  <p>What I am up to today, this week, this month, this year.<br/>
+  Inspired by <a href="https://sneekrealm.neocities.org/now/">Sneek's</a> format of <a href="https://nownownow.com/about">nownownow</a> pages.</p>
+
+  <small class="d-b">Last updated: {{ date | readableDate("d LLL yyyy") }}</small>
+
+  <hr class="my-2">
+
+  <h2 class="pt-0">Days</h2>
+  <ul>
+    <li>My theme for <a href="https://32bit.cafe/">32bit.cafe</a> is the default at the moment!</li>
+    <li>Learning about the history of Witchcraft and casting protection spells.</li>
+    <li>Tarot reading study.</li>
+    <li>GM'd a play through of <a href="https://gothhoblin.itch.io/trash-pals">Trash Pals</a> (my first GM experience).</li>
+  </ul>
+  {# ------------------------------ #}
+  <h2>Weeks</h2>
+  <ul>
+    <li>Journalling more as therapy.</li>
+    <li>Improving my strength through daily press ups.</li>
+  </ul>
+  {# ------------------------------ #}
+  <h2>Months</h2>
+  <ul>
+    <li>Reading the Throne of Glass series and enjoying it. I had been in a reading dry spell for 2½ years, so I am really savouring it at the moment. I have a large TBR list now.</li>
+    <li>Lots of accessibility assessments for work. There has a been a fresh flurry of clients requesting them, I think as part of the UK gov carrying out more monitoring reports.</li>
+    <li>Maintaining the health of pup dog (suffered from an acute kidney injury in September 2023). Blood tests (to monitor her creatinine and urea levels) are now once every six months.</li>
+    <li>Trying to get my ass in gear to organise a wedding.</li>
+  </ul>
+  {# ------------------------------ #}
+  <h2>Years</h2>
+  <ul>
+    <li>Working at a private digital agency on a variety of clients.</li>
+    <li>Enjoying working from home with the odd day in the office.</li>
+    <li>Need to get the boiler serviced.</li>
+  </ul>
+</article>
+{% endblock %}
