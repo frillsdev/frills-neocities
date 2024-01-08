@@ -5,7 +5,6 @@
 
 <ol reversed class="listing stars">
 	{% for post in postslist | reverse %}
-
 	<li>
 		<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
 
