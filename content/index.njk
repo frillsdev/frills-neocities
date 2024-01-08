@@ -46,6 +46,17 @@ scripts: '
 
 {%- block main -%}
 <div class="dashboard">
+	<noscript>
+		<div class="dashboard__item">
+		{{ macro.callout(
+			element = 'article',
+			modifiers = 'callout--small callout--warning mb-0',
+			header = '<h2>🛠️ Your JavaScipt is disabled</h2>',
+			body = '
+				<p>This website uses JavaScript, please read <a href="/site#javascript">About the Site</a> to understand why</p>
+		') }}
+		</div>
+	</noscript>
 	<article class="dashboard__item --gallery">
 		<h2 class="visually-hidden">Gallery</h2>
 		<figure>
