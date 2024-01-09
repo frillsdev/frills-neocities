@@ -28,11 +28,11 @@ The general topic is web development, so bear that in mind before you begin.
 
 1. <a href="https://evilmartians.com/chronicles/images-done-right-web-graphics-good-to-the-last-byte-optimization-techniques">Images done right: Web graphics, good to the last byte — Martian Chronicles, Evil Martians’ team blog</a> - An article I never read about web graphics and using SVGs
 
-1. <a href="javascript:(function(){revenge=document.createElement('LINK');revenge.href='https://rawgithub.com/Heydon/REVENGE.CSS/master/revenge.css';revenge.rel='stylesheet';revenge.media='all';document.body.appendChild(revenge);})();">Revenge CSS</a> - Bookmarklet that uses selectors to find bad markup, displaying ugly pink error messages in comic sans serif wherever you write bad HTML.
+1. <a href="javascript:(function(){revenge=document.createElement('LINK');revenge.href='https://rawgithub.com/Heydon/REVENGE.CSS/master/revenge.css';revenge.rel='stylesheet';revenge.media='all';document.body.appendChild(revenge);})();">Revenge CSS</a> - Bookmarklet that uses selectors to find bad markup, not sure how in-date this bookmarket is as it is not being actively maintained 😛
 
 1. <a href="https://codepen.io/preghostphase/pen/MWWZBze">buttonClub</a> - A Codepen made by an old friend who obsessed with collecting buttons with fun hovers. Not very accessible, so don't condone their use but they're fun to look at and inspire you to find ways of building them accessibly.
 
-1. <a href="https://www.cssfontstack.com/">CSS Font stack</a> - A complete collection of web-safe CSS font stacks. 
+1. <a href="https://www.cssfontstack.com/">CSS Font stack</a> - A complete collection of web-safe CSS font stacks.
 
 1. <a href="https://www.amp-what.com/unicode/search/%2F%26%5Cw%2F">&what;</a> - A list of symbols and their HTML entity codes.
 
