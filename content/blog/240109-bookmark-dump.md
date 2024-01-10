@@ -58,7 +58,7 @@ The general topic is web development, so bear that in mind before you begin.
 
 1. <a href="https://riccardoscalco.it/textures/">Textures.js</a> - JavaScript injected SVGs? Not sure I ever used this but I find the patterns visually appealing.
 
-1. <a href="https://www.browserstack.com/question/39415">Browserstack: Webpages appear to be cached on the remote servers. </a> - 1. <a href="https://refreshless.com/nouislider/">noUiSlider</a> - Think I used this once? It's a range input that has multiple handles. Claims to be accessible to boot.
+1. <a href="https://refreshless.com/nouislider/">noUiSlider</a> - Think I used this once? It's a range input that has multiple handles. Claims to be accessible to boot.
 
 1. <a href="https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/">ChartJS starter examples</a> - When I had to use ChartJS every other day and I just wanted somewhere quick to start from!
 
@@ -111,6 +111,8 @@ The general topic is web development, so bear that in mind before you begin.
 1. <a href="https://neurodiversity.design/">Neurodiversity Design System</a> - A coherent set of standards and principles that combine neurodiversity and user experience design.
 
 1. <a href="https://www.accessibilitychecker.org/">AccessibilityChecker</a> - A free tool that gives you a report of the page and its accessibility sins. (I don't typically use this, my go-to is <a href="https://www.deque.com/axe/">aXe by Deque University</a>)
+
+1. <a href="https://hypermedia.systems/">Hypermedia Systems</a> - Recommended to read by a colleague. They describe it as 'a simpler approach to building applications on the Web and beyond with htmx and Hyperview'.
 
 ---
 
