@@ -11,7 +11,7 @@ I have this huge folder that I have been collecting links in for several years. 
 
 The general topic is web development, so bear that in mind before you begin.
 
-1. <a href="javascript:(function()%7Bwindow.location=window.location.origin+'/wp-admin/';%7D)()">Open WP Page</a> - This is a bookmarklet, it sits at the top of the folder and I actually use it a lot to quickly navigate to the WordPress admin page, without really needing to think about it. A developer friend made it for me literal years ago and I don't even know if it applies to all WordPress websites.
+1. <a href="javascript:(function()%7Bwindow.location=window.location.origin+'/wp-admin/';%7D)()">Open WP Page</a> - This is a bookmarklet, it sits at the top of the folder and I actually use it a lot to quickly navigate to the WordPress admin page, without really needing to think about it.
 
 1. <a href="javascript:(function(){ var style = document.createElement(%27style%27), styleContent = document.createTextNode(%27* { cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJBJREFUeNrs2dEKgDAIhWEN3/+VLYtBF12MppHwDxY0uvg4DJpORcSl0bB4uPcwq+oFHu8/956pbtJsAAYMGDBgwIABA044t3pMEgb8VU2XsWdn1o/aUUn4bchPBWNFYWvVidxbCFGmr7YULBs1YDPfsYcXEi9ryvDjAAwYMGDAgAED7nK8bHG7qNLs6nYXYAAheh5j8Qw5fwAAAABJRU5ErkJggg==) 22 22, auto !important}%27); style.appendChild(styleContent ); var caput = document.getElementsByTagName(%27head%27); caput[0].appendChild(style); })();">44x44 Cursor</a> - Another little bookmarklet, which despite being near the top and theoretically very useful for accessibility testing, I never use it. Not sure where I found it, it made your cursor into a 44x44 square, which was the button/link/interactive element minimum size in WCAG 2.1 (it's been reduced to 25x25 now in WCAG 2.2 for Level AA).
 
@@ -28,9 +28,9 @@ The general topic is web development, so bear that in mind before you begin.
 
 1. <a href="https://evilmartians.com/chronicles/images-done-right-web-graphics-good-to-the-last-byte-optimization-techniques">Images done right: Web graphics, good to the last byte — Martian Chronicles, Evil Martians’ team blog</a> - An article I never read about web graphics and using SVGs
 
-1. <a href="javascript:(function(){revenge=document.createElement('LINK');revenge.href='https://rawgithub.com/Heydon/REVENGE.CSS/master/revenge.css';revenge.rel='stylesheet';revenge.media='all';document.body.appendChild(revenge);})();">Revenge CSS</a> - Bookmarklet that uses selectors to find bad markup, not sure how in-date this bookmarket is as it is not being actively maintained 😛
+1. <a href="javascript:(function(){revenge=document.createElement('LINK');revenge.href='https://rawgithub.com/Heydon/REVENGE.CSS/master/revenge.css';revenge.rel='stylesheet';revenge.media='all';document.body.appendChild(revenge);})();">Revenge CSS</a> - Bookmarklet that uses selectors to find bad markup, not sure I would trust this these days, it is not actively maintained 😛
 
-1. <a href="https://codepen.io/preghostphase/pen/MWWZBze">buttonClub</a> - A Codepen made by an old friend who obsessed with collecting buttons with fun hovers. Not very accessible, so don't condone their use but they're fun to look at and inspire you to find ways of building them accessibly.
+1. <a href="https://codepen.io/preghostphase/pen/MWWZBze">buttonClub</a> - A Codepen made by an old friend who loved collecting buttons with fun hovers. Not very accessible, so don't condone their use but they're fun to look at and inspire you to find ways of building them accessibly.
 
 1. <a href="https://www.cssfontstack.com/">CSS Font stack</a> - A complete collection of web-safe CSS font stacks.
 
@@ -52,9 +52,9 @@ The general topic is web development, so bear that in mind before you begin.
 
 1. <a href="https://alphagov.github.io/accessible-autocomplete/examples/">Accessible Autocomplete</a> - Developed by the UK government, still in alpha, so not released officially but I have used it in a few projects because Accessible!!
 
-1. <a href="https://codyhouse.co/tutorials/how-stacking-cards">Stacking Cards example</a> - Reminds me of a university project one of my peers did.
+1. <a href="https://codyhouse.co/tutorials/how-stacking-cards">Stacking Cards example</a> - Reminds me of a university project one of my peers did, when you would scroll through pages, like into the screen.
 
-1. <a href="https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions">Google Maps documentation: Markers</a> - God I hate Google Maps and its markers. Black magic, I say.
+1. <a href="https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerOptions">Google Maps documentation: Markers</a> - Reference this a lot when building maps with the Google Maps API.
 
 1. <a href="https://riccardoscalco.it/textures/">Textures.js</a> - JavaScript injected SVGs? Not sure I ever used this but I find the patterns visually appealing.
 
@@ -70,15 +70,15 @@ The general topic is web development, so bear that in mind before you begin.
 
 1. <a href="https://plyr.io/#audio">Plyr: A simple, accessible and customisable media player</a> - Never used it, but what a cool tool.
 
-1. <a href="https://wiki.owain.codes/coding/umbraco/rosyln-error">Roslyn error</a> - Lol. The Roslyn error comes up a lot when I take a look at an Umbraco project that I have not built before. This is just a snippet to fix it.
+1. <a href="https://wiki.owain.codes/coding/umbraco/rosyln-error">Roslyn error</a> - Lol. The Roslyn error comes up a lot when building Umbraco projects for the first time. This is just a snippet to fix it.
 
 1. <a href="https://css-tricks.com/useful-nth-child-recipies/">Useful :nth-child Recipes</a> - Nth child magic! This article helps when brain can't brain.
 
-1. <a href="https://www.accessibilityassociation.org/s/was-sample-exam-questions">WAS Sample Exam Questions</a> - When I considered becoming a Web Accessibility Specialist but had no idea what I needed to know 100% before doing an exam.
+1. <a href="https://www.accessibilityassociation.org/s/was-sample-exam-questions">WAS Sample Exam Questions</a> - When I considered becoming a Web Accessibility Specialist but had no idea what I needed to know 100% before doing an exam. Exam fear, engage.
 
 1. <a href="https://laracasts.com">Laracasts</a> - A tutorial website for Laravel (php) stuff.
 
-1. <a href="https://gitmoji.dev/">Gitmoji</a> - I have my own version of Gitmoji that I used for this website, nothing official, but just a visual way to show what the update consists of.
+1. <a href="https://gitmoji.dev/">Gitmoji</a> - I have my own version of Gitmoji that I use for this website, nothing official, but just a visual way to show what the update consists of.
 
 1. <a href="https://app.daily.dev/">Daily.dev</a> - A new tab dashboard for dev articles. Used this for a bit. Had a group with my colleagues but found only two of us were contributing. Also found it distracting every time I opened a new tab.
 
