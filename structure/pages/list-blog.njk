@@ -1,14 +1,15 @@
 {% extends "structure/templates/page-3col.njk" %}
 
 {% block main %}
-<h1>{{title}}</h1>
+<h1 class="pb-1">{{title}}</h1>
 
-<ol reversed class="listing stars">
+<ol reversed class="listing unstyled">
 	{% for post in postslist | reverse %}
 	<li>
-		<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
-
-		<time datetime="{{ post.date | htmlDateString }}"> {{ post.date | readableDate("d LLL yyyy") }}</time>
+		<time datetime="{{ post.date | htmlDateString }}"> {{ post.date | readableDate("dd LLL yyyy") }}</time>
+		<div>
+			<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
+		</div>
 	</li>
 	{% endfor %}
 </ol>

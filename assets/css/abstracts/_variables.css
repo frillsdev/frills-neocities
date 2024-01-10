@@ -26,6 +26,7 @@
   --link: DeepPink;
   --linkaccent: #620035;
   --linkhover: SpringGreen;
+  --linkvisited: #ff5790;
   --text: LavenderBlush;
   --subtext: PeachPuff;
   --dashboard-bg: Gold;
@@ -55,6 +56,7 @@ html[data-scheme='dark'] {
   --link: DeepPink;
   --linkaccent: #620035;
   --linkhover: SpringGreen;
+  --linkvisited: #ff5790;
   --text: LavenderBlush;
   --subtext: PeachPuff;
   --dashboard-bg: Gold;
@@ -73,21 +75,21 @@ html[data-scheme='dark'] {
 /* Light mode */
 @media (prefers-color-scheme: light) {
   :root {
-    --bodybg: LavenderBlush;
-    --bg: #FFCFDF;
+    --bodybg: #FFE6EE;
+    --bg: #FFD7E4;
     --bodyrgb: 255, 250, 250;
     --interactive: #e1007a;
-    --input-bg: Lavender;
-    --input-border: DodgerBlue;
+    --input-bg: LavenderBlush;
+    --input-border: DeepPink;
     --separator: DeepPink;
-    --highlight: #c00048;
+    --highlight: #006a8e;
     --accent: #FF5790;
     --accentcontrast: Black;
-    --link: Purple;
-    --linkaccent: Plum;
-    --linkhover: #007038;
-    --linkvisited: BlueViolet;
-    --text: Black;
+    --link: #89002a;
+    --linkaccent: #ffb8d0;
+    --linkhover: #bd003a;
+    --linkvisited: #2a00bd;
+    --text: #510019;
     --subtext: DarkRed;
     --dashboard-bg: Gold;
     --dashboard-outline: Goldenrod;
@@ -103,21 +105,21 @@ html[data-scheme='dark'] {
 }
 
 html[data-scheme='light'] {
-  --bodybg: LavenderBlush;
-  --bg: #FFCFDF;
+  --bodybg: #FFE6EE;
+  --bg: #FFD7E4;
   --bodyrgb: 255, 250, 250;
   --interactive: #e1007a;
-  --input-bg: Lavender;
-  --input-border: DodgerBlue;
+  --input-bg: LavenderBlush;
+  --input-border: DeepPink;
   --separator: DeepPink;
-  --highlight: #c00048;
+  --highlight: #006a8e;
   --accent: #FF5790;
   --accentcontrast: Black;
-  --link: Purple;
-  --linkaccent: Plum;
-  --linkhover: #007038;
-  --linkvisited: BlueViolet;
-  --text: Black;
+  --link: #89002a;
+  --linkaccent: #ffb8d0;
+  --linkhover: #bd003a;
+  --linkvisited: #2a00bd;
+  --text: #510019;
   --subtext: DarkRed;
   --dashboard-bg: Gold;
   --dashboard-outline: Goldenrod;

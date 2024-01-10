@@ -1,0 +1,19 @@
+{% extends "structure/templates/page-full.njk" %}
+
+{% block main %}
+<section class="bookmarks cards pt-1">
+	{% for bookmark in postslist | reverse %}
+		<article id="{{ bookmark.data.title | slugify }}" class="card">
+			<div class="card__content">
+				<a href="{{ bookmark.data.url | url}}" class="card__title">
+					{{bookmark.data.title | safe}}
+				</a>
+				{% if bookmark.data.url %}
+				<p class="card__url"><img src="https://v1.indieweb-avatar.11ty.dev/{{ bookmark.data.url | encodeUrl}}" class="card__favicon" loading="lazy">{{ bookmark.data.url }}</p>
+				{% endif %}
+				<p class="card__description">{{bookmark.data.description | safe }}</p>
+			</div>
+		</article>
+	{% endfor %}
+</section>
+{% endblock %}

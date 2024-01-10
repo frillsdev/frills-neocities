@@ -12,18 +12,19 @@ eleventyNavigation:
 {%- block right -%}
 <h2 class="visually-hidden">RSS feed</h2>
 
-	<ul class="unstyled mt-2">
-		{% for tag in collections.tagList %}
-			{% set tagUrl %}/tags/{{ tag.tagName | slugify }}/{% endset %}
-			{% if  (tag.tagName != "posts") 
-				and (tag.tagName != "changelog")
-				and (tag.tagName != "experiments") %}
-			<li><a href="{{ tagUrl }}" class="tag">{{ tag.tagName }}<sup>{{tag.tagCount}}</sup></a></li>
-			{% endif %}
-		{% endfor %}
-    <li class="mt-2">
-      <a href="/rss.xml" class="rss">RSS feed</a>
-    </li>
-	</ul>
+<ul class="unstyled mt-2">
+	{% for tag in collections.tagList %}
+	{% set tagUrl %}/tags/{{ tag.tagName | slugify }}/{% endset %}
+	{% if  (tag.tagName != "posts")
+			and (tag.tagName != "changelog")
+			and (tag.tagName != "experiments")
+			and (tag.tagName != "bookmarks") %}
+	<li><a href="{{ tagUrl }}" class="tag">{{ tag.tagName }}<sup>{{tag.tagCount}}</sup></a></li>
+	{% endif %}
+	{% endfor %}
+	<li class="mt-2">
+		<a href="/rss.xml" class="rss">RSS feed</a>
+	</li>
+</ul>
 
  {%- endblock %}

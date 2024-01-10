@@ -8,15 +8,3 @@ img {
   transform: translateY(1px);
   margin: 0 4px;
 }
-
-html[data-scheme='light'] .invert--lightmode {
-  filter: invert(1) brightness(1) contrast(120%);
-  mix-blend-mode: multiply;
-}
-
-@media (prefers-color-scheme: light) {
-  .invert--lightmode {
-    filter: invert(1) brightness(1) contrast(120%);
-    mix-blend-mode: multiply;
-  }
-}

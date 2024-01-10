@@ -5,8 +5,6 @@
 @import url('./abstracts/_utility.css');
 @import url('./abstracts/_animation.css');
 
-
-
 @import url('./base/_font.css');
 @import url('./base/_form.css');
 @import url('./base/_img.css');
@@ -30,10 +28,12 @@
 @import url('./components/_tags.css');
 @import url('./components/_webrings.css');
 @import url('./components/_code.css');
-@import url('./components/_card.css');
+@import url('./components/_cards.css');
 
 @import url('./pages/_homepage.css');
 @import url('./pages/_bloglist.css');
+@import url('./pages/_bookmarkslist.css');
+@import url('./pages/_experimentslist.css');
 
 /* @import url('./themes/_spooky.css'); */
 /* @import url('./themes/_christmas.css'); */

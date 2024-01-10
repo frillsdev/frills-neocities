@@ -4,7 +4,6 @@ description:
 date: 2023-09-28
 tags:
   - recipe
-  - vegan
 recipe:
   time: 60 minutes
   cooking: 45 minutes

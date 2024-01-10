@@ -75,20 +75,6 @@ scripts: '
 		<p>I am Frills, the proud webmistress of this website in this wondrous wifi world, learn more <a href="/about">about me</a> or <a href="/site">about this website</a>.</p>
 		<p>Here you will find my latest <a href="/blog">thoughts</a> and <a href="/experiments">experiments</a>, <a href="/links">portals to other websites</a>, and <a href="/guestbook">messages</a> left by other wanderers.</p>
 	</div>
-	<div class="dashboard__item">
-		{{ macro.callout(
-			element = 'aside',
-			modifiers = 'callout--inf',
-			header = '<h2 class="visually-hidden">Community holidays event</h2>',
-			body = '
-				<a href="https://32bit.cafe/holidays2023/" class="d-b mb-1"><img src="/images/32bit-cafe-holidays.png" alt="32 bit cafe holidays"></a>
-				<ul class="unstyled mb-0">
-					<li>👯 Hosted by <a href="https://32bit.cafe/holidays2023/">32 bit cafe</a>.</li>
-					<li>💡 Snowflakes, gingerbread art, Afternoon Tea, charm bracelets, holiday shrines, Secret Santa!</li>
-					<li>🗓️ 10 December 2023 - 10 January 2024</li>
-				</ul>
-		') }}
-	</div>
 	<div class="av-br">
 		<article class="dashboard__item --neocities --bgwiggly">
 			<img src="/images/neocities.svg" alt="Neocities cat holding a paintbrush and spanner">
@@ -148,9 +134,6 @@ scripts: '
 			<h2 class="visually-hidden">Website carbon</h2>
 			<div id="wcb" class="carbonbadge wcb-d"></div>
 		</article>
-		{# <div class="dashboard__item">
-			<img src="/images/art/floating-in-dreams.jpg" class="invert--lightmode" alt="Black and white line drawing of a cartoon girl floating in dreams, stars prick the space behind her. Wearing a nighty and socks, her arms are held up weightlessly. Her hair is a mane, splayed out like an open flower.">
-		</div> #}
 	</div>
 	<div class="av-br">
 		<article class="dashboard__item --card --latestposts">
@@ -159,6 +142,7 @@ scripts: '
 			</header>
 			{%- set latestBlog = collections.posts | reverse | first -%}
 			{%- set latestExperiment = collections.experiments | reverse | first -%}
+			{%- set latestBookmark = collections.bookmarks | reverse | first -%}
 			{%- set latestChangelog = collections.changelog | reverse | first -%}
 			<div class="h-sm">
 				<h3>📝 Blog</h3>
@@ -207,6 +191,7 @@ scripts: '
 		<li style="background-color: var(--interactive)"></li>
 		<li style="background-color: var(--link)"></li>
 		<li style="background-color: var(--linkhover)"></li>
+		<li style="background-color: var(--linkvisited)"></li>
 		<li style="background-color: var(--dashboard-bg)"></li>
 		<li style="background-color: var(--callout-info)"></li>
 		<li style="background-color: var(--logo-anim-1)"></li>

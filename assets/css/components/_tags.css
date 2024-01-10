@@ -3,6 +3,9 @@
   font-size: 90%;
   text-decoration: none;
 }
+.tag:visited {
+  color: var(--text);
+}
 
 .tag sup {
   color: var(--accent);

@@ -1,0 +1,67 @@
+.card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background-color: var(--bodybg);
+}
+
+.card__image {
+  z-index: -1;
+  position: relative;
+  object-fit: cover;
+}
+
+.card:has(.card__image) .card__content {
+  margin-top: -1rem;
+  border-radius: 0.75rem;
+}
+
+.card__content {
+  padding: 1rem 1.5rem;
+  background-color: var(--bodybg);
+  border-radius: 0.75rem;
+}
+
+.card__content a:not(.card__title) {
+  position: relative;
+  z-index: 2;
+}
+
+.card__title {
+  color: var(--text);
+  margin-bottom: 1rem;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card__title:hover,
+.card__title:focus,
+.card__title:visited {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.card:focus-within .card__title::before,
+.card__title:hover::before {
+  border-color: var(--linkhover);
+}
+
+.card__title::before {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 0.75rem;
+  border: 3px solid transparent;
+  transition: 0.1s ease all;
+}
+
+.card__description {
+  margin-bottom: 0;
+  font-size: 90%;
+}

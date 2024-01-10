@@ -1,16 +1,23 @@
-{% extends "structure/templates/page-3col.njk" %}
+{% extends "structure/templates/page-full.njk" %}
 
 {% block main %}
-	<h1>{{title}}</h1>
+	<div class="d-b pb-1">
+		<a href="/experiments.xml" class="rss">RSS feed</a>
+	</div>
 	{% if description %}
 		<p>{{description}}</p>
 	{% endif %}
-	<ol reversed class="listing stars">
-	{% for post in postslist | reverse %}
-		
-		<li {% if post.data.draft %}class="draft"{% endif %}>
-			<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
-		</li>
-	{% endfor %}
-	</ol>
+	<section class="experiments cards pt-1">
+		{% for experiment in postslist | reverse %}
+			<article id="{{ experiment.data.title | slugify }}" class="card">
+				<div class="card__image">
+					<img src="{{ experiment.data.image }}" alt="" loading="lazy" class="ar-16-9">
+				</div>
+				<div class="card__content">
+					<a href="{{ experiment.url | url}}" class="card__title">{{experiment.data.title | safe}}</a>
+					<p class="card__description">{{experiment.data.description | safe }}</p>
+				</div>
+			</article>
+		{% endfor %}
+	</section>
 {% endblock %}

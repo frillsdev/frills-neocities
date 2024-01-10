@@ -47,6 +47,15 @@ a {
   color: var(--link);
 }
 
+a:visited {
+  color: var(--linkvisited)
+}
+
+a:hover,
+a:focus {
+  color: var(--linkhover)
+}
+
 a.hidden {
   text-decoration: inherit;
   color: inherit;
@@ -62,11 +71,6 @@ a.hidden:active {
   text-decoration: underline wavy 2px;
 }
 
-a:hover,
-a:focus {
-  color: var(--linkhover)
-}
-
 p {
   margin: 0 0 1rem
 }
@@ -74,6 +78,4 @@ p {
 em {
   font-style: normal;
   color: var(--highlight);
-  background-color: var(--bodybg);
-  padding: 2px;
 }
