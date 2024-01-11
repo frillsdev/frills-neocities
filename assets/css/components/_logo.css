@@ -93,9 +93,8 @@ a:focus .logo .logo-tx {
     .logo-x {
         fill: transparent;
         animation-name: blink;
-        animation-fill-mode: normal;
+        animation-fill-mode: forwards;
         animation-iteration-count: infinite;
-        animation-direction: backwards;
         animation-duration: 7500ms;
     }
 

@@ -10,7 +10,7 @@ scripts: '<script>
   const w = document.querySelectorAll(".buttonwall");
   const o = "Enable high contrast";
   const c = "Disable high contrast";
-  if (t) {t.addEventListener("click", (function () {w.forEach((s => {s.classList.contains("--highcontrast") ? (t.innerHTML = o, t.setAttribute("aria-pressed", !1), s.classList.remove("--highcontrast")) : (t.innerHTML = c, t.setAttribute("aria-pressed", !0), s.classList.add("--highcontrast"))}))}));}
+  if (t) {t.addEventListener("click", (function () {w.forEach((s => {s.classList.contains("buttonwall--highcontrast") ? (t.innerHTML = o, t.setAttribute("aria-pressed", !1), s.classList.remove("buttonwall--highcontrast")) : (t.innerHTML = c, t.setAttribute("aria-pressed", !0), s.classList.add("buttonwall--highcontrast"))}))}));}
 </script>'
 ---
 {% extends 'structure/templates/page-3col.njk'%}
@@ -250,7 +250,7 @@ scripts: '<script>
     "href": "https://sleepydev.neocities.org",
     "size": "11px",
     "bg": "#f9f9f9",
-    "color": "#blueviolet",
+    "color": "blueviolet",
     "type": "link"
   }, {
     "name": "Stephanie Eckles",
@@ -272,6 +272,13 @@ scripts: '<script>
     "size": "11px",
     "bg": "#252525",
     "color": "#de6b09",
+    "type": "link"
+  }, {
+    "name": "Localghost",
+    "href": "https://localghost.dev/",
+    "size": "11px",
+    "bg": "#1a1a4d",
+    "color": "#f00fe4",
     "type": "link"
   }, {
     "name": "Leviathren",

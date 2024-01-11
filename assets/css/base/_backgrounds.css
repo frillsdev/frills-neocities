@@ -1,16 +1,16 @@
-.--bgwiggly {
+.bg-wiggly {
   background: radial-gradient(circle at top left, transparent 25%, rgba(255, 255, 255, 0.15) 25.5%, rgba(255, 255, 255, 0.15) 36%, transparent 37%, transparent 100%),
     radial-gradient(circle at bottom right, transparent 34%, rgba(255, 255, 255, 0.15) 34.5%, rgba(255, 255, 255, 0.15) 45.5%, transparent 46%, transparent 100%);
   background-size: 2em 2em;
 }
 
-.--bgdots {
+.bg-dots {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 10%, transparent 11%), radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.15) 5%, transparent 6%), radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.15) 5%, transparent 6%), radial-gradient(circle at top left, rgba(255, 255, 255, 0.15) 5%, transparent 6%), radial-gradient(circle at top right, rgba(255, 255, 255, 0.15) 5%, transparent 6%);
   background-size: 1em 1em;
   opacity: 1
 }
 
-.--bggrid {
+.bg-grid {
   background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0, rgba(255, 255, 255, 0.15) 5%, transparent 0, transparent 50%), repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0, rgba(255, 255, 255, 0.15) 5%, transparent 0, transparent 50%);
   background-size: 2em 2em;
   background-color: #ffffff;
