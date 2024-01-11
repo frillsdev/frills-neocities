@@ -22,6 +22,7 @@
   margin-bottom: 1rem;
   text-decoration: underline;
   color: var(--link);
+  word-break: break-all;
 }
 
 .bookmarks.cards .card__title:visited~.bookmarks.cards .card__url {
