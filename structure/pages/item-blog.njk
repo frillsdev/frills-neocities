@@ -29,14 +29,8 @@
 {%- endblock -%}
 
 {%- block right -%}
+    {% if recipe %}
     <ul class="unstyled">
-        {% if tags %}
-        <li class="mb-1">
-            {%- for tag in tags | filterTagList %}
-            <span class="tag">#{{ tag }}</span>{%- if not loop.last %} {% endif %}
-            {%- endfor %}
-        </li>
-        {% endif %}
         {% if recipe.time %}
         <li>⏰ Recipe time: {{recipe.time}}</li>
         {% endif %}
@@ -47,4 +41,5 @@
         <li>🥣 Tools: {{recipe.tools}}</li>
         {% endif %}
     </ul>
+    {% endif %}
 {%- endblock -%}
