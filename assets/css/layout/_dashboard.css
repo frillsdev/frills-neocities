@@ -85,6 +85,7 @@
   position: relative;
   border-radius: 0.75rem;
   padding: 0.3rem;
+  width: calc(100% - 0.6rem)
 }
 
 .dashboard__item--neocities p.small {
