@@ -13,15 +13,15 @@
 /* Colours */
 /* Dark mode */
 :root {
-  --bodybg: #1e1e1e;
-  --bg: Black;
-  --bodyrgb: 0, 0, 0;
+  --bodybg: #151a2f;
+  --bg: #0d0f19;
+  --bodyrgb: 13, 15, 25;
   --highlight: Gold;
   --accent: #FF5790;
   --accentcontrast: Black;
   --separator: PaleGreen;
   --interactive: OrangeRed;
-  --input-bg: #1e1e1e;
+  --input-bg: #151a2f;
   --input-border: DeepSkyBlue;
   --link: DeepPink;
   --linkaccent: #620035;
@@ -43,15 +43,15 @@
 }
 
 html[data-scheme='dark'] {
-  --bodybg: #1e1e1e;
-  --bg: Black;
-  --bodyrgb: 0, 0, 0;
+  --bodybg: #151a2f;
+  --bg: #0d0f19;
+  --bodyrgb: 13, 15, 25;
   --highlight: Gold;
   --accent: #FF5790;
   --accentcontrast: Black;
   --separator: PaleGreen;
   --interactive: OrangeRed;
-  --input-bg: #1e1e1e;
+  --input-bg: #151a2f;
   --input-border: DeepSkyBlue;
   --link: DeepPink;
   --linkaccent: #620035;

@@ -4,7 +4,6 @@
 	<h1>{{title}}</h1>
 	<div class="reading-width h-sm pt-1">
 	{% for post in postslist | reverse %}
-		
 		<article class="article{% if post.data.draft %} draft"{% endif %}">
 			<h2> {{ post.date | readableDate("d LLL yyyy") }}</h2>
 			{{ post.content | safe}}
