@@ -13,6 +13,12 @@ select {
     box-sizing: border-box;
 }
 
+textarea:focus,
+input:focus,
+select:focus {
+    outline: 3px solid var(--input-border);
+}
+
 textarea {
     min-height: 5rem;
     font-family: var(--font-family);
@@ -20,7 +26,7 @@ textarea {
 
 textarea.textarea--code {
     font-family: monospace;
-    white-space: wrap;
+    white-space: pre-wrap;
     font-size: 0.5rem;
     padding: 8px 10px;
 }
