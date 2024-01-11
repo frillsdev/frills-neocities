@@ -32,7 +32,11 @@
       <title>{{ post.date | readableDate("d LLL yyyy") }}</title>
       {% endif %}
       <link>{{ absolutePostUrl }}</link>
+      {% if post.data.updated %}
+      <pubDate>{{ post.data.updated | dateToRfc822 }}</pubDate>
+      {% else %}
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+      {% endif %}
       <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
