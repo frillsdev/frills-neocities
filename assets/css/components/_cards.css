@@ -65,3 +65,6 @@
   margin-bottom: 0;
   font-size: 90%;
 }
+.card__description a {
+  color: inherit;
+}
