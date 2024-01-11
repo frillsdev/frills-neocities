@@ -79,7 +79,7 @@
 }
 
 .ar-16-9 {
-  aspect-ratio: calc(16 / 9);
+  aspect-ratio: 16 / 9;
 }
 
 .reading-width {
@@ -96,7 +96,6 @@
 }
 
 .visually-hidden:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;

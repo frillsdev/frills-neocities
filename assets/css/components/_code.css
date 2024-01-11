@@ -1,16 +1,16 @@
 :root {
-  --code-1: var(--link);
-  --code-2: var(--linkhover);
-  --code-3: var(--accent);
-  --code-4: var(--link);
-  --code-5: var(--text);
+	--code-1: var(--link);
+	--code-2: var(--linkhover);
+	--code-3: var(--accent);
+	--code-4: var(--link);
+	--code-5: var(--text);
 }
 
-ul + code,
-ul + pre,
-ol + code,
-ol + pre {
-  margin-top: -0.5rem;
+ul+code,
+ul+pre,
+ol+code,
+ol+pre {
+	margin-top: -0.5rem;
 }
 
 code,
@@ -23,35 +23,28 @@ pre {
 	word-break: normal;
 	word-wrap: normal;
 	line-height: 1.5;
-
-	-moz-tab-size: 2;
-	-o-tab-size: 2;
 	tab-size: 2;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
 	hyphens: none;
 }
 
 /* Code blocks */
-pre{
+pre {
 	background: var(--bodybg);
 	color: var(--subtext);
 	padding: .2em .8em;
 	overflow: auto;
-  margin: 0 0 1rem 0;
+	margin: 0 0 1rem 0;
 }
 
-code{
+code {
 	background: var(--bodybg);
 	color: var(--subtext);
-  padding: 0.2rem 0.4rem;
-  margin: 0 0 1rem 0;
+	padding: 0.2rem 0.4rem;
+	margin: 0 0 1rem 0;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre)>code[class*="language-"] {
 	padding: .2em;
 	border-radius: .3em;
 	box-shadow: none;
@@ -63,7 +56,7 @@ code{
 .token.doctype,
 .token.cdata {
 	color: var(--code-5);
-  opacity: 0.7;
+	opacity: 0.7;
 }
 
 .token.punctuation {
@@ -115,6 +108,7 @@ code{
 .token.bold {
 	font-weight: bold;
 }
+
 .token.italic {
 	font-style: italic;
 }
