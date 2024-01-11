@@ -19,7 +19,9 @@
             {% endif %}
 
             {% if tags.includes("posts") %}
-            <small>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></small>
+            <small>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+            {% if updated %} and last modified on {{updated | readableDate }}{%endif%}
+            </small>
             {% endif %}
         </header>
         <div class="reading-width{% if tags.includes("weeknotes") %} h-sm{% endif %}">
