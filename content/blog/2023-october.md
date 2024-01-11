@@ -27,7 +27,7 @@ Helping out my fiance's mum, who had knee surgery this month. We took her pup Mu
 Love looking after the Spanador, Effie, Orla's bestie.
 
 ## 🌟 Work anniversary
-It's been 4 years at my current place of work. A good time to take stock and see how far I've come. I wrote an article on [my developer story](/blog/231021-my-developer-story.md) and decided to...
+It's been 4 years at my current place of work. A good time to take stock and see how far I've come. I wrote an article on [my developer story](/blog/231021-my-developer-story) and decided to...
 
 ## 💸 Became a Neocities supporter
 Which also gives me access to a custom domain and all file types!
