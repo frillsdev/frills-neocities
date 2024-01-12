@@ -73,7 +73,7 @@ function sparkles(pattern = "confetti1") {
 
 // Load when everything has loaded
 window.addEventListener('load', function () {
-    // notification(3, 'New!');
+    notification(4, 'New!');
     consoleClub();
     colorScheme();
     sparkles()
