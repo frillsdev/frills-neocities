@@ -55,11 +55,11 @@ function avatarSwapper() {
 		},
 		{
 			src: "/images/collections/avatars/scrimsart.png",
-			alt: "",
+			alt: "Avatar of a white woman with brown hair, styled with colourful clips and blonde streaks where men would have sideburns. Wearing pink dungarees and a pink top. In a pixelated style.",
 		},
 		{
 			src: "/images/collections/avatars/anjubatus_heart_hold_char.png",
-			alt: "",
+			alt: "Avatar of a woman with brown hair, styled in spacebuns, a red bow and blonde streaks where men would have sideburns. Wearing blue jumper holding a red heart with a happy face on it.",
 		}
 	];
 	let diceRoll=randomiser(avatars);const avatarContainer=document.getElementsByClassName("swapAvatar")[0];const avatar=avatarContainer.appendChild(document.createElement("img"));avatar.width="200";avatar.height="200";avatar.id="swappedAvatar";avatar.src=avatars[diceRoll].src;avatar.alt=avatars[diceRoll].alt;avatarContainer.classList.add("swapped");document.getElementById("refreshAvatar").addEventListener("click",(event)=>{let reRoll=randomiser(avatars,diceRoll);let avatar=document.getElementById("swappedAvatar");avatar.src=avatars[reRoll].src;avatar.alt=avatars[reRoll].alt});
