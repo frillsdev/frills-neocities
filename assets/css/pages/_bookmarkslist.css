@@ -16,6 +16,12 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .bookmarks.cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .bookmarks.cards .card__url {
   position: static;
   display: block;
