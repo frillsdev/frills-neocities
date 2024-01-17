@@ -73,7 +73,7 @@ ul.colourpalette li::marker {
 }
 
 ul.colourpalette li {
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   width: 2rem;
   border-radius: 0.75rem;
 }
