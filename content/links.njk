@@ -385,12 +385,7 @@ scripts: '<script>
   }
 ] %}
 
-{% set tools = [{
-    "name": "Wiby",
-    "href": "https://wiby.me",
-    "src": "wiby.png",
-    "type": "button"
-  }, {
+{% set tools = [ {
     "name": "Internet Archive: Wayback Machine",
     "href": "http://web.archive.org/",
     "src": "wayback_machine.png",
@@ -463,6 +458,12 @@ scripts: '<script>
 
 {% set bookmarks = [
   {
+    "name": "Wiby",
+    "href": "https://wiby.me",
+    "src": "wiby.png",
+    "type": "button"
+  },
+  {
     "name": "marginalia",
     "href": "https://www.marginalia.nu/links/bookmarks/",
     "size": "13px",
@@ -476,6 +477,22 @@ scripts: '<script>
     "size": "11px",
     "bg": "#f7f7f7",
     "color": "#030303",
+    "type": "link"
+  },
+  {
+    "name": "sizeof.cat",
+    "href": "https://sizeof.cat/post/website-discovery/",
+    "size": "11px",
+    "bg": "#1e1e2e",
+    "color": "#5550ed",
+    "type": "link"
+  },
+  {
+    "name": "indieblog.page",
+    "href": "https://indieblog.page/",
+    "size": "11px",
+    "bg": "#212121",
+    "color": "#ffb300",
     "type": "link"
   }
 ] %}
