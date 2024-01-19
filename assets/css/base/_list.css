@@ -75,5 +75,55 @@ ul.colourpalette li::marker {
 ul.colourpalette li {
   aspect-ratio: 1 / 1;
   width: 2rem;
-  border-radius: 0.75rem;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+ul.colourpalette li:nth-child(1) {
+  mask-image: url('/images/masks/diamond.svg');
+}
+ul.colourpalette li:nth-child(2) {
+  mask-image: url('/images/masks/star2.svg');
+}
+ul.colourpalette li:nth-child(3) {
+  mask-image: url('/images/masks/triangle.svg');
+}
+ul.colourpalette li:nth-child(4) {
+  mask-image: url('/images/masks/pentagon.svg');
+}
+ul.colourpalette li:nth-child(5) {
+  mask-image: url('/images/masks/logo-x.svg');
+}
+ul.colourpalette li:nth-child(6) {
+  mask-image: url('/images/masks/square.svg');
+}
+ul.colourpalette li:nth-child(7) {
+  mask-image: url('/images/masks/circle.svg');
+}
+ul.colourpalette li:nth-child(8) {
+  mask-image: url('/images/masks/logo-x.svg');
+}
+ul.colourpalette li:nth-child(9) {
+  mask-image: url('/images/masks/hexagon.svg');
+}
+ul.colourpalette li:nth-child(10) {
+  mask-image: url('/images/masks/pentagon.svg');
+}
+ul.colourpalette li:nth-child(11) {
+  mask-image: url('/images/masks/moon.svg');
+}
+ul.colourpalette li:nth-child(12) {
+  mask-image: url('/images/masks/triangle.svg');
+}
+ul.colourpalette li:nth-child(13) {
+  mask-image: url('/images/masks/star2.svg');
+}
+ul.colourpalette li:nth-child(14) {
+  mask-image: url('/images/masks/logo-x.svg');
+}
+ul.colourpalette li:nth-child(15) {
+  mask-image: url('/images/masks/square.svg');
+}
+ul.colourpalette li:nth-child(16) {
+  mask-image: url('/images/masks/circle.svg');
 }
