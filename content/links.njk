@@ -300,8 +300,19 @@ scripts: '<script>
     "href": "https://foreverliketh.is/",
     "src": "foreverliketh.is.png",
     "type": "button"
+  },{
+    "name": "Lazy Bones",
+    "href": "https://lazybones.neocities.org/",
+    "src": "lazybones.png",
+    "type": "button"
+  }, {
+    "name": "Velvet's Smoking Lounge",
+    "href": "https://velvet-boutique.neocities.org",
+    "src": "velvet.png",
+    "type": "button"
   }
 ] %}
+
 {% set friends = [
   {
     "name": "goth hoblin",
@@ -519,10 +530,6 @@ scripts: '<script>
     </li>
     {% endif%}
     {% endfor %}
-  </ul>
-
-  <h2>Friends</h2>
-  <ul class="buttonwall">
     {% for friend in friends | sort(attribute="name") %}
     <li class="buttonwall__item">
       <a href="{{friend.href}}" style="font-size: {{friend.size}};  background-color: {{friend.bg}}; color: {{friend.color}};">
