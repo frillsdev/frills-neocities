@@ -21,6 +21,7 @@ html[data-scheme='dark'] {
   --accent: #FF5790;
   --accentcontrast: Black;
   --separator: PaleGreen;
+  --quote: PaleGreen;
   --interactive: OrangeRed;
   --input-bg: #151a2f;
   --input-border: SpringGreen;
@@ -53,6 +54,7 @@ html[data-scheme='dark'] {
     --input-bg: LavenderBlush;
     --input-border: DeepPink;
     --separator: DeepPink;
+    --quote: #c3006a;
     --highlight: #006a8e;
     --accent: #FF5790;
     --accentcontrast: Black;
@@ -83,7 +85,8 @@ html[data-scheme='light'] {
   --input-bg: LavenderBlush;
   --input-border: DeepPink;
   --separator: DeepPink;
-  --highlight: #006a8e;
+  --quote: #c3006a;
+  --highlight: #cb0000;
   --accent: #FF5790;
   --accentcontrast: Black;
   --link: #2a00bd;
