@@ -1,0 +1,157 @@
+:root,
+:root[data-scheme='light'],
+:root[data-scheme='dark'] {
+  --bodybg: #FFE5EE;
+  --bg: #FFCFDF;
+  --bodyrgb: 13, 15, 25;
+  --highlight: Gold;
+  --accent: #FFB7D0;
+  --accentcontrast: Black;
+  --separator: #A00000;
+  --quote: #A00000;
+  --interactive: #A00000;
+  --input-bg: #A00000;
+  --input-border: #A00000;
+  --link: #A00000;
+  --linkaccent: #A00000;
+  --linkhover: #A00000;
+  --linkvisited: #A00000;
+  --text: #A00000;
+  --subtext: PeachPuff;
+  --dashboard-bg: Gold;
+  --dashboard-outline: Goldenrod;
+  --dashboard-text: Black;
+  --callout-info: DeepSkyBlue;
+  --logo-x: #A00000;
+  --logo-anim-1: #A00000;
+  --logo-anim-2: #A00000;
+  --logo-anim-3: #A00000;
+  --logo-anim-4: #A00000;
+  --logo-anim-5: #A00000;
+  --logo-anim-6: #A00000;
+  --border-width: 0.5vw;
+}
+
+
+.settings {
+  display: none;
+}
+
+.bigboibanner {
+  font-family: "Shrikhand", var(--font-family);
+  font-size: 10vw;
+  text-transform: lowercase;
+}
+
+.character {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.whodis {
+  width: 100%;
+  flex: 1 1 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: var(--border-width) solid var(--accent);
+  border-radius: 0.75rem;
+  background-color: var(--accent);
+  gap: var(--border-width);
+  overflow: hidden;
+}
+
+.whodis>* {
+  background-color: var(--bg);
+  padding: 0.9rem 1.1rem;
+  grid-column: span 2;
+
+}
+
+.itme-alignment,
+.itme-something {
+  grid-column: span 3;
+}
+
+[class^="itme-"] h2 {
+  font-family: "Shrikhand", var(--font-family);
+  font-size: 2vw;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+[class^="itme-"] p {
+  font-size: 3.5vw;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.piccy {
+  border-radius: 1000px;
+  border: var(--border-width) solid var(--accent);
+  overflow: hidden;
+  flex: 0 0 20vw;
+  display: flex;
+  place-items: center;
+  padding: calc(var(--border-width) * 2);
+}
+
+.piccy img {
+  height: 20vw;
+  width: 20vw;
+  border-radius: 1000px;
+  background-color: var(--accent);
+}
+
+.stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));;
+  gap: 2.5rem;
+  padding-top: 2rem;
+}
+
+.stats>* {
+  display: grid;
+}
+
+.stats>*>h3 {
+  grid-row: 5;
+  font-family: "Shrikhand", var(--font-family);
+  font-weight: 400;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.bigstat,
+.smolstat {
+  font-family: "Shrikhand", var(--font-family);
+  border-radius: 0.75rem;
+  background: var(--text);
+  color: var(--bg);
+  text-align: center;
+  margin: 0;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigstat {
+  border-radius: 2vw;
+  font-size: 3.5vw;
+  aspect-ratio: 1 / 1;
+  width: 75%;
+}
+
+.smolstat {
+  font-size: 1.5vw;
+  border-radius: 100px;
+  border: var(--border-width) solid var(--bg);
+  width: calc(4vw - var(--border-width));
+  height: calc(4vw - var(--border-width));
+  margin-top: -2vw;
+  margin-bottom: 0.5rem;
+}

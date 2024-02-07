@@ -4,17 +4,20 @@ description:
 date: 2023-09-28
 tags:
   - recipe
-recipe:
-  time: 60 minutes
-  cooking: 45 minutes
-  tools: Mixing bowl, wooden spoon, bread tin, foil.
 rss: true
 ---
 
 A delicious vegan recipe that an old friend imparted with me before we moved away, handwritten inside a greetings card with a penguin on it.
 
-## Ingredients
+<span class="hr my-2"></span>
 
+<ul class="unstyled">
+    <li>⏰ Recipe time: 60 minutes</li>
+    <li>🔥 Cooking time:  45 minutes</li>
+    <li>🥣 Tools: Mixing bowl, wooden spoon, bread tin, foil.</li>
+</ul>
+
+## Ingredients
 - 3 to 4 ripe bananas
 - 70 grams of sugar (white, brown or a mix - I do 50/50)
 - 100 grams of bland oil (I use vegetable oil, but the recipe recommends rapeseed)

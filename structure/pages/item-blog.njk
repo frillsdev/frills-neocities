@@ -1,4 +1,4 @@
-{% extends "structure/templates/page-3col.njk" %}
+{% extends "structure/templates/page-2col.njk" %}
 {% import "structure/components/components.njk" as macro with context %}
 
 {%- block left -%}
@@ -28,20 +28,4 @@
             {{ content | safe }}
         </div>
     </article>
-{%- endblock -%}
-
-{%- block right -%}
-    {% if recipe %}
-    <ul class="unstyled">
-        {% if recipe.time %}
-        <li>⏰ Recipe time: {{recipe.time}}</li>
-        {% endif %}
-        {% if recipe.cooking %}
-        <li>🔥 Cooking time:  {{recipe.cooking}}</li>
-        {% endif %}
-        {% if recipe.tools %}
-        <li>🥣 Tools: {{recipe.tools}}</li>
-        {% endif %}
-    </ul>
-    {% endif %}
 {%- endblock -%}

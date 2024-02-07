@@ -1,0 +1,68 @@
+.page:has(.page__empty) {
+  max-width: none;
+  padding: 0;
+}
+
+.page__empty .container,
+.page:has(.page__empty) .page__header {
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.page:has(.page__empty) .page__footer {
+  max-width: 1600px;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+@media (min-width: 768px) {
+
+  .page__empty .container,
+  .page:has(.page__empty) .page__header,
+  .page:has(.page__empty) .page__footer {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .page__empty .container,
+  .page:has(.page__empty) .page__header,
+  .page:has(.page__empty) .page__footer {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+
+.page__empty {
+  max-width: none;
+  min-height: 100vh;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .page__empty {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .page__empty {
+    margin-top: 30px;
+  }
+}
+
+.page__empty a:link,
+.page__empty a:visited,
+.page__empty a:hover,
+.page__empty a:active,
+.page__empty a:focus {
+  color: revert;
+}
+
+.page__empty .container {
+  max-width: 1600px;
+}
