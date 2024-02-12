@@ -1,5 +1,6 @@
 ---
 title: Making ASCII art accessible
+description: A little how-to, based on W3C recommendations
 date: 2024-02-12
 tags:
   - dev
