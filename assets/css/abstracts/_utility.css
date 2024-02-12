@@ -74,6 +74,10 @@
   display: block;
 }
 
+.d-i {
+  display: inline;
+}
+
 .d-ib {
   display: inline-block;
 }

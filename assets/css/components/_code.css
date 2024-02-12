@@ -43,6 +43,14 @@ code {
 	margin: 0 0 1rem 0;
 }
 
+pre.hidden,
+code.hidden {
+	font-family: inherit;
+	background: transparent;
+	color: inherit;
+	padding: 0;
+}
+
 /* Inline code */
 :not(pre)>code[class*="language-"] {
 	padding: .2em;

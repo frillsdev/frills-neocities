@@ -89,19 +89,19 @@ blockquote {
   color: var(--quote);
 }
 
-cite {
+blockquote cite {
   display: block;
   margin-top: 1rem;
   font-style: normal;
   color: var(--subtext);
 }
 
-cite a:link,
-cite a:visited {
+blockquote cite a:link,
+blockquote cite a:visited {
   color: var(--quote);
 }
 
-cite::before {
+blockquote cite::before {
   content: '— ';
   color: var(--quote);
 }
