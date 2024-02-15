@@ -1,0 +1,188 @@
+---
+title: About
+rss: false
+---
+{% extends 'structure/templates/page-2col.njk'%}
+{% import "structure/components/components.njk" as macro with context %}
+
+{%- block left -%}
+<div class="bio">
+	<h2 class="visually-hidden">Bio</h2>
+	<div class="avatar __noradius">
+		<img src="/images/gpoy.jpg" alt="">
+	</div>
+	<ul class="unstyled">
+		<li><span class="emoji" role="img" aria-label="Pronouns">🌷</span> she/her</li>
+		<li><span class="emoji" role="img" aria-label="Age">🎂</span> Millenial</li>
+		<li><span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
+		<li><span class="emoji" role="img" aria-label="Relationship">💍</span> Engaged</li>
+		<li><span class="emoji" role="img" aria-label="Profession">👩🏻‍💻</span> Frontend Developer</li>
+		<li><span role="img" class="emoji" aria-hidden="true">🐶</span> <a href="/shrine/orla">Dog mum</a></li>
+	</ul>
+</div>
+{%- endblock -%}
+
+{%- block main -%}
+<div class="dashboard">
+	<article class="dashboard__item dashboard__item--card">
+		<header>
+			<h2 class="bg-wiggly">👯‍♀️ Social</h2>
+		</header>
+		<div>
+			<ul class="unstyled">
+				<li><span class="emoji" role="img" aria-label="Coffee">☕️</span> <a href="https://status.cafe/users/fri11s">@fri11s@status.cafe</a></li>
+				<li><span class="emoji" role="img" aria-label="Cat">😺</span> <a href="https://neocities.org/site/fri11s">@fri11s@neocities.org</a></li>
+				<li><span class="emoji" role="img" aria-label="Elephant">🐘</span><a href="https://indieweb.social/@frills">@frills@indieweb.social</a></li>
+			</ul>
+		</div>
+	</article>
+	<article class="dashboard__item dashboard__item--card">
+		<header>
+			<h2 class="bg-wiggly">✨ Personality</h2>
+		</header>
+		<div>
+			<ul>
+				<li>Sun sign: Gemini</li>
+				<li>Rising sign: Gemini</li>
+				<li>Moon sign: Scorpio</li>
+				<li>INFP</li>
+			</ul>
+		</div>
+	</article>
+	<article class="dashboard__item dashboard__item--card">
+		<header>
+			<h2 class="bg-dots">💖 Pseudonym</h2>
+		</header>
+		<div>
+			<p>Where's the name from? Well, once upon a time, I made a gnome mage on the Azune EU server on World of Warcraft. Her name was Frills. We travelled Azeroth together for years, then she lay dormant until her name was resurrected as my online presence.</p>
+			<p>I'll make a shrine to her one day.</p>
+		</div>
+	</article>
+	<article class="dashboard__item dashboard__item--card">
+		<header>
+			<h2 class="bg-dots">🗣 Languages</h2>
+		</header>
+		<div>
+			<ul>
+				<li>English</li>
+				<li>Welsh (beginner)</li>
+			</ul>
+		</div>
+	</article>
+	<article class="dashboard__item dashboard__item--card">
+		<header>
+			<h2 class="bg-grid">🍝 Food</h2>
+		</header>
+		<div>
+			<ul>
+				<li>Vegetarian</li>
+				<li>Oat milk</li>
+				<li><a href="/blog/230928-vegan-banana-bread/">Banana bread</a></li>
+				<li>Blueberries</li>
+				<li>Katsu curry</li>
+			</ul>
+		</div>
+	</article>
+	<article class="dashboard__item dashboard__item--card">
+		<header>
+			<h2 class="bg-wiggly">📚 Books</h2>
+		</header>
+		<div>
+			<ul>
+				<li>The Priory of the Orange Tree</li>
+				<li>Circe</li>
+				<li>Ready Player One</li>
+				<li>Children of Blood & Bone</li>
+				<li>Red Queen</li>
+			</ul>
+		</div>
+	</article>
+	<article class="dashboard__item dashboard__item--card">
+		<header>
+			<h2 class="bg-wiggly">🎮 Games</h2>
+		</header>
+		<div>
+			<ul>
+				<li>The Gardens Between</li>
+				<li>Stardew Valley</li>
+				<li>It Takes Two</li>
+				<li>Piffle</li>
+			</ul>
+		</div>
+	</article>
+	<article class="dashboard__item dashboard__item--card">
+		<header>
+			<h2 class="bg-grid">🧠 Interests</h2>
+		</header>
+		<div>
+			<ul>
+				<li>Mythology</li>
+				<li>Sea dipping</li>
+				<li>Growing veggies</li>
+				<li>Drawing</li>
+				<li>DIY and decorating</li>
+			</ul>
+		</div>
+	</article>
+	{# <article class="dashboard__item dashboard__item--card">
+		<header>
+			<h2 class="bg-wiggly">💬 Quote</h2>
+		</header>
+		<div>
+			<blockquote>
+				<p>All the days you get to have are big</p>
+				<footer>I Do This All The Time - Self Esteem</footer>
+			</blockquote>
+		</div>
+	</article> #}
+</div>
+
+{# TODO: make this accessible
+<section>
+	<h2>My Character Sheet</h2>
+	<p>Sorry this is not accessible yet.<br> Too long didn't read: I'm a neutral good, Human Druid (Paladin and Sorcerer multi-class).</p>
+	<h3>Alignment:</h3>
+	<p>Lawful Good ----- XXXXXXXXXXXXXXXXXXX (19)<br>
+	Neutral Good ---- XXXXXXXXXXXXXXXXXXXXXXX (23)<br>
+	Chaotic Good ---- XXXXXXXXXXXXXXX (15)<br>
+	Lawful Neutral -- XXXXXXXXXXXXXXXXX (17)<br>
+	True Neutral ---- XXXXXXXXXXXXXXXXXXXXX (21)<br>
+	Chaotic Neutral - XXXXXXXXXXXXX (13)<br>
+	Lawful Evil ----- XXXXXXXXXXX (11)<br>
+	Chaotic Evil ---- XXXXXXX (7)</p>
+
+	<h3>Law & Chaos:</h3>
+	<p>Law ----- XXXXXXXX (8)<br>
+	Neutral - XXXXXXXXXXXX (12)<br>
+	Chaos --- XXXX (4)</p>
+
+	<h3>Good & Evil:</h3>
+	<p>Good ---- XXXXXXXXXXX (11)<br>
+	Neutral - XXXXXXXXX (9)<br>
+	Evil ---- XXX (3)</p>
+
+	<h3>Race:</h3>
+	<p>Human ---- XXXXXXXXXXXXX (13)<br>
+	Dwarf ---- XXXXXXXXXXXX (12)<br>
+	Elf ------ XXXXXXXX (8)<br>
+	Gnome ---- XXXXXX (6)<br>
+	Halfling - XXXX (4)<br>
+	Half-Elf - XXXXXXXXXXXX (12)<br>
+	Half-Orc - XXXXXX (6)</p>
+
+	<h3>Class:</h3>
+	<p>Barbarian - XXXXXXXX (8)<br>
+	Bard ------ XXXXXX (6)<br>
+	Cleric ---- XXXXXXXXXX (10)<br>
+	Druid ----- XXXXXXXXXXXXXXXXXX (18)<br>
+	Fighter --- XXXXXXXX (8)<br>
+	Monk ------ XXXX (4)<br>
+	Paladin --- XXXXXXXXXXXXXXXX (16)<br>
+	Ranger ---- XXXXXXXXXXXXXX (14)<br>
+	Rogue ----- XXXXXXXXXX (10)<br>
+	Sorcerer -- XXXXXXXXXXXXXXXX (16)<br>
+	Warlock --- XXXXXXXX (8)<br>
+	Wizard ---- XXXXXXXXXXXXXX (14)</p>
+</section> #}
+
+{%- endblock -%}

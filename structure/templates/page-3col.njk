@@ -12,10 +12,12 @@
             {{- content | safe -}}
             {%- endblock %}
         </div>
+        {% if right %}
         <div class="content__extra">
             {%- block right -%}
             {%- endblock %}
         </div>
+        {% endif %}
     </section>
 </main>
 {%- endblock %}
