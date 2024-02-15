@@ -8,12 +8,19 @@
 {# Header END #}
 
 {# Callout #}
-{%- macro callout(element = "div", modifiers = '', header = '', body = '') -%}
+{%- macro callout(element = "div", modifiers = '', emoji = '', header = '', body = '') -%}
 <{{element}} class="callout {{modifiers}}">
-    {%- if header -%}
-    <header>{{header|safe}}</header>
+    {%- if emoji -%}
+    <div class="callout-emoji">
+        {{emoji|safe}}
+    </div>
     {%- endif -%}
-    {{- body|safe -}}
+    <div class="callout-content">
+        {%- if header -%}
+        <header>{{header|safe}}</header>
+        {%- endif -%}
+        {{- body|safe -}}
+    </div>
 </{{element}}>
 {%- endmacro -%}
 {# Callout END #}

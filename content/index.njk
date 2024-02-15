@@ -50,7 +50,8 @@ scripts: '
 		{{ macro.callout(
 			element = 'article',
 			modifiers = 'callout--small callout--warning mb-0',
-			header = '<h2>🛠️ Your JavaScipt is disabled</h2>',
+			emoji = '<span class="emoji" role="img" aria-label="Spanner and hammer">🛠️</span>',
+			header = '<h2>Your JavaScipt is disabled</h2>',
 			body = '
 				<p>This website uses JavaScript, please read <a href="/site#javascript">About the Site</a> to understand why</p>
 		') }}
@@ -74,7 +75,7 @@ scripts: '
 		<p>I am Frills, the proud webmistress of this website in this wondrous wifi world, learn more <a href="/about">about me</a> or <a href="/site">about this website</a>.</p>
 		<p>Here you will find my latest <a href="/blog">thoughts</a> and <a href="/experiments">experiments</a>, <a href="/links">portals to other websites</a>, and <a href="/guestbook">messages</a> left by other wanderers.</p>
 	</div>
-	<div class="dashboard__item">
+	{# <div class="dashboard__item">
 		{{ macro.callout(
 				element = 'article',
 				modifiers = 'callout--small',
@@ -86,7 +87,7 @@ scripts: '
 						<li>🗓️ 5 February - 12 February 2024</li>
 					</ul>
 			') }}
-	</div>
+	</div> #}
 	<div class="av-br">
 		<article class="dashboard__item dashboard__item--neocities bg-wiggly">
 			<img src="/images/neocities.svg" alt="Neocities cat holding a paintbrush and spanner">
@@ -99,9 +100,8 @@ scripts: '
 			{{ macro.callout(
 				element = 'article',
 				modifiers = 'callout--small callout--info statusCafe noscriptHide',
-				header = '
-					<span id="statusCafe-emoji"></span>
-					<h2><a href="https://status.cafe/users/fri11s" class="hidden">Latest status</a></h2>
+				emoji = '<span id="statusCafe-emoji"></span>',
+				header = '<h2><a href="https://status.cafe/users/fri11s" class="hidden">Latest status</a></h2>
 					<span id="statusCafe-time"></span>',
 				body = '
 					<div id="statusCafe-status">No recent update :(</div>
@@ -111,9 +111,8 @@ scripts: '
 			{{ macro.callout(
 				element = 'article',
 				modifiers = 'callout--small callout--info noscriptHide',
-				header = '
-				<span class="emoji" role="img" aria-label="Musical note">🎵</span>
-				<h2>Last played</h2>
+				emoji = '<span class="emoji" role="img" aria-label="Musical note">🎵</span>',
+				header = '<h2>Last played</h2>
 				<span><span id="lfmTime">right now</span></span>
 				',
 				body = '
@@ -125,10 +124,8 @@ scripts: '
 			{{ macro.callout(
 				element = 'article',
 				modifiers = 'callout--small callout--info',
-				header = '
-				<span class="emoji" role="img" aria-label="Books">📚</span>
-				<h2>Currently reading</h2>
-				',
+				emoji = '<span class="emoji" role="img" aria-label="Books">📚</span>',
+				header = '<h2>Currently reading</h2>',
 				body = '
 				<a href="https://www.goodreads.com/book/show/76713323-empire-of-storms" class="hidden">Empire of Storms - Sarah J Maas</a>
 				'

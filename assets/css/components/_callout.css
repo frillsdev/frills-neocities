@@ -1,14 +1,11 @@
 .callout {
   border: 4px solid var(--accent);
   background-color: var(--bodybg);
-  padding: 20px;
   margin: 0 0 1rem 0;
   font-size: 85%;
   border-radius: 0.75rem;
-}
-
-.callout--small {
-  padding: 10px 14px;
+  display: flex;
+  align-items: center;
 }
 
 .callout--warning {
@@ -29,6 +26,29 @@
     margin-left: 1rem;
     font-size: 80%;
   }
+}
+
+.callout-emoji,
+.callout-content {
+  padding: 1rem;
+}
+
+.callout--small .callout-emoji,
+.callout--small .callout-content {
+  padding: 0.5rem 0.75rem;
+}
+
+.callout-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0!important;
+}
+
+.callout-emoji,
+.callout-emoji .emoji {
+  font-size: 50px;
+  line-height: 1.5;
 }
 
 .callout header {
