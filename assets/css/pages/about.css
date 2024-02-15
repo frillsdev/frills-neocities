@@ -47,16 +47,19 @@
   }
 }
 
-.character {
+.charactersheet {
+  color: var(--about-color);
+}
+
+.charactersheet-character {
   display: flex;
   gap: clamp(2rem, 5vw, 1000rem);
   align-items: center;
   flex-direction: column;
-  color: var(--about-color);
 }
 
 @media (min-width: 768px) {
-  .character {
+  .charactersheet-character {
     flex-direction: row;
   }
 }
@@ -67,8 +70,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   border: var(--border-width) solid var(--border-color);
-  border-radius: 0.75rem;
   background-color: var(--border-color);
+  border-radius: 0.75rem;
   gap: var(--border-width);
   overflow: hidden;
 }
@@ -127,7 +130,7 @@
   }
 }
 
-.characterstats {
+.charactersheet-stats {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -137,20 +140,20 @@
 }
 
 @media (min-width: 768px) {
-  .characterstats {
+  .charactersheet-stats {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     ;
   }
 }
 
-.characterstats>* {
+.charactersheet-stats>* {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.characterstats>*>h3 {
+.charactersheet-stats>*>h3 {
   font-family: "Shrikhand", var(--font-family);
   font-weight: 400;
   font-size: clamp(1rem, 1.5vw, 3rem);

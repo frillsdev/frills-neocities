@@ -17,13 +17,15 @@ scripts: '<link rel="stylesheet" href="/css/pages/about.css">'
 
 	<span class="bigboibanner">Internet witch</span>
 
+	<div class="charactersheet">
+
 	{{ macro.callout(
         element = 'aside',
         modifiers = '',
 		header = '<h2>🛠️ Work in progress</h2>',
         body = 'For the development of this page, I am working in the open! So you\'ll see it only partly built. There may be bugs or things might look weird on certain browsers or device widths. That\'s the beauty!') }}
 
-	<div class="character">
+	<div class="charactersheet-character">
 		<div class="whosthatgirl">
 			<div class="itsfrills-name">
 				<h2>Name</h2>
@@ -51,7 +53,7 @@ scripts: '<link rel="stylesheet" href="/css/pages/about.css">'
 		</div>
 	</div>
 
-	<div class="characterstats">
+	<div class="charactersheet-stats">
 		<h2 class="visually-hidden">Stats</h2>
 		{# 
 		8 = -1
@@ -92,6 +94,7 @@ scripts: '<link rel="stylesheet" href="/css/pages/about.css">'
 			<p class="bigstat"><span class="visually-hidden">Ability score: </span>13</p>
 			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+1</p>
 		</div>
+	</div>
 	</div>
 </div>
 
