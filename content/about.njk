@@ -5,140 +5,94 @@ eleventyNavigation:
   key: About
   emoji: <span class="emoji" aria-hidden="true">💁🏻‍♀️</span>
   order: 1
+style: '@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");'
+scripts: '<link rel="stylesheet" href="/css/pages/about.css">'
 ---
-{% extends 'structure/templates/page-2col.njk'%}
+{% extends 'structure/templates/page-empty.njk'%}
 {% import "structure/components/components.njk" as macro with context %}
 
-{%- block left -%}
-<div class="bio">
-	<h2 class="visually-hidden">Bio</h2>
-	<div class="avatar __noradius">
-		<img src="/images/gpoy.jpg" alt="">
-	</div>
-	<ul class="unstyled">
-		<li><span class="emoji" role="img" aria-label="Pronouns">🌷</span> she/her</li>
-		<li><span class="emoji" role="img" aria-label="Age">🎂</span> Millenial</li>
-		<li><span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
-		<li><span class="emoji" role="img" aria-label="Relationship">💍</span> Engaged</li>
-		<li><span class="emoji" role="img" aria-label="Profession">👩🏻‍💻</span> Frontend Developer</li>
-		<li><span role="img" class="emoji" aria-hidden="true">🐶</span> <a href="/shrine/orla">Dog mum</a></li>
-	</ul>
-</div>
-{%- endblock -%}
-
 {%- block main -%}
-<div class="dashboard">
-	<article class="dashboard__item dashboard__item--card">
-		<header>
-			<h2 class="bg-wiggly">👯‍♀️ Social</h2>
-		</header>
-		<div>
-			<ul class="unstyled">
-				<li><span class="emoji" role="img" aria-label="Coffee">☕️</span> <a href="https://status.cafe/users/fri11s">@fri11s@status.cafe</a></li>
-				<li><span class="emoji" role="img" aria-label="Cat">😺</span> <a href="https://neocities.org/site/fri11s">@fri11s@neocities.org</a></li>
-				<li><span class="emoji" role="img" aria-label="Elephant">🐘</span><a href="https://indieweb.social/@frills">@frills@indieweb.social</a></li>
-			</ul>
+<div class="container">
+	<h1 class="visually-hidden">About</h1>
+
+	<span class="bigboibanner">Internet witch</span>
+
+	{{ macro.callout(
+        element = 'aside',
+        modifiers = '',
+		header = '<h2>🛠️ Work in progress</h2>',
+        body = 'For the development of this page, I am working in the open! So you\'ll see it only partly built. There may be bugs or things might look weird on certain browsers or device widths. That\'s the beauty!') }}
+
+	<div class="character">
+		<div class="whosthatgirl">
+			<div class="itsfrills-name">
+				<h2>Name</h2>
+				<p>Frills</p>
+			</div>
+			<div class="itsfrills-race">
+				<h2>Race</h2>
+				<p>Human</p>
+			</div>
+			<div class="itsfrills-level">
+				<h2>Level</h2>
+				<p>3X</p>
+			</div>
+			<div class="itsfrills-alignment">
+				<h2>Alignment</h2>
+				<p>Chaotic Good</p>
+			</div>
+			<div class="itsfrills-something">
+				<h2>Class</h2>
+				<p>Sorcerer</p>
+			</div>
 		</div>
-	</article>
-	<article class="dashboard__item dashboard__item--card">
-		<header>
-			<h2 class="bg-wiggly">✨ Personality</h2>
-		</header>
-		<div>
-			<ul>
-				<li>Sun sign: Gemini</li>
-				<li>Rising sign: Gemini</li>
-				<li>Moon sign: Scorpio</li>
-				<li>INFP</li>
-			</ul>
+		<div class="piccy">
+			<img src="/images/collections/avatars/andycarolan.png">
 		</div>
-	</article>
-	<article class="dashboard__item dashboard__item--card">
-		<header>
-			<h2 class="bg-dots">💖 Pseudonym</h2>
-		</header>
-		<div>
-			<p>Where's the name from? Well, once upon a time, I made a gnome mage on the Azune EU server on World of Warcraft. Her name was Frills. We travelled Azeroth together for years, then she lay dormant until her name was resurrected as my online presence.</p>
-			<p>I'll make a shrine to her one day.</p>
+	</div>
+
+	<div class="characterstats">
+		<h2 class="visually-hidden">Stats</h2>
+		{# 
+		8 = -1
+		10 = 0
+		12 = +1
+		14 = +2
+		16 = +3
+		18 = +4
+		20 = +5 #}
+
+		<div class="stat-str">
+			<h3>Strength</h3>
+			<p class="bigstat"><span class="visually-hidden">Ability score: </span>9</p>
+			<p class="smolstat"><span class="visually-hidden">Modifier: </span>-1</p>
 		</div>
-	</article>
-	<article class="dashboard__item dashboard__item--card">
-		<header>
-			<h2 class="bg-dots">🗣 Languages</h2>
-		</header>
-		<div>
-			<ul>
-				<li>English</li>
-				<li>Welsh (beginner)</li>
-			</ul>
+		<div class="stat-dex">
+			<h3>Dexterity</h3>
+			<p class="bigstat"><span class="visually-hidden">Ability score: </span>11</p>
+			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+0</p>
 		</div>
-	</article>
-	<article class="dashboard__item dashboard__item--card">
-		<header>
-			<h2 class="bg-grid">🍝 Food</h2>
-		</header>
-		<div>
-			<ul>
-				<li>Vegetarian</li>
-				<li>Oat milk</li>
-				<li><a href="/blog/230928-vegan-banana-bread/">Banana bread</a></li>
-				<li>Blueberries</li>
-				<li>Katsu curry</li>
-			</ul>
+		<div class="stat-con">
+			<h3>Constitution</h3>
+			<p class="bigstat"><span class="visually-hidden">Ability score: </span>15</p>
+			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+2</p>
 		</div>
-	</article>
-	<article class="dashboard__item dashboard__item--card">
-		<header>
-			<h2 class="bg-wiggly">📚 Books</h2>
-		</header>
-		<div>
-			<ul>
-				<li>The Priory of the Orange Tree</li>
-				<li>Circe</li>
-				<li>Ready Player One</li>
-				<li>Children of Blood & Bone</li>
-				<li>Red Queen</li>
-			</ul>
+		<div class="stat-wis">
+			<h3>Wisdom</h3>
+			<p class="bigstat"><span class="visually-hidden">Ability score: </span>16</p>
+			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+3</p>
 		</div>
-	</article>
-	<article class="dashboard__item dashboard__item--card">
-		<header>
-			<h2 class="bg-wiggly">🎮 Games</h2>
-		</header>
-		<div>
-			<ul>
-				<li>The Gardens Between</li>
-				<li>Stardew Valley</li>
-				<li>It Takes Two</li>
-				<li>Piffle</li>
-			</ul>
+		<div class="stat-int">
+			<h3>Intelligence</h3>
+			<p class="bigstat"><span class="visually-hidden">Ability score: </span>14</p>
+			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+2</p>
 		</div>
-	</article>
-	<article class="dashboard__item dashboard__item--card">
-		<header>
-			<h2 class="bg-grid">🧠 Interests</h2>
-		</header>
-		<div>
-			<ul>
-				<li>Mythology</li>
-				<li>Sea dipping</li>
-				<li>Growing veggies</li>
-				<li>Drawing</li>
-				<li>DIY and decorating</li>
-			</ul>
+		<div class="stat-cha">
+			<h3>Charisma</h3>
+			<p class="bigstat"><span class="visually-hidden">Ability score: </span>13</p>
+			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+1</p>
 		</div>
-	</article>
-	{# <article class="dashboard__item dashboard__item--card">
-		<header>
-			<h2 class="bg-wiggly">💬 Quote</h2>
-		</header>
-		<div>
-			<blockquote>
-				<p>All the days you get to have are big</p>
-				<footer>I Do This All The Time - Self Esteem</footer>
-			</blockquote>
-		</div>
-	</article> #}
+	</div>
 </div>
 
 {# TODO: make this accessible

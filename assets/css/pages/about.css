@@ -1,50 +1,44 @@
 :root,
-:root[data-scheme='light'],
 :root[data-scheme='dark'] {
-  --bodybg: #FFE5EE;
-  --bg: #FFCFDF;
-  --bodyrgb: 13, 15, 25;
-  --highlight: Gold;
-  --accent: white;
-  --accentcontrast: Black;
-  --separator: #A00000;
-  --quote: #A00000;
-  --interactive: #A00000;
-  --input-bg: #A00000;
-  --input-border: #A00000;
+  --main-color: #FFB7D0;
+  --about-color: #ff79a8;
+  --link: #ff79a8;
+  --linkaccent: #ff79a8;
+  --linkvisited: #ff9bbe;
+  --border-width: 0.5vw;
+  --border-color: #491c2c;
+}
+
+:root[data-scheme='light'] {
+  --about-color: #A00000;
   --link: #A00000;
   --linkaccent: #A00000;
-  --linkhover: #A00000;
   --linkvisited: #A00000;
-  --text: #A00000;
-  --subtext: #A00000;
-  --dashboard-bg: Gold;
-  --dashboard-outline: Goldenrod;
-  --dashboard-text: Black;
-  --callout-info: DeepSkyBlue;
-  --logo-x: #A00000;
-  --logo-anim-1: #A00000;
-  --logo-anim-2: #A00000;
-  --logo-anim-3: #A00000;
-  --logo-anim-4: #A00000;
-  --logo-anim-5: #A00000;
-  --logo-anim-6: #A00000;
   --border-width: 0.5vw;
   --border-color: #FFB7D0;
 }
 
-
-.settings {
-  display: none;
+@media (prefers-color-scheme: light) {
+  :root {
+    --about-color: #A00000;
+    --link: #A00000;
+    --linkaccent: #A00000;
+    --linkvisited: #A00000;
+    --border-width: 0.5vw;
+    --border-color: #FFB7D0;
+  }
 }
+
+/* Developement */
 
 .bigboibanner {
   font-family: "Shrikhand", var(--font-family);
-  font-size: 10vw;
+  font-size: clamp(10vw, 10vw, 195px);
   line-height: 1;
   text-transform: lowercase;
   display: block;
   margin-bottom: 2rem;
+  color: var(--about-color);
 }
 
 @media (min-width: 768px) {
@@ -58,6 +52,7 @@
   gap: clamp(2rem, 5vw, 1000rem);
   align-items: center;
   flex-direction: column;
+  color: var(--about-color);
 }
 
 @media (min-width: 768px) {
@@ -122,7 +117,7 @@
 
 .piccy img {
   border-radius: 1000px;
-  background-color: var(--border-color);
+  background-color: var(--main-color);
 }
 
 @media (min-width: 768px) {
@@ -171,7 +166,7 @@
 .smolstat {
   font-family: "Shrikhand", var(--font-family);
   border-radius: 0.75rem;
-  background: var(--text);
+  background: var(--about-color);
   color: var(--bg);
   text-align: center;
   margin: 0;
