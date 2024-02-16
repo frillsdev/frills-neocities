@@ -2,7 +2,7 @@
 .toggle {
   width: 44px;
   height: 44px;
-  font-size: 0;
+  font-size: 0!important;
   padding: 0!important;
   display: flex;
   align-items: center;

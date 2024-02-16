@@ -15,6 +15,10 @@ input[type="submit"] {
   display: inline-block;
 }
 
+.button.large {
+  font-size: 1rem;
+}
+
 .button:hover,
 button:hover {
   background-color: #eec900;
