@@ -6,8 +6,13 @@ tags:
 rss: true
 ---
 
-<aside class="callout callout--info">
-<p>Disclaimer: This is not medical advice and I am not a medical professional. If you are suffering with your mental health, please, please talk to someone and seek professional help. You are loved.</p>
+<aside class="callout">
+  <div class="callout-emoji">
+    👩‍⚕️
+  </div>
+  <div class="callout-content">
+    <p>Disclaimer: This is not medical advice and I am not a medical professional. If you are suffering with your mental health, please, please talk to someone and seek professional help. You are loved.</p>
+  </div>
 </aside>
 
 Increasingly, over the last 5 years, when the seasons begin to change from Summer to Autumn (or Fall for you 'muricans), I notice a distinct change in my overall mood. The nights draw in, the temperature drops and rain is incessant. I feel like someone has taken my battery out, I'm low energy and begin to lose interest in things that previously gave me joy, and I struggle to climb out of bed to go to work. This collection of symptoms is termed Seasonal Affective Disorder, also known as winter depression.

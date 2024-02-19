@@ -1,21 +1,10 @@
 .callout {
-  border: 4px solid var(--accent);
   background-color: var(--bodybg);
   margin: 0 0 1rem 0;
-  font-size: 85%;
+  font-size: 90%;
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
-}
-
-.callout--warning {
-  border-color: var(--accent);
-  color: var(--text);
-}
-
-.callout--info {
-  border-color: var(--callout-info);
-  color: var(--text);
 }
 
 @media (min-width: 768px) {
@@ -51,7 +40,7 @@
   line-height: 1.5;
 }
 
-.callout header {
+.callout-content header {
   padding-bottom: 5px;
 }
 
@@ -64,4 +53,5 @@
   padding: 0;
   margin: 0;
   display: inline;
+  font-size: 111.111%;
 }

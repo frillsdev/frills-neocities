@@ -46,6 +46,11 @@
     margin-bottom: 0;
   }
 }
+@media (min-width: 1400px) {
+  .bigboibanner {
+    font-size: 8rem;
+  }
+}
 
 .charactersheet {
   color: var(--about-color);
@@ -110,6 +115,7 @@
   display: flex;
   place-items: center;
   padding: calc(var(--border-width) * 2);
+  aspect-ratio: 1 / 1;
 }
 
 @media (min-width: 768px) {
@@ -121,13 +127,6 @@
 .piccy img {
   border-radius: 1000px;
   background-color: var(--main-color);
-}
-
-@media (min-width: 768px) {
-  .piccy img {
-    height: 20vw;
-    width: 20vw;
-  }
 }
 
 .charactersheet-stats {

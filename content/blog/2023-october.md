@@ -6,7 +6,14 @@ tags:
 rss: true
 ---
 
-<aside class="callout callout--info">This will be the last in the series. I'm not getting the value from them that I thought I would. I may do them more sporadically in the future to cover specific events or things worth talking about 😊</aside>
+<aside class="callout">
+  <div class="callout-emoji">
+    📃
+  </div>
+  <div class="callout-content">
+    This will be the last in the series. I'm not getting the value from them that I thought I would. I may do them more sporadically in the future to cover specific events or things worth talking about 😊
+  </div>
+</aside>
 
 ## 🐶 Orla monitoring
 Spent a lot of time monitoring the pup, had a couple of follow-up blood tests, all of which are looking good. She is totally back to herself now, which is the biggest marker for things being OK. We certainly dodged a bullet. This month, I also took some time to make a [shrine to her on Neocities](/shrine/orla).
