@@ -102,3 +102,23 @@
   background-color: transparent;
   animation: fadeIn forwards 1s;
 }
+
+.onlinenow {
+  aspect-ratio: 1 / 1;
+  background-color: #3db838;
+  border-radius: 100px;
+  width: 22px;
+  display: inline-block;
+  transform: translateY(3px);
+  margin: 0 4px;
+}
+
+.onlinenow::before {
+  content: '✔';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--bg);
+  font-size: 1px;
+}

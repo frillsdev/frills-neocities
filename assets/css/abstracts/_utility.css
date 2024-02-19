@@ -62,8 +62,10 @@
   margin-bottom: 2rem !important;
 }
 
-.av-br {
-  break-inside: avoid-column;
+@media (min-width: 1281px) {
+  .av-br {
+    break-inside: avoid-column;
+  }
 }
 
 .fl-r {

@@ -1,11 +1,9 @@
 .dashboard {
-  column-width: 250px;
+  column-width: 400px;
   gap: 1rem;
   width: 100%;
-  font-size: 85%;
   margin-bottom: 2rem;
-  /* max-width: 950px; */
-  /* height: 100%; */
+  font-size: 90%;
 }
 
 @media (min-width: 1435px) {
@@ -25,7 +23,7 @@
 }
 
 .dashboard__item-image {
-  background-color: var(--dashboard-bg);
+  background-color: var(--dashboard-header-bg);
 }
 
 .dashboard__item-image img {
@@ -33,32 +31,17 @@
 }
 
 .dashboard__item--card {
-  box-shadow: inset 0 0 0 4px var(--dashboard-bg);
-  padding: 4px;
   background-color: var(--bodybg);
-  max-width: calc(100% - 8px);
+  max-width: 100%;
   border-radius: 0.75rem;
   overflow: hidden;
 }
 
-.dashboard__item--card header {
-  border-bottom: 2px solid var(--dashboard-bg);
-}
-
-.dashboard__item--card header:first-child {
-  margin: -4px -4px 0 -4px;
-}
-
-.dashboard__item--card header:last-child {
-  margin: 0 -4px -4px -4px;
-}
-
-
 .dashboard__item--card header h2 {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   font-size: 1rem;
   margin-bottom: 0;
-  background-color: var(--dashboard-bg);
+  background-color: var(--dashboard-header-bg);
   color: var(--dashboard-text);
 }
 
@@ -84,8 +67,8 @@
   background-color: var(--accent);
   position: relative;
   border-radius: 0.75rem;
-  padding: 0.3rem;
-  width: calc(100% - 0.6rem)
+  padding: 0.5rem;
+  width: 100%;
 }
 
 .dashboard__item--neocities p.small {
@@ -136,12 +119,12 @@
 }
 
 .dashboard__item--latestposts .description {
-  font-size: 85%;
+  font-size: 90%;
   margin-bottom: 0rem;
   background: var(--bg);
   padding: 0.5rem;
   margin-top: 3px;
-  border-radius: 0.75rem;
+  border-radius: 0.375rem;
 }
 
 .dashboard__item--latestposts .description>ul,

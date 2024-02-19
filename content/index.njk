@@ -38,7 +38,7 @@ scripts: '
 		<li class="noscriptHide"><span class="emoji" role="img" aria-label="Local time">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (gmt)</li>
 		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini</li>
 		<li><span role="img" class="emoji" aria-label="Moon sign">🌚</span> Scorpio</li>
-		<li><img src="/images/myspace-online.gif" alt="Status (jk)" class="onlinenow"> Online now!</li>
+		<li><span class="onlinenow"></span> Online now!</li>
 	</ul>
 </div>
 {%- endblock -%}
@@ -49,7 +49,7 @@ scripts: '
 		<div class="dashboard__item">
 		{{ macro.callout(
 			element = 'article',
-			modifiers = 'callout--small callout--warning mb-0',
+			modifiers = 'callout--small mb-0',
 			emoji = '<span class="emoji" role="img" aria-label="Spanner and hammer">🛠️</span>',
 			header = '<h2>Your JavaScipt is disabled</h2>',
 			body = '
@@ -99,7 +99,7 @@ scripts: '
 		<div class="dashboard__item">
 			{{ macro.callout(
 				element = 'article',
-				modifiers = 'callout--small callout--info statusCafe noscriptHide',
+				modifiers = 'callout--small statusCafe noscriptHide',
 				emoji = '<span id="statusCafe-emoji"></span>',
 				header = '<h2><a href="https://status.cafe/users/fri11s" class="hidden">Latest status</a></h2>
 					<span id="statusCafe-time"></span>',
@@ -110,7 +110,7 @@ scripts: '
 		<div class="dashboard__item">
 			{{ macro.callout(
 				element = 'article',
-				modifiers = 'callout--small callout--info noscriptHide',
+				modifiers = 'callout--small noscriptHide',
 				emoji = '<span class="emoji" role="img" aria-label="Musical note">🎵</span>',
 				header = '<h2>Last played</h2>
 				<span><span id="lfmTime">right now</span></span>
@@ -123,7 +123,7 @@ scripts: '
 		<div class="dashboard__item">
 			{{ macro.callout(
 				element = 'article',
-				modifiers = 'callout--small callout--info',
+				modifiers = 'callout--small',
 				emoji = '<span class="emoji" role="img" aria-label="Books">📚</span>',
 				header = '<h2>Currently reading</h2>',
 				body = '
@@ -134,9 +134,9 @@ scripts: '
 		<div class="dashboard__item">
 			<h2 class="visually-hidden">Shrines</h2>
 			<a href="/shrine/orla" class="gallery" aria-label="Orla (my dog) shrine">
-				<img src="/images/shrine/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy">
-				<img src="/images/shrine/orla/orla14.jpg" width="100" height="100" alt="" loading="lazy">
-				<img src="/images/shrine/orla/orla15.jpg" width="100" height="100" alt="" loading="lazy">
+				<img src="/images/shrine/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
+				<img src="/images/shrine/orla/orla14.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
+				<img src="/images/shrine/orla/orla15.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
 			</a>
 		</div>
 		<article class="dashboard__item dashboard__item--center noscriptHide">

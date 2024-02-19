@@ -31,8 +31,7 @@
   --linkvisited: #ff5790;
   --text: LavenderBlush;
   --subtext: PeachPuff;
-  --dashboard-bg: Gold;
-  --dashboard-outline: Goldenrod;
+  --dashboard-header-bg: Gold;
   --dashboard-text: Black;
   --callout-info: DeepSkyBlue;
   --logo-x: Gold;
@@ -64,8 +63,7 @@
     --linkvisited: purple;
     --text: #05134d;
     --subtext: DarkRed;
-    --dashboard-bg: Gold;
-    --dashboard-outline: Goldenrod;
+    --dashboard-header-bg: Gold;
     --dashboard-text: Black;
     --logo-x: Gold;
     --logo-anim-1: hsl(255, 70%, 70%);
@@ -95,8 +93,7 @@
   --linkvisited: purple;
   --text: #05134d;
   --subtext: DarkRed;
-  --dashboard-bg: Gold;
-  --dashboard-outline: Goldenrod;
+  --dashboard-header-bg: Gold;
   --dashboard-text: Black;
   --logo-x: Gold;
   --logo-anim-1: hsl(255, 70%, 70%);
