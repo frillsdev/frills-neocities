@@ -7,6 +7,12 @@
     <link rel="me" href="https://indieweb.social/@frills">
     <link rel="me" href="https://social.lol/@frills">
     <link rel="me" href="https://frills.omg.lol">
+    {# OpenGraph #}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{metadata.url}}{{page.url}}">
+    <meta property="og:image" content="https://dynamic-og-image-generator.vercel.app//api/generate?title={{ title | safe }}&author={{ metadata.author.name }}&avatar={{ metadata.avatar }}&websiteUrl={{ metadata.url }}&theme=shadesOfPurple" />
+    <meta property="og:image:alt" content="Page image for {{metadata.author.name}}">
+    {# <meta name="description" content="{% if page.description %}{{ page.description | safe}}{% endif %}"> #}
     {# Favicon -#}
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
