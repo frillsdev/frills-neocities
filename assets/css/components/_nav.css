@@ -40,6 +40,10 @@
   position: relative;
   z-index: 1;
 }
+.page__nav ul li a[aria-current]:not(:hover):not(:hover):not(:active){
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+}
 
 .page__nav ul li .notification {
   vertical-align: super;
