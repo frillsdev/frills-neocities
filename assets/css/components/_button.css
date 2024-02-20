@@ -98,6 +98,29 @@ button.hidden:active {
   text-decoration: underline wavy 2px;
 }
 
+button.dotted {
+  transform: none;
+  padding: 1px 0;
+  margin: 0;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text);
+  font-size: inherit;
+  text-decoration: underline dotted 2px;
+}
+button.dotted:hover,
+button.dotted:focus,
+button.dotted:active {
+  transform: none;
+  padding: 1px 0;
+  margin: 0;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--linkhover);
+  text-decoration: underline 2px;
+}
+
+
 .copyButton {
   font-size: 0;
   width: 25px;

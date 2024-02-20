@@ -38,6 +38,12 @@
   }
 }
 
+.bio .emoji {
+  width: 24px;
+  height: 28px;
+  display: inline-block;
+}
+
 .avatar {
   max-width: 150px;
   margin-bottom: 1rem;
@@ -103,22 +109,96 @@
   animation: fadeIn forwards 1s;
 }
 
-.onlinenow {
+.status {
   aspect-ratio: 1 / 1;
-  background-color: #3db838;
   border-radius: 100px;
-  width: 22px;
+  width: 24px;
   display: inline-block;
   transform: translateY(3px);
-  margin: 0 4px;
+  margin: 0 4px 0 0;
+}
+/* Available */
+.status[data-status="online"] {
+  background-color: #3db838;
 }
 
-.onlinenow::before {
-  content: '✔';
+.status[data-status="online"]::before {
+  content: '';
+  width: 8px;
+  height: 4px;
+  border-bottom: 3px solid var(--bg);
+  border-left: 3px solid var(--bg);
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+/* Offline */
+.status[data-status="offline"] {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px grey;
+}
+
+.status[data-status="offline"]::before,
+.status[data-status="offline"]::after {
+  content: '';
+  width: 8px;
+  height: 2px;
   position: absolute;
   left: 50%;
   top: 50%;
+  background-color: grey;
+}
+.status[data-status="offline"]::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.status[data-status="offline"]::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+/* Busy */
+.status[data-status="busy"] {
+  background-color: #cc0033;
+}
+/* Do Not Disturb */
+.status[data-status="donotdisturb"] {
+  background-color: #cc0033;
+}
+
+.status[data-status="donotdisturb"]::before {
+  content: '';
+  width: 10px;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: var(--bg);
   transform: translate(-50%, -50%);
-  color: var(--bg);
-  font-size: 12px;
+}
+/* Away */
+.status[data-status="away"] {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px Plum;
+}
+
+.status[data-status="away"]::before,
+.status[data-status="away"]::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.status[data-status="away"]::before {
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid Plum;
+  border-top: 2px solid Plum;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  box-sizing: border-box;
+}
+.status[data-status="away"]::after {
+  width: 10px;
+  height: 2px;
+  border-radius: 2px 0 0 2px;
+  background-color: Plum;
+  transform: translate(-50%, -50%);
 }

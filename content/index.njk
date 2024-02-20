@@ -3,7 +3,44 @@ title: Home
 rss: false
 scripts: '
 	<script>
-	let time=document.querySelector("#localTime");const d=new Date().toLocaleTimeString("en-US",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"});e=d.replace(/\s/g,""),time.innerHTML=e;
+	const date = new Date();
+	const h = date.getHours();
+	const d = date.toLocaleTimeString("en-GB", {
+		timeZone: "Europe/London",
+		hour: "2-digit",
+		hour12: true,
+		minute: "2-digit"
+	});
+	e = d.replace(/\s/g, ""), document.querySelector("#localTime").innerHTML = e;
+	const dhr = date.toLocaleTimeString("en-GB", {
+		timeZone: "Europe/London",
+		hour: "2-digit",
+	});
+	let st;	let stT;
+	if (dhr >= 0 && dhr < 7) {
+		st = "offline"; stT = "Sleepin’"
+	} else if (dhr >= 7 && dhr < 9) {
+		st = "online"; stT = "Online now!"
+	} else if (dhr >= 9 && dhr < 17) {
+		st = "away"; stT = "Workin’"
+	} else if (dhr >= 17 && dhr < 23) {
+		st = "online"; stT = "Online now!"
+	} else if (dhr >= 23 && dhr < 24) {
+		st = "offline"; stT = "Sleepin’"
+	}
+	document.querySelector("#status").dataset.status = st;
+	document.querySelector("#statusText").innerText = stT;
+	let m;
+	if (h >= 0 && h < 12) {
+		m = "Good morning!"; 
+
+	} else if (h >= 12 && h < 17) {
+		m = "Good afternoon!"; 
+
+	} else if (h >= 17 && h < 24) {
+		m = "Good evening!"; 
+	}
+	document.querySelector("#greetingText").innerHTML = m;
 	</script>
 	<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 	<script>
@@ -33,12 +70,13 @@ scripts: '
 		</div>
 	</div>
 	<ul class="unstyled">
+		<li class="noscriptHide"><span class="emoji" role="img" aria-label="Wave">👋</span> <span id="greetingText">Good timezone!</span></li>
 		<li><span class="emoji" role="img" aria-label="Pronouns">🌷</span> she/her</li>
 		<li><span class="emoji" role="img" aria-label="Location">📍</span> Wales, UK</li>
 		<li class="noscriptHide"><span class="emoji" role="img" aria-label="Local time">⏰</span> <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (gmt)</li>
-		<li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini</li>
-		<li><span role="img" class="emoji" aria-label="Moon sign">🌚</span> Scorpio</li>
-		<li><span class="onlinenow"></span> Online now!</li>
+		{# <li><span class="emoji" role="img" aria-label="Sun sign">🌞</span> Gemini</li> #}
+		{# <li><span role="img" class="emoji" aria-label="Moon sign">🌚</span> Scorpio</li> #}
+		<li><span id="status" class="status" data-status="online"></span> <span id="statusText">Online now!</span></li>
 	</ul>
 </div>
 {%- endblock -%}
@@ -53,7 +91,7 @@ scripts: '
 			emoji = '<span class="emoji" role="img" aria-label="Spanner and hammer">🛠️</span>',
 			header = '<h2>Your JavaScipt is disabled</h2>',
 			body = '
-				<p>This website uses JavaScript, please read <a href="/site#javascript">About the Site</a> to understand why</p>
+				<p>This website uses JavaScript, please read the <a href="/colophon#javascript">Colophon</a> to understand why</p>
 		') }}
 		</div>
 	</noscript>
@@ -72,7 +110,7 @@ scripts: '
 	<div class="dashboard__item av-br">
 		<h2 class="visually-hidden">Intro</h2>
 		<p>Greetings, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you.</p>
-		<p>I am Frills, the proud webmistress of this website in this wondrous wifi world, learn more <a href="/about">about me</a> or <a href="/site">about this website</a>.</p>
+		<p>I am Frills<span class="noscriptHide"> (<button data-speak="Frills" type="button" class="dotted" aria-label="Say 'Frills'">frɪlz</button> 🔊)</span>, the proud webmistress of this website in this wondrous wifi world, learn more <a href="/about">about me</a> or <a href="/colophon">about this website</a>.</p>
 		<p>Here you will find my latest <a href="/blog">thoughts</a> and <a href="/experiments">experiments</a>, <a href="/links">portals to other websites</a>, and <a href="/guestbook">messages</a> left by other wanderers.</p>
 	</div>
 	{# <div class="dashboard__item">
