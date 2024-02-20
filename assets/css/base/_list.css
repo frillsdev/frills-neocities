@@ -26,7 +26,7 @@ ol.unstyled li::marker {
 
 ul.stars li::marker,
 ol.stars li::marker {
-  content: "⭐";
+  content: var(--marker);
 }
 
 ul.stars li,
