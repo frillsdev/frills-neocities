@@ -16,6 +16,7 @@
 [class*="webring--"] {
   background-color: var(--bodybg);
   padding: 4px;
+  min-height: 35px;
 }
 
 .webring__prev,
@@ -75,4 +76,8 @@
 .webring__random::before {
   font-size: 0.8rem;
   display: inline-block;
+}
+
+.webring--bukmarkclub {
+  padding: 0 10px;
 }

@@ -195,36 +195,6 @@ scripts: '
 	{% include "structure/components/colour-palette.njk" %}
 </div>
 <div class="grid grid--offset">
-	<aside class="webrings pt-2">
-		<h2 class="visually-hidden">Webrings</h2>
-		<div class="webring--retronaut">
-			<a href="https://webring.dinhe.net/prev/https://fri11s.neocities.org/" class="webring__prev">Previous retronaut site</a>
-			<a href="https://webring.dinhe.net/" target="_blank">retronaut</a>
-			<a href="https://webring.dinhe.net/next/https://fri11s.neocities.org/" class="webring__next">Next retronaut site</a>
-		</div>
-		<div class="webring--hotline">
-			<a href="https://hotlinewebring.club/frills/next" class="webring__prev">Previous hotline site</a>
-			<a href="https://hotlinewebring.club/" target="_blank">hotline</a>
-			<a href="https://hotlinewebring.club/frills/previous" class="webring__next">Next hotline site</a>
-		</div>
-		<div class="webring--neossg">
-			<div id="neossg">
-				<script src="https://neossg.neocities.org/onionring-variables.js"></script>
-				<script src="https://neossg.neocities.org/onionring-widget.js"></script>
-			</div>
-		</div>
-		<div class="webring--ladiesofthelink">
-			<a href="https://webri.ng/webring/ladiesofthelinks/previous?via=https%3A%2F%2Ffrills.dev" class="webring__prev">Previous Ladies of the Links site</a>
-			<a href="https://ladiesofthe.link/">Ladies of the Links</a>
-			<a href="https://webri.ng/webring/ladiesofthelinks/random?via=https%3A%2F%2Ffrills.dev" class="webring__random">Random Ladies of the Links site</a>
-			<a href="https://webri.ng/webring/ladiesofthelinks/next?via=https%3A%2F%2Ffrills.dev" class="webring__next">Next Ladies of the Links site</a>
-		</div>
-		<div class="webring--genlissa">
-			<a href="https://webri.ng/webring/genlissa/previous?via=http://frills.dev" class="webring__prev">Previous Site</a>
-			<a href="https://genlissa.neocities.org/#members">Gen Lissa</a>
-			<a href="https://webri.ng/webring/genlissa/random?via=http://frills.dev" class="webring__random">Random Site</a>
-			<a href="https://webri.ng/webring/genlissa/next?via=http://frills.dev" class="webring__next">Next Site</a>
-		</div>
-	</aside>
+	{% include "structure/components/webrings.njk" %}
 </div>
 {% endblock %}

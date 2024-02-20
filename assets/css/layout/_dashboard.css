@@ -125,6 +125,7 @@
   padding: 0.5rem;
   margin-top: 3px;
   border-radius: 0.375rem;
+  line-height: 1.2;
 }
 
 .dashboard__item--latestposts .description>ul,
