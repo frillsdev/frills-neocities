@@ -1,24 +1,20 @@
 {% extends "structure/core/base.njk" %}
 
 {%- block content -%}
-<main class="page__main grid grid--main" id="main">
-    <div class="content__sidebar">
-        {%- block left -%}
-        {%- endblock %}
-    </div>
-    <section class="content__main">
-        <div class="content__inner">
-            <h1 class="visually-hidden">{{title}}</h1>
-            {%- block main -%}
-            {{- content | safe -}}
+    <main tabindex="0" class="page__main grid grid--main" id="main">
+        <h1 class="visually-hidden">{{title}}</h1>
+        <div class="content__sidebar">
+            {%- block left -%}
             {%- endblock %}
         </div>
-        {# <div class="content__extra">
-            {%- block right -%}
-            {%- endblock %}
-        </div> #}
-    </section>
-</main>
-{%- block bottom -%}
-{%- endblock %}
+        <section class="content__main">
+            <div class="content__inner">
+                {%- block main -%}
+                {{- content | safe -}}
+                {%- endblock %}
+            </div>
+        </section>
+    </main>
+    {%- block bottom -%}
+    {%- endblock %}
 {%- endblock %}
