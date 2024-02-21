@@ -3,44 +3,7 @@ title: Home
 rss: false
 scripts: '
 	<script>
-	const date = new Date();
-	const h = date.getHours();
-	const d = date.toLocaleTimeString("en-GB", {
-		timeZone: "Europe/London",
-		hour: "2-digit",
-		hour12: true,
-		minute: "2-digit"
-	});
-	e = d.replace(/\s/g, ""), document.querySelector("#localTime").innerHTML = e;
-	const dhr = date.toLocaleTimeString("en-GB", {
-		timeZone: "Europe/London",
-		hour: "2-digit",
-	});
-	let st;	let stT;
-	if (dhr >= 0 && dhr < 7) {
-		st = "offline"; stT = "Sleepin’"
-	} else if (dhr >= 7 && dhr < 9) {
-		st = "online"; stT = "Online now!"
-	} else if (dhr >= 9 && dhr < 17) {
-		st = "away"; stT = "Workin’"
-	} else if (dhr >= 17 && dhr < 23) {
-		st = "online"; stT = "Online now!"
-	} else if (dhr >= 23 && dhr < 24) {
-		st = "offline"; stT = "Sleepin’"
-	}
-	document.querySelector("#status").dataset.status = st;
-	document.querySelector("#statusText").innerText = stT;
-	let m;
-	if (h >= 0 && h < 12) {
-		m = "Good morning!"; 
-
-	} else if (h >= 12 && h < 17) {
-		m = "Good afternoon!"; 
-
-	} else if (h >= 17 && h < 24) {
-		m = "Good evening!"; 
-	}
-	document.querySelector("#greetingText").innerHTML = m;
+	const n=new Date,h=n.getHours(),d=n.toLocaleTimeString("en-GB",{timeZone:"Europe/London",hour:"2-digit",hour12:!0,minute:"2-digit"});e=d.replace(/\s/g,""),document.querySelector("#localTime").innerHTML=e;const dhr=n.toLocaleTimeString("en-GB",{timeZone:"Europe/London",hour:"2-digit"});let st,stT;dhr>=0&&dhr<7?(st="offline",stT="Sleepin’"):dhr>=7&&dhr<9?(st="online",stT="Online now!"):dhr>=9&&dhr<17?(st="away",stT="Workin’"):dhr>=17&&dhr<23?(st="online",stT="Online now!"):dhr>=23&&dhr<24&&(st="offline",stT="Sleepin’"),document.querySelector("#status").dataset.status=st,document.querySelector("#statusText").innerText=stT;let m;h>=0&&h<12?m="Good morning!":h>=12&&h<17?m="Good afternoon!":h>=17&&h<24&&(m="Good evening!"),document.querySelector("#greetingText").innerHTML=m;
 	</script>
 	<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 	<script>
