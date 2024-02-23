@@ -5,7 +5,7 @@
   --link: #ff79a8;
   --linkaccent: #ff79a8;
   --linkvisited: #ff9bbe;
-  --border-width: 0.5vw;
+  --border-width: 0.25rem;
   --border-color: #491c2c;
 }
 
@@ -14,7 +14,7 @@
   --link: #A00000;
   --linkaccent: #A00000;
   --linkvisited: #A00000;
-  --border-width: 0.5vw;
+  --border-width: 0.25rem;
   --border-color: #FFB7D0;
 }
 
@@ -24,7 +24,7 @@
     --link: #A00000;
     --linkaccent: #A00000;
     --linkvisited: #A00000;
-    --border-width: 0.5vw;
+    --border-width: 0.25rem;
     --border-color: #FFB7D0;
   }
 }
@@ -36,19 +36,22 @@
   font-size: clamp(10vw, 10vw, 195px);
   line-height: 1;
   text-transform: lowercase;
-  display: block;
-  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
   color: var(--about-color);
+  grid-column: 2 / span 1;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
   .bigboibanner {
-    margin-bottom: 0;
+    grid-column: 1 / span 2;
   }
 }
+
 @media (min-width: 1400px) {
   .bigboibanner {
-    font-size: 8rem;
+    font-size: 7rem;
   }
 }
 
@@ -57,15 +60,18 @@
 }
 
 .charactersheet-character {
-  display: flex;
-  gap: clamp(2rem, 5vw, 1000rem);
-  align-items: center;
-  flex-direction: column;
+    row-gap: clamp(0.5rem, 2.5vw, 1rem);
+  column-gap: clamp(0.5rem, 5vw, 1000rem);
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 30vw 1fr;
 }
 
 @media (min-width: 768px) {
   .charactersheet-character {
-    flex-direction: row;
+    row-gap: clamp(0.5rem, 2.5vw, 1rem);
+    align-items: center;
+    grid-template-columns: 1fr 15rem;
   }
 }
 
@@ -79,6 +85,13 @@
   border-radius: 0.75rem;
   gap: var(--border-width);
   overflow: hidden;
+  grid-column: 1 / span 2;
+}
+
+@media (min-width: 768px) {
+  .whosthatgirl {
+    grid-column: 1 / span 1;
+  }
 }
 
 .whosthatgirl>* {
@@ -95,53 +108,62 @@
 [class^="itsfrills-"] h2 {
   font-family: "Shrikhand", var(--font-family);
   font-size: 2vw;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 400;
   line-height: 1.1;
   margin-bottom: 0;
 }
 
 [class^="itsfrills-"] p {
-  font-size: clamp(1.25rem, 3.5vw, 3rem);
+  font-size: clamp(1.25rem, 3.5vw, 2rem);
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 0;
 }
 
 .piccy {
-  border-radius: 1000px;
+  border-radius: 0.75rem;
   border: var(--border-width) solid var(--border-color);
   overflow: hidden;
   display: flex;
   place-items: center;
   padding: calc(var(--border-width) * 2);
   aspect-ratio: 1 / 1;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.piccy img {
+  border-radius: 0.5rem;
+  background-color: var(--main-color);
 }
 
 @media (min-width: 768px) {
   .piccy {
-    flex: 0 0 20vw;
+    border-radius: 1000px;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  .piccy img {
+    border-radius: 1000px;
   }
 }
 
-.piccy img {
-  border-radius: 1000px;
-  background-color: var(--main-color);
-}
+
 
 .charactersheet-stats {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  ;
-  gap: 2.5rem;
+  row-gap: 1rem;
+  column-gap: 2.5rem;
   padding-top: 2rem;
 }
 
 @media (min-width: 768px) {
   .charactersheet-stats {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    ;
   }
 }
 
