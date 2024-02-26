@@ -5,12 +5,14 @@
 
 <ol reversed class="listing unstyled">
 	{% for post in postslist | reverse %}
+	{% if not post.data.redirectTo %}
 	<li>
 		<time datetime="{{ post.date | htmlDateString }}"> {{ post.date | readableDate("dd LLL yyyy") }}</time>
 		<div>
 			<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
 		</div>
 	</li>
+	{% endif %}
 	{% endfor %}
 </ol>
 {% endblock %}
