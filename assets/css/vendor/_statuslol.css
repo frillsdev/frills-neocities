@@ -1,0 +1,20 @@
+.statuslol {
+  margin: 0 0 1rem 0;
+  font-size: 90%;
+  border-radius: 0.75rem !important;
+  padding: 0.5rem 0.75rem !important;
+}
+
+.statuslol_content {
+  justify-content: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.statuslol_content p {
+  margin: 0 !important;
+}
+
+.statuslol_emoji_container img {
+  width: auto !important;
+}
