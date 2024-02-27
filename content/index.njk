@@ -70,20 +70,21 @@ scripts: '
 				<p class="small">Follow me for updates!</p>
 			</div>
 		</article>
-		<div class="dashboard__item noscriptHide">
-			<script src="https://status.lol/frills.js?time&fluent&pretty"></script>
-			{# <script>document.querySelector('.statuslol_content').prepend(document.createElement('h2')))</script> #}
+		<div class="dashboard__item">
+			<div class="noscriptHide h-sm">
+			<script src="https://status.lol/frills.js?time&link&fluent&pretty"></script>
+			<script>const statuslolh=document.createElement("h2"),statuslolt=document.createTextNode("Latest status");statuslolh.appendChild(statuslolt),document.querySelector(".statuslol_content").prepend(statuslolh);</script>
+			</div>
 		</div>
 		<div class="dashboard__item">
 			{{ macro.callout(
 				element = 'article',
 				modifiers = 'callout--small noscriptHide',
 				emoji = '<span class="emoji" role="img" aria-label="Musical note">🎵</span>',
-				header = '<h2>Last played</h2>
-				<span><span id="lfmTime">right now</span></span>
-				',
+				header = '<h2>Last played</h2>',
 				body = '
 				<span id="lfmSong">No recently played song :(</span>
+				<p><span id="lfmTime">right now</span></p>
 				'
 			)}}
 		</div>
