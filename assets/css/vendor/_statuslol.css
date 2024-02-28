@@ -1,8 +1,7 @@
 .statuslol {
-  margin: 0 0 1rem 0;
-  font-size: 90%;
   border-radius: 0.75rem !important;
   padding: 0 !important;
+  gap: 0!important;
 }
 
 .statuslol_content {
@@ -24,11 +23,11 @@
 .statuslol_emoji_container {
   padding: 0.5rem 0.75rem !important;
   padding-right: 0 !important;
-  flex: 0 0 auto !important;
+  flex: 0 0 84px !important;
 }
 
 .statuslol_emoji_container img {
-  width: 54px !important;
+  width: auto !important;
 }
 
 .statuslol_content blockquote {
@@ -41,7 +40,6 @@
   margin: 0 !important;
 }
 
-#lfmTime,
 .statuslol_time small {
   opacity: 0.75!important;
   font-size: 0.7rem;
