@@ -28,7 +28,7 @@
     <item>
       <title>{{ post.date | readableDate("d LLL yyyy") }}</title>
       <link>{{ absolutePostUrl }}</link>
-      <description>{{ post.data.description | striptags(true) | escape | nl2br }}</description>
+      <description>{{ post.templateContent | striptags(true) | escape | nl2br  }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
