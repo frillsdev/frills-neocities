@@ -71,19 +71,20 @@ scripts: '
 			</div>
 		</article>
 		<div class="dashboard__item noscriptHide">
-			<script src="https://status.lol/frills.js?time&fluent&pretty"></script>
-			{# <script>document.querySelector('.statuslol_content').prepend(document.createElement('h2')))</script> #}
+			<div class="callout h-sm">
+				<header id="lolh"><h2>Latest status</h2></header>
+				<script src="https://status.lol/frills.js?time&link&fluent&pretty"></script><script>const lolh=document.querySelector("#lolh");document.querySelector(".statuslol_content").prepend(lolh);</script>
+			</div>
 		</div>
 		<div class="dashboard__item">
 			{{ macro.callout(
 				element = 'article',
 				modifiers = 'callout--small noscriptHide',
-				emoji = '<span class="emoji" role="img" aria-label="Musical note">🎵</span>',
-				header = '<h2>Last played</h2>
-				<span><span id="lfmTime">right now</span></span>
-				',
+				emoji = '<img src="/images/emoji/musical_notes.png" alt="Musical note emoji">',
+				header = '<h2>Last played</h2>',
 				body = '
 				<span id="lfmSong">No recently played song :(</span>
+				<small class="d-b subtext"><span id="lfmTime">right now</span></small>
 				'
 			)}}
 		</div>
@@ -91,10 +92,19 @@ scripts: '
 			{{ macro.callout(
 				element = 'article',
 				modifiers = 'callout--small',
-				emoji = '<span class="emoji" role="img" aria-label="Books">📚</span>',
+				emoji = '<img src="/images/emoji/books.png" alt="Books emoji">',
 				header = '<h2>Currently reading</h2>',
 				body = '
-				<a href="https://www.goodreads.com/book/show/76713323-empire-of-storms" class="hidden">Empire of Storms - Sarah J Maas</a>
+				<ol class="unstyled mb-0">
+					<li>
+						<a href="https://www.goodreads.com/book/show/76713323-empire-of-storms" class="hidden">Empire of Storms - Sarah J Maas</a>
+						<small class="d-b subtext">Started 14th Jan 2024</small>
+					</li>
+					<li>
+						<a href="https://www.goodreads.com/book/show/50263828-this-book-could-save-your-life" class="hidden">This Book Could Save Your Life: The Science of Living Longer Better</a>
+						<small class="d-b subtext">Started 21th Feb 2024</small>
+					</li>
+				</ol>
 				'
 			)}}
 		</div>

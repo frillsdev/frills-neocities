@@ -4,7 +4,7 @@
   font-size: 90%;
   border-radius: 0.75rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 @media (min-width: 768px) {
@@ -38,6 +38,8 @@
 .callout-emoji .emoji {
   font-size: 50px;
   line-height: 1.5;
+  width: 84px;
+  flex: 0 0 84px;
 }
 
 .callout-content header {
@@ -54,4 +56,9 @@
   margin: 0;
   display: inline;
   font-size: 111.111%;
+}
+
+small.subtext {
+  opacity: 0.75;
+  font-size: 0.7rem;
 }

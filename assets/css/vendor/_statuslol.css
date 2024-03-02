@@ -1,20 +1,46 @@
 .statuslol {
-  margin: 0 0 1rem 0;
-  font-size: 90%;
   border-radius: 0.75rem !important;
-  padding: 0.5rem 0.75rem !important;
+  padding: 0 !important;
+  gap: 0!important;
 }
 
 .statuslol_content {
   justify-content: center !important;
   display: flex !important;
   flex-direction: column !important;
+  padding: 0.5rem 0.75rem !important;
+  margin-top: 0 !important;
+}
+.statuslol_content * + h1,
+.statuslol_content * + h2,
+.statuslol_content * + h3,
+.statuslol_content * + h4,
+.statuslol_content * + h5,
+.statuslol_content * + h6{
+  padding: 0.5rem 0 0 0;
+}
+
+.statuslol_emoji_container {
+  padding: 0.5rem 0.75rem !important;
+  padding-right: 0 !important;
+  flex: 0 0 84px !important;
+}
+
+.statuslol_emoji_container img {
+  width: auto !important;
+}
+
+.statuslol_content blockquote {
+  border-color: currentColor;
+  color: currentColor;
+  padding-right: 1rem;
 }
 
 .statuslol_content p {
   margin: 0 !important;
 }
 
-.statuslol_emoji_container img {
-  width: auto !important;
+.statuslol_time small {
+  opacity: 0.75!important;
+  font-size: 0.7rem;
 }
