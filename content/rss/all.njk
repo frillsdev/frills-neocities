@@ -31,15 +31,24 @@
       {%- if post.data.title|length %}
       <title>{{ post.data.title }}</title>
       {%- else %}
-      <title>{{ post.date | readableDate("d LLL yyyy") }}</title>
+      <title>
+        {%- if post.data.tags and post.data.tags.includes('changelog') -%}
+        Changelog –
+        {% endif -%}
+        {{ post.date | readableDate("d LLL yyyy") }}
+      </title>
       {%- endif %}
       {%- if post.data.tags == 'bookmarks' %}
       <link>{{ post.data.url }}</link>
       {%- else %}
       <link>{{ absolutePostUrl }}</link>
       {%- endif %}
-      {%- if post.data.description %}
+      {%- if post.data.tags and post.data.tags.includes('changelog') -%}
+      <description>{{ post.templateContent | striptags(true) | escape | nl2br  }}</description>
+      {% else %}
+        {%- if post.data.description %}
       <description>{{ post.data.description | striptags(true) | escape | nl2br }}</description>
+        {% endif -%}
       {% endif -%}
       {%- if post.data.updated %}
       <pubDate>{{ post.data.updated | dateToRfc822 }}</pubDate>

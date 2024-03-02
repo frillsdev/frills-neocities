@@ -26,7 +26,7 @@
     {%- for post in collections.changelog | reverse %}
     {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
     <item>
-      <title>{{ post.date | readableDate("d LLL yyyy") }}</title>
+      <title>Changelog – {{ post.date | readableDate("d LLL yyyy") }}</title>
       <link>{{ absolutePostUrl }}</link>
       <description>{{ post.templateContent | striptags(true) | escape | nl2br  }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
