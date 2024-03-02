@@ -41,7 +41,7 @@
       <description>{{ post.data.description }}</description>
       {% endif %}
       {%- if post.data.tags and ((post.data.tags).includes('posts') or (post.data.tags).includes('changelog'))  %}
-      <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+      <content:encoded>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content:encoded>
       {% endif -%}
       {%- if post.data.updated %}
       <pubDate>{{ post.data.updated | dateToRfc822 }}</pubDate>
