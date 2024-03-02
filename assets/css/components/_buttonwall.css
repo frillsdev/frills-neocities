@@ -38,10 +38,10 @@
 }
 
 .buttonwall__image img {
-    display: block;
-    width: 88px;
-    height: 31px;
-    image-rendering: pixelated;
+  display: block;
+  width: 88px;
+  height: 31px;
+  image-rendering: pixelated;
 }
 
 .buttonwall__item a {
@@ -54,7 +54,23 @@
   text-decoration: none;
   font-weight: 700;
   font-size: 12px;
-  line-height: 1.1
+  line-height: 1.1;
+  position: relative;
+  padding: 2px;
+}
+
+.buttonwall__item a::before {
+  content: '';
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: soft-light;
 }
 
 .buttonwall__item a:active,
