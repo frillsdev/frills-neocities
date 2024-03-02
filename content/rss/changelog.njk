@@ -5,7 +5,7 @@
   "metadata": {
     "title": "Frills - Changelog",
     "subtitle": "Changelog and updates from Frills",
-    "language": "en",
+    "language": "en-GB",
     "url": "https://frills.dev/changelog",
     "author": {
       "name": "Frills",
@@ -30,7 +30,6 @@
       <link>{{ absolutePostUrl }}</link>
       <description>{{ post.data.description | striptags(true) | escape | nl2br }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
-      <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
     {%- endfor %}

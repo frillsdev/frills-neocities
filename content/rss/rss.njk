@@ -3,9 +3,9 @@
   "permalink": "rss.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
-    "title": "Frills - Blog",
-    "subtitle": "Personal and dev blog of Frills",
-    "language": "en",
+    "title": "Frills - Blog & experiments",
+    "subtitle": "Personal blog and experiments from Frills",
+    "language": "en-GB",
     "url": "https://frills.dev/blog",
     "author": {
       "name": "Frills",
@@ -23,8 +23,9 @@
     <atom:link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
     <description>{{ metadata.subtitle }}</description>
     <language>{{ metadata.language }}</language>
-    {%- for post in collections.posts | reverse %}
+    {%- for post in collections.all | reverse %}
     {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+    {% if post.data.tags and (post.data.tags.includes('posts') or post.data.tags.includes('experiments')) %}
     <item>
       <title>{{ post.data.title }}</title>
       <link>{{ absolutePostUrl }}</link>
@@ -36,9 +37,9 @@
       {% else %}
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       {% endif %}
-      <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
+    {% endif %}
     {%- endfor %}
-  </channel>
+    </channel>
 </rss>
