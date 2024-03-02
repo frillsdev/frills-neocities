@@ -29,7 +29,7 @@
       <title>{{ post.data.title }}</title>
       <link>{{ absolutePostUrl }}</link>
       {% if post.data.description %}
-      <description>{{ post.data.description | safe }}</description>
+      <description>{{ post.data.description | striptags(true) | escape | nl2br }}</description>
       {% endif %}
       {% if post.data.updated %}
       <pubDate>{{ post.data.updated | dateToRfc822 }}</pubDate>
