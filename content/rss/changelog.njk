@@ -28,7 +28,7 @@
     <item>
       <title>{{ post.date | readableDate("d LLL yyyy") }}</title>
       <link>{{ absolutePostUrl }}</link>
-      <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+      <description>{{ post.templateContent | safe }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ absolutePostUrl }}</guid>

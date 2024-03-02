@@ -29,10 +29,9 @@
       <title>{{ post.data.title }}</title>
       <link>{{ absolutePostUrl }}</link>
       {% if post.data.description %}
-      <description>{{ post.data.description }}</description>
+      <description>{{ post.data.description | safe }}</description>
       {% endif %}
-      <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
-       {% if post.data.updated %}
+      {% if post.data.updated %}
       <pubDate>{{ post.data.updated | dateToRfc822 }}</pubDate>
       {% else %}
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>

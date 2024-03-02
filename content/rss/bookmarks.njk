@@ -29,7 +29,7 @@
       <title>{{ post.data.title }}</title>
       <link>{{ post.data.url }}</link>
       {% if post.data.description %}
-      <description>{{ post.data.description }}</description>
+      <description>{{ post.data.description | safe }}</description>
       {% endif %}
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <guid>{{ post.data.url }}</guid>

@@ -23,6 +23,7 @@
     <atom:link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
     <description>{{ metadata.subtitle }}</description>
     <language>{{ metadata.language }}</language>
+    <ttl>1440</ttl>
     {%- for post in collections.all | reverse %}
     {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
     {%- if post.data.rss %}
@@ -38,11 +39,8 @@
       <link>{{ absolutePostUrl }}</link>
       {%- endif %}
       {% if post.data.description %}
-      <description>{{ post.data.description }}</description>
+      <description>{{ post.data.description | safe }}</description>
       {% endif %}
-      {%- if post.data.tags and ((post.data.tags).includes('posts') or (post.data.tags).includes('changelog'))  %}
-      <content:encoded>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content:encoded>
-      {% endif -%}
       {%- if post.data.updated %}
       <pubDate>{{ post.data.updated | dateToRfc822 }}</pubDate>
       {%- else %}
