@@ -15,6 +15,7 @@
 }
 ---
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="/css/xml.css"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ metadata.title }}</title>
@@ -36,12 +37,17 @@
       {%- else %}
       <link>{{ absolutePostUrl }}</link>
       {%- endif %}
+      {% if post.data.description %}
+      <description>{{ post.data.description }}</description>
+      {% endif %}
+      {%- if post.data.tags and ((post.data.tags).includes('posts') or (post.data.tags).includes('changelog'))  %}
+      <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+      {% endif -%}
       {%- if post.data.updated %}
       <pubDate>{{ post.data.updated | dateToRfc822 }}</pubDate>
       {%- else %}
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       {%- endif %}
-      <dc:creator>{{ metadata.author.name }}</dc:creator>
       {%- if post.data.tags == 'bookmarks' %}
       <guid>{{ post.data.url }}</guid>
       {%- else %}

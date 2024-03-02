@@ -1,12 +1,12 @@
 ---json
 {
-  "permalink": "experiments.xml",
+  "permalink": "bookmarks.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
-    "title": "Frills - Experiments",
-    "subtitle": "Fun experiments by Frills",
+    "title": "Frills - Bookmarks",
+    "subtitle": "Bookmarked links from Frills",
     "language": "en",
-    "url": "https://frills.dev/experiments",
+    "url": "https://frills.dev/bookmarks",
     "author": {
       "name": "Frills",
       "email": "fri11s@proton.me"
@@ -15,6 +15,7 @@
 }
 ---
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="/css/xml.css"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ metadata.title }}</title>
@@ -22,14 +23,16 @@
     <atom:link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
     <description>{{ metadata.subtitle }}</description>
     <language>{{ metadata.language }}</language>
-    {%- for post in collections.experiments | reverse %}
+    {%- for post in collections.bookmarks | reverse %}
     {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
     <item>
       <title>{{ post.data.title }}</title>
-      <link>{{ absolutePostUrl }}</link>
+      <link>{{ post.data.url }}</link>
+      {% if post.data.description %}
+      <description>{{ post.data.description }}</description>
+      {% endif %}
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
-      <dc:creator>{{ metadata.author.name }}</dc:creator>
-      <guid>{{ absolutePostUrl }}</guid>
+      <guid>{{ post.data.url }}</guid>
     </item>
     {%- endfor %}
   </channel>

@@ -1,0 +1,40 @@
+* {
+    display: block;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+channel {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+channel>title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+item {
+    background: peachpuff;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin: 15px 0 30px 0;
+}
+
+item title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+item content {
+    max-width: 100%;
+    max-height: 300px;
+    overflow: auto;
+    font-family: monospace;
+    padding: 1rem;
+    margin: 1rem -1rem;
+    background: rgba(255,255,255,0.3)
+}

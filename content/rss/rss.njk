@@ -6,7 +6,7 @@
     "title": "Frills - Blog",
     "subtitle": "Personal and dev blog of Frills",
     "language": "en",
-    "url": "https://frills.dev/",
+    "url": "https://frills.dev/blog",
     "author": {
       "name": "Frills",
       "email": "fri11s@proton.me"
@@ -15,6 +15,7 @@
 }
 ---
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="/css/xml.css"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ metadata.title }}</title>
@@ -27,7 +28,10 @@
     <item>
       <title>{{ post.data.title }}</title>
       <link>{{ absolutePostUrl }}</link>
-      <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+      {% if post.data.description %}
+      <description>{{ post.data.description }}</description>
+      {% endif %}
+      <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
        {% if post.data.updated %}
       <pubDate>{{ post.data.updated | dateToRfc822 }}</pubDate>
       {% else %}
