@@ -2,41 +2,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if redirectTo %}(Redirecting) {%endif%}{%if title %}{{ title | safe}} -{% endif %} {{ metadata.title }}</title>
+    <meta name="description" content="{% if description %}{{ description | safe}}{% else %}{{metadata.description}}{% endif %}">
     {#- Redirect -#}
     {%- if redirectTo -%}
     <script>location = '{{redirectTo}}';</script>
     <meta http-equiv="refresh" content="0; url={{metadata.url}}{{redirectTo}}" />
     <link rel="canonical" href="{{metadata.url}}{{redirectTo}}" />
     <meta name="robots" content="noindex" />
-    {%- else -%}
-    <link rel="canonical" href="https://ohhelloana.blog/">
-    {%- endif -%}
-    <meta name="description" content="{{ description or metadata.description }}">
-    {#- RSS Feeds -#}
-    <link rel="alternate" type="application/rss+xml" title="Frills" href="https://frills.dev/all.xml">
-    <link rel="alternate" type="application/rss+xml" title="Frills - Blog & experiments" href="https://frills.dev/rss.xml">
-    <link rel="alternate" type="application/rss+xml" title="Frills - Bookmarks" href="https://frills.dev/bookmarks.xml">
-    <link rel="alternate" type="application/rss+xml" title="Frills - Changelog" href="https://frills.dev/changelog.xml">
-    {#- Places I claim on the internet -#}
+    {%- else %}
+    <link rel="canonical" href="{{metadata.url}}{{page.url}}">
+    {%- endif %}
+    {# RSS Feeds #}
+    <link rel="alternate" type="application/rss+xml" title="Frills" href="{{metadata.url}}/all.xml">
+    <link rel="alternate" type="application/rss+xml" title="Frills - Blog & experiments" href="{{metadata.url}}/rss.xml">
+    <link rel="alternate" type="application/rss+xml" title="Frills - Bookmarks" href="{{metadata.url}}/bookmarks.xml">
+    <link rel="alternate" type="application/rss+xml" title="Frills - Changelog" href="{{metadata.url}}/changelog.xml">
+    {# Places I claim on the internet #}
     <link rel="me" href="https://indieweb.social/@frills">
     <link rel="me" href="https://social.lol/@frills">
     <link rel="me" href="https://frills.omg.lol">
-    {#- OpenGraph -#}
+    {# OpenGraph #}
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{metadata.url}}{{page.url}}">
-    <meta name="description" content="{% if page.description %}{{ page.description | safe}}{% else %}{{metadata.description}}{% endif %}">
     <meta property="og:image" content="https://dynamic-og-image-generator.vercel.app//api/generate?title={{ title | safe }}&author={{ metadata.author.name }}&avatar={{ metadata.avatar }}&websiteUrl={{ metadata.url }}&theme=shadesOfPurple" />
-    <meta property="og:image:alt" content="Page image for {{metadata.author.name}}">
-    {# Favicon -#}
+    {# Favicon #}
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    {# Style -#}
+    {# Style #}
     <link href="/css/main.css?nocache=beep" rel="stylesheet">
-    {% if style -%}
+    {%- if style -%}
     <style>{{ style | safe }}</style>
     {%- endif %}
     {# Font -#}
-    <link rel="preload" as="font" href="/fonts/atkinson-hyperlegible/regular.woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/atkinson-hyperlegible/regular.woff2">
     <noscript><link href="/css/noscript.css?nocache=beep" rel="stylesheet"></noscript>
 </head>
