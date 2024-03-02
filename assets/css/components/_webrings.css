@@ -78,6 +78,7 @@
   display: inline-block;
 }
 
-.webring--bukmarkclub {
+.webring--bukmarkclub,
+.webring--250kb {
   padding: 0 10px;
 }

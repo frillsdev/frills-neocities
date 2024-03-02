@@ -2,3 +2,24 @@ img {
   font-size: 10px;
   max-width: 100%;
 }
+
+img.mw-100 {
+  max-width: 100%;
+}
+
+img.mw-90 {
+  max-width: 90%;
+}
+
+img.rounded {
+  border-radius: 1rem;
+}
+
+img.round {
+  border-radius: 50%;
+}
+
+img.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
