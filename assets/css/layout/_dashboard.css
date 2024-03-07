@@ -59,50 +59,6 @@
   display: flex;
 }
 
-.dashboard__item--neocities {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  background-color: var(--accent);
-  position: relative;
-  border-radius: 0.75rem;
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.dashboard__item--neocities p.small {
-  margin: 0;
-  font-size: 0.6rem;
-  line-height: 1;
-  color: var(--accentcontrast);
-}
-
-.dashboard__item--neocities img {
-  max-height: 50px;
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
-}
-
-.dashboard__item--neocities h2 {
-  margin-bottom: 0.2rem;
-  line-height: 1;
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.dashboard__item--neocities a {
-  color: var(--accentcontrast);
-}
-
-.dashboard__item--neocities a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
 .dashboard__item--gallery,
 .gallery {
   image-rendering: crisp-edges;

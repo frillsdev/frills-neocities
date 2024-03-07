@@ -241,3 +241,38 @@
   background-color: Plum;
   transform: translate(-50%, -50%);
 }
+
+.callout--neocities {
+  background-color: var(--accent);
+  color: var(--accentcontrast);
+  align-items: center;
+  position: relative;
+}
+
+.callout--neocities a {
+  color: var(--accentcontrast);
+}
+
+.callout--neocities a:hover,
+.callout--neocities a:focus,
+.callout--neocities a:active {
+  color: var(--accentcontrast);
+}
+
+.callout--neocities a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#omglolh {
+  display: none;
+  padding-bottom: 5px;
+}
+
+.statuslol_content #omglolh {
+  display: block;
+}

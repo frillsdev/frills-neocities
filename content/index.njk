@@ -63,17 +63,19 @@ scripts: '
 			') }}
 	</div> #}
 	<div class="av-br">
-		<article class="dashboard__item dashboard__item--neocities bg-wiggly">
-			<img src="/images/neocities.svg" alt="Neocities cat holding a paintbrush and spanner">
-			<div>
-				<h2><a href="https://neocities.org/site/fri11s">Neocities profile</a></h2>
-				<p class="small">Follow me for updates!</p>
-			</div>
+		<article class="dashboard__item">
+		{{ macro.callout(
+			element = 'article',
+			modifiers = 'callout--small callout--neocities bg-wiggly',
+			emoji = '<img src="/images/neomoji.png" alt="Cat emoji holding a paintbrush and spanner">',
+			header = '<h2><a href="https://neocities.org/site/fri11s" class="">Neocities profile</a></h2>',
+			body = '<p class="small">Follow me for updates!</p>'
+		)}}
 		</article>
 		<div class="dashboard__item noscriptHide">
 			<div class="callout h-sm">
-				<header id="lolh"><h2>Latest status</h2></header>
-				<script src="https://status.lol/frills.js?time&link&fluent&pretty"></script><script>const lolh=document.querySelector("#lolh");document.querySelector(".statuslol_content").prepend(lolh);</script>
+				<header id="omglolh"><h2>Latest status</h2></header>
+				<script src="https://status.lol/frills.js?time&link&fluent&pretty"></script><script>const omglolh=document.querySelector("#omglolh");document.querySelector(".statuslol_content").prepend(omglolh);</script>
 			</div>
 		</div>
 		<div class="dashboard__item">
