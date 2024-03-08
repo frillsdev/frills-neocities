@@ -67,9 +67,15 @@
   gap: 0.5rem;
 }
 
+.dashboard__item--gallery figure,
+.gallery figure {
+  aspect-ratio: 1 / 1;
+}
+
 .dashboard__item--gallery img,
 .gallery img {
-  height: auto;
+  object-fit: cover;
+  height: 100%;
   width: 100%;
   border-radius: 0.75rem;
 }
