@@ -43,16 +43,14 @@
       {%- else %}
       <link>{{ absolutePostUrl }}</link>
       {%- endif %}
-      {%- if post.data.tags and post.data.tags.includes('changelog') -%}
-      <description>{{ post.templateContent | striptags(true) | escape | nl2br  }}</description>
-      {% else %}
-        {%- if post.data.description %}
-      <description>{{ post.data.description | striptags(true) | escape | nl2br }}</description>
-        {% endif -%}
-      {% endif -%}
-      {%- if post.data.updated %}
+      {%- if post.data.tags and post.data.tags.includes('changelog') %}
+      <description>{{ post.templateContent | striptags(true) | escape }}</description>
+      {% else %}{%- if post.data.description %}
+      <description>{{ post.data.description | striptags(true) | escape }}</description>
+      {% endif -%}{% endif -%}
+      {%- if post.data.updated -%}
       <pubDate>{{ post.data.updated | dateToRfc822 }}</pubDate>
-      {%- else %}
+      {%- else -%}
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       {%- endif %}
       {%- if post.data.tags == 'bookmarks' %}
