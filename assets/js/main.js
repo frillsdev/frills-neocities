@@ -68,11 +68,14 @@ const buttonSpeak = (button) => {
     };
 }
 
+function speakButton() {
+    document.querySelectorAll('button[data-speak]').forEach((button) => buttonSpeak(button))
+}
+
 // Load when everything has loaded
 window.addEventListener('load', function () {
     // notification(4, 'New!');
     colorScheme();
-    sparkles()
-
-    document.querySelectorAll('button[data-speak]').forEach((button) => buttonSpeak(button))
+    sparkles();
+    speakButton();
 }, true);

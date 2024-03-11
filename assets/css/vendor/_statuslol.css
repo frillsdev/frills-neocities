@@ -4,6 +4,10 @@
   gap: 0!important;
 }
 
+.statuslol_container {
+  width: 100%;
+}
+
 .statuslol_content {
   justify-content: center !important;
   display: flex !important;
