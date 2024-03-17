@@ -85,10 +85,7 @@
   background-color: var(--bodybg);
   padding: 30px 6px 12px 6px;
   border-radius: 0 0 10px 10px;
-  --mask:
-    radial-gradient(15.37px at 50% 21.60px, #000 99%, #0000 101%) 50% 0/48px 100%,
-    radial-gradient(15.37px at 50% -9.6px, #0000 99%, #000 101%) calc(50% - 24px) 12px/48px 100% repeat-x;
-  mask: var(--mask);
+  mask: var(--wiggleup);
   font-size: 75%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -106,10 +103,7 @@
 }
 
 .avatar img {
-  --mask:
-    radial-gradient(15.37px at 50% calc(100% - 21.60px), #000 99%, #0000 101%) calc(50% - 24px) 0/48px 100%,
-    radial-gradient(15.37px at 50% calc(100% + 9.60px), #0000 99%, #000 101%) 50% calc(100% - 12px)/48px 100% repeat-x;
-  mask: var(--mask);
+  mask: var(--wiggledown);
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 100px 100px 0 0;
