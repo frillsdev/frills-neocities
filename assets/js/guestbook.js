@@ -141,7 +141,8 @@ else {c_submitButton = document.createElement('button')}
 // Form submission feedback
 c_form.addEventListener('submit', function(){
     alert('Thank you for your comment in my guestbook! It\'s been submitted for moderation');
-    c_form.reset(); 
+    c_form.submit(); 
+    return true;
 }); 
 
 // Add invisible page input to document
