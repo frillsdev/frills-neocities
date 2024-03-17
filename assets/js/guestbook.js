@@ -47,11 +47,11 @@ const s_includeUrlParameters = false; // Makes new comment sections on pages wit
 const s_wordFilterOn = true; // True for on, false for off
 const s_filterReplacement = '****'; // Change what filtered words are censored with (**** is the default)
 const s_filteredWords = [ // Add words to filter by putting them in quotes and separating with commas (ie. 'heck', 'dang')
-    'cunt', 'spindogs'
+    'cunt'
 ]
 
 // Text - Change what messages/text appear on the form and in the comments section (Mostly self explanatory)
-const s_widgetTitle = 'Leave a message after the tone';
+const s_widgetTitle = 'Guestbook comments';
 const s_nameFieldLabel = 'Name';
 const s_websiteFieldLabel = 'Website (Optional)';
 const s_textFieldLabel = 'Message';
@@ -87,7 +87,7 @@ const v_mainHtml = `
     <div id="c_container">${s_loadingText}</div>
 `;
 const v_formHtml = `
-    <!--<h2 id="c_widgetTitle">${s_widgetTitle}</h2>-->
+    <h2 id="c_widgetTitle" class="visually-hidden">${s_widgetTitle}</h2>
 
     <div class="guestbook__form">
         <div class="guestbook__fields">
@@ -137,6 +137,12 @@ if (s_wordFilterOn) {
 let c_submitButton;
 if (s_commentsOpen) {c_submitButton = document.getElementById('c_submitButton')}
 else {c_submitButton = document.createElement('button')}
+
+// Form submission feedback
+c_form.addEventListener('submit', function(){
+    alert('Thank you for your comment in my guestbook! It\'s been submitted for moderation');
+    c_form.reset(); 
+}); 
 
 // Add invisible page input to document
 let v_pagePath = window.location.pathname;
