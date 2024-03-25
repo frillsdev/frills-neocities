@@ -46,5 +46,6 @@ hr, .hr {
   display: block;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid var(--separator)
+  border-bottom: 2px solid var(--separator);
+  margin: 2rem 0;
 }
