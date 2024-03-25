@@ -7,7 +7,7 @@
 	{% for post in postslist | reverse %}
 	{% if not post.data.redirectTo %}
 	<li>
-		<time datetime="{{ post.date | htmlDateString }}"> {{ post.date | readableDate("dd LLL yyyy") }}</time>
+		<time datetime="{{ post.date | htmlDateString }}" title="{{ post.date | readableDate("dd LLL yyyy HH:mm") }}"> {{ post.date | readableDate("dd LLL yyyy") }}</time>
 		<div>
 			<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title | safe }}{% else %}{{ post.url }}{% endif %}</a>
 		</div>
