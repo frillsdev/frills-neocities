@@ -1,6 +1,7 @@
 ---
 title: Porridge and tea
 description: What I eat and think about breakfast
+date: 2024-03-26 13:05:00
 tags:
 - personal
 - recipe
