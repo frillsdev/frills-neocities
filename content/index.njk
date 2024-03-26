@@ -2,6 +2,7 @@
 title: Home
 rss: false
 scripts: '
+	<link href="https://github.com/cupoftegan" rel="me">
 	<script>
 	const n=new Date,h=n.getHours(),d=n.toLocaleTimeString("en-GB",{timeZone:"Europe/London",hour:"2-digit",hour12:!0,minute:"2-digit"});e=d.replace(/\s/g,""),document.querySelector("#localTime").innerHTML=e;const dhr=n.toLocaleTimeString("en-GB",{timeZone:"Europe/London",hour:"2-digit"});let st,stT;dhr>=0&&dhr<7?(st="offline",stT="Sleepin’"):dhr>=7&&dhr<9?(st="away",stT="Gettin’ ready!"):dhr>=9&&dhr<17?(st="donotdisturb",stT="Workin’"):dhr>=17&&dhr<23?(st="online",stT="Online now!"):dhr>=23&&dhr<24&&(st="offline",stT="Sleepin’"),document.querySelector("#status").dataset.status=st,document.querySelector("#statusText").innerText=stT;let m;h>=0&&h<12?m="Good morning":h>=12&&h<17?m="Good afternoon":h>=17&&h<24&&(m="Good evening"),document.querySelector("#greetingText").innerHTML=m;
 	</script>
