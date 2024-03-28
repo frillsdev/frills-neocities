@@ -49,6 +49,18 @@ scripts: '
 		<p>I am Frills<span class="noscriptHide"> (<button data-speak="Frills" type="button" class="dotted" aria-label="Say 'Frills'">/frɪlz/</button> 🔊)</span>, the proud webmistress of this website in this wondrous wifi world, learn more <a href="/about">about me</a> or <a href="/colophon">about this website</a>.</p>
 		<p>Here you will find my latest <a href="/blog">thoughts</a> and <a href="/experiments">experiments</a>, <a href="/links">portals to other websites</a>, and <a href="/guestbook">messages</a> left by other wanderers.</p>
 	</div>
+	<article class="dashboard__item dashboard__item--center noscriptHide">
+		<h2 class="visually-hidden">Website carbon</h2>
+		<div id="wcb" class="carbonbadge wcb-d"></div>
+	</article>
+	<div class="dashboard__item">
+		<h2 class="visually-hidden">Shrines</h2>
+		<a href="/shrine/orla" class="gallery" aria-label="Orla (my dog) shrine">
+			<img src="/images/shrine/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
+			<img src="/images/shrine/orla/orla14.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
+			<img src="/images/shrine/orla/orla15.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
+		</a>
+	</div>
 	{# <div class="dashboard__item">
 		{{ macro.callout(
 				element = 'article',
@@ -82,7 +94,7 @@ scripts: '
 			{{ macro.callout(
 				element = 'article',
 				modifiers = 'callout--small noscriptHide',
-				emoji = '<img src="/images/emoji/musical_notes.png" alt="Musical note emoji">',
+				emoji = '<img src="/images/emoji/headphone_3d.png" alt="Musical note emoji">',
 				header = '<h2>Last played</h2>',
 				body = '
 				<span id="lfmSong">No recently played song :(</span>
@@ -94,7 +106,7 @@ scripts: '
 			{{ macro.callout(
 				element = 'article',
 				modifiers = 'callout--small',
-				emoji = '<img src="/images/emoji/books.png" alt="Books emoji">',
+				emoji = '<img src="/images/emoji/notebook_with_decorative_cover_3d.png" alt="Books emoji">',
 				header = '<h2>Currently reading</h2>',
 				body = '
 				<ol class="unstyled mb-0">
@@ -111,57 +123,59 @@ scripts: '
 			)}}
 		</div>
 		<div class="dashboard__item">
-			<h2 class="visually-hidden">Shrines</h2>
-			<a href="/shrine/orla" class="gallery" aria-label="Orla (my dog) shrine">
-				<img src="/images/shrine/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
-				<img src="/images/shrine/orla/orla14.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
-				<img src="/images/shrine/orla/orla15.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
-			</a>
+			{{ macro.callout(
+				element = 'article',
+				modifiers = 'callout--small',
+				emoji = '<img src="/images/emoji/joystick_3d.png" alt="">',
+				header = '<h2>Currently playing</h2>',
+				body = '
+				<ol class="unstyled mb-0">
+					<li>
+						<a href="https://www.goodreads.com/book/show/76713323-empire-of-storms" class="hidden">Stardew Valley</a>
+						<small class="d-b subtext">Teddi of Clover Farm</small>
+					</li>
+				</ol>
+				'
+			)}}
 		</div>
-		<article class="dashboard__item dashboard__item--center noscriptHide">
-			<h2 class="visually-hidden">Website carbon</h2>
-			<div id="wcb" class="carbonbadge wcb-d"></div>
-		</article>
 	</div>
-	<div class="av-br">
-		<article class="dashboard__item dashboard__item--card dashboard__item--latestposts">
-			<header>
-				<h2>Latest posts</h2>
-			</header>
-			{%- set latestBlog = collections.posts | reverse | first -%}
-			{%- set latestExperiment = collections.experiments | reverse | first -%}
-			{%- set latestBookmark = collections.bookmarks | reverse | first -%}
-			{%- set latestChangelog = collections.changelog | reverse | first -%}
-			<div class="h-sm">
-				<h3>📝 Blog</h3>
-				<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
-				<h3>🧪 Experiment</h3>
-				<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
-				<h3>🛠️ Changelog</h3>
-				<div class="description">
-					{{latestChangelog.content|safe}}
-				</div>
+	<article class="dashboard__item dashboard__item--card dashboard__item--latestposts">
+		<header>
+			<h2>Latest posts</h2>
+		</header>
+		{%- set latestBlog = collections.posts | reverse | first -%}
+		{%- set latestExperiment = collections.experiments | reverse | first -%}
+		{%- set latestBookmark = collections.bookmarks | reverse | first -%}
+		{%- set latestChangelog = collections.changelog | reverse | first -%}
+		<div class="h-sm">
+			<h3>📝 Blog</h3>
+			<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
+			<h3>🧪 Experiment</h3>
+			<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
+			<h3>🛠️ Changelog</h3>
+			<div class="description">
+				{{latestChangelog.content|safe}}
 			</div>
-		</article>
-		<article class="dashboard__item dashboard__item--card">
-			<div>
-				<h2 class="visually-hidden">RSS feeds</h2>
-				<ul class="unstyled inline small">
-					<li><a href="/all.xml" class="rss">All<span class="visually-hidden"> RSS feeds</span></a></li>
-					<li><a href="/rss.xml" class="rss">Blog<span class="visually-hidden"> RSS feed</span></a></li>
-					<li><a href="/bookmarks.xml" class="rss">Bookmarks<span class="visually-hidden"> RSS feed</span></a></li>
-					<li><a href="/changelog.xml" class="rss">Changelog<span class="visually-hidden"> RSS feed</span></a></li>
-				</ul>
-			</div>
-		</article>
-		<div class="dashboard__item">
-			<a href="https://www.codelikeagirl.com/"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPAgMAAAAOp6AcAAAACVBMVEXfOHf///8cGx0Yk1ajAAAAZUlEQVQY06WPsQ2AMAwEv3BS21K8jy2FPgVhLhqWyJS4oSFpEFeeTpYfYwGuPnHgxET+Iqmk5I3IFQUqzSwkO1cBUWU4TMg4pFnIKJuiY4uS3qULR/ncTNU1ZBHaLf/8c719LLgB7XE6FjMry00AAAAASUVORK5CYII=" alt="Code like a girl" width="80" height="15" class="pixelated"></a>
-			<img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAAXNSR0IArs4c6QAAAFFQTFRFKCgoPDg2UElFZlxUfG9kkoN0qJmEva6T1cSh69uy+/HHAAAAzCQd1l0O15khmJcaaJ1qRYWIsWKGAAAA+0k0/oAZ+r0vuLsmjsB8g6WY04ab+RL+6wAAABt0Uk5TAP//////////////////////////////////xGlyNQAAAJ5JREFUOI3N07EOgzAMBFBuZG+N4///0J5NDCQFpFYZOEEIGZ6OREzz4EwzhsbB15q3RzyLp3jMoD/lAJ57jwERHrdAhAM9juEFyJc6aE6wT7W5jyCiIDlehV5BgqobkW/oF+ojwSgotSH4wQQ5uWmIFsyxBQW1YYB217Bf6EGQ9HKyrAUJmtk5+LWH207u4MUR/33K194zwNH/8uB8AKLfSKW+l9mPAAAAAElFTkSuQmCC" alt="LGBTQIA+ Friendly" width="80" height="15" class="pixelated">
-			<img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAAAXNSR0IArs4c6QAAAO1JREFUSIljbF46g2EkARaydQY8ZKaiO+gDNsj/Jd/DDAwMGtk61HIKHcCNqVcYGBhYhmJEUQKYBtoB9AYUJWk4cHTPhzD275yIzEaWhXAd3fMxGWjqMQWxKkYzClMLprEMDAwsZOdDSJbAtB7NlVh9iBwWaA5CNpN4xQzYggCrMurEMBpAjlIGpMBGdhkaG9N9xIijmYxpBaZ2muTh/TsnovkKzWJkLppiYsTR1BDjBjhgQU6Z9Ae4chpWgNUDpBrLeLltNikuRAFDrh7eIP935FVLG+T/kqdziLZYKCqlBzb/kwfI9zDZSWNgAQCjEKqx3SeKrAAAAABJRU5ErkJggg==" alt="Trans rights" width="80" height="15" class="pixelated">
-			<img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAYAAABzyUiPAAAAAXNSR0IArs4c6QAAASxJREFUWIXtlzESgjAQRb8OB/AcVPTWljS2ahtLOg5hZ0mttjaW1PZWnsMbaMGEWTbLsETQEXkzDGR3k8CfHwgTY8wTI94EAJCt59++j59ke7wWAgLA7bLrdbIoThGu+p3jk9xPKQBg+uX7+HkCHlgeHk7ReTNrzNE8jQ0d0YFWAC4EjUsidSHcfb8oDylO2zwv9ZfG09RocRxYJxpneXg4ORuTcm0IkxxA8WBhkpdnGrPwNu1fN562RoPXO1Bayl1i3dDmQXj/pvF83CbhOFCDdZlEF+JqhKPO5OL4ONAXLwEBOEuVL9t3lzHFimSvm9DU8po241Mmxphntp5X9oHURdJXlsLdKLWBYe4DKxtpSp1ztPG/38aM6CkdGMVp75PZ358hEQDFT/GIHy+CbLl++5lT8QAAAABJRU5ErkJggg==" alt="Tea Powered" width="80" height="15" class="pixelated">
-			<a href="https://jigsaw.w3.org/css-validator/validator?uri={{ permalink | absoluteUrl(metadata.url) | encodeUrl}}"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1QYSEx41Z+WrXQAAAhBQTFRFAAAAAESKAESLAEWMAkWLAkaMA0aMBEWLBEaMBUaMBUeMBUeNB0iNCEmOCEuPCkuQDk6RD06REVCSEVGTE1KTFBQUGleXHFaWH1uZIFqYIVyZIl2aJF6bJl+bKioqK2SeLS0tLWWgLmWgL2afMGegMWegM2ihNTU1N2yjOW2lPDw8PHClPnGnQEBAQ3SpQ3WpRXaqR3irSkpKTExMTnytT09PUoCwWISyXYe1X4m1X4m2You2ZmZmZ4+5aGhoaJC6apG6b5W9cJW9cJa+cpi+dZm/dnZ2d5vBfJ7CfaDEgqPGg4ODhISEhKTGhKXHhqXHhqbHh4eHiqjKiqnJi6nJjKrKlpaWl7LPl7TQmLPQnAAAnQIBngMCngQCnwYDoAgEoAkEoQoFobrUornTo7rUpLvVpRIJpbzWp6enqBgMqKioqamprCEQrq6usCoVscbcsy4XtDIZt8vfuMreuczfu83gvc7gvc7hwcHBwdLiwdLjx9XlyNbmy2Ixy8vLzmg0z8/P0Gw20W020dHR0d3q0nA40t7q03I509/r1eDs19fX24FA29vb3IVC3YZD3+jx4eHh5ZdM5ubm6O/17KRS7e3t76pV8fHx8vLy9fj79/f39/r8+L5f+Pr8+fv8+fv9+sJh+vz9+/v7+/z9/MVi/Pz8/clk/f39/f3+/f7+/spl/v7+/v7//8tm/8xm////VM1bDQAAAWRJREFUOMtjsKEyYLBZT1UANlDNff16Ewsgz0oQCPTWTzC2m561fv06MgDEQFeVxesDROavnytoHuHMlLRcV8FIy44MA+fMgRpYxdKyPp2pbH05R+cafY15zeozVod1kW7glJzCZRADZ4t5rbdmdlzvIbE4lat6fUYuJDjAqhgYwAQDlMADJibEtEJduN5Sc76UqvRCJfu5snzBK7InIQwEGbSOAcrCCaYtWbe2Ly66FhaG61O4S3iK2PM5i+cmO7BGNkxFMRDhTJzmxectaIqNrodHyvrJ/MraK2UUBeauX7/aQHX5UjQXrluH35FL8qLSYqMbEbG8fr0Os/96F2YzENNJaNF6tDAkGIRLChIz29chGxjKWrO+kjG8LXz9GkP5utXr18/yISmWV3X3rkUxsENy4fqZ4v2lvJ5+bEE93j0NpoGUJOz161f6AgnflatDhPls566vkBN1W0SZgVTNy1QGAIC0hiM7IZxZAAAAAElFTkSuQmCC" alt="W3C CSS Validated" width="80" height="15" class="pixelated"></a>
-			<a href="https://validator.w3.org/nu/?doc={{ permalink | absoluteUrl(metadata.url) | encodeUrl}}"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAAHdElNRQfVBhUIOSEqXrltAAACEFBMVEUAAAAARIoARIsARYwCRYsCRowDRowERYsERowFRowFR4wFR40HSI0ISY4IS48KS5AOTpEPTpERUJIRUZMTUpMUFBQaV5ccVpYfW5kgWpghXJkiXZokXpsmX5sqKiorZJ4tLS0tZaAuZaAvZp8wZ6AxZ6AzaKE1NTU3bKM5baU8PDw8cKU+cadAQEBDdKlDdalFdqpHeKtKSkpMTExOfK1PT09SgLBYhLJdh7VfibVfibZii7ZmZmZnj7loaGhokLpqkbpvlb1wlb1wlr5ymL51mb92dnZ3m8F8nsJ9oMSCo8aDg4OEhISEpMaEpceGpceGpseHh4eKqMqKqcmLqcmMqsqWlpaXss+XtNCYs9CcAACdAgGeAwKeBAKfBgOgCASgCQShCgWhutSiudOjutSku9WlEgmlvNanp6eoGAyoqKipqamsIRCurq6wKhWxxtyzLhe0Mhm3y9+4yt65zN+7zeC9zuC9zuHBwcHB0uLB0uPH1eXI1ubLYjHLy8vOaDTPz8/QbDbRbTbR0dHR3erScDjS3urTcjnT3+vV4OzX19fbgUDb29vchULdhkPf6PHh4eHll0zm5ubo7/XspFLt7e3vqlXx8fHy8vL1+Pv39/f3+vz4vl/4+vz5+/z5+/36wmH6/P37+/v7/P38xWL8/Pz9yWT9/f39/f79/v7+ymX+/v7+/v//y2b/zGb///9UzVsNAAAAAWJLR0SuuWuTpwAAAXFJREFUOMtjsKEyYLBZT1UANlDNff16Ewsgz0oQCPTWTzC2m561fv06MgDEQFeVxesDROavnytoHuHMlLRcV8FIy44MA+fMgRpYxdKyPp2pbH05R+cafY15zeozVod1kW7glJzCZRADZ4t5rbdmdlzvIbE4lat6fUYuJDhAihhAiIGBAcRYByHBXCxgYkJMK9SF6y0150upSi9Usp8ryxe8InsSmoFgxLCOAWYghlnTlqxb2xcXXQsLw/Up3CU8Rez5nMVzkx1YIxumIhkIdg7EnThdOC0+b0FTbHQ9PFLWT+ZX1l4poygwd/361Qaqy5dicyHCyxhuXJIXlRYb3YiI5fXrdZj917swm4GYTkKL1uM2kAHiezSwpCAxs30dsoGhrDXrKxnD28LXrzGUr1u9fv0sH5JieVV371oUAzskF66fKd5fyuvpxxbU493TYBpIScJev36lL5DwXbk6RJjPdu76CjlRt0WUGUjVvExlAAC+JXiL+DgKGQAAAABJRU5ErkJggg==" alt="W3C HTML Validated" width="80" height="15" class="pixelated"></a>
 		</div>
+	</article>
+	<article class="dashboard__item dashboard__item--card">
+		<div>
+			<h2 class="visually-hidden">RSS feeds</h2>
+			<ul class="unstyled inline small">
+				<li><a href="/all.xml" class="rss">All<span class="visually-hidden"> RSS feeds</span></a></li>
+				<li><a href="/rss.xml" class="rss">Blog<span class="visually-hidden"> RSS feed</span></a></li>
+				<li><a href="/bookmarks.xml" class="rss">Bookmarks<span class="visually-hidden"> RSS feed</span></a></li>
+				<li><a href="/changelog.xml" class="rss">Changelog<span class="visually-hidden"> RSS feed</span></a></li>
+			</ul>
+		</div>
+	</article>
+	<div class="dashboard__item">
+		<a href="https://www.codelikeagirl.com/"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPAgMAAAAOp6AcAAAACVBMVEXfOHf///8cGx0Yk1ajAAAAZUlEQVQY06WPsQ2AMAwEv3BS21K8jy2FPgVhLhqWyJS4oSFpEFeeTpYfYwGuPnHgxET+Iqmk5I3IFQUqzSwkO1cBUWU4TMg4pFnIKJuiY4uS3qULR/ncTNU1ZBHaLf/8c719LLgB7XE6FjMry00AAAAASUVORK5CYII=" alt="Code like a girl" width="80" height="15" class="pixelated"></a>
+		<img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAAXNSR0IArs4c6QAAAFFQTFRFKCgoPDg2UElFZlxUfG9kkoN0qJmEva6T1cSh69uy+/HHAAAAzCQd1l0O15khmJcaaJ1qRYWIsWKGAAAA+0k0/oAZ+r0vuLsmjsB8g6WY04ab+RL+6wAAABt0Uk5TAP//////////////////////////////////xGlyNQAAAJ5JREFUOI3N07EOgzAMBFBuZG+N4///0J5NDCQFpFYZOEEIGZ6OREzz4EwzhsbB15q3RzyLp3jMoD/lAJ57jwERHrdAhAM9juEFyJc6aE6wT7W5jyCiIDlehV5BgqobkW/oF+ojwSgotSH4wQQ5uWmIFsyxBQW1YYB217Bf6EGQ9HKyrAUJmtk5+LWH207u4MUR/33K194zwNH/8uB8AKLfSKW+l9mPAAAAAElFTkSuQmCC" alt="LGBTQIA+ Friendly" width="80" height="15" class="pixelated">
+		<img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAAAXNSR0IArs4c6QAAAO1JREFUSIljbF46g2EkARaydQY8ZKaiO+gDNsj/Jd/DDAwMGtk61HIKHcCNqVcYGBhYhmJEUQKYBtoB9AYUJWk4cHTPhzD275yIzEaWhXAd3fMxGWjqMQWxKkYzClMLprEMDAwsZOdDSJbAtB7NlVh9iBwWaA5CNpN4xQzYggCrMurEMBpAjlIGpMBGdhkaG9N9xIijmYxpBaZ2muTh/TsnovkKzWJkLppiYsTR1BDjBjhgQU6Z9Ae4chpWgNUDpBrLeLltNikuRAFDrh7eIP935FVLG+T/kqdziLZYKCqlBzb/kwfI9zDZSWNgAQCjEKqx3SeKrAAAAABJRU5ErkJggg==" alt="Trans rights" width="80" height="15" class="pixelated">
+		<img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAYAAABzyUiPAAAAAXNSR0IArs4c6QAAASxJREFUWIXtlzESgjAQRb8OB/AcVPTWljS2ahtLOg5hZ0mttjaW1PZWnsMbaMGEWTbLsETQEXkzDGR3k8CfHwgTY8wTI94EAJCt59++j59ke7wWAgLA7bLrdbIoThGu+p3jk9xPKQBg+uX7+HkCHlgeHk7ReTNrzNE8jQ0d0YFWAC4EjUsidSHcfb8oDylO2zwv9ZfG09RocRxYJxpneXg4ORuTcm0IkxxA8WBhkpdnGrPwNu1fN562RoPXO1Bayl1i3dDmQXj/pvF83CbhOFCDdZlEF+JqhKPO5OL4ONAXLwEBOEuVL9t3lzHFimSvm9DU8po241Mmxphntp5X9oHURdJXlsLdKLWBYe4DKxtpSp1ztPG/38aM6CkdGMVp75PZ358hEQDFT/GIHy+CbLl++5lT8QAAAABJRU5ErkJggg==" alt="Tea Powered" width="80" height="15" class="pixelated">
+		<a href="https://jigsaw.w3.org/css-validator/validator?uri={{ permalink | absoluteUrl(metadata.url) | encodeUrl}}"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1QYSEx41Z+WrXQAAAhBQTFRFAAAAAESKAESLAEWMAkWLAkaMA0aMBEWLBEaMBUaMBUeMBUeNB0iNCEmOCEuPCkuQDk6RD06REVCSEVGTE1KTFBQUGleXHFaWH1uZIFqYIVyZIl2aJF6bJl+bKioqK2SeLS0tLWWgLmWgL2afMGegMWegM2ihNTU1N2yjOW2lPDw8PHClPnGnQEBAQ3SpQ3WpRXaqR3irSkpKTExMTnytT09PUoCwWISyXYe1X4m1X4m2You2ZmZmZ4+5aGhoaJC6apG6b5W9cJW9cJa+cpi+dZm/dnZ2d5vBfJ7CfaDEgqPGg4ODhISEhKTGhKXHhqXHhqbHh4eHiqjKiqnJi6nJjKrKlpaWl7LPl7TQmLPQnAAAnQIBngMCngQCnwYDoAgEoAkEoQoFobrUornTo7rUpLvVpRIJpbzWp6enqBgMqKioqamprCEQrq6usCoVscbcsy4XtDIZt8vfuMreuczfu83gvc7gvc7hwcHBwdLiwdLjx9XlyNbmy2Ixy8vLzmg0z8/P0Gw20W020dHR0d3q0nA40t7q03I509/r1eDs19fX24FA29vb3IVC3YZD3+jx4eHh5ZdM5ubm6O/17KRS7e3t76pV8fHx8vLy9fj79/f39/r8+L5f+Pr8+fv8+fv9+sJh+vz9+/v7+/z9/MVi/Pz8/clk/f39/f3+/f7+/spl/v7+/v7//8tm/8xm////VM1bDQAAAWRJREFUOMtjsKEyYLBZT1UANlDNff16Ewsgz0oQCPTWTzC2m561fv06MgDEQFeVxesDROavnytoHuHMlLRcV8FIy44MA+fMgRpYxdKyPp2pbH05R+cafY15zeozVod1kW7glJzCZRADZ4t5rbdmdlzvIbE4lat6fUYuJDjAqhgYwAQDlMADJibEtEJduN5Sc76UqvRCJfu5snzBK7InIQwEGbSOAcrCCaYtWbe2Ly66FhaG61O4S3iK2PM5i+cmO7BGNkxFMRDhTJzmxectaIqNrodHyvrJ/MraK2UUBeauX7/aQHX5UjQXrluH35FL8qLSYqMbEbG8fr0Os/96F2YzENNJaNF6tDAkGIRLChIz29chGxjKWrO+kjG8LXz9GkP5utXr18/yISmWV3X3rkUxsENy4fqZ4v2lvJ5+bEE93j0NpoGUJOz161f6AgnflatDhPls566vkBN1W0SZgVTNy1QGAIC0hiM7IZxZAAAAAElFTkSuQmCC" alt="W3C CSS Validated" width="80" height="15" class="pixelated"></a>
+		<a href="https://validator.w3.org/nu/?doc={{ permalink | absoluteUrl(metadata.url) | encodeUrl}}"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAAHdElNRQfVBhUIOSEqXrltAAACEFBMVEUAAAAARIoARIsARYwCRYsCRowDRowERYsERowFRowFR4wFR40HSI0ISY4IS48KS5AOTpEPTpERUJIRUZMTUpMUFBQaV5ccVpYfW5kgWpghXJkiXZokXpsmX5sqKiorZJ4tLS0tZaAuZaAvZp8wZ6AxZ6AzaKE1NTU3bKM5baU8PDw8cKU+cadAQEBDdKlDdalFdqpHeKtKSkpMTExOfK1PT09SgLBYhLJdh7VfibVfibZii7ZmZmZnj7loaGhokLpqkbpvlb1wlb1wlr5ymL51mb92dnZ3m8F8nsJ9oMSCo8aDg4OEhISEpMaEpceGpceGpseHh4eKqMqKqcmLqcmMqsqWlpaXss+XtNCYs9CcAACdAgGeAwKeBAKfBgOgCASgCQShCgWhutSiudOjutSku9WlEgmlvNanp6eoGAyoqKipqamsIRCurq6wKhWxxtyzLhe0Mhm3y9+4yt65zN+7zeC9zuC9zuHBwcHB0uLB0uPH1eXI1ubLYjHLy8vOaDTPz8/QbDbRbTbR0dHR3erScDjS3urTcjnT3+vV4OzX19fbgUDb29vchULdhkPf6PHh4eHll0zm5ubo7/XspFLt7e3vqlXx8fHy8vL1+Pv39/f3+vz4vl/4+vz5+/z5+/36wmH6/P37+/v7/P38xWL8/Pz9yWT9/f39/f79/v7+ymX+/v7+/v//y2b/zGb///9UzVsNAAAAAWJLR0SuuWuTpwAAAXFJREFUOMtjsKEyYLBZT1UANlDNff16Ewsgz0oQCPTWTzC2m561fv06MgDEQFeVxesDROavnytoHuHMlLRcV8FIy44MA+fMgRpYxdKyPp2pbH05R+cafY15zeozVod1kW7glJzCZRADZ4t5rbdmdlzvIbE4lat6fUYuJDhAihhAiIGBAcRYByHBXCxgYkJMK9SF6y0150upSi9Usp8ryxe8InsSmoFgxLCOAWYghlnTlqxb2xcXXQsLw/Up3CU8Rez5nMVzkx1YIxumIhkIdg7EnThdOC0+b0FTbHQ9PFLWT+ZX1l4poygwd/361Qaqy5dicyHCyxhuXJIXlRYb3YiI5fXrdZj917swm4GYTkKL1uM2kAHiezSwpCAxs30dsoGhrDXrKxnD28LXrzGUr1u9fv0sH5JieVV371oUAzskF66fKd5fyuvpxxbU493TYBpIScJev36lL5DwXbk6RJjPdu76CjlRt0WUGUjVvExlAAC+JXiL+DgKGQAAAABJRU5ErkJggg==" alt="W3C HTML Validated" width="80" height="15" class="pixelated"></a>
 	</div>
 </div>
 {%- endblock -%}
