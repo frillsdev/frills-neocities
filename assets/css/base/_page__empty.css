@@ -55,14 +55,6 @@
   }
 }
 
-.page__empty a:link,
-.page__empty a:visited,
-.page__empty a:hover,
-.page__empty a:active,
-.page__empty a:focus {
-  color: revert;
-}
-
 .page__empty .container {
   max-width: 1600px;
 }

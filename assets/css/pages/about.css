@@ -1,31 +1,31 @@
 :root,
 :root[data-scheme='dark'] {
-  --main-color: #FFB7D0;
-  --about-color: #ff79a8;
-  --link: #ff79a8;
-  --linkaccent: #ff79a8;
-  --linkvisited: #ff9bbe;
+  --main-color: hsl(340, 100%, 86%);
+  --about-color: hsl(340, 100%, 74%);
+  --link: hsl(340, 100%, 74%);
+  --linkaccent: hsl(340, 100%, 74%);
+  --linkvisited: hsl(340, 100%, 80%);
   --border-width: 0.25rem;
   --border-color: #491c2c;
 }
 
 :root[data-scheme='light'] {
-  --about-color: #A00000;
-  --link: #A00000;
-  --linkaccent: #A00000;
-  --linkvisited: #A00000;
+  --about-color: hsl(0, 100%, 31%);
+  --link: hsl(0, 100%, 31%);
+  --linkaccent: hsl(0, 100%, 31%);
+  --linkvisited: hsl(0, 100%, 31%);
   --border-width: 0.25rem;
-  --border-color: #FFB7D0;
+  --border-color: hsl(340, 100%, 86%);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --about-color: #A00000;
-    --link: #A00000;
-    --linkaccent: #A00000;
-    --linkvisited: #A00000;
+    --about-color: hsl(0, 100%, 31%);
+    --link: hsl(0, 100%, 31%);
+    --linkaccent: hsl(0, 100%, 31%);
+    --linkvisited: hsl(0, 100%, 31%);
     --border-width: 0.25rem;
-    --border-color: #FFB7D0;
+    --border-color: hsl(340, 100%, 86%);
   }
 }
 
@@ -60,7 +60,7 @@
 }
 
 .charactersheet-character {
-    row-gap: clamp(0.5rem, 2.5vw, 1rem);
+  row-gap: clamp(0.5rem, 2.5vw, 1rem);
   column-gap: clamp(0.5rem, 5vw, 1000rem);
   align-items: flex-start;
   display: grid;
@@ -150,8 +150,6 @@
   }
 }
 
-
-
 .charactersheet-stats {
   width: 100%;
   display: grid;
@@ -177,7 +175,7 @@
 .charactersheet-stats>*>h3 {
   font-family: "Shrikhand", var(--font-family);
   font-weight: 400;
-  font-size: clamp(1rem, 1.5vw, 3rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   ;
   text-align: center;
   position: absolute;
@@ -216,4 +214,11 @@
   transform: translateY(-50%);
   margin-bottom: 1rem;
   min-width: 1.5rem;
+}
+
+.bentobox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-flow: dense;
+  gap: 15px;
 }
