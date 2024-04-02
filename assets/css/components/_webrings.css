@@ -17,6 +17,18 @@
   background-color: var(--bodybg);
   padding: 4px;
   min-height: 35px;
+  padding: 0 10px;
+  border-radius: 0.25rem;
+}
+
+[class*="webring--"]:has(.webring-prev),
+[class*="webring--"]:has(.webring__prev) {
+  padding-left: 0;
+}
+[class*="webring--"]:has(.webring__next),
+[class*="webring--"]:has(.webring-next),
+[class*="webring--"]:has(.webring__random) {
+  padding-right: 0;
 }
 
 .webring__prev,
@@ -76,8 +88,4 @@
 .webring__random::before {
   font-size: 0.8rem;
   display: inline-block;
-}
-
-.webring--nobuttons {
-  padding: 0 10px;
 }
