@@ -74,70 +74,68 @@ scripts: '
 					</ul>
 			') }}
 	</div> #}
-	<div class="av-br">
-		<article class="dashboard__item">
+	<article class="dashboard__item">
+	{{ macro.callout(
+		element = 'div',
+		modifiers = 'callout--small callout--neocities bg-wiggly',
+		emoji = '<img src="/images/neomoji.png" alt="Cat emoji holding a paintbrush and spanner">',
+		header = '<h2><a href="https://neocities.org/site/fri11s" class="">Neocities profile</a></h2>',
+		body = '<p class="small">Follow me for updates!</p>'
+	)}}
+	</article>
+	<div class="dashboard__item noscriptHide">
+		<div class="callout h-sm">
+			<header id="omglolh"><h2>Latest status</h2></header>
+			<script src="https://status.lol/frills.js?time&link&fluent&pretty"></script><script>const omglolh=document.querySelector("#omglolh");document.querySelector(".statuslol_content").prepend(omglolh);</script>
+		</div>
+	</div>
+	<div class="dashboard__item">
 		{{ macro.callout(
-			element = 'div',
-			modifiers = 'callout--small callout--neocities bg-wiggly',
-			emoji = '<img src="/images/neomoji.png" alt="Cat emoji holding a paintbrush and spanner">',
-			header = '<h2><a href="https://neocities.org/site/fri11s" class="">Neocities profile</a></h2>',
-			body = '<p class="small">Follow me for updates!</p>'
+			element = 'article',
+			modifiers = 'callout--small noscriptHide',
+			emoji = '<img src="/images/emoji/headphone_3d.png" alt="Musical note emoji">',
+			header = '<h2>Last played</h2>',
+			body = '
+			<span id="lfmSong">No recently played song :(</span>
+			<small class="d-b subtext"><span id="lfmTime">right now</span></small>
+			'
 		)}}
-		</article>
-		<div class="dashboard__item noscriptHide">
-			<div class="callout h-sm">
-				<header id="omglolh"><h2>Latest status</h2></header>
-				<script src="https://status.lol/frills.js?time&link&fluent&pretty"></script><script>const omglolh=document.querySelector("#omglolh");document.querySelector(".statuslol_content").prepend(omglolh);</script>
-			</div>
-		</div>
-		<div class="dashboard__item">
-			{{ macro.callout(
-				element = 'article',
-				modifiers = 'callout--small noscriptHide',
-				emoji = '<img src="/images/emoji/headphone_3d.png" alt="Musical note emoji">',
-				header = '<h2>Last played</h2>',
-				body = '
-				<span id="lfmSong">No recently played song :(</span>
-				<small class="d-b subtext"><span id="lfmTime">right now</span></small>
-				'
-			)}}
-		</div>
-		<div class="dashboard__item">
-			{{ macro.callout(
-				element = 'article',
-				modifiers = 'callout--small',
-				emoji = '<img src="/images/emoji/notebook_with_decorative_cover_3d.png" alt="Books emoji">',
-				header = '<h2>Currently reading</h2>',
-				body = '
-				<ol class="unstyled mb-0">
-					<li>
-						<a href="https://www.goodreads.com/book/show/76713323-empire-of-storms" class="hidden">Empire of Storms - Sarah J Maas</a>
-						<small class="d-b subtext">Started 14th Jan 2024</small>
-					</li>
-					<li>
-						<a href="https://www.goodreads.com/book/show/50263828-this-book-could-save-your-life" class="hidden">This Book Could Save Your Life: The Science of Living Longer Better</a>
-						<small class="d-b subtext">Started 21th Feb 2024</small>
-					</li>
-				</ol>
-				'
-			)}}
-		</div>
-		<div class="dashboard__item">
-			{{ macro.callout(
-				element = 'article',
-				modifiers = 'callout--small',
-				emoji = '<img src="/images/emoji/joystick_3d.png" alt="">',
-				header = '<h2>Currently playing</h2>',
-				body = '
-				<ol class="unstyled mb-0">
-					<li>
-						<a href="https://www.goodreads.com/book/show/76713323-empire-of-storms" class="hidden">Stardew Valley</a>
-						<small class="d-b subtext">Teddi of Clover Farm</small>
-					</li>
-				</ol>
-				'
-			)}}
-		</div>
+	</div>
+	<div class="dashboard__item">
+		{{ macro.callout(
+			element = 'article',
+			modifiers = 'callout--small',
+			emoji = '<img src="/images/emoji/notebook_with_decorative_cover_3d.png" alt="Books emoji">',
+			header = '<h2>Currently reading</h2>',
+			body = '
+			<ol class="unstyled mb-0">
+				<li>
+					<a href="https://www.goodreads.com/book/show/76713323-empire-of-storms" class="hidden">Empire of Storms - Sarah J Maas</a>
+					<small class="d-b subtext">Started 14th Jan 2024</small>
+				</li>
+				<li>
+					<a href="https://www.goodreads.com/book/show/50263828-this-book-could-save-your-life" class="hidden">This Book Could Save Your Life: The Science of Living Longer Better</a>
+					<small class="d-b subtext">Started 21th Feb 2024</small>
+				</li>
+			</ol>
+			'
+		)}}
+	</div>
+	<div class="dashboard__item">
+		{{ macro.callout(
+			element = 'article',
+			modifiers = 'callout--small',
+			emoji = '<img src="/images/emoji/joystick_3d.png" alt="">',
+			header = '<h2>Currently playing</h2>',
+			body = '
+			<ol class="unstyled mb-0">
+				<li>
+					<a href="https://www.goodreads.com/book/show/76713323-empire-of-storms" class="hidden">Stardew Valley</a>
+					<small class="d-b subtext">Teddi of Clover Farm</small>
+				</li>
+			</ol>
+			'
+		)}}
 	</div>
 	<article class="dashboard__item dashboard__item--card dashboard__item--latestposts">
 		<header>
