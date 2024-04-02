@@ -78,7 +78,6 @@
   display: inline-block;
 }
 
-.webring--bukmarkclub,
-.webring--250kb {
+.webring--nobuttons {
   padding: 0 10px;
 }
