@@ -1,14 +1,15 @@
 ---
-title: It's been a whole year on Neocities
+title: It's been a whole year on the Indie Web
 description: Favourites, highlights and the evolution of this website
 date: 2024-04-04 11:41:00
 tags:
 - personal
+- dev
 rss: false
 draft: true
 style: '@import url("https://fonts.googleapis.com/css2?family=Honk&display=swap");
 .honk {
-  font-family: "Honk", system-ui;
+  font-family:"Honk", system-ui;
   font-size: 1.5rem;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -20,16 +21,14 @@ style: '@import url("https://fonts.googleapis.com/css2?family=Honk&display=swap"
   line-height: 1rem;
 }
 
-.honk.big {
-  font-size: 2rem;
-}
 .awholeyear-throwback {
   background-color: white;
   color: black;
-  font-family: monospace;
+  font-family:monospace;
   padding: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  border: 0;
   box-shadow: 15px 15px 0 3px var(--bodybg);
   image-rendering: crisp-edges;
   background-position: top right;
@@ -48,42 +47,56 @@ style: '@import url("https://fonts.googleapis.com/css2?family=Honk&display=swap"
 }
 '
 ---
-{% import "structure/components/components.njk" as macro with context %}
+{%- import "structure/components/components.njk" as macro with context -%}
+I signed up to Neocities at 11:41am on Tuesday the 4th of April 2023.
 
-I signed up to Neocities at 11:41 on Tuesday the 4th of April 2023.
+The URL was (or technically still is) <a href="https://fri11s.neocities.org" rel="me">fri11s.neocities.org</a>. I wanted 'frills', obviously, but someone pipped me to the post 7 months earlier. I settled with the leet speak version, replacing the 'l's with '1's. Although annoyingly, screenreaders pronounced it as 'Friday 11 S' 😬. Not really what I was going for. I eventually purchased <a href="https://frills.dev" rel="me">frills.dev</a> and that is where you are today.
 
-<span class="honk big">366 days ago</span>
+I've had a bunch of websites in the past, as is the norm for any meddling developer. But overwhelmed by the idea that they had to be professional and informational, they never really got past a simple splash page and quickly stagnated.
 
-<div class="awholeyear-throwback">
+This time, it was different. The intention was different. The intention was to play and to break things and be silly and to just have a good time:
+
+<blockquote class="awholeyear-throwback">
   <h2>Hey this is my new website</h2>
   <p>this is my space to just be silly, write bad code and dumb blogs and get away from the big platforms.</p>
   <p>The nostalgia of what the web used to be, the community of webrings, chatboxes and guestbooks. and goddman handwritten html and css.</p>
   <p>Love, Frills xo</p>
-</div>
+</blockquote>
+
+<details class="hidden">
+  <summary class="mb-1">I'm not sure why it took me so long.</summary>
+  <p>Actually, that's a lie. The reason it took so long is because I spent the majority of my spare time in my 20s playing FPS video games, and on 12th of December 2022, I unplugged my PC and vowed to not go back. It opened up so much time to play with my dog and explore hobbies that I had been aching to do but never had the time after spending hours shooting and healing folks online. I have absolutely no beef or no judgement for people who play games as much as I did, I still wish I could, but I have no sense of moderation.</p>
+</details>
 
 ## The stats
-- <span class="honk">1000</span> updates
-- <span class="honk">11</span> webrings
-- <span class="honk">127</span> followers
-- <span class="honk">1</span> supporter status
+- <span class="honk">1000</span> Neocities updates
+- <span class="honk">128</span> Neocities followers
+- <span class="honk">1</span> Neocities supporter status
+- <span class="honk">640</span> git commits
+- <span class="honk">12</span> webrings
 - <span class="honk">2</span> Mastodon instances
 - <span class="honk">Half</span> a million views
 
 ## My favourite pages
-- My [Guestbook](/guestbook/) - I love reading who has come across my site and looking at their websites too.
-- [HTML named colors tool](/experiments/html-named-colors/) - I spent hours listing out all the HTML named colours and checking their colour contrast ratios. I loved how it came out.
-- [Character sheet style about page](/about/) - I find writing about pages really hard, so creating a character sheet made it fun and (a bit) easier to do.
-- My [avatar collection](/collections/avatars) and the random avatar snippet on the homepage
+- My [Guestbook](/guestbook/) - I love these kinds of micro-interactions. The "hey I was here", a little bit like a graffiti tag or a name scratched into a public bench. Guestbooks are what bring the Indie Web together, without the need for social media. If people leave the link to their website as well, I am over the moon that I can go and check out their website.
+- [HTML named colours tool](/experiments/html-named-colors/) - I spent hours compiling a 140-strong list of the HTML named colours. Manually checking and noting their color contrast ratios, fetching the Hex, and RGB values of each one, making those values copy-able at the click of a button, deciding on filter sets and adding the filter functionality. I loved how it came out and it still gets hits so I'm proud that some people are making use of it.
+- [Character sheet style about page](/about/) - I find writing about pages really hard, so creating a character sheet made it fun and (a bit) easier to do. It's still not finished, I've embraced working in the open, partly to actually have some content for people to read, but also to force me to get on with the unfinished page.
+- My [avatar collection](/collections/avatars) displays my Picrew spree and commissioned avatars by super talented artists and designers. There is also a  randomiser on the homepage which adds a different flavour avatar each time it is refreshed.
 
 ## My highlights
-My highlights include (but are <em>not</em> limited to) [being linked to by Sophie Koonin](https://localghost.dev/blog/good-links-2024-02-18/) (who's website is the whole reason I got here) and having my blog post, [This website is personal](/blog/070224-this-website-is-personal-girls/), blow up a little bit (and being annoyed I didn't form the URL properly but by then it was too late!), taking part in the [32 bit cafe community](https://32bit.cafe/) and having my theme default for a few months.
+My highlights include (but are <em>not</em> limited to) [being linked to by Sophie Koonin](https://localghost.dev/blog/good-links-2024-02-18/) (whose website is the whole reason I got here) and having my blog post, [this website is personal](/blog/070224-this-website-is-personal-girls/), blow up a little bit (and being annoyed I didn't form the URL properly but by then it was too late!), taking part in the [32 bit cafe community](https://32bit.cafe/) and having my theme default for a few months.
 
 ## The Evolution
-I didn't start capturing screenshots until late 2023, the Wayback Machine ([Archive: frills.dev](https://web.archive.org/web/20030315000000*/frills.dev), [Archive: fri11s.neocities.org](https://web.archive.org/web/20030315000000*/fri11s.neocities.org)) did some heavy lifting here to get some shots of what it looked like at the beginning.
+I didn't start capturing screenshots until late 2023, the Wayback Machine did some heavy lifting here to get some shots of what it looked like at the beginning.
 
-I didn't know what to do with my website for a while, I knew I needed to flesh out the content before getting too deep into the design, but November 2023 is really when I started to get an idea of where I wanted the design to go.
+<ul class="stars">
+  <li><a href="https://web.archive.org/web/20030315000000*/fri11s.neocities.org">fri11s.neocities.org on Wayback Machine</a></li>
+  <li><a href="https://web.archive.org/web/20030315000000*/frills.dev">frills.dev on Wayback Machine</a></li>
+</ul>
 
-Dark and light mode themes have been a staple for a while, initially just using the prefers-dark-mode media query, but eventually getting a JavaScript based toggle so you could override your system preference. Seasonal themes were created for Halloween and Christmas 2023, but I didn't screenshot those 😢
+I didn't know what to do with my website for a while, I knew I needed to flesh out the content before getting too deep into the design, but November 2023 was really when I started to get an idea of where I wanted the design to go.
+
+Dark and light mode themes have been a staple for a while, initially just using the prefers-dark-mode media query, but eventually getting a JavaScript-based toggle so you could override your system preference. Seasonal themes were created for Halloween and Christmas 2023, but I didn't screenshot those 😢
 
 ### April 2023
 The Inception.
@@ -128,6 +141,6 @@ Kinda where we are now, give or take.
 
 ---
 
-It's been bloody lovely to be here. I have [learnt so much](/bookmarks), [done so much](/changelog) and [read so much](/links) and experienced so much on this side of the internet.
+It's been bloody lovely to be here. I have [done so much](/changelog), [read so much](/bookmarks) and [seen so much](/links) on this side of the internet. I've digitally met a bunch of people that I hold in high regard in the development world and I feel more of a part of it than I have in my almost decade long stay in this online world.
 
-I can't wait to see more.
+I'm participating. And that is what the Indie Web is all about.
