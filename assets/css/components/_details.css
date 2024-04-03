@@ -1,5 +1,9 @@
 details {}
 
+details.hidden summary:not(:hover):not(:focus):not(:active) {
+    color: var(--text);
+}
+
 summary {
   text-decoration: underline;
   color: var(--link);
@@ -7,7 +11,8 @@ summary {
 
 summary:hover,
 summary:focus,
-summary:active {
+summary:active,
+details[open] summary {
   color: var(--linkhover);
   text-decoration: underline wavy 2px;
 }

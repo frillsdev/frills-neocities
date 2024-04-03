@@ -32,7 +32,7 @@
 /* Developement */
 
 .bigboibanner {
-  font-family: "Shrikhand", var(--font-family);
+  font-family:"Shrikhand", var(--font-family);
   font-size: clamp(10vw, 10vw, 195px);
   line-height: 1;
   text-transform: lowercase;
@@ -106,7 +106,7 @@
 }
 
 [class^="itsfrills-"] h2 {
-  font-family: "Shrikhand", var(--font-family);
+  font-family:"Shrikhand", var(--font-family);
   font-size: 2vw;
   font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 400;
@@ -173,7 +173,7 @@
 }
 
 .charactersheet-stats>*>h3 {
-  font-family: "Shrikhand", var(--font-family);
+  font-family:"Shrikhand", var(--font-family);
   font-weight: 400;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   text-align: center;
@@ -185,7 +185,7 @@
 
 .bigstat,
 .smolstat {
-  font-family: "Shrikhand", var(--font-family);
+  font-family:"Shrikhand", var(--font-family);
   border-radius: 0.75rem;
   background: var(--about-color);
   color: var(--bg);
@@ -206,7 +206,7 @@
 
 .smolstat {
   font-size: clamp(1rem, 1.5vw, 2rem);
-  font-family: var(--font-family);
+  font-family:var(--font-family);
   border-radius: 100px;
   border: var(--border-width) solid var(--bg);
   padding: 4px 10px 2px 10px;

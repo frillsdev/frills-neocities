@@ -1,6 +1,6 @@
 /* Global variables */
 :root {
-  --font-family: 'Atkinson Hyperlegible', 'Tahoma', sans-serif;
+  --font-family:'Atkinson Hyperlegible', 'Tahoma', sans-serif;
   --font-size: 16px;
   --wiggledown: radial-gradient(15.37px at 50% calc(100% - 21.60px), #000 99%, #0000 101%) calc(50% - 24px) 0/48px 100%, radial-gradient(15.37px at 50% calc(100% + 9.60px), #0000 99%, #000 101%) 50% calc(100% - 12px)/48px 100% repeat-x;
   --wiggleup: radial-gradient(15.37px at 50% 21.60px, #000 99%, #0000 101%) 50% 0/48px 100%, radial-gradient(15.37px at 50% -9.6px, #0000 99%, #000 101%) calc(50% - 24px) 12px/48px 100% repeat-x;

@@ -1,7 +1,7 @@
 button,
 .button,
 input[type="submit"] {
-  font-family: var(--font-family);
+  font-family:var(--font-family);
   text-decoration: none;
   will-change: transform;
   padding: 6px 12px;

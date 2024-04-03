@@ -21,11 +21,11 @@ select:focus {
 
 textarea {
     min-height: 5rem;
-    font-family: var(--font-family);
+    font-family:var(--font-family);
 }
 
 textarea.textarea--code {
-    font-family: monospace;
+    font-family:monospace;
     white-space: pre-wrap;
     font-size: 0.5rem;
     padding: 8px 10px;

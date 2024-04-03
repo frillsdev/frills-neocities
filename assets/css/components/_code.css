@@ -15,7 +15,7 @@ ol+pre {
 
 code,
 pre {
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 0.9rem;
 	text-align: left;
 	white-space: pre;
@@ -45,7 +45,7 @@ code {
 
 pre.hidden,
 code.hidden {
-	font-family: inherit;
+	font-family:inherit;
 	background: transparent;
 	color: inherit;
 	padding: 0;
