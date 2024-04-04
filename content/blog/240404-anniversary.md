@@ -5,8 +5,7 @@ date: 2024-04-04 11:41:00
 tags:
 - personal
 - dev
-rss: false
-draft: true
+rss: true
 style: '@import url("https://fonts.googleapis.com/css2?family=Honk&display=swap");
 .honk {
   font-family:"Honk", system-ui;
@@ -69,12 +68,11 @@ This time, it was different. The intention was different. The intention was to p
 </details>
 
 ## The stats
-- <span class="honk">1000</span> Neocities updates
-- <span class="honk">128</span> Neocities followers
+- <span class="honk">1017</span> Neocities updates
+- <span class="honk">129</span> Neocities followers
 - <span class="honk">1</span> Neocities supporter status
-- <span class="honk">640</span> git commits
+- <span class="honk">643</span> git commits
 - <span class="honk">12</span> webrings
-- <span class="honk">2</span> Mastodon instances
 - <span class="honk">Half</span> a million views
 
 ## My favourite pages
