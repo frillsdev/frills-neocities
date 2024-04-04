@@ -1,5 +1,5 @@
 ---
-title: It's been a whole year on the Indie Web
+title: A whole year on the Indie Web
 description: Favourites, highlights and the evolution of this website
 date: 2024-04-04 11:41:00
 tags:
