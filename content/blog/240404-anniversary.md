@@ -69,8 +69,6 @@ This time, it was different. The intention was different. The intention was to p
 
 ## The stats
 - <span class="honk">1017</span> Neocities updates
-- <span class="honk">129</span> Neocities followers
-- <span class="honk">1</span> Neocities supporter status
 - <span class="honk">643</span> git commits
 - <span class="honk">12</span> webrings
 - <span class="honk">Half</span> a million views
