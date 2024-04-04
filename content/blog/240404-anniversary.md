@@ -49,7 +49,7 @@ style: '@import url("https://fonts.googleapis.com/css2?family=Honk&display=swap"
 {%- import "structure/components/components.njk" as macro with context -%}
 I signed up to Neocities at 11:41am on Tuesday the 4th of April 2023.
 
-The URL was (or technically still is) <a href="https://fri11s.neocities.org" rel="me">fri11s.neocities.org</a>. I wanted 'frills', obviously, but someone pipped me to the post 7 months earlier. I settled with the leet speak version, replacing the 'l's with '1's. Although annoyingly, screenreaders pronounced it as 'Friday 11 S' 😬. Not really what I was going for. I eventually purchased <a href="https://frills.dev" rel="me">frills.dev</a> and that is where you are today.
+The URL was (or technically still is) <a href="https://fri11s.neocities.org" rel="me">fri11s.neocities.org</a>. I wanted 'frills', obviously, but someone pipped me to the post 7 months earlier. I settled with the leet speak version, replacing the 'l's with '1's. However, screenreaders pronounced it as 'Friday 11 S' 😬 Not really what I was going for, so I eventually purchased <a href="https://frills.dev" rel="me">frills.dev</a> and that is where you are today.
 
 I've had a bunch of websites in the past, as is the norm for any meddling developer. But overwhelmed by the idea that they had to be professional and informational, they never really got past a simple splash page and quickly stagnated.
 
