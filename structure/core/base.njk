@@ -4,9 +4,9 @@
     <script>0</script>
     <div class="page">
         {% include "structure/global/header.njk" %}
-        {%- block content -%}
-                {{- content | safe -}}
-        {%- endblock -%}
+        {% block content %}
+            {{ content | safe }}
+        {% endblock %}
     </div>
     {% include "structure/global/footer.njk" %}
 
