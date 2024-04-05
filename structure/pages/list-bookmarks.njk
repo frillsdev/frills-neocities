@@ -5,7 +5,7 @@
 	{% for bookmark in postslist | reverse %}
 		<article id="{{ bookmark.data.title | slugify }}" class="card">
 			<div class="card__content">
-				<a href="{{ bookmark.data.url | url}}" class="card__title">
+				<a rel="webmention" href="{{ bookmark.data.url | url}}" class="card__title">
 					{{bookmark.data.title | safe}}
 				</a>
 				{% if bookmark.data.url %}
