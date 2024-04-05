@@ -1,6 +1,7 @@
 {
-	"name": "fri11s-neocities",
+	"name": "fri11s.dev",
 	"version": "1.0.0",
+	"description": "Personal Website of Frills",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
 		"watch": "npx @11ty/eleventy --serve --quiet",
@@ -15,5 +16,8 @@
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
 		"luxon": "^3.3.0"
+	},
+	"dependencies": {
+		"sanitize-html": "^2.13.0"
 	}
 }

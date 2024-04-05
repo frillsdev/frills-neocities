@@ -10,13 +10,20 @@
 {%- endblock -%}
 
 {%- block main -%}
-    <article class="full-width">
+    <article class="full-width h-entry">
         <header class="mb-2 reading-width">
             {% if tags.includes("changelog") %}
             <h1>{{ page.date | readableDate }}</h1>
             {% else %}
             <h1>{{title|safe}}</h1>
             {% endif %}
+            <details hidden>
+                <div class="p-author h-card">
+                    <a class="p-name u-url u-uid" href="{{metadata.url}}" rel="me">Frills</a>
+                    <img class="u-photo" src="{{metadata.avatar}}">
+                    <p class="p-summary">{{description}}</p>
+                </div>
+            </details>
 
             {% if tags.includes("posts") %}
             <small>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
@@ -30,4 +37,36 @@
         <h2 class="visually-hidden">Kudos</h2>
         <button class="button ghost large tinylytics_kudos"></button>
     </article>
+
+    {% set mentions = webmentions.children | getWebmentionsForUrl(metadata.url + page.url) %}
+    {% if mentions | length %}
+    <aside class="webmentions">
+        <h2>Web mentions</h2>
+        <ol class="unstyled">
+        {% for mention in mentions %}
+            <li>
+                {% if mention['wm-property'] == "like-of" %}
+                💖
+                {% elseif mention['wm-property'] == "mention-of" %}
+                ✏️
+                {% endif %}
+                <a href="{{mention.url}}">
+                    {% if mention.author.name %}
+                    {{mention.author.name}}
+                    {% else %}
+                    {{mention.url}}
+                    {% endif %}
+                </a>
+            </li>
+           
+        {% endfor %}
+        </ol>
+    </aside>
+    {% endif%}
+        <form action="https://webmention.io/www.frills.dev/webmention" method="post">
+            <label for="form-webmention-source">Have you published your own post mentioning this one? Let me know the URL:</label>
+            <input id="form-webmention-source" type="url" name="source" placeholder="https://example.com" required="required"> <input type="hidden" name="target" value="{{metadata.url + page.url}}">
+            <button type="submit">Send</button>
+        </form>
+
 {%- endblock -%}

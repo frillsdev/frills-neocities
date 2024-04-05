@@ -54,6 +54,15 @@ module.exports = function(eleventyConfig) {
 		return Math.min.apply(null, numbers);
 	});
 
+	eleventyConfig.addFilter("getWebmentionsForUrl", (webmentions, url) => {
+		const allowedTypes = ['mention-of', 'in-reply-to', 'like-of']
+		
+		return webmentions
+			.filter(entry => entry['wm-target'] === url)
+			.filter(entry => allowedTypes.includes(entry['wm-property']))
+		}
+	)
+
 	// Return all the tags used in a collection
 	eleventyConfig.addFilter("getAllTags", collection => {
 		let tagSet = new Set();
