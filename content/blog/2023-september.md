@@ -5,6 +5,8 @@ tags:
   - weeknotes
 rss: true
 ---
+<div class="h-sm">
+
 ## 🧗🏻‍♀️ Went bouldering for the first time
 Easier and harder than I thought it would be! My hands were sore afterwards, but that dopamine hit when you got to the top of one of the (admittedy totally beginner, VB) routes felt goooood.
 
@@ -46,3 +48,5 @@ Looked after Effie for the day. Orla loved it, but Effie got bored of Orla tryin
 We missed visiting family last weekend as we were on Orla Watch, but during that weekend and this week, two of our family have been admitted to hospital with COVID. They say bad things come in threes, but I feel like we've gone beyond that count this month!
 
 Looking forward to October, and hoping it brings far more health and happiness to everyone. This has been a monster of a month that I would like to not repeat.
+
+</div>

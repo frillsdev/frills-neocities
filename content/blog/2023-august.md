@@ -5,6 +5,8 @@ tags:
   - weeknotes
 rss: true
 ---
+<div class="h-sm">
+
 ## 🎉 Work's birthday party
 Ate pizza and doughnuts and pranced around taking selfies together
 
@@ -33,4 +35,5 @@ Caught <a href="https://en.wikipedia.org/wiki/COVID-19">COVID-19</a> at the fest
 
 ## 🖥 Office tidy up and reshuffle
 I took out the small crafting table, which I hadn't been using for anything other than junk, and replaced it with a rickety bookshelf that was stored in the garage. I've filled the bookshelf with some old notebooks, my collection of greeting cards, and my salt lamp. The room feels more intentional now and it's easier to get to the window
-    
+
+</div>
