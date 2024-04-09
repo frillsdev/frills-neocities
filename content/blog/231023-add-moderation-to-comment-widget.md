@@ -48,6 +48,6 @@ if(data.Moderated == false) {
 
 And you're done! If you already have comments stored in your Google sheet, change the 'Moderated' value to TRUE for them to show.
 
-When a new comment is submitted the 'Moderated' value with be FALSE. Once you're happy for the comment to be displayed on your website, go into your Google sheet and change it to TRUE.
+When a new comment is submitted the 'Moderated' value will be FALSE. Once you're happy for the comment to be displayed on your website, go into your Google sheet and change it to TRUE.
 
 If you implement this, [leave me a comment](/guestbook) in my guestbook to let me know!<br> I'd love to know if this is useful to you.

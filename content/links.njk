@@ -7,10 +7,10 @@ eleventyNavigation:
   order: 3
 scripts: '<script>
   const t = document.getElementById("toggleHighContrast");
-  const w = document.querySelectorAll(".buttonwall");
+  const w = document.querySelectorAll(".links");
   const o = "Enable high contrast";
   const c = "Disable high contrast";
-  if (t) {t.addEventListener("click", (function () {w.forEach((s => {s.classList.contains("buttonwall--highcontrast") ? (t.innerHTML = o, t.setAttribute("aria-pressed", !1), s.classList.remove("buttonwall--highcontrast")) : (t.innerHTML = c, t.setAttribute("aria-pressed", !0), s.classList.add("buttonwall--highcontrast"))}))}));}
+  if (t) {t.addEventListener("click", (function () {w.forEach((s => {s.classList.contains("links--highcontrast") ? (t.innerHTML = o, t.setAttribute("aria-pressed", !1), s.classList.remove("links--highcontrast")) : (t.innerHTML = c, t.setAttribute("aria-pressed", !0), s.classList.add("links--highcontrast"))}))}));}
 </script>'
 ---
 {% extends 'structure/templates/page-3col.njk'%}
@@ -47,11 +47,6 @@ scripts: '<script>
     "name": "Dizzy",
     "href": "https://doctordizzy.space/",
     "src": "dizzy.png",
-    "type": "button"
-  }, {
-    "name": "Double Incision",
-    "href": "https://doubleincision.com/",
-    "src": "doubleincision.png",
     "type": "button"
   }, {
     "name": "fh 102",
@@ -147,11 +142,6 @@ scripts: '<script>
     "name": "Pixel Moondust",
     "href": "https://pixelmoondust.neocities.org/",
     "src": "pixelmoondust.png",
-    "type": "button"
-  }, {
-    "name": "PunkWasp",
-    "href": "https://punkwasp.leprd.space/",
-    "src": "punkwasp.png",
     "type": "button"
   }, {
     "name": "Salixx",
@@ -327,11 +317,16 @@ scripts: '<script>
     "type": "button"
   }, {
     "name": "flower.codes",
-    "href": "https://http://flower.codes/",
+    "href": "https://flower.codes/",
     "size": "11px",
     "bg": "#9bbc0f",
     "color": "#222222",
     "type": "link"
+  }, {
+    "name": "Met Moxie",
+    "href": "https://metmoxie.com/",
+    "src": "metmoxie.png",
+    "type": "button"
   }
 ] %}
 
@@ -375,7 +370,7 @@ scripts: '<script>
     "color": "#fff"
   }, {
     "name": "Phil Wilson",
-    "href": "https://philwilson.org",
+    "href": "https://philwilson.org/blog",
     "size": "12px",
     "bg": "MediumSeaGreen",
     "color": "#222222"
@@ -556,16 +551,16 @@ scripts: '<script>
 ] %}
 
 <section class="reading-width">
-  <ul class="buttonwall">
+  <ul class="links">
     {% for link in links | sort(attribute="name") %}
     {% if link.type == "button" %}
-    <li class="buttonwall__image">
+    <li class="links__image">
       <a href="{{link.href}}">
           <img src="/images/buttons/{{link.src}}" alt="{{link.alt}}">
       </a>
     </li>
     {% else %}
-    <li class="buttonwall__item">
+    <li class="links__item">
       <a href="{{link.href}}" style="font-size: {{link.size}};  background-color: {{link.bg}}; color: {{link.color}};">
         {{link.name}}
       </a>
@@ -573,7 +568,7 @@ scripts: '<script>
     {% endif%}
     {% endfor %}
     {% for friend in friends | sort(attribute="name") %}
-    <li class="buttonwall__item">
+    <li class="links__item">
       <a href="{{friend.href}}" style="font-size: {{friend.size}};  background-color: {{friend.bg}}; color: {{friend.color}};">
         {{friend.name}}
       </a>
@@ -582,9 +577,9 @@ scripts: '<script>
   </ul>
 
   <h2>Creatives</h2>
-  <ul class="buttonwall">
+  <ul class="links">
     {% for creative in creatives | sort(attribute="name") %}
-    <li class="buttonwall__item">
+    <li class="links__item">
       <a href="{{creative.href}}" style="font-size: {{creative.size}};  background-color: {{creative.bg}}; color: {{creative.color}};">
         {{creative.name}}
       </a>
@@ -593,16 +588,16 @@ scripts: '<script>
   </ul>
 
   <h2>Tools & fun things</h2>
-  <ul class="buttonwall">
+  <ul class="links">
     {% for tool in tools | sort(attribute="name") %}
     {% if tool.type == "button" %}
-    <li class="buttonwall__image">
+    <li class="links__image">
       <a href="{{tool.href}}">
           <img src="/images/buttons/{{tool.src}}" alt="{{tool.alt}}">
       </a>
     </li>
     {% else %}
-    <li class="buttonwall__item">
+    <li class="links__item">
       <a href="{{tool.href}}" style="font-size: {{tool.size}};  background-color: {{tool.bg}}; color: {{tool.color}};">
         {{tool.name}}
       </a>
@@ -612,16 +607,16 @@ scripts: '<script>
   </ul>
 
   <h2>Bookmarks & link lists</h2>
-  <ul class="buttonwall">
+  <ul class="links">
     {% for bookmark in bookmarks | sort(attribute="name") %}
     {% if bookmark.type == "button" %}
-    <li class="buttonwall__image">
+    <li class="links__image">
       <a href="{{bookmark.href}}">
           <img src="/images/buttons/{{bookmark.src}}" alt="{{bookmark.alt}}">
       </a>
     </li>
     {% else %}
-    <li class="buttonwall__item">
+    <li class="links__item">
       <a href="{{bookmark.href}}" style="font-size: {{bookmark.size}};  background-color: {{bookmark.bg}}; color: {{bookmark.color}};">
         {{bookmark.name}}
       </a>
