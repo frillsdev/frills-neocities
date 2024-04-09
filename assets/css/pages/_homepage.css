@@ -51,7 +51,9 @@
 }
 
 .biogrid__content {
+  display: flex;
   align-items: center;
+  margin: 0;
 }
 
 /* Avatar */
