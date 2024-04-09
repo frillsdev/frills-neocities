@@ -6,6 +6,7 @@ tags:
 - personal
 - dev
 rss: true
+kudos: 🎉
 style: '@import url("https://fonts.googleapis.com/css2?family=Honk&display=swap");
 .honk {
   font-family:"Honk", system-ui;
