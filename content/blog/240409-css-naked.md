@@ -1,7 +1,7 @@
 ---
 title: Stripping down to my HTML
 description: Showing off my semantic &lt;body&gt;!
-date: 2024-04-09 11:41:00
+date: 2024-04-09 18:30:00
 tags:
 - dev
 rss: true
