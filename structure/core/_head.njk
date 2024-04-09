@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ '(Redirecting) ' if redirectTo }}{{ title | safe +' - ' if title }}{{ metadata.title }}</title>
     <meta name="description" content="{{ description | safe if description else metadata.description }}">
+    <meta name="color-scheme" content="dark light">
     {#- Redirect -#}
     {%- if redirectTo -%}
     <script>location = '{{redirectTo}}';</script>
