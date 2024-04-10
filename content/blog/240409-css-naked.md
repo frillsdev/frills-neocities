@@ -6,6 +6,7 @@ tags:
 - dev
 rss: true
 kudos: 🎨
+nocache: honey-i-nuked-the-css
 ---
 
 It's the 9th of April, which I learnt this morning, is CSS Naked Day.. heck yeah am I participating in that internet experiment!
@@ -45,36 +46,24 @@ Toggle CSS on any website, any time of the year!
 <a href='{% raw %}javascript:(function(){function d(a,b){a.setAttribute("data-css-storage",b)}function e(a){var b=a.getAttribute("data-css-storage");a.removeAttribute("data-css-storage");return b}var c=[];(function(){var a=document.body,b=a.hasAttribute("data-css-disabled");b?a.removeAttribute(%22data-css-disabled%22):a.setAttribute(%22data-css-disabled%22,%22%22);return%20b})()?(c=document.querySelectorAll(%22[data-css-storage]%22),[].slice.call(c).forEach(function(a){%22STYLE%22===a.tagName?a.innerHTML=e(a):%22LINK%22===a.tagName?a.disabled=!1:a.style.cssText=e(a)})):(c=document.querySelectorAll(%22[style],%20link,%20style%22),[].slice.call(c).forEach(function(a){%22STYLE%22===a.tagName?(d(a,a.innerHTML),a.innerHTML=%22%22):%22LINK%22===a.tagName?(d(a,%22%22),a.disabled=!0):(d(a,a.style.cssText),a.style.cssText=%22%22)}))})();{% endraw %}' class="button ghost">🎨 Toggle CSS</a>
 
 ## Archive of a naked frills.dev
-I'll add an archive of the main pages later! Maybe once I have my CSS back 😜
+Here is what frills.dev looked like on CSS Naked Day 2024!
 
-{# Here is what frills.dev looked like on CSS Naked Day 2024!
-
-<figure class="card mb-2">
-  <div class="card__image screen">
-    <img src="/images/blog/frills-nocss-homepage.png" alt="Great alt text" loading="lazy" data-object-fit="cover">
-  </div>
+<figure class="screen mb-2">
+  <img src="/images/blog/frills-nocss-homepage.png" alt="Screenshot of the homepage with no CSS" loading="lazy" data-object-fit="cover">
 </figure>
 
-<figure class="card mb-2">
-  <div class="card__image screen">
-    <img src="/images/blog/frills-nocss-blog.png" alt="Great alt text" loading="lazy" data-object-fit="cover">
-  </div>
+<figure class="screen mb-2">
+  <img src="/images/blog/frills-nocss-blog.png" alt="Screenshot of the blog listing with no CSS" loading="lazy" data-object-fit="cover">
 </figure>
 
-<figure class="card mb-2">
-  <div class="card__image screen">
-    <img src="/images/blog/frills-nocss-links.png" alt="Great alt text" loading="lazy" data-object-fit="cover">
-  </div>
+<figure class="screen mb-2">
+  <img src="/images/blog/frills-nocss-links.png" alt="Screenshot of the links page with no CSS" loading="lazy" data-object-fit="cover">
 </figure>
 
-<figure class="card mb-2">
-  <div class="card__image screen">
-    <img src="/images/blog/frills-nocss-guestbook.png" alt="Great alt text" loading="lazy" data-object-fit="cover">
-  </div>
+<figure class="screen mb-2">
+  <img src="/images/blog/frills-nocss-guestbook.png" alt="Screenshot of the guestbook with no CSS" loading="lazy" data-object-fit="cover">
 </figure>
 
-<figure class="card mb-2">
-  <div class="card__image screen">
-    <img src="/images/blog/frills-nocss-htmlcolours.png" alt="Great alt text" loading="lazy" data-object-fit="cover">
-  </div>
-</figure> #}
+<figure class="screen mb-2">
+  <img src="/images/blog/frills-nocss-htmlcolours.png" alt="Screenshot of the HTML colours experiment with no CSS" loading="lazy" data-object-fit="cover">
+</figure>

@@ -2,4 +2,10 @@
   width: 100%;
   aspect-ratio: 6/4;
   overflow: auto;
+  border-radius: 0.75rem;
+  position: relative;
+  z-index: 1;
+  background-color: var(--bodybg);
+  border: 6px solid var(--bodybg);
+  scrollbar-color: hsl(228, 38%, 13%) rgba(255,255,255,0.5);
 }
