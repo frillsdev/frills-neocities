@@ -35,11 +35,11 @@
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     {# Style #}
-    {# <link href="/css/main.css?nocache={{ nocache if nocache else metadata.nocache }}" rel="stylesheet"> #}
+    <link href="/css/main.css?nocache={{ nocache if nocache else metadata.nocache }}" rel="stylesheet">
     {%- if style %}
-    {# <style>{{ style | safe }}</style> #}
+    <style>{{ style | safe }}</style>
     {%- endif %}
     {# Font -#}
-    {# <link rel="preload" as="font" href="/fonts/atkinson-hyperlegible/regular.woff2"> #}
-    {# <noscript><link href="/css/noscript.css?nocache={{ nocache if nocache else metadata.nocache }}" rel="stylesheet"></noscript> #}
+    <link rel="preload" as="font" href="/fonts/atkinson-hyperlegible/regular.woff2">
+    <noscript><link href="/css/noscript.css?nocache={{ nocache if nocache else metadata.nocache }}" rel="stylesheet"></noscript>
 </head>

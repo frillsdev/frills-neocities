@@ -4,18 +4,6 @@
     <script>0</script>
     <div class="page">
         {% include "structure/global/header.njk" %}
-        <div class="dashboard__item">
-            <article class="callout callout--small">
-                <div class="callout-content">
-                    <header>
-                        <h2>April 9 is CSS Naked Day!</h2>
-                    </header>
-                    <p>Join us for the yearly festivities on April 9 of going nude on the Web!</p>
-                    <p>The idea behind CSS Naked Day is to promote web standards. Plain and simple. This includes proper use of HTML, semantic markup, a good hierarchy structure, and of course, a good old play on words. In the words of 2006, it’s time to show off your &lt;body&gt; for what it really is.</p>
-                    <a href="https://css-naked-day.github.io/" class="d-b mb-1">CSS Naked Day 2024</a>
-                </div>
-            </article>
-        </div>
         {% block content %}
             {{ content | safe }}
         {% endblock %}
