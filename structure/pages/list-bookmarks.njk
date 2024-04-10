@@ -9,7 +9,7 @@
 					{{bookmark.data.title | safe}}
 				</a>
 				{% if bookmark.data.url %}
-				<p class="card__url"><img src="https://v1.indieweb-avatar.11ty.dev/{{ bookmark.data.url | encodeUrl}}" class="card__favicon" loading="lazy">{{ bookmark.data.url }}</p>
+				<p class="card__url"><img src="https://v1.indieweb-avatar.11ty.dev/{{ bookmark.data.url | encodeUrl}}" class="card__favicon" loading="lazy" alt="">{{ bookmark.data.url }}</p>
 				{% endif %}
 				<p class="card__description">{{bookmark.data.description | safe }}</p>
 			</div>
