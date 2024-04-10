@@ -38,7 +38,7 @@ There is something super satisfying about using the absolute correct HTML elemen
 Saying that, in turning off my CSS for CSS Naked Day 2024, I still found things I wanted to make better:
 
 - Changed my homepage bio list to use a [description list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl) instead of divs (more semantics!)
-- Changed my colour palette on the homepage to use divs instead of lists to remove any semantic meaning from them. I've already hidden them from screen readers using `aria-hidden` as they're jump empty blobs that change colour based on your selected light/dark theme, but there was value in making them generic af (less semantics!)
+- Changed my colour palette on the homepage to use divs instead of lists to remove any semantic meaning from them. I've already hidden them from screen readers using `aria-hidden` as they're just empty blobs that change colour based on your selected light/dark theme, but there was value in making them generic af (less semantics!)
 
 ## Bookmarklet
 Toggle CSS on any website, any time of the year!

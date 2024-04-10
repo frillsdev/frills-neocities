@@ -556,7 +556,7 @@ scripts: '<script>
     {% if link.type == "button" %}
     <li class="links__image">
       <a href="{{link.href}}">
-          <img src="/images/buttons/{{link.src}}" alt="{{link.alt}}">
+          <img src="/images/buttons/{{link.src}}" alt="{{link.name}}">
       </a>
     </li>
     {% else %}
@@ -593,7 +593,7 @@ scripts: '<script>
     {% if tool.type == "button" %}
     <li class="links__image">
       <a href="{{tool.href}}">
-          <img src="/images/buttons/{{tool.src}}" alt="{{tool.alt}}">
+          <img src="/images/buttons/{{tool.src}}" alt="{{tool.name}}">
       </a>
     </li>
     {% else %}
@@ -612,7 +612,7 @@ scripts: '<script>
     {% if bookmark.type == "button" %}
     <li class="links__image">
       <a href="{{bookmark.href}}">
-          <img src="/images/buttons/{{bookmark.src}}" alt="{{bookmark.alt}}">
+          <img src="/images/buttons/{{bookmark.src}}" alt="{{bookmark.name}}">
       </a>
     </li>
     {% else %}
