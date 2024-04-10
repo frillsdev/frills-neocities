@@ -6,6 +6,8 @@ eleventyNavigation:
   emoji: <span class="emoji" aria-hidden="true">🌷</span>
   order: 1
 style: '@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");'
+scripts: '<link rel="stylesheet" href="/css/pages/about.css">'
+nocache: reboot
 ---
 {% extends 'structure/templates/page-empty.njk'%}
 {% import "structure/components/components.njk" as macro with context %}
@@ -49,7 +51,7 @@ style: '@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=
 				</div>
 			</div>
 			<div class="piccy">
-				<img src="/images/collections/avatars/andycarolan.png">
+				<img src="/images/collections/avatars/andycarolan.png" alt="Avatar of a woman with brown hair, styled in spacebuns. Wearing pink dungarees and a pink top. In a simple line illustration style">
 			</div>
 		</div>
 
@@ -89,49 +91,49 @@ style: '@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=
 
 		<div class="bentobox">
 			<h2 class="visually-hidden">Pronouns</h2>
-			<div>she/her</div>
+			<div class="bentobox__item bentobox--pronouns bentobox--center">she/her</div>
 			<h2 class="visually-hidden">Get in contact</h2>
-			<div>
+			<div class="bentobox__item">
 				<a href="https://indieweb.social/@frills">@frills@indieweb.social</a>
 			</div>
-			<div>
+			<div class="bentobox__item">
 				fri11s [at] proton [dot] me
 			</div>
-			<div>
+			<div class="bentobox__item">
 				<a href="/guestbook">Leave a message</a>
 			</div>
-			<div>
+			<div class="bentobox__item">
 				<h2>Backstory</h2>
 				<p>An average human, with lots of hobbies and complexity. Grew up in the sticks in the South West of England, moved to Wales for love of reading complicated road signs.</p>
 				<p>Always wanted to have a small arts business, but settled as a frontend developer to pay the bills (also absolutely love it).</p>
 			</div>
-			<div>
+			<div class="bentobox__item">
 				<h2>Morality</h2>
 				<p>Strong morality compass, especially in my work. Tech for good is my goal. My focus is on web accessibility, sustainability and climate impact.</p>
 			</div>
-			<div>
+			<div class="bentobox__item">
 				<h2>Languages</h2>
 				<ul>
 					<li>English (native)</li>
 					<li>Welsh (beginner/dysgu)</li>
 				</ul>
 			</div>
-			<div>
+			<div class="bentobox__item">
 				<h2>Marital status</h2>
 				<p>Engaged 💍</p>
 			</div>
 			<h2 class="visually-hidden">Favourites</h2>
-			<div style="background-color:deeppink; color: black;">
-				Favourite colour is pink
+			<div class="bentobox__item bentobox--colour bentobox--center">
+				<span class="smolvalue">Favourite colour is</span>
+				<span class="bigvalue">pink</span>
 			</div>
-			<div>
-				Favourite food is noodles
+			<div class="bentobox__item bentobox--food bentobox--center">
+				<span class="smolvalue">Favourite food is</span>
+				<span class="bigvalue">noodles</span>
 			</div>
-			<div>
-				Favourite drink is vitamin C effervescent
-			</div>
-			<div>
-				But also tea. Tea is life.
+			<div class="bentobox__item bentobox--drink bentobox--center">
+				<span class="smolvalue">Favourite drink is</span>
+				<span class="bigvalue">black tea with oat milk</span>
 			</div>
 		</div>
 
