@@ -5,6 +5,7 @@ date: 2024-03-15
 tags:
   - personal
 rss: true
+kudos: 🩸
 ---
 
 Tonight, I am going to go and give blood.

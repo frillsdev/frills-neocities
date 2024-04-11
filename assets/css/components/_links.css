@@ -1,5 +1,5 @@
-/* Button wall */
-.buttonwall {
+/* Links */
+.links:not(li) {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -8,25 +8,25 @@
   margin: 0 0 2rem
 }
 
-.buttonwall li::marker {
+.links li::marker {
   content: '';
 }
 
-.buttonwall--highcontrast .buttonwall__item a {
+.links--highcontrast .links__item a {
   background: var(--bg) !important;
   color: var(--text) !important;
   box-shadow: inset 0 0 0 1px var(--text) !important;
   text-decoration: underline !important
 }
 
-.buttonwall__image,
-.buttonwall__item {
+.links__image,
+.links__item {
   width: 88px;
   height: 31px;
 }
 
-.buttonwall__image a,
-.buttonwall__item a {
+.links__image a,
+.links__item a {
   position: relative;
   display: flex;
   justify-content: center;
@@ -37,14 +37,14 @@
   backface-visibility: hidden;
 }
 
-.buttonwall__image img {
+.links__image img {
   display: block;
   width: 88px;
   height: 31px;
   image-rendering: pixelated;
 }
 
-.buttonwall__item a {
+.links__item a {
   width: 100%;
   height: 100%;
   background: #fff;
@@ -57,9 +57,10 @@
   line-height: 1.1;
   position: relative;
   padding: 2px;
+  backface-visibility: hidden;
 }
 
-.buttonwall__item a::before {
+.links__item a::before {
   content: '';
   border-top: 2px solid white;
   border-left: 2px solid white;
@@ -73,13 +74,13 @@
   mix-blend-mode: soft-light;
 }
 
-.buttonwall__item a:active,
-.buttonwall__item a:focus,
-.buttonwall__item a:hover,
-.buttonwall__image a:active,
-.buttonwall__image a:focus,
-.buttonwall__image a:hover {
-  transform: translate(2px, 2px);
+.links__item a:active,
+.links__item a:focus,
+.links__item a:hover,
+.links__image a:active,
+.links__image a:focus,
+.links__image a:hover {
+  transform: translate(2px, 2px) translateZ(0);
   text-decoration: none;
   z-index: 1;
 }

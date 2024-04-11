@@ -93,7 +93,7 @@ blockquote cite {
   display: block;
   margin-top: 1rem;
   font-style: normal;
-  color: var(--subtext);
+  color: var(--quote);
 }
 
 blockquote cite a:link,

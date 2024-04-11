@@ -7,6 +7,7 @@ tags:
 - recipe
 rss: true
 webmention: https://jamesg.blog/2024/03/21/eggs-and-coffee/
+kudos: 🥣
 ---
 {% import "structure/components/components.njk" as macro with context %}
 

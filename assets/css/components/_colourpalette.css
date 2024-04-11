@@ -1,0 +1,69 @@
+.colourpalette {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.colourpalette div::marker {
+  content: '';
+}
+
+.colourpalette div {
+  aspect-ratio: 1 / 1;
+  width: 2rem;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.colourpalette div:nth-child(1) {
+  mask-image: url('/images/masks/diamond.svg');
+}
+.colourpalette div:nth-child(2) {
+  mask-image: url('/images/masks/star2.svg');
+}
+.colourpalette div:nth-child(3) {
+  mask-image: url('/images/masks/triangle.svg');
+}
+.colourpalette div:nth-child(4) {
+  mask-image: url('/images/masks/pentagon.svg');
+}
+.colourpalette div:nth-child(5) {
+  mask-image: url('/images/masks/logo-x.svg');
+}
+.colourpalette div:nth-child(6) {
+  mask-image: url('/images/masks/square.svg');
+}
+.colourpalette div:nth-child(7) {
+  mask-image: url('/images/masks/circle.svg');
+}
+.colourpalette div:nth-child(8) {
+  mask-image: url('/images/masks/square.svg');
+}
+.colourpalette div:nth-child(9) {
+  mask-image: url('/images/masks/hexagon.svg');
+}
+.colourpalette div:nth-child(10) {
+  mask-image: url('/images/masks/logo-x.svg');
+}
+.colourpalette div:nth-child(11) {
+  mask-image: url('/images/masks/moon.svg');
+}
+.colourpalette div:nth-child(12) {
+  mask-image: url('/images/masks/triangle.svg');
+}
+.colourpalette div:nth-child(13) {
+  mask-image: url('/images/masks/pentagon.svg');
+}
+.colourpalette div:nth-child(14) {
+  mask-image: url('/images/masks/star2.svg');
+}
+.colourpalette div:nth-child(15) {
+  mask-image: url('/images/masks/logo-x.svg');
+}
+.colourpalette div:nth-child(16) {
+  mask-image: url('/images/masks/circle.svg');
+}
