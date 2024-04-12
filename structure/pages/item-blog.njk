@@ -61,7 +61,7 @@
             {% endfor %}
         </ol>
         {% endif%}
-        <form class="webmentions__form" action="https://webmention.io/www.frills.dev/webmention" method="post">
+        <form class="webmentions__form" action="https://webmention.io/frills.dev/webmention" method="post">
             <label for="form-webmention-source">Have you published your own post mentioning this one? Let me know the URL</label>
             <div class="webmentions__formgroup">
                 <input id="form-webmention-source" type="url" name="source" placeholder="https://your-website.com/blog-post" required="required"> <input type="hidden" name="target" value="{{metadata.url + page.url}}">

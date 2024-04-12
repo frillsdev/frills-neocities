@@ -87,9 +87,3 @@ How about you? What do you have for breakfast? What does breakfast mean to you?
 ---
 
 This blog post is in response to <a href="https://jamesg.blog/2024/03/21/eggs-and-coffee/" rel="webmention">Eggs and coffee by James' Coffee Blog</a>. James talks about his morning ritual, being intentional and listening to the outside world.
-
----
-
-## Responses
-
-- <a href="https://starbreaker.org/blog/personal/ideal-breakfast/">Starbreaker - Ideal Breakfast?</a>
