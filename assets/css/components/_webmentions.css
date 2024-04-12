@@ -1,0 +1,44 @@
+.webmentions {
+  position: relative;
+  padding-top: 40px;
+  margin-top: 30px;
+  background-color: var(--bodybg);
+  padding: 1rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.webmentions::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, var(--logo-x), var(--logo-anim-1), var(--logo-anim-2), var(--logo-anim-3), var(--logo-anim-4), var(--logo-anim-5), var(--logo-anim-6));
+}
+
+
+.webmentions__formgroup {
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+}
+.webmentions__form label {
+  margin-bottom: 0.5rem;
+}
+.webmentions__formgroup input {
+  border-radius:  0.5rem 0 0 0.5rem;
+  margin-bottom: 0;
+  background: var(--bg);
+}
+.webmentions__formgroup button {
+  border-radius:  0 0.5rem 0.5rem 0;
+  box-shadow: none;
+  background: var(--input-border);
+}
+.webmentions__formgroup button:hover,
+.webmentions__formgroup button:focus,
+.webmentions__formgroup button:active {
+  transform: none;
+  background: var(--input-border);
+}

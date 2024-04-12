@@ -49,3 +49,7 @@ hr, .hr {
   border-bottom: 2px solid var(--separator);
   margin: 2rem 0;
 }
+
+article header h1 {
+  margin-bottom: 0;
+}
