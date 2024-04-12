@@ -11,7 +11,7 @@ nocache: honey-i-nuked-the-css
 
 It's the 9th of April, which I learnt this morning, is CSS Naked Day.. heck yeah am I participating in that internet experiment!
 
-👉 [See who else is participating in CSS Naked Day 2024](https://css-naked-day.github.io/2024.html).
+👉 [See other CSS Naked Day 2024 participants](https://css-naked-day.github.io/2024.html).
 
 Code semantics are the shit. Removing the CSS from your website is an easy way to highlight what you need to fix.
 
