@@ -1,11 +1,11 @@
 name: Grab webmentions daily
 on:
   schedule:
-    - cron: 13 0 * * *
+    - cron: 0 13 * * *
 
 env:
   FORCE_COLOR: 1
-  node_version: 16
+  node_version: 21
 
 concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
