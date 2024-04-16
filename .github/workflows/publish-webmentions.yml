@@ -1,9 +1,7 @@
-name: Deploy to neocities
-
+name: Grab webmentions daily
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: 0 13 * * *
 
 env:
   FORCE_COLOR: 1
