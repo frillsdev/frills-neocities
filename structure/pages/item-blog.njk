@@ -49,13 +49,15 @@
                 💖
                 {% elseif mention['wm-property'] == "mention-of" %}
                 ✏️
+                {% else %}
+                🗨️
                 {% endif %}
                 <a href="{{mention.url}}">
-                    {% if mention.author.name %}
+                    {%- if mention.author.name -%}
                     {{mention.author.name}}
-                    {% else %}
+                    {%- else -%}
                     {{mention.url}}
-                    {% endif %}
+                    {%- endif -%}
                 </a>
             </li>
             {% endfor %}
