@@ -48,3 +48,8 @@
   opacity: 0.75!important;
   font-size: 0.7rem;
 }
+
+.statuslol em {
+  color: inherit;
+  font-style: italic;
+}
