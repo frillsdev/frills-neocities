@@ -68,7 +68,16 @@ scripts: '
 		modifiers = 'callout--small callout--neocities bg-wiggly',
 		emoji = '<img src="/images/neomoji.png" alt="Cat emoji holding a paintbrush and spanner">',
 		header = '<h2><a href="https://neocities.org/site/fri11s" class="">Neocities profile</a></h2>',
-		body = '<p class="small">Follow me for updates!</p>'
+		body = '<p class="small">Follow me for site updates!</p>'
+	)}}
+	</article>
+	<article class="dashboard__item">
+	{{ macro.callout(
+		element = 'div',
+		modifiers = 'callout--small callout--mastodon bg-dots',
+		emoji = '<img src="/images/emoji/elephant_3d.png" alt="Elephant emoji">',
+		header = '<h2><a href="https://indieweb.social/@frills" class="">Mastodon</a></h2>',
+		body = '<p class="small">Follow me for toots!</p>'
 	)}}
 	</article>
 	<div class="dashboard__item noscriptHide">
@@ -101,10 +110,6 @@ scripts: '
 					<a href="https://www.goodreads.com/book/show/76713323-empire-of-storms" class="hidden">Empire of Storms - Sarah J Maas</a>
 					<small class="d-b subtext">Started 14th Jan 2024</small>
 				</li>
-				<li>
-					<a href="https://www.goodreads.com/book/show/50263828-this-book-could-save-your-life" class="hidden">This Book Could Save Your Life: The Science of Living Longer Better</a>
-					<small class="d-b subtext">Started 21th Feb 2024</small>
-				</li>
 			</ol>
 			'
 		)}}
@@ -134,11 +139,11 @@ scripts: '
 		{%- set latestBookmark = collections.bookmarks | reverse | first -%}
 		{%- set latestChangelog = collections.changelog | reverse | first -%}
 		<div class="h-sm">
-			<h3>📝 Blog</h3>
+			<h3>Blog</h3>
 			<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
-			<h3>🧪 Experiment</h3>
+			<h3>Experiment</h3>
 			<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
-			<h3>🛠️ Changelog</h3>
+			<h3>Changelog</h3>
 			<div class="description">
 				{{latestChangelog.content|safe}}
 			</div>

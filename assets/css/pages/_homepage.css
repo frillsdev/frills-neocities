@@ -264,6 +264,32 @@
   bottom: 0;
 }
 
+.callout--mastodon {
+  background-color: var(--callout-info);
+  color: var(--accentcontrast);
+  align-items: center;
+  position: relative;
+}
+
+.callout--mastodon a {
+  color: var(--accentcontrast);
+}
+
+.callout--mastodon a:hover,
+.callout--mastodon a:focus,
+.callout--mastodon a:active {
+  color: var(--accentcontrast);
+}
+
+.callout--mastodon a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 #omglolh {
   display: none;
   padding-bottom: 5px;
