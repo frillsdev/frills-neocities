@@ -1,4 +1,5 @@
-.ribbon {
+.ribbon,
+.ribbon:visited {
   text-align: center;
   transform: rotate(45deg);
   position: relative;
@@ -11,6 +12,13 @@
   font-size: 0.6rem;
   font-weight: bold;
   display: block;
+}
+
+
+.ribbon:hover,
+.ribbon:focus,
+.ribbon:active {
+  color: var(--accentcontrast);
 }
 
 .ribbon-wrapper {
