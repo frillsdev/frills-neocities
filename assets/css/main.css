@@ -34,6 +34,7 @@
 @import url('./components/_webmentions.css');
 @import url('./components/_colourpalette.css');
 @import url('./components/_screen.css');
+@import url('./components/_ribbon.css');
 
 @import url('./pages/_homepage.css');
 @import url('./pages/_bloglist.css');

@@ -1,7 +1,7 @@
 ---
 title: Home
 rss: false
-nocache: 'lol'
+nocache: 'noscript'
 scripts: '
 	<script>
 	const n=new Date,h=n.getHours(),d=n.toLocaleTimeString("en-GB",{timeZone:"Europe/London",hour:"2-digit",hour12:!0,minute:"2-digit"});e=d.replace(/\s/g,""),document.querySelector("#localTime").innerHTML=e;const dhr=n.toLocaleTimeString("en-GB",{timeZone:"Europe/London",hour:"2-digit"});let st,stT;dhr>=0&&dhr<7?(st="offline",stT="Sleepin’"):dhr>=7&&dhr<9?(st="away",stT="Gettin’ ready!"):dhr>=9&&dhr<17?(st="donotdisturb",stT="Workin’"):dhr>=17&&dhr<23?(st="online",stT="Online now!"):dhr>=23&&dhr<24&&(st="offline",stT="Sleepin’"),document.querySelector("#status").dataset.status=st,document.querySelector("#statusText").innerText=stT;let m;h>=0&&h<12?m="Good morning":h>=12&&h<17?m="Good afternoon":h>=17&&h<24&&(m="Good evening"),document.querySelector("#greetingText").innerHTML=m;
@@ -20,7 +20,7 @@ scripts: '
 
 {%- block main -%}
 <div class="dashboard">
-	<noscript>
+	{# <noscript>
 		<div class="dashboard__item">
 		{{ macro.callout(
 			element = 'article',
@@ -31,7 +31,7 @@ scripts: '
 				<p>This website uses JavaScript, please read the <a href="/colophon#javascript">Colophon</a> to understand why</p>
 		') }}
 		</div>
-	</noscript>
+	</noscript> #}
 	<article class="dashboard__item dashboard__item--gallery">
 		<h2 class="visually-hidden">Gallery</h2>
 		<figure>
@@ -44,6 +44,7 @@ scripts: '
 			<img src="https://piclog.blue/latest.php?id=152" alt="" loading="lazy" width="100" height="100">
 		</figure>
 	</article>
+	<div class="br"></div>
 	<div class="dashboard__item av-br">
 		<h2 class="visually-hidden">Intro</h2>
 		<p><span id="greetingText">Greetings</span>, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you.</p>
@@ -83,7 +84,7 @@ scripts: '
 	<div class="dashboard__item noscriptHide">
 		<div class="callout h-sm">
 			<header id="omglolh"><h2>Latest status</h2></header>
-			<script src="https://status.lol/frills.js?time&link&fluent&pretty"></script><script>const omglolh=document.querySelector("#omglolh");document.querySelector(".statuslol_content").prepend(omglolh);</script>
+			{# <script src="https://status.lol/frills.js?time&link&fluent&pretty"></script><script>const omglolh=document.querySelector("#omglolh");document.querySelector(".statuslol_content").prepend(omglolh);</script> #}
 		</div>
 	</div>
 	<div class="dashboard__item">

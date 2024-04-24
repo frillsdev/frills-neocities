@@ -2,9 +2,9 @@
 	<h2 class="visually-hidden">Bio</h2>
 	<div class="avatar">
 		<div class="avatar__script swapAvatar">
-			<noscript>
+			{# <noscript> #}
 				<img class="avatar__noscript" src="/images/pic.png" alt="Black and white avatar illustration: a smiling woman with shoulder length dark hair, large eyes and sparkles surrounding her" width="200" height="200">
-			</noscript>
+			{# </noscript> #}
 		</div>
 		<div class="avatar__extra">
 			<button id="refreshAvatar" class="button hidden noscriptHide">
@@ -32,10 +32,10 @@
         <dd class="biogrid__content">
             Wales, UK
         </dd>
-        <dt class="biogrid__icon">
+        <dt class="biogrid__icon noscriptHide">
             <span class="emoji" role="img" aria-label="Local time">⏰</span>
         </dt>
-        <dd class="biogrid__content">
+        <dd class="biogrid__content noscriptHide">
             <span id="localTime" class="lowercase" title="British Summer Time">12:00pm</span> (GMT)
         </dd>
         <dt class="biogrid__icon">
