@@ -57,7 +57,8 @@ a:focus {
   color: var(--linkhover)
 }
 
-a.hidden {
+a.hidden,
+a.hidden:visited {
   text-decoration: inherit;
   color: inherit;
 }
