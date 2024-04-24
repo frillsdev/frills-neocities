@@ -4,7 +4,7 @@
 	"description": "Personal Website of Frills",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
-		"watch": "npx @11ty/eleventy --serve --quiet",
+		"watch": "npx @11ty/eleventy --serve --quiet --port=8888",
 		"debug": "DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
