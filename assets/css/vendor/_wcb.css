@@ -7,10 +7,6 @@
   color: var(--text)!important;
 }
 
-#wcb #wcb_2, #wcb #wcb_a, #wcb #wcb_g, #wcb_p {
-  display: flex;
-}
-
 #wcb #wcb_g {
   color: black;
 }

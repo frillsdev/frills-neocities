@@ -68,14 +68,6 @@
   }
 }
 
-.br {
-  break-after: always;
-  margin-bottom: 1rem;
-  display: block;
-  width: 100%;
-  height: 1px;
-}
-
 .fl-r {
   float: right;
 }

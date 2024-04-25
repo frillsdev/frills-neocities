@@ -19,8 +19,8 @@ scripts: '
 {%- endblock -%}
 
 {%- block main -%}
-<div class="dashboard">
-	{# <noscript>
+<div class="dashboard dashboard--fade">
+	<noscript>
 		<div class="dashboard__item">
 		{{ macro.callout(
 			element = 'article',
@@ -31,7 +31,7 @@ scripts: '
 				<p>This website uses JavaScript, please read the <a href="/colophon#javascript">Colophon</a> to understand why</p>
 		') }}
 		</div>
-	</noscript> #}
+	</noscript>
 	<article class="dashboard__item dashboard__item--gallery">
 		<h2 class="visually-hidden">Gallery</h2>
 		<figure>
@@ -44,7 +44,6 @@ scripts: '
 			<img src="https://piclog.blue/latest.php?id=152" alt="" loading="lazy" width="100" height="100">
 		</figure>
 	</article>
-	<div class="br"></div>
 	<div class="dashboard__item av-br">
 		<h2 class="visually-hidden">Intro</h2>
 		<p><span id="greetingText">Greetings</span>, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you.</p>
@@ -84,7 +83,7 @@ scripts: '
 	<div class="dashboard__item noscriptHide">
 		<div class="callout h-sm">
 			<header id="omglolh"><h2>Latest status</h2></header>
-			{# <script src="https://status.lol/frills.js?time&link&fluent&pretty"></script><script>const omglolh=document.querySelector("#omglolh");document.querySelector(".statuslol_content").prepend(omglolh);</script> #}
+			<script src="https://status.lol/frills.js?time&link&fluent&pretty"></script><script>const omglolh=document.querySelector("#omglolh");document.querySelector(".statuslol_content").prepend(omglolh);</script>
 		</div>
 	</div>
 	<div class="dashboard__item">
@@ -131,9 +130,9 @@ scripts: '
 			'
 		)}}
 	</div>
-	<article class="dashboard__item dashboard__item--card dashboard__item--latestposts">
+	<section class="dashboard__item dashboard__item--card dashboard__item--latestposts" aria-labelledby="latestposts--title">
 		<header>
-			<h2>Latest posts</h2>
+			<h2 id="latestposts--title">Latest posts</h2>
 		</header>
 		{%- set latestBlog = collections.posts | reverse | first -%}
 		{%- set latestExperiment = collections.experiments | reverse | first -%}

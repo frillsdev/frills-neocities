@@ -12,6 +12,10 @@
   }
 }
 
+.dashboard--fade {
+  animation: fadeIn forwards 1s;
+}
+
 .dashboard.w-100 {
   max-width: 100%;
 }
@@ -105,4 +109,17 @@
 .dashboard__item--latestposts .description pre {
   font-size: inherit;
   padding: 0.1rem 0.2rem 0.2rem 0.2rem;
+}
+
+.dashboard__item--latestposts .description a,
+.dashboard__item--latestposts .description a:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.dashboard__item--latestposts .description a:hover,
+.dashboard__item--latestposts .description a:focus,
+.dashboard__item--latestposts .description a:active {
+  color: var(--linkhover);
+  text-decoration: underline wavy 2px;
 }
