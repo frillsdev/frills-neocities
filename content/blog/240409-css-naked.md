@@ -51,19 +51,3 @@ Here is what frills.dev looked like on CSS Naked Day 2024!
 <figure class="screen mb-2">
   <img src="/images/blog/frills-nocss-homepage.png" alt="Screenshot of the homepage with no CSS" loading="lazy" data-object-fit="cover">
 </figure>
-
-<figure class="screen mb-2">
-  <img src="/images/blog/frills-nocss-blog.png" alt="Screenshot of the blog listing with no CSS" loading="lazy" data-object-fit="cover">
-</figure>
-
-<figure class="screen mb-2">
-  <img src="/images/blog/frills-nocss-links.png" alt="Screenshot of the links page with no CSS" loading="lazy" data-object-fit="cover">
-</figure>
-
-<figure class="screen mb-2">
-  <img src="/images/blog/frills-nocss-guestbook.png" alt="Screenshot of the guestbook with no CSS" loading="lazy" data-object-fit="cover">
-</figure>
-
-<figure class="screen mb-2">
-  <img src="/images/blog/frills-nocss-htmlcolours.png" alt="Screenshot of the HTML colours experiment with no CSS" loading="lazy" data-object-fit="cover">
-</figure>

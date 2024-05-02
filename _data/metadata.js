@@ -1,7 +1,7 @@
 module.exports = {
 	title: "Frills",
 	url: "https://frills.dev",
-	avatar: "https://frills.dev/images/collections/avatars/avatar.png",
+	avatar: "https://frills.dev/images/avatars/avatar.png",
 	nocache: "soup",
 	language: "en-GB",
 	description: "Personal website of Frills",
