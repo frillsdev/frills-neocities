@@ -40,6 +40,7 @@
   line-height: 1.5;
   width: 84px;
   flex: 0 0 84px;
+  text-align: center;
 }
 
 .callout-content header {
