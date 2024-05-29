@@ -77,9 +77,14 @@ p {
   margin: 0 0 1rem
 }
 
+.highlight,
 em {
   font-style: normal;
   color: var(--highlight);
+}
+
+.small {
+  font-size: 80%;
 }
 
 blockquote {
@@ -106,8 +111,6 @@ blockquote cite::before {
   content: '— ';
   color: var(--quote);
 }
-
-
 
 blockquote p:last-child {
   margin-bottom: 0;

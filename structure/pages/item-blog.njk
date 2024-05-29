@@ -69,6 +69,7 @@
                 <input id="form-webmention-source" type="url" name="source" placeholder="https://your-website.com/blog-post" required="required"> <input type="hidden" name="target" value="{{metadata.url + page.url}}">
                 <button type="submit">Send</button>
             </div>
+            <em class="small formhelp pt-1 d-b">Please note that a webmention has been sent when the form submission takes you to a page that says 'pending'. Also webmentions do not publish instantly 🙂</em>
         </form>
     </aside>
 {%- endblock -%}
