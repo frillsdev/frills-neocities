@@ -72,6 +72,10 @@
   float: right;
 }
 
+.d-n {
+  display: none;
+}
+
 .d-b {
   display: block;
 }
