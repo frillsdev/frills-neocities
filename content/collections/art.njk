@@ -1,0 +1,80 @@
+---
+title: Art
+description: Collection of drawings and doodles
+eleventyNavigation:
+  key: Art
+  emoji: <span class="emoji" aria-hidden="true">🎨</span>
+  order: 2
+rss: true
+date: 2024-06-03
+---
+{% extends 'structure/templates/page-full.njk'%}
+{% import "structure/components/components.njk" as macro with context %}
+
+{% block main %}
+
+{% set arts = [
+  {
+  "name": "tba",
+  "src": "frills-nel.png"
+  }, {
+  "name": "tba",
+  "src": "frills-guide.png"
+  }, {
+  "name": "tba",
+  "src": "frills-pixlul.png",
+  "class": "pixelated"
+  }, {
+  "name": "tba",
+  "src": "gummy-b.jpg"
+  },{
+  "name": "tba",
+  "src": "gummy-b-mint.png"
+  }, {
+  "name": "tba",
+  "src": "gummy-purple.png"
+  }, {
+  "name": "tba",
+  "src": "frills-snowrock.png",
+  "class": "pixelated p-1"
+  }, {
+  "name": "tba",
+  "src": "peachtober-tiger.jpg"
+  }, {
+  "name": "tba",
+  "src": "peachtober-bow.jpg"
+  }, {
+  "name": "tba",
+  "src": "peachtober-cowboy.jpg"
+  }, {
+  "name": "tba",
+  "src": "frills-maggie.png"
+  }, {
+  "name": "tba",
+  "src": "potion-1.jpg"
+  }, {
+  "name": "tba",
+  "src": "potion-2.jpg"
+  }, {
+  "name": "tba",
+  "src": "potion-3.jpg"
+  }, {
+  "name": "tba",
+  "src": "frills-dreams.png"
+  }, {
+  "name": "tba",
+  "src": "frills-stuckinabox.png"
+  }
+] %}
+
+<section class="dashboard w-100">
+  {% for art in arts %}
+    <article class="dashboard__item">
+      <figure class="card">
+        <img src="/images/art/{{art.src}}" alt="{{art.name}}" {%if art.class%}class="{{art.class}}{%endif%}">
+      </figure>
+    </article>
+  {% endfor %}
+</section>
+
+{% endblock %}
