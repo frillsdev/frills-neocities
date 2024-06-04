@@ -120,6 +120,12 @@ button.dotted:active {
   text-decoration: underline 2px;
 }
 
+/* Button groups */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
 
 .copyButton {
   font-size: 0;
