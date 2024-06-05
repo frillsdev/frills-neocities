@@ -5,8 +5,40 @@ eleventyNavigation:
   key: About
   emoji: <span class="emoji" aria-hidden="true">🌷</span>
   order: 1
-style: '@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");'
-scripts: '<link rel="stylesheet" href="/css/pages/about.css">'
+style: '@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("/css/pages/about.css");'
+scripts: '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script>
+	const inspireButton = document.getElementById("inspire");
+	inspireButton.addEventListener("click", function () {
+		var defaults = {
+			spread: 360,
+			ticks: 50,
+			gravity: 0,
+			decay: 1,
+			startVelocity: 10,
+			colors: ["#ffd700", "#ffe34a", "#ffed89", "#ffa000"]
+		};
+		function shoot() {
+			confetti({
+				...defaults,
+				particleCount: 100,
+				scalar: 1.2,
+				shapes: ["star"]
+			});
+			confetti({
+				...defaults,
+				particleCount: 50,
+				scalar: 0.75,
+				shapes: ["circle"]
+			});
+		}
+		setTimeout(shoot, 0);
+		setTimeout(shoot, 100);
+		setTimeout(shoot, 200);
+		setTimeout(shoot, 300);
+	});
+</script>'
 nocache: reboot
 ---
 {% extends 'structure/templates/page-empty.njk'%}
@@ -91,17 +123,8 @@ nocache: reboot
 
 		<div class="bentobox">
 			<div class="bentobox-column-1">
-				<div class="bentobox__item">
-					<label>
-						<input type="checkbox">
-						<span>Inspiration</span>
-					</label>
-				</div>
-				<div class="bentobox__item">
-					<label>
-						<input type="checkbox">
-						<span>Proficiency bonus</span>
-					</label>
+				<div class="bentobox__item bentobox--inspiration">
+					<button class="button" id="inspire">Inspiration</button>
 				</div>
 				<div class="bentobox__item bentobox--pronouns bentobox--center">
 					<h2 class="visually-hidden">Pronouns</h2>
