@@ -1,6 +1,5 @@
 ---
 title: Shooting satellite
-description: A little how-to, based on W3C recommendations
 date: 2024-06-04 01:27:00
 tags:
   - personal
