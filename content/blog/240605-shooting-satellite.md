@@ -1,0 +1,19 @@
+---
+title: Shooting satellite
+description: A little how-to, based on W3C recommendations
+date: 2024-06-04 01:27:00
+tags:
+  - personal
+rss: true
+kudos: 🌠
+---
+
+I'm led horizontal in bed, staring out the window at the sparkling stars. It's a clear night and I can't sleep. One star in particular sits perfectly in the center of vision. She's winking at me.
+
+A shooting star, or something temporarily shiny, moves in and out just below the one star I'm making eye contact with.
+
+It's not the <attr title="International Space Station">IIS</attr>, that is traveling over South Africa right now. It was in and out in a few seconds like a shooting star, but it was probably another satellite.
+
+There are 9,900 objects orbiting Earth today.
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAEcklEQVR4Xu2dvZLVMAyF2R6oKXgCagrev6Kg5gkoqBf6C97BMyabxLJ09Gebitm1ZOl8kpzk5sLTm/0nlAJPoaJJFMzj+4/H06ePcP3gDiNqihav+kP7LdqxgLx9/+Hx+/kny5YDTCNxThytjSSmO/3MRJUIIElesq+GbYVxBSU8EM3xoCE4xWfKDikgXmbq34OzJtD+jJJ4xjXdDvEeF9odYn0e9orkFghCDARQhI+eEFF+H75DilAtEK+Kttq3CyRK5dQ4rIRp8+5dGd1pNNrdqYBIhJEWllUhpABSxCiCtjejZz+Tih7BPgWQ47iyqlYPQKmAFIFmhsF+luVROZ6H+lm+o4c1VbN0HUJNjLpOS1jq/sd1SwNB3Phyhb+ygwEZne1RKtM7juP+ECCc+wNvIdCVPeKvLV4VIKNXPxFHxYig0rUFyK+v317clKfZ7VNsSIdwAlyxQ9qb2fr3Aqb9bP4VECuhrPbhFIu2jcnI0k5iJv8pPzHMAgDd6W5nSBbB7+LUuDiZHki9otF4qa3A2h0yQ2vd5ADpEI3WnVz3y/QgQDRadwMRKGDVIeh5LUhZzRTWIWoR/nNsBf0uj9EHqNXXiF0aIN5jkfMAlVOkYYGMVBUncY6NRUxhgXAEm8FmAwlGcQNZBYjFvA2mJSSc2w6RiCqxhWSW1InKyLK6RLTQnHozSl3XixkKJMs7uCjxeuJyfg8FcrwzjTq2pgTSSyo6jF78nOoesbnaX6VDSmDRgLSv2lThzn42IqpkrTkQSbAcW2rFtw8p3335/N93Tjj7cmzuHpSqdQg1UKqQVH+UdWXPCsOrk8N2iBeQ9vvvFIjtmEN8Ph8OSDu/PWf5CAyLtUuOLAthuXtsIFzliHajZ5Q7EGJe3WUeZ1EvKM4jpA2kp6rw98t1iNfFwajQVK7pO6QKE3FkUSG06zYQjmqKNmmBnH0byfLfgdRiYgpEY6xozfIrwTVyII0s7Y1RFWYJxOLtSdMOQUHw9KNdqGIglhXqCcJqbzEQq0BX2WcDCUY6JRDtOe7JyA3IPnvOsbsB8apCr+6iFuByQLwKgbqvGhCvSqQmHnWdGpCoCUePawMJRig0kBXH3gaSuUMsnnZWfSz38mACe1GuOuK8UUFJPMJL0dR7hmM+VDvYu71HR9QAKCCOa6QdohnbVT4je8I6pAaj1SFtstxD3SK2q+4YgXIGdtpDXSoMtavbz/bbcV7sOZ/xhwZCFSXCOlRXLg2EOxIRZ8iVj2WBSC8azgRFjMllgRRB0R2CGJ23QCIGjEg6so9LIBotHVmIKLG5dQhi3kYRERnH0mcIUkiUrw0EpSTIzwYCEnLEzd243kBGlDRYu4EYiDyyxVRANO+brK4K1YBoinNWcbPcN00DpFTw8T/YGhkVx7XWBVX3hwOZ7WvKEqgcWziQGoRVhc325c/0QGoBWB26d1WPKEI1IJx2ldh4A0FdVJwCQZCWiJvVFqHbKyAo0llF9Y57mpHlLSRq/w0EpSTIzwYCEhLl5g+DRqKSKRdaUAAAAABJRU5ErkJggg==" alt="Pixel stars" class="full-width pixelated">
