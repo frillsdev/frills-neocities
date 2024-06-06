@@ -57,7 +57,7 @@ function sparkles(pattern = "confetti1") {
 }
 
 // Button to speak
-const buttonSpeak = (button) => {
+let buttonSpeak = (button) => {
     button.onclick = (event) => {
         event.preventDefault();
         let speak = event.target.dataset.speak;
