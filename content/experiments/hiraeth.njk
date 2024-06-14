@@ -100,14 +100,14 @@ scripts: '
 ---
 
 {% block main %}
-<div class="splide mb-2" aria-label="Image slider">
+<div class="splide mb-2 noscriptHide" aria-label="Image slider">
     <div class="splide__overlay">
         <h1 class="visually-hidden">Hiraeth</h1>
         <img src="/images/experiments/hiraeth/hiraeth.svg" alt="">
     </div>
-  <div class="splide__track">
-		<ul class="splide__list">
-			<li class="splide__slide">
+    <div class="splide__track">
+        <ul class="splide__list">
+            <li class="splide__slide">
                 <img src="/images/experiments/hiraeth/hiraeth-1.png" alt="Deep blue sea with white seam foam surrounds a small outcrop on a bright and sunny day." loading="lazy">
             </li>
             <li class="splide__slide">
@@ -164,14 +164,24 @@ scripts: '
             <li class="splide__slide">
                 <img src="/images/experiments/hiraeth/hiraeth-19.png" alt="A fallen leaf and dirt covered path between sheets of bluebells and trees." loading="lazy">
             </li>
-		</ul>
-  </div>
+        </ul>
+    </div>
     <button class="splide__toggle" type="button">
-	  <span class="splide__toggle__play">Play</span>
-	  <span class="splide__toggle__pause">Pause</span>
-  </button>
+        <span class="splide__toggle__play">Play</span>
+        <span class="splide__toggle__pause">Pause</span>
+    </button>
 </div>
-<div>
+<noscript>
+    <div class="splide is-initialized mb-2">
+        <div class="splide__overlay">
+            <h1 class="visually-hidden">Hiraeth</h1>
+            <img src="/images/experiments/hiraeth/hiraeth.svg" alt="">
+        </div>
+        <div class="splide__track">
+            <img src="/images/experiments/hiraeth/hiraeth-1.png" alt="Deep blue sea with white seam foam surrounds a small outcrop on a bright and sunny day." loading="lazy">
+        </div>
+    </div>
+</noscript>
 <div class="container">
     <div class="reading-width">
         <div class="hiraeth-note">
@@ -188,5 +198,4 @@ scripts: '
         <p>Submission for the <a href="https://tilde.32bit.cafe/~ribose/events/destination/">32bit.cafe Community Code Jam #4: Destination Vacation</a>.</p>
         </div>
     </div>
-</div>
 {% endblock %}
