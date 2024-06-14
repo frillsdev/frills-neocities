@@ -7,14 +7,14 @@
 .page:has(.page__empty) .page__header {
   max-width: 1600px;
   margin-inline: auto;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .page:has(.page__empty) .page__footer {
   max-width: 1600px;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -22,8 +22,8 @@
   .page__empty .container,
   .page:has(.page__empty) .page__header,
   .page:has(.page__empty) .page__footer {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
@@ -32,8 +32,8 @@
   .page__empty .container,
   .page:has(.page__empty) .page__header,
   .page:has(.page__empty) .page__footer {
-    padding-left: 56px;
-    padding-right: 56px;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 

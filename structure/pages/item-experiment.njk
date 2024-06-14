@@ -1,7 +1,16 @@
-{% extends "structure/templates/page-full.njk" %}
+{% if page_layout == 'empty'%}
+    {% extends "structure/templates/page-empty.njk" %}
+{% else %}
+    {% extends "structure/templates/page-full.njk" %}
+{% endif %}
 
 {% block main %}
     {{ content | safe }}
+
+<aside class="container">
+    <h2 class="visually-hidden">Kudos</h2>
+    <button class="button ghost large tinylytics_kudos"></button>
+</aside>
 {% endblock %}
 
 {% if bottom %}
