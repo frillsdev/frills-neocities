@@ -3,9 +3,9 @@
 {% block main %}
 <section class="bookmarks cards pt-1">
 	{% for bookmark in postslist | reverse %}
-		<article id="{{ bookmark.data.title | slugify }}" class="card">
+		<article id="{{ bookmark.data.title | slugify }}" class="card h-cite u-like-of">
 			<div class="card__content">
-				<a rel="webmention" href="{{ bookmark.data.url | url}}" class="card__title">
+				<a rel="p-name u-url" href="{{ bookmark.data.url | url}}" class="card__title">
 					{{bookmark.data.title | safe}}
 				</a>
 				{% if bookmark.data.url %}

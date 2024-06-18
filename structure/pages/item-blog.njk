@@ -13,25 +13,24 @@
     <article class="full-width h-entry">
         <header class="mb-2 reading-width">
             {% if tags.includes("changelog") %}
-            <h1>{{ page.date | readableDate }}</h1>
+            <h1 class="p-name">{{ page.date | readableDate }}</h1>
             {% else %}
-            <h1>{{title|safe}}</h1>
+            <h1 class="p-name">{{title | safe}}</h1>
             {% endif %}
             <details hidden>
                 <div class="p-author h-card">
-                    <a class="p-name u-url u-uid" href="{{metadata.url}}" rel="me">Frills</a>
-                    <img class="u-photo" src="{{metadata.avatar}}">
+                    <a class="p-author" href="{{metadata.url + page.url}}" rel="me">Frills</a>
                     <p class="p-summary">{{description}}</p>
                 </div>
             </details>
 
             {% if tags.includes("posts") %}
-            <small>Written on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-            {% if updated %} and last modified on {{updated | readableDate }}{%endif%}
+            <small>Written on <time datetime="{{ page.date | htmlDateString }}" class="dt-published">{{ page.date | readableDate }}</time>
+            {% if updated %} and last modified on <time datetime="{{ updated | htmlDateString }}" class="dt-updated">{{ updated | readableDate }}</time>{%endif%}
             </small>
             {% endif %}
         </header>
-        <div class="reading-width">
+        <div class="reading-width e-content">
             {{ content | safe }}
         </div>
         <h2 class="visually-hidden">Kudos</h2>

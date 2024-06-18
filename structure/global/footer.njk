@@ -1,13 +1,29 @@
 <div class="page__footerbg">
     <footer class="page__footer">
-        <div class=" grid grid--offset grid--footer">
-            <nav aria-label="Footer" class="page__nav">
-                <ul>
-                    <li><span class="emoji" aria-hidden="true">⬆️</span> <a href="#top">Back to top</a></li>
-                    <li><span class="emoji" aria-hidden="true">♿</span> <a href="/accessibility">Accessibility</a>
-                    <li><span class="emoji" aria-hidden="true">👩‍💻</span> <a href="/colophon">Colophon</a>
-                </ul>
-            </nav>
+        <div class="grid grid--main grid--footer">
+            <div class="content__sidebar">
+
+            </div>
+
+            <div class="page__nav">
+                <nav aria-label="Footer">
+                    <ul>
+                        <li><span class="emoji" aria-hidden="true">⬆️</span> <a href="#top">Back to top</a></li>
+                        <li><span class="emoji" aria-hidden="true">♿</span> <a href="/accessibility">Accessibility</a>
+                        <li><span class="emoji" aria-hidden="true">👩‍💻</span> <a href="/colophon">Colophon</a>
+                    </ul>
+                </nav>
+                <div class="h-card vcard">
+                    <img class="u-photo" src="{{metadata.avatar}}" alt="">
+
+                    <div class="reading-width">
+                        <p class="p-note">
+                            <span class="p-name p-nickname">Frills</span> is a <span class="p-job-title">Senior Frontend Developer and Accessibility Specialist</span> from <span class="p-country-name">Wales, UK</span>, bothered about <span class="p-role">web accessibility, sustainability and climate impact</span>.
+                        </p>
+                        {# <p class="p-summary">{{description}}</p> #}
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 </div>

@@ -1,0 +1,17 @@
+.h-card {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.u-photo {
+  width: 3rem;
+  height: auto;
+  mask-image: url('/images/masks/square.svg');
+  aspect-ratio: 1 / 1;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
