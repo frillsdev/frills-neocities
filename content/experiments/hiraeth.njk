@@ -25,23 +25,42 @@ ul.splide__pagination {
     image-rendering: pixelated;
 }
 
+.splide__arrow,
 .splide__toggle {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 2;
+    box-shadow: none!important;
+    background: var(--bg);
+    color: var(--text);
+    border-radius: 16px;
+    transition: 0.3s ease all;
+    opacity: 1;
 }
 
 .splide__arrow {
-    height: 100%;
-    width: 40%;
-    border-radius: 0;
-    box-shadow: none!important;
-    background: none;
+    width: 40px;
+    height: 40px;
+}
+
+.splide__arrow:hover,
+.splide__arrow:focus,
+.splide__arrow:active,
+.splide__toggle:hover,
+.splide__toggle:focus,
+.splide__toggle:active {
+    background: var(--bg)!important;
+    color: var(--text);
+    opacity: 1;
+}
+
+.splide__toggle {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 2;
+    padding: 0.75rem 1rem;
 }
 
 .splide__arrow svg {
-    display: none;
+fill: var(--text);
 }
 .splide__arrow:hover,
 .splide__arrow:focus,
@@ -61,6 +80,7 @@ ul.splide__pagination {
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
 }
 
 .splide__overlay img {
@@ -80,6 +100,16 @@ ul.splide__pagination {
 
 .hiraeth-note svg {
     width: 200px;
+}
+
+img.stamp {
+    width: 86px;
+    height: 44px;    
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    filter: brightness(100);
+    transform: rotate(10deg);
 }
 
 '
@@ -115,6 +145,8 @@ scripts: '
             </li>
             <li class="splide__slide">
                 <img src="/images/experiments/hiraeth/hiraeth-3.png" alt="A orangey pink sun set with a river and trees in the foreground, dimly lit." loading="lazy">
+                <a href="data:image/png;base64,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" download="stamp-hiraeth">
+                <img src="data:image/png;base64,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" alt="Download Hiraeth collectible stamp for 32bitcafe code jam" class="stamp"></a>
             </li>
             <li class="splide__slide">
                 <img src="/images/experiments/hiraeth/hiraeth-4.png" alt="A footpath tunnel that is created out of living trees with no leaves." loading="lazy">
@@ -195,7 +227,8 @@ scripts: '
                 </svg>
         </div>
 
-        <p>Submission for the <a href="https://tilde.32bit.cafe/~ribose/events/destination/">32bit.cafe Community Code Jam #4: Destination Vacation</a>.</p>
+        <p>Submission for the <a href="https://tilde.32bit.cafe/~ribose/events/destination/map.html">32bit.cafe Community Code Jam #4: Destination Vacation</a>.</p>
+        <p>Find your 'Hiraeth' collectible stamp in the image slider.</p>
         </div>
     </div>
 {% endblock %}
