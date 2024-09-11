@@ -75,12 +75,12 @@ scripts: '
 		body = '<p class="small">Follow me for toots!</p>'
 	)}}
 	</article>
-	{# <div class="dashboard__item noscriptHide">
+	<div class="dashboard__item noscriptHide">
 		<div class="callout h-sm">
 			<header id="omglolHeading"><h2>Latest status</h2></header>
 			<div id="omglolContainer"></div>
 		</div>
-	</div> #}
+	</div>
 	<div class="dashboard__item">
 		{{ macro.callout(
 			element = 'article',
@@ -170,13 +170,13 @@ scripts: '
 		</div>
 	</section>
 </div>
-{# <div id="omglolInjection">
+<div id="omglolInjection">
 	<script src="https://status.lol/frills.js?time&link&fluent&pretty"></script><script>
 		document.querySelector(".statuslol_content").prepend(document.querySelector("#omglolHeading"));
 		document.querySelector("#omglolContainer").appendChild(document.querySelector("#omglolInjection"))
 	</script>
 	<style>#omglolContainer, #omglolInjection{width: 100%;}</style>
-</div> #}
+</div>
 {%- endblock -%}
 
 {% block bottom %}
