@@ -1,0 +1,21 @@
+.avatar__script {
+  position: relative;
+}
+
+.avatar__script::before {
+  content: '';
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: 1;
+  mask-image: url(/images/masks/spooky/skull.svg);
+  mask-repeat: no-repeat;
+  mask-size: 60% auto;
+  mask-position: center;
+  background-color: white;
+  backdrop-filter: blur(10px);
+}

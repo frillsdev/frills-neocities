@@ -1,10 +1,16 @@
 /* Links */
 .links:not(li) {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1rem;
   padding: 0;
-  margin: 0 0 2rem
+  margin: 0 0 2rem;
+}
+
+@media (min-width: 576px) {
+  .links:not(li) {
+    grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
+  }
 }
 
 .links li::marker {
