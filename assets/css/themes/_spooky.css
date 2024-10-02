@@ -8,10 +8,10 @@
   --accent: OrangeRed;
   --accentcontrast: Black;
   --separator: PaleGreen;
-  --quote: PaleGreen;
+  --quote: LawnGreen;
   --interactive: OrangeRed;
   --input-bg: hsl(228, 38%, 13%);
-  --input-border: SpringGreen;
+  --input-border: LawnGreen;
   --link: OrangeRed;
   --linkaccent: hsl(328, 100%, 19%);
   --linkhover: LawnGreen;
@@ -35,7 +35,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bodybg: #1e1e1e;
-    --bg: hsl(340, 100%, 92%);
+    --bg: PeachPuff;
     --interactive: hsl(328, 100%, 44%);
     --input-bg: LavenderBlush;
     --input-border: DeepPink;
@@ -64,71 +64,31 @@
 }
 
 :root[data-scheme='light'] {
-  --bodybg: hsl(340, 100%, 95%);
-  --bg: hsl(340, 100%, 92%);
-  --interactive: hsl(328, 100%, 44%);
-  --input-bg: LavenderBlush;
+  --bodybg: #ffead7;
+  --bg: PeachPuff;
+  --highlight: OrangeRed;
+  --accent: Green;
+  --accentcontrast: White;
+  --separator: PaleGreen;
+  --quote: Indigo;
+  --interactive: OrangeRed;
+  --input-bg: PeachPuff;
   --input-border: DeepPink;
-  --separator: DeepPink;
-  --quote: hsl(328, 100%, 38%);
-  --highlight: hsl(195, 100%, 28%);
-  --accent: hsl(340, 100%, 67%);
-  --accentcontrast: Black;
-  --link: hsl(253, 100%, 37%);
-  --linkaccent: #FFB8D0;
-  --linkhover: hsl(253, 100%, 27%);
-  --linkvisited: Purple;
-  --text: hsl(253, 88%, 16%);
+  --link: Maroon;
+  --linkaccent: hsl(28.1, 53.3%, 64.7%);
+  --linkhover: Indigo;
+  --linkvisited: Maroon;
+  --text: Black;
   --subtext: DarkRed;
-  --marker: "💖";
-  --dashboard-header-bg: Gold;
-  --dashboard-text: Black;
+  --marker: "👻";
+  --dashboard-header-bg: Indigo;
+  --dashboard-text: White;
+  --callout-info: OrangeRed;
   --logo-x: Gold;
-  --logo-anim-1: BlueViolet;
+  --logo-anim-1: Indigo;
   --logo-anim-2: BlueViolet;
   --logo-anim-3: OrangeRed;
   --logo-anim-4: OrangeRed;
   --logo-anim-5: Green;
   --logo-anim-6: Green;
 }
-
-
-/* html[data-scheme='dark'][data-spooky='true'] {
-  --bodybg: #1e1e1e;
-  --bg: Black;
-  --accent: Gold;
-  --interactive: OrangeRed;
-  --link: OrangeRed;
-  --linkaccent: #731f00;
-  --linkhover: LawnGreen;
-  --text: LavenderBlush;
-  --pink: DeepPink;
-  --dashboard-bg: Indigo;
-  --dashboard-outline: #2e004f;
-  --logo-anim-1: OrangeRed;
-  --logo-anim-2: OrangeRed;
-  --logo-anim-3: OrangeRed;
-  --logo-anim-4: LawnGreen;
-  --logo-anim-5: LawnGreen;
-  --logo-anim-6: LawnGreen;
-}
-
-html[data-scheme='light'][data-spooky='true'] {
-    --bodybg: LavenderBlush;
-    --bg: Snow;
-    --interactive: #e1007a;
-    --accent: #d73a00;
-    --link: BlueViolet;
-    --linkaccent: Thistle;
-    --linkhover: Green;
-    --text: Black;
-    --pink: DeepPink;
-    --dashboard-bg: PaleGreen;
-    --dashboard-outline: LimeGreen;
-    --logo-anim-1: BlueViolet;
-    --logo-anim-2: BlueViolet;
-    --logo-anim-3: OrangeRed;
-    --logo-anim-4: OrangeRed;
-    --logo-anim-5: Green;
-    --logo-anim-6: Green;
-} */

@@ -44,4 +44,4 @@
 @import url('./pages/_bookmarkslist.css');
 @import url('./pages/_experimentslist.css');
 
-/* @import url('./themes/_christmas.css'); */
+@import url('./themes/_spooky-overrides.css');

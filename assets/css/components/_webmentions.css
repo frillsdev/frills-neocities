@@ -14,7 +14,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, var(--logo-x), var(--logo-anim-1), var(--logo-anim-2), var(--logo-anim-3), var(--logo-anim-4), var(--logo-anim-5), var(--logo-anim-6));
+  background: linear-gradient(to right, var(--logo-anim-1), var(--logo-anim-2), var(--logo-anim-3), var(--logo-anim-4), var(--logo-anim-5), var(--logo-anim-6));
 }
 
 
