@@ -76,6 +76,6 @@ function speakButton() {
 window.addEventListener('load', function () {
     // notification(4, 'New!');
     colorScheme();
-    sparkles(['🎃', '👻', '🦇', '🦴']);
+    sparkles();
     speakButton();
 }, true);

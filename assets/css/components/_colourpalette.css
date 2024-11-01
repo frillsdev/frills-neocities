@@ -82,32 +82,3 @@
 .colourpalette div:nth-child(16) {
   mask-image: url('/images/masks/circle.svg');
 }
-
-/* Spooky */
-.colourpalette div:nth-child(1),
-.colourpalette div:nth-child(4),
-.colourpalette div:nth-child(10),
-.colourpalette div:nth-child(15) {
-  mask-image: url('/images/masks/spooky/skull.svg');
-}
-
-.colourpalette div:nth-child(2),
-.colourpalette div:nth-child(6),
-.colourpalette div:nth-child(9),
-.colourpalette div:nth-child(13) {
-  mask-image: url('/images/masks/spooky/hand.svg');
-}
-
-.colourpalette div:nth-child(3),
-.colourpalette div:nth-child(7),
-.colourpalette div:nth-child(11),
-.colourpalette div:nth-child(14) {
-  mask-image: url('/images/masks/spooky/ribs.svg');
-}
-
-.colourpalette div:nth-child(5),
-.colourpalette div:nth-child(8),
-.colourpalette div:nth-child(12),
-.colourpalette div:nth-child(16) {
-  mask-image: url('/images/masks/spooky/bone.svg');
-}
