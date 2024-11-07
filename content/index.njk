@@ -1,7 +1,7 @@
 ---
 title: Home
 rss: false
-nocache: 'spoop'
+nocache: 'unspoop'
 scripts: '
 	<script>
 	const n=new Date,h=n.getHours(),d=n.toLocaleTimeString("en-GB",{timeZone:"Europe/London",hour:"2-digit",hour12:!0,minute:"2-digit"});e=d.replace(/\s/g,""),document.querySelector("#localTime").innerHTML=e;const dhr=n.toLocaleTimeString("en-GB",{timeZone:"Europe/London",hour:"2-digit"});let st,stT;dhr>=0&&dhr<7?(st="offline",stT="Sleepin’"):dhr>=7&&dhr<9?(st="away",stT="Gettin’ ready!"):dhr>=9&&dhr<17?(st="donotdisturb",stT="Workin’"):dhr>=17&&dhr<23?(st="online",stT="Online now!"):dhr>=23&&dhr<24&&(st="offline",stT="Sleepin’"),document.querySelector("#status").dataset.status=st,document.querySelector("#statusText").innerText=stT;let m;h>=0&&h<12?m="Good morning":h>=12&&h<17?m="Good afternoon":h>=17&&h<24&&(m="Good evening"),document.querySelector("#greetingText").innerHTML=m;
@@ -103,11 +103,15 @@ scripts: '
 			<ol class="unstyled mb-0">
 				<li>
 					<a href="https://www.goodreads.com/book/show/76714487-tower-of-dawn" class="hidden">Tower of Dawn - Sarah J Maas</a>
-					<small class="d-b subtext">Started 18th Jun 2024</small>
+					<small class="d-b subtext">
+						18/06/24 - It is such a marathon</span>
+					</small>
 				</li>
 				<li>
 					<a href="https://www.goodreads.com/book/show/61242426-legends-lattes" class="hidden">Legends & Lattes - Travis Baldree</a>
-					<small class="d-b subtext">Started 12th Jun 2024</small>
+					<small class="d-b subtext">
+						12/06/24 - I have no excuse for this taking me so long
+					</small>
 				</li>
 			</ol>
 			'
@@ -122,14 +126,14 @@ scripts: '
 			body = '
 			<ol class="unstyled mb-0">
 				<li>
-					Final Fantasy XIV
-					<small class="d-b subtext">Chaos - Sagittarius</small>
+					<a href="https://store.steampowered.com/app/1435790/Escape_Simulator/" class="hidden">Escape Room Simulator</a>
 				</li>
 				<li>
-					Escape Room Simulator
+					<a href="https://store.steampowered.com/app/1970460/Garden_Galaxy/" class="hidden">Garden Galaxy</a>
 				</li>
 				<li>
-					Garden Galaxy
+					<a href="https://store.steampowered.com/app/2198150/Tiny_Glade/" class="hidden">Tiny Glade</a>
+					<small class="d-b subtext">It\'s so beautiful</small>
 				</li>
 			</ol>
 			'
