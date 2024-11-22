@@ -1,10 +1,9 @@
 ---
 title: Legends & Lattes
-description: A limmerick?
-date: 2024-11-08 12:00:00
+description: A cozy book by Travis Baldree
+date: 2024-11-22 13:00:00
 tags:
 - personal
-- poem
 rss: true
 kudos: 🤗
 ---
