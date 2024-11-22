@@ -10,7 +10,7 @@ kudos: 📖
 
 Finally finished [Legends & Lattes, by Travis Baldree](https://www.goodreads.com/book/show/61242426-legends-lattes). Started in June, I put it down when I fell out of reading for the millionth time. But recently, on holiday abroad with the intention of chilling out, I packed it in my hand luggage and managed to finish it off.
 
-The premise is about an Orc adventurer hangs up her sword (literally) to open a coffee shop, an exotic gnomish invention, meeting friends and more-than-friends along the way.
+The premise of the story is about an Orc adventurer that hangs up her sword (literally) to open a coffee shop, an exotic gnomish invention, meeting friends and more-than-friends along the way.
 
 I feel like my Half-Orc rogue, Thokk, would do something similiar once they tired of adventuring.
 
