@@ -5,7 +5,7 @@ date: 2024-11-22 13:00:00
 tags:
 - personal
 rss: true
-kudos: 🤗
+kudos: 📖
 ---
 
 Finally finished [Legends & Lattes, by Travis Baldree](https://www.goodreads.com/book/show/61242426-legends-lattes).
