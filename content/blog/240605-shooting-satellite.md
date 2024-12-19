@@ -11,7 +11,7 @@ I'm led horizontal in bed, staring out the window at the sparkling stars. It's a
 
 A shooting star, or something temporarily shiny, moves in and out just below the one star I'm making eye contact with.
 
-It's not the <attr title="International Space Station">IIS</attr>, that is traveling over South Africa right now. It was in and out in a few seconds like a shooting star, but it was probably another satellite.
+It's not the <attr title="International Space Station">ISS</attr>, that is traveling over South Africa right now. It was in and out in a few seconds like a shooting star, but it was probably another satellite.
 
 There are 9,900 objects orbiting Earth today.
 

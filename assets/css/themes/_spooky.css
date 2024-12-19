@@ -1,58 +1,94 @@
-html[data-scheme='dark'][data-spooky='true'] {
-  --bodybg: #1e1e1e;
-  --bg: Black;
-  --accent: Gold;
+/* Colours */
+/* Dark mode */
+:root,
+:root[data-scheme='dark'] {
+  --bodybg: hsl(228, 38%, 13%);
+  --bg: hsl(228, 32%, 7%);
+  --highlight: OrangeRed;
+  --accent: OrangeRed;
+  --accentcontrast: Black;
+  --separator: PaleGreen;
+  --quote: LawnGreen;
   --interactive: OrangeRed;
+  --input-bg: hsl(228, 38%, 13%);
+  --input-border: LawnGreen;
   --link: OrangeRed;
-  --linkaccent: #731f00;
+  --linkaccent: hsl(328, 100%, 19%);
   --linkhover: LawnGreen;
+  --linkvisited: Orange;
   --text: LavenderBlush;
-  --pink: DeepPink;
-  --dashboard-bg: Indigo;
-  --dashboard-outline: #2e004f;
+  --subtext: PeachPuff;
+  --marker: "👻";
+  --dashboard-header-bg: Indigo;
+  --dashboard-text: White;
+  --callout-info: LawnGreen;
+  --logo-x: Gold;
   --logo-anim-1: OrangeRed;
-  --logo-anim-2: OrangeRed;
-  --logo-anim-3: OrangeRed;
-  --logo-anim-4: LawnGreen;
+  --logo-anim-2: Tomato;
+  --logo-anim-3: Orange;
+  --logo-anim-4: GreenYellow;
   --logo-anim-5: LawnGreen;
-  --logo-anim-6: LawnGreen;
+  --logo-anim-6: LimeGreen;
 }
 
-html[data-scheme='light'][data-spooky='true'] {
-    --bodybg: LavenderBlush;
-    --bg: Snow;
-    --interactive: #e1007a;
-    --accent: #d73a00;
-    --link: BlueViolet;
-    --linkaccent: Thistle;
-    --linkhover: Green;
-    --text: Black;
-    --pink: DeepPink;
-    --dashboard-bg: PaleGreen;
-    --dashboard-outline: LimeGreen;
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bodybg: #1e1e1e;
+    --bg: PeachPuff;
+    --interactive: hsl(328, 100%, 44%);
+    --input-bg: LavenderBlush;
+    --input-border: DeepPink;
+    --separator: DeepPink;
+    --quote: hsl(328, 100%, 38%);
+    --highlight: hsl(195, 100%, 28%);
+    --accent: hsl(340, 100%, 67%);
+    --accentcontrast: Black;
+    --link: hsl(253, 100%, 37%);
+    --linkaccent: #FFB8D0;
+    --linkhover: hsl(253, 100%, 27%);
+    --linkvisited: Purple;
+    --text: hsl(253, 88%, 16%);
+    --subtext: DarkRed;
+    --marker: "💖";
+    --dashboard-header-bg: Gold;
+    --dashboard-text: Black;
+    --logo-x: Gold;
     --logo-anim-1: BlueViolet;
     --logo-anim-2: BlueViolet;
     --logo-anim-3: OrangeRed;
     --logo-anim-4: OrangeRed;
     --logo-anim-5: Green;
     --logo-anim-6: Green;
+  }
 }
 
-.toggle--spooky::before {
-  content: '🎃';
-  font-size: 1rem;
-  animation-name: shake;
-  animation-duration: 15s;
-  animation-delay: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-[data-spooky='true'] .toggle--spooky::before {
-  animation: none;
-}
-
-[data-spooky="true"] ul.stars li::marker,
-[data-spooky="true"] ol.stars li::marker {
-  content: '👻';
+:root[data-scheme='light'] {
+  --bodybg: #ffead7;
+  --bg: PeachPuff;
+  --highlight: OrangeRed;
+  --accent: Green;
+  --accentcontrast: White;
+  --separator: PaleGreen;
+  --quote: Indigo;
+  --interactive: OrangeRed;
+  --input-bg: PeachPuff;
+  --input-border: DeepPink;
+  --link: Maroon;
+  --linkaccent: hsl(28.1, 53.3%, 64.7%);
+  --linkhover: Indigo;
+  --linkvisited: Maroon;
+  --text: Black;
+  --subtext: DarkRed;
+  --marker: "👻";
+  --dashboard-header-bg: Indigo;
+  --dashboard-text: White;
+  --callout-info: OrangeRed;
+  --logo-x: Gold;
+  --logo-anim-1: Indigo;
+  --logo-anim-2: BlueViolet;
+  --logo-anim-3: OrangeRed;
+  --logo-anim-4: OrangeRed;
+  --logo-anim-5: Green;
+  --logo-anim-6: Green;
 }

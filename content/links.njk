@@ -132,11 +132,6 @@ scripts: '<script>
     "src": "notprincehamlet.png",
     "type": "button"
   }, {
-    "name": "PinkVampyr",
-    "href": "https://pinkvampyr.neocities.org/",
-    "src": "pinkvampyr.png",
-    "type": "button"
-  }, {
     "name": "Pixel Moondust",
     "href": "https://pixelmoondust.neocities.org/",
     "src": "pixelmoondust.png",
@@ -248,15 +243,24 @@ scripts: '<script>
   }, {
     "name": "Flamed Fury",
     "href": "https://flamedfury.com",
-    "bg": "#252525",
-    "color": "#de6b09",
-    "type": "link"
+    "src": "flamedfury.webp",
+    "type": "button"
   }, {
     "name": "Localghost",
     "href": "https://localghost.dev/",
     "bg": "#1a1a4d",
     "color": "#f00fe4",
     "type": "link"
+  }, {
+    "name": "Sara Joy",
+    "href": "https://sarajoy.dev/",
+    "src": "sarajoy.png",
+    "type": "button"
+  }, {
+    "name": "Apple Annie",
+    "href": "https://weblog.anniegreens.lol/",
+    "src": "appleannie.webp",
+    "type": "button"
   }, {
     "name": "Leviathren",
     "href": "https://leviathren.neocities.org",
@@ -333,6 +337,23 @@ scripts: '<script>
     "href": "https://dimden.dev/",
     "src": "dimden.png",
     "type": "button"
+  }, {
+    "name": "Rose's Playground",
+    "href": "https://roseyrobertson.neocities.org",
+    "bg": "linear-gradient(90deg, rgb(255, 118, 242) 0%, rgb(146, 146, 233) 25%, rgb(84, 226, 255) 49%, rgb(157, 255, 179) 69%, rgb(255, 226, 100) 88%)",
+    "color": "black",
+    "type": "link"
+  }, {
+    "name": "Tearoom.earth",
+    "href": "https://tearoom.earth/",
+    "src": "tearoom.earth.png",
+    "type": "button"
+  }, {
+    "name": "Meadow 🌱",
+    "href": "https://meadow.cafe/",
+    "bg": "#292a2b",
+    "color": "#fbfafa",
+    "type": "link"
   }
 ] %}
 
@@ -538,7 +559,7 @@ scripts: '<script>
     </li>
     {% else %}
     <li class="links__item">
-      <a href="{{link.href}}" style="background-color: {{link.bg}}; color: {{link.color}};">
+      <a href="{{link.href}}" style="background: {{link.bg}}; color: {{link.color}};">
         {{link.name}}
       </a>
     </li>
@@ -546,14 +567,14 @@ scripts: '<script>
     {% endfor %}
     {% for friend in friends | sort(attribute="name") %}
     <li class="links__item">
-      <a href="{{friend.href}}" style="background-color: {{friend.bg}}; color: {{friend.color}};">
+      <a href="{{friend.href}}" style="background: {{friend.bg}}; color: {{friend.color}};">
         {{friend.name}}
       </a>
     </li>
     {% endfor %}
     {% for creative in creatives | sort(attribute="name") %}
     <li class="links__item">
-      <a href="{{creative.href}}" style="font-size: {{creative.size}};  background-color: {{creative.bg}}; color: {{creative.color}};">
+      <a href="{{creative.href}}" style="font-size: {{creative.size}};  background: {{creative.bg}}; color: {{creative.color}};">
         {{creative.name}}
       </a>
     </li>
@@ -567,7 +588,7 @@ scripts: '<script>
     </li>
     {% else %}
     <li class="links__item">
-      <a href="{{tool.href}}" style="font-size: {{tool.size}};  background-color: {{tool.bg}}; color: {{tool.color}};">
+      <a href="{{tool.href}}" style="font-size: {{tool.size}};  background: {{tool.bg}}; color: {{tool.color}};">
         {{tool.name}}
       </a>
     </li>
@@ -582,7 +603,7 @@ scripts: '<script>
     </li>
     {% else %}
     <li class="links__item">
-      <a href="{{bookmark.href}}" style="font-size: {{bookmark.size}};  background-color: {{bookmark.bg}}; color: {{bookmark.color}};">
+      <a href="{{bookmark.href}}" style="font-size: {{bookmark.size}};  background: {{bookmark.bg}}; color: {{bookmark.color}};">
         {{bookmark.name}}
       </a>
     </li>

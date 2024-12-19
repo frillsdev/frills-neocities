@@ -1,0 +1,50 @@
+.avatar__script {
+  position: relative;
+}
+
+.avatar__script::before {
+  content: '';
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: 1;
+  mask-image: url(/images/masks/spooky/skull.svg);
+  mask-repeat: no-repeat;
+  mask-size: 60% auto;
+  mask-position: center;
+  background-color: white;
+  backdrop-filter: blur(10px);
+}
+
+/* Spooky */
+.colourpalette div:nth-child(1),
+.colourpalette div:nth-child(4),
+.colourpalette div:nth-child(10),
+.colourpalette div:nth-child(15) {
+  mask-image: url('/images/masks/spooky/skull.svg');
+}
+
+.colourpalette div:nth-child(2),
+.colourpalette div:nth-child(6),
+.colourpalette div:nth-child(9),
+.colourpalette div:nth-child(13) {
+  mask-image: url('/images/masks/spooky/hand.svg');
+}
+
+.colourpalette div:nth-child(3),
+.colourpalette div:nth-child(7),
+.colourpalette div:nth-child(11),
+.colourpalette div:nth-child(14) {
+  mask-image: url('/images/masks/spooky/ribs.svg');
+}
+
+.colourpalette div:nth-child(5),
+.colourpalette div:nth-child(8),
+.colourpalette div:nth-child(12),
+.colourpalette div:nth-child(16) {
+  mask-image: url('/images/masks/spooky/bone.svg');
+}
