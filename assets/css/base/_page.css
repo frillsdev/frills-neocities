@@ -18,6 +18,11 @@
   }
 }
 
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 /* Header */
 .page__header {
   padding: 1.5rem 0 0 0;
