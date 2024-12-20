@@ -1,0 +1,219 @@
+---
+title: Dreams
+description: The weird, wonderful and bizarre
+date: 2024-12-05 09:00:00
+rss: true
+kudos: ☁️
+image: '/images/experiments/hiraeth/hiraeth-cover.png'
+page_layout: 'empty'
+style: '
+:root,
+:root[data-scheme="dark"],
+:root[data-scheme="light"] {
+  --bodybg: LightSkyBlue;
+  --bg: skyblue;
+  --link: black;
+  --linkaccent: DeepSkyBlue;
+  --linkhover: darkblue;
+  --linkvisited: black;
+  --text: black;
+  --logo-anim-1: white;
+  --logo-anim-2: white;
+  --logo-anim-3: white;
+  --logo-anim-4: white;
+  --logo-anim-5: white;
+  --logo-anim-6: white;
+}
+article {
+            position: absolute;
+            width: 50vw;
+            max-width: 600px;
+            padding: 1rem;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 01);
+            cursor: grab;
+            z-index: 1;
+            -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+        }
+        article:active {
+            cursor: grabbing;
+            z-index: 10;
+        }'
+scripts: '<script>
+        const articles = document.querySelectorAll(`article`);
+let highestZIndex = 1;
+
+const getRandomPosition = (element) => {
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const elementWidth = element.offsetWidth;
+    const elementHeight = element.offsetHeight;
+
+    const x = Math.random() * (viewportWidth - elementWidth);
+    const y = Math.random() * (viewportHeight - elementHeight);
+
+    return { x, y };
+};
+
+const loadPositions = () => {
+    articles.forEach((element, index) => {
+        const key = `article_${index}`;
+        const storedData = JSON.parse(localStorage.getItem(key));
+        if (storedData) {
+            element.style.left = storedData.left;
+            element.style.top = storedData.top;
+            element.style.zIndex = storedData.zIndex;
+            highestZIndex = Math.max(highestZIndex, parseInt(storedData.zIndex, 10));
+        } else {
+            const { x, y } = getRandomPosition(element);
+            element.style.left = `${x}px`;
+            element.style.top = `${y}px`;
+            element.style.zIndex = `${++highestZIndex}`;
+        }
+    });
+};
+
+const savePosition = (element, index) => {
+    const key = `article_${index}`;
+    const position = {
+        left: element.style.left,
+        top: element.style.top,
+        zIndex: element.style.zIndex,
+    };
+    localStorage.setItem(key, JSON.stringify(position));
+};
+
+articles.forEach((element, index) => {
+    let offsetX = 0, offsetY = 0, isDragging = false;
+
+    const startDrag = (event) => {
+        isDragging = true;
+        const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+        const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+        offsetX = clientX - element.offsetLeft;
+        offsetY = clientY - element.offsetTop;
+        element.style.zIndex = `${++highestZIndex}`;
+    };
+
+    const moveDrag = (event) => {
+        if (!isDragging) return;
+        const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+        const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+        const x = clientX - offsetX;
+        const y = clientY - offsetY;
+        element.style.left = `${x}px`;
+        element.style.top = `${y}px`;
+    };
+
+    const endDrag = () => {
+        if (isDragging) {
+            isDragging = false;
+            savePosition(element, index);
+        }
+    };
+
+    element.addEventListener(`mousedown`, startDrag);
+    element.addEventListener(`touchstart`, startDrag);
+
+    document.addEventListener(`mousemove`, moveDrag);
+    document.addEventListener(`touchmove`, moveDrag);
+
+    document.addEventListener(`mouseup`, endDrag);
+    document.addEventListener(`touchend`, endDrag);
+
+    if (!element.style.zIndex) {
+        element.style.zIndex = `${++highestZIndex}`;
+    }
+});
+
+loadPositions();
+
+        </script>'
+---
+
+{% block main %}
+<div class="container">
+    <h1>Dreams</h1>
+    <div class="reading-width mb-2">
+        <p>A collection of my weird, wonderful and bizarre notes, written in that blurry subconcious state. Not a lot makes sense.</p>
+    </div>
+</div>
+<div class="pos-r">
+    <article>
+    <p>Comment style<br>
+    Beach combing as work<br>
+    People didn't have food very bleak</p>
+</article>
+
+<article>
+    <p>New years even party<br>
+    Dressing up as Disney or hero characters<br>
+    I did she ra</p>
+</article>
+<article>
+    <p>Post apocalyptic dream (post COVID?)<br>
+    Scavenging for food.<br>
+    Food supplies low. Setting up 'shops' to trade in a high rise building</p>
+</article>
+
+<article>
+    <p>Neighbor invited the post man Round<br>
+I was curious if we could do that<br>
+They saw me looking and got mad. I think about Brexit and me judging them<br>
+Set their child on me with their recycling</p>
+</article>
+
+<article>
+    <p>I played as a young girl<br>
+    Monsters and creeepies were after her<br>
+    She neeeded to drink her pink promotio potion by day to turn into a Snake (?) To save the day or finally be safe.<br>
+    She had been existing fine in a castle in the ócean with white walls and white stone floors,<br> until prior rushed up there and started interfering</p>
+</article>
+
+<article>
+    <p>Artificial humans<br>
+    Cast of overwatch<br>
+    Trying to go to weddings<br>
+    Time travel<br>
+    Kept getting caught by scientists who saw them as a that and chopped them up<br>
+    Kept reforming<br>
+    Some characters like the ghosts in ghosts the TV show</p>
+</article>
+<article>
+    <p>People claiming to be holiday agents came to scout a complex of houses with an integrated train station with the intention to burn it down.<br>
+    Time travel I had seen it happened anyway</p>
+</article>
+
+<article>
+    <p>At kls<br>
+    Went to reception<br>
+    Lots of photos and nick nacks<br>
+    <br>
+    At home<br>
+    I need to catch the bus<br>
+    But other buses keep arriving<br>
+    Bub goes out side to check and gets hit by lightning. Is ok </p>
+</article>
+
+<article>
+    <p>Apocalyptic<br>
+    Running out of cows for milk and cheese<br>
+    Even briefly running out of electricity<br>
+    People and cows would go missing at might<br>
+    At first people thought someone was murdering<br>
+    At first people didn't take saving electricity seriously<br>
+    Then numbers dwindled<br>
+    Loved ones lost<br>
+    Knowing there was no way to survive</p>
+</article>
+
+<article>
+    <p>Pink and yellow jumpsuit<br>
+    Pink jeweled crown made weigh fabric backing. Yellow highlights<br>
+    Blue Lego mouse fly</p>
+</article>
+</div>
+{% endblock %}
