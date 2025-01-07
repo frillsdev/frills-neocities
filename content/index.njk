@@ -168,16 +168,11 @@ scripts: '
 			{%- set latestBlog = collections.posts | reverse | first -%}
 			{%- set latestExperiment = collections.experiments | reverse | first -%}
 			{%- set latestBookmark = collections.bookmarks | reverse | first -%}
-			{%- set latestChangelog = collections.changelog | reverse | first -%}
 			<div class="h-sm">
 				<h3>Blog</h3>
 				<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
 				<h3>Experiment</h3>
 				<a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}<p class="description">{{latestExperiment.data.description | safe}}</p>{%endif%}
-				<h3>Changelog</h3>
-				<div class="description">
-					{{latestChangelog.content|safe}}
-				</div>
 			</div>
 		</article>
 		<article class="dashboard__item dashboard__item--card">
