@@ -4,7 +4,14 @@ rss: false
 nocache: '2025'
 scripts: '
 	<script>
-	const n=new Date,h=n.getHours(),d=n.toLocaleTimeString("en-GB",{timeZone:"Europe/London",hour:"numeric",hour12:!0,minute:"2-digit"});e=d.replace(/\s/g,""),document.querySelector("#localTime").innerHTML=e;const dhr=n.toLocaleTimeString("en-GB",{timeZone:"Europe/London",hour:"numeric"});let st,stT;dhr>=0&&dhr<7?(st="offline",stT="Sleepin’"):dhr>=7&&dhr<9?(st="away",stT="Gettin’ ready!"):dhr>=9&&dhr<17?(st="donotdisturb",stT="Workin’"):dhr>=17&&dhr<23?(st="online",stT="Online now!"):dhr>=23&&dhr<24&&(st="offline",stT="Sleepin’"),document.querySelector("#status").dataset.status=st,document.querySelector("#statusText").innerText=stT;let m;h>=0&&h<12?m="Good morning":h>=12&&h<17?m="Good afternoon":h>=17&&h<24&&(m="Good evening"),document.querySelector("#greetingText").innerHTML=m;
+	const n = new Date(),
+    h = n.getHours(),
+    d = n.toLocaleTimeString("en-GB", { timeZone: "Europe/London", hour: "numeric", hour12: !0, minute: "2-digit" });
+	(e = d.replace(/\s/g, "")), (document.querySelector("#localTime").innerHTML = e);
+	const dhr = n.toLocaleTimeString("en-GB", { timeZone: "Europe/London", hour: "numeric" });
+	let m;
+	h >= 0 && h < 12 ? (m = "Good morning") : h >= 12 && h < 17 ? (m = "Good afternoon") : h >= 17 && h < 24 && (m = "Good evening"), (document.querySelector("#greetingText").innerHTML = m);
+
 	</script>
 	<script>let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script>
 	<script src="/js/avatar.js"></script>
@@ -76,18 +83,19 @@ scripts: '
 	)}}
 	</article>
 	<div class="dashboard__item">
-		{%- set status = 'New year, new me, new phone ecosystem.. hello Apple' -%}
-		{%- set emoji = '🍎'-%}
-		{%- set bg = '#eeeeee'-%}
-		{%- set textColor = 'black'-%}
-		{{ macro.callout(
-			element = 'article',
-			modifiers = 'callout--small',
-			style = 'background:'+ bg +'!important; color:'+ textColor,
-			emoji = '<img src="https://emojicdn.elk.sh/'+emoji+'?style=apple" alt="">',
-			header = '<h2>Latest status</h2>',
-			body = status
-		)}}
+		{% for latest in collections.status %}
+			{% if latest.data.type == 'microblog' %}
+			{% set latestStatus = latest.data.status[1] %}
+			{{ macro.callout(
+				element = 'article',
+				modifiers = 'callout--small',
+				style = 'background:'+ latestStatus.bg +'!important; color:'+ latestStatus.textColor,
+				emoji = '<img src="https://emojicdn.elk.sh/'+latestStatus.emoji+'?style=apple" alt="">',
+				header = '<h2>Latest status</h2>',
+				body = latestStatus.text + '<small class="d-b subtext">'+latestStatus.date | readableDate("dd/MM/yy")+'</small> <a href="/status/" style="color:'+ latestStatus.textColor+'">See past statuses</a>' 
+			)}}
+			{% endif %}
+  		{% endfor %}
 	</div>
 	<div class="dashboard__item">
 		{{ macro.callout(
