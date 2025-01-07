@@ -128,7 +128,7 @@
 }
 
 /* Status */
-.status {
+.teams-status {
   aspect-ratio: 1 / 1;
   border-radius: 100px;
   width: 24px;
@@ -138,17 +138,17 @@
 }
 
 @media (min-width: 576px) {
-  .status {
+  .teams-status {
     transform: scale(1);
   }
 }
 
 /* Available */
-.status[data-status="online"] {
+.teams-status[data-status="online"] {
   background-color: #3db838;
 }
 
-.status[data-status="online"]::before {
+.teams-status[data-status="online"]::before {
   content: '';
   width: 8px;
   height: 4px;
@@ -161,13 +161,13 @@
 }
 
 /* Offline */
-.status[data-status="offline"] {
+.teams-status[data-status="offline"] {
   background-color: transparent;
   box-shadow: inset 0 0 0 2px grey;
 }
 
-.status[data-status="offline"]::before,
-.status[data-status="offline"]::after {
+.teams-status[data-status="offline"]::before,
+.teams-status[data-status="offline"]::after {
   content: '';
   width: 8px;
   height: 2px;
@@ -177,25 +177,25 @@
   background-color: grey;
 }
 
-.status[data-status="offline"]::before {
+.teams-status[data-status="offline"]::before {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.status[data-status="offline"]::after {
+.teams-status[data-status="offline"]::after {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
 /* Busy */
-.status[data-status="busy"] {
+.teams-status[data-status="busy"] {
   background-color: #cc0033;
 }
 
 /* Do Not Disturb */
-.status[data-status="donotdisturb"] {
+.teams-status[data-status="donotdisturb"] {
   background-color: #cc0033;
 }
 
-.status[data-status="donotdisturb"]::before {
+.teams-status[data-status="donotdisturb"]::before {
   content: '';
   width: 10px;
   height: 4px;
@@ -207,20 +207,20 @@
 }
 
 /* Away */
-.status[data-status="away"] {
+.teams-status[data-status="away"] {
   background-color: transparent;
   box-shadow: inset 0 0 0 2px Plum;
 }
 
-.status[data-status="away"]::before,
-.status[data-status="away"]::after {
+.teams-status[data-status="away"]::before,
+.teams-status[data-status="away"]::after {
   content: '';
   position: absolute;
   left: 50%;
   top: 50%;
 }
 
-.status[data-status="away"]::before {
+.teams-status[data-status="away"]::before {
   width: 8px;
   height: 8px;
   border-left: 2px solid Plum;
@@ -229,7 +229,7 @@
   box-sizing: border-box;
 }
 
-.status[data-status="away"]::after {
+.teams-status[data-status="away"]::after {
   width: 10px;
   height: 2px;
   border-radius: 2px 0 0 2px;
@@ -294,6 +294,6 @@
   padding-bottom: 5px;
 }
 
-.statuslol_content #omglolh {
+.teams-statuslol_content #omglolh {
   display: block;
 }
