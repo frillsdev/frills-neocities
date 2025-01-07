@@ -22,6 +22,11 @@
   padding: 1rem;
 }
 
+.callout-content {
+  width: 100%;
+  box-sizing: content-box;
+}
+
 .callout--small .callout-emoji,
 .callout--small .callout-content {
   padding: 0.5rem 0.75rem;
