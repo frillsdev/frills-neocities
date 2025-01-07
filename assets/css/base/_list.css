@@ -22,6 +22,7 @@ ol.unstyled {
 ul.unstyled li::marker,
 ol.unstyled li::marker {
   content: "";
+  font-size: 0;
 }
 
 ul.stars li::marker,
