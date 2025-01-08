@@ -85,7 +85,7 @@ scripts: '
 	<div class="dashboard__item">
 		{% for latest in collections.status %}
 			{% if latest.data.type == 'microblog' %}
-			{% set latestStatus = latest.data.status[1] %}
+			{% set latestStatus = latest.data.status | last %}
 			{{ macro.callout(
 				element = 'article',
 				modifiers = 'callout--small',
