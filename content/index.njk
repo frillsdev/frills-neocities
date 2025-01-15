@@ -92,7 +92,7 @@ scripts: '
 				style = 'background:'+ latestStatus.bg +'!important; color:'+ latestStatus.textColor,
 				emoji = '<img src="https://emojicdn.elk.sh/'+latestStatus.emoji+'?style=apple" alt="">',
 				header = '<h2>Latest status</h2>',
-				body = latestStatus.text + '<small class="d-b subtext">'+latestStatus.date | readableDate("dd/MM/yy")+'</small> <a href="/status/" style="color:'+ latestStatus.textColor+'">See past statuses</a>' 
+				body = latestStatus.text + '<small class="d-b subtext">'+latestStatus.date | readableDate("dd/MM/yy")+'</small> <a href="/status/" style="color:'+ latestStatus.textColor+'">See past statuses</a>'
 			)}}
 			{% endif %}
   		{% endfor %}
@@ -118,15 +118,9 @@ scripts: '
 			body = '
 			<ol class="unstyled mb-0">
 				<li>
-					<a href="https://app.thestorygraph.com/books/1f546f5c-e232-4d8d-97b4-dea568dda32e" class="hidden">Tower of Dawn - Sarah J Maas</a>
+					<a href="https://app.thestorygraph.com/books/b4d5a9f6-1e71-4691-a1c1-c9c601619032" class="hidden">How to Solve Your Own Murder - Kristen Perrin </a>
 					<small class="d-b subtext">
-						18/06/24 - It is such a marathon</span>
-					</small>
-				</li>
-				<li>
-					<a href="https://app.thestorygraph.com/books/ba662dca-e491-4e3f-acae-6e006b6d22a8" class="hidden">The Familiars - Stacey Hall</a>
-					<small class="d-b subtext">
-						04/12/24</span>
+						06/01/25</span>
 					</small>
 				</li>
 				<li>
@@ -136,7 +130,7 @@ scripts: '
 					</small>
 				</li>
 				<li>
-					<a href="https://app.thestorygraph.com/profile/frills">See what I\'m reading on StoryGraph</a>
+					<a href="https://app.thestorygraph.com/profile/frills" class="large-target">See what I\'m reading on StoryGraph</a>
 				</li>
 			</ol>
 			'
@@ -146,7 +140,7 @@ scripts: '
 		{{ macro.callout(
 			element = 'article',
 			modifiers = 'callout--small',
-			emoji = '<img src="/images/emoji/joystick_3d.png" alt="">',
+			emoji = '🎮',
 			header = '<h2>Currently playing</h2>',
 			body = '
 			<ol class="unstyled mb-0">
