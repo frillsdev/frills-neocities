@@ -1,5 +1,5 @@
 .p-1 {
-  padding: 1rem!important;
+  padding: 1rem !important;
 }
 
 .pt-0 {
@@ -121,11 +121,20 @@
   font-style: italic;
 }
 
-.gold {
-  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-  background-clip: border-box, border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.large-target {
+  position: relative;
+}
+
+.large-target::before {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 0.75rem;
+  border: 3px solid transparent;
+  transition: 0.1s ease all;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -147,16 +156,4 @@
   font-size: 1.1rem;
   line-height: 1;
   font-variant-emoji: emoji;
-}
-
-.proven::before {
-  content: '';
-  width: 8px;
-  height: 4px;
-  border-bottom: 3px solid var(--bg);
-  border-left: 3px solid var(--bg);
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%) rotate(-45deg);
 }

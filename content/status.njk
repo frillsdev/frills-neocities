@@ -7,13 +7,19 @@ rss: false
 {% import "structure/components/components.njk" as macro with context %}
 
 {%- block main -%}
-  {%- for statusCollection in collections.status -%}
+  <div class="status">
+    {%- for statusCollection in collections.status -%}
     {% if statusCollection.data.type == "microblog" %}
       {% for status in statusCollection.data.status | reverse %}
+        {% if loop.index == '1' %}
+        {% set indexModifier = "first"%}
+        {% else %}
+        {% set indexModifier = "" %}
+        {% endif %}
         {{ macro.callout(
           element = 'article',
-          modifiers = '',
           style = 'background:'+ status.bg +'!important; color:'+ status.textColor,
+          modifiers = indexModifier,
           emoji = '<img src="https://emojicdn.elk.sh/'+status.emoji+'?style=apple" alt="">',
           header = '<h2>'+status.date | readableDate("d LLL yyyy")+'</h2>',
           body = status.text
@@ -21,4 +27,5 @@ rss: false
       {% endfor %}
     {%- endif -%}
   {%- endfor -%}
+  </div>
 {%- endblock -%}

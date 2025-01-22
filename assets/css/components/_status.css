@@ -1,0 +1,14 @@
+.status {
+}
+
+.status .callout {
+  max-width: 376px;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 1rem 1rem 1rem 0.2rem;
+}
+
+.status .callout.first {
+  max-width: 500px;
+  padding: 0.5rem;
+}
