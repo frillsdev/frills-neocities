@@ -23,4 +23,9 @@ status:
       emoji: 🔥
       bg: '#ffa453'
       textColor: black
+    - date: 2025-01-23
+      text: I don't think I am ready to start a 14-long book series. What was I thinking.
+      emoji: 🤪
+      bg: '#00537f'
+      textColor: white
 ---
