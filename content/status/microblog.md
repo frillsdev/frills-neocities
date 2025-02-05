@@ -28,4 +28,9 @@ status:
       emoji: 🤪
       bg: '#00537f'
       textColor: white
+    - date: 2025-02-05
+      text: Sitting by the sea in the Gower
+      emoji: 🌊
+      bg: LightBlue
+      textColor: black
 ---
