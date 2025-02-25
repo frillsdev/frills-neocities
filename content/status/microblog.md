@@ -33,4 +33,9 @@ status:
       emoji: 🌊
       bg: LightBlue
       textColor: black
+    - date: 2025-02-25
+      text: Learning about witchcraft fr
+      emoji: 🧹
+      bg: Plum
+      textColor: Black
 ---
