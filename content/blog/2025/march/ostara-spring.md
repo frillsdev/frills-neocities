@@ -1,7 +1,7 @@
 ---
-title: Festival of Sring and dawn
+title: Festival of Spring and Dawn
 description: The Wheel turns to Ostara.
-date: 2025-03-19
+date: 2025-03-19 12:00:00
 tags:
   - witchcraft
 rss: true
