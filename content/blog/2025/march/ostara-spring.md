@@ -32,27 +32,25 @@ scripts: '<script>
         })();</script>'
 ---
 
-There’s a certain kind of hush before Spring arrives. A breath held in the Earth, a quiet whisper of green waiting beneath frost-bitten soil. And then, one day, a crocus peeks through. The air carries the faintest warmth, the kind that hints at longer days and softer evenings. This is Ostara.
+There is a certain kind of quiet before the Spring arrives. The birds hold their breath, the ground is soggy from a Winter of rain. Then, one day, a daffodil peeks through the soil. The wind still nips at your nose but the sun stays out from her duvet of clouds for longer. The dawn and the dusk hint at longer days and softer evenings. This is Ostara.
 
 Ostara <i>(oh-STAH-rah)</i>, the 'vernal equinox', is the great in-between. Balanced, fleeting, and full of promise for what is coming. Named after [Ēostre](https://en.wikipedia.org/wiki/%C4%92ostre), an ancient Germanic goddess of dawn and renewal, this Pagan festival is the moment when light and dark share the sky in equal measure. From here, the scales tip, and the sun lingers a little longer each evening, coaxing life back into the Northern Hemisphere.
 
 <figure class="card mb-1">
     <img src="/images/blog/2025/march/ostara.webp" alt="Nibbling on a leaf of Lady’s Mantle, an alert golden-brown hare sits at the edge of a pine forest.">
   <figcaption class="card__content">
-   A Hare in the Forest, about 1585, Hans Hoffmann. Oil on panel.
+   A Hare in the Forest (~1585) - Hans Hoffmann - Oil on panel.
   </figcaption>
 </figure>
 
-It’s a festival of possibility. Eggs, symbols of fertility and new beginnings, are dyed in bright, joyful colors. Seeds, both literal and metaphorical, are planted with the hope that they will take root and grow. Hares and rabbits scamper through folklore and fields alike, carrying whispers of abundance and wild magic. Even the Easter traditions many grew up with - painted eggs, chocolate bunnies, baskets brimming with sweets - are echoes of this ancient celebration.
+It’s a festival of possibility. Eggs, symbols of fertility and new beginnings, are dyed in bright, joyful colors. Seeds, both literal and metaphorical, are planted with the hope that they will take root and grow. Hares and rabbits scamper through folklore and fields alike, carrying whispers of abundance and wild magic. Even the Easter traditions many grew up with, like painted eggs, chocolate bunnies, baskets brimming with sweets, these are echoes of this ancient celebration.
 
-For those who mark the turning of the Wheel of the Year, Ostara is a time to wake up gently. There’s no need for grand resolutions or drastic upheavals. Instead, it’s an invitation to stretch toward the sun, to step outside and feel the earth, soft beneath your feet. Perhaps it’s a morning spent planting herbs in a windowsill pot. Or an afternoon walk where you count the buds just beginning to open. Maybe it’s simply lighting a candle at dusk, watching the flame flicker in quiet honor of the balance shifting.
+For those, like myself, who mark the turning of the Wheel of the Year, Ostara is a time to wake up gently. There’s no need for new-me resolutions or big changes. Instead, it’s an invitation to stretch toward the sun, to step outside and feel the Earth, soft beneath your feet. Maybe spend the morning planting herbs. Or take an afternoon walk where you count the buds just beginning to open. Or maybe you could simply light a candle at dusk, watching the flame flicker in quiet honor of the balance shifting.
 
 Spring, after all, doesn’t arrive all at once. It stirs slowly, stretches carefully, unfurls in its own time. And so can we.
 
 Happy Ostara. May your days be lengthened by the light.
 🌷🌻🌼🌞
-
-
 
 <aside class="callout callout--center">
   <div class="callout-emoji">
