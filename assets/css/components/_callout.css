@@ -27,6 +27,10 @@
   box-sizing: content-box;
 }
 
+.callout--center {
+  align-items: center;
+}
+
 .callout--small .callout-emoji,
 .callout--small .callout-content {
   padding: 0.5rem 0.75rem;
