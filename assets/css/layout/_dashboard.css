@@ -26,6 +26,11 @@
   break-inside: avoid;
 }
 
+.dashboard__item figure {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .dashboard__item-image {
   background-color: var(--dashboard-header-bg);
 }
