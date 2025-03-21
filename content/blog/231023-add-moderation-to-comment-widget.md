@@ -55,4 +55,4 @@ If you implement this, [leave me a comment](/guestbook) in my guestbook to let m
 
 ---
 
-<a href="#return1" id="star1" aria-label="Jump back to instructions">*</a> 👍 Thank you to '[Robert](/guestbook/#Robert|--|21/03/2025 19:41:31)' for this addition.
+<a href="#return1" id="star1" aria-label="Jump back to instructions">*</a> 👍 Thank you to '<a href="/guestbook/#Robert|--|21/03/2025 19:41:31">Robert</a>' for this addition.
