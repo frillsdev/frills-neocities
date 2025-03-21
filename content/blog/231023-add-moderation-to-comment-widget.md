@@ -13,8 +13,9 @@ My guestbook is based on [Virtual Observer's comment widget](https://virtualobse
 ## How to do it
 
 1. Go to the form that you set up for your comment widget and add a new short-answer text question at the bottom.
-2. Name this question 'Moderated'. Don't forget the capitalise the first letter as the code is case sensitive.
-3. From your Google form, press the three dots in the top left corner and then 'Get pre-filled link'. This will open a new tab with your form, as if you were answering it. Fill in every field with the same name as its respective title and then press 'Get link'.
+1. Name this question 'Moderated'. Don't forget the capitalise the first letter as the code is case sensitive.
+1. Add response validation by clicking the three dots on the bottom left of the questions, selecting 'Response Validation' and adding the settings: "Text" "Contains" "false" (this is important to stop heck0rz) <a href="#star1" id="return1" aria-label="Jump to asterisk">*</a>
+1. From your Google form, press the three dots in the top left corner and then 'Get pre-filled link'. This will open a new tab with your form, as if you were answering it. Fill in every field with the same name as its respective title and then press 'Get link'.
 4. Paste the link into a text editor and scoop out the number after the final `entry.` which should have the value that you filled in: 'Moderated'. It will look something like this:
 ```js
 &entry.123456789=Moderated
@@ -51,3 +52,7 @@ And you're done! If you already have comments stored in your Google sheet, chang
 When a new comment is submitted the 'Moderated' value will be FALSE. Once you're happy for the comment to be displayed on your website, go into your Google sheet and change it to TRUE.
 
 If you implement this, [leave me a comment](/guestbook) in my guestbook to let me know!<br> I'd love to know if this is useful to you.
+
+---
+
+<a href="#return1" id="star1" aria-label="Jump back to instructions">*</a> 👍 Thank you to '[Robert](/guestbook/#Robert|--|21/03/2025 19:41:31)' for this addition.
