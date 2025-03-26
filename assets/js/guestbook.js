@@ -294,6 +294,7 @@ function displayComments(comments) {
         if (i >= v_commentMin && i < v_commentMax) {comment.style.display = 'block'}
 
         comment.className = 'c-comment';
+        comment.setAttribute('tabindex', 0);
         c_container.appendChild(comment);
         a_commentDivs.push(document.getElementById(comment.id)); // Add to array for use later
     }
@@ -366,8 +367,8 @@ function createComment(data) {
     if (s_longTimestamp) {timestamp = timestamps[0]}
     else {timestamp = timestamps[1]}
 
-    // Set the ID (uses Name + Full Timestamp format)
-    const id = data.Name + '|--|' + data.Timestamp2;
+    // Set the ID (uses Name + Full Timestamp format without spaces)
+    const id = (data.Name + '|--|' + data.Timestamp2).replace(/\s+/g, '');
     comment.id = id;
 
     // Name of user
