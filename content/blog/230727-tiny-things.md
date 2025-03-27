@@ -2,6 +2,8 @@
 title: Tiny things
 description: I adore tiny things. Here is a list of tiny things I love.
 date: 2023-07-27
+tags:
+  - personal
 rss: true
 ---
 
