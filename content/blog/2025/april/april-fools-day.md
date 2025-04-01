@@ -40,7 +40,7 @@ So, for example, what we call 10 March would have been described as "six days be
 As part of his reform, Caesar also made some vanity edits. He renamed Quintilis as July, after himself. Later, Augustus followed suit with August. 
 Another oddity was when it came to leap years, instead of simply adding a day at the end of February like we do now, Romans repeated the sixth day before the Kalends of March. Imagine having a birthday or anniversaries that fell on one of those dates 🥴
 
-The Julian calendar assumed a year was 365.25 days long. But in actually, it's closer to 365.2422. That small difference equates to about 11 minutes per year which doesn't sound like much, but over centuries it adds up. By the 1500s, the spring equinox was happening around 10 days earlier than it was supposed to.
+The Julian calendar assumed a year was 365.25 days long. But in actuality, it's closer to 365.2422. That small difference equates to about 11 minutes per year which doesn't sound like much, but over centuries it adds up. By the 1500s, the spring equinox was happening around 10 days earlier than it was supposed to.
 
 This caused issues for the Church, particularly in calculating the date of Easter, which was tied to the equinox and the lunar cycle.
 
