@@ -1,5 +1,5 @@
 module.exports = {
 	tags: [
-		"collections"
+		"curios"
 	],
 };

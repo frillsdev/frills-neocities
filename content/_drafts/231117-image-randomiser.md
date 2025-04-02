@@ -7,7 +7,7 @@ rss: true
 draft: true
 ---
 
-I've been a bit obsessed making picrew avatars lately. Inspired by [Sneek Realm's](https://sneekrealm.neocities.org/about/picrew/) and [Hillhouse's](https://hillhouse.neocities.org/picrews) picrew collections, I wanted to [make my own](/collections/avatars/). I was also getting a bit tired of my homepage avatar, but couldn't choose which picrew to replace it with. So... I made an image randomiser!
+I've been a bit obsessed making picrew avatars lately. Inspired by [Sneek Realm's](https://sneekrealm.neocities.org/about/picrew/) and [Hillhouse's](https://hillhouse.neocities.org/picrews) picrew collections, I wanted to [make my own](/curios/avatars/). I was also getting a bit tired of my homepage avatar, but couldn't choose which picrew to replace it with. So... I made an image randomiser!
 
 ## What does it do?
 1. It loads a random avatar when the page loads

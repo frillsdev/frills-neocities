@@ -57,10 +57,10 @@ scripts: '
 	</div>
 	<div class="dashboard__item">
 		<h2 class="visually-hidden">Shrines</h2>
-		<a href="/collections/orla" class="gallery" aria-label="Orla (my dog) shrine">
-			<img src="/images/collections/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
-			<img src="/images/collections/orla/orla16.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
-			<img src="/images/collections/orla/orla17.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
+		<a href="/curios/orla" class="gallery" aria-label="Orla (my dog) shrine">
+			<img src="/images/curios/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
+			<img src="/images/curios/orla/orla16.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
+			<img src="/images/curios/orla/orla17.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!">
 		</a>
 	</div>
 	<article class="dashboard__item">
@@ -82,7 +82,7 @@ scripts: '
 	)}}
 	</article>
 	<div class="dashboard__item">
-		{% for latest in collections.status %}
+		{% for latest in curios.status %}
 			{% if latest.data.type == 'microblog' %}
 			{% set latestStatus = latest.data.status | last %}
 			{{ macro.callout(

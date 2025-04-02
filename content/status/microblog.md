@@ -3,6 +3,7 @@ title: Microblog
 type: microblog
 rss: true
 url: status
+eleventyExcludeFromCollections: true,
 status:
     - date: 2025-01-03
       text: New year, new me, new phone ecosystem.. hello Apple
