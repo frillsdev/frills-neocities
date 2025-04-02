@@ -5,7 +5,7 @@ date: 2024-02-16
 tags:
 - personal
 rss: true
-style: '.lip123 {display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem;} .lip123 .card {margin-left: 0; margin-right: 0;}'
+style: '.lip123 {display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem;} .lip123 figure.card {margin-left: 0; margin-right: 0;}'
 ---
 
 Life so far this year in delciously crunchy compressed pictures.
