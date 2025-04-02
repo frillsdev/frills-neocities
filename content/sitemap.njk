@@ -1,0 +1,37 @@
+---
+title: Site Map
+---
+{% extends 'structure/templates/page-3col.njk'%}
+{% import "structure/components/components.njk" as macro with context %}
+{% import "structure/components/sitemap.njk" as sitemap %}
+
+{%- block main -%}
+<div class="reading-width">
+  <h1>Site Map</h1>
+  <p>All of the folders, collections and posts on this wee website.</p>
+  <button class="mb-2" id="toggleFolders">Open all folders</button>
+
+{{ sitemap.renderTree(collections.structuredPages) }}
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("toggleFolders");
+
+  if (!toggleButton) return;
+
+  let foldersOpen = false;
+
+  toggleButton.addEventListener("click", function () {
+    foldersOpen = !foldersOpen;
+
+    document.querySelectorAll("details").forEach(details => {
+      details.open = foldersOpen;
+    });
+
+    toggleButton.textContent = foldersOpen ? "Close all folders" : "Open all folders";
+  });
+});
+
+</script>
+{%- endblock -%}

@@ -1,0 +1,29 @@
+{% macro renderTree(tree, depth = 0) %}
+  <ul class="files">
+    {% for key in tree | keys | sort %}
+      {% set node = tree[key] %}
+      <li class="{{ node.__meta.data.title | slugify or node.__meta.url | slugify}}">
+        {% if node.children and (node.children | length) %}
+          <details class="hidden" {% if depth == 0 %}open{% endif %}>
+            <summary>
+              {% if node.__meta %}
+                  {{ node.__meta.data.title or node.__meta.url }}
+              {% else %}
+                {{ key | title }}
+              {% endif %}
+            </summary>
+            {{ renderTree(node.children, depth + 1) }}
+          </details>
+        {% else %}
+          {% if node.__meta %}
+            <a class="hidden" href="{{ node.__meta.url }}">
+              {{ node.__meta.data.title or node.__meta.url }}
+            </a>
+          {% else %}
+            {{ key | title }}
+          {% endif %}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

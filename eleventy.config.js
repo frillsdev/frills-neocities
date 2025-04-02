@@ -12,6 +12,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({"./assets/": "/"});
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
 
+	eleventyConfig.addFilter("keys", obj => Object.keys(obj));
+
 	// App plugins
 	eleventyConfig.addPlugin(pluginDrafts);
 
@@ -54,6 +56,7 @@ module.exports = function(eleventyConfig) {
 		return Math.min.apply(null, numbers);
 	});
 
+	// Webmentions
 	eleventyConfig.addFilter("getWebmentionsForUrl", (webmentions, url) => {
 		const allowedTypes = ['mention-of', 'in-reply-to', 'like-of']
 		
@@ -62,6 +65,34 @@ module.exports = function(eleventyConfig) {
 			.filter(entry => allowedTypes.includes(entry['wm-property']))
 		}
 	)
+
+	// Sitemap
+	eleventyConfig.addCollection("structuredPages", function (collectionApi) {
+		function addToTree(tree, parts, item) {
+			if (parts.length === 0) return;
+
+			const part = parts[0];
+			tree[part] = tree[part] || { __meta: null, children: {} };
+
+			if (parts.length === 1) {
+				tree[part].__meta = item;
+			} else {
+				addToTree(tree[part].children, parts.slice(1), item);
+			}
+		}
+
+		const pages = collectionApi.getAll().filter(item => item.url && !item.data.excludeFromSitemap);
+		const tree = {};
+
+		for (let page of pages) {
+			const parts = page.url.replace(/^\/|\/$/g, "").split("/");
+			addToTree(tree, parts, page);
+		}
+
+		return tree;
+	});
+
+
 
 	// Return all the tags used in a collection
 	eleventyConfig.addFilter("getAllTags", collection => {

@@ -1,0 +1,43 @@
+ul.files li {
+  padding-left: 0.5rem;
+}
+
+ul.files ul {
+  padding-top: 1rem;
+}
+
+ul.files li::marker {
+  content: '📄';
+}
+
+ul.files li li::marker {
+  content: '📝';
+}
+
+ul.files li ul {
+  border-left: 2px solid var(--bodybg);
+  padding-left: 2rem;
+}
+
+ul.files li:has(details)::marker {
+  content: '📁';
+}
+ul.files li:has(details[open])::marker {
+  content: '📂';
+}
+
+ul.files details>summary {
+  text-decoration: none;
+  list-style: none;
+}
+
+ul.files details>summary::hover,
+ul.files details>summary::focus,
+ul.files details>summary::active {
+  text-decoration: underline wavy 2px;
+}
+
+ul.files details>summary::marker,
+ul.files details>summary::-webkit-details-marker {
+  display: none;
+}
