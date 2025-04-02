@@ -6,12 +6,12 @@ ul.files ul {
   padding-top: 1rem;
 }
 
-ul.files li::marker {
-  content: '📄';
+ul.files li {
+  list-style-type: '📄';
 }
 
-ul.files li li::marker {
-  content: '📝';
+ul.files li li {
+  list-style-type: '📝';
 }
 
 ul.files li ul {
@@ -19,11 +19,11 @@ ul.files li ul {
   padding-left: 2rem;
 }
 
-ul.files li:has(details)::marker {
-  content: '📁';
+ul.files li:has(details) {
+  list-style-type: '📁';
 }
-ul.files li:has(details[open])::marker {
-  content: '📂';
+ul.files li:has(details[open]) {
+  list-style-type: '📂';
 }
 
 ul.files details>summary {

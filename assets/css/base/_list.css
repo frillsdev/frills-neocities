@@ -21,13 +21,14 @@ ol.unstyled {
 
 ul.unstyled li::marker,
 ol.unstyled li::marker {
+  list-style-type: none;
   content: "";
   font-size: 0;
 }
 
-ul.stars li::marker,
-ol.stars li::marker {
-  content: var(--marker);
+ul.stars li,
+ol.stars li {
+  list-style-type: var(--marker);
 }
 
 ul.stars li,

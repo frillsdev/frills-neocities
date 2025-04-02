@@ -13,10 +13,6 @@
   }
 }
 
-.links li::marker {
-  content: '';
-}
-
 .links--highcontrast .links__item a {
   background: var(--bg) !important;
   color: var(--text) !important;
@@ -29,6 +25,7 @@
   aspect-ratio: 88 / 31;
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .links__image a,
