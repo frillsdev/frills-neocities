@@ -15,7 +15,9 @@
 				</div>
 				<div class="card__content">
 					<a href="{{ experiment.url | url}}" class="card__title">{{experiment.data.title | safe}}</a>
+					{% if experiment.data.description %}
 					<p class="card__description">{{experiment.data.description | safe }}</p>
+					{% endif %}
 				</div>
 			</article>
 		{% endfor %}

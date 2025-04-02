@@ -18,7 +18,7 @@ rss: true
 <div class="h-sm">
 
 ## 🐶 Orla monitoring
-Spent a lot of time monitoring the pup, had a couple of follow-up blood tests, all of which are looking good. She is totally back to herself now, which is the biggest marker for things being OK. We certainly dodged a bullet. This month, I also took some time to make a [shrine to her on Neocities](/shrine/orla).
+Spent a lot of time monitoring the pup, had a couple of follow-up blood tests, all of which are looking good. She is totally back to herself now, which is the biggest marker for things being OK. We certainly dodged a bullet. This month, I also took some time to make a [shrine to her on Neocities](/collections/orla).
 
 ## 🎂 Birthdays
 Had several birthday celebrations this month. All with cake and merriment. My dad, my fiance's nan, and one of my good friends all turned a year older.

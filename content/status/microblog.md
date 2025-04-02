@@ -1,4 +1,5 @@
 ---
+title: Microblog
 type: microblog
 rss: true
 url: status

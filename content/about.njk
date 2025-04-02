@@ -5,8 +5,7 @@ eleventyNavigation:
   key: About
   emoji: <span class="emoji" aria-hidden="true">🌷</span>
   order: 1
-style: '@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("/css/pages/about.css");'
+style: '@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"); @import url("/css/pages/about.css");'
 scripts: '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 <script>
 	const inspireButton = document.getElementById("inspire");
@@ -39,7 +38,6 @@ scripts: '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/c
 		setTimeout(shoot, 300);
 	});
 </script>'
-nocache: reboot
 ---
 {% extends 'structure/templates/page-full.njk'%}
 {% import "structure/components/components.njk" as macro with context %}

@@ -1,6 +1,19 @@
 {% extends "structure/templates/page-full.njk" %}
 
 {% block main %}
-	<h1>{{title}}</h1>
-	{{content|safe}}
+	{% if description %}
+		<p>{{description}}</p>
+	{% endif %}
+	<section class="collections cards pt-1">
+		{% for collection in postslist | reverse %}
+			<article id="{{ collection.data.title | slugify }}" class="card">
+				<div class="card__content">
+					<a href="{{ collection.url | url}}" class="card__title">{{collection.data.title | safe}}</a>
+					{% if collection.data.description %}
+					<p class="card__description">{{collection.data.description | safe }}</p>
+					{% endif %}
+				</div>
+			</article>
+		{% endfor %}
+	</section>
 {% endblock %}

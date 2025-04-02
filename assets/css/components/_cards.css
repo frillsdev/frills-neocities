@@ -43,6 +43,10 @@
   text-decoration: none;
 }
 
+.card:not(.card:has(.card__description)) .card__title {
+  margin-bottom: 0;
+}
+
 .card__title:hover,
 .card__title:focus,
 .card__title:visited {
