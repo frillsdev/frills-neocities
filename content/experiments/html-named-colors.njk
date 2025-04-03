@@ -1054,13 +1054,13 @@ document.querySelectorAll("[data-try]").forEach(button => {
               type="button"
               class="namedColourAction noscriptHide"
               data-try="{{ color.name }}">
-                Try
+                Try <span class="visually-hidden">{{ color.name }}</span>
               </button>
               <button
               type="button"
               class="namedColourAction noscriptHide"
               data-copy="{{ color.name }}">
-                Copy
+                Copy <span class="visually-hidden">{{ color.name }}</span>
               </button>
             </div>
             <h3>Colour contrast</h3>

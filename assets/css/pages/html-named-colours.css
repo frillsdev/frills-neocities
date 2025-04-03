@@ -83,7 +83,7 @@
 .namedColourButton span {
   width: 2rem;
   height: 100%;
-    inset: 0;
+  inset: 0;
   border-radius: 0;
   margin-right: 8px;
   background-color: black;
@@ -97,13 +97,26 @@
 }
 
 .namedcolours {
+  width: 100%;
   background-color: var(--neutralise);
   display: grid;
   list-style: none;
   gap: 2rem;
   padding: 3rem 0;
   margin: 0 0 2rem 0;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .namedcolours {
+    grid-template-columns: repeat(2, calc(50% - 1rem));
+  }
+}
+
+@media (min-width: 1200px) {
+  .namedcolours {
+    grid-template-columns: repeat(3, calc(33% - 2rem));
+  }
 }
 
 .namedColoursContainer {
