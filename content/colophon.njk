@@ -4,59 +4,71 @@ rss: false
 ---
 {% extends 'structure/templates/page-3col.njk'%}
 
-{%- block left -%}
-{% endblock %}
+{%- block left -%}{% endblock %}
 
 {%- block main -%}
-<h1>{{title}}</h1>
-<section>
-	<div class="reading-width">
-		<h2>Technical information</h2>
-		<ul class="stars">
-			<li>Built using <a href="https://www.11ty.dev/">eleventy</a> static site generator.</li>
-			<li>Source code is on <a href="https://github.com/frillsdev/frills-neocities">Github</a>.</li>
-			<li>Hosted on <a href="https://neocities.org">Neocities</a> using the <a href="https://deploy-to-neocities.neocities.org/">deploy to Neocities guide</a>.</li>
-			<li>Coded in <a href="https://code.visualstudio.com/download">VSCode</a>.</li>
-			<li>Tested in <a href="https://www.mozilla.org/en-GB/firefox/new/">Firefox</a> on Windows 11 and Mac OS Catalina.</li>
-		</ul>
-		<h2>Credits</h2>
-		<ul class="stars">
-			<li>Logo font is <a href="https://github.com/satsuyako/CherryBomb">Cherry Bomb</a>.</li>
-			<li>Body font is <a href="https://brailleinstitute.org/freefont">Atkinson Hyperlegible</a>.</li>
-			<li>Stats and kudos by <a href="https://tinylytics.app/">Tinylytics</a>.</li>
-			<li>Guestbook widget by <a href="https://virtualobserver.moe/ayano/comment-widget">virtualobserver</a>.</li>
-			<li>Last.fm feed by <a href="https://github.com/biancarosa/lastfm-last-played">biancarosa / lastfm-last-played</a>.</li>
-			<li>A couple of the 80x15 badges are created by <a href="https://zeusofthecrows.github.io/stadt/gallery/">Zeus</a>.</li>
-		</ul>
+	<h1>{{title}}</h1>
+	<section>
+		<div class="reading-width">
+			<h2>Technical information</h2>
+			<ul class="stars">
+				<li>Built using the <a href="https://www.11ty.dev/">Eleventy</a> static site generator.</li>
+				<li>Source code is available on <a href="https://github.com/frillsdev/frills-neocities">GitHub</a>.</li>
+				<li>Hosted on <a href="https://neocities.org">Neocities</a> using the <a href="https://deploy-to-neocities.neocities.org/">Deploy to Neocities guide</a>.</li>
+				<li>Coded in <a href="https://code.visualstudio.com/download">Visual Studio Code</a>.</li>
+				<li>Tested in <a href="https://www.mozilla.org/en-GB/firefox/new/">Firefox</a> on Windows&nbsp;11 and Safari on macOS Sequoia.</li>
+			</ul>
 
-		<h2 id="javascript">JavaScript</h2>
-		<p>As my website is built with a static site generator, if I want anything dynamic, I need to use JavaScript.</p>
-		<p>You can still access the majority of the content of my website with JavaScript disabled, but here is a list of how it is used on my website:</p>
-		<ul class="stars">
-			<li>Statistics on webpage vistor count and for blog post kudos using Tinylytics, a GDPR-compliant, privacy-first website analytics tool. Cookies are not set and user identifiable information is not stored.</li>
-			<li>Guestbook uses JavaScript to fetch comments from a Google Sheet.</li>
-			<li>Theme and dark mode switcher uses JavaScript to change the emojis and styles of the website.</li>
-			<li>Last music played uses JavaScript to fetch the track and artist from last.fm.</li>
-			<li>Cursor particle trail is loaded using JavaScript.</li>
-			<li>Some <a href="/experiments">experiments</a> use JavaScript to change content dynamically.</li>
-		</ul>
+			<h2>Credits</h2>
+			<ul class="stars">
+				<li>Logo font is <a href="https://github.com/satsuyako/CherryBomb">Cherry Bomb</a>.</li>
+				<li>Body font is <a href="https://brailleinstitute.org/freefont">Atkinson Hyperlegible</a>.</li>
+				<li>Stats and kudos provided by <a href="https://tinylytics.app/">Tinylytics</a>.</li>
+				<li>Guestbook widget by <a href="https://virtualobserver.moe/ayano/comment-widget">virtualobserver</a>.</li>
+				<li>Last.fm feed powered by <a href="https://github.com/biancarosa/lastfm-last-played">biancarosa / lastfm-last-played</a>.</li>
+				<li>Some 80×15 badges created by <a href="https://zeusofthecrows.github.io/stadt/gallery/">Zeus</a>.</li>
+			</ul>
 
-		<h2>Site links</h2>
-		<ul class="stars">
-			<li><a href="/changelog">Changelog</a>
-			<li><a href="https://tinylytics.app/public/Cg94F3t4cxHAKMpzM_Z5">Vistor statistics</a>
-		</ul>
-	</div>
-</section>
+			<h2 id="javascript">JavaScript</h2>
+			<p>
+  This website is static. If anything moves, changes, or responds to you, JavaScript is probably behind it.
+</p>
+			<p>
+  The core content of the site works without JavaScript, but here's where it's used:
+</p>
+			<ol>
+				<li>Pageview stats and kudos tracking via Tinylytics, a GDPR-compliant, privacy-first analytics tool. No cookies or personally identifiable data are stored.</li>
+				<li>The guestbook fetches and displays comments from a public Google Sheet.</li>
+				<li>The theme switcher toggles between light and dark modes, and updates related visuals and emojis.</li>
+				<li>The “last played” music feed pulls current data from Last.fm.</li>
+				<li>A small particle trail follows your cursor (if enabled).</li>
+				<li>Some <a href="/experiments">experiments</a> use JavaScript for interactivity and dynamic content.</li>
+			</ol>
+
+			<h2>Miscellaneous</h2>
+			<p>
+    If you'd like to see what’s changed recently, check out the <a href="/changelog">changelog</a>. Or, if you're curious how many people have visited, <a href="https://tinylytics.app/public/Cg94F3t4cxHAKMpzM_Z5">the stats are public</a>.
+  </p>
+
+		</div>
+	</section>
 
 {%- endblock -%}
 
 {%- block right -%}
 	<h2 class="visually-hidden">RSS feeds</h2>
 	<ul class="unstyled">
-		<li><a href="/all.xml" class="rss">All RSS feed</a></li>
-		<li><a href="/rss.xml" class="rss">Blog & experiments RSS feed</a></li>
-		<li><a href="/bookmarks.xml" class="rss">Bookmarks RSS feed</a></li>
-		<li><a href="/changelog.xml" class="rss">Changelog RSS feed</a></li>
+		<li>
+			<a href="/all.xml" class="rss">All RSS feed</a>
+		</li>
+		<li>
+			<a href="/rss.xml" class="rss">Blog & experiments RSS feed</a>
+		</li>
+		<li>
+			<a href="/bookmarks.xml" class="rss">Bookmarks RSS feed</a>
+		</li>
+		<li>
+			<a href="/changelog.xml" class="rss">Changelog RSS feed</a>
+		</li>
 	</ul>
 {% endblock %}
