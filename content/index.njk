@@ -162,7 +162,7 @@ scripts: '
 			{%- set latestExperiment = collections.experiments | reverse | first -%}
 			{%- set latestBookmark = collections.bookmarks | reverse | first -%}
 			<div class="h-sm">
-				<article>
+				<article class="pb-1">
 				<h3>Blog</h3>
 				<a href="{{ latestBlog.url }}">{% if latestBlog.data.title %}{{ latestBlog.data.title | safe }}{% else %}{{ latestBlog.url }}{% endif %}</a>{% if latestBlog.data.description %}<p class="description"> {{latestBlog.data.description | safe}}</p>{%endif%}
 				</article>
