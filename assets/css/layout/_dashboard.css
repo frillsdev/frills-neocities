@@ -1,5 +1,5 @@
 .dashboard {
-  column-width: 400px;
+  column-width: 20rem;
   gap: 1rem;
   width: 100%;
   margin-bottom: 2rem;
@@ -8,12 +8,19 @@
 
 @media (min-width: 1435px) {
   .dashboard {
-    column-width: 325px;
+    column-width: 16em;
   }
 }
 
 .dashboard--fade {
   animation: fadeIn forwards 1s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dashboard--fade {
+    animation: none;
+    transition: none;
+    opacity: 1;
+  }
 }
 
 .dashboard.w-100 {
@@ -24,11 +31,16 @@
   width: 100%;
   margin-bottom: 1rem;
   break-inside: avoid;
+  display: flow-root;
 }
 
 .dashboard__item figure {
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+
+.dashboard__item .callout {
+  margin-bottom: 0;
 }
 
 .dashboard__item-image {

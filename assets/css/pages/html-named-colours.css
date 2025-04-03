@@ -1,0 +1,272 @@
+:root,
+:root[data-scheme="dark"] {
+  --neutralise: black;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --neutralise: white;
+  }
+}
+
+:root[data-scheme="light"] {
+  --neutralise: white;
+}
+
+.namedcolours__header {
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  row-gap: 13px;
+}
+
+#namedColourReset,
+.namedColourButton {
+  display: flex;
+  align-items: center;
+  color: black;
+  background-color: white;
+  box-shadow: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  transition: 0.45s cubic-bezier(.44, -0.01, .78, 1.01) all;
+}
+
+.namedColourButton {
+  padding-left: 2.5rem;
+}
+
+.namedColourButton:hover,
+.namedColourButton:focus,
+.namedColourButton:active {
+  color: black;
+  background-color: white;
+  box-shadow: none;
+  transform: none;
+}
+
+.namedColourButton[data-colour="purple"]:hover,
+.namedColourButton[data-colour="purple"]:focus,
+.namedColourButton[data-colour="purple"]:active,
+.namedColourButton[data-colour="dark"]:hover,
+.namedColourButton[data-colour="dark"]:focus,
+.namedColourButton[data-colour="dark"]:active,
+.namedColourButton[data-colour="dark"][aria-pressed="true"],
+.namedColourButton[data-colour="best-black"]:hover,
+.namedColourButton[data-colour="best-black"]:focus,
+.namedColourButton[data-colour="best-black"]:active,
+.namedColourButton[data-colour="best-black"][aria-pressed="true"] {
+  color: white !important;
+}
+
+
+.namedColourButton:hover span,
+.namedColourButton:focus span,
+.namedColourButton:active span,
+.namedColourButton[aria-pressed="true"] span {
+  width: 100%;
+}
+
+
+.namedColourButton:focus,
+.namedColourButton:active,
+.namedColourButton[aria-pressed="true"] {
+  text-decoration: underline;
+  transform: none;
+  box-shadow: none;
+}
+
+.namedColourButton span {
+  width: 2rem;
+  height: 100%;
+    inset: 0;
+  border-radius: 0;
+  margin-right: 8px;
+  background-color: black;
+  display: inline-block;
+  transition: 0.45s cubic-bezier(.44, -0.01, .78, 1.01) all;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.namedcolours {
+  background-color: var(--neutralise);
+  display: grid;
+  list-style: none;
+  gap: 2rem;
+  padding: 3rem 0;
+  margin: 0 0 2rem 0;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.namedColoursContainer {
+  position: relative;
+}
+
+.namedColoursPreview {
+  background-color: var(--neutralise);
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease all;
+}
+
+.namedcolours__item {
+  border-radius: 1rem;
+  animation: fadeIn 0.3s forwards;
+  padding: 1rem;
+  break-inside: avoid;
+}
+
+.namedcolours__item.best-black {
+  color: black;
+}
+
+.namedcolours__item.best-white {
+  color: white;
+}
+
+.namedcolours__item.best-black .blob__white,
+.namedcolours__item.best-black .blob__black {
+  border-color: black;
+}
+
+.namedcolours__item.best-white .blob__white::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" fill="none"><path stroke="%23000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m2.421 16.97 9.012 10.15L29.488 2.215"/></svg>');
+}
+
+.namedcolours__item.best-black .blob__black::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" fill="none"><path stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m2.421 16.97 9.012 10.15L29.488 2.215"/></svg>');
+}
+
+.namedcolours__item.best-white .blob__white,
+.namedcolours__item.best-white .blob__black {
+  border-color: white;
+}
+
+.namedcolours__none {
+  display: none;
+}
+
+.namedcolours__cc-wrap {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.namedcolours__cc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.namedcolours__cc div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.namedcolours__cc dd {
+  width: 100%;
+}
+
+.blob {
+  width: 100%;
+  height: 40px;
+  border-radius: 1rem;
+  border: 3px solid;
+  display: block;
+  font-size: 0 !important;
+  position: relative;
+}
+
+.blob::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blob__white {
+  background-color: white;
+}
+
+.blob__black {
+  background-color: black;
+}
+
+dl {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 67%;
+  gap: 10px;
+}
+
+dl dt,
+dl dd {
+  margin: 0;
+}
+
+dl dt {
+  font-weight: 700;
+  font-size: 85%;
+}
+
+dl dd {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+.namedcolours__actions-wrap {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem
+}
+
+.namedColourAction {
+  display: inline-flex;
+  text-align: left;
+  font-size: 1rem;
+  width: 100%;
+  flex: 1 1 auto;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: none;
+}
+
+.namedColourAction:hover,
+.namedColourAction:active {
+  background-color: white;
+}
+
+.namedColourAction[data-copy] {
+  padding-left: 3rem;
+  background-repeat: no-repeat;
+  background-size: 0.75rem;
+  background-position: left 1rem center;
+  background-image: url('data:image/svg+xml,<svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.5H10V16H0V3.5ZM2 5.5V14H8V5.5H2Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3 0.5H13V13H9.5V11H11V2.5H5V4H3V0.5Z" fill="black"/></svg>');
+}
+
+.namedColourAction[data-copy]:active {
+  background-image: url('data:image/svg+xml,<svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.7072 5.70718L4.50008 12.9143L0.792969 9.20718L2.20718 7.79297L4.50008 10.0859L10.293 4.29297L11.7072 5.70718Z" fill="black"/></svg>');
+}
