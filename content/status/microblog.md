@@ -3,7 +3,6 @@ title: Microblog
 type: microblog
 rss: true
 url: status
-eleventyExcludeFromCollections: true,
 status:
     - date: 2025-01-03
       text: New year, new me, new phone ecosystem.. hello Apple
@@ -39,5 +38,10 @@ status:
       text: Learning about witchcraft fr
       emoji: 🧹
       bg: Plum
+      textColor: Black
+    - date: 2025-04-02
+      text: Having a proper spring clean of the website
+      emoji: 🧼
+      bg: pink
       textColor: Black
 ---
