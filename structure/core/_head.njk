@@ -4,6 +4,8 @@
     <title>{{ '(Redirecting) ' if redirectTo }}{{ title | safe +' - ' if title }}{{ metadata.title }}</title>
     <meta name="description" content="{{ description | safe if description else metadata.description }}">
     <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="hsl(228, 32%, 7%)" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="hsl(340, 100%, 92%)" media="(prefers-color-scheme: light)">
     {#- Redirect -#}
     {%- if redirectTo -%}
     <script>location = '{{redirectTo}}';</script>
