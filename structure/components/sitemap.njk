@@ -7,9 +7,9 @@
           <details class="hidden" {% if depth == 0 %}open{% endif %}>
             <summary>
               {% if node.__meta %}
-                  {{ node.__meta.data.title or node.__meta.url }}
+                  /{{ node.__meta.data.title | slugify or node.__meta.url }}
               {% else %}
-                {{ key | title }}
+                /{{ key | title | slugify }}
               {% endif %}
             </summary>
             {{ renderTree(node.children, depth + 1) }}
