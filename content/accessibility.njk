@@ -4,33 +4,85 @@ rss: false
 ---
 {% extends 'structure/templates/page-3col.njk'%}
 
-{%- block left -%}
-{%- endblock -%}
-
+{%- block left -%}{%- endblock -%}
 
 {%- block main -%}
-<section>
-	<div class="reading-width">
-		<p>Making this website accessible to all is my <em>top priority</em>. I aim to meet a minimum of Web Content Accessibility Guidelines (WCAG) 2.2 Level AA.</p>
-		<p>You should be able to:</p>
-		<ul>
-			<li>use your browser defaults for settings, sizes and styling</li>
-			<li>zoom in (or out) without breaking your experience</li>
-			<li>navigate the site with just your keyboard</li>
-			<li>listen to the site using a screen reader</li>
-		</ul>
-		<p>If you have come across something you find inaccessible, please get in touch.</p>
-		<ul class="unstyled">
-			<li><span class="emoji" role="img" aria-label="Email">📧</span> <a href="mailto:fri11s@proton.me">fri11s@proton.me</a></li>
-			<li><span class="emoji" role="img" aria-label="Neocities profile">😺</span> <a href="https://neocities.org/site/fri11s">@fri11s@neocities.org</a></li>
-			<li><span class="emoji" role="img" aria-label="Mastodon">🐘</span> <a href="https://indieweb.social/@frills">@frills@indieweb.social</a></li>
-		</ul>
+	<section>
+		<div class="reading-width">
+			<h1>Accessibility</h1>
 
-	</div>
-</section>
+			<p>
+				This website (<strong>frills.dev</strong>) is built with love, intention, and the want to make the web a friendlier place for everyone. I strive to design and develop inclusively, aiming to provide good usability across a range of abilities, devices, and situations.
+			</p>
+
+			<h2>My accessibility standard</h2>
+			<p>
+				I aim to meet the <em><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2 to Level AA standard</em> throughout the site, with selected enhancements inspired by AAA where they improve experience and do not reduce usability.
+			</p>
+
+			<h3>Core practices</h3>
+			<p class="small">Level AA</p>
+			<ul class="stars">
+				<li>semantic HTML5 with clear heading structure</li>
+				<li>skip link to main content</li>
+				<li>responsive, zoom-friendly layout (up to 200%)</li>
+				<li>keyboard-accessible navigation and links</li>
+				<li>custom focus styles for visibility</li>
+				<li>alt text for meaningful images, decorative images hidden</li>
+				<li>readable font sizes and color contrast of at least 4.5:1</li>
+				<li>support for <code>prefers-reduced-motion</code>
+				</li>
+				<li>ARIA labels for improved screen reader support where appropriate</li>
+			</ul>
+
+			<h3>Little things that go a long way</h3>
+			<p class="small">Level AAA</p>
+			<ul class="stars">
+				<li>most body text meets or exceeds 7:1 contrast</li>
+				<li>pronunciation hints or language markers are used for non-English phrases</li>
+				<li>focus styles are consistent across browsers and high contrast</li>
+			</ul>
+
+			<h3>Your experience, your way</h3>
+			<p class="small">You should be able to:</p>
+			<ul class="stars">
+				<li>use your browser defaults for settings, sizes and styling</li>
+				<li>zoom in (or out) without breaking your experience</li>
+				<li>navigate the site with just your keyboard</li>
+				<li>listen to the site using a screen reader</li>
+			</ul>
+
+			<h2>Feedback & support</h2>
+			<p>
+				Web accessibility, like the human experience, is always evolving. It's not a one-and-done, but an ongoing practice. If you find something that doesn't work for you (or you have ideas on how to make it better) I'd really love to know. 
+			</p>
+				<ul class="unstyled">
+					<li>
+						<span class="emoji" role="img" aria-label="Email">📧</span>
+						<a href="mailto:fri11s@proton.me">Email me on fri11s@proton.me</a>
+					</li>
+					<li>
+						<span class="emoji" role="img" aria-label="Neocities profile">😺</span>
+						<a href="https://neocities.org/site/fri11s">Comment on my profile at fri11s@neocities.org</a>
+					</li>
+					<li>
+						<span class="emoji" role="img" aria-label="Mastodon">🐘</span>
+						<a href="https://indieweb.social/@frills">Toot me on at frills@indieweb.social</a>
+					</li>
+				</ul>
+			</p>
+
+			<p>
+				I care deeply about this stuff, my goal is to have a fun, expressive, open and usable web 💖
+			</p>
+
+			<p>
+				<small>Last updated: <time datetime="2025-04-02">2 April 2025</time>
+				</small>
+			</p>
+		</div>
+	</section>
 
 {%- endblock -%}
 
-{%- block right -%}
-
-{%- endblock -%}
+{%- block right -%}{%- endblock -%}
