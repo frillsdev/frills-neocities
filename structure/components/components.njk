@@ -9,7 +9,7 @@
 
 {# Callout #}
 {%- macro callout(element = "div", modifiers = '', emoji = '', style = '', header = '', body = '') -%}
-<{{element}} class="callout {{modifiers}}" {%- if style -%}style="{{style}}"{%- endif -%}>
+<{{element}} class="callout {{modifiers}}" {%- if style %}style="{{style}}"{%- endif -%}>
     {%- if emoji -%}
     <div class="callout-emoji">
         {{emoji|safe}}
