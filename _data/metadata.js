@@ -2,7 +2,7 @@ module.exports = {
 	title: "Frills",
 	url: "https://frills.dev",
 	avatar: "https://frills.dev/images/avatars/avatar.png",
-	nocache: "🧼",
+	nocache: "😎",
 	language: "en-GB",
 	description: "Personal website of Frills",
 	author: {
