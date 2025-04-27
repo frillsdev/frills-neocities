@@ -1,37 +1,48 @@
 :root,
 :root[data-scheme='dark'] {
-  --main-color: hsl(340, 100%, 86%);
-  --about-color: hsl(340, 100%, 74%);
-  --link: hsl(340, 100%, 74%);
-  --linkaccent: hsl(340, 100%, 74%);
-  --linkvisited: hsl(340, 100%, 80%);
+  --hue: 340;
+  --bg: hsl(var(--hue), 100%, 5%);
+  --bodybg: hsl(var(--hue), 45%, 15%);
+  --main-color: hsl(var(--hue), 100%, 86%);
+  --about-color: hsl(var(--hue), 100%, 74%);
+  --link: hsl(var(--hue), 100%, 74%);
+  --linkaccent: hsl(var(--hue), 100%, 74%);
+  --linkvisited: hsl(var(--hue), 100%, 80%);
   --border-width: 0.25rem;
-  --border-color: #491c2c;
-  --bento-bg: hsl(340, 38%, 13%);
-  --bento-text: hsl(340, 100%, 90%);
+  --border-color: hsl(var(--hue), 45%, 20%);
+  --bento-bg: hsl(var(--hue), 38%, 13%);
+  --bento-text: hsl(var(--hue), 100%, 90%);
 }
 
 :root[data-scheme='light'] {
-  --about-color: hsl(0, 100%, 31%);
-  --link: hsl(0, 100%, 31%);
-  --linkaccent: hsl(0, 100%, 31%);
-  --linkvisited: hsl(0, 100%, 31%);
+  --hue: 340;
+  --bg: hsl(var(--hue), 100%, 90%);
+  --bodybg: hsl(var(--hue), 100%, 94%);
+  --main-color: hsl(var(--hue), 100%, 86%);
+  --about-color: hsl(var(--hue), 100%, 31%);
+  --link: hsl(var(--hue), 100%, 31%);
+  --linkaccent: hsl(var(--hue), 100%, 31%);
+  --linkvisited: hsl(var(--hue), 100%, 31%);
   --border-width: 0.25rem;
-  --border-color: hsl(340, 100%, 86%);
-  --bento-bg: hsl(340, 100%, 95%);
-  --bento-text: hsl(340, 100%, 13%);
+  --border-color: hsl(var(--hue), 100%, 86%);
+  --bento-bg: hsl(var(--hue), 100%, 95%);
+  --bento-text: hsl(var(--hue), 100%, 13%);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --about-color: hsl(0, 100%, 31%);
-    --link: hsl(0, 100%, 31%);
-    --linkaccent: hsl(0, 100%, 31%);
-    --linkvisited: hsl(0, 100%, 31%);
+    --hue: 340;
+    --bg: hsl(var(--hue), 100%, 90%);
+    --bodybg: hsl(var(--hue), 100%, 94%);
+    --main-color: hsl(var(--hue), 100%, 86%);
+    --about-color: hsl(var(--hue), 100%, 31%);
+    --link: hsl(var(--hue), 100%, 31%);
+    --linkaccent: hsl(var(--hue), 100%, 31%);
+    --linkvisited: hsl(var(--hue), 100%, 31%);
     --border-width: 0.25rem;
-    --border-color: hsl(340, 100%, 86%);
-    --bento-bg: hsl(340, 100%, 95%);
-    --bento-text: hsl(340, 100%, 13%);
+    --border-color: hsl(var(--hue), 100%, 86%);
+    --bento-bg: hsl(var(--hue), 100%, 95%);
+    --bento-text: hsl(var(--hue), 100%, 13%);
   }
 }
 
@@ -70,11 +81,11 @@ h1 {
   }
 }
 
-.charactersheet {
+.character-scroll {
   color: var(--about-color);
 }
 
-.charactersheet-character {
+.party-leader {
   row-gap: clamp(0.5rem, 2.5vw, 1rem);
   column-gap: clamp(0.5rem, 5vw, 1000rem);
   align-items: flex-start;
@@ -83,14 +94,14 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  .charactersheet-character {
+  .party-leader {
     row-gap: clamp(0.5rem, 2.5vw, 1rem);
     align-items: center;
     grid-template-columns: 1fr 15rem;
   }
 }
 
-.whosthatgirl {
+.stat-block {
   width: 100%;
   flex: 1 1 100%;
   display: grid;
@@ -104,23 +115,23 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  .whosthatgirl {
+  .stat-block {
     grid-column: 1 / span 1;
   }
 }
 
-.whosthatgirl>* {
+.stat-block>* {
   background-color: var(--bg);
   padding: 0.9rem 1.1rem;
   grid-column: span 2;
 }
 
-.itsfrills-alignment,
-.itsfrills-something {
+.stat-alignment,
+.stat-class {
   grid-column: span 3;
 }
 
-[class^="itsfrills-"] h2 {
+[class^="stat-"] h2 {
   font-family: "Shrikhand", var(--font-family);
   font-size: 2vw;
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -129,14 +140,14 @@ h1 {
   margin-bottom: 0;
 }
 
-[class^="itsfrills-"] p {
+[class^="stat-"] p {
   font-size: clamp(1.25rem, 3.5vw, 2rem);
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 0;
 }
 
-.piccy {
+.character-portrait {
   border-radius: 0.75rem;
   border: var(--border-width) solid var(--border-color);
   overflow: hidden;
@@ -148,24 +159,24 @@ h1 {
   grid-row: 1 / span 1;
 }
 
-.piccy img {
+.character-portrait img {
   border-radius: 0.5rem;
   background-color: var(--main-color);
 }
 
 @media (min-width: 768px) {
-  .piccy {
+  .character-portrait {
     border-radius: 1000px;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
   }
 
-  .piccy img {
+  .character-portrait img {
     border-radius: 1000px;
   }
 }
 
-.charactersheet-stats {
+.ability-scores {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -175,19 +186,19 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  .charactersheet-stats {
+  .ability-scores {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
 
-.charactersheet-stats>* {
+.ability-scores>* {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.charactersheet-stats>*>h3 {
+.ability-scores>*>h3 {
   font-family: "Shrikhand", var(--font-family);
   font-weight: 400;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
@@ -198,8 +209,8 @@ h1 {
   transform: translateX(-50%);
 }
 
-.bigstat,
-.smolstat {
+.score,
+.score-modifier {
   font-family: "Shrikhand", var(--font-family);
   border-radius: 0.75rem;
   background: var(--about-color);
@@ -212,14 +223,16 @@ h1 {
   justify-content: center;
 }
 
-.bigstat {
+.score {
   border-radius: 2vw;
   font-size: clamp(1.5rem, 3.5vw, 5rem);
   aspect-ratio: 1 / 1;
   padding: 1rem;
+  box-shadow: 0 0 0 var(--border-width) var(--border-color);
+  border: calc(var(--border-width) * 2) solid var(--bg);
 }
 
-.smolstat {
+.score-modifier {
   font-size: 1rem;
   font-family: var(--font-family);
   border-radius: 100px;
@@ -230,53 +243,135 @@ h1 {
   min-width: 1.5rem;
 }
 
-.bentobox {
+.adventurer-tome {
+  padding-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  /* grid-auto-flow: dense; */
-  column-gap: 15px;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
   color: var(--bento-text);
 }
 
-.bentobox__item {
+@media (min-width: 768px) {
+  .adventurer-tome {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .adventure-tome-main {
+      grid-column: 1 / span 2;
+      grid-row: 1;
+    }
+  
+    .adventure-tome-stats {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  
+    .adventure-tome-items {
+      grid-column: 2;
+      grid-row: 2;
+    }
+}
+
+@media (min-width: 1060px) {
+  .adventurer-tome {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .adventure-tome-main {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .adventure-tome-stats {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .adventure-tome-items {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+.tome-entry {
   border-radius: 0.75rem;
   padding: 1rem;
-  background-color: var(--bento-bg);
-  margin-bottom: 15px;
+  border: var(--border-width) solid var(--border-color);
+  margin-bottom: 1rem;
+  flex: 1 1 auto;
 }
 
-.bentobox--column-1 {
-  grid-area: 1 span / 1;
+.tome-entry :last-child {
+  margin-bottom: 0;
 }
 
-.bentobox--pronouns {
-  font-size: 2rem;
+.tome-entry:not(:first-child):has(.tome-entry-title) {
+  margin-top: 1.5rem;
+}
+
+.tome-entry-title {
+  margin-top: -2rem;
+}
+
+.tome-entry-title span {
+  background-color: var(--bg);
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  font-family: "Shrikhand", var(--font-family);
+}
+
+.skill-scores .skill {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 90%;
+}
+
+.skill-scores .skill::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100px;
+  box-shadow: 0 0 0 0.1rem var(--bento-text);
+  border: 0.25rem solid var(--bg);
+  background-color: transparent;
+}
+
+.skill-scores .skill.proficient::before {
+  background-color: var(--bento-text);
+}
+
+.skill-modifier {
+  font-family: "Shrikhand", var(--font-family);
+  border-bottom: 0.1rem solid var(--border-color);
+  padding: 0 0.25rem;
+  margin-right: 0.25rem;
   text-align: center;
-  font-weight: 700;
 }
 
-.bentobox--center {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-  text-align: center;
+#hp::-webkit-progress-value {
+  background-color: deeppink;
 }
 
-.bentobox--colour {
-  background: linear-gradient(to right, #ff7aa7, #ff367a);
-  color: #0c0e18;
+#xp::-webkit-progress-value {
+  background-color: MediumSeaGreen;
 }
 
-.smolvalue {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
+#mana::-webkit-progress-value {
+  background-color: deepskyblue;
 }
 
-.bigvalue {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
+#hp::-moz-progress-bar {
+  background-color: deeppink;
+}
+
+#xp::-moz-progress-bar {
+  background-color: MediumSeaGreen;
+}
+
+#mana::-moz-progress-bar {
+  background-color: deepskyblue;
 }

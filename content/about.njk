@@ -39,152 +39,258 @@ scripts: '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/c
 	});
 </script>'
 ---
-{% extends 'structure/templates/page-full.njk'%}
-{% import "structure/components/components.njk" as macro with context %}
 
-{%- block main -%}
+{% extends 'structure/templates/page-full.njk'%} {% import "structure/components/components.njk" as macro with context %} {%- block main -%}
 <h1 class="visually-hidden">About</h1>
 
+<div class="character-scroll">
+  <div class="party-leader" title="Mid-Tier Wi-Fi Spellcaster">
+    <span class="bigboibanner">Internet witch</span>
+    <div class="stat-block">
+      <div class="stat-name">
+        <h2>Name</h2>
+        <p>Frills</p>
+      </div>
+      <div class="stat-race">
+        <h2>Race</h2>
+        <p>Human</p>
+      </div>
+      <div class="stat-level">
+        <h2>Pronouns</h2>
+        <p>she/her</p>
+      </div>
+      <div class="stat-alignment">
+        <h2>Alignment</h2>
+        <p>Chaotic Good</p>
+      </div>
+      <div class="stat-class">
+        <h2>Class & Level</h2>
+        <p>Sorcerer, 8</p>
+      </div>
+    </div>
+    <div class="character-portrait">
+      <img src="/images/avatars/andycarolan.png" alt="Avatar of a woman with brown hair, styled in spacebuns. Wearing pink dungarees and a pink top. In a simple line illustration style" />
+    </div>
+  </div>
 
-<div class="charactersheet">
+  <div class="ability-scores">
+    <h2 class="visually-hidden">Stats</h2>
+    <div class="score-strength">
+      <h3>Strength</h3>
+      <p class="score">9</p>
+      <p class="score-modifier">-1</p>
+    </div>
+    <div class="score-dexterity">
+      <h3>Dexterity</h3>
+      <p class="score">12</p>
+      <p class="score-modifier">+1</p>
+    </div>
+    <div class="score-constitution">
+      <h3>Constitution</h3>
+      <p class="score">15</p>
+      <p class="score-modifier">+2</p>
+    </div>
+    <div class="score-wisdom">
+      <h3>Wisdom</h3>
+      <p class="score">17</p>
+      <p class="score-modifier">+3</p>
+    </div>
+    <div class="score-intelligence">
+      <h3>Intelligence</h3>
+      <p class="score">14</p>
+      <p class="score-modifier">+2</p>
+    </div>
+    <div class="score-charisma">
+      <h3>Charisma</h3>
+      <p class="score">15</p>
+      <p class="score-modifier">+2</p>
+    </div>
+  </div>
 
-	<div class="charactersheet-character">
-		<span class="bigboibanner">Internet witch</span>
-		<div class="whosthatgirl">
-			<div class="itsfrills-name">
-				<h2>Name</h2>
-				<p>Frills</p>
-			</div>
-			<div class="itsfrills-race">
-				<h2>Race</h2>
-				<p>Human</p>
-			</div>
-			<div class="itsfrills-level">
-				<h2>Level</h2>
-				<p>3X</p>
-			</div>
-			<div class="itsfrills-alignment">
-				<h2>Alignment</h2>
-				<p>Chaotic Good</p>
-			</div>
-			<div class="itsfrills-something">
-				<h2>Class</h2>
-				<p>Sorcerer</p>
-			</div>
-		</div>
-		<div class="piccy">
-			<img src="/images/avatars/andycarolan.png" alt="Avatar of a woman with brown hair, styled in spacebuns. Wearing pink dungarees and a pink top. In a simple line illustration style">
-		</div>
-	</div>
+  <div class="adventurer-tome">
+    <div class="adventure-tome-main">
+      <div class="tome-entry">
+        <div class="vitals">
+          <div class="vital-bar">
+            <label for="hp">Health</label>
+            <progress id="hp" value="35" max="50"></progress>
+          </div>
+          <div class="vital-bar">
+            <label for="mana">Mana</label>
+            <progress id="mana" value="44" max="100"></progress>
+          </div>
+          <div class="vital-bar">
+            <label for="xp">Experience</label>
+            <progress id="xp" value="1000" max="14000"></progress>
+          </div>
+        </div>
+      </div>
+      <div class="tome-entry">
+        <h2 class="tome-entry-title">
+          <span>Backstory</span>
+        </h2>
+        <p>Siwmae! Ffrils ydw i! An average mortal human, brimming with a plethora of hobbies and complexities. Grew up in the sticks in the South West of England, moved to Wales for the love of reading complicated road signs, family heritage and for love itself.</p>
+        <p>I spend my time consuming media, tinkering with my website, reading about myths and legends, and picking up flowers, sticks and stones on walks with the familiar.</p>
+        <p>Dw i'n dysgu Cymraeg (mostly by osmosis and googling). Dw i wedi dysgu pethau bach fel "dw i wrth fy modd yn yfed llawer o de".</p>
+      </div>
 
-	<div class="charactersheet-stats mb-2">
-		<h2 class="visually-hidden">Stats</h2>
-		<div class="stat-str">
-			<h3>Strength</h3>
-			<p class="bigstat"><span class="visually-hidden">Ability score: </span>9</p>
-			<p class="smolstat"><span class="visually-hidden">Modifier: </span>-1</p>
-		</div>
-		<div class="stat-dex">
-			<h3>Dexterity</h3>
-			<p class="bigstat"><span class="visually-hidden">Ability score: </span>11</p>
-			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+0</p>
-		</div>
-		<div class="stat-con">
-			<h3>Constitution</h3>
-			<p class="bigstat"><span class="visually-hidden">Ability score: </span>15</p>
-			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+2</p>
-		</div>
-		<div class="stat-wis">
-			<h3>Wisdom</h3>
-			<p class="bigstat"><span class="visually-hidden">Ability score: </span>16</p>
-			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+3</p>
-		</div>
-		<div class="stat-int">
-			<h3>Intelligence</h3>
-			<p class="bigstat"><span class="visually-hidden">Ability score: </span>14</p>
-			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+2</p>
-		</div>
-		<div class="stat-cha">
-			<h3>Charisma</h3>
-			<p class="bigstat"><span class="visually-hidden">Ability score: </span>13</p>
-			<p class="smolstat"><span class="visually-hidden">Modifier: </span>+1</p>
-		</div>
-	</div>
+      <div class="tome-entry">
+        <h2 class="tome-entry-title">
+          <span>Companions</span>
+        </h2>
+        <ul class="unstyled">
+          <li>
+            <h3>Fiancé</h3>
+            Level 9 Human Bard. Inspiration and morale boost specialisms. Firm rock in emotional tides.
+          </li>
+          <li>
+            <h3>Familiar</h3>
+            Level 1 Canine Paladin. Skilled at sniffing out treats and picking the best sword sticks, but sometimes thinks a plastic bag is a threat.
+          </li>
+        </ul>
+      </div>
+      <div class="tome-entry">
+        <h2 class="tome-entry-title">
+          <span>Correspondence</span>
+        </h2>
+        <ul>
+          <li><a href="https://indieweb.social/@frills">@frills@indieweb.social</a></li>
+          <li><p>fri11s ✨ proton 🟡 me</p></li>
+          <li><a href="/guestbook">My Guestbook</a></li>
+        </ul>
+      </div>
+    </div>
 
-	<div class="bentobox">
-		<div class="bentobox-column-1">
-			<div class="bentobox__item bentobox--inspiration">
-				<button class="button" id="inspire">Inspiration</button>
-			</div>
-			<div class="bentobox__item bentobox--pronouns bentobox--center">
-				<h2 class="visually-hidden">Pronouns</h2>
-				<p>she/her</p>
-			</div>
-			<div class="bentobox__item">
-				<h2>Languages</h2>
-				<ul class="unstyled">
-					<li>English (native)</li>
-					<li>Welsh (beginner/dysgu)</li>
-				</ul>
-			</div>
-			<h2 class="visually-hidden">Get in contact</h2>
-			<div class="bentobox__item">
-				<a href="https://indieweb.social/@frills">@frills@indieweb.social</a>
-			</div>
-			<div class="bentobox__item">
-				fri11s [at] proton [dot] me
-			</div>
-			<div class="bentobox__item">
-				<a href="/guestbook">Leave a message</a>
-			</div>
-		</div>
+    <div class="adventure-tome-stats">
+      <div class="tome-entry">
+        <button class="button" id="inspire">Inspiration</button>
+      </div>
+      <div class="tome-entry">
+        <h2 class="tome-entry-title">
+          <span>Skills</span>
+        </h2>
+        <div class="skill-scores">
+          <ul class="unstyled">
+            <li class="skill">
+              <span class="skill-modifier">+1</span>
+              <span>Acrobatics</span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+3</span>
+              <span>Animal Handling</span>
+            </li>
+            <li class="skill proficient">
+              <span class="skill-modifier">+5</span>
+              <span>Arcana <span class="visually-hidden">(Proficient)</span></span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">-1</span>
+              <span>Athletics</span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+2</span>
+              <span>Deception</span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+2</span>
+              <span>History</span>
+            </li>
+            <li class="skill proficient">
+              <span class="skill-modifier">+6</span>
+              <span>Insight <span class="visually-hidden">(Proficient)</span></span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+2</span>
+              <span>Intimidation</span>
+            </li>
+            <li class="skill proficient">
+              <span class="skill-modifier">+5</span>
+              <span>Insight</span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+3</span>
+              <span>Medicine</span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+2</span>
+              <span>Nature</span>
+            </li>
+            <li class="skill proficient">
+              <span class="skill-modifier">+6</span>
+              <span>Perception <span class="visually-hidden">(Proficient)</span></span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+2</span>
+              <span>Performance</span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+2</span>
+              <span>Persuasion</span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+2</span>
+              <span>Religion</span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+1</span>
+              <span>Sleight of Hand</span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+1</span>
+              <span>Stealth</span>
+            </li>
+            <li class="skill">
+              <span class="skill-modifier">+3</span>
+              <span>Survival</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tome-entry">
+        <h2 class="tome-entry-title">
+          <span>Proficiencies</span>
+        </h2>
+        <ul class="unstyled">
+          <li>English (native)</li>
+          <li>Internet Slang (native)</li>
+          <li>Welsh (beginner/dysgu)</li>
+        </ul>
+      </div>
+    </div>
 
-		<div class="bentobox--column-2">
-			<div class="bentobox__item">
-				<h2>Backstory</h2>
-				<p>An average mortal human, brimming with a plethora of hobbies and complexities. Grew up in the sticks in the South West of England, moved to Wales for the love of reading complicated road signs, family heritage and for love itself.</p>
-			</div>
-			<div class="bentobox__item">
-				<p>Once upon a time, Frills had dreams of running a small arts business, but trained and settled as a frontend developer to pay the bills.</p>
-				<p>Currently employed as a Senior Frontend Developer and Accessibility Specialist at a fast-paced private digital agency, developing for a wide variety of clients. She works from home with an odd day in the office, when the wind blows in the right direction and the stars align correctly.</p>
-			</div>
-		</div>
 
-		<div class="bentobox--column-2">
-			<div class="bentobox__item">
-				<h2>Inventory</h2>
-				<ul class="unstyled">
-					<li>🧥 Clothes, common</li>
-					<li>💍 Engagement band</li>
-					<li>🥕 Handful of carrot seeds</li>
-					<li>🖋️ Ink pen</li>
-					<li>🍶 Perfume (vial)</li>
-					<li>🪢 Leash (dog)</li>
-					<li>⌨️ Mechanical keyboard</li>
-					<li>🍜 Packets of ramen noodles</li>
-					<li>📿 Silver amulet</li>
-					<li>📚 Stack of half-used, heavily doodled notepads</li>
-					<li>🫘 Small bag of snacks</li>
-					<li>🎮 Entertainment device (Steam deck)</li>
-					<li>🛠️ Tinker's Tools</li>
-					<li>💧 Waterskin</li>
-					<li>☕ Welsh Brew tea leaves</li>
-				</ul>
-			</div>
-		</div>
-		<!-- <h2 class="visually-hidden">Favourites</h2>
-		<div class="bentobox__item bentobox--colour bentobox--center">
-			<span class="smolvalue">Favourite colour is</span>
-			<span class="bigvalue">pink</span>
-		</div> -->
-	</div>
-
+    <div class="adventure-tome-items">
+      <div class="tome-entry">
+        <h2 class="tome-entry-title">
+          <span>Inventory</span>
+        </h2>
+        <ul class="unstyled">
+          <li>🧥 Clothes, common</li>
+          <li>🖋️ Ink pen</li>
+          <li>🍶 Perfume (vial)</li>
+          <li>🪢 Leash (dog)</li>
+          <li>⌨️ Mechanical keyboard</li>
+          <li>🍜 Packets of ramen noodles</li>
+          <li>📚 Stack of half-used, heavily doodled notepads</li>
+          <li>🫘 Small bag of snacks</li>
+          <li>🎮 Entertainment devices</li>
+          <li>🛠️ Tinker's Tools</li>
+          <li>💧 Waterskin</li>
+          <li>🍂 Welsh Brew tea leaves</li>
+        </ul>
+      </div>
+      <div class="tome-entry">
+        <h2 class="tome-entry-title">
+          <span>Magic Items</span>
+        </h2>
+        <ul class="unstyled">
+          <li>💍 Engagement band</li>
+          <li>📿 Silver amulet</li>
+          <li>☕️ Favourite mug</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
-{{ macro.callout(
-	element = 'aside',
-	modifiers = '',
-	emoji = '🛠️',
-	header = '<h2>Work in progress</h2>',
-	body = 'For the development of this page, I am working in the open! So you\'ll see it only partly built. There may be bugs or things might look weird on certain browsers or device widths. That\'s the beauty!') }}
 {%- endblock -%}

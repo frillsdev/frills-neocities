@@ -7,6 +7,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+  border: 0;
+  transition: 0.3s ease background-color;
+  border-radius: 0.25rem;
+}
+
+.toggle:hover,
+.toggle:focus {
+  background-color: var(--bodybg);
 }
 
 .toggle--colorscheme::before {
@@ -17,13 +26,10 @@
   border: 2px solid var(--text);
   display: block;
   transition: 0.3s ease all;
+  background-color: transparent;
   background-image: linear-gradient(to right, transparent 50%, var(--text) 50%);
 }
 
 .toggle--colorscheme[aria-pressed="true"]::before {
   background-image: linear-gradient(to right, var(--text) 50%, transparent 50%);
-}
-
-.toggle--seasonal {
-  display: none;
 }

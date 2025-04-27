@@ -1,0 +1,58 @@
+.table {
+  border: 2px solid var(--accent);
+  border-radius: 0.25rem;
+}
+
+.table caption {
+  text-align: left;
+}
+
+.table th {
+  border-radius: 0.25rem 0.25rem 0 0;
+  background: var(--accent);
+  padding: 0.5rem 1rem;
+}
+
+.table th:has(.button) {
+  padding: 2px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  border: 1px solid var(--bodybg);
+}
+
+.table td {
+  padding: 0.25rem 1rem;
+}
+
+.table th.num,
+.table th.num button,
+.table td.num {
+  text-align: center;
+}
+
+.table th button {
+  width: 100%;
+  text-align: left;
+  font-weight: 700;
+  color: var(--accentcontrast);
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease background-color;
+}
+
+.table th button:hover,
+.table th button:focus,
+.table th button:active {
+  background-color: rgba(255,255,255,0.2);
+  color: var(--accentcontrast);
+}
+
+.table tr:nth-child(even) td {
+  background: var(--bodybg);
+}
+
+.table tr:last-child td {
+  border-radius: 0 0 0.25rem 0.25rem;
+}

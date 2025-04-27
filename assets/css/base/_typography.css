@@ -46,6 +46,7 @@ h6 {
 a {
   text-decoration: underline;
   color: var(--link);
+  text-underline-offset: 2px;
 }
 
 a:visited {
@@ -70,7 +71,10 @@ a.hidden:hover,
 a.hidden:focus,
 a.hidden:active {
   color: var(--linkhover);
-  text-decoration: underline wavy 2px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: wavy;
+  text-underline-offset: 2px;
 }
 
 p {

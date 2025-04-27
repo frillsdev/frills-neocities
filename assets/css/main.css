@@ -37,6 +37,7 @@
 @import url('./components/_ribbon.css');
 @import url('./components/_h-card.css');
 @import url('./components/_status.css');
+@import url('./components/_table.css');
 
 @import url('./pages/_homepage.css');
 @import url('./pages/_bloglist.css');

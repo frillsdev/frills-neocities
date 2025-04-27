@@ -34,7 +34,10 @@ ul.files details>summary {
 ul.files details>summary::hover,
 ul.files details>summary::focus,
 ul.files details>summary::active {
-  text-decoration: underline wavy 2px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: wavy;
+  text-underline-offset: 2px;
 }
 
 ul.files details>summary::marker,

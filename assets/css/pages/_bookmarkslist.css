@@ -27,6 +27,7 @@
   display: block;
   margin-bottom: 1rem;
   text-decoration: underline;
+  text-underline-offset: 2px;
   color: var(--link);
   word-break: break-all;
 }
@@ -38,7 +39,10 @@
 .bookmarks.cards .card__title:hover~.card__url,
 .bookmarks.cards .card__title:focus~.card__url {
   color: var(--linkhover);
-  text-decoration: underline wavy 2px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: wavy;
+  text-underline-offset: 2px;
 }
 
 .bookmarks.cards .card__favicon {

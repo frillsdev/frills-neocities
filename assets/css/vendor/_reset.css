@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 details summary {
   cursor: pointer;
 }
@@ -11,7 +12,12 @@ iframe {
   border: 0;
 }
 
-code, pre {
+button {
+  cursor: pointer;
+}
+
+code,
+pre {
   max-width: 100%
 }
 
@@ -31,6 +37,7 @@ figure {
   position: relative;
   margin: 0;
 }
+
 figure img {
   width: 100%;
   height: auto;
@@ -42,7 +49,8 @@ video {
   max-width: 100%;
 }
 
-hr, .hr {
+hr,
+.hr {
   display: block;
   width: 100%;
   border: 0;
@@ -52,4 +60,31 @@ hr, .hr {
 
 article header h1 {
   margin-bottom: 0;
+}
+
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 0.75rem;
+  width: 100%;
+}
+
+progress[value]::-webkit-progress-bar,
+progress[value] {
+  border: 0;
+  background-color: var(--bodybg);
+  border-radius: 100px;
+  -webkit-box-shadow: 0 0 0 transparent inset;
+  box-shadow: 0 0 0 transparent inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: var(--accent);
+  border-radius: 100px;
+}
+
+progress[value]::-moz-progress-bar {
+  background-color: var(--accent);
+  border-radius: 100px;
 }

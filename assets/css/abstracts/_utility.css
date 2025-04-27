@@ -139,11 +139,13 @@
 
 .visually-hidden:not(:focus):not(:active) {
   clip-path: inset(50%);
-  height: 1px;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
 }
 
 .visually-hidden.skiptomain {

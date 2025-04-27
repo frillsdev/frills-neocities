@@ -26,6 +26,8 @@
   display: flex;
   align-items: center;
   color: black;
+  border-radius: 0.25rem;
+  border: 0;
   background-color: white;
   box-shadow: none;
   padding: 0.5rem 1rem;
@@ -76,6 +78,7 @@
 .namedColourButton:active,
 .namedColourButton[aria-pressed="true"] {
   text-decoration: underline;
+  text-underline-offset: 2px;
   transform: none;
   box-shadow: none;
 }
@@ -263,6 +266,9 @@ dl dd {
   flex: 1 1 auto;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
+  border: 0;
+  border-radius: 0.25rem;
+  color: black;
   background-color: rgba(255, 255, 255, 0.75);
   box-shadow: none;
 }

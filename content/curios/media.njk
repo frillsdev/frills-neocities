@@ -1,0 +1,133 @@
+---
+title: Media
+description: Movies, TV shows, podcasts I have enjoyed
+rss: true
+date: 2025-04-30
+---
+{% extends 'structure/templates/page-full.njk'%}
+{% import "structure/components/components.njk" as macro with context %}
+
+{% block main %}
+
+{% set mediaConsumed = [
+  {
+  "title": "Jet Lag: The Game - Hide + Seek Across NYC",
+  "notes": "The addition of Amy was awesome.",
+  "date": "2025-04",
+  "type": "Web Series"
+  },
+  {
+  "title": "Gravity Falls",
+  "notes": "Lorem ipsum",
+  "date": "2024",
+  "type": "TV Show"
+  },
+  {
+  "title": "The Witch",
+  "notes": "It's giving Lord of the Flies x Witch Hunts",
+  "date": "2025-03",
+  "type": "Movie"
+  },{
+  "title": "Good Bye, Lenin!",
+  "notes": "<a href='https://www.theguardian.com/travel/2016/jul/10/spreewald-gherkins-brandenburg-germany'>Spreewaldgurken!</a>",
+  "date": "2025-04",
+  "type": "TV Show"
+  }
+] %}
+
+  <table class="table sortable" aria-describedby="sort-status">
+    <caption>
+      Media I have consumed.
+      <span class="visually-hidden">(Columns are sortable using the headers)</span>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">
+          <button class="button hidden" data-column-index="1">Title</button>
+        </th>
+        <th scope="col">
+          <button class="button hidden" data-column-index="3">Notes</button>
+        </th>
+        <th scope="col">
+          <button class="button hidden" data-column-index="3">Date</button>
+        </th>
+        <th scope="col">
+          <button class="button hidden" data-column-index="0">Media type</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for media in mediaConsumed %}
+     <tr>
+        <td>
+          {{media.title}}
+        </td>
+        <td>
+          {{media.notes | safe}}
+        </td>
+        <td>
+          {{media.date}}
+        </td>
+        <td>
+          {{media.type}}
+        </td>
+      </tr>
+    {% endfor %}
+      
+    </tbody>
+  </table>
+
+  <div id="sort-status" class="visually-hidden" role="status" aria-live="polite"></div>
+
+  <script>
+    class SortableTable {
+      constructor(tableNode) {
+        this.tableNode = tableNode;
+        this.headers = tableNode.querySelectorAll('thead th');
+        this.statusBox = document.getElementById('sort-status');
+        this.headers.forEach((header, index) => {
+          const btn = header.querySelector('button');
+          if (btn) {
+            btn.setAttribute('data-column-index', index);
+            btn.addEventListener('click', this.sort.bind(this));
+          }
+        });
+      }
+      sort(event) {
+        const columnIndex = parseInt(event.currentTarget.dataset.columnIndex);
+        const header = this.headers[columnIndex];
+        const isNumeric = header.classList.contains('num');
+        const currentSort = header.getAttribute('aria-sort');
+        const newSort = currentSort === 'ascending' ? 'descending' : 'ascending';
+        this.headers.forEach(h => h.removeAttribute('aria-sort'));
+        header.setAttribute('aria-sort', newSort);
+        const tbody = this.tableNode.querySelector('tbody');
+        const rows = Array.from(tbody.rows);
+
+        const getValue = row => {
+          const cell = row.cells[columnIndex];
+          const text = cell.textContent.trim().toLowerCase();
+          return isNumeric ? parseFloat(text) || 0 : text;
+        };
+
+        rows.sort((a, b) => {
+          const valA = getValue(a);
+          const valB = getValue(b);
+          if (valA === valB) return 0;
+          return newSort === 'ascending'
+            ? valA > valB ? 1 : -1
+            : valA < valB ? 1 : -1;
+        });
+        tbody.innerHTML = '';
+        rows.forEach(row => tbody.appendChild(row));
+        const columnName = header.textContent.trim();
+        this.statusBox.textContent = `Sorted by ${columnName} (${newSort})`;
+      }
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('table.sortable').forEach(table => {
+        new SortableTable(table);
+      });
+    });
+  </script>
+{% endblock %}

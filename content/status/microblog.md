@@ -44,4 +44,9 @@ status:
       emoji: 🧼
       bg: pink
       textColor: Black
+    - date: 2025-04-24
+      text: My fingernails feel like paper
+      emoji: 💅
+      bg: Plum
+      textColor: Black
 ---
