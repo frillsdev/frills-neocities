@@ -232,6 +232,7 @@
   overflow: auto;
   text-align: center;
   border: 0;
+  border-radius: 0;
 }
 
 .nice-thing:active {

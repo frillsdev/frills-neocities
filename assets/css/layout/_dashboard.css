@@ -29,9 +29,16 @@
 
 .dashboard__item {
   width: 100%;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   break-inside: avoid;
   display: flow-root;
+}
+
+@media (min-width: 992px) {
+  .dashboard__item--safari:first-of-type,
+  .dashboard__item:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .dashboard__item figure {

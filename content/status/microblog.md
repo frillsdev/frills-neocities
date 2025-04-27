@@ -49,4 +49,9 @@ status:
       emoji: 💅
       bg: Plum
       textColor: Black
+    - date: 2025-04-27
+      text: Fuck Joanna Rowling, btw.
+      emoji: 🖕
+      bg: 'linear-gradient(to bottom,#55CDFC 20%, #F7A8B8 20%, #F7A8B8 40%, #FFFFFF 40%, #FFFFFF 60%, #F7A8B8 60%,#F7A8B8 80%, #55CDFC 80%)'
+      textColor: Black
 ---
