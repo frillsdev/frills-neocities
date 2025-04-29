@@ -2,6 +2,7 @@ backend:
   name: github
   repo: frillsdev/frills-neocities
   branch: main
+  auth_scope: repo
 commit_messages:
     create: 📝 Add {{collection}} - {{slug}}
     update: 📝 Update {{collection}} - {{slug}}

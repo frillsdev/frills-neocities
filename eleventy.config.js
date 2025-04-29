@@ -69,7 +69,6 @@ module.exports = function(eleventyConfig) {
 			.filter(entry => allowedTypes.includes(entry['wm-property']))
 		}
 	)
-
 	// Sitemap
 	eleventyConfig.addCollection("structuredPages", function (collectionApi) {
 		function addToTree(tree, parts, item) {
@@ -85,7 +84,12 @@ module.exports = function(eleventyConfig) {
 			}
 		}
 
-		const pages = collectionApi.getAll().filter(item => item.url && !item.data.excludeFromSitemap);
+		const pages = collectionApi.getAll().filter(item => {
+			return item.url &&
+				!item.data.excludeFromSitemap &&
+				!item.url.startsWith("/admin/");
+		});
+
 		const tree = {};
 
 		for (let page of pages) {
