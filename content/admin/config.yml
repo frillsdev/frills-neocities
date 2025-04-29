@@ -29,7 +29,7 @@ collections:
       - { label: "Image", name: "image", widget: "image", allow_multiple: false, required: false }
       - { label: "Body", name: "body", widget: "markdown", required: true }
       - { label: "Tags", name: "tags", widget: "list", default: [] }
-      - { label: "Styles", name: "style", widget: "code", required: false}
+      - { label: "Styles", name: "style", widget: "code", default_language: "css", required: false }
       - { label: "Kudos", name: "kudos", widget: "string",required: false }
       - { label: "RSS", name: "rss", widget: "boolean", default: true, required: false }
 
