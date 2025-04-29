@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="hsl(228, 32%, 7%)" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="hsl(340, 100%, 92%)" media="(prefers-color-scheme: light)">
+
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.CMS) {
+          CMS.registerPreviewStyle("/assets/css/main.css");
+          CMS.registerPreviewStyle("/admin/preview.css");
+          CMS.init();
+        }
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: frillsdev/frills-neocities
+  branch: main
+commit_messages:
+    create: 📝 Add {{collection}} - {{slug}}
+    update: 📝 Update {{collection}} - {{slug}}
+    delete: 🔥 Delete {{collection}} - {{slug}}
+    uploadMedia: 🖼️ Upload {{path}}
+    deleteMedia: 🔥 Delete “{{path}}”
+    openAuthoring: '{{message}}'
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    nested:
+      depth: 2
+    path: "{{year}}/{{month}}/{{slug}}.md"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true}
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", required: true }
+      - { label: "Image", name: "image", widget: "image", allow_multiple: false, required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: true }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Styles", name: "style", widget: "code", required: false}
+      - { label: "Kudos", name: "kudos", widget: "string",required: false }
+      - { label: "RSS", name: "rss", widget: "boolean", default: true, required: false }
+
+      

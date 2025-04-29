@@ -39,6 +39,10 @@ module.exports = function(eleventyConfig) {
 		return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
 	});
 
+	// CMS
+	eleventyConfig.addPassthroughCopy("content/admin");
+	eleventyConfig.addPassthroughCopy("assets");
+
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {
 		if(!Array.isArray(array) || array.length === 0) {
