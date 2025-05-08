@@ -26,6 +26,7 @@
   --interactive: OrangeRed;
   --input-bg: hsl(228, 38%, 13%);
   --input-border: SpringGreen;
+  --input-text: hsl(228, 32%, 7%);
   --link: DeepPink;
   --linkaccent: hsl(328, 100%, 19%);
   --linkhover: SpringGreen;
@@ -53,6 +54,7 @@
     --interactive: hsl(328, 100%, 44%);
     --input-bg: LavenderBlush;
     --input-border: DeepPink;
+    --input-text: hsl(228, 32%, 7%);
     --separator: DeepPink;
     --quote: hsl(328, 100%, 38%);
     --highlight: hsl(195, 100%, 28%);
@@ -83,6 +85,7 @@
     --interactive: hsl(328, 100%, 44%);
     --input-bg: LavenderBlush;
     --input-border: DeepPink;
+    --input-text: hsl(228, 32%, 7%);
     --separator: DeepPink;
     --quote: hsl(328, 100%, 38%);
     --highlight: hsl(195, 100%, 28%);

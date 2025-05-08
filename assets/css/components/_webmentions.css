@@ -35,10 +35,15 @@
   border-radius:  0 0.5rem 0.5rem 0;
   box-shadow: none;
   background: var(--input-border);
+  color: var(--input-text);
+  padding: 0 1rem;
+  font-family: var(--font-family);
+  border: 0;
+  font-size: 0.75rem;
+  font-weight: bold;
 }
 .webmentions__formgroup button:hover,
 .webmentions__formgroup button:focus,
 .webmentions__formgroup button:active {
-  transform: none;
   background: var(--input-border);
 }
