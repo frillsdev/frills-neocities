@@ -24,8 +24,14 @@ In this new season of Overwatch, they have [Dokiwatch](https://overwatch.blizzar
   </figcaption>
 </figure>
 
-"Doki" is the Japanese onomatopeic word for a heartbeat. It is a magical girl take on the fem characters, and honestly, I have never loved a season so much. I am a complete and utter sucker for magical girl. When I had my brief stint of playing Final Fantasy XIV, I got mods sorted just so that I could play a [magical girl White Mage](https://www.youtube.com/watch?v=zmjw-4ZCPd4) that literally only I could see.
+"Doki" is the Japanese onomatopeic word for a heartbeat.
 
-The new Overwatch Dokiwatch skins include a mythic skin for the Martian healer, Juno. She has a cute frilly skirt and is adorned with hearts, bows, ribbons and her Magitech form - sharks. Her abilities tinkle and sparkle in pink. It is the best thing.
+Dokiewatch is a magical girl take on the fem characters, and honestly, I have never loved a season so much.
+
+I am a complete and utter sucker for magical girl:
+- When I had my brief stint of playing Final Fantasy XIV, I got mods sorted just so that I could play a [magical girl White Mage](https://www.youtube.com/watch?v=zmjw-4ZCPd4) that literally only I could see.
+- My keyboard keycaps are [Mintolodica's Magic Girl](https://mintlodica.com/products/dsa-magic-girl-keycaps) set.
+
+The new Overwatch Dokiwatch skins include a "Mythic" skin for the Martian healer, Juno. She has a cute frilly skirt and is adorned with hearts, bows, ribbons and her Magitech form - sharks. Her abilities tinkle and sparkle in pink. It is the best thing.
 
 After being a long-time Mercy main, I am finally stretching out and learning to aim so I can try to master Juno, because of course I wanna be a cute Heart of Hope.
