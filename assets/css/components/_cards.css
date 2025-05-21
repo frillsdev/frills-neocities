@@ -4,6 +4,13 @@
   position: relative;
   z-index: 1;
   background-color: var(--bodybg);
+  transition: 0.3s ease transform;
+}
+
+.card:has(.card__title[href]):hover,
+.card:focus-within {
+  transform: scale(1.025);
+  z-index: 1;
 }
 
 .card__image {
@@ -68,7 +75,7 @@
   position: absolute;
   border-radius: 0.75rem;
   border: 3px solid transparent;
-  transition: 0.1s ease all;
+  transition: 0.3s ease all;
 }
 
 .card__description {

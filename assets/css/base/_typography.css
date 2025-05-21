@@ -47,6 +47,7 @@ a {
   text-decoration: underline;
   color: var(--link);
   text-underline-offset: 2px;
+  transition: 0.3s ease color;
 }
 
 a:visited {
@@ -125,7 +126,7 @@ blockquote p:last-child {
 
 @media (min-width: 992px) {
   .reading-width figure.card {
-      margin-left: -3rem;
-      margin-right: -3rem;
-    }
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
 }
