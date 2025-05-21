@@ -3,6 +3,28 @@
   border-radius: 0.25rem;
 }
 
+.table-wrap {
+  overflow: auto;
+  width: calc(100% + 1rem);
+}
+
+@media (min-width: 768px) {
+  .table-wrap {
+    width: 100%;
+  }
+}
+
+.table--media {
+  min-width: 620px;
+}
+
+@media (max-width: 769px) {
+  .table--media tr th:nth-child(2),
+    .table--media tr td:nth-child(2) {
+      display: none;
+    }
+}
+
 .table caption {
   text-align: left;
 }
@@ -45,7 +67,7 @@
 .table th button:hover,
 .table th button:focus,
 .table th button:active {
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   color: var(--accentcontrast);
 }
 
