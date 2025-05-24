@@ -1,7 +1,7 @@
 ---
 title: Microblog
 type: microblog
-rss: true
+rss: false
 url: status
 status:
     - date: 2025-01-03
@@ -54,4 +54,9 @@ status:
       emoji: 🖕
       bg: 'linear-gradient(to bottom,#55CDFC 20%, #F7A8B8 20%, #F7A8B8 40%, #FFFFFF 40%, #FFFFFF 60%, #F7A8B8 60%,#F7A8B8 80%, #55CDFC 80%)'
       textColor: Black
+    - date: 2025-05-24
+      text: Website rebuild is in progress with Astro!
+      emoji: 🌌
+      bg: Indigo
+      textColor: Thistle
 ---
