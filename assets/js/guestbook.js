@@ -367,8 +367,8 @@ function createComment(data) {
     if (s_longTimestamp) {timestamp = timestamps[0]}
     else {timestamp = timestamps[1]}
 
-    // Set the ID (uses Name + Full Timestamp format without spaces)
-    const id = (data.Name + '|--|' + data.Timestamp2).replace(/\s+/g, '');
+    // Set the ID (uses Name + Full Timestamp format)
+    const id = (data.Name + '|--|' + data.Timestamp2);
     comment.id = id;
 
     // Name of user
