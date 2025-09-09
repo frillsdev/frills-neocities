@@ -15,7 +15,7 @@ But that energy has somewhat dissipated. That energy loss aligns with a change a
 
 It leaves me finding other outlets to be creative, so that I'm not coding 24/7. For a while, I was sitting with the self-inflicted guilt of this. I felt I was abandoning the Indie Web space, a place that had _given_ me energy in times gone by. But I have since worked through that: it's a hobby, not an obligation. People have still come and gone, and left messages in my guestbook to leave their mark (thank you!). That's the joy of this space, it doesn't disappear, like a post on a Facebook timeline, it persists, and will still be there when I feel the spark again to pick it back up.
 
-I'm not fighting the burn out, I'll acknowledging it. And maybe just picking up(?) the keyboard to type this out again will help massage that energy back into place.
+I'm not fighting the burn out, I'm acknowledging it. And maybe just picking up(?) the keyboard to type this out again will help massage that energy back into place.
 
 Who knows.
 
