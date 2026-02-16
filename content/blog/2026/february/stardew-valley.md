@@ -4,6 +4,7 @@ date: 2026-02-15
 tags:
   - interests
 rss: true
+kudos: 🐓
 ---
 
 A game that I have spent hours in, and have not achieved half the things possible.
@@ -34,4 +35,4 @@ Here is a selfie with said bestie, wearing said hat.
 ## Spotify Playlist
 This is the curated playlist of the Festival Seasons that was translated into orchestra, so it's not the actual orchestral version, but --
 
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/7m5t0eOoZ9qOzElaVwpcLB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe data-testid="embed-iframe" style="border-radius:12px; margin-bottom: 1rem;" src="https://open.spotify.com/embed/album/7m5t0eOoZ9qOzElaVwpcLB?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
