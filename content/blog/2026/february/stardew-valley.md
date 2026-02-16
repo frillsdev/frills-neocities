@@ -21,7 +21,7 @@ Harvey is my favourite bachelor. Leah is my favourite bachelorette. Harvey is ba
 
 The music from the game has been translated into a 35-piece orchestra concert, ['Symphony of Seasons'](https://www.stardewvalleyconcert.com/). It's touring the world, and the London Apollo was graced with its symphony for one day. Valentine's Day even.
 
-My bestie and I snagged tickets to the matinee a year ago. It was so incredible to see how many people this little game that we'd played on our own and together had touched so many people's lives. Obviously, it is a popular game, but usually played in isolation, not with a sold-out Apollo arena. 3421 capacity. Each person had rolled their own avatar, greeted Lewis and Robin, chopped their first tree (not an apple tree), cleared their first patch and planted their first parsnip seeds.
+My bestie and I snagged tickets to the matinee a year ago. It was so incredible to see how many lives this little game - that we'd played on our own and together - had touched. Obviously, it is a popular game, but usually played in isolation, not with a sold-out Apollo arena. 3421 capacity. Each person had rolled their own avatar, greeted Lewis and Robin, chopped their first tree (not an apple tree), cleared their first patch and planted their first parsnip seeds.
 
 The music is sensational. Emotive. Exciting. Peaceful.
 
@@ -33,6 +33,6 @@ Here is a selfie with said bestie, wearing said hat.
 <img src="/images/blog/2026/february/symphony-of-seasons.jpg" alt="My mum prepares to blow out her candle adorned birthday cake" style="width:300px; max-width: 100%; margin-top: 1rem; display: flex;" class="rounded">
 
 ## Spotify Playlist
-This is the curated playlist of the Festival Seasons that was translated into orchestra, so it's not the actual orchestral version, but --
+This is the curated playlist of the Festival of Seasons that was translated into orchestra, so it's not the actual orchestral version, but --
 
 <iframe data-testid="embed-iframe" style="border-radius:12px; margin-bottom: 1rem;" src="https://open.spotify.com/embed/album/7m5t0eOoZ9qOzElaVwpcLB?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
