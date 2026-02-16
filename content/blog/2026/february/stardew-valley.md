@@ -18,7 +18,7 @@ It's such a wholesome, joyful game, with mild to major scary aspects like the mi
 
 Harvey is my favourite bachelor. Leah is my favourite bachelorette. Harvey is basically a pixel version of my IRL marriage candidate. Coffee, check; pickles, check; big nerd, check.
 
-The music from the game has been translated into a 35-piece orchestra concert, 'Symphony of Seasons'. It's touring the world, and the London Apollo was graced with its symphony for one day. Valentine's Day even.
+The music from the game has been translated into a 35-piece orchestra concert, ['Symphony of Seasons'](https://www.stardewvalleyconcert.com/). It's touring the world, and the London Apollo was graced with its symphony for one day. Valentine's Day even.
 
 My bestie and I snagged tickets to the matinee a year ago. It was so incredible to see how many people this little game that we'd played on our own and together had touched so many people's lives. Obviously, it is a popular game, but usually played in isolation, not with a sold-out Apollo arena. 3421 capacity. Each person had rolled their own avatar, greeted Lewis and Robin, chopped their first tree (not an apple tree), cleared their first patch and planted their first parsnip seeds.
 
